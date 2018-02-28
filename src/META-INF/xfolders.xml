@@ -1,0 +1,19 @@
+<folders>
+    <folder id="explorer">
+        <folder id="txn">
+            <folder id="hrmistransaction" caption="HRMIS" index="1"/>
+        </folder>
+        <folder id="master">
+            <folder id="hrmismaster" caption="HRMIS" index="1"/>
+        </folder>
+        <folder id="report">
+            <folder id="hrmisreports" caption="HRMIS" index="1">
+            </folder>
+        </folder>
+    </folder> 
+    <folder id="home">
+        <folder id="hrmis" caption="HRMIS">
+            <folder id="hrmismaster" caption="Master File" index="5"/>
+        </folder>
+    </folder>
+</folders>
