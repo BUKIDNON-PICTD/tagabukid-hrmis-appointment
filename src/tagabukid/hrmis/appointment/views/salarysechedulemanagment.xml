@@ -1,0 +1,10 @@
+<workunit schemaName="pictd_servicetickets">
+    <invokers>
+        <invoker type="pictd_servicetickets:create" caption="Create Service Ticket" action="create"/>
+        <invoker type="pictd_servicetickets:open" caption="Open Service Ticket" action="open"/>       
+    </invokers>
+   <code class="tagabukid.pictdservice.models.ServiceTicketController" />
+    <pages>
+        <page template="tagabukid.pictdservice.views.ServiceTicketPage" />
+    </pages>
+</workunit>

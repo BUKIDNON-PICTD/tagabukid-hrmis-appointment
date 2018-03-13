@@ -1,0 +1,6 @@
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="pictd_servicetickets">
+    <invokers>
+        <invoker folderid="/home/pictdservices/pictdservicesmaster" caption="Service Tickets" action="init" index="1" />
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Service Tickets" index="20" />   
+    </invokers>
+</workunit>

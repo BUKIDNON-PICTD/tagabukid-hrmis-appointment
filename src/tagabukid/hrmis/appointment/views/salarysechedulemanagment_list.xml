@@ -1,0 +1,6 @@
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="pictd_servicetickets">
+    <invokers>
+        <invoker folderid="/home/hrmis/hrmismaster" caption="Salary Schedule Mgnt" action="init" index="1" />
+        <invoker folderid="/explorer/txn/hrmistransaction" caption="Salary Schedule Mgnt" action="init" index="1" />   
+    </invokers>
+</workunit>
