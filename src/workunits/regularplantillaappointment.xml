@@ -1,0 +1,11 @@
+<workunit schemaName="hrmis_appointment">
+    <invokers>
+        <invoker type="hrmis_appointment:create" caption="Create Service Ticket" action="create"/>
+        <invoker type="hrmis_appointment:open" caption="Open Service Ticket" action="open"/>       
+        <invoker folderid="/home/hrmis" caption="Create Appointment (Regular)" action="create" index="1" />
+    </invokers>
+   <code class="tagabukid.pictdservice.models.ServiceTicketController" />
+    <pages>
+        <page template="tagabukid.pictdservice.views.ServiceTicketPage" />
+    </pages>
+</workunit>
