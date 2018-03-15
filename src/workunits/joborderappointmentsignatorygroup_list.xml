@@ -1,0 +1,6 @@
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_appointmentjoborder_signatorygrouping">
+    <invokers>
+        <invoker folderid="/home/hrmis" caption="Signatory Group List (JO)" action="init" index="1" />
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Signatory Group List (JO)" index="20" />   
+    </invokers>
+</workunit>

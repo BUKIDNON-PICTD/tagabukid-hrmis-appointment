@@ -1,4 +1,4 @@
-<workunit schemaName="hrmis_joborder_appointment">
+<workunit schemaName="hrmis_appointmentjoborder">
     <invokers>
         <invoker type="hrmis_joborder_appointment:create" caption="Create Appointment (JO)" action="create"/>
         <invoker type="hrmis_joborder_appointment:open" caption="Open Appointment (JO)" action="open"/>       

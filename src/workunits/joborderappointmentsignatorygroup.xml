@@ -1,0 +1,10 @@
+<workunit schemaName="hrmis_appointmentjoborder_signatorygrouping">
+    <invokers>
+        <invoker type="hrmis_appointmentjoborder_signatorygrouping:create" caption="Create Signatory Group (JO)" action="create"/>
+        <invoker type="hrmis_appointmentjoborder_signatorygrouping:open" caption="Open Signatory Group (JO)" action="open"/>      
+    </invokers>
+   <code class="tagabukid.pictdservice.models.JobOrderAppointmentSignatoryGroupModel" />
+    <pages>
+        <page template="tagabukid.pictdservice.views.JobOrderAppointmentSignatoryGroupView" />
+    </pages>
+</workunit>

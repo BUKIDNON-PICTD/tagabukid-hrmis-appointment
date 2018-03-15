@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_joborder_appointment">
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_appointmentjoborder">
     <invokers>
         <invoker folderid="/home/hrmis" caption="Appointment List (JO)" action="init" index="1" />
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)" index="20" />   
