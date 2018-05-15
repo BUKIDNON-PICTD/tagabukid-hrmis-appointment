@@ -9,7 +9,7 @@ import com.rameses.util.*;
 
 class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
 
-     @Binding
+    @Binding
     def binding;
     
     @Service('DateService')
@@ -20,6 +20,9 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
     
     @Service("PersistenceService")
     def persistenceSvc;
+    
+    @Service('AppointmentSignatoryService')
+    def sigSvc
     
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
@@ -39,22 +42,19 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
         public void beforeSave(o){
             if(!entity.signatoryGroupItems)throw new Exception("Signatory Group items must not be empty");
             
-            if(mode == 'create' ) {
-                if(validateBeforeSave(entity)) throw new Exception("Farmer already exists");
-            }
-            
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;
             entity.state = "DRAFT";
+            entity.code = "sig" + seqSvc.getNextFormattedSeries('signatory')
      
         }
  
     def signatoryGroupItemHandler = [
         fetchList: { o->
-            def p = [_schemaname: 'hrmis_appointmentjoborder_signatorygroupingitems'];
+            def p = [_schemaname: 'hrmis_appointment_signatorygroupingitems'];
             p.findBy = [ 'parentid': entity.objid];
-            p.select = "objid,parentid,signatoryname,signatorytitle,signatoryheading,remarks,level";
+            p.select = "objid,parentid,signatoryname,signatorytitle,signatoryheading,remarks,level,org";
             if(!entity.signatoryGroupItems){
                 entity.signatoryGroupItems = queryService.getList( p );
             }
@@ -82,17 +82,11 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
         
     ] as EditorListModel;
     
-
-
-    //    ========== Lookup Commodity =========
-    //def getLookupCommodity(){
-     //   return InvokerUtil.lookupOpener('pagricommodity:lookup');
-   // }
-   
-    //def validateBeforeSave(o){
-        
-        
-     //   return fSvc.validateBeforeSave(o);
-    //}
+    def typeHandler = [
+         fetchList: { o->
+                   return sigSvc.getSigType(o).signatorytype;
+               }
+           ] as SuggestModel;
+    
 
 }

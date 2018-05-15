@@ -41,6 +41,7 @@ public class JobOrderAppointmentSignatoryGroupView extends javax.swing.JPanel {
         xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
         xTextField1 = new com.rameses.rcp.control.XTextField();
         xTextField2 = new com.rameses.rcp.control.XTextField();
+        xSuggest1 = new com.rameses.rcp.control.XSuggest();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setPadding(new java.awt.Insets(25, 10, 10, 10));
@@ -60,7 +61,7 @@ public class JobOrderAppointmentSignatoryGroupView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "signatorytitle"}
@@ -117,10 +118,23 @@ public class JobOrderAppointmentSignatoryGroupView extends javax.swing.JPanel {
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.IntegerColumnHandler(null, -1, -1)}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "org"}
+                , new Object[]{"caption", "Office"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             })
         });
         xDataTable7.setHandler("signatoryGroupItemHandler");
-        xDataTable7.setId("signatoryGroupItemHandler");
         xDataTable7.setName("selectedSignatoryGroupItem"); // NOI18N
         jTabbedPane1.addTab("Group Members", xDataTable7);
 
@@ -141,17 +155,37 @@ public class JobOrderAppointmentSignatoryGroupView extends javax.swing.JPanel {
         xHorizontalPanel1.setBorder(xTitledBorder2);
         xHorizontalPanel1.setPreferredSize(new java.awt.Dimension(1000, 300));
 
-        xFormPanel2.setPreferredSize(new java.awt.Dimension(500, 100));
+        xFormPanel2.setPreferredSize(new java.awt.Dimension(0, 100));
 
         xTextField1.setCaption("Group Name");
+        xTextField1.setCaptionWidth(100);
         xTextField1.setName("entity.signatorygroupname"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(200, 20));
+        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField1);
 
         xTextField2.setCaption("Remarks");
+        xTextField2.setCaptionWidth(100);
         xTextField2.setName("entity.remarks"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(200, 20));
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField2ActionPerformed(evt);
+            }
+        });
         xFormPanel2.add(xTextField2);
+
+        xSuggest1.setCaption("Type");
+        xSuggest1.setCaptionWidth(100);
+        xSuggest1.setExpression("#{item.signatorytype}");
+        xSuggest1.setHandler("typeHandler");
+        xSuggest1.setName("entity.signatorytype"); // NOI18N
+        xSuggest1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xSuggest1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xSuggest1ActionPerformed(evt);
+            }
+        });
+        xFormPanel2.add(xSuggest1);
 
         xHorizontalPanel1.add(xFormPanel2);
 
@@ -160,21 +194,30 @@ public class JobOrderAppointmentSignatoryGroupView extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void xTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField2ActionPerformed
+
+    private void xSuggest1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xSuggest1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xSuggest1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -184,6 +227,7 @@ public class JobOrderAppointmentSignatoryGroupView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XDataTable xDataTable7;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XSuggest xSuggest1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     // End of variables declaration//GEN-END:variables
