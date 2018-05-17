@@ -39,17 +39,17 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
         xDataTable7 = new com.rameses.rcp.control.XDataTable();
         jPanel2 = new javax.swing.JPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
+        xLookupField3 = new com.rameses.rcp.control.XLookupField();
         xDataTable2 = new com.rameses.rcp.control.XDataTable();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
+        xSuggest1 = new com.rameses.rcp.control.XSuggest();
         xDateField1 = new com.rameses.rcp.control.XDateField();
         xDateField2 = new com.rameses.rcp.control.XDateField();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xDateField3 = new com.rameses.rcp.control.XDateField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
-        xComboBox1 = new com.rameses.rcp.control.XComboBox();
         xLabel1 = new com.rameses.rcp.control.XLabel();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -67,9 +67,10 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.employee.name}", "lookup:tagabukid_hrmis_personnel")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "position"}
@@ -83,7 +84,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "dailysalary"}
@@ -139,7 +140,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "lastemploymentuntil"}
@@ -153,12 +154,77 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+            })
+        });
+        xDataTable7.setHandler("appointmentMemberItemHandler");
+        xDataTable7.setName("selectedAppointmentMemberItem"); // NOI18N
+        jTabbedPane1.addTab("Appointment Group Members", xDataTable7);
+
+        xLookupField3.setCaption("Signatory Group");
+        xLookupField3.setCaptionWidth(120);
+        xLookupField3.setExpression("#{entity.signatorygroupname}");
+        xLookupField3.setHandler("lookupSignatory");
+        xLookupField3.setName("entity.signatorygroup"); // NOI18N
+        xLookupField3.setPreferredSize(new java.awt.Dimension(250, 20));
+        xFormPanel1.add(xLookupField3);
+
+        xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "signatoryname"}
+                , new Object[]{"caption", "Signatory Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "signatorytitle"}
+                , new Object[]{"caption", "Signatory Title"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "org"}
+                , new Object[]{"caption", "Office"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "level"}
+                , new Object[]{"caption", "Level"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             })
         });
-        xDataTable7.setHandler("signatoryGroupItemHandler");
-        xDataTable7.setName("selectedSignatoryGroupItem"); // NOI18N
-        jTabbedPane1.addTab("Group Members", xDataTable7);
+        xDataTable2.setDepends(new String[] {"entity.signatorygroup"});
+        xDataTable2.setHandler("signatoryItemHandler");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -166,24 +232,22 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
+                    .addComponent(xDataTable2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(xDataTable2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(547, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(xFormPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(xFormPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xDataTable2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addComponent(xDataTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab2", jPanel2);
+        jTabbedPane1.addTab("Signatory Group", jPanel2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -206,11 +270,14 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
 
         xFormPanel2.setPreferredSize(new java.awt.Dimension(500, 100));
 
-        xTextField1.setCaption("Group Name");
-        xTextField1.setCaptionWidth(140);
-        xTextField1.setName("entity.appointmentgroupname"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(200, 20));
-        xFormPanel2.add(xTextField1);
+        xSuggest1.setCaption("Group Name");
+        xSuggest1.setCaptionWidth(140);
+        xSuggest1.setExpression("#{item.appointmentgroupname}");
+        xSuggest1.setHandler("groupHandler");
+        xSuggest1.setItemExpression("");
+        xSuggest1.setName("entity.appointmentgroupname"); // NOI18N
+        xSuggest1.setPreferredSize(new java.awt.Dimension(200, 20));
+        xFormPanel2.add(xSuggest1);
 
         xDateField1.setCaption("Effective from");
         xDateField1.setCaptionWidth(140);
@@ -226,7 +293,8 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
 
         xLookupField1.setCaption("Nature of Appointment");
         xLookupField1.setCaptionWidth(140);
-        xLookupField1.setExpression("#{entity.natureofappointment}");
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("lookup:tagabukid_hrmis_natureofappointment");
         xLookupField1.setName("entity.natureofappointment"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel2.add(xLookupField1);
@@ -239,8 +307,9 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
 
         xLookupField2.setCaption("Office");
         xLookupField2.setCaptionWidth(140);
-        xLookupField2.setExpression("#{lookupOrg}");
-        xLookupField2.setName("entity.office"); // NOI18N
+        xLookupField2.setExpression("#{item.name}");
+        xLookupField2.setHandler("lookup:tagabukid_hrmis_org");
+        xLookupField2.setName("entity.org"); // NOI18N
         xLookupField2.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel2.add(xLookupField2);
 
@@ -249,12 +318,6 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
         xTextField3.setName("entity.remarks"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel2.add(xTextField3);
-
-        xComboBox1.setCaption("Signatory Group");
-        xComboBox1.setCaptionWidth(140);
-        xComboBox1.setName("entity.signatorygroup"); // NOI18N
-        xComboBox1.setPreferredSize(new java.awt.Dimension(200, 20));
-        xFormPanel2.add(xComboBox1);
 
         xLabel1.setCaption("State");
         xLabel1.setCaptionFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -272,20 +335,18 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(483, 483, 483))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -296,7 +357,6 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private com.rameses.rcp.control.XComboBox xComboBox1;
     private com.rameses.rcp.control.XDataTable xDataTable1;
     private com.rameses.rcp.control.XDataTable xDataTable2;
     private com.rameses.rcp.control.XDataTable xDataTable7;
@@ -309,7 +369,8 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLabel xLabel1;
     private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XLookupField xLookupField2;
-    private com.rameses.rcp.control.XTextField xTextField1;
+    private com.rameses.rcp.control.XLookupField xLookupField3;
+    private com.rameses.rcp.control.XSuggest xSuggest1;
     private com.rameses.rcp.control.XTextField xTextField3;
     // End of variables declaration//GEN-END:variables
 }

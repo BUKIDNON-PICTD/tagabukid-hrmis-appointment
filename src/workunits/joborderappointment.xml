@@ -1,11 +1,11 @@
 <workunit schemaName="hrmis_appointmentjoborder">
     <invokers>
-        <invoker type="hrmis_joborder_appointment:create" caption="Create Appointment (JO)" action="create"/>
-        <invoker type="hrmis_joborder_appointment:open" caption="Open Appointment (JO)" action="open"/>       
+        <invoker type="hrmis_appointmentjoborder:create" caption="Create Appointment (JO)" action="create"/>
+        <invoker type="hrmis_appointmentjoborder:open" caption="Open Appointment (JO)" action="open"/>       
         <invoker folderid="/home/hrmis" caption="Create Appointment (JO)" action="create" index="1" />
     </invokers>
-   <code class="tagabukid.pictdservice.models.JobOrderAppointmentModel" />
+   <code class="tagabukid.hrmis.appointment.models.JobOrderAppointmentModel" />
     <pages>
-        <page template="tagabukid.pictdservice.views.JobOrderAppointmentView" />
+        <page template="tagabukid.hrmis.appointment.views.JobOrderAppointmentView" />
     </pages>
 </workunit>
