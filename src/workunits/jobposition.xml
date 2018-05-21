@@ -1,10 +1,10 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbljobposition">
+<workunit schemaName="references_tbljobposition">
     <invokers>
-        <invoker type="master_tbljobposition:create" caption="Create Job Position" action="create" target="popup"/>
-        <invoker type="master_tbljobposition:open" caption="Open Job Position" action="open" target="popup"/>
+        <invoker type="references_tbljobposition:create" caption="Create Job Position" action="create" target="popup"/>
+        <invoker type="references_tbljobposition:open" caption="Open Job Position" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.JobPositionModel" />
     <pages>
-        <page template="tagabukid.hrmis.appointment.views.JobPositionView"/>
+        <page template="tagabukid.hrmis.appointment.views.JobPositionView" />
     </pages>
 </workunit>
