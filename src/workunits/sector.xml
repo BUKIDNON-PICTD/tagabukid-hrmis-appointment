@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblsector">
+    <invokers>
+        <invoker type="master_tblsector:create" caption="Create Sector" action="create"/>
+        <invoker type="master_tblsector:open" caption="Open Sector" action="open"/>
+    </invokers>
+    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.SectorView"/>
+    </pages>
+</workunit>

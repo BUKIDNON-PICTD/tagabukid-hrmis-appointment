@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbllocbarangay">
+    <invokers>
+        <invoker type="master_tbllocbarangay:create" caption="Create Barangay" action="create"/>
+        <invoker type="master_tbllocbarangay:open" caption="Open Barangay" action="open"/>
+    </invokers>
+    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.locBarangayView"/>
+    </pages>
+</workunit>

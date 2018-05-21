@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblpdsq">
+    <invokers>
+        <invoker type="master_tblpdsq:create" caption="Create PDS Q" action="create"/>
+        <invoker type="master_tblpdsq:open" caption="Open PDS Q" action="open"/>
+    </invokers>
+    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.PDSQView"/>
+    </pages>
+</workunit>

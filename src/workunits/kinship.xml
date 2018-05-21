@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblkinship">
+    <invokers>
+        <invoker type="master_tblkinship:create" caption="Create Kinship" action="create"/>
+        <invoker type="master_tblkinship:open" caption="Open Kinship" action="open"/>
+    </invokers>
+    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.KinshipView"/>
+    </pages>
+</workunit>

@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblorganizationunittype">
+    <invokers>
+        <invoker type="master_tblorganizationunittype:create" caption="Create Organization Unit Type" action="create"/>
+        <invoker type="master_tblorganizationunittype:open" caption="Open Organization Unit Type" action="open"/>
+    </invokers>
+    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.OrganizationUnitTypeView"/>
+    </pages>
+</workunit>
