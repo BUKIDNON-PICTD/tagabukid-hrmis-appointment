@@ -1,0 +1,9 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml" schemaName="master_hrmisstatus">
+    <invokers>
+        <invoker type="master_hrmisstatus:create" caption="New HRMIS Status" action="create"/>
+        <invoker type="master_hrmisstatus:open" caption="HRMIS Status" action="open"/>
+    </invokers>
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterHrmisStatusPage"/>
+    </pages>
+</workunit>

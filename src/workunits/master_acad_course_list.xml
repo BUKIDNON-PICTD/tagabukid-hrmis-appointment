@@ -1,0 +1,6 @@
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="master_acadcourse">
+    <invokers>
+       <invoker folderid="/home/hrmis" caption="Academic Course" action="init" />
+       <invoker folderid="/explorer/master/hrmismaster" action="init" caption="Academic Course List" />   
+    </invokers> 
+</workunit>
