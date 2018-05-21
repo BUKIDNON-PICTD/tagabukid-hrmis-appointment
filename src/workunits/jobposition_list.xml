@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="references_tbljobposition">
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="master_tbljobposition">
     <invokers>
         <invoker folderid="/home/hrmis" caption="Job Position" action="init" index="1" />
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Job Position" index="20" />   
