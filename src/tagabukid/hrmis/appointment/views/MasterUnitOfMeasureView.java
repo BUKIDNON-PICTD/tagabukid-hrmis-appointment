@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class PDSQsItemView extends javax.swing.JPanel {
+public class MasterUnitOfMeasureView extends javax.swing.JPanel {
 
     /**
-     * Creates new form PDSQsItemView
+     * Creates new form UnitOfMeasureView
      */
-    public PDSQsItemView() {
+    public MasterUnitOfMeasureView() {
         initComponents();
     }
 
@@ -36,13 +36,12 @@ public class PDSQsItemView extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xTextField1 = new com.rameses.rcp.control.XTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
+        xTextField4 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("PDS Qs Item");
+        xTitledBorder1.setTitle("Unit of Measure");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -50,23 +49,20 @@ public class PDSQsItemView extends javax.swing.JPanel {
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
 
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
-
-        xTextArea1.setCaption("Item");
-        xTextArea1.setName("entity.item"); // NOI18N
-        jScrollPane1.setViewportView(xTextArea1);
-
-        xFormPanel1.add(jScrollPane1);
-
-        xTextField2.setCaption("Position");
-        xTextField2.setName("entity.position"); // NOI18N
+        xTextField2.setCaption("Name");
+        xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xTextField3.setCaption("oldid");
-        xTextField3.setName("entity.oldid"); // NOI18N
+        xTextField3.setCaption("Description");
+        xTextField3.setName("entity.description"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
+
+        xTextField4.setCaption("Code");
+        xTextField4.setName("entity.code"); // NOI18N
+        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField4);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -76,7 +72,7 @@ public class PDSQsItemView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -90,12 +86,11 @@ public class PDSQsItemView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,12 +6,12 @@ import com.rameses.seti2.views.CrudFormPage;
 
 @StyleSheet
 @Template(CrudFormPage.class)
-public class OrganizationUnitView extends javax.swing.JPanel {
+public class MasterOrganizationUnitView extends javax.swing.JPanel {
 
     /**
      * Creates new form OrganizationUnitView
      */
-    public OrganizationUnitView() {
+    public MasterOrganizationUnitView() {
         initComponents();
     }
 

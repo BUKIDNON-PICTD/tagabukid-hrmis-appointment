@@ -1,26 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tagabukid.hrmis.appointment.views;
 
 import com.rameses.rcp.ui.annotations.StyleSheet;
 import com.rameses.rcp.ui.annotations.Template;
 import com.rameses.seti2.views.CrudFormPage;
 
-/**
- *
- * @author pictd-training1
- */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class locCongressionalDistrictView extends javax.swing.JPanel {
+public class MasterNationalityView extends javax.swing.JPanel {
 
     /**
-     * Creates new form locCongressionalDistrictView
+     * Creates new form NationalityView
      */
-    public locCongressionalDistrictView() {
+    public MasterNationalityView() {
         initComponents();
     }
 
@@ -36,46 +27,45 @@ public class locCongressionalDistrictView extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xTextField1 = new com.rameses.rcp.control.XTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        xTextArea1 = new com.rameses.rcp.control.XTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        xTextArea2 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
-        xTextField5 = new com.rameses.rcp.control.XTextField();
-        xTextField6 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Congressional District");
+        xTitledBorder1.setTitle("Nationality");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
-        xTextField1.setText("entity.objid");
         xTextField1.setCaption("objid");
+        xTextField1.setCaptionWidth(125);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
 
-        xTextField2.setCaption("Name");
-        xTextField2.setName("entity.name"); // NOI18N
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea1.setCaption("Name");
+        xTextArea1.setCaptionWidth(125);
+        xTextArea1.setName("entity.name"); // NOI18N
+        jScrollPane1.setViewportView(xTextArea1);
+
+        xFormPanel1.add(jScrollPane1);
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea2.setCaption("Description");
+        xTextArea2.setCaptionWidth(125);
+        xTextArea2.setName("entity.description"); // NOI18N
+        jScrollPane2.setViewportView(xTextArea2);
+
+        xFormPanel1.add(jScrollPane2);
+
+        xTextField2.setCaption("Country ID");
+        xTextField2.setCaptionWidth(125);
+        xTextField2.setName("entity.countryid"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
-
-        xTextField3.setCaption("Description");
-        xTextField3.setName("entity.description"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
-
-        xTextField4.setCaption("Code");
-        xTextField4.setName("entity.code"); // NOI18N
-        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField4);
-
-        xTextField5.setCaption("PIN No");
-        xTextField5.setName("entity.pinno"); // NOI18N
-        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField5);
-
-        xTextField6.setCaption("Province ID");
-        xTextField6.setName("entity.provinceid"); // NOI18N
-        xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField6);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -85,7 +75,7 @@ public class locCongressionalDistrictView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -99,13 +89,13 @@ public class locCongressionalDistrictView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XTextArea xTextArea1;
+    private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
-    private com.rameses.rcp.control.XTextField xTextField4;
-    private com.rameses.rcp.control.XTextField xTextField5;
-    private com.rameses.rcp.control.XTextField xTextField6;
     // End of variables declaration//GEN-END:variables
 }

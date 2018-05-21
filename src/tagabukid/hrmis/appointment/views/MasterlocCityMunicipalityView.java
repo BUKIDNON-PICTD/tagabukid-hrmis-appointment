@@ -9,19 +9,18 @@ import com.rameses.rcp.ui.annotations.StyleSheet;
 import com.rameses.rcp.ui.annotations.Template;
 import com.rameses.seti2.views.CrudFormPage;
 
-
 /**
  *
  * @author pictd-training1
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class JobPositionView extends javax.swing.JPanel {
+public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
 
     /**
-     * Creates new form JobPosition
+     * Creates new form locCityMunicipalityView
      */
-    public JobPositionView() {
+    public MasterlocCityMunicipalityView() {
         initComponents();
     }
 
@@ -47,19 +46,13 @@ public class JobPositionView extends javax.swing.JPanel {
         xTextArea4 = new com.rameses.rcp.control.XTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         xTextArea5 = new com.rameses.rcp.control.XTextArea();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        xTextArea6 = new com.rameses.rcp.control.XTextArea();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        xTextArea7 = new com.rameses.rcp.control.XTextArea();
-        xTextField9 = new com.rameses.rcp.control.XTextField();
-        xTextField10 = new com.rameses.rcp.control.XTextField();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Job Position");
+        xTitledBorder1.setTitle("City / Municipality");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
-        xTextField1.setCaptionWidth(170);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
@@ -67,7 +60,6 @@ public class JobPositionView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Name");
-        xTextArea1.setCaptionWidth(170);
         xTextArea1.setName("entity.name"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -76,7 +68,7 @@ public class JobPositionView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
-        xTextArea2.setCaptionWidth(170);
+        xTextArea2.setItemExpression("");
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -84,70 +76,32 @@ public class JobPositionView extends javax.swing.JPanel {
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea3.setCaption("Code");
-        xTextArea3.setCaptionWidth(170);
-        xTextArea3.setName("entity.code"); // NOI18N
+        xTextArea3.setCaption("Acronym / Abbreviation");
+        xTextArea3.setName("entity.acronymorabbreviation"); // NOI18N
         jScrollPane3.setViewportView(xTextArea3);
 
         xFormPanel1.add(jScrollPane3);
 
         jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea4.setCaption("Training Qualifications");
-        xTextArea4.setCaptionWidth(170);
-        xTextArea4.setName("entity.trainingqualifications"); // NOI18N
+        xTextArea4.setCaption("PSG Code");
+        xTextArea4.setName("entity.psgcode"); // NOI18N
         jScrollPane4.setViewportView(xTextArea4);
 
         xFormPanel1.add(jScrollPane4);
 
         jScrollPane5.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea5.setCaption("Work Experience Qualifications");
-        xTextArea5.setCaptionWidth(170);
-        xTextArea5.setName("entity.workexperiencequalifications"); // NOI18N
+        xTextArea5.setCaption("PIN No");
+        xTextArea5.setName("entity.pinno"); // NOI18N
         jScrollPane5.setViewportView(xTextArea5);
 
         xFormPanel1.add(jScrollPane5);
 
-        jScrollPane6.setPreferredSize(new java.awt.Dimension(0, 63));
-
-        xTextArea6.setCaption("Education Qualifications");
-        xTextArea6.setCaptionWidth(170);
-        xTextArea6.setName("entity.educationqualifications"); // NOI18N
-        jScrollPane6.setViewportView(xTextArea6);
-
-        xFormPanel1.add(jScrollPane6);
-
-        jScrollPane7.setPreferredSize(new java.awt.Dimension(0, 63));
-
-        xTextArea7.setCaption("Eligibility Qualifications");
-        xTextArea7.setCaptionWidth(170);
-        xTextArea7.setName("entity.eligibilityqualifications"); // NOI18N
-        jScrollPane7.setViewportView(xTextArea7);
-
-        xFormPanel1.add(jScrollPane7);
-
-        xTextField9.setCaption("paygradeid");
-        xTextField9.setCaptionWidth(170);
-        xTextField9.setName("entity.paygradeid"); // NOI18N
-        xTextField9.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                xTextField9ActionPerformed(evt);
-            }
-        });
-        xFormPanel1.add(xTextField9);
-
-        xTextField10.setCaption("oldid");
-        xTextField10.setCaptionWidth(170);
-        xTextField10.setName("entity.oldid"); // NOI18N
-        xTextField10.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                xTextField10ActionPerformed(evt);
-            }
-        });
-        xFormPanel1.add(xTextField10);
+        xTextField2.setCaption("Province ID");
+        xTextField2.setName("entity.objid"); // NOI18N
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField2);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -157,7 +111,7 @@ public class JobPositionView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -169,14 +123,6 @@ public class JobPositionView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void xTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_xTextField9ActionPerformed
-
-    private void xTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_xTextField10ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
@@ -184,8 +130,6 @@ public class JobPositionView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
@@ -193,10 +137,7 @@ public class JobPositionView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextArea xTextArea3;
     private com.rameses.rcp.control.XTextArea xTextArea4;
     private com.rameses.rcp.control.XTextArea xTextArea5;
-    private com.rameses.rcp.control.XTextArea xTextArea6;
-    private com.rameses.rcp.control.XTextArea xTextArea7;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField10;
-    private com.rameses.rcp.control.XTextField xTextField9;
+    private com.rameses.rcp.control.XTextField xTextField2;
     // End of variables declaration//GEN-END:variables
 }

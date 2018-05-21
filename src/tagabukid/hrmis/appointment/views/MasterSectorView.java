@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class JobPositionCategoryView extends javax.swing.JPanel {
+public class MasterSectorView extends javax.swing.JPanel {
 
     /**
-     * Creates new form JobPositionCategoryView
+     * Creates new form SectorView
      */
-    public JobPositionCategoryView() {
+    public MasterSectorView() {
         initComponents();
     }
 
@@ -44,7 +44,7 @@ public class JobPositionCategoryView extends javax.swing.JPanel {
         xTextArea3 = new com.rameses.rcp.control.XTextArea();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Job Position Category");
+        xTitledBorder1.setTitle("Sector");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -84,7 +84,7 @@ public class JobPositionCategoryView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 591, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

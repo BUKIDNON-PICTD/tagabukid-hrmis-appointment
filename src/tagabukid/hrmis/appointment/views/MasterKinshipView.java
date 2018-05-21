@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class PayGradeAndStepIncrementView extends javax.swing.JPanel {
+public class MasterKinshipView extends javax.swing.JPanel {
 
     /**
-     * Creates new form PayGradeAndStepIncrementView
+     * Creates new form KinshipView
      */
-    public PayGradeAndStepIncrementView() {
+    public MasterKinshipView() {
         initComponents();
     }
 
@@ -38,33 +38,47 @@ public class PayGradeAndStepIncrementView extends javax.swing.JPanel {
         xTextField1 = new com.rameses.rcp.control.XTextField();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
+        xTextField4 = new com.rameses.rcp.control.XTextField();
+        xTextField5 = new com.rameses.rcp.control.XTextField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Pay Grade and Step Increment");
+        xTitledBorder1.setTitle("Kinship");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
-        xTextField1.setCaptionWidth(75);
+        xTextField1.setCaptionWidth(100);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
 
-        xTextField2.setCaption("Grade");
-        xTextField2.setCaptionWidth(75);
-        xTextField2.setName("entity.grade"); // NOI18N
+        xTextField2.setCaption("Name");
+        xTextField2.setCaptionWidth(100);
+        xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xTextField3.setCaption("Step");
-        xTextField3.setCaptionWidth(75);
-        xTextField3.setName("entity.step"); // NOI18N
+        xTextField3.setCaption("Description");
+        xTextField3.setCaptionWidth(100);
+        xTextField3.setName("entity.description"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
 
-        xTextField6.setCaption("oldid");
-        xTextField6.setCaptionWidth(75);
-        xTextField6.setName("entity.oldid"); // NOI18N
+        xTextField4.setCaption("Code");
+        xTextField4.setCaptionWidth(100);
+        xTextField4.setName("entity.code"); // NOI18N
+        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField4);
+
+        xTextField5.setCaption("Kinship Enum.");
+        xTextField5.setCaptionWidth(100);
+        xTextField5.setName("entity.kinshipenum"); // NOI18N
+        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField5);
+
+        xTextField6.setCaption("Gender");
+        xTextField6.setCaptionWidth(100);
+        xTextField6.setName("entity.gender"); // NOI18N
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField6);
 
@@ -76,7 +90,7 @@ public class PayGradeAndStepIncrementView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -95,6 +109,8 @@ public class PayGradeAndStepIncrementView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField5;
     private com.rameses.rcp.control.XTextField xTextField6;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,26 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tagabukid.hrmis.appointment.views;
 
 import com.rameses.rcp.ui.annotations.StyleSheet;
 import com.rameses.rcp.ui.annotations.Template;
 import com.rameses.seti2.views.CrudFormPage;
 
-/**
- *
- * @author pictd-training1
- */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class SectorView extends javax.swing.JPanel {
+public class MasterlocRegionView extends javax.swing.JPanel {
 
     /**
-     * Creates new form SectorView
+     * Creates new form locRegionView
      */
-    public SectorView() {
+    public MasterlocRegionView() {
         initComponents();
     }
 
@@ -42,9 +33,14 @@ public class SectorView extends javax.swing.JPanel {
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         xTextArea3 = new com.rameses.rcp.control.XTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        xTextArea4 = new com.rameses.rcp.control.XTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        xTextArea5 = new com.rameses.rcp.control.XTextArea();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Sector");
+        xTitledBorder1.setTitle("Region");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -63,6 +59,7 @@ public class SectorView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
+        xTextArea2.setItemExpression("");
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -70,11 +67,32 @@ public class SectorView extends javax.swing.JPanel {
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea3.setCaption("Code");
-        xTextArea3.setName("entity.code"); // NOI18N
+        xTextArea3.setCaption("Acronym / Abbreviation");
+        xTextArea3.setName("entity.acronymorabbreviation"); // NOI18N
         jScrollPane3.setViewportView(xTextArea3);
 
         xFormPanel1.add(jScrollPane3);
+
+        jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea4.setCaption("PSG Code");
+        xTextArea4.setName("entity.psgcode"); // NOI18N
+        jScrollPane4.setViewportView(xTextArea4);
+
+        xFormPanel1.add(jScrollPane4);
+
+        jScrollPane5.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea5.setCaption("PIN No");
+        xTextArea5.setName("entity.pinno"); // NOI18N
+        jScrollPane5.setViewportView(xTextArea5);
+
+        xFormPanel1.add(jScrollPane5);
+
+        xTextField2.setCaption("Country ID");
+        xTextField2.setName("entity.countryid"); // NOI18N
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField2);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -84,7 +102,7 @@ public class SectorView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -101,13 +119,16 @@ public class SectorView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
-    private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextArea xTextArea3;
+    private com.rameses.rcp.control.XTextArea xTextArea4;
+    private com.rameses.rcp.control.XTextArea xTextArea5;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField2;
     // End of variables declaration//GEN-END:variables
 }

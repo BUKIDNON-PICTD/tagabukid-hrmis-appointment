@@ -5,6 +5,6 @@
     </invokers>
 <!--    <code class="tagabukid.hrmis.appointment.models.UnitOfMeasureModel"/>-->
     <pages>
-        <page template="tagabukid.hrmis.appointment.views.UnitOfMeasureView"/>
+        <page template="tagabukid.hrmis.appointment.views.MasterUnitOfMeasureView"/>
     </pages>
 </workunit>

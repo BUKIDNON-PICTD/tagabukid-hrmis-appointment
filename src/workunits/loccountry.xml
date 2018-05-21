@@ -5,6 +5,6 @@
     </invokers>
     <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
     <pages>
-        <page template="tagabukid.hrmis.appointment.views.locCountryView"/>
+        <page template="tagabukid.hrmis.appointment.views.MasterlocCountryView"/>
     </pages>
 </workunit>

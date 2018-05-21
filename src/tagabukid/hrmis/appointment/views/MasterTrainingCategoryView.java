@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class TrainingCategoryView extends javax.swing.JPanel {
+public class MasterTrainingCategoryView extends javax.swing.JPanel {
 
     /**
      * Creates new form TrainingCategoryView
      */
-    public TrainingCategoryView() {
+    public MasterTrainingCategoryView() {
         initComponents();
     }
 

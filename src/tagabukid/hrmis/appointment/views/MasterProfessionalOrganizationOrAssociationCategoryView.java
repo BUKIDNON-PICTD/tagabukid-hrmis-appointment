@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class SkillCategoryView extends javax.swing.JPanel {
+public class MasterProfessionalOrganizationOrAssociationCategoryView extends javax.swing.JPanel {
 
     /**
-     * Creates new form SkillCategoryView
+     * Creates new form ProfessionalOrganizationOrAssociationCategoryView
      */
-    public SkillCategoryView() {
+    public MasterProfessionalOrganizationOrAssociationCategoryView() {
         initComponents();
     }
 
@@ -44,10 +44,11 @@ public class SkillCategoryView extends javax.swing.JPanel {
         xTextArea3 = new com.rameses.rcp.control.XTextArea();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Skill Category");
+        xTitledBorder1.setTitle("Professional Organization or Association Category");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
+        xTextField1.setCaptionWidth(75);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
@@ -55,6 +56,7 @@ public class SkillCategoryView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Name");
+        xTextArea1.setCaptionWidth(75);
         xTextArea1.setName("entity.name"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -63,6 +65,7 @@ public class SkillCategoryView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
+        xTextArea2.setCaptionWidth(75);
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -71,6 +74,7 @@ public class SkillCategoryView extends javax.swing.JPanel {
         jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea3.setCaption("Code");
+        xTextArea3.setCaptionWidth(75);
         xTextArea3.setName("entity.code"); // NOI18N
         jScrollPane3.setViewportView(xTextArea3);
 
@@ -84,7 +88,7 @@ public class SkillCategoryView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class UnitOfMeasureView extends javax.swing.JPanel {
+public class MasterTrainingComprehensivenessView extends javax.swing.JPanel {
 
     /**
-     * Creates new form UnitOfMeasureView
+     * Creates new form TtrainingComprehensivenessView
      */
-    public UnitOfMeasureView() {
+    public MasterTrainingComprehensivenessView() {
         initComponents();
     }
 
@@ -36,12 +36,16 @@ public class UnitOfMeasureView extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xTextField1 = new com.rameses.rcp.control.XTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        xTextArea1 = new com.rameses.rcp.control.XTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        xTextArea2 = new com.rameses.rcp.control.XTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        xTextArea3 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Unit of Measure");
+        xTitledBorder1.setTitle("Training Comprehensiveness");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -49,20 +53,34 @@ public class UnitOfMeasureView extends javax.swing.JPanel {
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
 
-        xTextField2.setCaption("Name");
-        xTextField2.setName("entity.name"); // NOI18N
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea1.setCaption("Name");
+        xTextArea1.setName("entity.name"); // NOI18N
+        jScrollPane1.setViewportView(xTextArea1);
+
+        xFormPanel1.add(jScrollPane1);
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea2.setCaption("Description");
+        xTextArea2.setName("entity.description"); // NOI18N
+        jScrollPane2.setViewportView(xTextArea2);
+
+        xFormPanel1.add(jScrollPane2);
+
+        jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea3.setCaption("Code");
+        xTextArea3.setName("entity.code"); // NOI18N
+        jScrollPane3.setViewportView(xTextArea3);
+
+        xFormPanel1.add(jScrollPane3);
+
+        xTextField2.setCaption("numericvalue");
+        xTextField2.setName("entity.numericvalue"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
-
-        xTextField3.setCaption("Description");
-        xTextField3.setName("entity.description"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
-
-        xTextField4.setCaption("Code");
-        xTextField4.setName("entity.code"); // NOI18N
-        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField4);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -72,7 +90,7 @@ public class UnitOfMeasureView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -86,11 +104,15 @@ public class UnitOfMeasureView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XTextArea xTextArea1;
+    private com.rameses.rcp.control.XTextArea xTextArea2;
+    private com.rameses.rcp.control.XTextArea xTextArea3;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
-    private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables
 }

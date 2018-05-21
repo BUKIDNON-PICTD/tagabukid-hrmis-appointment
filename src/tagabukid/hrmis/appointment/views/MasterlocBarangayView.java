@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class TrainingComprehensivenessView extends javax.swing.JPanel {
+public class MasterlocBarangayView extends javax.swing.JPanel {
 
     /**
-     * Creates new form TtrainingComprehensivenessView
+     * Creates new form locBarangayView
      */
-    public TrainingComprehensivenessView() {
+    public MasterlocBarangayView() {
         initComponents();
     }
 
@@ -42,13 +42,17 @@ public class TrainingComprehensivenessView extends javax.swing.JPanel {
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         xTextArea3 = new com.rameses.rcp.control.XTextArea();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        xTextArea4 = new com.rameses.rcp.control.XTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        xTextArea5 = new com.rameses.rcp.control.XTextArea();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Training Comprehensiveness");
+        xTitledBorder1.setTitle("Barangay");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
+        xTextField1.setCaptionWidth(130);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
@@ -56,6 +60,7 @@ public class TrainingComprehensivenessView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Name");
+        xTextArea1.setCaptionWidth(130);
         xTextArea1.setName("entity.name"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -64,6 +69,8 @@ public class TrainingComprehensivenessView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
+        xTextArea2.setCaptionWidth(130);
+        xTextArea2.setItemExpression("");
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -71,16 +78,30 @@ public class TrainingComprehensivenessView extends javax.swing.JPanel {
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea3.setCaption("Code");
-        xTextArea3.setName("entity.code"); // NOI18N
+        xTextArea3.setCaption("Acronym / Abbreviation");
+        xTextArea3.setCaptionWidth(130);
+        xTextArea3.setName("entity.acronymorabbreviation"); // NOI18N
         jScrollPane3.setViewportView(xTextArea3);
 
         xFormPanel1.add(jScrollPane3);
 
-        xTextField2.setCaption("numericvalue");
-        xTextField2.setName("entity.numericvalue"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField2);
+        jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea4.setCaption("PSG Code");
+        xTextArea4.setCaptionWidth(130);
+        xTextArea4.setName("entity.psgcode"); // NOI18N
+        jScrollPane4.setViewportView(xTextArea4);
+
+        xFormPanel1.add(jScrollPane4);
+
+        jScrollPane5.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea5.setCaption("PIN No");
+        xTextArea5.setCaptionWidth(130);
+        xTextArea5.setName("entity.pinno"); // NOI18N
+        jScrollPane5.setViewportView(xTextArea5);
+
+        xFormPanel1.add(jScrollPane5);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -90,7 +111,7 @@ public class TrainingComprehensivenessView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -107,12 +128,15 @@ public class TrainingComprehensivenessView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextArea xTextArea3;
+    private com.rameses.rcp.control.XTextArea xTextArea4;
+    private com.rameses.rcp.control.XTextArea xTextArea5;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField2;
     // End of variables declaration//GEN-END:variables
 }
