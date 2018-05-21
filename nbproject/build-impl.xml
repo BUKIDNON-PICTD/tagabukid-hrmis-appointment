@@ -112,7 +112,11 @@ is divided into following sections:
             <and>
                 <isset property="javac.profile"/>
                 <length length="0" string="${javac.profile}" when="greater"/>
+<<<<<<< HEAD
                 <matches pattern="((1\.[89])|9)(\..*)?" string="${javac.source}"/>
+=======
+                <matches pattern="1\.[89](\..*)?" string="${javac.source}"/>
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
             </and>
         </condition>
         <condition property="do.archive">
@@ -802,7 +806,11 @@ is divided into following sections:
             <attribute default="${debug.classpath}" name="classpath"/>
             <element name="customize" optional="true"/>
             <sequential>
+<<<<<<< HEAD
                 <java classname="@{classname}" dir="${work.dir}" failonerror="${java.failonerror}" fork="true" jvm="${platform.java}">
+=======
+                <java classname="@{classname}" dir="${work.dir}" fork="true" jvm="${platform.java}">
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
                     <jvmarg line="${debug-args-line}"/>
                     <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
@@ -829,7 +837,11 @@ is divided into following sections:
             <attribute default="jvm" name="jvm"/>
             <element name="customize" optional="true"/>
             <sequential>
+<<<<<<< HEAD
                 <java classname="@{classname}" dir="${work.dir}" failonerror="${java.failonerror}" fork="true" jvm="${platform.java}">
+=======
+                <java classname="@{classname}" dir="${work.dir}" fork="true" jvm="${platform.java}">
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
                     <jvmarg value="-Dfile.encoding=${runtime.encoding}"/>
                     <redirector errorencoding="${runtime.encoding}" inputencoding="${runtime.encoding}" outputencoding="${runtime.encoding}"/>
@@ -868,7 +880,11 @@ is divided into following sections:
                     </chainedmapper>
                 </pathconvert>
                 <taskdef classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" classpath="${libs.CopyLibs.classpath}" name="copylibs"/>
+<<<<<<< HEAD
                 <copylibs compress="${jar.compress}" excludeFromCopy="${copylibs.excludes}" index="${jar.index}" indexMetaInf="${jar.index.metainf}" jarfile="${dist.jar}" manifest="@{manifest}" manifestencoding="UTF-8" rebase="${copylibs.rebase}" runtimeclasspath="${run.classpath.without.build.classes.dir}">
+=======
+                <copylibs compress="${jar.compress}" excludeFromCopy="${copylibs.excludes}" index="${jar.index}" indexMetaInf="${jar.index.metainf}" jarfile="${dist.jar}" manifest="@{manifest}" rebase="${copylibs.rebase}" runtimeclasspath="${run.classpath.without.build.classes.dir}">
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
                     <fileset dir="${build.classes.dir}" excludes="${dist.archive.excludes}"/>
                     <manifest>
                         <attribute name="Class-Path" value="${jar.classpath}"/>
@@ -880,7 +896,11 @@ is divided into following sections:
     </target>
     <target name="-init-presetdef-jar">
         <presetdef name="jar" uri="http://www.netbeans.org/ns/j2se-project/1">
+<<<<<<< HEAD
             <jar compress="${jar.compress}" index="${jar.index}" jarfile="${dist.jar}" manifestencoding="UTF-8">
+=======
+            <jar compress="${jar.compress}" index="${jar.index}" jarfile="${dist.jar}">
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
                 <j2seproject1:fileset dir="${build.classes.dir}" excludes="${dist.archive.excludes}"/>
             </jar>
         </presetdef>
@@ -1014,12 +1034,20 @@ is divided into following sections:
         <copy encoding="${manifest.encoding}" file="${manifest.file}" outputencoding="UTF-8" tofile="${tmp.manifest.file}"/>
     </target>
     <target depends="init,-do-jar-create-manifest,-do-jar-copy-manifest" if="do.archive+main.class.available" name="-do-jar-set-mainclass">
+<<<<<<< HEAD
         <manifest encoding="UTF-8" file="${tmp.manifest.file}" mode="update">
+=======
+        <manifest file="${tmp.manifest.file}" mode="update">
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
             <attribute name="Main-Class" value="${main.class}"/>
         </manifest>
     </target>
     <target depends="init,-do-jar-create-manifest,-do-jar-copy-manifest" if="do.archive+profile.available" name="-do-jar-set-profile">
+<<<<<<< HEAD
         <manifest encoding="UTF-8" file="${tmp.manifest.file}" mode="update">
+=======
+        <manifest file="${tmp.manifest.file}" mode="update">
+>>>>>>> 338ae6c9dadd82f184508a0d98bdc63c7d7321c3
             <attribute name="Profile" value="${javac.profile}"/>
         </manifest>
     </target>
