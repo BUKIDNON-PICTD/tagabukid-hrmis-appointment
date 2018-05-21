@@ -1,0 +1,10 @@
+"entity.*|selectedSignatoryGroupItem"[mode == 'read']{
+    enabled:false;
+}
+
+"entity.*|selectedSignatoryGroupItem"[mode != 'read']{
+    enabled:true;
+}
+
+
+
