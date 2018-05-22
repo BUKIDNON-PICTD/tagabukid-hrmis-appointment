@@ -47,12 +47,14 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         jScrollPane5 = new javax.swing.JScrollPane();
         xTextArea5 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
+        xTextField3 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("City / Municipality");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
+        xTextField1.setCaptionWidth(130);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
@@ -60,6 +62,7 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Name");
+        xTextArea1.setCaptionWidth(130);
         xTextArea1.setName("entity.name"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -68,6 +71,7 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
+        xTextArea2.setCaptionWidth(130);
         xTextArea2.setItemExpression("");
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
@@ -77,6 +81,7 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea3.setCaption("Acronym / Abbreviation");
+        xTextArea3.setCaptionWidth(130);
         xTextArea3.setName("entity.acronymorabbreviation"); // NOI18N
         jScrollPane3.setViewportView(xTextArea3);
 
@@ -84,8 +89,10 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
 
         jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea4.setCaption("PSG Code");
-        xTextArea4.setName("entity.psgcode"); // NOI18N
+        xTextArea4.setText("entity.psgccode");
+        xTextArea4.setCaption("PSGC Code");
+        xTextArea4.setCaptionWidth(130);
+        xTextArea4.setName("entity.psgccode"); // NOI18N
         jScrollPane4.setViewportView(xTextArea4);
 
         xFormPanel1.add(jScrollPane4);
@@ -93,15 +100,23 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         jScrollPane5.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea5.setCaption("PIN No");
+        xTextArea5.setCaptionWidth(130);
         xTextArea5.setName("entity.pinno"); // NOI18N
         jScrollPane5.setViewportView(xTextArea5);
 
         xFormPanel1.add(jScrollPane5);
 
         xTextField2.setCaption("Province ID");
-        xTextField2.setName("entity.objid"); // NOI18N
+        xTextField2.setCaptionWidth(130);
+        xTextField2.setName("entity.provinceid"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
+
+        xTextField3.setCaption("Congressional District ID");
+        xTextField3.setCaptionWidth(130);
+        xTextField3.setName("entity.congressionaldistrictid"); // NOI18N
+        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField3);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -139,5 +154,6 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextArea xTextArea5;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
+    private com.rameses.rcp.control.XTextField xTextField3;
     // End of variables declaration//GEN-END:variables
 }

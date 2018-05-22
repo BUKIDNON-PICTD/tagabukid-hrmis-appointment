@@ -3,7 +3,7 @@
         <invoker type="master_tbllocregion:create" caption="Create Region" action="create"/>
         <invoker type="master_tbllocregion:open" caption="Open Region" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterlocRegionModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterlocRegionView"/>
     </pages>

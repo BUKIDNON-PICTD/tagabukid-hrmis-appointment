@@ -3,7 +3,7 @@
         <invoker type="master_tbltrainingsubcategory:create" caption="Create Training Sub-category" action="create"/>
         <invoker type="master_tbltrainingsubcategory:open" caption="Open Training Sub-category" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterTrainingSubcategoryModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterTrainingSubcategoryView"/>
     </pages>

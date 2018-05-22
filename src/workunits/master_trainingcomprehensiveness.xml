@@ -3,7 +3,7 @@
         <invoker type="master_tbltrainingcomprehensiveness:create" caption="Create Training Comprehensiveness" action="create"/>
         <invoker type="master_tbltrainingcomprehensiveness:open" caption="Open Training Comprehensiveness" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterTrainingComprehensivenessModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterTrainingComprehensivenessView"/>
     </pages>

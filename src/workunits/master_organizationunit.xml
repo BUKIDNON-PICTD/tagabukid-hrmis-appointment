@@ -3,7 +3,7 @@
         <invoker type="master_tblorganizationunit:create" caption="Create Organization Unit" action="create"/>
         <invoker type="master_tblorganizationunit:open" caption="Open Organization Unit" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterOrganizationUnitModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterOrganizationUnitView"/>
     </pages>

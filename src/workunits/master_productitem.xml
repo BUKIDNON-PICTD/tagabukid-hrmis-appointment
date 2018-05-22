@@ -3,7 +3,7 @@
         <invoker type="master_tblproductitem:create" caption="Create Product Item" action="create"/>
         <invoker type="master_tblproductitem:open" caption="Open Product Item" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterProductItemModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterProductItemView"/>
     </pages>

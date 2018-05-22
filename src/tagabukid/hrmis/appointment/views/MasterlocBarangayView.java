@@ -46,6 +46,7 @@ public class MasterlocBarangayView extends javax.swing.JPanel {
         xTextArea4 = new com.rameses.rcp.control.XTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         xTextArea5 = new com.rameses.rcp.control.XTextArea();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Barangay");
@@ -87,9 +88,9 @@ public class MasterlocBarangayView extends javax.swing.JPanel {
 
         jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea4.setCaption("PSG Code");
+        xTextArea4.setCaption("PSGC Code");
         xTextArea4.setCaptionWidth(130);
-        xTextArea4.setName("entity.psgcode"); // NOI18N
+        xTextArea4.setName("entity.psgccode"); // NOI18N
         jScrollPane4.setViewportView(xTextArea4);
 
         xFormPanel1.add(jScrollPane4);
@@ -102,6 +103,12 @@ public class MasterlocBarangayView extends javax.swing.JPanel {
         jScrollPane5.setViewportView(xTextArea5);
 
         xFormPanel1.add(jScrollPane5);
+
+        xTextField2.setCaption("City/Municipality ID");
+        xTextField2.setCaptionWidth(130);
+        xTextField2.setName("entity.citymunicipalityid"); // NOI18N
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField2);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -118,7 +125,7 @@ public class MasterlocBarangayView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -138,5 +145,6 @@ public class MasterlocBarangayView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextArea xTextArea4;
     private com.rameses.rcp.control.XTextArea xTextArea5;
     private com.rameses.rcp.control.XTextField xTextField1;
+    private com.rameses.rcp.control.XTextField xTextField2;
     // End of variables declaration//GEN-END:variables
 }

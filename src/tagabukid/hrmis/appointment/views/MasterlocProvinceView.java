@@ -42,6 +42,7 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Province");
         xHorizontalPanel1.setBorder(xTitledBorder1);
+        xHorizontalPanel1.setPreferredSize(new java.awt.Dimension(100, 396));
 
         xTextField1.setCaption("objid");
         xTextField1.setName("entity.objid"); // NOI18N
@@ -75,8 +76,8 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
 
         jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
 
-        xTextArea4.setCaption("PSG Code");
-        xTextArea4.setName("entity.psgcode"); // NOI18N
+        xTextArea4.setCaption("PSGC Code");
+        xTextArea4.setName("entity.psgccode"); // NOI18N
         jScrollPane4.setViewportView(xTextArea4);
 
         xFormPanel1.add(jScrollPane4);
@@ -102,8 +103,8 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

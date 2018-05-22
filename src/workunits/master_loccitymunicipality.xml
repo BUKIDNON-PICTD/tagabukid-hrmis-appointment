@@ -3,7 +3,7 @@
         <invoker type="master_tblloccitymunicipality:create" caption="Create Municipality/City" action="create"/>
         <invoker type="master_tblloccitymunicipality:open" caption="Open Municipality/City" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterlocCityMunicipalityModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterlocCityMunicipalityView"/>
     </pages>

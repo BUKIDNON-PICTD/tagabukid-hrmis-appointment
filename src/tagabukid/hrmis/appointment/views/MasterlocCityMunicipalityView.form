@@ -48,6 +48,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="objid"/>
+                <Property name="captionWidth" type="int" value="130"/>
                 <Property name="name" type="java.lang.String" value="entity.objid" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -69,6 +70,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea1">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Name"/>
+                    <Property name="captionWidth" type="int" value="130"/>
                     <Property name="name" type="java.lang.String" value="entity.name" noResource="true"/>
                   </Properties>
                 </Component>
@@ -89,6 +91,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea2">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Description"/>
+                    <Property name="captionWidth" type="int" value="130"/>
                     <Property name="itemExpression" type="java.lang.String" value=""/>
                     <Property name="name" type="java.lang.String" value="entity.description" noResource="true"/>
                   </Properties>
@@ -110,6 +113,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea3">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Acronym / Abbreviation"/>
+                    <Property name="captionWidth" type="int" value="130"/>
                     <Property name="name" type="java.lang.String" value="entity.acronymorabbreviation" noResource="true"/>
                   </Properties>
                 </Component>
@@ -129,8 +133,10 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea4">
                   <Properties>
-                    <Property name="caption" type="java.lang.String" value="PSG Code"/>
-                    <Property name="name" type="java.lang.String" value="entity.psgcode" noResource="true"/>
+                    <Property name="text" type="java.lang.String" value="entity.psgccode"/>
+                    <Property name="caption" type="java.lang.String" value="PSGC Code"/>
+                    <Property name="captionWidth" type="int" value="130"/>
+                    <Property name="name" type="java.lang.String" value="entity.psgccode" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -150,6 +156,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea5">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="PIN No"/>
+                    <Property name="captionWidth" type="int" value="130"/>
                     <Property name="name" type="java.lang.String" value="entity.pinno" noResource="true"/>
                   </Properties>
                 </Component>
@@ -158,7 +165,18 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Province ID"/>
-                <Property name="name" type="java.lang.String" value="entity.objid" noResource="true"/>
+                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="name" type="java.lang.String" value="entity.provinceid" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[0, 20]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
+              <Properties>
+                <Property name="caption" type="java.lang.String" value="Congressional District ID"/>
+                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="name" type="java.lang.String" value="entity.congressionaldistrictid" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>

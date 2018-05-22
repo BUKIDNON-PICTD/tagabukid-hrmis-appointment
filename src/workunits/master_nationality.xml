@@ -3,7 +3,7 @@
         <invoker type="master_tblnationality:create" caption="Create Nationality" action="create"/>
         <invoker type="master_tblnationality:open" caption="Open Nationality" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterNationalityModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterNationalityView"/>
     </pages>

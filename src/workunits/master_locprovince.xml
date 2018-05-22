@@ -3,7 +3,7 @@
         <invoker type="master_tbllocprovince:create" caption="Create Province" action="create"/>
         <invoker type="master_tbllocprovince:open" caption="Open Province" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterlocProvinceModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterlocProvinceView"/>
     </pages>

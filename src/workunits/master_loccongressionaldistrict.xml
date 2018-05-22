@@ -3,7 +3,7 @@
         <invoker type="master_tblloccongressionaldistrict:create" caption="Create Congressional District" action="create"/>
         <invoker type="master_tblloccongressionaldistrict:open" caption="Open Congressional District" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterlocCongressionalDistrictModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterlocCongressionalDistrictView"/>
     </pages>

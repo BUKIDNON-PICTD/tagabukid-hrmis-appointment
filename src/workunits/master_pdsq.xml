@@ -3,7 +3,7 @@
         <invoker type="master_tblpdsq:create" caption="Create PDS Q" action="create"/>
         <invoker type="master_tblpdsq:open" caption="Open PDS Q" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterPDSQModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterPDSQView"/>
     </pages>

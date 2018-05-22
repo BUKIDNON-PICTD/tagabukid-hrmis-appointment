@@ -3,7 +3,7 @@
         <invoker type="master_tblskillcompetencylevel:create" caption="Create Skill Competency Level" action="create"/>
         <invoker type="master_tblskillcompetencylevel:open" caption="Open Skill Competency Level" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterSkillCompetencyLevelModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterSkillCompetencyLevelView"/>
     </pages>

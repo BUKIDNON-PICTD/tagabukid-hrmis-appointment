@@ -3,7 +3,7 @@
         <invoker type="master_tblrecognitioncategory:create" caption="Create Recognition Category" action="create"/>
         <invoker type="master_tblrecognitioncategory:open" caption="Open Recognition Category" action="open"/>
     </invokers>
-    <!--<code class="tagabukid.hrmis.pmis.models.MasterBehavioralController"/>-->
+    <code class="tagabukid.hrmis.appointment.models.MasterRecognitionCategoryModel" />
     <pages>
         <page template="tagabukid.hrmis.appointment.views.MasterRecognitionCategoryView"/>
     </pages>
