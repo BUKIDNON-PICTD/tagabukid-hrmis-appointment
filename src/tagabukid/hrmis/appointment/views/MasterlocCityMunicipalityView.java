@@ -36,16 +36,12 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xTextField1 = new com.rameses.rcp.control.XTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        xTextArea1 = new com.rameses.rcp.control.XTextArea();
+        xTextField4 = new com.rameses.rcp.control.XTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        xTextArea3 = new com.rameses.rcp.control.XTextArea();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        xTextArea4 = new com.rameses.rcp.control.XTextArea();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        xTextArea5 = new com.rameses.rcp.control.XTextArea();
+        xTextField5 = new com.rameses.rcp.control.XTextField();
+        xTextField6 = new com.rameses.rcp.control.XTextField();
+        xTextField7 = new com.rameses.rcp.control.XTextField();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
 
@@ -59,14 +55,11 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField1);
 
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
-
-        xTextArea1.setCaption("Name");
-        xTextArea1.setCaptionWidth(130);
-        xTextArea1.setName("entity.name"); // NOI18N
-        jScrollPane1.setViewportView(xTextArea1);
-
-        xFormPanel1.add(jScrollPane1);
+        xTextField4.setCaption("Name");
+        xTextField4.setCaptionWidth(130);
+        xTextField4.setName("entity.name"); // NOI18N
+        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField4);
 
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
@@ -78,33 +71,23 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
 
         xFormPanel1.add(jScrollPane2);
 
-        jScrollPane3.setPreferredSize(new java.awt.Dimension(0, 63));
+        xTextField5.setCaption("Acronym / Abbreviation");
+        xTextField5.setCaptionWidth(130);
+        xTextField5.setName("entity.acronymorabbreviation"); // NOI18N
+        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField5);
 
-        xTextArea3.setCaption("Acronym / Abbreviation");
-        xTextArea3.setCaptionWidth(130);
-        xTextArea3.setName("entity.acronymorabbreviation"); // NOI18N
-        jScrollPane3.setViewportView(xTextArea3);
+        xTextField6.setCaption("PSGC Code");
+        xTextField6.setCaptionWidth(130);
+        xTextField6.setName("entity.psgccode"); // NOI18N
+        xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField6);
 
-        xFormPanel1.add(jScrollPane3);
-
-        jScrollPane4.setPreferredSize(new java.awt.Dimension(0, 63));
-
-        xTextArea4.setText("entity.psgccode");
-        xTextArea4.setCaption("PSGC Code");
-        xTextArea4.setCaptionWidth(130);
-        xTextArea4.setName("entity.psgccode"); // NOI18N
-        jScrollPane4.setViewportView(xTextArea4);
-
-        xFormPanel1.add(jScrollPane4);
-
-        jScrollPane5.setPreferredSize(new java.awt.Dimension(0, 63));
-
-        xTextArea5.setCaption("PIN No");
-        xTextArea5.setCaptionWidth(130);
-        xTextArea5.setName("entity.pinno"); // NOI18N
-        jScrollPane5.setViewportView(xTextArea5);
-
-        xFormPanel1.add(jScrollPane5);
+        xTextField7.setCaption("PIN No");
+        xTextField7.setCaptionWidth(130);
+        xTextField7.setName("entity.pinno"); // NOI18N
+        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField7);
 
         xTextField2.setCaption("Province ID");
         xTextField2.setCaptionWidth(130);
@@ -126,34 +109,30 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
-    private com.rameses.rcp.control.XTextArea xTextArea3;
-    private com.rameses.rcp.control.XTextArea xTextArea4;
-    private com.rameses.rcp.control.XTextArea xTextArea5;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField5;
+    private com.rameses.rcp.control.XTextField xTextField6;
+    private com.rameses.rcp.control.XTextField xTextField7;
     // End of variables declaration//GEN-END:variables
 }
