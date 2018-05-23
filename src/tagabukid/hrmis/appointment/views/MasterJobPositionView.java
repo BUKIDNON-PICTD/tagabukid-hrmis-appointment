@@ -45,7 +45,7 @@ public class MasterJobPositionView extends javax.swing.JPanel {
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xTextField5 = new com.rameses.rcp.control.XTextField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
-        xTextField9 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xTextField10 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -103,16 +103,13 @@ public class MasterJobPositionView extends javax.swing.JPanel {
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField6);
 
-        xTextField9.setCaption("paygradeid");
-        xTextField9.setCaptionWidth(170);
-        xTextField9.setName("entity.paygradeid"); // NOI18N
-        xTextField9.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                xTextField9ActionPerformed(evt);
-            }
-        });
-        xFormPanel1.add(xTextField9);
+        xLookupField1.setCaption("Pay Grade ID");
+        xLookupField1.setCaptionWidth(170);
+        xLookupField1.setExpression("#{item.grade}");
+        xLookupField1.setHandler("paygrade:lookup");
+        xLookupField1.setName("entity.paygrade"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xLookupField1);
 
         xTextField10.setCaption("oldid");
         xTextField10.setCaptionWidth(170);
@@ -145,10 +142,6 @@ public class MasterJobPositionView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void xTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_xTextField9ActionPerformed
-
     private void xTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_xTextField10ActionPerformed
@@ -158,6 +151,7 @@ public class MasterJobPositionView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField10;
@@ -167,6 +161,5 @@ public class MasterJobPositionView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField5;
     private com.rameses.rcp.control.XTextField xTextField6;
     private com.rameses.rcp.control.XTextField xTextField7;
-    private com.rameses.rcp.control.XTextField xTextField9;
     // End of variables declaration//GEN-END:variables
 }

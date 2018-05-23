@@ -41,7 +41,7 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xTextField5 = new com.rameses.rcp.control.XTextField();
-        xTextField6 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Congressional District");
@@ -76,10 +76,13 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
         xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField5);
 
-        xTextField6.setCaption("Province ID");
-        xTextField6.setName("entity.provinceid"); // NOI18N
-        xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField6);
+        xLookupField1.setCaption("Province ID");
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("province:lookup");
+        xLookupField1.setName("entity.province"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField1.setRequired(true);
+        xFormPanel1.add(xLookupField1);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -106,11 +109,11 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;
-    private com.rameses.rcp.control.XTextField xTextField6;
     // End of variables declaration//GEN-END:variables
 }

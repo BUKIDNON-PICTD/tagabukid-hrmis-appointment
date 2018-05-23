@@ -40,7 +40,7 @@ public class MasterTrainingSubcategoryView extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         xTextField4 = new com.rameses.rcp.control.XTextField();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Training Sub-category");
@@ -73,11 +73,14 @@ public class MasterTrainingSubcategoryView extends javax.swing.JPanel {
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);
 
-        xTextField2.setCaption("trainingcategoryid");
-        xTextField2.setCaptionWidth(125);
-        xTextField2.setName("entity.trainingcategoryid"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField2);
+        xLookupField1.setCaption("Training Category ID");
+        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("trainingcategory:lookup");
+        xLookupField1.setName("entity.trainingcategory"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField1.setRequired(true);
+        xFormPanel1.add(xLookupField1);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -104,9 +107,9 @@ public class MasterTrainingSubcategoryView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables

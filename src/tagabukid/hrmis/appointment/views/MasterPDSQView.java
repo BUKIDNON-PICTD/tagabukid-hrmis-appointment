@@ -30,7 +30,7 @@ public class MasterPDSQView extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -58,11 +58,13 @@ public class MasterPDSQView extends javax.swing.JPanel {
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xTextField3.setCaption("pdsqsitemid");
-        xTextField3.setCaptionWidth(125);
-        xTextField3.setName("entity.pdsqsitemid"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
+        xLookupField1.setCaption("PDS Qs Item ID");
+        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setExpression("#{item.item}");
+        xLookupField1.setHandler("pdsqsitem:lookup");
+        xLookupField1.setName("entity.pdsqsitem"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xLookupField1);
 
         xTextField4.setCaption("oldid");
         xTextField4.setCaptionWidth(125);
@@ -95,10 +97,10 @@ public class MasterPDSQView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables
 }

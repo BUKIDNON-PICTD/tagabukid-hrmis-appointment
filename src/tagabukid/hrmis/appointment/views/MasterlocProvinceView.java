@@ -33,7 +33,7 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xTextField5 = new com.rameses.rcp.control.XTextField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Province");
@@ -80,11 +80,14 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField6);
 
-        xTextField2.setCaption("Region ID");
-        xTextField2.setCaptionWidth(130);
-        xTextField2.setName("entity.regionid"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField2);
+        xLookupField1.setCaption("Region ID");
+        xLookupField1.setCaptionWidth(130);
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("region:lookup");
+        xLookupField1.setName("entity.region"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField1.setRequired(true);
+        xFormPanel1.add(xLookupField1);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -101,8 +104,8 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(268, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(266, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,9 +114,9 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;

@@ -30,7 +30,7 @@ public class MasterNationalityView extends javax.swing.JPanel {
         xTextField3 = new com.rameses.rcp.control.XTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Nationality");
@@ -57,11 +57,13 @@ public class MasterNationalityView extends javax.swing.JPanel {
 
         xFormPanel1.add(jScrollPane2);
 
-        xTextField2.setCaption("Country ID");
-        xTextField2.setCaptionWidth(125);
-        xTextField2.setName("entity.countryid"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField2);
+        xLookupField1.setCaption("Country ID");
+        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("country:lookup");
+        xLookupField1.setName("entity.country"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xLookupField1);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -88,9 +90,9 @@ public class MasterNationalityView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,6 +16,7 @@ class MasterProductItemModel extends CrudFormModel{
     public void beforeSave(o){
         entity.state = "DRAFT";
         if(o == 'create'){
+            entity.productcategoryid = entity.productcategory.objid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

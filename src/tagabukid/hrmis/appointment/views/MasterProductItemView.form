@@ -96,14 +96,17 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField5">
+            <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="productcategoryid"/>
+                <Property name="caption" type="java.lang.String" value="Product Category ID"/>
                 <Property name="captionWidth" type="int" value="125"/>
-                <Property name="name" type="java.lang.String" value="entity.productcategoryid" noResource="true"/>
+                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
+                <Property name="handler" type="java.lang.String" value="productcategory:lookup"/>
+                <Property name="name" type="java.lang.String" value="entity.productcategory" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>
+                <Property name="required" type="boolean" value="true"/>
               </Properties>
             </Component>
           </SubComponents>
