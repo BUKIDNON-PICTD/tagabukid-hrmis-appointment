@@ -48,7 +48,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="objid"/>
-                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="captionWidth" type="int" value="150"/>
                 <Property name="name" type="java.lang.String" value="entity.objid" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -58,7 +58,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Name"/>
-                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="captionWidth" type="int" value="150"/>
                 <Property name="name" type="java.lang.String" value="entity.name" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -80,7 +80,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea2">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Description"/>
-                    <Property name="captionWidth" type="int" value="130"/>
+                    <Property name="captionWidth" type="int" value="150"/>
                     <Property name="itemExpression" type="java.lang.String" value=""/>
                     <Property name="name" type="java.lang.String" value="entity.description" noResource="true"/>
                   </Properties>
@@ -90,7 +90,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField5">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Acronym / Abbreviation"/>
-                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="captionWidth" type="int" value="150"/>
                 <Property name="name" type="java.lang.String" value="entity.acronymorabbreviation" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -100,7 +100,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField6">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="PSGC Code"/>
-                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="captionWidth" type="int" value="150"/>
                 <Property name="name" type="java.lang.String" value="entity.psgccode" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -110,31 +110,38 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField7">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="PIN No"/>
-                <Property name="captionWidth" type="int" value="130"/>
+                <Property name="captionWidth" type="int" value="150"/>
                 <Property name="name" type="java.lang.String" value="entity.pinno" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
+            <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Province ID"/>
-                <Property name="captionWidth" type="int" value="130"/>
-                <Property name="name" type="java.lang.String" value="entity.provinceid" noResource="true"/>
+                <Property name="captionWidth" type="int" value="150"/>
+                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
+                <Property name="handler" type="java.lang.String" value="province:lookup"/>
+                <Property name="name" type="java.lang.String" value="entity.province" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>
+                <Property name="required" type="boolean" value="true"/>
+                <Property name="returnFields" type="java.lang.String" value=""/>
               </Properties>
             </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
+            <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField2">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Congressional District ID"/>
-                <Property name="captionWidth" type="int" value="130"/>
-                <Property name="name" type="java.lang.String" value="entity.congressionaldistrictid" noResource="true"/>
+                <Property name="captionWidth" type="int" value="150"/>
+                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
+                <Property name="handler" type="java.lang.String" value="congressionaldistrict:lookup"/>
+                <Property name="name" type="java.lang.String" value="entity.congressionaldistrict" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>
+                <Property name="required" type="boolean" value="true"/>
               </Properties>
             </Component>
           </SubComponents>

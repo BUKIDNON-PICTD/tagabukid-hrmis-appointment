@@ -15,7 +15,10 @@ class MasterlocCityMunicipalityModel extends CrudFormModel{
 
     public void beforeSave(o){
         entity.state = "DRAFT";
+        
         if(o == 'create'){
+            entity.provinceid = entity.province.objid;
+            entity.congressionaldistrictid = entity.congressionaldistrict.objid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workunit extends="com/rameses/seti2/templates/CrudLookup.xml" 
+         schemaName="master_tblloccongressionaldistrict">
+    <invokers>
+        <invoker type="congressionaldistrict:lookup" caption="Lookup Congressional District"
+                 action="init" target="popup" height="500"  
+                 cols="objid,name,description,code"/>  
+    </invokers>
+</workunit>
