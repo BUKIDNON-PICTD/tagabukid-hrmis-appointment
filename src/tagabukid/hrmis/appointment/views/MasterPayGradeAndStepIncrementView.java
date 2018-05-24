@@ -48,6 +48,7 @@ public class MasterPayGradeAndStepIncrementView extends javax.swing.JPanel {
         xTextField1.setCaptionWidth(75);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField1.setVisible(false);
         xFormPanel1.add(xTextField1);
 
         xTextField2.setCaption("Grade");
@@ -84,7 +85,7 @@ public class MasterPayGradeAndStepIncrementView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

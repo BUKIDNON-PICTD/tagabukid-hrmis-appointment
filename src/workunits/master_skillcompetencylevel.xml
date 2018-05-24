@@ -1,7 +1,7 @@
 <workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblskillcompetencylevel">
     <invokers>
-        <invoker type="master_tblskillcompetencylevel:create" caption="Create Skill Competency Level" action="create"/>
-        <invoker type="master_tblskillcompetencylevel:open" caption="Open Skill Competency Level" action="open"/>
+        <invoker type="master_tblskillcompetencylevel:create" caption="New Skill Competency Level" action="create"/>
+        <invoker type="master_tblskillcompetencylevel:open" caption="View Skill Competency Level" action="open"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterSkillCompetencyLevelModel" />
     <pages>

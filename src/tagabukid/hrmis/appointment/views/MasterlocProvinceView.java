@@ -44,6 +44,7 @@ public class MasterlocProvinceView extends javax.swing.JPanel {
         xTextField1.setCaptionWidth(130);
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField1.setVisible(false);
         xFormPanel1.add(xTextField1);
 
         xTextField3.setCaption("Name");

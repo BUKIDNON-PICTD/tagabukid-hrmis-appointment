@@ -1,7 +1,7 @@
 <workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblskillcategory">
     <invokers>
-        <invoker type="master_tblskillcategory:create" caption="Create Skill Category" action="create"/>
-        <invoker type="master_tblskillcategory:open" caption="Open Skill Category" action="open"/>
+        <invoker type="master_tblskillcategory:create" caption="New Skill Category" action="create"/>
+        <invoker type="master_tblskillcategory:open" caption="View Skill Category" action="open"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterSkillCategoryModel" />
     <pages>

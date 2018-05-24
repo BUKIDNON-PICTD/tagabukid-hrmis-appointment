@@ -45,6 +45,7 @@ public class MasterOrganizationUnitTypeView extends javax.swing.JPanel {
         xTextField1.setCaptionWidth(125);
         xTextField1.setName("entity.orgunittypeid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField1.setVisible(false);
         xFormPanel1.add(xTextField1);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
@@ -81,7 +82,7 @@ public class MasterOrganizationUnitTypeView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

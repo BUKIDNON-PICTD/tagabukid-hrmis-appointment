@@ -47,10 +47,12 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
         xTitledBorder1.setTitle("Congressional District");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
+        xTextField1.setEditable(true);
         xTextField1.setText("entity.objid");
         xTextField1.setCaption("objid");
         xTextField1.setName("entity.objid"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField1.setVisible(false);
         xFormPanel1.add(xTextField1);
 
         xTextField2.setCaption("Name");
@@ -100,7 +102,7 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
