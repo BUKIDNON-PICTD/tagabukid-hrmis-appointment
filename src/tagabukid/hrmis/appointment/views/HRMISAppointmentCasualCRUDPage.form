@@ -106,7 +106,7 @@
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Tranche"/>
-                <Property name="expression" type="java.lang.String" value="#{item.entity.name}"/>
+                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_tranche"/>
                 <Property name="name" type="java.lang.String" value="entity.currentsalarystep" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

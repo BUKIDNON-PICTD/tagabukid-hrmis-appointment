@@ -91,7 +91,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xFormPanel1.add(xLookupField8);
 
         xLookupField1.setCaption("Tranche");
-        xLookupField1.setExpression("#{item.entity.name}");
+        xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("lookup:tagabukid_hrmis_tranche");
         xLookupField1.setName("entity.currentsalarystep"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));

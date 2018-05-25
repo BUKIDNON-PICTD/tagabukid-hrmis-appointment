@@ -27,6 +27,9 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         entity = svc.initCreate();
     }
     
+    public void afterOpen(){
+        println entity.appointmentitems.personnel
+    }
     def suggestGroupName = [
         fetchList: { o->
             return svc.getList(o).appointmentgroupname;
