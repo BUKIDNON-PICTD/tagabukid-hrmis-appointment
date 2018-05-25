@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblprofessionalorganizationorassociationcategory">
+    <invokers>
+        <invoker type="master_tblprofessionalorganizationorassociationcategory:create" caption="New Professional Organization or Association Category" action="create"/>
+        <invoker type="master_tblprofessionalorganizationorassociationcategory:open" caption="View Professional Organization or Association Category" action="open"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterProfessionalOrganizationOrAssociationCategoryModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterProfessionalOrganizationOrAssociationCategoryView"/>
+    </pages>
+</workunit>

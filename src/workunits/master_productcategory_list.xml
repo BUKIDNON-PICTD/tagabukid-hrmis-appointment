@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="master_tblproductcategory">
+    <invokers>
+        <invoker folderid="/home/hrmis/hrmismaster" caption="Product Category" action="init" index="1" />
+        <invoker folderid="/explorer/master/hrmismaster" action="init" caption="Product Category" index="20" />   
+    </invokers>
+</workunit>

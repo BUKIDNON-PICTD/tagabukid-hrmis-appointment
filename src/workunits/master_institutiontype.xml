@@ -1,0 +1,10 @@
+<workunit schemaName="master_tblinstitutiontype">
+    <invokers>
+        <invoker type="master_tblinstitutiontype:create" caption="New Institution Type" action="create"/>
+        <invoker type="master_tblinstitutiontype:open" caption="View Institution Type" action="open"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterInstitutionTypeModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterInstitutionTypeView" />
+    </pages>
+</workunit>

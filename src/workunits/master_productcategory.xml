@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblproductcategory">
+    <invokers>
+        <invoker type="master_tblproductcategory:create" caption="New Product Category" action="create"/>
+        <invoker type="master_tblproductcategory:open" caption="View Product Category" action="open"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterProductCategoryModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterProductCategoryView"/>
+    </pages>
+</workunit>

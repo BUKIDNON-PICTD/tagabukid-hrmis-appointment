@@ -1,0 +1,10 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblinstitution">
+    <invokers>
+        <invoker type="master_tblinstitution:create" caption="New Institution" action="create"/>
+        <invoker type="master_tblinstitution:open" caption="View Institution" action="open"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterInstitutionModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterInstitutionView"/>
+    </pages>
+</workunit>
