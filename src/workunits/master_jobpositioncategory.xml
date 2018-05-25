@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tbljobpositioncategory:create" caption="Create Job Position Category" action="create"/>
         <invoker type="master_tbljobpositioncategory:open" caption="Open Job Position Category" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterJobPositionCategoryModel"/>
     <pages>

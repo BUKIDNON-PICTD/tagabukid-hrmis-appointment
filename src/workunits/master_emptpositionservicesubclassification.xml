@@ -1,0 +1,13 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblemptpositionservicesubclassification">
+    <invokers>
+        <invoker type="master_tblemptpositionservicesubclassification:create" caption="New Position Service Sub-classification" action="create"/>
+        <invoker type="master_tblemptpositionservicesubclassification:open" caption="View Position Service Sub-classification" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterEmptPositionServiceSubClassificationModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterEmptPositionServiceSubClassificationView"/>
+    </pages>
+</workunit>
+

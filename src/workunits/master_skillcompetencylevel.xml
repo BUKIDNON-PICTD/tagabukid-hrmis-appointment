@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblskillcompetencylevel:create" caption="New Skill Competency Level" action="create"/>
         <invoker type="master_tblskillcompetencylevel:open" caption="View Skill Competency Level" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterSkillCompetencyLevelModel" />
     <pages>

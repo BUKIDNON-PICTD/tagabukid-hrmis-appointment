@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblrecognitioncategory:create" caption="New Recognition Category" action="create"/>
         <invoker type="master_tblrecognitioncategory:open" caption="View Recognition Category" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterRecognitionCategoryModel" />
     <pages>

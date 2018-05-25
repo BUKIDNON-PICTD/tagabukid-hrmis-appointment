@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblkinship:create" caption="Create Kinship" action="create"/>
         <invoker type="master_tblkinship:open" caption="Open Kinship" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterKinshipModel" />
     <pages>
