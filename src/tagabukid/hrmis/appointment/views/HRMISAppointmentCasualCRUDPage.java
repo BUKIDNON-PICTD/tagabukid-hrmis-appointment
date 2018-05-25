@@ -256,9 +256,11 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xDataTable1.setHandler("appointmentitemListHandler");
         jTabbedPane1.addTab("Appointment Items", xDataTable1);
 
-        xLookupField2.setText("xLookupField2");
         xLookupField2.setCaption("Signatory Group");
         xLookupField2.setCaptionWidth(100);
+        xLookupField2.setExpression("#{item.signatorygroup.signatorygroupname}");
+        xLookupField2.setHandler("signatorygroup:lookup");
+        xLookupField2.setName("entity.signatorygroup"); // NOI18N
         xLookupField2.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel3.add(xLookupField2);
 

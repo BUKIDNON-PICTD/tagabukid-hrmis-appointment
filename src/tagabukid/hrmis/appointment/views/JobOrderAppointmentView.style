@@ -1,0 +1,10 @@
+"entity.*|selectedAppointmentMemberItem"[mode == 'read']{
+    enabled:false;
+}
+
+"entity.*|selectedAppointmentMemberItem"[mode != 'read']{
+    enabled:true;
+}
+
+
+
