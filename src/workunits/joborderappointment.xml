@@ -1,8 +1,10 @@
 <workunit schemaName="hrmis_appointmentjoborder">
     <invokers>
-        <invoker type="hrmis_appointmentjoborder:create" caption="Create Appointment (JO)" action="create"/>
+        <invoker type="hrmis_appointmentjoborder:create" caption="Create JO Appointment" action="create"/>
         <invoker type="hrmis_appointmentjoborder:open" caption="Open Appointment (JO)" action="open"/>       
-        <invoker folderid="/home/hrmis" caption="Create Appointment (JO)" action="create" index="1" />
+        <invoker folderid="/home/hrmis" caption="Appointment (JO)" action="create" index="50" />
+        <invoker type="formActions" caption="Approve" action="approve" 
+                  visibleWhen="#{allowApprove==true}"/> 
     </invokers>
    <code class="tagabukid.hrmis.appointment.models.JobOrderAppointmentModel" />
     <pages>

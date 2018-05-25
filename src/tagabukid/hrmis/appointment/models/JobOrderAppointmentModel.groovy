@@ -192,6 +192,17 @@ class JobOrderAppointmentModel extends CrudFormModel{
 //                }
 //        ])
 //    }
+
+    void approve() { 
+        if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
+            getPersistenceService().update([ 
+               _schemaname: 'hrmis_appointmentjoborder', 
+               objid : entity.objid, 
+               state : 'APPROVED' 
+            ]); 
+            loadData(); 
+        }
+    }
         
 
 }
