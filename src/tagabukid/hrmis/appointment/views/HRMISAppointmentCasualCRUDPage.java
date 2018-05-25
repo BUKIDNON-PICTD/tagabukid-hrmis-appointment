@@ -136,7 +136,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xTextArea2.setEditable(false);
         xTextArea2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         xTextArea2.setForeground(new java.awt.Color(204, 0, 0));
-        xTextArea2.setName("entity.state"); // NOI18N
+        xTextArea2.setName("entity.status"); // NOI18N
         xTextArea2.setShowCaption(false);
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -258,11 +258,69 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
 
         xLookupField2.setCaption("Signatory Group");
         xLookupField2.setCaptionWidth(100);
-        xLookupField2.setExpression("#{item.signatorygroup.signatorygroupname}");
+        xLookupField2.setExpression("#{item.signatorygroupname}");
         xLookupField2.setHandler("signatorygroup:lookup");
         xLookupField2.setName("entity.signatorygroup"); // NOI18N
         xLookupField2.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel3.add(xLookupField2);
+
+        xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "signatoryname"}
+                , new Object[]{"caption", "Signatory Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "signatorytitle"}
+                , new Object[]{"caption", "Signatory Title"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "org"}
+                , new Object[]{"caption", "Office"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "level"}
+                , new Object[]{"caption", "Level"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable2.setDepends(new String[] {"entity.signatorygroup"});
+        xDataTable2.setDynamic(true);
+        xDataTable2.setHandler("signatoryItemHandler");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
