@@ -84,7 +84,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.position.name}", "lookup:tagabukid_hrmis_jobposition")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "dailysalary"}
@@ -101,7 +101,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DecimalColumnHandler("#,##0.00", -1.0, -1.0, false, 2)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "accountname"}
+                new Object[]{"name", "account"}
                 , new Object[]{"caption", "Account"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -112,10 +112,10 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.account.name}", "lookup:tagabukid_hrmis_account")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "fundname"}
+                new Object[]{"name", "fund"}
                 , new Object[]{"caption", "Fund"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -126,7 +126,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fund.name}", "lookup:tagabukid_hrmis_fund")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "lastemploymentfrom"}
@@ -163,7 +163,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
 
         xLookupField3.setCaption("Signatory Group");
         xLookupField3.setCaptionWidth(120);
-        xLookupField3.setExpression("#{entity.signatorygroupname}");
+        xLookupField3.setExpression("#{item.signatorygroupname}");
         xLookupField3.setHandler("lookupSignatory");
         xLookupField3.setName("entity.signatorygroup"); // NOI18N
         xLookupField3.setPreferredSize(new java.awt.Dimension(250, 20));
@@ -322,7 +322,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
         xLabel1.setCaption("State");
         xLabel1.setCaptionFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         xLabel1.setCaptionWidth(140);
-        xLabel1.setExpression("entity.state");
+        xLabel1.setExpression("#{entity.state}");
         xLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         xLabel1.setName("entity.state"); // NOI18N
         xLabel1.setPreferredSize(new java.awt.Dimension(200, 40));

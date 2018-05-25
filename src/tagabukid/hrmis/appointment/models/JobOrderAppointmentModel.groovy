@@ -24,6 +24,9 @@ class JobOrderAppointmentModel extends CrudFormModel{
     @Service('AppointmentJobOrderService')
     def joSvc
     
+    @Service('TagabukidLookupService')
+    def tgbkdSvc
+    
     boolean isAllowApprove() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
@@ -40,6 +43,26 @@ class JobOrderAppointmentModel extends CrudFormModel{
         // entity.farmerid = OsirisContext.env.ORGID + "-FARM" + seqSvc.getNextFormattedSeries('farmer');
             
     }
+    
+    public void afterEdit(){
+        entity.recordlog_dateupdated = dtSvc.getServerDate();
+        entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
+        entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID;
+    }
+    
+    public void afterOpen(){
+               
+        entity.natureofappointment = persistenceSvc.read( [_schemaname:'references_tblappointmententrycode', objid:entity.natureofappointmentid] );
+        entity.org = persistenceSvc.read( [_schemaname:'master_tblorganizationunit', orgunitid:entity.org.objid] );
+        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroupid] );
+        
+        entity.appointmentMemberItems.each{
+            it.employee = tgbkdSvc.getEntityByObjid([entityid:it.entityid]);
+            it.position = persistenceSvc.read( [_schemaname:'master_tbljobposition', objid:it.positionid] );
+            it.fund = persistenceSvc.read( [_schemaname:'references_tblfinfund', objid:it.fundid] );
+            it.account = persistenceSvc.read( [_schemaname:'references_tblfinaccounttitle', objid:it.accountid] );
+        }
+    }
 
     public void beforeSave(o){
         if(!entity.appointmentMemberItems)throw new Exception("Appointment Group items must not be empty");
@@ -48,9 +71,9 @@ class JobOrderAppointmentModel extends CrudFormModel{
         entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
         entity.recordlog_createdbyuserid = OsirisContext.env.USERID;
         entity.state = "DRAFT";
-        entity.natureofappointmentid = entity.natureofappointmentid.objid;
+        entity.natureofappointmentid = entity.natureofappointment.objid;
         entity.org.objid = entity.org.orgunitid;
-        entity.signatorygroupid = entity.signatory.objid;
+        entity.signatorygroupid = entity.signatorygroup.objid;
             
         entity.appointmentMemberItems.each{
               
@@ -99,30 +122,30 @@ class JobOrderAppointmentModel extends CrudFormModel{
         
     ] as EditorListModel;
     
-    //    def signatoryItemHandler = [
-    //        fetchList: { o->
-    //            def p = [_schemaname: 'hrmis_appointment_signatorygroupingitems'];
-    //            p.findBy = [ 'parentid': entity.signatorygroup?.objid];
-    //            p.select = "objid,parentid,signatoryname,signatorytitle,org,level";
-    //            println entity.signatorygroup?.objid
-    //            if(!entity.signatoryGroupItems){
-    //                entity.signatoryGroupItems = queryService.getList( p );
-    //                println entity.signatoryGroupItems;
-    //            }
-    //            
-    //            return entity.signatoryGroupItems;
-    //        }            
-    //        
-    //    ] as BasicListModel;
+        def signatoryItemHandler = [
+            fetchList: { o->
+                def p = [_schemaname: 'hrmis_appointment_signatorygroupingitems'];
+                p.findBy = [ 'parentid': entity.signatorygroup?.objid];
+                p.select = "objid,parentid,signatoryname,signatorytitle,org,level";
+                println entity.signatorygroup?.objid
+                if(!entity.signatoryGroupItems){
+                    entity.signatoryGroupItems = queryService.getList( p );
+                    println entity.signatoryGroupItems;
+                }
+                
+                return entity.signatoryGroupItems;
+            }            
+            
+        ] as BasicListModel;
     
-    def signatoryItemHandler = [
-        fetchList: { o->
-            
-            
-            return entity?.signatoryGroupItems;
-        }            
-        
-    ] as BasicListModel;
+//    def signatoryItemHandler = [
+//        fetchList: { o->
+//            
+//            
+//            return entity?.signatoryGroupItems;
+//        }            
+//        
+//    ] as BasicListModel;
     
     
     def groupHandler = [
@@ -132,38 +155,43 @@ class JobOrderAppointmentModel extends CrudFormModel{
     ] as SuggestModel;
     
     //========== Lookup Signatory Group ========= 
-    def getLookupSignatory1(){
-        return Inv.lookupOpener('signatorygroup:lookup',[
-                onselect :{ def p = [_schemaname: 'hrmis_appointment_signatorygroupingitems'];
-                    p.findBy = [ 'parentid': entity.signatorygroup?.objid];
-                    p.select = "objid,parentid,signatoryname,signatorytitle,org,level";
-                    println entity.signatorygroup?.objid
-                    if(!entity.signatoryGroupItems){
-                        entity.signatoryGroupItems = queryService.getList( p );
-                        println entity.signatoryGroupItems;
-                    }
-                }
-               
-            ])
-             signatoryItemHandler.reload();
-    }
-    
-    
     def getLookupSignatory(){
-        return Inv.lookupOpener('signatorygroup:lookup',[
-                onselect :{
-                    entity.signatorygroupname = it.signatorygroupname;
-                    entity.signatoryGroupItems.signatoryname = it.signatoryGroupItems.signatoryname;
-                    //entity.paidby = it.name;
-                    //entity.paidbyaddress = it.address.text;
-                    binding.refresh('entity.signatorygroupname.*')
-                },
-                
-                onempty: {
-                    //
-                }
-        ])
+        return Inv.lookupOpener('signatorygroup:lookup')
     }
+    
+//    //========== Lookup Signatory Group ========= 
+//    def getLookupSignatory1(){
+//        return Inv.lookupOpener('signatorygroup:lookup',[
+//                onselect :{ def p = [_schemaname: 'hrmis_appointment_signatorygroupingitems'];
+//                    p.findBy = [ 'parentid': entity.signatorygroup?.objid];
+//                    p.select = "objid,parentid,signatoryname,signatorytitle,org,level";
+//                    println entity.signatorygroup?.objid
+//                    if(!entity.signatoryGroupItems){
+//                        entity.signatoryGroupItems = queryService.getList( p );
+//                        println entity.signatoryGroupItems;
+//                    }
+//                }
+//               
+//            ])
+//             signatoryItemHandler.reload();
+//    }
+    
+    
+//    def getLookupSignatory(){
+//        return Inv.lookupOpener('signatorygroup:lookup',[
+//                onselect :{
+//                    entity.signatorygroupname = it.signatorygroupname;
+//                    entity.signatoryGroupItems.signatoryname = it.signatoryGroupItems.signatoryname;
+//                    //entity.paidby = it.name;
+//                    //entity.paidbyaddress = it.address.text;
+//                    binding.refresh('entity.signatorygroupname.*')
+//                },
+//                
+//                onempty: {
+//                    //
+//                }
+//        ])
+//    }
         
 
 }

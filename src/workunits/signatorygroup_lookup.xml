@@ -3,6 +3,6 @@
   <invokers>
       <invoker type="signatorygroup:lookup" caption="Lookup Signatory Group" 
                  action="init" target="popup" height="350"  
-                 cols="signatorygroupname,signatorytype"/>
+                 cols="signatorygroupname,signatorytype,signatoryGroupItems.signatoryname"/>
   </invokers>
 </workunit>
