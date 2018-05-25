@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblorganizationunit:create" caption="Create Organization Unit" action="create"/>
         <invoker type="master_tblorganizationunit:open" caption="Open Organization Unit" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterOrganizationUnitModel" />
     <pages>

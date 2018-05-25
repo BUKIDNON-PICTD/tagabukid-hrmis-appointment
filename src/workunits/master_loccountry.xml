@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblloccountry:create" caption="Create Country" action="create"/>
         <invoker type="master_tblloccountry:open" caption="Open Country" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.MasterlocCountryModel" />
     <pages>

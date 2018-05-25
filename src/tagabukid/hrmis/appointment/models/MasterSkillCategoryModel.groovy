@@ -12,6 +12,10 @@ class MasterSkillCategoryModel extends CrudFormModel{
     
     @Service('DateService')
     def dtSvc
+    
+    boolean isAllowApprove() {
+         return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
+    }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
@@ -26,6 +30,17 @@ class MasterSkillCategoryModel extends CrudFormModel{
             entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
             entity.recordlog_lastupdatebyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_lastupdatebyuserid = OsirisContext.env.USERID;
+        }
+    }
+    
+    void approve() { 
+        if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
+            getPersistenceService().update([ 
+               _schemaname: 'master_tblskillcategory', 
+               objid : entity.objid, 
+               state : 'APPROVED' 
+            ]); 
+            loadData(); 
         }
     }
 

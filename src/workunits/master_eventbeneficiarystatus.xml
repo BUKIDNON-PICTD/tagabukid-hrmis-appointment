@@ -1,0 +1,13 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbleventbeneficiarystatus">
+    <invokers>
+        <invoker type="master_tbleventbeneficiarystatus:create" caption="New Event Beneficiary Status" action="create"/>
+        <invoker type="master_tbleventbeneficiarystatus:open" caption="View Event Beneficiary Status" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterEventBeneficiaryStatusModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterEventBeneficiaryStatusView"/>
+    </pages>
+</workunit>
+

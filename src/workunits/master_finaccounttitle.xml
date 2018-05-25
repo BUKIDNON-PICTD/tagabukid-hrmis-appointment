@@ -1,0 +1,12 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblfinaccounttitle">
+    <invokers>
+        <invoker type="master_tblfinaccounttitle:create" caption="New Fin Fund" action="create"/>
+        <invoker type="master_tblfinaccounttitle:open" caption="View Fin Fund" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterFinAccountTitleModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterFinAccountTitleView"/>
+    </pages>
+</workunit>
