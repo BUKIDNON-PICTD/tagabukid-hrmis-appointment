@@ -32,6 +32,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     
     public void afterOpen(){
         entity.appointmentitems.each{
+            println it
             it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
             it.plantilla = tgbkdSvc.getPlantillaById([plantillaid:it.plantilla.Id]);
             //postgrehack
@@ -76,6 +77,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     
     def signatoryItemHandler = [
         fetchList: { 
+            if(entity.signatorygroup?.objid)
             entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
             return entity.signatorygroup?.signatorygroupitems 
         },
