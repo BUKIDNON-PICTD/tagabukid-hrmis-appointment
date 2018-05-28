@@ -32,7 +32,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     
     public void afterOpen(){
         entity.appointmentitems.each{
-            println it
+            //println it
             it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
             it.plantilla = tgbkdSvc.getPlantillaById([plantillaid:it.plantilla.Id]);
             //postgrehack
