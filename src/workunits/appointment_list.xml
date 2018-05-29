@@ -1,5 +1,5 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISAppointmentListService" 
-     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="hrmis_appointment_list">
+     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="appointmentdocument">
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List"  index="1" />
         <invoker folderid="/home/hrmis" action="init" caption="Appointment List"  index="1" />

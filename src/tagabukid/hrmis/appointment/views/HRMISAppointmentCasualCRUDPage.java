@@ -253,6 +253,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
             })
         });
         xDataTable1.setHandler("appointmentitemListHandler");
+        xDataTable1.setName("selectedAppointmentItem"); // NOI18N
         jTabbedPane1.addTab("Appointment Items", xDataTable1);
 
         xLookupField2.setCaption("Signatory Group");
@@ -333,6 +334,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xDataTable2.setDepends(new String[] {"entity.signatorygroup"});
         xDataTable2.setDynamic(true);
         xDataTable2.setHandler("signatoryItemHandler");
+        xDataTable2.setName("selectedSignaotryItem"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

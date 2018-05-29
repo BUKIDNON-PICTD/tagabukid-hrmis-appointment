@@ -1,0 +1,8 @@
+"entity.*|selectedAppointmentItem|selectedSignatoryItem"[mode == 'read']{
+    enabled:false;
+}
+
+"entity.*|selectedAppointmentItem|selectedSignatoryItem"[mode != 'read']{
+    enabled:true;
+}
+
