@@ -2,7 +2,7 @@
     <invokers>
         <invoker type="hrmis_appointmentcasual:create" caption="Appointment (Casual)" action="create"/>
         <invoker type="hrmis_appointmentcasual:open" caption="Appointment (Casual)" action="open"/>       
-        <invoker folderid="/home/hrmis" caption="Appointment (Casual)" action="create" index="1" />
+        <invoker folderid="/home/hrmis" caption="Appointment (Casual)" action="create" index="2" />
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.HRMISAppointmentCasualCRUDController" />
     <pages>
