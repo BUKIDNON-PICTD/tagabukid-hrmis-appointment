@@ -1,6 +1,7 @@
 <workunit schemaName="hrmis_appointmentcasual">
     <invokers>
         <invoker type="appointmentdocument:open" caption="Appointment (Casual)" action="open" index="100" target="window"/>
+        <invoker type="appointmentdocument:create" caption="Appointment (Casual)" action="create" index="100" target="window"/>
         <invoker type="hrmis_appointmentcasual:open" caption="Appointment (Casual)" action="open"/>  
         <invoker type="hrmis_appointmentcasual:create" caption="Appointment (Casual)" action="create"/>     
         <invoker type="hrmis_appointmentcasual:renew:create" caption="Appointment (Casual) Renew" action="create" tag="renew"/> 
