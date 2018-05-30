@@ -95,7 +95,6 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xLookupField1.setHandler("lookup:tagabukid_hrmis_tranche");
         xLookupField1.setName("entity.currentsalarystep"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xLookupField1.setRequired(true);
         xFormPanel1.add(xLookupField1);
 
         xDateField1.setCaption("Effective From");
@@ -136,7 +135,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xTextArea2.setEditable(false);
         xTextArea2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         xTextArea2.setForeground(new java.awt.Color(204, 0, 0));
-        xTextArea2.setName("entity.status"); // NOI18N
+        xTextArea2.setName("entity.state"); // NOI18N
         xTextArea2.setShowCaption(false);
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -195,7 +194,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.personnel.name}", "lookup:tagabukid_hrmis_personnel")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.personnel.name}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "plantilla"}
@@ -294,6 +293,19 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "org"}
                 , new Object[]{"caption", "Office"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "signatoryheading"}
+                , new Object[]{"caption", "Heading"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
