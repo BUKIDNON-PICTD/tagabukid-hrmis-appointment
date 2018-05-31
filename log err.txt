@@ -1,4 +1,0 @@
-Executed SQL Statement : Alter table `tagabukid_hrmis`.`references_tbleligibilitytype`   
-  add column `state` varchar(10) NOT NULL after `code` 
-Error Number : 2003 
-Error Message: Can't connect to MySQL server on 'localhost' (0) 

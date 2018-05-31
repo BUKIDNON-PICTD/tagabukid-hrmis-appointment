@@ -4,29 +4,24 @@ import com.rameses.seti2.models.*;
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
-
-class MasterTrainingSubcategoryModel extends CrudFormModel{
+/**
+ *
+ * @author P0RA
+ */
+class MasterAppointmentEntryCodeModel extends CrudFormModel{
 
     @Binding
     def binding;
     
     @Service('DateService')
-    def dtSvc 
-
-    @Service("PersistenceService")
-    def persistenceSvc;
+    def dtSvc;
     
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
-    public void afterOpen(){               
-        entity.trainingcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingcategory', objid:entity.trainingcategoryid] );
-    }
-
     public void beforeSave(o){
         entity.state = "DRAFT";
-        entity.trainingcategoryid = entity.trainingcategory.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
@@ -44,7 +39,7 @@ class MasterTrainingSubcategoryModel extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'master_tbltrainingsubcategory', 
+               _schemaname: 'master_tblappointmententrycode', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 
