@@ -46,7 +46,7 @@ class MasterAcadEducationalInstitutionBackModel extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'master_tblacadeducationalinstitution', 
+               _schemaname: 'master_tblacadeducationalinstitutionback', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 

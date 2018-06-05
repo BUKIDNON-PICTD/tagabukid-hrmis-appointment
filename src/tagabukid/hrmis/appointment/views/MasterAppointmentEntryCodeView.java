@@ -45,7 +45,7 @@ public class MasterAppointmentEntryCodeView extends javax.swing.JPanel {
         xTextField8 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Eligibility Type");
+        xTitledBorder1.setTitle("Appointment Entry Code");
         xHorizontalPanel2.setBorder(xTitledBorder1);
 
         xTextField2.setCaption("objid");

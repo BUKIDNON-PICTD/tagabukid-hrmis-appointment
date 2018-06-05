@@ -1,38 +1,34 @@
-
-@StyleSheet
-@Template(CrudFormPage.class)
-
-====================================
-
 import com.rameses.rcp.annotations.*;
 import com.rameses.rcp.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
-
-class ***************** 
-
-
-extends CrudFormModel{
+/**
+ *
+ * @author P0RA
+ */
+class MasterAcadEducationalDegreeModel extends CrudFormModel{
 
     @Binding
     def binding;
     
     @Service('DateService')
-    def dtSvc
+    def dtSvc;
     
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
-    public void afterOpen(){               
-        entity.barangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.barangayid] );
-        entity.citymun = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.citymunid] );
-    }
+    // public void afterOpen(){               
+    //     entity.barangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.barangayid] );
+    //     entity.citymun = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.citymunid] );
+    // }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
+            // entity.barangayid = entity.barangay.objid;
+            // entity.citymunid = entity.citymun.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
@@ -50,7 +46,7 @@ extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'master_tbleventcrisistype', 
+               _schemaname: 'master_tblacadeducationaldegree', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 

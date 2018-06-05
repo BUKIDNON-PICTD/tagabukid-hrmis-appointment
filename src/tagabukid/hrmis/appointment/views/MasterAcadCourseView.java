@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class MasterAcadEducationalInstitutionView extends javax.swing.JPanel {
+public class MasterAcadCourseView extends javax.swing.JPanel {
 
     /**
-     * Creates new form MasterAcadEducationalInstitutionView
+     * Creates new form MasterAcadCourseView
      */
-    public MasterAcadEducationalInstitutionView() {
+    public MasterAcadCourseView() {
         initComponents();
     }
 
@@ -37,10 +37,14 @@ public class MasterAcadEducationalInstitutionView extends javax.swing.JPanel {
         xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField4 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
+        xTextField5 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Academic Educational Institution");
+        xTitledBorder1.setTitle("Academic Course");
         xHorizontalPanel2.setBorder(xTitledBorder1);
 
         xTextField2.setCaption("objid");
@@ -50,19 +54,44 @@ public class MasterAcadEducationalInstitutionView extends javax.swing.JPanel {
         xTextField2.setVisible(false);
         xFormPanel2.add(xTextField2);
 
-        xTextField3.setCaption("School ID");
+        xTextField3.setCaption("Name");
         xTextField3.setCaptionFontStyle("");
         xTextField3.setCaptionWidth(130);
-        xTextField3.setName("entity.schoolid"); // NOI18N
+        xTextField3.setName("entity.name"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField3);
 
-        xTextField4.setCaption("Level");
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea1.setCaption("Description");
+        xTextArea1.setCaptionFontStyle("");
+        xTextArea1.setCaptionWidth(130);
+        xTextArea1.setName("entity.description"); // NOI18N
+        jScrollPane1.setViewportView(xTextArea1);
+
+        xFormPanel2.add(jScrollPane1);
+
+        xTextField4.setCaption("Code");
         xTextField4.setCaptionFontStyle("");
         xTextField4.setCaptionWidth(130);
-        xTextField4.setName("entity.level"); // NOI18N
+        xTextField4.setName("entity.code"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField4);
+
+        xLookupField1.setCaption("Degree");
+        xLookupField1.setCaptionWidth(130);
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("acadeducationaldegree:lookup");
+        xLookupField1.setName("entity.degree"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel2.add(xLookupField1);
+
+        xTextField5.setCaption("Old ID");
+        xTextField5.setCaptionFontStyle("");
+        xTextField5.setCaptionWidth(130);
+        xTextField5.setName("entity.oldid"); // NOI18N
+        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel2.add(xTextField5);
 
         xHorizontalPanel2.add(xFormPanel2);
 
@@ -73,23 +102,27 @@ public class MasterAcadEducationalInstitutionView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
+    private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField5;
     // End of variables declaration//GEN-END:variables
 }
