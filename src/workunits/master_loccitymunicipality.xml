@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblloccitymunicipality">
+<workunit schemaName="master_tblloccitymunicipality">
     <invokers>
         <invoker type="master_tblloccitymunicipality:create" caption="Create Municipality/City" action="create"/>
         <invoker type="master_tblloccitymunicipality:open" caption="Open Municipality/City" action="open"/>

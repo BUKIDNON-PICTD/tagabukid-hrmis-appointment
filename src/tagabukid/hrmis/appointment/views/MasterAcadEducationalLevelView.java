@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class MasterAcademicEducationalLevelView extends javax.swing.JPanel {
+public class MasterAcadEducationalLevelView extends javax.swing.JPanel {
 
     /**
      * Creates new form MasterAcademicEducationalLevelView
      */
-    public MasterAcademicEducationalLevelView() {
+    public MasterAcadEducationalLevelView() {
         initComponents();
     }
 

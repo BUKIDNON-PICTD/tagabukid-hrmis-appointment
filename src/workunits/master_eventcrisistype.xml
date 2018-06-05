@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbleventcrisistype">
+<workunit schemaName="master_tbleventcrisistype">
     <invokers>
         <invoker type="master_tbleventcrisistype:create" caption="New Event Crisis Type" action="create"/>
         <invoker type="master_tbleventcrisistype:open" caption="View Event Crisis Type" action="open"/>

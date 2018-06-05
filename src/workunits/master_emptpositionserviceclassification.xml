@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblemptpositionserviceclassification">
+<workunit schemaName="master_tblemptpositionserviceclassification">
     <invokers>
         <invoker type="master_tblemptpositionserviceclassification:create" caption="New Position Service Classification" action="create"/>
         <invoker type="master_tblemptpositionserviceclassification:open" caption="View Position Service Classification" action="open"/>

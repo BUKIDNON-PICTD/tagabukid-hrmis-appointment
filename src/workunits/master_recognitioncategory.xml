@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblrecognitioncategory">
+<workunit schemaName="master_tblrecognitioncategory">
     <invokers>
         <invoker type="master_tblrecognitioncategory:create" caption="New Recognition Category" action="create"/>
         <invoker type="master_tblrecognitioncategory:open" caption="View Recognition Category" action="open"/>

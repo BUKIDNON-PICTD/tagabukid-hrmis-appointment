@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbllocregion">
+<workunit schemaName="master_tbllocregion">
     <invokers>
         <invoker type="master_tbllocregion:create" caption="Create Region" action="create"/>
         <invoker type="master_tbllocregion:open" caption="Open Region" action="open"/>

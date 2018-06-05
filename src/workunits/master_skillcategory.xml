@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblskillcategory">
+<workunit schemaName="master_tblskillcategory">
     <invokers>
         <invoker type="master_tblskillcategory:create" caption="New Skill Category" action="create"/>
         <invoker type="master_tblskillcategory:open" caption="View Skill Category" action="open"/>

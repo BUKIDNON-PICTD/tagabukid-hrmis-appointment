@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblpaygradeandstepincrement">
+<workunit schemaName="master_tblpaygradeandstepincrement">
     <invokers>
         <invoker type="master_tblpaygradeandstepincrement:create" caption="Create Pay Grade and Step Increment" action="create"/>
         <invoker type="master_tblpaygradeandstepincrement:open" caption="Open Pay Grade and Step Increment" action="open"/>

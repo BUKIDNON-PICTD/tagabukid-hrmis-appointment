@@ -1,9 +1,0 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml" schemaName="master_acadcourse">
-    <invokers>
-        <invoker type="master_acadcourse:create" caption="New Academic Course" action="create"/>
-        <invoker type="master_acadcourse:open" caption="Academic Course" action="open"/>
-    </invokers>
-    <pages>
-        <page template="tagabukid.hrmis.appointment.views.MasterAcadCoursePage"/>
-    </pages>
-</workunit>

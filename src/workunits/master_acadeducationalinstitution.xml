@@ -1,12 +1,12 @@
 <workunit schemaName="master_tblacadeducationalinstitution">
     <invokers>
         <invoker type="master_tblacadeducationalinstitution:create" caption="New Academic Educational Institution" action="create"/>
-        <invoker type="master_tblacadeducationalinstitution:open" caption="View Academic Educational Institution" action="open"/>
+        <invoker type="master_tblacadeducationalinstitution:open" caption="Academic Educational Institution" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
-    <code class="tagabukid.hrmis.appointment.models.MasterAcademicEducationalInstitutionModel" />
+    <code class="tagabukid.hrmis.appointment.models.MasterAcadEducationalInstitutionModel" />
     <pages>
-        <page template="tagabukid.hrmis.appointment.views.MasterAcademicEducationalInstitutionView" />
+        <page template="tagabukid.hrmis.appointment.views.MasterAcadEducationalInstitutionView" />
     </pages>
 </workunit>
