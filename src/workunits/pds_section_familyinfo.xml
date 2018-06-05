@@ -1,0 +1,20 @@
+<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblorganizationunittype">
+    <invokers>
+        <invoker type="pds:section" caption="Family Info" action="init" index="-100" />
+        
+<!--        <invoker type="extActions" caption="Open Child" action="showChild" visibleWhen="#{selectedItem!=null}"/>
+        <invoker type="extActions" caption="Print DIN" action="print" />
+        <invoker type="formActions" caption="Modify" name="popupChangeInfo" index="1000" category="subay:changeinfo" visibleWhen="#{isoffline &amp;&amp; isowner}" role="SHARED"/>
+        <invoker type="formActions" caption="Transfer" action="transferParent" index="1001" visibleWhen="#{entity.state == 'archived'}" role="SHARED"/>
+        -->
+
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.MasterOrganizationUnitTypeModel" />
+
+    
+    <pages>
+        <page  template="tagabukid.hrmis.appointment.views.MasterOrganizationUnitTypeView"/>
+    </pages>
+    
+</workunit>

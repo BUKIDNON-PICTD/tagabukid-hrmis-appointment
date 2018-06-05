@@ -25,7 +25,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     @Service("PersistenceService")
     def persistenceSvc;
     
-    @Service("HRMISAppointmentCasualService")
+    @Service("TagabukidHRMISAppointmentCasualService")
     def svc
     
     @Service('TagabukidLookupService')
@@ -75,6 +75,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     }
 
     public void afterOpen(){
+        println entity
 //        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
         entity.appointmentitems.each{
             //println it
@@ -88,11 +89,12 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def suggestGroupName = [
         fetchList: { o->
             return svc.getList(o).appointmentgroupname;
-        },
-        onselect:{ o->
-            entity.appointmentitems = svc.getAppointmentItemsByGroup(o)
-
         }
+//        ,
+//        onselect:{ o->
+//            entity.appointmentitems = svc.getAppointmentItemsByGroup(o)
+//
+//        }
     ] as SuggestModel;
 
     def appointmentitemListHandler = [
@@ -110,13 +112,16 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
             }
             return false;
         },
-        onColumnUpdate: { o,col-> 
-            o.monthlywage = o.dailywage * 22;
-            binding.refresh();
-        },
+//        onColumnUpdate: { o,col-> 
+//            if(col == 'dailywage'){
+//                o.monthlywage = o.dailywage * 22;
+//                binding.refresh();  
+//            }
+//            
+//        },
         onAddItem : {
             it.plantilla.Id = it.plantilla.Id.toString()
-            it.monthlywage = it.dailywage * 22
+//            it.monthlywage = it.dailywage * 22
             entity.appointmentitems.add(it);
         },
         validate:{li->
