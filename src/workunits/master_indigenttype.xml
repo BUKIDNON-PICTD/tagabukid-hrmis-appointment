@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblindigenttype">
+<workunit schemaName="master_tblindigenttype">
     <invokers>
         <invoker type="master_tblindigenttype:create" caption="New Indigent Type" action="create"/>
         <invoker type="master_tblindigenttype:open" caption="View Indigent Type" action="open"/>

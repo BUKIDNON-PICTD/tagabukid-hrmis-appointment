@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblfinaccount">
+<workunit schemaName="master_tblfinaccount">
     <invokers>
         <invoker type="master_tblfinaccount:create" caption="New Account" action="create"/>
         <invoker type="master_tblfinaccount:open" caption="View Account" action="open"/>

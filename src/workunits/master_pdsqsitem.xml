@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblpdsqsitem">
+<workunit schemaName="master_tblpdsqsitem">
     <invokers>
         <invoker type="master_tblpdsqsitem:create" caption="Create PDS QS Item" action="create"/>
         <invoker type="master_tblpdsqsitem:open" caption="Open PDS QS Item" action="open"/>

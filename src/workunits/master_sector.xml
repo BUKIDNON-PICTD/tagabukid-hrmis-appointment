@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblsector">
+<workunit schemaName="master_tblsector">
     <invokers>
         <invoker type="master_tblsector:create" caption="Create Sector" action="create"/>
         <invoker type="master_tblsector:open" caption="Open Sector" action="open"/>

@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblorganizationunit">
+<workunit schemaName="master_tblorganizationunit">
     <invokers>
         <invoker type="master_tblorganizationunit:create" caption="Create Organization Unit" action="create"/>
         <invoker type="master_tblorganizationunit:open" caption="Open Organization Unit" action="open"/>

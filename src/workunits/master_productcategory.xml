@@ -1,4 +1,4 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblproductcategory">
+<workunit schemaName="master_tblproductcategory">
     <invokers>
         <invoker type="master_tblproductcategory:create" caption="New Product Category" action="create"/>
         <invoker type="master_tblproductcategory:open" caption="View Product Category" action="open"/>

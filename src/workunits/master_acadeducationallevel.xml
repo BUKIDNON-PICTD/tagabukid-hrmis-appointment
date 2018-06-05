@@ -1,0 +1,12 @@
+<workunit schemaName="master_tblacadeducationallevel">
+    <invokers>
+        <invoker type="master_tblacadeducationallevel:create" caption="New Academic Educational Level" action="create"/>
+        <invoker type="master_tblacadeducationallevel:open" caption="Academic Educational Level" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterAcadEducationalLevelModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterAcadEducationalLevelView" />
+    </pages>
+</workunit>

@@ -11,16 +11,23 @@ class MasterTrainingSubcategoryModel extends CrudFormModel{
     def binding;
     
     @Service('DateService')
-    def dtSvc
+    def dtSvc 
+
+    @Service("PersistenceService")
+    def persistenceSvc;
     
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){               
+        entity.trainingcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingcategory', objid:entity.trainingcategoryid] );
+    }
+
     public void beforeSave(o){
         entity.state = "DRAFT";
+        entity.trainingcategoryid = entity.trainingcategory.objid;
         if(o == 'create'){
-            entity.trainingcategoryid = entity.trainingcategory.objid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
