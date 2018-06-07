@@ -41,7 +41,7 @@ public class MasterAppointmentEntryCodeView extends javax.swing.JPanel {
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
-        xTextField7 = new com.rameses.rcp.control.XTextField();
+        xCheckBox1 = new com.rameses.rcp.control.XCheckBox();
         xTextField8 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -64,6 +64,7 @@ public class MasterAppointmentEntryCodeView extends javax.swing.JPanel {
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
+        xTextArea1.setLineWrap(true);
         xTextArea1.setCaption("Description");
         xTextArea1.setCaptionFontStyle("");
         xTextArea1.setCaptionWidth(130);
@@ -86,12 +87,12 @@ public class MasterAppointmentEntryCodeView extends javax.swing.JPanel {
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField6);
 
-        xTextField7.setCaption("Has Appointment Issued");
-        xTextField7.setCaptionFontStyle("");
-        xTextField7.setCaptionWidth(130);
-        xTextField7.setName("entity.hasappointmentissued"); // NOI18N
-        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel2.add(xTextField7);
+        xCheckBox1.setCaption("Has Appointment Issued");
+        xCheckBox1.setCaptionWidth(130);
+        xCheckBox1.setCheckValue("TRUE");
+        xCheckBox1.setName("entity.hasappointmentissued"); // NOI18N
+        xCheckBox1.setUncheckValue("FALSE");
+        xFormPanel2.add(xCheckBox1);
 
         xTextField8.setCaption("Nature of Appointment");
         xTextField8.setCaptionFontStyle("");
@@ -115,14 +116,15 @@ public class MasterAppointmentEntryCodeView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
+    private com.rameses.rcp.control.XCheckBox xCheckBox1;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
     private com.rameses.rcp.control.XTextArea xTextArea1;
@@ -130,7 +132,6 @@ public class MasterAppointmentEntryCodeView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField6;
-    private com.rameses.rcp.control.XTextField xTextField7;
     private com.rameses.rcp.control.XTextField xTextField8;
     // End of variables declaration//GEN-END:variables
 }

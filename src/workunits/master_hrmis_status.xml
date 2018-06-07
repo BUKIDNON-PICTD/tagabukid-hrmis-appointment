@@ -5,8 +5,8 @@
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
-    <code class="tagabukid.hrmis.appointment.models.MasterHrmisStatusView" />
+    <code class="tagabukid.hrmis.appointment.models.MasterHrmisStatusModel" />
     <pages>
-        <page template="tagabukid.hrmis.appointment.views.MasterHrmisStatusPage"/>
+        <page template="tagabukid.hrmis.appointment.views.MasterHrmisStatusView"/>
     </pages>
 </workunit>

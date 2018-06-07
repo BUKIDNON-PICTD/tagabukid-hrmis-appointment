@@ -120,7 +120,7 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Province ID"/>
+                <Property name="caption" type="java.lang.String" value="Province"/>
                 <Property name="captionWidth" type="int" value="150"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="province:lookup"/>
@@ -134,7 +134,7 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField2">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Congressional District ID"/>
+                <Property name="caption" type="java.lang.String" value="Congressional District"/>
                 <Property name="captionWidth" type="int" value="150"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="congressionaldistrict:lookup"/>

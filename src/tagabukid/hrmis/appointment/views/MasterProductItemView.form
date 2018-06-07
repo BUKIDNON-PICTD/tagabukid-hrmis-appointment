@@ -28,7 +28,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="xHorizontalPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="123" max="32767" attributes="0"/>
+              <EmptySpace pref="114" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,7 +59,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Name"/>
-                <Property name="captionWidth" type="int" value="125"/>
+                <Property name="captionWidth" type="int" value="110"/>
                 <Property name="name" type="java.lang.String" value="entity.name" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -81,7 +81,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea1">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Description"/>
-                    <Property name="captionWidth" type="int" value="125"/>
+                    <Property name="captionWidth" type="int" value="110"/>
                     <Property name="name" type="java.lang.String" value="entity.description" noResource="true"/>
                   </Properties>
                 </Component>
@@ -90,7 +90,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Code"/>
-                <Property name="captionWidth" type="int" value="125"/>
+                <Property name="captionWidth" type="int" value="110"/>
                 <Property name="name" type="java.lang.String" value="entity.code" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -99,8 +99,8 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Product Category ID"/>
-                <Property name="captionWidth" type="int" value="125"/>
+                <Property name="caption" type="java.lang.String" value="Product Category"/>
+                <Property name="captionWidth" type="int" value="110"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="productcategory:lookup"/>
                 <Property name="name" type="java.lang.String" value="entity.productcategory" noResource="true"/>

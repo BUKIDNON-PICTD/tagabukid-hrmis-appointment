@@ -21,10 +21,14 @@ class MasterEmptPositionServiceSubClassificationModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){               
+        entity.positionserviceclassification = persistenceSvc.read( [_schemaname:'master_tblemptpositionserviceclassification', objid:entity.positionserviceclassificationid] );
+    }
+
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(o == 'create'){
             entity.positionserviceclassificationid = entity.positionserviceclassification.objid;
+        if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

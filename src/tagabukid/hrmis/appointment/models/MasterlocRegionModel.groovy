@@ -17,10 +17,14 @@ class MasterlocRegionModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){               
+        entity.country = persistenceSvc.read( [_schemaname:'master_tblloccountry', objid:entity.countryid] );
+    }
+
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(o == 'create'){
             entity.countryid = entity.country.objid;
+        if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
@@ -37,7 +41,7 @@ class MasterlocRegionModel extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'master_tbleventcrisistype', 
+               _schemaname: 'master_tbllocregion', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 

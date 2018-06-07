@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblskillcompetencylevel">
     <invokers>
         <invoker type="master_tblskillcompetencylevel:create" caption="New Skill Competency Level" action="create"/>
-        <invoker type="master_tblskillcompetencylevel:open" caption="View Skill Competency Level" action="open"/>
+        <invoker type="master_tblskillcompetencylevel:open" caption="Skill Competency Level" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

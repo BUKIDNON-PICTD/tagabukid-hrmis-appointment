@@ -59,7 +59,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Name"/>
-                <Property name="captionWidth" type="int" value="175"/>
+                <Property name="captionWidth" type="int" value="160"/>
                 <Property name="name" type="java.lang.String" value="entity.name" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -81,7 +81,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea1">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Description"/>
-                    <Property name="captionWidth" type="int" value="175"/>
+                    <Property name="captionWidth" type="int" value="160"/>
                     <Property name="name" type="java.lang.String" value="entity.description" noResource="true"/>
                   </Properties>
                 </Component>
@@ -90,7 +90,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Code"/>
-                <Property name="captionWidth" type="int" value="175"/>
+                <Property name="captionWidth" type="int" value="160"/>
                 <Property name="name" type="java.lang.String" value="entity.code" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -99,8 +99,8 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Position Service Classification ID"/>
-                <Property name="captionWidth" type="int" value="175"/>
+                <Property name="caption" type="java.lang.String" value="Position Service Classification"/>
+                <Property name="captionWidth" type="int" value="160"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="positionserviceclassification:lookup"/>
                 <Property name="name" type="java.lang.String" value="entity.positionserviceclassification" noResource="true"/>

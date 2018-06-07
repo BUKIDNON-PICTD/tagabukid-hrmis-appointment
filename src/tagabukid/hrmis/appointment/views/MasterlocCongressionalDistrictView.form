@@ -47,7 +47,6 @@
           <SubComponents>
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
               <Properties>
-                <Property name="editable" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="entity.objid"/>
                 <Property name="caption" type="java.lang.String" value="objid"/>
                 <Property name="name" type="java.lang.String" value="entity.objid" noResource="true"/>
@@ -106,7 +105,7 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Province ID"/>
+                <Property name="caption" type="java.lang.String" value="Province"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="province:lookup"/>
                 <Property name="name" type="java.lang.String" value="entity.province" noResource="true"/>

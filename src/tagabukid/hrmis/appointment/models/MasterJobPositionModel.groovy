@@ -16,10 +16,14 @@ class JobPositionModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
     
+    public void afterOpen(){ 
+        entity.paygrade = persistenceSvc.read( [_schemaname:'master_tblpaygradeandstepincrement', objid:entity.paygradeid] );
+    }
+    
     public void beforeSave(o){
         entity.state = "DRAFT";
+        entity.paygradeid = entity.paygrade.objid;
         if(o == 'create'){
-            entity.paygradeid = entity.paygrade.objid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

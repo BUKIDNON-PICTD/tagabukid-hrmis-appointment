@@ -17,11 +17,21 @@ class MasterOrganizationUnitModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){ 
+        ((!entity.parentorgunitid) ? (entity.parentorgunit="") : (entity.parentorgunit = persistenceSvc.read( [_schemaname:'master_tblorganizationunit', orgunitid:entity.parentorgunitid] )))
+        ((!entity.organizationunittypeid) ? (entity.organizationunittype="") : (entity.organizationunittype = persistenceSvc.read( [_schemaname:'master_tblorganizationunittype', orgunittypeid:entity.organizationunittypeid] )))
+        ((!entity.addrcitymunid) ? (entity.addrcitymun="") : (entity.addrcitymun = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.addrcitymunid] )))
+        ((!entity.addrbarangayid) ? (entity.addrbarangay="") : (entity.addrbarangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.addrbarangayid] )))
+    }
+
     public void beforeSave(o){
         entity.state = "DRAFT";
+        ((!entity.parentorgunit) ? (entity.parentorgunitid = "") : (entity.parentorgunitid = entity.parentorgunit.orgunitid))
+        ((!entity.organizationunittype) ? (entity.organizationunittypeid="") : (entity.organizationunittypeid=entity.organizationunittype.orgunittypeid))
+        ((!entity.addrcitymun) ? (entity.addrcitymunid = "") : (entity.addrcitymunid = entity.addrcitymun.objid))
+        ((!entity.addrbarangay) ? (entity.addrbarangayid = "") :  (entity.addrbarangayid = entity.addrbarangay.objid))
+             
         if(o == 'create'){
-            entity.parentorgunitid = entity.parentorgunit.orgunitid;
-            entity.organizationunittypeid = entity.organizationunittype.orgunittypeid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

@@ -16,11 +16,15 @@ class MasterNationalityModel extends CrudFormModel{
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
+    
+    public void afterOpen(){ 
+        entity.country = persistenceSvc.read( [_schemaname:'master_tblloccountry', objid:entity.countryid] );
+    }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
+        entity.countryid = entity.country.objid;
         if(o == 'create'){
-            entity.countryid = entity.country.objid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

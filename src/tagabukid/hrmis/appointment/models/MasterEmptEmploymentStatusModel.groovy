@@ -5,7 +5,13 @@ import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
 
-class MasterlocCityMunicipalityModel extends CrudFormModel{
+/**
+ *
+ * @author pictd-training1
+ */
+class MasterEmptEmploymentStatusModel extends CrudFormModel{
+
+    def tenure = ["TRUE", "FALSE"];
 
     @Binding
     def binding;
@@ -17,16 +23,8 @@ class MasterlocCityMunicipalityModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
-    public void afterOpen(){               
-        entity.province = persistenceSvc.read( [_schemaname:'master_tbllocprovince', objid:entity.provinceid] );
-        entity.congressionaldistrict = persistenceSvc.read( [_schemaname:'master_tblloccongressionaldistrict', objid:entity.congressionaldistrictid] );
-    
-    }
-
     public void beforeSave(o){
         entity.state = "DRAFT";
-            entity.provinceid = entity.province.objid;
-            entity.congressionaldistrictid = entity.congressionaldistrict.objid;        
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
@@ -44,7 +42,7 @@ class MasterlocCityMunicipalityModel extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'master_tblloccitymunicipality', 
+               _schemaname: 'master_tblemptpositionserviceclassification', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 

@@ -49,7 +49,7 @@ public class MasterEmptPositionServiceSubClassificationView extends javax.swing.
         xFormPanel2.add(xTextField2);
 
         xTextField3.setCaption("Name");
-        xTextField3.setCaptionWidth(175);
+        xTextField3.setCaptionWidth(160);
         xTextField3.setName("entity.name"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField3);
@@ -57,20 +57,20 @@ public class MasterEmptPositionServiceSubClassificationView extends javax.swing.
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Description");
-        xTextArea1.setCaptionWidth(175);
+        xTextArea1.setCaptionWidth(160);
         xTextArea1.setName("entity.description"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel2.add(jScrollPane1);
 
         xTextField4.setCaption("Code");
-        xTextField4.setCaptionWidth(175);
+        xTextField4.setCaptionWidth(160);
         xTextField4.setName("entity.code"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField4);
 
-        xLookupField1.setCaption("Position Service Classification ID");
-        xLookupField1.setCaptionWidth(175);
+        xLookupField1.setCaption("Position Service Classification");
+        xLookupField1.setCaptionWidth(160);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("positionserviceclassification:lookup");
         xLookupField1.setName("entity.positionserviceclassification"); // NOI18N

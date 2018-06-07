@@ -1,7 +1,7 @@
 <workunit schemaName="master_tbljobposition">
     <invokers>
-        <invoker type="master_tbljobposition:create" caption="Create Job Position" action="create" target="popup"/>
-        <invoker type="master_tbljobposition:open" caption="Open Job Position" action="open"/>
+        <invoker type="master_tbljobposition:create" caption="New Job Position" action="create" target="popup"/>
+        <invoker type="master_tbljobposition:open" caption="Job Position" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

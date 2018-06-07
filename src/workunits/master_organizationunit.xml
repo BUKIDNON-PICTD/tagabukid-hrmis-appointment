@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblorganizationunit">
     <invokers>
-        <invoker type="master_tblorganizationunit:create" caption="Create Organization Unit" action="create"/>
-        <invoker type="master_tblorganizationunit:open" caption="Open Organization Unit" action="open"/>
+        <invoker type="master_tblorganizationunit:create" caption="New Organization Unit" action="create"/>
+        <invoker type="master_tblorganizationunit:open" caption="Organization Unit" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

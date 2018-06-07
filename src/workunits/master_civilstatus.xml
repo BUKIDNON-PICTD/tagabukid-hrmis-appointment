@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblcivilstatus">
     <invokers>
         <invoker type="master_tblcivilstatus:create" caption="New Civil Status" action="create"/>
-        <invoker type="master_tblcivilstatus:open" caption="Open Civil Status" action="open"/>
+        <invoker type="master_tblcivilstatus:open" caption="Civil Status" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

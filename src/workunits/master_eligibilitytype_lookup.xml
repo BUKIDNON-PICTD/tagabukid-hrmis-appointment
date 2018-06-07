@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workunit extends="com/rameses/seti2/templates/CrudLookup.xml" 
+         schemaName="master_tbleligibilitytype">
+    <invokers>
+        <invoker type="eligibilitytype:lookup" caption="Lookup Eligibility Type"
+                 action="init" target="popup" height="500"  
+                 cols="name,description,code"/>  
+    </invokers>
+</workunit>

@@ -40,7 +40,7 @@ public class MasterEligibilityView extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField6 = new com.rameses.rcp.control.XTextField();
-        xTextField7 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Eligibility");
@@ -55,7 +55,7 @@ public class MasterEligibilityView extends javax.swing.JPanel {
 
         xTextField5.setCaption("Name");
         xTextField5.setCaptionFontStyle("");
-        xTextField5.setCaptionWidth(125);
+        xTextField5.setCaptionWidth(100);
         xTextField5.setName("entity.name"); // NOI18N
         xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel4.add(xTextField5);
@@ -64,7 +64,7 @@ public class MasterEligibilityView extends javax.swing.JPanel {
 
         xTextArea1.setCaption("Description");
         xTextArea1.setCaptionFontStyle("");
-        xTextArea1.setCaptionWidth(125);
+        xTextArea1.setCaptionWidth(100);
         xTextArea1.setName("entity.description"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -72,17 +72,18 @@ public class MasterEligibilityView extends javax.swing.JPanel {
 
         xTextField6.setCaption("Code");
         xTextField6.setCaptionFontStyle("");
-        xTextField6.setCaptionWidth(125);
+        xTextField6.setCaptionWidth(100);
         xTextField6.setName("entity.code"); // NOI18N
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel4.add(xTextField6);
 
-        xTextField7.setCaption("Eligibility Type ID");
-        xTextField7.setCaptionFontStyle("");
-        xTextField7.setCaptionWidth(125);
-        xTextField7.setName("entity.eligibilitytypeid"); // NOI18N
-        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel4.add(xTextField7);
+        xLookupField1.setCaption("Eligibility Type");
+        xLookupField1.setCaptionWidth(100);
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("eligibilitytype:lookup");
+        xLookupField1.setName("entity.eligibilitytype"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel4.add(xLookupField1);
 
         xHorizontalPanel4.add(xFormPanel4);
 
@@ -107,18 +108,12 @@ public class MasterEligibilityView extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    private com.rameses.rcp.control.XFormPanel xFormPanel2;
-    private com.rameses.rcp.control.XFormPanel xFormPanel3;
     private com.rameses.rcp.control.XFormPanel xFormPanel4;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel4;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
-    private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;
     private com.rameses.rcp.control.XTextField xTextField6;
-    private com.rameses.rcp.control.XTextField xTextField7;
     // End of variables declaration//GEN-END:variables
 }

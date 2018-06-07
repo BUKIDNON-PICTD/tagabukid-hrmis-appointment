@@ -5,10 +5,16 @@
  */
 package tagabukid.hrmis.appointment.views;
 
+import com.rameses.rcp.ui.annotations.StyleSheet;
+import com.rameses.rcp.ui.annotations.Template;
+import com.rameses.seti2.views.CrudFormPage;
+
 /**
  *
  * @author P0RA
  */
+@StyleSheet
+@Template(CrudFormPage.class)
 public class MasterEmptEmploymentStatusView extends javax.swing.JPanel {
 
     /**
@@ -27,19 +33,198 @@ public class MasterEmptEmploymentStatusView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
+        xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
+        xTextField3 = new com.rameses.rcp.control.XTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        xTextArea1 = new com.rameses.rcp.control.XTextArea();
+        xTextField4 = new com.rameses.rcp.control.XTextField();
+        xTextField7 = new com.rameses.rcp.control.XTextField();
+        xCheckBox1 = new com.rameses.rcp.control.XCheckBox();
+        xCheckBox2 = new com.rameses.rcp.control.XCheckBox();
+        xCheckBox3 = new com.rameses.rcp.control.XCheckBox();
+        xIntegerField1 = new com.rameses.rcp.control.XIntegerField();
+        xCheckBox4 = new com.rameses.rcp.control.XCheckBox();
+        xCheckBox5 = new com.rameses.rcp.control.XCheckBox();
+        xIntegerField2 = new com.rameses.rcp.control.XIntegerField();
+        xIntegerField3 = new com.rameses.rcp.control.XIntegerField();
+        xIntegerField4 = new com.rameses.rcp.control.XIntegerField();
+        xIntegerField5 = new com.rameses.rcp.control.XIntegerField();
+        xCheckBox6 = new com.rameses.rcp.control.XCheckBox();
+        xIntegerField6 = new com.rameses.rcp.control.XIntegerField();
+        xIntegerField7 = new com.rameses.rcp.control.XIntegerField();
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder1.setTitle("Employment Status");
+        xHorizontalPanel2.setBorder(xTitledBorder1);
+
+        xTextField2.setCaption("objid");
+        xTextField2.setCaptionWidth(75);
+        xTextField2.setName("entity.objid"); // NOI18N
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField2.setVisible(false);
+        xFormPanel2.add(xTextField2);
+
+        xTextField3.setCaption("Name");
+        xTextField3.setCaptionFontStyle("");
+        xTextField3.setCaptionWidth(100);
+        xTextField3.setName("entity.name"); // NOI18N
+        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel2.add(xTextField3);
+
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
+
+        xTextArea1.setCaption("Description");
+        xTextArea1.setCaptionFontStyle("");
+        xTextArea1.setCaptionWidth(100);
+        xTextArea1.setName("entity.description"); // NOI18N
+        jScrollPane1.setViewportView(xTextArea1);
+
+        xFormPanel2.add(jScrollPane1);
+
+        xTextField4.setCaption("Code");
+        xTextField4.setCaptionFontStyle("");
+        xTextField4.setCaptionWidth(100);
+        xTextField4.setName("entity.code"); // NOI18N
+        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel2.add(xTextField4);
+
+        xTextField7.setCaption("Old ID");
+        xTextField7.setCaptionFontStyle("");
+        xTextField7.setCaptionWidth(100);
+        xTextField7.setName("entity.oldid"); // NOI18N
+        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel2.add(xTextField7);
+
+        xCheckBox1.setCaption("Tenure");
+        xCheckBox1.setCaptionWidth(250);
+        xCheckBox1.setCheckValue("TRUE");
+        xCheckBox1.setName("entity.istenure"); // NOI18N
+        xCheckBox1.setUncheckValue("FALSE");
+        xFormPanel2.add(xCheckBox1);
+
+        xCheckBox2.setCaption("Applicable for Plantilla Position");
+        xCheckBox2.setCaptionWidth(250);
+        xCheckBox2.setCheckValue("TRUE");
+        xCheckBox2.setName("entity.isapplicableforplantillaposition"); // NOI18N
+        xCheckBox2.setUncheckValue("FALSE");
+        xFormPanel2.add(xCheckBox2);
+
+        xCheckBox3.setCaption("Has Leave");
+        xCheckBox3.setCaptionWidth(250);
+        xCheckBox3.setCheckValue("TRUE");
+        xCheckBox3.setName("entity.hasleave"); // NOI18N
+        xCheckBox3.setUncheckValue("FALSE");
+        xCheckBox3.setVisibleWhen("");
+        xFormPanel2.add(xCheckBox3);
+
+        xIntegerField1.setCaption("Leave Earning");
+        xIntegerField1.setCaptionWidth(250);
+        xIntegerField1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField1.setName("entity.leaveearning"); // NOI18N
+        xIntegerField1.setVisibleWhen("");
+        xFormPanel2.add(xIntegerField1);
+
+        xCheckBox4.setCaption("Has Step Increment");
+        xCheckBox4.setCaptionWidth(250);
+        xCheckBox4.setCheckValue("TRUE");
+        xCheckBox4.setName("entity.hasstepincrement"); // NOI18N
+        xCheckBox4.setUncheckValue("FALSE");
+        xFormPanel2.add(xCheckBox4);
+
+        xCheckBox5.setCaption("Government Service");
+        xCheckBox5.setCaptionWidth(250);
+        xCheckBox5.setCheckValue("TRUE");
+        xCheckBox5.setName("entity.isgovernmentservice"); // NOI18N
+        xCheckBox5.setUncheckValue("FALSE");
+        xFormPanel2.add(xCheckBox5);
+
+        xIntegerField2.setCaption("Compensation Type");
+        xIntegerField2.setCaptionWidth(250);
+        xIntegerField2.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField2.setName("entity.compensationtype"); // NOI18N
+        xFormPanel2.add(xIntegerField2);
+
+        xIntegerField3.setCaption("Compensation Earning");
+        xIntegerField3.setCaptionWidth(250);
+        xIntegerField3.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField3.setName("entity.compensationearning"); // NOI18N
+        xFormPanel2.add(xIntegerField3);
+
+        xIntegerField4.setCaption("Step Increment Years Multiplicity");
+        xIntegerField4.setCaptionWidth(250);
+        xIntegerField4.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField4.setName("entity.stepincrementyearsmultiplicity"); // NOI18N
+        xFormPanel2.add(xIntegerField4);
+
+        xIntegerField5.setCaption("Appointment Report Doc");
+        xIntegerField5.setCaptionWidth(250);
+        xIntegerField5.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField5.setName("entity.appointmentreportdoc"); // NOI18N
+        xFormPanel2.add(xIntegerField5);
+
+        xCheckBox6.setCaption("Applicable for Salary Schedule Adjustment");
+        xCheckBox6.setCaptionWidth(250);
+        xCheckBox6.setCheckValue("TRUE");
+        xCheckBox6.setName("entity.isapplicableforsalaryscheduleadjustment"); // NOI18N
+        xCheckBox6.setUncheckValue("FALSE");
+        xFormPanel2.add(xCheckBox6);
+
+        xIntegerField6.setCaption("Plantilla Type");
+        xIntegerField6.setCaptionWidth(250);
+        xIntegerField6.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField6.setName("entity.plantillatype"); // NOI18N
+        xFormPanel2.add(xIntegerField6);
+
+        xIntegerField7.setCaption("Sort Position");
+        xIntegerField7.setCaptionWidth(250);
+        xIntegerField7.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        xIntegerField7.setName("entity.sortposition"); // NOI18N
+        xFormPanel2.add(xIntegerField7);
+
+        xHorizontalPanel2.add(xFormPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 668, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private com.rameses.rcp.control.XCheckBox xCheckBox1;
+    private com.rameses.rcp.control.XCheckBox xCheckBox2;
+    private com.rameses.rcp.control.XCheckBox xCheckBox3;
+    private com.rameses.rcp.control.XCheckBox xCheckBox4;
+    private com.rameses.rcp.control.XCheckBox xCheckBox5;
+    private com.rameses.rcp.control.XCheckBox xCheckBox6;
+    private com.rameses.rcp.control.XFormPanel xFormPanel2;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
+    private com.rameses.rcp.control.XIntegerField xIntegerField1;
+    private com.rameses.rcp.control.XIntegerField xIntegerField2;
+    private com.rameses.rcp.control.XIntegerField xIntegerField3;
+    private com.rameses.rcp.control.XIntegerField xIntegerField4;
+    private com.rameses.rcp.control.XIntegerField xIntegerField5;
+    private com.rameses.rcp.control.XIntegerField xIntegerField6;
+    private com.rameses.rcp.control.XIntegerField xIntegerField7;
+    private com.rameses.rcp.control.XTextArea xTextArea1;
+    private com.rameses.rcp.control.XTextField xTextField2;
+    private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField7;
     // End of variables declaration//GEN-END:variables
 }

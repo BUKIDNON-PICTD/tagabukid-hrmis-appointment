@@ -28,7 +28,6 @@ extends CrudFormModel{
 
     public void afterOpen(){               
         entity.barangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.barangayid] );
-        entity.citymun = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.citymunid] );
     }
 
     public void beforeSave(o){

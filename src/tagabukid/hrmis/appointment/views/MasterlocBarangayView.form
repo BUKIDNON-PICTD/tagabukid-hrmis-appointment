@@ -120,7 +120,7 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="City/Municipality ID"/>
+                <Property name="caption" type="java.lang.String" value="City / Municipality"/>
                 <Property name="captionWidth" type="int" value="130"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="citymunicipality:lookup"/>

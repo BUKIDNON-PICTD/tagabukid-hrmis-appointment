@@ -40,7 +40,7 @@ public class MasterFinFundView extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         xTextField3 = new com.rameses.rcp.control.XTextField();
-        xLookupField1 = new com.rameses.rcp.control.XLookupField();
+        xTextField5 = new com.rameses.rcp.control.XTextField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -74,14 +74,11 @@ public class MasterFinFundView extends javax.swing.JPanel {
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
 
-        xLookupField1.setCaption("Parent Fund ID");
-        xLookupField1.setCaptionWidth(100);
-        xLookupField1.setExpression("#{item.name}");
-        xLookupField1.setFocusKeyStroke("");
-        xLookupField1.setHandler("finfund:lookup");
-        xLookupField1.setName("entity.fund"); // NOI18N
-        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xLookupField1);
+        xTextField5.setCaption("Parent Fund ID");
+        xTextField5.setCaptionWidth(100);
+        xTextField5.setName("entity.parentfundid"); // NOI18N
+        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField5);
 
         xTextField4.setCaption("Position");
         xTextField4.setCaptionWidth(100);
@@ -114,11 +111,11 @@ public class MasterFinFundView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField5;
     // End of variables declaration//GEN-END:variables
 }

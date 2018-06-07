@@ -74,7 +74,7 @@ public class MasterlocRegionView extends javax.swing.JPanel {
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField6);
 
-        xLookupField1.setCaption("Country ID");
+        xLookupField1.setCaption("Country");
         xLookupField1.setCaptionWidth(130);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("country:lookup");

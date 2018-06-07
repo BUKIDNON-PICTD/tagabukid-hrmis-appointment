@@ -123,7 +123,7 @@
             </Component>
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Region ID"/>
+                <Property name="caption" type="java.lang.String" value="Region"/>
                 <Property name="captionWidth" type="int" value="130"/>
                 <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                 <Property name="handler" type="java.lang.String" value="region:lookup"/>

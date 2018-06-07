@@ -42,8 +42,9 @@ public class MasterAcadEducationalInstitutionBackView extends javax.swing.JPanel
         xDateField1 = new com.rameses.rcp.control.XDateField();
         xDateField3 = new com.rameses.rcp.control.XDateField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
-        xTextField7 = new com.rameses.rcp.control.XTextField();
+        xLookupField3 = new com.rameses.rcp.control.XLookupField();
         xTextField11 = new com.rameses.rcp.control.XTextField();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
         xTextField8 = new com.rameses.rcp.control.XTextField();
@@ -83,37 +84,66 @@ public class MasterAcadEducationalInstitutionBackView extends javax.swing.JPanel
         xTextField5.setCaptionWidth(100);
         xTextField5.setName("entity.code"); // NOI18N
         xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField5ActionPerformed(evt);
+            }
+        });
         xFormPanel1.add(xTextField5);
 
         xDateField1.setCaption("Date Established");
         xDateField1.setCaptionWidth(100);
         xDateField1.setName("entity.dateestablished"); // NOI18N
         xDateField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xDateField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xDateField1ActionPerformed(evt);
+            }
+        });
         xFormPanel1.add(xDateField1);
 
         xDateField3.setCaption("Date Closed");
         xDateField3.setCaptionWidth(100);
         xDateField3.setName("entity.dateclosed"); // NOI18N
         xDateField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xDateField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xDateField3ActionPerformed(evt);
+            }
+        });
         xFormPanel1.add(xDateField3);
 
         xTextField6.setCaption("Level");
         xTextField6.setCaptionWidth(100);
         xTextField6.setName("entity.level"); // NOI18N
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField6ActionPerformed(evt);
+            }
+        });
         xFormPanel1.add(xTextField6);
 
-        xTextField7.setCaption("Parent ID");
-        xTextField7.setCaptionWidth(100);
-        xTextField7.setName("entity.parentid"); // NOI18N
-        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField7);
+        xLookupField3.setCaption("Parent ID");
+        xLookupField3.setCaptionWidth(100);
+        xLookupField3.setExpression("#{item.name}");
+        xLookupField3.setHandler("educationalinstitutionback:lookup");
+        xLookupField3.setName("entity.parent"); // NOI18N
+        xLookupField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xLookupField3);
 
         xTextField11.setCaption("SDF");
         xTextField11.setCaptionWidth(100);
         xTextField11.setName("entity.sdf"); // NOI18N
         xTextField11.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField11);
+
+        xTextField2.setCaption("objid");
+        xTextField2.setCaptionWidth(100);
+        xTextField2.setName("entity.objid"); // NOI18N
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField2.setVisible(false);
+        xFormPanel1.add(xTextField2);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -192,7 +222,7 @@ public class MasterAcadEducationalInstitutionBackView extends javax.swing.JPanel
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,6 +238,22 @@ public class MasterAcadEducationalInstitutionBackView extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void xDateField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xDateField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xDateField3ActionPerformed
+
+    private void xTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField6ActionPerformed
+
+    private void xDateField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xDateField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xDateField1ActionPerformed
+
+    private void xTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.rcp.control.XDateField xDateField1;
@@ -220,17 +266,18 @@ public class MasterAcadEducationalInstitutionBackView extends javax.swing.JPanel
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel4;
     private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XLookupField xLookupField2;
+    private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField14;
     private com.rameses.rcp.control.XTextField xTextField15;
     private com.rameses.rcp.control.XTextField xTextField16;
     private com.rameses.rcp.control.XTextField xTextField17;
+    private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;
     private com.rameses.rcp.control.XTextField xTextField6;
-    private com.rameses.rcp.control.XTextField xTextField7;
     private com.rameses.rcp.control.XTextField xTextField8;
     private com.rameses.rcp.control.XTextField xTextField9;
     // End of variables declaration//GEN-END:variables
