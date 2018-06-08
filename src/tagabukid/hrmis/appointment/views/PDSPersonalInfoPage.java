@@ -13,12 +13,12 @@ import com.rameses.rcp.ui.annotations.Template;
  * @author BlackHat
  */
 @Template({FormPage.class})
-public class PDSPersonalInfoView extends javax.swing.JPanel {
+public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
     /**
      * Creates new form PDSPersonalInfoView
      */
-    public PDSPersonalInfoView() {
+    public PDSPersonalInfoPage() {
         initComponents();
     }
 
@@ -316,9 +316,7 @@ public class PDSPersonalInfoView extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 65, Short.MAX_VALUE))
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
         );
 
         getAccessibleContext().setAccessibleParent(this);
