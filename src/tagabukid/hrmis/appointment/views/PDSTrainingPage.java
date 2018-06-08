@@ -7,14 +7,14 @@ package tagabukid.hrmis.appointment.views;
 
 /**
  *
- * @author user
+ * @author P0RA
  */
-public class SamplePage extends javax.swing.JPanel {
+public class PDSTrainingPage extends javax.swing.JPanel {
 
     /**
-     * Creates new form SamplePage
+     * Creates new form PDSTrainingPage
      */
-    public SamplePage() {
+    public PDSTrainingPage() {
         initComponents();
     }
 
@@ -27,7 +27,11 @@ public class SamplePage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        individualEntityPage1 = new com.rameses.entity.views.IndividualEntityPage();
+        xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder1.setTitle("LEARNING AND DEVELOPMENT (L&D) INTERVENTIONS/TRAINING PROGRAMS ATTENDED");
+        xHorizontalPanel1.setBorder(xTitledBorder1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -35,20 +39,20 @@ public class SamplePage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(individualEntityPage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(individualEntityPage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.entity.views.IndividualEntityPage individualEntityPage1;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     // End of variables declaration//GEN-END:variables
 }
