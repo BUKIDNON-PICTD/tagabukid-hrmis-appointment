@@ -14,7 +14,7 @@
 
     
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.SamplePage"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSPersonalInfoView"/>
     </pages>
     
 </workunit>

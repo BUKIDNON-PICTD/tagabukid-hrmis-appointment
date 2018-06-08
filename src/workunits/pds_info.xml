@@ -1,17 +1,11 @@
 <workunit>
     <invokers>
         <invoker type="hrmis_pds:open" caption="PDS Info" action="open" index="100" target="window"/>
-<!--        <invoker type="document_incoming:open" caption="Document Info" target="window" action="open"/>
-        <invoker type="document_outgoing:open" caption="Document Info" target="window" action="open"/>-->
-<!--        <invoker type="global:barcode:71007" caption="Document Tracking System" action="open" target="window"
-            expr="#{!barcodeid.contains('-')}"/>-->
-         <invoker folderid="/home/hrmis" caption="SAMPLE PDS" action="open" index="2" />
+        <invoker type="hrmis_pds:create" action="create" index="100" target="window"/>
+
+         <invoker folderid="/home/hrmis" caption="SAMPLE PDS" action="create" index="1" />
         <invoker type="formActions" caption="Close" action="_close" />
-        <!--<invoker type="formActions" caption="Edit" action="showEditMenu" icon="images/toolbars/edit.png"/>--> 
-<!--        <invoker type="formActions" caption="View Parent" action="showParent" immediate="true" visibleWhen="#{entity.parentid!=null}"/> 
-        <invoker type="formActions" caption="Show Document Info" action="showDocInfo" immediate="true" visibleWhen="#{entity.docinfo!=null}"/> -->
-        <!--<invoker type="formActions" caption="Send SMS" action="createSMS" immediate="true" />--> 
-        <!--<invoker type="subaycabinet-document:open" caption="Document Info" action="open" target="window"/>-->
+        
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.PDSInfoController"/>
     <pages>

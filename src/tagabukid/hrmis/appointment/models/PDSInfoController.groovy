@@ -50,6 +50,11 @@ class PDSInfoController {
 ////        println entity
     }
 
+    void create (){
+        title = "New PDS";
+        loadSections();
+    }
+
     void reloadSections() {
 //        binding.refresh("subform");
         def handlers = Inv.lookupOpeners("pds:section",[entity:entity]);
@@ -102,6 +107,8 @@ class PDSInfoController {
         }catch(e){
 
         }
+
     }
+
 
 }

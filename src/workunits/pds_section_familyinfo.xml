@@ -1,6 +1,6 @@
 <workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblorganizationunittype">
     <invokers>
-        <invoker type="pds:section" caption="Family Info" action="init" index="-100" />
+        <!--<invoker type="pds:section" caption="Family Info" action="init" index="-100" />-->
         
 <!--        <invoker type="extActions" caption="Open Child" action="showChild" visibleWhen="#{selectedItem!=null}"/>
         <invoker type="extActions" caption="Print DIN" action="print" />
