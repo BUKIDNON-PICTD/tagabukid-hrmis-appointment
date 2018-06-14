@@ -48,9 +48,7 @@ class  PDSFamilyInfoController extends CrudFormModel {
 //        listHandler?.load();
     }
 
-    void jade(){
-        println entity
-    }
+    
     // void loadAttachments(){
     //     entity.attachments = [];
                 
