@@ -1,7 +1,7 @@
 <workunit>
     <invokers>
-        <invoker type="hrmis_pds:open" caption="PDS Info" action="open" index="100" target="window"/>
-        <invoker type="hrmis_pds:create" action="create" index="100" target="window"/>
+        <invoker type="hrmis_pds_version:open" caption="PDS Info" action="open" index="100" target="window"/>
+        <invoker type="hrmis_pds_version:create" action="create" index="100" target="window"/>
 
          <invoker folderid="/home/hrmis" caption="SAMPLE PDS" action="create" index="1" />
         <invoker type="formActions" caption="Close" action="_close" />

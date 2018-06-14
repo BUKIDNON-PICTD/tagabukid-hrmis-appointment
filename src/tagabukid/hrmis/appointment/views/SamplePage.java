@@ -5,10 +5,14 @@
  */
 package tagabukid.hrmis.appointment.views;
 
+import com.rameses.osiris2.themes.FormPage;
+import com.rameses.rcp.ui.annotations.Template;
+
 /**
  *
  * @author user
  */
+@Template({FormPage.class})
 public class SamplePage extends javax.swing.JPanel {
 
     /**

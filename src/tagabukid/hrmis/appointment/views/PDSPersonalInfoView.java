@@ -148,20 +148,20 @@ public class PDSPersonalInfoView extends javax.swing.JPanel {
         entityLookup1.setStretchWidth(300);
         xFormPanel1.add(entityLookup1);
 
-        xTextField4.setText("entity.ExtensionName ");
         xTextField4.setCaption("Extension Name ");
         xTextField4.setCaptionWidth(135);
+        xTextField4.setName("entity.extensionname"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField4);
 
-        xDateField1.setText("entity.BirthDate");
         xDateField1.setCaption("Date of Birth");
         xDateField1.setCaptionWidth(135);
+        xDateField1.setName("entity.birthdate"); // NOI18N
         xFormPanel1.add(xDateField1);
 
-        xTextArea1.setText("entity.BirthPlace");
         xTextArea1.setCaption("Birth Place");
         xTextArea1.setCaptionWidth(135);
+        xTextArea1.setName("entity.birthplace"); // NOI18N
         xTextArea1.setPreferredSize(new java.awt.Dimension(300, 61));
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -170,7 +170,7 @@ public class PDSPersonalInfoView extends javax.swing.JPanel {
         xComboBox1.setCaption("Gender");
         xComboBox1.setCaptionWidth(135);
         xComboBox1.setItems("Gender");
-        xComboBox1.setName("entity.Gender"); // NOI18N
+        xComboBox1.setName("entity.gender"); // NOI18N
         xComboBox1.setOpaque(false);
         xComboBox1.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xComboBox1);
@@ -178,26 +178,26 @@ public class PDSPersonalInfoView extends javax.swing.JPanel {
         xComboBox2.setCaption("Civil Status");
         xComboBox2.setCaptionWidth(135);
         xComboBox2.setItems("CivilStatus");
-        xComboBox2.setName("entity.CivilStatus"); // NOI18N
+        xComboBox2.setName("entity.civilstatus"); // NOI18N
         xComboBox2.setOpaque(false);
         xComboBox2.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xComboBox2);
 
-        xTextField5.setText("entity.Height");
         xTextField5.setCaption("Height (m)");
         xTextField5.setCaptionWidth(135);
+        xTextField5.setName("entity.height"); // NOI18N
         xTextField5.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xTextField5);
 
-        xTextField6.setText("entity.Weight");
         xTextField6.setCaption("Weight (kg)");
         xTextField6.setCaptionWidth(135);
+        xTextField6.setName("entity.weight"); // NOI18N
         xTextField6.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xTextField6);
 
-        xTextField7.setText("entity.BloodType");
         xTextField7.setCaption("Blood Type");
         xTextField7.setCaptionWidth(135);
+        xTextField7.setName("entity.bloodtype"); // NOI18N
         xTextField7.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xTextField7);
 
@@ -311,14 +311,16 @@ public class PDSPersonalInfoView extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 855, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 124, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 65, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleParent(this);

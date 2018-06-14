@@ -1,13 +1,5 @@
 <workunit>
     <invokers>
-        <invoker type="pds:section" caption="Personal Info" action="init" index="-100" />
-        
-<!--        <invoker type="extActions" caption="Open Child" action="showChild" visibleWhen="#{selectedItem!=null}"/>
-        <invoker type="extActions" caption="Print DIN" action="print" />
-        <invoker type="formActions" caption="Modify" name="popupChangeInfo" index="1000" category="subay:changeinfo" visibleWhen="#{isoffline &amp;&amp; isowner}" role="SHARED"/>
-        <invoker type="formActions" caption="Transfer" action="transferParent" index="1001" visibleWhen="#{entity.state == 'archived'}" role="SHARED"/>
-        -->
-
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.DocumentGeneralInfoSectionController" />

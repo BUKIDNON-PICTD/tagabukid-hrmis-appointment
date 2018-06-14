@@ -52,15 +52,15 @@ class JobOrderAppointmentModel extends CrudFormModel{
     
     public void afterOpen(){
                
-        entity.natureofappointment = persistenceSvc.read( [_schemaname:'references_tblappointmententrycode', objid:entity.natureofappointmentid] );
+        entity.natureofappointment = persistenceSvc.read( [_schemaname:'master_tblappointmententrycode', objid:entity.natureofappointmentid] );
         entity.org = persistenceSvc.read( [_schemaname:'master_tblorganizationunit', orgunitid:entity.org.objid] );
         entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroupid] );
         
         entity.appointmentMemberItems.each{
             it.employee = tgbkdSvc.getEntityByObjid([entityid:it.entityid]);
             it.position = persistenceSvc.read( [_schemaname:'master_tbljobposition', objid:it.positionid] );
-            it.fund = persistenceSvc.read( [_schemaname:'references_tblfinfund', objid:it.fundid] );
-            it.account = persistenceSvc.read( [_schemaname:'references_tblfinaccounttitle', objid:it.accountid] );
+            it.fund = persistenceSvc.read( [_schemaname:'master_tblfinfund', objid:it.fundid] );
+            it.account = persistenceSvc.read( [_schemaname:'master_tblfinaccounttitle', objid:it.accountid] );
         }
     }
 

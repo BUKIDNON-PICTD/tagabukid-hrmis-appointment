@@ -31,9 +31,6 @@ class PDSInfoController {
     def barcodeid;
     def startstep;
 
-    def openByBIN() {
-        MsgBox.alert( 'open business by BIN '+barcodeid ); 
-    }
             
     void open() {
         title = entity.objid;

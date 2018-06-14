@@ -1,6 +1,8 @@
 <workunit>
     <invokers>
-        <invoker type="pds:section" caption="Trainings" action="init" index="3" />
+        <invoker type="pds:section" caption="Trainings" action="init" index="8" />
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
         
 <!--        <invoker type="extActions" caption="Open Child" action="showChild" visibleWhen="#{selectedItem!=null}"/>
         <invoker type="extActions" caption="Print DIN" action="print" />
@@ -10,11 +12,11 @@
 
     </invokers>
     
-    <code class="tagabukid.hrmis.appointment.models.DocumentGeneralInfoSectionController" />
+    <code class="tagabukid.hrmis.appointment.models.PDSTrainingSectionController" />
 
     
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSTrainingPage"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSTrainingView"/>
     </pages>
     
 </workunit>
