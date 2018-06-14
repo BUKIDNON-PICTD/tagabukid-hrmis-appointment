@@ -1,9 +1,9 @@
 <workunit>
     <invokers>
-        <invoker type="hrmis_pds:open" caption="PDS Info" action="open" index="100" target="window"/>
-        <invoker type="hrmis_pds:create" action="create" index="100" target="window"/>
+        <invoker type="hrmis_pds:open"  action="open" target="window"/>
+        <invoker type="hrmis_pds:create" action="create" target="window"/>
 
-        <invoker type="formActions" caption="Close" action="_close" />
+        <!-- <invoker type="formActions" caption="Close" action="_close" /> -->
         
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.PDSInfoController"/>

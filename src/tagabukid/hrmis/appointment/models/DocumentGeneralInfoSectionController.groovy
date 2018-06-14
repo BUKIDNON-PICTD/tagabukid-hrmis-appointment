@@ -26,7 +26,7 @@ class  DocumentGeneralInfoSectionController  {
     def txnsvc;
     
     String title = "General Info";
-    String entityName = "subaydocument:generalinfo";
+    //String entityName = "subaydocument:generalinfo";
             
     def entity;
     def attachmentSelectedItem;

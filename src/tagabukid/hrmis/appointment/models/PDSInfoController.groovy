@@ -52,6 +52,9 @@ class PDSInfoController {
 
     void create (){
         title = "New PDS";
+        entity = [:]
+        entity.test = "jade"
+        entity.objid = "12345"
         loadSections();
     }
 
