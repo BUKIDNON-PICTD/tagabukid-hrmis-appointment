@@ -1,0 +1,15 @@
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" 
+    schemaName="hrmis_pds_educationalbackground">
+    <invokers>
+        <invoker type="pds:section" caption="Education" action="init" index="6" />
+
+
+
+    </invokers>
+    
+     <code class="tagabukid.hrmis.appointment.models.PDSEducationalInfoController" />
+    <pages>
+        <page  template="tagabukid.hrmis.appointment.views.PDSeducationalBackgroundPage"/>
+    </pages>
+
+</workunit>

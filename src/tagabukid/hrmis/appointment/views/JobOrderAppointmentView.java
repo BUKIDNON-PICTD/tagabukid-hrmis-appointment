@@ -164,7 +164,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
         xLookupField3.setCaption("Signatory Group");
         xLookupField3.setCaptionWidth(120);
         xLookupField3.setExpression("#{item.signatorygroupname}");
-        xLookupField3.setHandler("lookupSignatory");
+        xLookupField3.setHandler("signatorygroup:lookup");
         xLookupField3.setName("entity.signatorygroup"); // NOI18N
         xLookupField3.setPreferredSize(new java.awt.Dimension(250, 20));
         xFormPanel1.add(xLookupField3);
@@ -224,6 +224,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
             })
         });
         xDataTable2.setDepends(new String[] {"entity.signatorygroup"});
+        xDataTable2.setDynamic(true);
         xDataTable2.setHandler("signatoryItemHandler");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

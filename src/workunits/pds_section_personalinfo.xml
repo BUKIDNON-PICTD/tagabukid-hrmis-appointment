@@ -1,12 +1,15 @@
-<workunit>
+<workunit >
     <invokers>
+        <invoker type="pds:section" caption="Personal Info" action="init" index="1" />
+
+        
+
     </invokers>
     
-    <code class="tagabukid.hrmis.appointment.models.DocumentGeneralInfoSectionController" />
+    <code class="tagabukid.hrmis.appointment.models.PDSPersonalInfoController" />
 
-    
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSPersonalInfoView"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSPersonalInfoPage"/>
     </pages>
     
 </workunit>
