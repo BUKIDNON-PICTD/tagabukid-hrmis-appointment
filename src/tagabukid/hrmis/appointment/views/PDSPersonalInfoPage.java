@@ -46,7 +46,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xPanel1 = new com.rameses.rcp.control.XPanel();
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
-        entityAddressLookup1 = new com.rameses.entity.components.EntityAddressLookup();
+        entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
         entityAddressLookup2 = new com.rameses.entity.components.EntityAddressLookup();
         xHorizontalPanel4 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel4 = new com.rameses.rcp.control.XFormPanel();
@@ -86,12 +86,12 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTitledBorder1.setTitle("Address");
         xHorizontalPanel3.setBorder(xTitledBorder1);
 
-        entityAddressLookup1.setCaption("Residential Address");
-        entityAddressLookup1.setCaptionWidth(120);
-        entityAddressLookup1.setName("entity.Residence"); // NOI18N
-        entityAddressLookup1.setPreferredSize(new java.awt.Dimension(325, 53));
-        entityAddressLookup1.setStretchWidth(325);
-        xFormPanel3.add(entityAddressLookup1);
+        entityAddress1.setCaption("Residential Address");
+        entityAddress1.setCaptionWidth(130);
+        entityAddress1.setDepends(new String[] {"entity.person"});
+        entityAddress1.setName("residentialAddress"); // NOI18N
+        entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
+        xFormPanel3.add(entityAddress1);
 
         entityAddressLookup2.setCaption("Permanent Address");
         entityAddressLookup2.setCaptionWidth(120);
@@ -135,34 +135,39 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         entityLookup1.setCaption("Name");
         entityLookup1.setCaptionWidth(135);
-        entityLookup1.setExpression("#{entity.name}");
+        entityLookup1.setExpression("#{item.name}");
+        entityLookup1.setName("entity.person"); // NOI18N
         entityLookup1.setRequired(true);
         entityLookup1.setStretchWidth(300);
         xFormPanel1.add(entityLookup1);
 
-        xTextField4.setText("entity.ExtensionName ");
         xTextField4.setCaption("Extension Name ");
         xTextField4.setCaptionWidth(135);
+        xTextField4.setName("entity.person.nameextension"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField4);
 
-        xDateField1.setText("entity.BirthDate");
+        xDateField1.setEditable(false);
         xDateField1.setCaption("Date of Birth");
         xDateField1.setCaptionWidth(135);
-        xDateField1.setRequired(true);
+        xDateField1.setDepends(new String[] {"entity.person"});
+        xDateField1.setName("entity.person.birthdate"); // NOI18N
         xFormPanel1.add(xDateField1);
 
-        xTextArea1.setText("entity.BirthPlace");
         xTextArea1.setCaption("Birth Place");
         xTextArea1.setCaptionWidth(135);
+        xTextArea1.setDepends(new String[] {"entity.person"});
+        xTextArea1.setEnabled(false);
+        xTextArea1.setName("entity.person.birthplace"); // NOI18N
         xTextArea1.setPreferredSize(new java.awt.Dimension(300, 61));
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel1.add(jScrollPane1);
 
-        xTextField1.setText("entity.gender");
         xTextField1.setCaption("Gender");
         xTextField1.setCaptionWidth(135);
+        xTextField1.setDepends(new String[] {"entity.person"});
+        xTextField1.setName("enitty.person.gender"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xTextField1);
 
@@ -255,6 +260,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         xHorizontalPanel2.add(xFormPanel2);
 
+        xPhoto1.setDepends(new String[] {"entity.person"});
+        xPhoto1.setName("entity.person.photo"); // NOI18N
         xPhoto1.setText("xPhoto1");
 
         javax.swing.GroupLayout xPanel1Layout = new javax.swing.GroupLayout(xPanel1);
@@ -313,7 +320,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.entity.components.EntityAddressLookup entityAddressLookup1;
+    private com.rameses.enterprise.components.EntityAddress entityAddress1;
     private com.rameses.entity.components.EntityAddressLookup entityAddressLookup2;
     private com.rameses.entity.components.EntityLookup entityLookup1;
     private javax.swing.JScrollPane jScrollPane1;
