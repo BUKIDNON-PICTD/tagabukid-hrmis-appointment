@@ -7,7 +7,6 @@ import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
 import java.text.SimpleDateFormat
-import java.text.SimpleDateFormat
 
 class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     @Binding

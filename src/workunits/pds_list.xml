@@ -3,6 +3,4 @@
     <invokers>
         <invoker folderid="/home/hrmis" caption="PDS List" action="init" index="3" />
     </invokers>
-
-    
 </workunit>

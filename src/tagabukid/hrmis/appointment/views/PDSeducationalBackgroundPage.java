@@ -68,7 +68,7 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.schoolname.name}", null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.schoolname.name}", "lookup:tagabukid_master_schools")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "degree"}
