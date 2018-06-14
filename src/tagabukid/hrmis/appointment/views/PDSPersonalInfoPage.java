@@ -5,14 +5,17 @@
  */
 package tagabukid.hrmis.appointment.views;
 
-import com.rameses.osiris2.themes.FormPage;
+import com.rameses.rcp.ui.annotations.StyleSheet;
 import com.rameses.rcp.ui.annotations.Template;
+import com.rameses.seti2.views.CrudFormPage;
 
 /**
  *
  * @author BlackHat
  */
-@Template({FormPage.class})
+@StyleSheet
+//@Template({FormPage.class})
+@Template(CrudFormPage.class)
 public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
     /**
@@ -43,10 +46,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xPanel1 = new com.rameses.rcp.control.XPanel();
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
-        xTextField16 = new com.rameses.rcp.control.XTextField();
-        xTextField17 = new com.rameses.rcp.control.XTextField();
-        xTextField18 = new com.rameses.rcp.control.XTextField();
-        xTextField19 = new com.rameses.rcp.control.XTextField();
+        entityAddressLookup1 = new com.rameses.entity.components.EntityAddressLookup();
+        entityAddressLookup2 = new com.rameses.entity.components.EntityAddressLookup();
         xHorizontalPanel4 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel4 = new com.rameses.rcp.control.XFormPanel();
         xComboBox3 = new com.rameses.rcp.control.XComboBox();
@@ -60,8 +61,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xDateField1 = new com.rameses.rcp.control.XDateField();
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
-        xComboBox1 = new com.rameses.rcp.control.XComboBox();
-        xComboBox2 = new com.rameses.rcp.control.XComboBox();
+        xTextField1 = new com.rameses.rcp.control.XTextField();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField5 = new com.rameses.rcp.control.XTextField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
         xTextField7 = new com.rameses.rcp.control.XTextField();
@@ -85,28 +86,18 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTitledBorder1.setTitle("Address");
         xHorizontalPanel3.setBorder(xTitledBorder1);
 
-        xTextField16.setText("entity.ResidentialAddress");
-        xTextField16.setCaption("Residential Address");
-        xTextField16.setCaptionWidth(120);
-        xTextField16.setPreferredSize(new java.awt.Dimension(325, 20));
-        xFormPanel3.add(xTextField16);
+        entityAddressLookup1.setCaption("Residential Address");
+        entityAddressLookup1.setCaptionWidth(120);
+        entityAddressLookup1.setName("entity.Residence"); // NOI18N
+        entityAddressLookup1.setPreferredSize(new java.awt.Dimension(325, 53));
+        entityAddressLookup1.setStretchWidth(325);
+        xFormPanel3.add(entityAddressLookup1);
 
-        xTextField17.setText("entity.RZipCode");
-        xTextField17.setCaption("Zip Code");
-        xTextField17.setCaptionWidth(120);
-        xFormPanel3.add(xTextField17);
-
-        xTextField18.setText("entity.PermanentAddress");
-        xTextField18.setCaption("Permanent Address");
-        xTextField18.setCaptionWidth(120);
-        xTextField18.setCellPadding(new java.awt.Insets(10, 0, 0, 0));
-        xTextField18.setPreferredSize(new java.awt.Dimension(325, 20));
-        xFormPanel3.add(xTextField18);
-
-        xTextField19.setText("entity.PZipCode");
-        xTextField19.setCaption("Zip Code");
-        xTextField19.setCaptionWidth(120);
-        xFormPanel3.add(xTextField19);
+        entityAddressLookup2.setCaption("Permanent Address");
+        entityAddressLookup2.setCaptionWidth(120);
+        entityAddressLookup2.setName("entity.Permanent"); // NOI18N
+        entityAddressLookup2.setStretchWidth(135);
+        xFormPanel3.add(entityAddressLookup2);
 
         xHorizontalPanel3.add(xFormPanel3);
 
@@ -145,6 +136,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityLookup1.setCaption("Name");
         entityLookup1.setCaptionWidth(135);
         entityLookup1.setExpression("#{entity.name}");
+        entityLookup1.setRequired(true);
         entityLookup1.setStretchWidth(300);
         xFormPanel1.add(entityLookup1);
 
@@ -157,6 +149,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xDateField1.setText("entity.BirthDate");
         xDateField1.setCaption("Date of Birth");
         xDateField1.setCaptionWidth(135);
+        xDateField1.setRequired(true);
         xFormPanel1.add(xDateField1);
 
         xTextArea1.setText("entity.BirthPlace");
@@ -167,21 +160,17 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         xFormPanel1.add(jScrollPane1);
 
-        xComboBox1.setCaption("Gender");
-        xComboBox1.setCaptionWidth(135);
-        xComboBox1.setItems("Gender");
-        xComboBox1.setName("entity.Gender"); // NOI18N
-        xComboBox1.setOpaque(false);
-        xComboBox1.setPreferredSize(new java.awt.Dimension(150, 20));
-        xFormPanel1.add(xComboBox1);
+        xTextField1.setText("entity.gender");
+        xTextField1.setCaption("Gender");
+        xTextField1.setCaptionWidth(135);
+        xTextField1.setPreferredSize(new java.awt.Dimension(150, 20));
+        xFormPanel1.add(xTextField1);
 
-        xComboBox2.setCaption("Civil Status");
-        xComboBox2.setCaptionWidth(135);
-        xComboBox2.setItems("CivilStatus");
-        xComboBox2.setName("entity.CivilStatus"); // NOI18N
-        xComboBox2.setOpaque(false);
-        xComboBox2.setPreferredSize(new java.awt.Dimension(150, 20));
-        xFormPanel1.add(xComboBox2);
+        xTextField2.setText("entity.civilstatus");
+        xTextField2.setCaption("Civil Status");
+        xTextField2.setCaptionWidth(135);
+        xTextField2.setPreferredSize(new java.awt.Dimension(150, 20));
+        xFormPanel1.add(xTextField2);
 
         xTextField5.setText("entity.Height");
         xTextField5.setCaption("Height (m)");
@@ -283,25 +272,25 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
                             .addComponent(xPhoto1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, xPanel1Layout.createSequentialGroup()
                         .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(21, 21, 21)
                         .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 31, Short.MAX_VALUE))
+                .addGap(0, 303, Short.MAX_VALUE))
         );
         xPanel1Layout.setVerticalGroup(
             xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(xPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(xPanel1Layout.createSequentialGroup()
                         .addComponent(xPhoto1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(21, 21, 21)
+                        .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(57, Short.MAX_VALUE))
+                    .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         jScrollPane4.setViewportView(xPanel1);
@@ -311,26 +300,26 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 855, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 124, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 845, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 226, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 115, Short.MAX_VALUE))
         );
-
-        getAccessibleContext().setAccessibleParent(this);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.rameses.entity.components.EntityAddressLookup entityAddressLookup1;
+    private com.rameses.entity.components.EntityAddressLookup entityAddressLookup2;
     private com.rameses.entity.components.EntityLookup entityLookup1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private com.rameses.rcp.control.XComboBox xComboBox1;
-    private com.rameses.rcp.control.XComboBox xComboBox2;
     private com.rameses.rcp.control.XComboBox xComboBox3;
     private com.rameses.rcp.control.XComboBox xComboBox4;
     private com.rameses.rcp.control.XComboBoxBeanInfo xComboBoxBeanInfo1;
@@ -354,16 +343,14 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextArea xTextArea3;
     private com.rameses.rcp.control.XTextAreaBeanInfo xTextAreaBeanInfo1;
+    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField10;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField12;
     private com.rameses.rcp.control.XTextField xTextField13;
     private com.rameses.rcp.control.XTextField xTextField14;
     private com.rameses.rcp.control.XTextField xTextField15;
-    private com.rameses.rcp.control.XTextField xTextField16;
-    private com.rameses.rcp.control.XTextField xTextField17;
-    private com.rameses.rcp.control.XTextField xTextField18;
-    private com.rameses.rcp.control.XTextField xTextField19;
+    private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;
     private com.rameses.rcp.control.XTextField xTextField6;
