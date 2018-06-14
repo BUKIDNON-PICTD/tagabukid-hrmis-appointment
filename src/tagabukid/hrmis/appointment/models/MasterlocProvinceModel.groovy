@@ -17,11 +17,15 @@ class MasterlocProvinceModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){               
+        entity.region = persistenceSvc.read( [_schemaname:'master_tbllocregion', objid:entity.regionid] );
+    }
+
 
     public void beforeSave(o){
         entity.state = "DRAFT";
+        entity.regionid = entity.region.objid;
         if(o == 'create'){
-            entity.regionid = entity.region.objid;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

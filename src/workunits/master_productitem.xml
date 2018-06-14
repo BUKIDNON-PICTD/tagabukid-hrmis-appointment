@@ -1,7 +1,7 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblproductitem">
+<workunit schemaName="master_tblproductitem">
     <invokers>
         <invoker type="master_tblproductitem:create" caption="New Product Item" action="create"/>
-        <invoker type="master_tblproductitem:open" caption="View Product Item" action="open"/>
+        <invoker type="master_tblproductitem:open" caption="Product Item" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

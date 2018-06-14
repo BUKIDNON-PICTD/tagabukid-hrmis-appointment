@@ -54,7 +54,7 @@ public class MasterTrainingSubcategoryView extends javax.swing.JPanel {
         xFormPanel1.add(xTextField1);
 
         xTextField3.setCaption("Name");
-        xTextField3.setCaptionWidth(125);
+        xTextField3.setCaptionWidth(110);
         xTextField3.setName("entity.name"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
@@ -62,20 +62,20 @@ public class MasterTrainingSubcategoryView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
-        xTextArea2.setCaptionWidth(125);
+        xTextArea2.setCaptionWidth(110);
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
 
         xFormPanel1.add(jScrollPane2);
 
         xTextField4.setCaption("Code");
-        xTextField4.setCaptionWidth(125);
+        xTextField4.setCaptionWidth(110);
         xTextField4.setName("entity.code"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);
 
-        xLookupField1.setCaption("Training Category ID");
-        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setCaption("Training Category");
+        xLookupField1.setCaptionWidth(110);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("trainingcategory:lookup");
         xLookupField1.setName("entity.trainingcategory"); // NOI18N

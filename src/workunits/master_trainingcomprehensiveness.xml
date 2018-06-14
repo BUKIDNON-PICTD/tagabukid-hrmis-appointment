@@ -1,7 +1,7 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbltrainingcomprehensiveness">
+<workunit schemaName="master_tbltrainingcomprehensiveness">
     <invokers>
         <invoker type="master_tbltrainingcomprehensiveness:create" caption="New Training Comprehensiveness" action="create"/>
-        <invoker type="master_tbltrainingcomprehensiveness:open" caption="View Training Comprehensiveness" action="open"/>
+        <invoker type="master_tbltrainingcomprehensiveness:open" caption="Training Comprehensiveness" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

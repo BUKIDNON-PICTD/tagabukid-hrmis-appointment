@@ -1,3 +1,9 @@
+
+@StyleSheet
+@Template(CrudFormPage.class)
+
+====================================
+
 import com.rameses.rcp.annotations.*;
 import com.rameses.rcp.common.*;
 import com.rameses.seti2.models.*;
@@ -18,6 +24,10 @@ extends CrudFormModel{
     
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
+    }
+
+    public void afterOpen(){               
+        entity.barangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.barangayid] );
     }
 
     public void beforeSave(o){

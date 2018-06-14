@@ -17,6 +17,11 @@ class MasterPDSQModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){               
+        entity.pdsqsitem = persistenceSvc.read( [_schemaname:'master_tblpdsqsitem', objid:entity.pdsqsitemid] );
+    }
+
+
     public void beforeSave(o){
         entity.state = "DRAFT";
         if(o == 'create'){

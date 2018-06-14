@@ -1,0 +1,12 @@
+<workunit schemaName="master_tblcivilstatus">
+    <invokers>
+        <invoker type="master_tblcivilstatus:create" caption="New Civil Status" action="create"/>
+        <invoker type="master_tblcivilstatus:open" caption="Civil Status" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterCivilStatusModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterCivilStatusView"/>
+    </pages>
+</workunit>

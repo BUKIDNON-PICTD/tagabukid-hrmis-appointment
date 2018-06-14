@@ -18,11 +18,16 @@ class MasterInstitutionModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
+    public void afterOpen(){               
+        entity.citymunicipality = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.citymunid] );
+        entity.barangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.barangayid] );
+    }
+
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(o == 'create'){
             entity.citymunid = entity.citymunicipality.objid;
-            entity.barangayid = entity.barangay.objid;
+            entity.barangayid = entity.barangay.objid; 
+        if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

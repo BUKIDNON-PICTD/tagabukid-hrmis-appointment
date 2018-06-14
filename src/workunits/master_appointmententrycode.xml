@@ -1,0 +1,12 @@
+<workunit schemaName="master_tblappointmententrycode">
+    <invokers>
+        <invoker type="master_tblappointmententrycode:create" caption="New Appointment Entry Code" action="create"/>
+        <invoker type="master_tblappointmententrycode:open" caption="Appointment Entry Code" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterAppointmentEntryCodeModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterAppointmentEntryCodeView" />
+    </pages>
+</workunit>

@@ -26,7 +26,6 @@ public class MasterlocRegionView extends javax.swing.JPanel {
 
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
@@ -40,13 +39,6 @@ public class MasterlocRegionView extends javax.swing.JPanel {
         xHorizontalPanel1.setBorder(xTitledBorder1);
         xHorizontalPanel1.setMinimumSize(new java.awt.Dimension(100, 396));
         xHorizontalPanel1.setPreferredSize(new java.awt.Dimension(100, 396));
-
-        xTextField1.setCaption("objid");
-        xTextField1.setCaptionWidth(130);
-        xTextField1.setName("entity.objid"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField1.setVisible(false);
-        xFormPanel1.add(xTextField1);
 
         xTextField3.setCaption("Name");
         xTextField3.setCaptionWidth(130);
@@ -82,7 +74,7 @@ public class MasterlocRegionView extends javax.swing.JPanel {
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField6);
 
-        xLookupField1.setCaption("Country ID");
+        xLookupField1.setCaption("Country");
         xLookupField1.setCaptionWidth(130);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("country:lookup");
@@ -118,7 +110,6 @@ public class MasterlocRegionView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
-    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;

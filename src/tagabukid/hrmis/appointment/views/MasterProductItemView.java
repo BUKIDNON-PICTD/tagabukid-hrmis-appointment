@@ -54,7 +54,7 @@ public class MasterProductItemView extends javax.swing.JPanel {
         xFormPanel1.add(xTextField1);
 
         xTextField2.setCaption("Name");
-        xTextField2.setCaptionWidth(125);
+        xTextField2.setCaptionWidth(110);
         xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
@@ -62,20 +62,20 @@ public class MasterProductItemView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Description");
-        xTextArea1.setCaptionWidth(125);
+        xTextArea1.setCaptionWidth(110);
         xTextArea1.setName("entity.description"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel1.add(jScrollPane1);
 
         xTextField4.setCaption("Code");
-        xTextField4.setCaptionWidth(125);
+        xTextField4.setCaptionWidth(110);
         xTextField4.setName("entity.code"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);
 
-        xLookupField1.setCaption("Product Category ID");
-        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setCaption("Product Category");
+        xLookupField1.setCaptionWidth(110);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("productcategory:lookup");
         xLookupField1.setName("entity.productcategory"); // NOI18N
@@ -99,7 +99,7 @@ public class MasterProductItemView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -1,7 +1,7 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblinstitution">
+<workunit schemaName="master_tblinstitution">
     <invokers>
         <invoker type="master_tblinstitution:create" caption="New Institution" action="create"/>
-        <invoker type="master_tblinstitution:open" caption="View Institution" action="open"/>
+        <invoker type="master_tblinstitution:open" caption="Institution" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

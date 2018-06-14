@@ -20,11 +20,21 @@ class MasterFinAccountTitleModel extends CrudFormModel{
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
+    
+    public void afterOpen(){ 
+        if(!entity.parentaccounttitleid)
+        entity.parentaccounttitle = "";
+        else
+        entity.parentaccounttitle = persistenceSvc.read( [_schemaname:'master_tblfinaccounttitle', objid:entity.parentaccounttitleid] );
+    }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(o == 'create'){
+        if(!entity.parentaccounttitle)
+            entity.parentaccounttitleid = entity.parentaccounttitle;
+        else
             entity.parentaccounttitleid = entity.parentaccounttitle.objid;
+        if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

@@ -1,0 +1,54 @@
+<workunit extends="rpt_wtemplates/ReportController.xml" >
+    <invokers>
+        <invoker type="hrmis_appointmentcasualrai:form:formActions" caption="Preview RAI" action="preview" index="1" visibleWhen="#{allowPreviewAppointment==true}"/>        
+    </invokers>
+    <code>
+    <![CDATA[
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.reports.*;
+
+    class ReportAppointmentCasualRAIController extends tagabukid.common.models.AsyncReportController
+    {
+        @Service('TagabukidHRMISAppointmentCasualReportService') 
+        def svc
+
+        @Service("TagabukidSubayLookupService")
+        def subaylookupsvc
+
+        String title = 'Report on Appointment ISSUED (RAI)'
+        String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/'
+        String reportName = REPORT_PATH + 'appointmentcasualrai.jasper';
+        def data 
+
+
+        void buildReportData(entity, asyncHandler){
+            svc.getAppointmentCasualById(entity,asyncHandler){);
+        }
+
+        Map getParameters(){
+            return data.parameters;
+        }
+
+
+       def formControl = [
+            getFormControls: {
+                return [
+                    new FormControl( "lookup", [caption:'Signatory Group', name:'entity.signatorygroup_objid', preferredSize:'[0,21]', handler:'signatorygroup:lookup',expression:'#{item.signatorygroupname}', captionWidth:100]),
+                ]    
+            },
+       ] as FormPanelModel;
+
+        SubReport[] getSubReports() {
+            return [ 
+                    new SubReport("AppointmentItemList", REPORT_PATH + "appointmentcasualraiitems.jasper"),           
+                    new SubReport("SignatoryGroup", REPORT_PATH + "signatorygroupitems.jasper"),
+               ] as SubReport[];    
+       }
+
+    }
+    ]]>        
+        
+    </code>
+</workunit>

@@ -90,7 +90,7 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField7);
 
-        xLookupField1.setCaption("Province ID");
+        xLookupField1.setCaption("Province");
         xLookupField1.setCaptionWidth(150);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("province:lookup");
@@ -100,7 +100,7 @@ public class MasterlocCityMunicipalityView extends javax.swing.JPanel {
         xLookupField1.setReturnFields("");
         xFormPanel1.add(xLookupField1);
 
-        xLookupField2.setCaption("Congressional District ID");
+        xLookupField2.setCaption("Congressional District");
         xLookupField2.setCaptionWidth(150);
         xLookupField2.setExpression("#{item.name}");
         xLookupField2.setHandler("congressionaldistrict:lookup");

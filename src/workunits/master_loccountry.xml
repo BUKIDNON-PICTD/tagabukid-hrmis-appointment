@@ -1,7 +1,7 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tblloccountry">
+<workunit schemaName="master_tblloccountry">
     <invokers>
-        <invoker type="master_tblloccountry:create" caption="Create Country" action="create"/>
-        <invoker type="master_tblloccountry:open" caption="Open Country" action="open"/>
+        <invoker type="master_tblloccountry:create" caption="New Country" action="create"/>
+        <invoker type="master_tblloccountry:open" caption="Country" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

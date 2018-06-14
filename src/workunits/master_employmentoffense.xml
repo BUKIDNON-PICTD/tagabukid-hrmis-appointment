@@ -1,0 +1,12 @@
+<workunit schemaName="master_tblemploymentoffense">
+    <invokers>
+        <invoker type="master_tblemploymentoffense:create" caption="New Employment Offense" action="create"/>
+        <invoker type="master_tblemploymentoffense:open" caption="Employment Offense" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterEmploymentOffenseModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterEmploymentOffenseView"/>
+    </pages>
+</workunit>

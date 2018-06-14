@@ -44,7 +44,7 @@ public class MasterNationalityView extends javax.swing.JPanel {
         xFormPanel1.add(xTextField1);
 
         xTextField3.setCaption("Name");
-        xTextField3.setCaptionWidth(125);
+        xTextField3.setCaptionWidth(100);
         xTextField3.setName("entity.name"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
@@ -52,14 +52,14 @@ public class MasterNationalityView extends javax.swing.JPanel {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea2.setCaption("Description");
-        xTextArea2.setCaptionWidth(125);
+        xTextArea2.setCaptionWidth(100);
         xTextArea2.setName("entity.description"); // NOI18N
         jScrollPane2.setViewportView(xTextArea2);
 
         xFormPanel1.add(jScrollPane2);
 
-        xLookupField1.setCaption("Country ID");
-        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setCaption("Country");
+        xLookupField1.setCaptionWidth(100);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("country:lookup");
         xLookupField1.setName("entity.country"); // NOI18N

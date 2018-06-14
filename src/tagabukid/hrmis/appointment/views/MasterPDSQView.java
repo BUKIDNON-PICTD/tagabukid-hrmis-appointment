@@ -47,20 +47,20 @@ public class MasterPDSQView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Question");
-        xTextArea1.setCaptionWidth(125);
+        xTextArea1.setCaptionWidth(75);
         xTextArea1.setName("entity.question"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel1.add(jScrollPane1);
 
         xTextField2.setCaption("Position");
-        xTextField2.setCaptionWidth(125);
+        xTextField2.setCaptionWidth(75);
         xTextField2.setName("entity.position"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xLookupField1.setCaption("PDS Qs Item ID");
-        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setCaption("PDS Qs Item");
+        xLookupField1.setCaptionWidth(75);
         xLookupField1.setExpression("#{item.item}");
         xLookupField1.setHandler("pdsqsitem:lookup");
         xLookupField1.setName("entity.pdsqsitem"); // NOI18N
@@ -68,7 +68,7 @@ public class MasterPDSQView extends javax.swing.JPanel {
         xFormPanel1.add(xLookupField1);
 
         xTextField4.setCaption("oldid");
-        xTextField4.setCaptionWidth(125);
+        xTextField4.setCaptionWidth(75);
         xTextField4.setName("entity.oldid"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);

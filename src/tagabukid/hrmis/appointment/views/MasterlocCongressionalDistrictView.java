@@ -47,7 +47,6 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
         xTitledBorder1.setTitle("Congressional District");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
-        xTextField1.setEditable(true);
         xTextField1.setText("entity.objid");
         xTextField1.setCaption("objid");
         xTextField1.setName("entity.objid"); // NOI18N
@@ -78,7 +77,7 @@ public class MasterlocCongressionalDistrictView extends javax.swing.JPanel {
         xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField5);
 
-        xLookupField1.setCaption("Province ID");
+        xLookupField1.setCaption("Province");
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("province:lookup");
         xLookupField1.setName("entity.province"); // NOI18N

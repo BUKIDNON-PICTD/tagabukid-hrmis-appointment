@@ -1,7 +1,7 @@
-<workunit extends="com/rameses/seti2/templates/CrudForm.xml"  schemaName="master_tbltrainingcategory">
+<workunit schemaName="master_tbltrainingcategory">
     <invokers>
         <invoker type="master_tbltrainingcategory:create" caption="New Training Category" action="create"/>
-        <invoker type="master_tbltrainingcategory:open" caption="View Training Category" action="open"/>
+        <invoker type="master_tbltrainingcategory:open" caption="Training Category" action="open"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

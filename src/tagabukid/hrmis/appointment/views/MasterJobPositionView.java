@@ -104,7 +104,7 @@ public class MasterJobPositionView extends javax.swing.JPanel {
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField6);
 
-        xLookupField1.setCaption("Pay Grade ID");
+        xLookupField1.setCaption("Pay Grade");
         xLookupField1.setCaptionWidth(170);
         xLookupField1.setExpression("#{item.grade}");
         xLookupField1.setHandler("paygrade:lookup");

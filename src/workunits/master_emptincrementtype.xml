@@ -1,0 +1,13 @@
+<workunit schemaName="master_tblemptincrementtype">
+    <invokers>
+        <invoker type="master_tblemptincrementtype:create" caption="New Increment Type" action="create"/>
+        <invoker type="master_tblemptincrementtype:open" caption="Increment Type" action="open"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterEmptIncrementTypeModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterEmptIncrementTypeView"/>
+    </pages>
+</workunit>
+
