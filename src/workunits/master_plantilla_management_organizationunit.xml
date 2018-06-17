@@ -1,0 +1,92 @@
+<workunit>
+        
+    <invokers>
+        <invoker type="pm:open" caption="Plantilla Management" action="open"/>
+         <invoker type="pm:create" caption="Plantilla Management" action="create"/>
+    </invokers>
+   
+    <code>
+    <![CDATA[
+        import com.rameses.osiris2.common.*;
+        import com.rameses.rcp.common.*;
+        import com.rameses.rcp.annotations.*;
+        import com.rameses.osiris2.client.*;
+        import java.rmi.server.*;
+          
+        class TagabukidPlantillaManagementOrgUnitController extends CRUDController {
+            
+            @Binding
+            def binding;
+    
+            @Caller
+            def caller;
+            
+            @Service("TagabukidHRMISPlantillaManagementService")
+            def pmService
+            
+            //@Service("TagabukidPMISSuccessIndicatorTitleVerificationService")
+            //def verifySvc
+    
+            String entityName = "pm";
+            def node;
+            boolean showConfirmOnSave = true;
+            
+            public String getServiceName() {
+                return caller.getServiceName();
+            }
+            
+            public String getTitle() {
+                return caller.getTitle();
+            }  
+            
+            public String getPrefixId() {
+                return caller.getPrefixId();
+            }
+            
+            public def getAccountService() {
+                return caller.pmService;
+            }
+
+            Map createEntity() {
+                def m = [parentid:node.objid, type:'pm'];
+                m.parent = [code:node.code, name: node.name];
+                
+                caller.refresh();
+                return m;
+            }
+            
+            //void beforeSave( o ) {
+            //    def searchList  = verifySvc.getList(entity); 
+            //    if(searchList) {
+            //         if( searchList.find{ it.weight == 100 } )
+            //            throw new Exception("Exact Success Indicator exist.");  
+            //    }
+            //} 
+            
+            //def titleLookup = [
+            //    fetchList: { o->
+            //        o._tag = 'mfo';
+            //        return simsvc.getList(o).title;
+            //    }
+            //] as SuggestModel;
+
+            //public String getReligion() {
+            //    return getValue(); 
+            //}
+
+            //public void setReligion(String s) {
+            //    setValue( s ); 
+            //}
+            
+        
+            
+        }      
+       ]]>
+   </code>
+   
+   <pages>
+       <!--<page template="tagabukid.hrmis.pmis.views.PMISSuccessIndicatorTitleVerificationPage"/>-->    
+       <page template="tagabukid.hrmis.pmis.views.MasterMFOPage"/>
+   </pages>
+   
+</workunit>
