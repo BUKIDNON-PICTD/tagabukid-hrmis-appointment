@@ -9,7 +9,7 @@
 
     
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSOtherInfoView"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSOtherInfoPage"/>
     </pages>
     
 </workunit>

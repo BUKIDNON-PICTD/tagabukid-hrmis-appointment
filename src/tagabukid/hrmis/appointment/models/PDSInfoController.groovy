@@ -14,8 +14,8 @@ class PDSInfoController {
     @Service("TagabukidHRMISPDSService")
     def svc;
 
-    @FormId
-    def formId
+    // @FormId
+    // def formId
 
     @FormTitle
     def title
@@ -23,7 +23,7 @@ class PDSInfoController {
     @Binding
     def binding;
 
-    def entityName = "documentinfo";
+    // def entityName = "documentinfo";
     def entity;
 
     def sections;

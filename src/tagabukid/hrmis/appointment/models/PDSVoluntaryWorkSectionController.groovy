@@ -21,7 +21,15 @@ class  PDSVoluntaryWorkSectionController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
+    @Env
+    def env
+    
+    @Service("PersistenceService")
+    def persistenceSvc;
+    
     String title = "VOLUNTARY WORK OR INVOLVEMENT IN CIVIC / NON-GOVERNMENT / PEOPLE / VOLUNTARY ORGANIZATION/S";            
+    def parententity
+    def svc
     
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('FOR REVIEW') ); 
@@ -33,63 +41,93 @@ class  PDSVoluntaryWorkSectionController extends CrudFormModel {
     boolean isEditAllowed() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT|FOR REVIEW') ); 
     }
+    
+    def selectedVoluntaryWorkItem;
 
-    void init(){
+    void beforeSave(o){
+        entity.state = "DRAFT";
+            entity.recordlog_datecreated = dtSvc.getServerDate();
+            entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
+            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
+            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
+        if (o == 'create'){
+            parententity._schemaname = 'hrmis_pds'
+            // parententity.pdsno = svc.getPDSNo();
+            // parententity.entityid = entity.person.objid
+            parententity.version._schemaname = 'hrmis_pds_version'
+            // parententity.version.versionno = svc.getVersionNo();
+            // parententity.currentversionno
+            // // parententity.name = entity.person.name;
+            // persistenceSvc.create(parententity);             
+            // persistenceSvc.create(parententity.version);        
+            
+            //save sa ang pds
+            //save dayon ang version
+        }
+        // entity.residentialaddress = residentialAddress
+    }
+    
+    public void afterCreate(){
+        entity = parententity.version.voluntarywork
         
     }
-    //     def appointmentitemListHandler = [
-    //     fetchList: { entity.appointmentitems },
-    //     createItem : {
-    //         return[
-    //             objid : 'ACI' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
-    //         ]
-    //     },
-    //     onRemoveItem : {
-    //         if (MsgBox.confirm('Delete item?')){                
-    //             entity.appointmentitems.remove(it)
-    //             appointmentitemListHandler?.load();
-    //             return true;
-    //         }
-    //         return false;
-    //     },
-    //     onAddItem : {
-    //         it.plantilla.Id = it.plantilla.Id.toString()
-    //         entity.appointmentitems.add(it);
-    //     },
-    //     validate:{li->
-    //         def item=li.item;
-    //     }
-    // ] as EditorListModel
-
-    def voluntaryworkListHandler = [
-        createItem : {
-            return [
-                objid       : "VWK" + new java.rmi.server.UID(),
-                objid : entity.voluntaryworkid
-            ]
+         def voluntaryWorkItemHandler = [
+         fetchList: { 
+            return entity.voluntaryworkitems; 
         },
-        
-        fetchList : {
-            return entity.voluntarywork
-        },
-        
-        onAddItem : {item ->
-            if(!entity.voluntarywork)
-                entity.voluntarywork = [];
-            entity.voluntarywork << item;
-        },
-            
-        onRemoveItem : {item ->
-            if(MsgBox.confirm("Remove selected item?")){
-                entity.voluntarywork.remove(item);
-                if(!entity._voluntarywork)
-                    entity._voluntarywork = [];
-                entity.voluntarywork << item;
-                return true;
-            }
-            return false;
-        }
-    ] as EditorListModel;
+         createItem : {
+             return[
+                 objid : 'VW' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
+             ]
+         },
+         onRemoveItem : {
+             if (MsgBox.confirm('Delete item?')){                
+                 entity.voluntaryworkitems.remove(it)
+                 voluntaryworkItemHandler?.load();
+                 return true;
+             }
+             return false;
+         },
+         onAddItem : {
+             it.voluntarywork.Id = it.voluntarywork.Id.toString()
+             entity.voluntaryworkitems.add(it);
+         },
+         validate:{li->
+             def item=li.item;
+         }
+     ] as EditorListModel
+//
+//    def voluntaryworkListHandler = [
+//        createItem : {
+//            return [
+//                objid       : "VWK" + new java.rmi.server.UID(),
+//                objid : entity.voluntaryworkid
+//            ]
+//        },
+//        
+//        fetchList : {
+//            return entity.voluntarywork
+//        },
+//        
+//        onAddItem : {item ->
+//            if(!entity.voluntarywork)
+//                entity.voluntarywork = [];
+//            entity.voluntarywork << item;
+//        },
+//            
+//        onRemoveItem : {item ->
+//            if(MsgBox.confirm("Remove selected item?")){
+//                entity.voluntarywork.remove(item);
+//                if(!entity._voluntarywork)
+//                    entity._voluntarywork = [];
+//                entity.voluntarywork << item;
+//                return true;
+//            }
+//            return false;
+//        }
+//    ] as EditorListModel;
 
     
 }

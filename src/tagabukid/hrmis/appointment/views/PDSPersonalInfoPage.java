@@ -47,7 +47,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
         entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
-        entityAddressLookup2 = new com.rameses.entity.components.EntityAddressLookup();
+        entityAddress2 = new com.rameses.enterprise.components.EntityAddress();
         xHorizontalPanel4 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel4 = new com.rameses.rcp.control.XFormPanel();
         xComboBox3 = new com.rameses.rcp.control.XComboBox();
@@ -93,11 +93,12 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
         xFormPanel3.add(entityAddress1);
 
-        entityAddressLookup2.setCaption("Permanent Address");
-        entityAddressLookup2.setCaptionWidth(120);
-        entityAddressLookup2.setName("entity.Permanent"); // NOI18N
-        entityAddressLookup2.setStretchWidth(135);
-        xFormPanel3.add(entityAddressLookup2);
+        entityAddress2.setCaption("Permanent Address");
+        entityAddress2.setCaptionWidth(130);
+        entityAddress2.setDepends(new String[] {"entity.person"});
+        entityAddress2.setName("permanentAddress"); // NOI18N
+        entityAddress2.setPreferredSize(new java.awt.Dimension(0, 86));
+        xFormPanel3.add(entityAddress2);
 
         xHorizontalPanel3.add(xFormPanel3);
 
@@ -167,7 +168,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextField1.setCaption("Gender");
         xTextField1.setCaptionWidth(135);
         xTextField1.setDepends(new String[] {"entity.person"});
-        xTextField1.setName("enitty.person.gender"); // NOI18N
+        xTextField1.setName("entity.person.gender"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(150, 20));
         xFormPanel1.add(xTextField1);
 
@@ -307,21 +308,23 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 845, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 226, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 115, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.enterprise.components.EntityAddress entityAddress1;
-    private com.rameses.entity.components.EntityAddressLookup entityAddressLookup2;
+    private com.rameses.enterprise.components.EntityAddress entityAddress2;
     private com.rameses.entity.components.EntityLookup entityLookup1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

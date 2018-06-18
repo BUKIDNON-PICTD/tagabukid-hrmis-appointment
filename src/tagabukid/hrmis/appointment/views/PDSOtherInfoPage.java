@@ -19,12 +19,12 @@ import com.rameses.seti2.views.CrudFormPage;
 
 @StyleSheet
 @Template(CrudFormPage.class)
-public class PDSOtherInfoView extends javax.swing.JPanel {
+public class PDSOtherInfoPage extends javax.swing.JPanel {
 
     /**
      * Creates new form PDSOtherInfoPage
      */
-    public PDSOtherInfoView() {
+    public PDSOtherInfoPage() {
         initComponents();
     }
 

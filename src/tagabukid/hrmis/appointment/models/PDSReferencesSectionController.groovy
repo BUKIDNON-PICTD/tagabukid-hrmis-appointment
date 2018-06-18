@@ -6,9 +6,13 @@ import com.rameses.annotations.Env
 import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
-        
-class  PDSPersonalInfoController extends CrudFormModel{
-    @Binding
+
+/**
+ *
+ * @author P0RA
+ */
+class PDSReferencesSectionController extends CrudFormModel{
+	@Binding
     def binding;
     
     @Service('DateService')
@@ -20,7 +24,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
     @Service("PersistenceService")
     def persistenceSvc;
     
-    String title = "Personal Information";
+    String title = "REFERENCES";
     def parententity
     def svc
     
@@ -41,31 +45,25 @@ class  PDSPersonalInfoController extends CrudFormModel{
     }
     
     public void beforeSave(o){
+        entity.state = "DRAFT";
+            entity.recordlog_datecreated = dtSvc.getServerDate();
+            entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
+            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
+            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
         if (o == 'create'){
             parententity._schemaname = 'hrmis_pds'
-            parententity.pdsno = svc.getPDSNo();
-            parententity.entityid = entity.person.objid
             parententity.version._schemaname = 'hrmis_pds_version'
-            parententity.version.versionno = svc.getVersionNo();
-            parententity.currentversionno =  parententity.version.versionno;
-            parententity.name = entity.person.name;
-            persistenceSvc.create(parententity);             
-            persistenceSvc.create(parententity.version); 
-            
-            
             //save sa ang pds
             //save dayon ang version
         }
-        entity.residentialaddress = residentialAddress
-    }
-    public void afterCreate(){
-        entity = parententity.version.personalinfo
     }
     
-    def getResidentialAddress(){
-        return entity.person.address
+        public void afterCreate(){
+        entity = parententity.version.references
     }
-//    def getPhoto() {
-//        return selectedItem.benificiary.photo;
-//    }
+    
+    
 }
+

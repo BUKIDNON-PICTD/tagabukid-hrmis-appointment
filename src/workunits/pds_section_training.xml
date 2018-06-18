@@ -16,7 +16,7 @@
 
     
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSTrainingView"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSTrainingPage"/>
     </pages>
     
 </workunit>

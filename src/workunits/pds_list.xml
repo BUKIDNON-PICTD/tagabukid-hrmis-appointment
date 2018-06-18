@@ -1,5 +1,5 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" 
-    schemaName="hrmis_pds_version">
+    schemaName="hrmis_pds">
     <invokers>
         <invoker folderid="/home/hrmis" caption="PDS List" action="init" index="3" />
     </invokers>
