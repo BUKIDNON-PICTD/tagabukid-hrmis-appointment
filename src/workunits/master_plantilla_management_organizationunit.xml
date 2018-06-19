@@ -1,5 +1,4 @@
 <workunit>
-        
     <invokers>
         <invoker type="pm:open" caption="Plantilla Management" action="open"/>
          <invoker type="pm:create" caption="Plantilla Management" action="create"/>
@@ -24,12 +23,17 @@
             @Service("TagabukidHRMISPlantillaManagementService")
             def pmService
             
+            @Service('DateService')
+            def dtSvc
+            
             //@Service("TagabukidPMISSuccessIndicatorTitleVerificationService")
             //def verifySvc
     
             String entityName = "pm";
             def node;
             boolean showConfirmOnSave = true;
+            
+            def types = ['Casual','Permanent'];
             
             public String getServiceName() {
                 return caller.getServiceName();
@@ -48,20 +52,29 @@
             }
 
             Map createEntity() {
-                def m = [parentid:node.objid, type:'pm'];
-                m.parent = [code:node.code, name: node.name];
+                def m = [:];
+                m = pmService.initCreate();
+                m.org = node;
                 
                 caller.refresh();
                 return m;
             }
-            
-            //void beforeSave( o ) {
-            //    def searchList  = verifySvc.getList(entity); 
-            //    if(searchList) {
-            //         if( searchList.find{ it.weight == 100 } )
-            //            throw new Exception("Exact Success Indicator exist.");  
-            //    }
-            //} 
+           
+            def getLookuppositionservicesubclassification(){
+                return Inv.lookupOpener('lookup:tagabukid_hrmis_positionservicesubclassification',[pos:entity.positionserviceclassification])
+            }
+            void beforeSave( o ) {
+               def item = [
+                    parentid : entity.objid,
+                    itemno : entity.itemno,
+                    recordlog : [
+                            datecreated : dtSvc.getServerDate(),
+                            createdbyuserid : OsirisContext.env.USERID,
+                            createdbyuser : OsirisContext.env.FULLNAME,
+                    ]
+               ] 
+               entity.previtemnos << item
+            } 
             
             //def titleLookup = [
             //    fetchList: { o->
@@ -86,7 +99,7 @@
    
    <pages>
        <!--<page template="tagabukid.hrmis.pmis.views.PMISSuccessIndicatorTitleVerificationPage"/>-->    
-       <page template="tagabukid.hrmis.pmis.views.MasterMFOPage"/>
+       <page template="tagabukid.hrmis.appointment.views.MasterPlantillaManagementPage"/>
    </pages>
    
 </workunit>

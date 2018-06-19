@@ -1,7 +1,7 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" >
     <invokers>
-        <invoker folderid="/home/hrmis/hrmismaster" caption="Plantilla Management" index="10" action="init" /> 
-        <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" index="10" action="init" />  
+        <invoker folderid="/home/hrmis/hrmismaster" caption="Plantilla Management" action="init" /> 
+        <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" action="init" />  
     </invokers>
     <code>
         import com.rameses.rcp.common.*;
