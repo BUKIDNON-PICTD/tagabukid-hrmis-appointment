@@ -73,31 +73,65 @@ class  PDSVoluntaryWorkSectionController extends CrudFormModel {
         entity = parententity.version.voluntarywork
         
     }
-         def voluntaryWorkItemHandler = [
-         fetchList: { 
-            return entity.voluntaryworkitems; 
+    
+    def voluntaryworkItemHandler = [
+        fetchList: { 
+            if(entity.voluntarywork?.objid)
+            entity.voluntarywork = persistenceSvc.read( [_schemaname:'hrmis_pds_version_voluntarywork', objid:entity.voluntarywork.versionid] );
+            return entity.voluntarywork?.voluntaryworkitem
         },
          createItem : {
+            parententity._schemaname = 'hrmis_pds'
+            parententity.version._schemaname = 'hrmis_pds_version'
              return[
-                 objid : 'VW' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
+                 objid      : 'VW' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
+                 versionid  : parententity.version.objid,
              ]
          },
-         onRemoveItem : {
-             if (MsgBox.confirm('Delete item?')){                
-                 entity.voluntaryworkitems.remove(it)
-                 voluntaryworkItemHandler?.load();
-                 return true;
-             }
-             return false;
-         },
          onAddItem : {
-             it.voluntarywork.Id = it.voluntarywork.Id.toString()
-             entity.voluntaryworkitems.add(it);
+//             it.voluntarywork.Id = it.voluntarywork.Id.toString()
+////             entity.voluntaryworkitem.add(it);
+            parententity.version.voluntarywork.add(entity)
+
          },
-         validate:{li->
-             def item=li.item;
-         }
-     ] as EditorListModel
+        onRemoveItem : {
+            if (MsgBox.confirm('Delete item?')){                
+                entity.voluntarywork.voluntaryworkitems.remove(it)
+                voluntaryworkItemHandler?.load();
+                return true;
+            }
+            return false;
+        },
+        validate:{li->
+            def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+    ] as EditorListModel
+//         def voluntaryWorkItemHandler = [
+//         fetchList: { 
+//            return entity.voluntaryworkitems; 
+//        },
+//         createItem : {
+//             return[
+//                 objid : 'VW' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
+//             ]
+//         },
+//         onRemoveItem : {
+//             if (MsgBox.confirm('Delete item?')){                
+//                 entity.voluntaryworkitems.remove(it)
+//                 voluntaryworkItemHandler?.load();
+//                 return true;
+//             }
+//             return false;
+//         },
+//         onAddItem : {
+//             it.voluntarywork.Id = it.voluntarywork.Id.toString()
+//             entity.voluntaryworkitems.add(it);
+//         },
+//         validate:{li->
+//             def item=li.item;
+//         }
+//     ] as EditorListModel
 //
 //    def voluntaryworkListHandler = [
 //        createItem : {

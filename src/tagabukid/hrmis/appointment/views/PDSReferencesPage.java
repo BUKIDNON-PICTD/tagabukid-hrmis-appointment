@@ -42,7 +42,7 @@ public class PDSReferencesPage extends javax.swing.JPanel {
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "name"}
+                new Object[]{"name", "entity.reference"}
                 , new Object[]{"caption", "NAME"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -53,6 +53,7 @@ public class PDSReferencesPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"expression", "#{item.name}"}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.name}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
@@ -67,6 +68,7 @@ public class PDSReferencesPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"expression", "entity.reference.address_text"}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
@@ -86,7 +88,6 @@ public class PDSReferencesPage extends javax.swing.JPanel {
         });
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("referenceItemHandler");
-        xDataTable1.setId("referenceItemHandler");
         xDataTable1.setItems("");
         xDataTable1.setMultiSelectName("");
         xDataTable1.setName("selectedReferenceItem"); // NOI18N

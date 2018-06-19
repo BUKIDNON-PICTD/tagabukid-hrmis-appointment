@@ -10,6 +10,7 @@ import com.rameses.common.*;
 import com.rameses.util.*;
 import java.text.SimpleDateFormat
         
+
 class  PDSOtherInfoSectionController extends CrudFormModel{
     @Binding
     def binding;
@@ -19,46 +20,113 @@ class  PDSOtherInfoSectionController extends CrudFormModel{
     
     @Service("DateService")
     def dtSvc
-    String title = "OTHER INFORMATION";
     
-            
-    void init(){
+    @Env
+    def env
+    
+    @Service("PersistenceService")
+    def persistenceSvc;
+
+    String title = "OTHER INFORMATION";
+    def parententity
+    def svc
+    
+    boolean isAllowApprove() {
+         return ( mode=='read' && entity.state.toString().matches('FOR REVIEW') ); 
+    }
+        boolean isDeleteAllowed() {
+        return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
+    }
+
+    boolean isEditAllowed() {
+        return ( mode=='read' && entity.state.toString().matches('DRAFT|FOR REVIEW') ); 
+    }
+
+    def selectedSkillItem;
+    def selectedRecognitionItem;
+    def selectedAssociationOrganizationItem;
+    
+    void beforeSave(o){
+        entity.state = "DRAFT";
+            entity.recordlog_datecreated = dtSvc.getServerDate();
+            entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
+            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
+            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
+        if (o == 'create'){
+            parententity._schemaname = 'hrmis_pds'
+            parententity.version._schemaname = 'hrmis_pds_version'
+            //save sa ang pds
+            //save dayon ang version
+        }
+    }
+    
+    public void afterCreate(){
+        // entity = parententity.version.voluntarywork
         
     }
 
-    // def associationorganizationListHandler = [
-    //     fetchList: { entity.associationorganizationitems },
-    //     createItem : {
-    //         return[
-    //             objid : 'POA' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
-    //         ]
-    //     },
-    //     onRemoveItem : {
-    //         if (MsgBox.confirm('Delete item?')){                
-    //             entity.associationorganizationitems.remove(it)
-    //             associationorganizationListHandler?.load();
-    //             return true;
-    //         }
-    //         return false;
-    //     },
-    //     onAddItem : {
-    //         it.associationorganization.Id = it.associationorganization.Id.toString()
-    //         entity.associationorganizationitems.add(it);
-    //     },
-    //     validate:{li->
-    //         def item=li.item;
-    //     }
-    // ] as EditorListModel
+    def skillListHandler = [
+        fetchList : {
 
-    // public void afterOpen(){
-    //     println entity
-    //     entity.associationorganizationitems.each{
-    //         //println it
-    //         it.associationorganization = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
-    //         //postgrehack
-    //         it.associationorganization.Id = it.associationorganization.Id.toString()
+        },
 
-    //     }
-    // }
+        createItem : {
 
+        },
+
+        onAddItem : {
+
+        },
+
+        onRemoveItem : {
+
+        },
+        validate : {li->
+            def item=li.item;
+        }
+    ] as EditorListModel
+
+    def recognitionListHandler = [
+        fetchList : {
+
+        },
+
+        createItem : {
+
+        },
+
+        onAddItem : {
+
+        },
+
+        onRemoveItem : {
+
+        },
+        validate : {li->
+            def item=li.item;
+        }
+    ] as EditorListModel
+
+    def associationorganizationListHandler = [
+        fetchList : {
+
+        },
+
+        createItem : {
+
+        },
+
+        onAddItem : {
+
+        },
+
+        onRemoveItem : {
+
+        },
+        validate : {li->
+            def item=li.item;
+        }
+    ] as EditorListModel
 }

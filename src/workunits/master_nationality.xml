@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblnationality">
     <invokers>
-        <invoker type="master_tblnationality:create" caption="New Nationality" action="create"/>
-        <invoker type="master_tblnationality:open" caption="Nationality" action="open"/>
+        <invoker type="master_tblnationality:create" caption="New Nationality" action="create" role="MASTER"/>
+        <invoker type="master_tblnationality:open" caption="Nationality" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

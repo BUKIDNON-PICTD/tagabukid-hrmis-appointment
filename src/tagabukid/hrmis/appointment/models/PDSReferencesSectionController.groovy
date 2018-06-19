@@ -12,10 +12,13 @@ import com.rameses.util.*;
  * @author P0RA
  */
 class PDSReferencesSectionController extends CrudFormModel{
-	@Binding
+    @Binding
     def binding;
     
-    @Service('DateService')
+    @Caller
+    def caller
+    
+    @Service("DateService")
     def dtSvc
     
     @Env
@@ -23,26 +26,23 @@ class PDSReferencesSectionController extends CrudFormModel{
     
     @Service("PersistenceService")
     def persistenceSvc;
-    
+
     String title = "REFERENCES";
     def parententity
     def svc
     
-    boolean isCreateAllowed(){
-        return false
+    boolean isAllowApprove() {
+         return ( mode=='read' && entity.state.toString().matches('FOR REVIEW') ); 
     }
-    
-    boolean isViewReportAllowed(){
-        return false
+        boolean isDeleteAllowed() {
+        return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
 
-    boolean isPrintReportAllowed(){
-        return false
+    boolean isEditAllowed() {
+        return ( mode=='read' && entity.state.toString().matches('DRAFT|FOR REVIEW') ); 
     }
-    
-    boolean isShowNavigation(){
-        return false
-    }
+
+    def selectedReferenceItem;
     
     public void beforeSave(o){
         entity.state = "DRAFT";
@@ -63,6 +63,27 @@ class PDSReferencesSectionController extends CrudFormModel{
         public void afterCreate(){
         entity = parententity.version.references
     }
+
+    def referenceItemHandler = [
+        fetchList : {
+
+        },
+
+        createItem : {
+
+        },
+
+        onAddItem : {
+
+        },
+
+        onRemoveItem : {
+
+        },
+        validate : {li->
+            def item=li.item;
+        }
+    ] as EditorListModel
     
     
 }

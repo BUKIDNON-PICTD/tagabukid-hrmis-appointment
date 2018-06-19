@@ -47,8 +47,8 @@ public class PDSTrainingPage extends javax.swing.JPanel {
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "training"}
-                , new Object[]{"caption", "TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS"}
+                new Object[]{"name", "name"}
+                , new Object[]{"caption", "TITLE"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -89,7 +89,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("mm/dd/yyyy", "mm/dd/yyyy", "mm/dd/yyyy")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "numOfHours"}
+                new Object[]{"name", "hours"}
                 , new Object[]{"caption", "NUMBER OF HOURS"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -100,11 +100,11 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.IntegerColumnHandler("#,#00", -1, -1)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "type"}
-                , new Object[]{"caption", "Type of LD"}
+                new Object[]{"name", "trainingcategoryid"}
+                , new Object[]{"caption", "TYPE"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -117,7 +117,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.name}", "trainingcategory:lookup")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "conducted"}
+                new Object[]{"name", "sponsor"}
                 , new Object[]{"caption", "CONDUCTED/ SPONSORED BY"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}

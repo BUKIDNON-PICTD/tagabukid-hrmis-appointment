@@ -46,7 +46,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "organization"}
+                new Object[]{"name", "name"}
                 , new Object[]{"caption", "NAME & ADDRESS OF ORGANIZATION"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -102,7 +102,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.IntegerColumnHandler("#,#00", -1, -1)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "position"}
+                new Object[]{"name", "natureofwork"}
                 , new Object[]{"caption", "POSITION / NATURE OF WORK"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
