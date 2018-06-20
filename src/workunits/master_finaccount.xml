@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblfinaccount">
     <invokers>
-        <invoker type="master_tblfinaccount:create" caption="New Financial Account" action="create"/>
-        <invoker type="master_tblfinaccount:open" caption="Financial Account" action="open"/>
+        <invoker type="master_tblfinaccount:create" caption="New Financial Account" action="create" role="MASTER"/>
+        <invoker type="master_tblfinaccount:open" caption="Financial Account" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

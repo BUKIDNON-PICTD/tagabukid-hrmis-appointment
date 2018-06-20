@@ -1,7 +1,7 @@
 <workunit schemaName="master_tbllocprovince">
     <invokers>
-        <invoker type="master_tbllocprovince:create" caption="New Province" action="create"/>
-        <invoker type="master_tbllocprovince:open" caption="Province" action="open"/>
+        <invoker type="master_tbllocprovince:create" caption="New Province" action="create" role="MASTER"/>
+        <invoker type="master_tbllocprovince:open" caption="Province" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
