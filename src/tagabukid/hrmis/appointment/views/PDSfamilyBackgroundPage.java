@@ -43,7 +43,7 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
         entityLookup3 = new com.rameses.entity.components.EntityLookup();
         xTextField3 = new com.rameses.rcp.control.XTextField();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
-        entityAddressLookup1 = new com.rameses.entity.components.EntityAddressLookup();
+        entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable2 = new com.rameses.rcp.control.XDataTable();
@@ -54,8 +54,8 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
 
         entityLookup1.setCaption("Father's Name");
         entityLookup1.setCaptionWidth(140);
-        entityLookup1.setExpression("#{entity.fathersname}");
-        entityLookup1.setRequired(true);
+        entityLookup1.setExpression("#{item.name}");
+        entityLookup1.setName("entity.father"); // NOI18N
         entityLookup1.setStretchWidth(300);
         xFormPanel1.add(entityLookup1);
 
@@ -70,13 +70,11 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
         xTextField2.setCaptionWidth(140);
         xTextField2.setCellPadding(new java.awt.Insets(10, 0, 0, 0));
         xTextField2.setPreferredSize(new java.awt.Dimension(312, 20));
-        xTextField2.setRequired(true);
         xFormPanel1.add(xTextField2);
 
         entityLookup2.setCaption("Mother's Name");
         entityLookup2.setCaptionWidth(140);
         entityLookup2.setExpression("#{entity.mothersname}");
-        entityLookup2.setRequired(true);
         entityLookup2.setStretchWidth(300);
         xFormPanel1.add(entityLookup2);
 
@@ -99,11 +97,10 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
         xLookupField1.setPreferredSize(new java.awt.Dimension(312, 20));
         xFormPanel1.add(xLookupField1);
 
-        entityAddressLookup1.setCaption("Business Address");
-        entityAddressLookup1.setCaptionWidth(140);
-        entityAddressLookup1.setName("entity.businessaddress"); // NOI18N
-        entityAddressLookup1.setStretchWidth(300);
-        xFormPanel1.add(entityAddressLookup1);
+        entityAddress1.setCaption("Business Address");
+        entityAddress1.setCaptionWidth(140);
+        entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
+        xFormPanel1.add(entityAddress1);
 
         xTextField4.setText("entity.telephoneno");
         xTextField4.setCaption("Telephone No.");
@@ -127,7 +124,8 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.child.name}", null)}
             }),
@@ -140,7 +138,8 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             })
@@ -162,10 +161,10 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
 
         getAccessibleContext().setAccessibleParent(this);
@@ -173,7 +172,7 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.entity.components.EntityAddressLookup entityAddressLookup1;
+    private com.rameses.enterprise.components.EntityAddress entityAddress1;
     private com.rameses.entity.components.EntityLookup entityLookup1;
     private com.rameses.entity.components.EntityLookup entityLookup2;
     private com.rameses.entity.components.EntityLookup entityLookup3;

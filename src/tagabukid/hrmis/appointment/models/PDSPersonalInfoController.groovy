@@ -57,12 +57,16 @@ class  PDSPersonalInfoController extends CrudFormModel{
             //save dayon ang version
         }
         entity.residentialaddress = residentialAddress
+        entity.permanentaddress = permanentAddress
     }
     public void afterCreate(){
         entity = parententity.version.personalinfo
     }
     
     def getResidentialAddress(){
+        return entity.person.address
+    }
+    def getPermanentAddress(){
         return entity.person.address
     }
 //    def getPhoto() {
