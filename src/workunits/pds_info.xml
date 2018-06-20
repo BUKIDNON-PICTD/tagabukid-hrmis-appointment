@@ -1,4 +1,4 @@
-<workunit>
+<workunit schemaName="hrmis_pds">
     <invokers>
         <invoker type="hrmis_pds:open"  action="open" target="window"/>
         <invoker type="hrmis_pds:create" action="create" target="window"/>
@@ -9,5 +9,6 @@
     <code class="tagabukid.hrmis.appointment.models.PDSInfoController"/>
     <pages>
         <page template="tagabukid.hrmis.appointment.views.PDSInfoPage"/>
+        <page name="create" template="tagabukid.hrmis.appointment.views.PDSInfoNewPage"/>
     </pages>
 </workunit>

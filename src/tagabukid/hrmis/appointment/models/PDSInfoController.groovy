@@ -2,29 +2,29 @@ import com.rameses.rcp.annotations.*
 import com.rameses.rcp.common.*
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*
+import com.rameses.annotations.Env
 import com.rameses.common.*;
-import java.rmi.server.*
+import com.rameses.seti2.models.*;
 import com.rameses.util.*;
-import com.rameses.gov.etracs.bpls.business.*;
 
-class PDSInfoController {
+class PDSInfoController extends CrudFormModel{
 //    @Script("TagabukidPDSInfoUtil")
 //    def docinfo
+    @Binding
+    def binding;
     
     @Service("TagabukidHRMISPDSService")
     def svc;
 
+    @Service("PersistenceService")
+    def persistenceSvc;
     // @FormId
     // def formId
 
     @FormTitle
     def title
 
-    @Binding
-    def binding;
-
     // def entityName = "documentinfo";
-    def entity;
 
     def sections;
     def currentSection;
@@ -32,27 +32,48 @@ class PDSInfoController {
 //    def startstep;
 
             
-    void open() {
-        title = entity.objid;
-        loadSections();
-////        println entity
-//        if (entity?.filetype?.matches('document_incoming|document_outgoing')){
-////            entity.objid = entity.data.objid;
-//            entity.taskid = entity.data.taskid;
-//        }
-//        entity = service.open( [barcodeid: barcodeid,taskid:entity?.taskid,objid:entity?.objid ] );
-//        title = entity.title + ' (' + entity.din + ')';
+//    void open() {
+//        title = entity.objid;
 //        loadSections();
-//        formId = entity.objid;
-////        println entity
+//////        println entity
+////        if (entity?.filetype?.matches('document_incoming|document_outgoing')){
+//////            entity.objid = entity.data.objid;
+////            entity.taskid = entity.data.taskid;
+////        }
+////        entity = service.open( [barcodeid: barcodeid,taskid:entity?.taskid,objid:entity?.objid ] );
+////        title = entity.title + ' (' + entity.din + ')';
+////        loadSections();
+////        formId = entity.objid;
+//////        println entity
+//    }
+    public void beforeSave(o){
+        if (o == 'create'){
+            entity.pdsno = svc.getPDSNo();
+            entity.entityid = entity.person.objid
+            entity.name = entity.person.name;
+            entity.versions.each{
+                it.versionno = svc.getVersionNo();
+                entity.currentversionno = it.versionno
+                it.personalinfo.person = entity.person
+            }
+        }
     }
-
-    void create (){
+    public void afterSave(){
+        //save sa personal kay di ga work ang one-to-one
+        def personalinfo = [:]
+        personalinfo = entity.versions[0].personalinfo
+        personalinfo._schemaname = 'hrmis_pds_version_personalinfo'
+        persistenceSvc.create(personalinfo); 
+        loadSections();
+    }
+    
+    public void afterCreate (){
         title = "New PDS";
         entity = svc.initCreate()
+    }
+    public void afterOpen(){
         loadSections();
     }
-
     void reloadSections() {
 //        binding.refresh("subform");
         def handlers = Inv.lookupOpeners("pds:section",[parententity:entity,svc:svc]);

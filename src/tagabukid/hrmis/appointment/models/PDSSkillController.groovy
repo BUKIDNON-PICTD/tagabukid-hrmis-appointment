@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  PDSEducationalInfoController extends CrudFormModel {
+class  PDSSkillController extends CrudFormModel {
     // @Binding
     // def binding;
     
@@ -27,7 +27,23 @@ class  PDSEducationalInfoController extends CrudFormModel {
     // @Service("TagabukidSubayTransactionService")
     // def txnsvc;
     
-    String title = "Educational Background";
+    String title = "Skills";
+    
+     boolean isCreateAllowed(){
+        return false
+    }
+    
+    boolean isViewReportAllowed(){
+        return false
+    }
+
+    boolean isPrintReportAllowed(){
+        return false
+    }
+    
+    boolean isShowNavigation(){
+        return false
+    }
     //String entityName = "subaydocument:educationalbackground";
             
     // def entity;
@@ -39,21 +55,15 @@ class  PDSEducationalInfoController extends CrudFormModel {
     // def attachmentListHandler = [
     //     fetchList : { return entity.attachments },
     // ] as BasicListModel
-    def selectedEducationalInfo
-    
-    void init(){
-//        println parententity.version
-//        isoffline = (entity.isoffline == 1 ? true : false);
-//        isowner = svc.checkDocumentOwner(entity.dininventoryid)
-//        loadAttachments()
-//        listHandler?.load();
+    def selectedSkillInfo
+     public void beforeOpen() {
+        entity.objid = parententity.currentversionid
     }
-    
-    public void afterCreate(){
-        entity.versionid = parententity.version.objid
-    }
-      def educationalBackgroundItemListHandler = [
-        fetchList: { entity?.educationinfoitems },
+//    public void afterCreate(){
+//        entity.versionid = parententity.version.objid
+//    }
+    def skillListHandler = [
+        fetchList: { entity?.skills },
 //        createItem : {
 //            return[
 //                objid : 'ACI' + new java.rmi.server.UID(),
@@ -61,8 +71,8 @@ class  PDSEducationalInfoController extends CrudFormModel {
 //        },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.educationinfoitems.remove(it)
-                educationalBackgroundItemListHandler?.load();
+                entity.skills.remove(it)
+                skillListHandler?.load();
                 return true;
             }
             return false;
@@ -75,7 +85,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
 //            
 //        },
         onAddItem : {
-            entity.educationinfoitems.add(it);
+            entity.skills.add(it);
         },
         validate:{li->
             //def item=li.item;
