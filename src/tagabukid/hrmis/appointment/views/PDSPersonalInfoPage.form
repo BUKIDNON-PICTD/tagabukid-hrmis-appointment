@@ -343,7 +343,7 @@
                     </Component>
                     <Component class="com.rameses.rcp.control.XTextField" name="xTextField12">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="entity.tin"/>
+                        <Property name="text" type="java.lang.String" value="entity.tinx"/>
                         <Property name="caption" type="java.lang.String" value="TIN No."/>
                         <Property name="captionWidth" type="int" value="135"/>
                         <Property name="name" type="java.lang.String" value="entity.tin" noResource="true"/>

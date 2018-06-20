@@ -212,7 +212,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         });
         xFormPanel1.add(xTextField11);
 
-        xTextField12.setText("entity.tin");
+        xTextField12.setText("entity.tinx");
         xTextField12.setCaption("TIN No.");
         xTextField12.setCaptionWidth(135);
         xTextField12.setName("entity.tin"); // NOI18N
