@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblprofessionalorganizationorassociationcategory">
     <invokers>
-        <invoker type="master_tblprofessionalorganizationorassociationcategory:create" caption="New Professional Organization or Association Category" action="create"/>
-        <invoker type="master_tblprofessionalorganizationorassociationcategory:open" caption="Professional Organization or Association Category" action="open"/>
+        <invoker type="master_tblprofessionalorganizationorassociationcategory:create" caption="New Professional Organization or Association Category" action="create" role="MASTER"/>
+        <invoker type="master_tblprofessionalorganizationorassociationcategory:open" caption="Professional Organization or Association Category" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

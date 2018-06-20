@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblpdsq">
     <invokers>
-        <invoker type="master_tblpdsq:create" caption="New PDS Question" action="create"/>
-        <invoker type="master_tblpdsq:open" caption="PDS Question" action="open"/>
+        <invoker type="master_tblpdsq:create" caption="New PDS Question" action="create" role="MASTER"/>
+        <invoker type="master_tblpdsq:open" caption="PDS Question" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

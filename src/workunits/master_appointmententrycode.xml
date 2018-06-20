@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblappointmententrycode">
     <invokers>
-        <invoker type="master_tblappointmententrycode:create" caption="New Appointment Entry Code" action="create"/>
-        <invoker type="master_tblappointmententrycode:open" caption="Appointment Entry Code" action="open"/>
+        <invoker type="master_tblappointmententrycode:create" caption="New Appointment Entry Code" action="create" role="MASTER"/>
+        <invoker type="master_tblappointmententrycode:open" caption="Appointment Entry Code" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

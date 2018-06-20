@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblkinship">
     <invokers>
-        <invoker type="master_tblkinship:create" caption="New Kinship" action="create"/>
-        <invoker type="master_tblkinship:open" caption="Kinship" action="open"/>
+        <invoker type="master_tblkinship:create" caption="New Kinship" action="create" role="MASTER"/>
+        <invoker type="master_tblkinship:open" caption="Kinship" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
