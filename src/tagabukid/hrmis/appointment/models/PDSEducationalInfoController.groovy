@@ -12,8 +12,8 @@ class  PDSEducationalInfoController extends CrudFormModel {
     // @Binding
     // def binding;
     
-    // @Caller
-    // def caller
+     @Caller
+     def parententity
     
     // @Service("DateService")
     // def dtsvc
@@ -39,13 +39,46 @@ class  PDSEducationalInfoController extends CrudFormModel {
     // def attachmentListHandler = [
     //     fetchList : { return entity.attachments },
     // ] as BasicListModel
-            
+    def selectedEducationalInfo
+    
     void init(){
+        println parententity.version
 //        isoffline = (entity.isoffline == 1 ? true : false);
 //        isowner = svc.checkDocumentOwner(entity.dininventoryid)
 //        loadAttachments()
 //        listHandler?.load();
     }
+    
+      def educationalBackgroundItemListHandler = [
+        fetchList: { entity?.educationinfoitems },
+//        createItem : {
+//            return[
+//                objid : 'ACI' + new java.rmi.server.UID(),
+//            ]
+//        },
+        onRemoveItem : {
+            if (MsgBox.confirm('Delete item?')){                
+                entity.educationinfoitems.remove(it)
+                educationalBackgroundItemListHandler?.load();
+                return true;
+            }
+            return false;
+        },
+//        onColumnUpdate: { o,col-> 
+//            if(col == 'dailywage'){
+//                o.monthlywage = o.dailywage * 22;
+//                binding.refresh();  
+//            }
+//            
+//        },
+        onAddItem : {
+            entity.educationinfoitems.add(it);
+        },
+        validate:{li->
+            //def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+    ] as EditorListModel
 
     // void loadAttachments(){
     //     entity.attachments = [];

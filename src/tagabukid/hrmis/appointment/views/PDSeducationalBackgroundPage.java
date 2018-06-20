@@ -57,7 +57,7 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "schoolname"}
+                new Object[]{"name", "school"}
                 , new Object[]{"caption", "School Name"}
                 , new Object[]{"width", 200}
                 , new Object[]{"minWidth", 0}
@@ -68,7 +68,20 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.schoolname.name}", "lookup:tagabukid_master_schools")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.school.name + (item.school.address.addressdetails? ' - '+ item.school.address.addressdetails:'') }", "lookup:tagabukid_hrmis_institution")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "school"}
+                , new Object[]{"caption", "Address"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "degree"}
@@ -155,9 +168,8 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             })
         });
-        xDataTable1.setHandler("educationalBackgroundItem");
-        xDataTable1.setId("");
-        xDataTable1.setName("addEducationalBackgroundInfo"); // NOI18N
+        xDataTable1.setHandler("educationalBackgroundItemListHandler");
+        xDataTable1.setName("selectedEducationalInfo"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
