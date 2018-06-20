@@ -1,9 +1,6 @@
-<workunit schemaName="hrmis_pdsfamilychildInfo">
+<workunit schemaName="hrmis_pds_version_familybackground">
     <invokers>
-        <invoker type="pds:section" caption="Family" action="init" index="5" />
-        
-        
-
+        <invoker type="pds:section" caption="Family" action="create" index="5" />
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.PDSFamilyInfoController" />
