@@ -47,8 +47,8 @@ class  PDSPersonalInfoController extends CrudFormModel{
             parententity.entityid = entity.person.objid
             parententity.version._schemaname = 'hrmis_pds_version'
             parententity.version.versionno = svc.getVersionNo();
-            parententity.currentversionno =  parententity.version.versionno;
-            parententity.name = entity.person.name;
+            parententity.currentversionno
+            
             persistenceSvc.create(parententity);             
             persistenceSvc.create(parententity.version); 
             
