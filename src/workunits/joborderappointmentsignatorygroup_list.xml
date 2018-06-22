@@ -1,6 +1,6 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_appointment_signatorygrouping">
     <invokers>
-        <invoker folderid="/home/hrmis" caption="Signatory Group List (JO)" action="init" index="4" />
-        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Signatory Group List (JO)" index="4" />   
+        <invoker folderid="/home/hrmis/hrmismaster" caption="Signatory Group List (JO)" action="init" index="4" role="MASTER"/>
+        <invoker folderid="/explorer/master/hrmismaster" action="init" caption="Signatory Group List (JO)" index="4" role="MASTER"/>   
     </invokers>
 </workunit>
