@@ -93,7 +93,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
 
         xLookupField1.setCaption("Tranche");
         xLookupField1.setExpression("#{item.name}");
-        xLookupField1.setHandler("lookup:tagabukid_hrmis_tranche");
+        xLookupField1.setHandler("tranchLookupHandler");
         xLookupField1.setName("entity.currentsalarystep"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField1.setRequired(true);
@@ -204,13 +204,13 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.plantilla.jobposition.name}", "lookup:tagabukid_hrmis_plantilla")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.plantilla.jobposition.name + ' - ' + item.plantilla.itemno}", "lookup:tagabukid_hrmis_plantilla")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "dailywage"}
@@ -364,7 +364,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

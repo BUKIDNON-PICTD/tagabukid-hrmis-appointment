@@ -15,6 +15,7 @@ class ReportAppointmentCasualController extends ReportController {
     def data
     
     def getReportData() { 
+        entity._schemaname = 'hrmis_appointmentcasual'
         data = svc.getAppointmentCasualById(entity);
         return data.reportdata
     } 

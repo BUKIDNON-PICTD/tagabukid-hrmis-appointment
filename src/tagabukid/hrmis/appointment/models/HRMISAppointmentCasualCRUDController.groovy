@@ -66,7 +66,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     public void afterCreate(){
         tag = invoker?.properties?.tag;
         if(tag=='renew'){
-            entity = svc.initRenew(renewcaller.entity)
+            entity.putAll(svc.initRenew(renewcaller.entity))
         }else{
             entity = svc.initCreate();
         }
@@ -74,14 +74,14 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     }
 
     public void afterOpen(){
-        println entity
+//        println entity
 //        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
         entity.appointmentitems.each{
             //println it
             it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
-            it.plantilla = tgbkdSvc.getPlantillaById([plantillaid:it.plantilla.Id]);
+            it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
             //postgrehack
-            it.plantilla.Id = it.plantilla.Id.toString()
+//            it.plantilla.Id = it.plantilla.objid
 
         }
     }
@@ -111,15 +111,16 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
             }
             return false;
         },
-//        onColumnUpdate: { o,col-> 
-//            if(col == 'dailywage'){
-//                o.monthlywage = o.dailywage * 22;
-//                binding.refresh();  
-//            }
-//            
-//        },
+        onColumnUpdate: { o,col-> 
+            if(col == 'plantilla'){
+                o.salaryscheduleitem  = svc.getDailyWageByTranch(entity.currentsalarystep,o.plantilla);
+                o.monthlywage = o.salaryscheduleitem.amount
+                o.dailywage = o.salaryscheduleitem.amount / 22
+            }
+            
+        },
         onAddItem : {
-            it.plantilla.Id = it.plantilla.Id.toString()
+//            it.plantilla.Id = it.plantilla.Id.toString()
 //            it.monthlywage = it.dailywage * 22
             entity.appointmentitems.add(it);
         },
@@ -156,10 +157,23 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
                     objid : entity.objid, 
                     state : 'APPROVED' 
                 ]); 
-            loadData(); 
+            loadData();
         }
     }
-    
+    def getTranchLookupHandler(){
+        return Inv.lookupOpener('lookup:tagabukid_hrmis_tranche',[
+                onselect :{tranche ->
+                    entity.currentsalarystep.putAll(tranche)  
+                    entity.appointmentitems.each{
+                        it.salaryscheduleitem  = svc.getDailyWageByTranch(tranche,it.plantilla);
+                        it.monthlywage = it.salaryscheduleitem.amount
+                        it.dailywage = it.salaryscheduleitem.amount / 22
+                    }
+                    appointmentitemListHandler.reload();
+                }
+            ]);
+    }
+   
     def renew(){
         return InvokerUtil.lookupOpener('hrmis_appointmentcasual:renew:create')
     }
