@@ -64,7 +64,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Appointment Info");
         xFormPanel1.setBorder(xTitledBorder1);
-        xFormPanel1.setCaptionWidth(150);
+        xFormPanel1.setCaptionWidth(160);
         xFormPanel1.setName(""); // NOI18N
         xFormPanel1.setPreferredSize(new java.awt.Dimension(500, 100));
 
@@ -79,6 +79,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xSuggest1.setHandler("suggestGroupName");
         xSuggest1.setName("entity.appointmentgroupname"); // NOI18N
         xSuggest1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xSuggest1.setRequired(true);
         xSuggest1.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
         xFormPanel1.add(xSuggest1);
 
@@ -95,6 +96,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         xLookupField1.setHandler("lookup:tagabukid_hrmis_tranche");
         xLookupField1.setName("entity.currentsalarystep"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField1.setRequired(true);
         xFormPanel1.add(xLookupField1);
 
         xDateField1.setCaption("Effective From");
@@ -176,7 +178,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(xFormPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(xFormPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
         );
 
         xHorizontalPanel1.add(jPanel3);
@@ -339,7 +341,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(xFormPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xDataTable2, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                .addComponent(xDataTable2, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -360,9 +362,9 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
