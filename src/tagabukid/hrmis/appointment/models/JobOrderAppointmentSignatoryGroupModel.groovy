@@ -36,6 +36,7 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
         entity.signatoryGroupItems = [];
         signatoryGroupItemHandler.reload();
        // entity.farmerid = OsirisContext.env.ORGID + "-FARM" + seqSvc.getNextFormattedSeries('farmer');
+       entity.code = "sig" + seqSvc.getNextFormattedSeries('signatory')
             
     }
 
@@ -46,7 +47,8 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;
             entity.state = "DRAFT";
-            entity.code = "sig" + seqSvc.getNextFormattedSeries('signatory')
+            println entity
+            
      
         }
  

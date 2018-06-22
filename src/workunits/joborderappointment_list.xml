@@ -1,6 +1,8 @@
-<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_appointmentjoborder">
+<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_appointmentjoborder" 
+          cols="state,appointmentgroupname,effectivefrom,effectiveuntil,org.name,natureofappointment.name"
+    orderBy="appointmentgroupname ASC">>
     <invokers>
-        <invoker folderid="/home/hrmis" caption="Appointment List (JO)" action="init" index="3" />
-        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)" index="3" />   
+        <invoker folderid="/home/hrmis" caption="Appointment List (JO)" action="init" index="3" role="ENCODER"/>
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)" index="3" role="ENCODER"/>   
     </invokers>
 </workunit>
