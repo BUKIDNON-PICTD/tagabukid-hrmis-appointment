@@ -1,7 +1,7 @@
 <workunit schemaName="master_tbleligibility">
     <invokers>
-        <invoker type="master_tbleligibility:create" caption="New Eligibility" action="create"/>
-        <invoker type="master_tbleligibility:open" caption="Eligibility" action="open"/>
+        <invoker type="master_tbleligibility:create" caption="New Eligibility" action="create" role="MASTER"/>
+        <invoker type="master_tbleligibility:open" caption="Eligibility" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

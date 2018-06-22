@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblacadcoursemajor">
     <invokers>
-        <invoker type="master_tblacadcoursemajor:create" caption="New Academic Course Major" action="create"/>
-        <invoker type="master_tblacadcoursemajor:open" caption="Academic Course Major" action="open"/>
+        <invoker type="master_tblacadcoursemajor:create" caption="New Academic Course Major" action="create" role="MASTER"/>
+        <invoker type="master_tblacadcoursemajor:open" caption="Academic Course Major" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

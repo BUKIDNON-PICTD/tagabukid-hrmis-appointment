@@ -1,18 +1,10 @@
-<workunit>
+<workunit schemaName="hrmis_pds_version_voluntarywork">
     <invokers>
-        <invoker type="pds:section" caption="Voluntary Work" action="init" index="2" />
-        
-<!--        <invoker type="extActions" caption="Open Child" action="showChild" visibleWhen="#{selectedItem!=null}"/>
-        <invoker type="extActions" caption="Print DIN" action="print" />
-        <invoker type="formActions" caption="Modify" name="popupChangeInfo" index="1000" category="subay:changeinfo" visibleWhen="#{isoffline &amp;&amp; isowner}" role="SHARED"/>
-        <invoker type="formActions" caption="Transfer" action="transferParent" index="1001" visibleWhen="#{entity.state == 'archived'}" role="SHARED"/>
-        -->
-
+        <invoker type="pds:section" caption="Voluntary Work" action="create" index="7" visibleWhen="#{true}" />
     </invokers>
     
-    <code class="tagabukid.hrmis.appointment.models.DocumentGeneralInfoSectionController" />
+    <code class="tagabukid.hrmis.appointment.models.PDSVoluntaryWorkSectionController" />
 
-    
     <pages>
         <page  template="tagabukid.hrmis.appointment.views.PDSVoluntaryWorkPage"/>
     </pages>

@@ -1,0 +1,12 @@
+<workunit schemaName="hrmis_pds_version_references">
+    <invokers>
+        <invoker type="pds:section" caption="References" action="create" index="10" visibleWhen="#{true}" />
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.PDSReferencesSectionController" />
+
+    <pages>
+        <page  template="tagabukid.hrmis.appointment.views.PDSReferencesPage"/>
+    </pages>
+    
+</workunit>

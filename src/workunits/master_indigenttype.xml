@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblindigenttype">
     <invokers>
-        <invoker type="master_tblindigenttype:create" caption="New Indigent Type" action="create"/>
-        <invoker type="master_tblindigenttype:open" caption="Indigent Type" action="open"/>
+        <invoker type="master_tblindigenttype:create" caption="New Indigent Type" action="create" role="MASTER"/>
+        <invoker type="master_tblindigenttype:open" caption="Indigent Type" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

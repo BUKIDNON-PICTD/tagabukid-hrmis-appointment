@@ -73,9 +73,9 @@ class JobOrderAppointmentModel extends CrudFormModel{
             entity = joSvc.initRenew(renewcaller.entity)
         }else{
         entity.appointmentMemberItems = [];
-//        entity.signatoryGroupItems = [];
+        entity.signatoryGroupItems = [];
         appointmentMemberItemHandler.reload();
-//        signatoryItemHandler.reload();
+        signatoryItemHandler.reload();
         // entity.farmerid = OsirisContext.env.ORGID + "-FARM" + seqSvc.getNextFormattedSeries('farmer');
         }    
     }
@@ -102,7 +102,6 @@ class JobOrderAppointmentModel extends CrudFormModel{
     }
 
     public void beforeSave(o){
-        //println entity._schemaname
         if(!entity.appointmentMemberItems)throw new Exception("Appointment Group items must not be empty");
             
         entity.recordlog_datecreated = dtSvc.getServerDate();
