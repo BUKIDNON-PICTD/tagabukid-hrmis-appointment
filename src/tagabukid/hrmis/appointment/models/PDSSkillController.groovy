@@ -9,14 +9,14 @@ import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
 class  PDSSkillController extends CrudFormModel {
-    // @Binding
-    // def binding;
-    
-//     @Caller
-//     def parententity
+    @Binding
+    def binding;
+
     def parententity
-    // @Service("DateService")
-    // def dtsvc
+    def svc
+        
+    @Service("DateService")
+    def dtSvc
     
     // @Service("TagabukidSubayDocumentService")
     // def svc;
@@ -44,31 +44,34 @@ class  PDSSkillController extends CrudFormModel {
     boolean isShowNavigation(){
         return false
     }
-    //String entityName = "subaydocument:educationalbackground";
-            
-    // def entity;
-    // def attachmentSelectedItem;
-    // def selectedItem;
-    // def isoffline;
-    // def isowner;
-    
-    // def attachmentListHandler = [
-    //     fetchList : { return entity.attachments },
-    // ] as BasicListModel
+   
     def selectedSkillInfo
-     public void beforeOpen() {
-        entity.objid = parententity.currentversionid
+    public void beforeOpen() {
+       entity.putAll(parententity);
     }
-//    public void afterCreate(){
-//        entity.versionid = parententity.version.objid
-//    }
+    public void beforeSave(o){
+        if(o=='create'){
+//            entity.skills{
+//                
+//            }
+           
+        }
+    }
     def skillListHandler = [
         fetchList: { entity?.skills },
-//        createItem : {
-//            return[
-//                objid : 'ACI' + new java.rmi.server.UID(),
-//            ]
-//        },
+        createItem : {
+            return[
+                recordlog : [
+                    datecreated : dtSvc.getServerDate(),
+                    createdbyuser : OsirisContext.env.FULLNAME,
+                    createdbyuserid : OsirisContext.env.USERID,
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID,
+                ],
+                satte : 'DRAFT'
+            ]
+        },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.skills.remove(it)
@@ -77,13 +80,12 @@ class  PDSSkillController extends CrudFormModel {
             }
             return false;
         },
-//        onColumnUpdate: { o,col-> 
-//            if(col == 'dailywage'){
-//                o.monthlywage = o.dailywage * 22;
-//                binding.refresh();  
-//            }
-//            
-//        },
+        onColumnUpdate: { o,col-> 
+            o.dateoflastupdate = dtSvc.getServerDate();
+            o.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            o.lastupdatedbyuserid = OsirisContext.env.USERID;
+            
+        },
         onAddItem : {
             entity.skills.add(it);
         },

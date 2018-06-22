@@ -7,9 +7,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
 
-class PDSInfoController extends CrudFormModel{
-//    @Script("TagabukidPDSInfoUtil")
-//    def docinfo
+class PDSInfoController{
     @Binding
     def binding;
     
@@ -18,65 +16,46 @@ class PDSInfoController extends CrudFormModel{
 
     @Service("PersistenceService")
     def persistenceSvc;
-    // @FormId
-    // def formId
-
+ 
     @FormTitle
     def title
 
-    // def entityName = "documentinfo";
-
     def sections;
     def currentSection;
-//    def barcodeid;
-//    def startstep;
+    def entity;
 
-            
-//    void open() {
-//        title = entity.objid;
-//        loadSections();
-//////        println entity
-////        if (entity?.filetype?.matches('document_incoming|document_outgoing')){
-//////            entity.objid = entity.data.objid;
-////            entity.taskid = entity.data.taskid;
-////        }
-////        entity = service.open( [barcodeid: barcodeid,taskid:entity?.taskid,objid:entity?.objid ] );
-////        title = entity.title + ' (' + entity.din + ')';
-////        loadSections();
-////        formId = entity.objid;
-//////        println entity
+//    public void beforeSave(o){
+//        if (o == 'create'){
+//            entity.pdsno = svc.getPDSNo();
+//            entity.entityid = entity.person.objid
+//            entity.name = entity.person.name;
+//            entity.versions.each{
+//                it.versionno = svc.getVersionNo();
+//                entity.currentversionno = it.versionno
+//                it.person.putAll(entity.person)
+//            }
+//        }
 //    }
-    public void beforeSave(o){
-        if (o == 'create'){
-            entity.pdsno = svc.getPDSNo();
-            entity.entityid = entity.person.objid
-            entity.name = entity.person.name;
-            entity.versions.each{
-                it.versionno = svc.getVersionNo();
-                entity.currentversionno = it.versionno
-                it.personalinfo.person = entity.person
-            }
-        }
-    }
-    public void afterSave(){
-        //save sa personal kay di ga work ang one-to-one
-        def personalinfo = [:]
-        personalinfo = entity.versions[0].personalinfo
-        personalinfo._schemaname = 'hrmis_pds_version_personalinfo'
-        persistenceSvc.create(personalinfo); 
-        loadSections();
-    }
-    
-    public void afterCreate (){
+//    public void afterSave(){
+//        loadSections();
+//    }
+    public void create(){
         title = "New PDS";
-        entity = svc.initCreate()
+        entity = svc.initCreate();
+        loadSections('create');
     }
-    public void afterOpen(){
-        loadSections();
+    public void open(){
+        loadSections('open');
     }
-    void reloadSections() {
+//    public void afterCreate (){
+//       
+//    }
+//    public void afterOpen(){
+//        loadSections();
+//    }
+    void reloadSections(action) {
 //        binding.refresh("subform");
-        def handlers = Inv.lookupOpeners("pds:section",[parententity:entity,svc:svc]);
+        def handlers = Inv.lookupOpeners("pds:section:"+action,[parententity:entity,svc:svc]);
         def selitemid = currentSection?.id; 
         sections.clear();
         sections.addAll( 
@@ -93,8 +72,8 @@ class PDSInfoController extends CrudFormModel{
         binding.refresh();
     }
 
-    void loadSections() {
-        sections = InvokerUtil.lookupOpeners( "pds:section",[parententity:entity,svc:svc]).findAll {
+    void loadSections(action) {
+        sections = InvokerUtil.lookupOpeners( "pds:section:"+action,[parententity:entity,svc:svc]).findAll {
             def vw = it.properties.visibleWhen;
             return  ((!vw)  ||  ExpressionResolver.getInstance().evalBoolean( vw, [parententity:entity,svc:svc] ));
         }
@@ -102,32 +81,9 @@ class PDSInfoController extends CrudFormModel{
             currentSection = sections[0];
         }  
     }
-
+    
     void reloadCurrentSection() {
         MsgBox.alert( currentSection.name );
     }
-                
-//    def showParent() {
-//        if( !entity.parentid )
-//        throw new Exception("No parent document");
-//        def parent = [:]
-//        parent.objid = entity.parentid 
-//        return Inv.lookupOpener( "subaydocument:open", [entity: parent] ); 
-//    }
-//            
-//    def showDocInfo() {
-//        boolean test = false;
-//        docinfo.handler = {
-//            test = true;
-//        }
-//        try{
-//            Modal.show(docinfo.update());
-//            if(!test) throw new BreakException();
-//        }catch(e){
-//
-//        }
-//
-//    }
-
 
 }
