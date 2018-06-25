@@ -2,7 +2,6 @@
 import com.rameses.rcp.annotations.*;
 import com.rameses.rcp.common.*;
 import com.rameses.seti2.models.*;
-import com.rameses.annotations.Env
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
@@ -18,8 +17,6 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     @Caller
     def renewcaller
     
-    @Env
-    def env
     
     @Service("PersistenceService")
     def persistenceSvc;
@@ -37,7 +34,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     }
     
     boolean isallowPreviewAppointment() {
-        return ( mode=='read' && entity.state=='APPROVED' ); 
+        return ( mode=='read'); 
     }
     
     boolean isAllowRenew() {
@@ -134,11 +131,11 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         fetchList: { 
             if(entity.signatorygroup?.objid)
             entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
-            return entity.signatorygroup?.signatorygroupitems 
+            return entity.signatorygroup?.signatoryGroupItems 
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.signatorygroup.signatorygroupitems.remove(it)
+                entity.signatorygroup.signatoryGroupItems.remove(it)
                 signatoryItemHandler?.load();
                 return true;
             }

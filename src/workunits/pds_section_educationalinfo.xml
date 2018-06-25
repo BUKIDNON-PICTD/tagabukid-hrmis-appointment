@@ -1,7 +1,7 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" 
     schemaName="hrmis_pds_educationalbackground">
     <invokers>
-        <invoker type="pds:section:create" caption="Education" action="create" i index="6" />
+        <invoker type="pds:section:create" caption="Education" action="create" index="6" />
     </invokers>
     
      <code class="tagabukid.hrmis.appointment.models.PDSEducationalInfoController" />

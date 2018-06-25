@@ -1,7 +1,7 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" >
     <invokers>
-        <invoker folderid="/home/hrmis/hrmismaster" caption="Plantilla Management" action="init" /> 
-        <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" action="init" />  
+        <invoker folderid="/home/hrmis/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/> 
+        <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/>  
     </invokers>
     <code>
         import com.rameses.rcp.common.*;
@@ -31,7 +31,7 @@
        
         }
     </code>
-<!--    <pages>
-        <page name="queryform" template="tagabukid.hrmis.pmis.views.MasterSuccessIndicatorListQueryForm"/>
-    </pages>-->
+    <pages>
+        <page name="queryform" template="tagabukid.hrmis.appointment.views.TagabukidHRMISPlantillaManagementListQueryForm"/>
+    </pages>
 </workunit>
