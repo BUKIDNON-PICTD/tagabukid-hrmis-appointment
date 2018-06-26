@@ -41,14 +41,14 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("VOLUNTARY WORK OR INVOLVEMENT IN CIVIC / NON-GOVERNMENT / PEOPLE / VOLUNTARY ORGANIZATION/S");
+        xTitledBorder1.setTitle("VOLUNTARY WORK OR INVOLVEMENT DETAILS");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "name"}
                 , new Object[]{"caption", "NAME & ADDRESS OF ORGANIZATION"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 200}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -62,7 +62,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "from"}
                 , new Object[]{"caption", "FROM"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -76,7 +76,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "to"}
                 , new Object[]{"caption", "TO"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -90,7 +90,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "hours"}
                 , new Object[]{"caption", "NUMBER OF HOURS"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 70}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -104,7 +104,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "natureofwork"}
                 , new Object[]{"caption", "POSITION / NATURE OF WORK"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 130}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -128,8 +128,8 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 699, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

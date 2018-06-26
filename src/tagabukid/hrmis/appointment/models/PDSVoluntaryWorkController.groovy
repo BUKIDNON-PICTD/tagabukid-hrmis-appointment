@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  PDSSkillController extends CrudFormModel {
+class PDSVoluntaryWorkController extends CrudFormModel {
     @Binding
     def binding;
 
@@ -27,7 +27,7 @@ class  PDSSkillController extends CrudFormModel {
     // @Service("TagabukidSubayTransactionService")
     // def txnsvc;
     
-    String title = "SPECIAL SKILLS and HOBBIES";
+    String title = "VOLUNTARY WORK OR INVOLVEMENT IN CIVIC / NON-GOVERNMENT / PEOPLE / VOLUNTARY ORGANIZATION/S";
     
      boolean isCreateAllowed(){
         return false
@@ -45,7 +45,7 @@ class  PDSSkillController extends CrudFormModel {
         return false
     }
    
-    def selectedSkillInfo
+    def selectedVoluntaryWorkItem
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -57,8 +57,8 @@ class  PDSSkillController extends CrudFormModel {
            
         }
     }
-    def skillListHandler = [
-        fetchList: { entity?.skills },
+    def voluntaryworkListHandler = [
+        fetchList: { entity?.voluntaryworks },
         createItem : {
             return[
                 recordlog : [
@@ -74,8 +74,8 @@ class  PDSSkillController extends CrudFormModel {
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.skills.remove(it)
-                skillListHandler?.load();
+                entity.voluntaryworks.remove(it)
+                voluntaryworkListHandler?.load();
                 return true;
             }
             return false;
@@ -87,7 +87,7 @@ class  PDSSkillController extends CrudFormModel {
             
         },
         onAddItem : {
-            entity.skills.add(it);
+            entity.voluntaryworks.add(it);
         },
         validate:{li->
             //def item=li.item;
