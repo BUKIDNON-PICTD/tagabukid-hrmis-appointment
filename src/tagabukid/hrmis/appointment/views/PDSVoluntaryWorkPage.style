@@ -1,3 +1,0 @@
-"selectedVoluntaryWorkItem"[mode != 'read']{
-    enabled:true;
-}

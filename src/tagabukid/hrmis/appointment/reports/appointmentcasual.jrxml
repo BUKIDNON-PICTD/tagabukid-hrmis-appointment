@@ -119,7 +119,7 @@
 	<field name="currentsalarystep.circular.description" class="java.lang.Object"/>
 	<field name="currentsalarystep.circular.acronymabbreviation" class="java.lang.Object"/>
 	<field name="appointmentitems" class="java.lang.Object"/>
-	<field name="signatorygroup.signatorygroupitems" class="java.lang.Object"/>
+	<field name="signatorygroup.signatoryGroupItems" class="java.lang.Object"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -831,12 +831,12 @@
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="13"
+						y="17"
 						width="968"
 						height="13"
 						key="subreport-2"
 						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{signatorygroup.signatorygroupitems}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[$F{signatorygroup.signatoryGroupItems}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SignatoryGroup}]]></subreportExpression>
 				</subreport>
 			</band>
@@ -885,7 +885,7 @@
 					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Appointment of GOMES - Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

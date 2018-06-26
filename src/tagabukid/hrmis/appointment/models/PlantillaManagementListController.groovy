@@ -10,6 +10,7 @@ public abstract class PlantillaManagementListController extends ExplorerViewCont
     
     def params = [:]; 
     
+    def types = ['Casual', 'Permanent'];
     public String getPrefixId() {
         return "PM";
     }
@@ -31,19 +32,19 @@ public abstract class PlantillaManagementListController extends ExplorerViewCont
 //        ])
 //    }
         
-//    public void beforeFetchList( Map qry ) { 
-//        if ( params ) qry.putAll( params ); 
-//    }
+    public void beforeFetchList( Map qry ) { 
+        if ( params ) qry.putAll( params ); 
+    }
 //    
-//    public void beforeNodes(Map qry){
-////        if (!params.searchtext){
-////            params.searchtext = '%';
-////        }else{
-////            params.searchtext = '%';
-////        }
-//        if ( params ) qry.putAll( params ); 
-//        
-//    }
+    public void beforeNodes(Map qry){
+//        if (!params.searchtext){
+//            params.searchtext = '%';
+//        }else{
+//            params.searchtext = '%';
+//        }
+        if ( params ) qry.putAll( params ); 
+        
+    }
 //    void sync() {
 //        if(! MsgBox.confirm("This will update your current records. Continue? ")) return;
 //        getAccountService().syncFromCloud();

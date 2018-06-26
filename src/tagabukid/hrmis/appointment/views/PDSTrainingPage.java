@@ -103,7 +103,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.IntegerColumnHandler("#,#00", -1, -1)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "trainingcategoryid"}
+                new Object[]{"name", "trainingcategory"}
                 , new Object[]{"caption", "TYPE"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -114,7 +114,6 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"expression", "#{item.name}"}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.trainingcategory.name}", "lookup:tagabukid_hrmis_trainingcategory")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{

@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
      
-class PDSTrainingController extends CrudFormModel {
+class PDSReferenceController extends CrudFormModel {
     @Binding
     def binding;
 
@@ -27,7 +27,7 @@ class PDSTrainingController extends CrudFormModel {
     // @Service("TagabukidSubayTransactionService")
     // def txnsvc;
     
-    String title = "LEARNING AND DEVELOPMENT (L&D) INTERVENTIONS/TRAINING PROGRAMS ATTENDED";
+    String title = "REFERENCES (Person not related by consanguinity or affinity to applicant /appointee)";
     
      boolean isCreateAllowed(){
         return false
@@ -45,7 +45,7 @@ class PDSTrainingController extends CrudFormModel {
         return false
     }
    
-    def selectedTrainingItem
+    def selectedReferenceItem
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -57,8 +57,8 @@ class PDSTrainingController extends CrudFormModel {
            
         }
     }
-    def trainingListHandler = [
-        fetchList: { entity?.trainings },
+    def referenceListHandler = [
+        fetchList: { entity?.references },
         createItem : {
             return[
                 recordlog : [
@@ -74,8 +74,8 @@ class PDSTrainingController extends CrudFormModel {
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.trainings.remove(it)
-                trainingListHandler?.load();
+                entity.references.remove(it)
+                referenceListHandler?.load();
                 return true;
             }
             return false;
@@ -87,11 +87,8 @@ class PDSTrainingController extends CrudFormModel {
             
         },
         onAddItem : {
-            return[
-                entity.trainingcategoryid = entity.trainingcategory.name,
-                entity.trainings.add(it),
-            ]
-            },
+            entity.references.add(it);
+        },
         validate:{li->
             //def item=li.item;
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
