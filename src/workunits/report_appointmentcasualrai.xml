@@ -43,8 +43,7 @@
         SubReport[] getSubReports() {
             return [ 
                     new SubReport("AppointmentItemList", REPORT_PATH + "appointmentcasualraiitems.jasper"),           
-                    new SubReport("SignatoryGroup", REPORT_PATH + "signatorygroupitems.jasper"),
-                     new SubReport("BackPage", REPORT_PATH + "appointmentcasualraibackpage.jasper"),
+                    new SubReport("SignatoryGroup", REPORT_PATH + "signatorygroupitemsrai.jasper"),
                ] as SubReport[];    
        }
 

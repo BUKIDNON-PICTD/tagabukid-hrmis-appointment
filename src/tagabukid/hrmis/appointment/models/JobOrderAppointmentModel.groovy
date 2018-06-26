@@ -36,8 +36,8 @@ class JobOrderAppointmentModel extends CrudFormModel{
         return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
     
-        boolean isallowPreviewAppointment() {
-        return ( mode=='read' && entity.state=='APPROVED' ); 
+    boolean isAllowPreviewAppointment() {
+        return ( mode=='read'); 
     }
     
     boolean isAllowRenew() {

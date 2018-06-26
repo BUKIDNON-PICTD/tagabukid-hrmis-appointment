@@ -17,7 +17,7 @@
 		 whenNoDataType="NoPages"
 		 isTitleNewPage="false"
 		 isSummaryNewPage="false">
-	<property name="ireport.scriptlethandling" value="2" />
+	<property name="ireport.scriptlethandling" value="0" />
 	<property name="ireport.encoding" value="UTF-8" />
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
@@ -32,73 +32,11 @@
 			<band height="454"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
-						x="404"
-						y="354"
-						width="259"
-						height="100"
-						key="staticText-1"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Justified" verticalAlignment="Top">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
-					</textElement>
-				<text><![CDATA[     This is to certify that I have checked the veracity, authenticity and completeness of all the requirements in support of the appointments attached herein.]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="663"
-						y="354"
-						width="265"
-						height="100"
-						key="staticText-2"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Justified" verticalAlignment="Top">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
-					</textElement>
-				<text><![CDATA[     This is to certify that I have checked all the requirements in support of the appointments attached herein and found these to be  [  ] complete /  [  ]   lacking.]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="432"
-						y="428"
-						width="203"
-						height="21"
-						key="staticText-3"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
-					</textElement>
-				<text><![CDATA[Highest Ranking HRMO]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="700"
-						y="428"
-						width="203"
-						height="21"
-						key="staticText-4"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
-					</textElement>
-				<text><![CDATA[Highest Ranking HRMO]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="21"
+						x="20"
 						y="116"
 						width="22"
 						height="34"
-						key="staticText-5"/>
+						key="staticText-1"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -112,11 +50,11 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="21"
+						x="20"
 						y="11"
 						width="907"
 						height="37"
-						key="staticText-6"/>
+						key="staticText-2"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -129,11 +67,11 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
+						x="20"
 						y="82"
 						width="907"
 						height="34"
-						key="staticText-7"/>
+						key="staticText-3"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -146,11 +84,11 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
+						x="20"
 						y="48"
 						width="383"
 						height="34"
-						key="staticText-8"/>
+						key="staticText-4"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -163,11 +101,11 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
+						x="662"
 						y="48"
 						width="265"
 						height="34"
-						key="staticText-9"/>
+						key="staticText-5"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -180,11 +118,11 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
+						x="662"
 						y="116"
 						width="265"
 						height="34"
-						key="staticText-10"/>
+						key="staticText-6"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -197,11 +135,11 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
+						x="403"
 						y="48"
 						width="259"
 						height="34"
-						key="staticText-11"/>
+						key="staticText-7"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -214,11 +152,11 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="43"
+						x="42"
 						y="116"
 						width="361"
 						height="34"
-						key="staticText-12"/>
+						key="staticText-8"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
@@ -231,8 +169,76 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
+						x="403"
 						y="116"
+						width="259"
+						height="34"
+						key="staticText-9"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="150"
+						width="22"
+						height="34"
+						key="staticText-10"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="662"
+						y="150"
+						width="265"
+						height="34"
+						key="staticText-11"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="42"
+						y="150"
+						width="361"
+						height="34"
+						key="staticText-12"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<text><![CDATA[PLANTILLA OF CASUAL APPOINTMENT (CSC Form No. 34-B or D) - Original CSC copy ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="403"
+						y="150"
 						width="259"
 						height="34"
 						key="staticText-13"/>
@@ -248,8 +254,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
-						y="150"
+						x="20"
+						y="184"
 						width="22"
 						height="34"
 						key="staticText-14"/>
@@ -261,12 +267,12 @@
 					<textElement verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
 					</textElement>
-				<text><![CDATA[2]]></text>
+				<text><![CDATA[3]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
-						y="150"
+						x="662"
+						y="184"
 						width="265"
 						height="34"
 						key="staticText-15"/>
@@ -282,8 +288,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="43"
-						y="150"
+						x="42"
+						y="184"
 						width="361"
 						height="34"
 						key="staticText-16"/>
@@ -295,12 +301,12 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[PLANTILLA OF CASUAL APPOINTMENT (CSC Form No. 34-B or D) - Original CSC copy ]]></text>
+				<text><![CDATA[PERSONAL DATA SHEET (CS Form No. 212, Revised 2017) ]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
-						y="150"
+						x="403"
+						y="184"
 						width="259"
 						height="34"
 						key="staticText-17"/>
@@ -316,8 +322,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
-						y="184"
+						x="20"
+						y="218"
 						width="22"
 						height="34"
 						key="staticText-18"/>
@@ -329,12 +335,12 @@
 					<textElement verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
 					</textElement>
-				<text><![CDATA[3]]></text>
+				<text><![CDATA[4]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
-						y="184"
+						x="662"
+						y="218"
 						width="265"
 						height="34"
 						key="staticText-19"/>
@@ -350,8 +356,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="43"
-						y="184"
+						x="42"
+						y="218"
 						width="361"
 						height="34"
 						key="staticText-20"/>
@@ -363,12 +369,12 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[PERSONAL DATA SHEET (CS Form No. 212, Revised 2017) ]]></text>
+				<text><![CDATA[ORIGINAL COPY OF AUTHENTICATED CERTIFICATE OF ELIGIBILITY/ RATING/ LICENSE - Except if the eligibility has been previously authenticated in 2004 or onward and recorded by the CSC]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
-						y="184"
+						x="403"
+						y="218"
 						width="259"
 						height="34"
 						key="staticText-21"/>
@@ -384,8 +390,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
-						y="218"
+						x="20"
+						y="252"
 						width="22"
 						height="34"
 						key="staticText-22"/>
@@ -397,12 +403,12 @@
 					<textElement verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
 					</textElement>
-				<text><![CDATA[4]]></text>
+				<text><![CDATA[5]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
-						y="218"
+						x="662"
+						y="252"
 						width="265"
 						height="34"
 						key="staticText-23"/>
@@ -418,8 +424,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="43"
-						y="218"
+						x="42"
+						y="252"
 						width="361"
 						height="34"
 						key="staticText-24"/>
@@ -431,12 +437,12 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[ORIGINAL COPY OF AUTHENTICATED CERTIFICATE OF ELIGIBILITY/ RATING/ LICENSE - Except if the eligibility has been previously authenticated in 2004 or onward and recorded by the CSC]]></text>
+				<text><![CDATA[POSITION DESCRIPTION FORM (DBM-CSC Form No. 1, Revised 2017) ]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
-						y="218"
+						x="403"
+						y="252"
 						width="259"
 						height="34"
 						key="staticText-25"/>
@@ -452,8 +458,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
-						y="252"
+						x="20"
+						y="286"
 						width="22"
 						height="34"
 						key="staticText-26"/>
@@ -465,12 +471,12 @@
 					<textElement verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
 					</textElement>
-				<text><![CDATA[5]]></text>
+				<text><![CDATA[6]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
-						y="252"
+						x="662"
+						y="286"
 						width="265"
 						height="34"
 						key="staticText-27"/>
@@ -486,8 +492,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="43"
-						y="252"
+						x="42"
+						y="286"
 						width="361"
 						height="34"
 						key="staticText-28"/>
@@ -499,12 +505,12 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[POSITION DESCRIPTION FORM (DBM-CSC Form No. 1, Revised 2017) ]]></text>
+				<text><![CDATA[OATH OF OFFICE (CS Form No. 32, Revised 2017)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
-						y="252"
+						x="403"
+						y="286"
 						width="259"
 						height="34"
 						key="staticText-29"/>
@@ -520,8 +526,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
-						y="286"
+						x="20"
+						y="320"
 						width="22"
 						height="34"
 						key="staticText-30"/>
@@ -533,12 +539,12 @@
 					<textElement verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
 					</textElement>
-				<text><![CDATA[6]]></text>
+				<text><![CDATA[7]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
-						y="286"
+						x="662"
+						y="320"
 						width="265"
 						height="34"
 						key="staticText-31"/>
@@ -554,8 +560,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="43"
-						y="286"
+						x="42"
+						y="320"
 						width="361"
 						height="34"
 						key="staticText-32"/>
@@ -567,12 +573,12 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[OATH OF OFFICE (CS Form No. 32, Revised 2017)]]></text>
+				<text><![CDATA[CERTIFICATE OF ASSUMPTION TO DUTY (CS Form No. 4) ]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
-						y="286"
+						x="403"
+						y="320"
 						width="259"
 						height="34"
 						key="staticText-33"/>
@@ -588,71 +594,78 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="21"
-						y="320"
-						width="22"
-						height="34"
+						x="403"
+						y="354"
+						width="259"
+						height="100"
 						key="staticText-34"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 </box>
-					<textElement verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					<textElement textAlignment="Justified" verticalAlignment="Top">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<text><![CDATA[7]]></text>
+				<text><![CDATA[     This is to certify that I have checked the veracity, authenticity and completeness of all the requirements in support of the appointments attached herein.]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="663"
-						y="320"
+						x="662"
+						y="354"
 						width="265"
-						height="34"
+						height="100"
 						key="staticText-35"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="43"
-						y="320"
-						width="361"
-						height="34"
-						key="staticText-36"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 </box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					<textElement textAlignment="Justified" verticalAlignment="Top">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<text><![CDATA[CERTIFICATE OF ASSUMPTION TO DUTY (CS Form No. 4) ]]></text>
+				<text><![CDATA[     This is to certify that I have checked all the requirements in support of the appointments attached herein and found these to be  [  ] complete /  [  ]   lacking.]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="404"
-						y="320"
-						width="259"
-						height="34"
-						key="staticText-37"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
+						x="431"
+						y="428"
+						width="203"
+						height="21"
+						key="staticText-36"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[]]></text>
+				<text><![CDATA[P.G. DEPARTMENT HEAD, PHRMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="699"
+						y="428"
+						width="203"
+						height="21"
+						key="staticText-37"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<text><![CDATA[CSC FO Receiving Officer]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="431"
+						y="406"
+						width="203"
+						height="21"
+						key="staticText-38"/>
+					<box leftPadding="5" rightPadding="5"></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<text><![CDATA[AIDA B. LOVERES]]></text>
 				</staticText>
 			</band>
 		</title>

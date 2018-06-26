@@ -28,12 +28,17 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def tgbkdSvc
     
     def tag
+    def selectedAppointmentItem
     
     boolean isAllowApprove() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
     
-    boolean isallowPreviewAppointment() {
+    boolean isAllowEditGrid() {
+        return ( entity.currentsalarystep.objid != null ); 
+    }
+    
+    boolean isAllowPreviewAppointment() {
         return ( mode=='read'); 
     }
     
@@ -60,10 +65,16 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return false
     }
 
+    public void beforeSave(){
+
+    }
+
     public void afterCreate(){
         tag = invoker?.properties?.tag;
         if(tag=='renew'){
             entity.putAll(svc.initRenew(renewcaller.entity))
+            println entity.currentsalarystep
+            println mode
         }else{
             entity = svc.initCreate();
         }
@@ -170,6 +181,23 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
                 }
             ]);
     }
+
+    // def getPersonnelLookupHandler(){
+    //     return Inv.lookupOpener('lookup:individualwide',[
+    //             onselect :{personnel ->
+    //                 validatecurrentappointment(personnel)
+    //             }
+    //         ]);
+    // }
+
+    // void validatecurrentappointment(o){
+    //     if(!entity.effectivefrom){
+    //         throw new Exception("Effective From is required.");
+    //     }
+    //     if(svc.findPersonnelHasActiveAppointment(o,entity.effectivefrom)){
+    //         throw new Exception("Effective From is required.");
+    //     }
+    // }
    
     def renew(){
         return InvokerUtil.lookupOpener('hrmis_appointmentcasual:renew:create')

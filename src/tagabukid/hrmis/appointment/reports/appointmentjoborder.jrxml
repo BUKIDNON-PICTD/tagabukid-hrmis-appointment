@@ -193,8 +193,8 @@
 				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" isUsingCache="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Opaque"
-						x="168"
-						y="4"
+						x="58"
+						y="0"
 						width="55"
 						height="55"
 						forecolor="#000000"
@@ -330,13 +330,13 @@
 			</band>
 		</columnFooter>
 		<pageFooter>
-			<band height="10"  isSplitAllowed="true" >
+			<band height="20"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Transparent"
 						x="0"
 						y="0"
-						width="301"
+						width="572"
 						height="10"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
@@ -355,7 +355,7 @@
 					<reportElement
 						mode="Transparent"
 						x="323"
-						y="0"
+						y="10"
 						width="205"
 						height="10"
 						forecolor="#000000"
@@ -375,7 +375,7 @@
 					<reportElement
 						mode="Transparent"
 						x="528"
-						y="0"
+						y="10"
 						width="44"
 						height="10"
 						forecolor="#000000"
