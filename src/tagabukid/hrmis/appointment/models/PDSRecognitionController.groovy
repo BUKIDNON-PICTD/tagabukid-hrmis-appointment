@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  PDSSkillController extends CrudFormModel {
+class PDSRecognitionController extends CrudFormModel {
     @Binding
     def binding;
 
@@ -27,7 +27,7 @@ class  PDSSkillController extends CrudFormModel {
     // @Service("TagabukidSubayTransactionService")
     // def txnsvc;
     
-    String title = "SPECIAL SKILLS and HOBBIES";
+    String title = "NON-ACADEMIC DISTINCTIONS / RECOGNITION";
     
      boolean isCreateAllowed(){
         return false
@@ -45,7 +45,7 @@ class  PDSSkillController extends CrudFormModel {
         return false
     }
    
-    def selectedSkillInfo
+    def selectedRecognitionItem
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -57,8 +57,8 @@ class  PDSSkillController extends CrudFormModel {
            
         }
     }
-    def skillListHandler = [
-        fetchList: { entity?.skills },
+    def recognitionListHandler = [
+        fetchList: { entity?.recognitions },
         createItem : {
             return[
                 recordlog : [
@@ -74,8 +74,8 @@ class  PDSSkillController extends CrudFormModel {
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.skills.remove(it)
-                skillListHandler?.load();
+                entity.recognitions.remove(it)
+                recognitionListHandler?.load();
                 return true;
             }
             return false;
@@ -87,7 +87,7 @@ class  PDSSkillController extends CrudFormModel {
             
         },
         onAddItem : {
-            entity.skills.add(it);
+            entity.recognitions.add(it);
         },
         validate:{li->
             //def item=li.item;

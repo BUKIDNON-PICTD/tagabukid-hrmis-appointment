@@ -11,16 +11,16 @@ import com.rameses.seti2.views.CrudFormPage;
 
 /**
  *
- * @author P0RA
+ * @author PORA
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class PDSReferencesPage extends javax.swing.JPanel {
+public class PDSRecognitionPage extends javax.swing.JPanel {
 
     /**
-     * Creates new form PDSReferencesPage
+     * Creates new form PDSRecognitionPage
      */
-    public PDSReferencesPage() {
+    public PDSRecognitionPage() {
         initComponents();
     }
 
@@ -33,18 +33,18 @@ public class PDSReferencesPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
-        xDataTable1 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable2 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("REFERENCES (Person not related by consanguinity or affinity to applicant /appointee)");
-        xHorizontalPanel2.setBorder(xTitledBorder1);
+        xTitledBorder1.setTitle("NON-ACADEMIC DISTINCTIONS / RECOGNITION");
+        xHorizontalPanel3.setBorder(xTitledBorder1);
 
-        xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
+        xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "entity.reference"}
-                , new Object[]{"caption", "NAME"}
-                , new Object[]{"width", 100}
+                new Object[]{"name", "recognitioncategory"}
+                , new Object[]{"caption", "Category"}
+                , new Object[]{"width", 50}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -53,28 +53,12 @@ public class PDSReferencesPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"expression", "#{item.name}"}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.name}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.recognitioncategory.name}", "lookup:tagabukid_hrmis_recognitioncategory")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "address"}
-                , new Object[]{"caption", "ADDRESS"}
-                , new Object[]{"width", 100}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"expression", "entity.reference.address_text"}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "contact"}
-                , new Object[]{"caption", "TEL. NO."}
-                , new Object[]{"width", 100}
+                new Object[]{"name", "name"}
+                , new Object[]{"caption", "Name"}
+                , new Object[]{"width", 150}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -86,12 +70,10 @@ public class PDSReferencesPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             })
         });
-        xDataTable1.setEditable(true);
-        xDataTable1.setHandler("referenceItemHandler");
-        xDataTable1.setItems("");
-        xDataTable1.setMultiSelectName("");
-        xDataTable1.setName("selectedReferenceItem"); // NOI18N
-        xHorizontalPanel2.add(xDataTable1);
+        xDataTable2.setEditable(true);
+        xDataTable2.setHandler("recognitionListHandler");
+        xDataTable2.setName("selectedRecognitionItem"); // NOI18N
+        xHorizontalPanel3.add(xDataTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -99,21 +81,21 @@ public class PDSReferencesPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 879, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(89, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.rcp.control.XDataTable xDataTable1;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
+    private com.rameses.rcp.control.XDataTable xDataTable2;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,8 +7,8 @@ import tagabukid.utils.*;
 import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
-        
-class  PDSSkillController extends CrudFormModel {
+     
+class PDSOrganizationController extends CrudFormModel {
     @Binding
     def binding;
 
@@ -27,7 +27,7 @@ class  PDSSkillController extends CrudFormModel {
     // @Service("TagabukidSubayTransactionService")
     // def txnsvc;
     
-    String title = "SPECIAL SKILLS and HOBBIES";
+    String title = "MEMBERSHIP IN ASSOCIATION/ORGANIZATION";
     
      boolean isCreateAllowed(){
         return false
@@ -45,7 +45,7 @@ class  PDSSkillController extends CrudFormModel {
         return false
     }
    
-    def selectedSkillInfo
+    def selectedAssociationOrganizationItem
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -57,8 +57,8 @@ class  PDSSkillController extends CrudFormModel {
            
         }
     }
-    def skillListHandler = [
-        fetchList: { entity?.skills },
+    def associationorganizationListHandler = [
+        fetchList: { entity?.organizations },
         createItem : {
             return[
                 recordlog : [
@@ -74,8 +74,8 @@ class  PDSSkillController extends CrudFormModel {
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.skills.remove(it)
-                skillListHandler?.load();
+                entity.organizations.remove(it)
+                associationorganizationListHandler?.load();
                 return true;
             }
             return false;
@@ -87,7 +87,7 @@ class  PDSSkillController extends CrudFormModel {
             
         },
         onAddItem : {
-            entity.skills.add(it);
+            entity.organizations.add(it);
         },
         validate:{li->
             //def item=li.item;
