@@ -2,7 +2,6 @@
 import com.rameses.rcp.annotations.*;
 import com.rameses.rcp.common.*;
 import com.rameses.seti2.models.*;
-import com.rameses.annotations.Env
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
@@ -18,8 +17,6 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     @Caller
     def renewcaller
     
-    @Env
-    def env
     
     @Service("PersistenceService")
     def persistenceSvc;
@@ -31,13 +28,18 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def tgbkdSvc
     
     def tag
+    def selectedAppointmentItem
     
     boolean isAllowApprove() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
     
-    boolean isallowPreviewAppointment() {
-        return ( mode=='read' && entity.state=='APPROVED' ); 
+    boolean isAllowEditGrid() {
+        return ( entity.currentsalarystep.objid != null ); 
+    }
+    
+    boolean isAllowPreviewAppointment() {
+        return ( mode=='read'); 
     }
     
     boolean isAllowRenew() {
@@ -63,10 +65,16 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return false
     }
 
+    public void beforeSave(){
+
+    }
+
     public void afterCreate(){
         tag = invoker?.properties?.tag;
         if(tag=='renew'){
-            entity = svc.initRenew(renewcaller.entity)
+            entity.putAll(svc.initRenew(renewcaller.entity))
+            println entity.currentsalarystep
+            println mode
         }else{
             entity = svc.initCreate();
         }
@@ -74,14 +82,14 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     }
 
     public void afterOpen(){
-        println entity
+//        println entity
 //        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
         entity.appointmentitems.each{
             //println it
             it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
-            it.plantilla = tgbkdSvc.getPlantillaById([plantillaid:it.plantilla.Id]);
+            it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
             //postgrehack
-            it.plantilla.Id = it.plantilla.Id.toString()
+//            it.plantilla.Id = it.plantilla.objid
 
         }
     }
@@ -111,15 +119,16 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
             }
             return false;
         },
-//        onColumnUpdate: { o,col-> 
-//            if(col == 'dailywage'){
-//                o.monthlywage = o.dailywage * 22;
-//                binding.refresh();  
-//            }
-//            
-//        },
+        onColumnUpdate: { o,col-> 
+            if(col == 'plantilla'){
+                o.salaryscheduleitem  = svc.getDailyWageByTranch(entity.currentsalarystep,o.plantilla);
+                o.monthlywage = o.salaryscheduleitem.amount
+                o.dailywage = o.salaryscheduleitem.amount / 22
+            }
+            
+        },
         onAddItem : {
-            it.plantilla.Id = it.plantilla.Id.toString()
+//            it.plantilla.Id = it.plantilla.Id.toString()
 //            it.monthlywage = it.dailywage * 22
             entity.appointmentitems.add(it);
         },
@@ -133,11 +142,11 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         fetchList: { 
             if(entity.signatorygroup?.objid)
             entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
-            return entity.signatorygroup?.signatorygroupitems 
+            return entity.signatorygroup?.signatoryGroupItems 
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.signatorygroup.signatorygroupitems.remove(it)
+                entity.signatorygroup.signatoryGroupItems.remove(it)
                 signatoryItemHandler?.load();
                 return true;
             }
@@ -156,10 +165,40 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
                     objid : entity.objid, 
                     state : 'APPROVED' 
                 ]); 
-            loadData(); 
+            loadData();
         }
     }
-    
+    def getTranchLookupHandler(){
+        return Inv.lookupOpener('lookup:tagabukid_hrmis_tranche',[
+                onselect :{tranche ->
+                    entity.currentsalarystep.putAll(tranche)  
+                    entity.appointmentitems.each{
+                        it.salaryscheduleitem  = svc.getDailyWageByTranch(tranche,it.plantilla);
+                        it.monthlywage = it.salaryscheduleitem.amount
+                        it.dailywage = it.salaryscheduleitem.amount / 22
+                    }
+                    appointmentitemListHandler.reload();
+                }
+            ]);
+    }
+
+    // def getPersonnelLookupHandler(){
+    //     return Inv.lookupOpener('lookup:individualwide',[
+    //             onselect :{personnel ->
+    //                 validatecurrentappointment(personnel)
+    //             }
+    //         ]);
+    // }
+
+    // void validatecurrentappointment(o){
+    //     if(!entity.effectivefrom){
+    //         throw new Exception("Effective From is required.");
+    //     }
+    //     if(svc.findPersonnelHasActiveAppointment(o,entity.effectivefrom)){
+    //         throw new Exception("Effective From is required.");
+    //     }
+    // }
+   
     def renew(){
         return InvokerUtil.lookupOpener('hrmis_appointmentcasual:renew:create')
     }

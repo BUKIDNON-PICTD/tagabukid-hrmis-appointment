@@ -17,6 +17,9 @@ class PDSGovIDController extends CrudFormModel{
     @Service('DateService')
     def dtSvc
     
+    @Caller
+    def caller
+    
     @Env
     def env
     
@@ -41,36 +44,25 @@ class PDSGovIDController extends CrudFormModel{
     
     boolean isShowNavigation(){
         return false
-    }    
-    
+    }
+    public void beforeOpen() {
+       entity.putAll(parententity);
+    }
     public void beforeSave(o){
-        entity.state = "DRAFT";
+            parententity._schemaname = 'hrmis_pds'
+            entity.pdsid = parententity.objid
+            // persistenceSvc.update(entity)
+        if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
             entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
             entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
-        if (o == 'create'){
-            parententity._schemaname = 'hrmis_pds'
-            // parententity.pdsno = svc.getPDSNo();
-            // parententity.entityid = entity.person.objid
-            parententity.version._schemaname = 'hrmis_pds_version'
-            // parententity.version.versionno = svc.getVersionNo();
-            // parententity.currentversionno
-            // // parententity.name = entity.person.name;
-            // persistenceSvc.create(parententity);             
-            // persistenceSvc.create(parententity.version);        
-            
-            //save sa ang pds
-            //save dayon ang version
-        }
-        // entity.residentialaddress = residentialAddress
+        }else{
+            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
+            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
+            }
     }
-    
-    public void afterCreate(){
-        entity = parententity.version.govid
-    }
-    
 }
-

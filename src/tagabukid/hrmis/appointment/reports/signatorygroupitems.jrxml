@@ -6,9 +6,9 @@
 		 columnCount="5"
 		 printOrder="Horizontal"
 		 orientation="Landscape"
-		 pageWidth="968"
+		 pageWidth="935"
 		 pageHeight="612"
-		 columnWidth="193"
+		 columnWidth="187"
 		 columnSpacing="0"
 		 leftMargin="0"
 		 rightMargin="0"
@@ -113,7 +113,7 @@
 					<reportElement
 						x="0"
 						y="134"
-						width="192"
+						width="186"
 						height="13"
 						key="textField"/>
 					<box></box>
@@ -126,12 +126,12 @@
 					<reportElement
 						x="0"
 						y="147"
-						width="192"
+						width="186"
 						height="13"
 						key="textField-1"/>
 					<box></box>
 					<textElement textAlignment="Center">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatorytitle}]]></textFieldExpression>
 				</textField>
@@ -139,7 +139,7 @@
 					<reportElement
 						x="0"
 						y="169"
-						width="64"
+						width="43"
 						height="13"
 						key="staticText-1">
 							<printWhenExpression><![CDATA[new Boolean($F{signatorytitle}!=null)]]></printWhenExpression>
@@ -148,13 +148,13 @@
 					<textElement>
 						<font fontName="Tahoma"/>
 					</textElement>
-				<text><![CDATA[Date Signed:]]></text>
+				<text><![CDATA[Date:]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="64"
+						x="43"
 						y="169"
-						width="128"
+						width="143"
 						height="13"
 						key="staticText-2">
 							<printWhenExpression><![CDATA[new Boolean($F{signatorytitle}!=null)]]></printWhenExpression>
@@ -170,7 +170,7 @@
 					<reportElement
 						x="0"
 						y="0"
-						width="192"
+						width="186"
 						height="110"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5"></box>

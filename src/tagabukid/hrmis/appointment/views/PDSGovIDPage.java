@@ -37,10 +37,9 @@ public class PDSGovIDPage extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
+        idTypeList1 = new com.rameses.enterprise.components.IdTypeList();
         xTextField2 = new com.rameses.rcp.control.XTextField();
-        xDateField1 = new com.rameses.rcp.control.XDateField();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
+        xTextField3 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Government Issued ID (i.e.Passport, GSIS, SSS, PRC, Driver's License, etc.) ");
@@ -48,11 +47,12 @@ public class PDSGovIDPage extends javax.swing.JPanel {
 
         xFormPanel1.setPadding(new java.awt.Insets(20, 20, 5, 20));
 
-        xTextField1.setCaption("Government Issued ID");
-        xTextField1.setCaptionWidth(150);
-        xTextField1.setName("entity.name"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField1);
+        idTypeList1.setCaption("Government Issued ID");
+        idTypeList1.setCaptionWidth(150);
+        idTypeList1.setMinimumSize(new java.awt.Dimension(359, 20));
+        idTypeList1.setName("entity.idtype"); // NOI18N
+        idTypeList1.setPreferredSize(new java.awt.Dimension(0, 22));
+        xFormPanel1.add(idTypeList1);
 
         xTextField2.setCaption("ID/License/Passport No.");
         xTextField2.setCaptionWidth(150);
@@ -60,17 +60,11 @@ public class PDSGovIDPage extends javax.swing.JPanel {
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xDateField1.setCaption("Date of Issuance");
-        xDateField1.setCaptionWidth(150);
-        xDateField1.setName("entity.dateofissuance"); // NOI18N
-        xDateField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xDateField1);
-
-        xTextField4.setCaption("Place of Issuance");
-        xTextField4.setCaptionWidth(150);
-        xTextField4.setName("entity.placeofissuance"); // NOI18N
-        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField4);
+        xTextField3.setCaption("Date/Place of Issuance");
+        xTextField3.setCaptionWidth(150);
+        xTextField3.setName("entity.issuance"); // NOI18N
+        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField3);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -90,18 +84,17 @@ public class PDSGovIDPage extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.rameses.enterprise.components.IdTypeList idTypeList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private com.rameses.rcp.control.XDateField xDateField1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField3;
     // End of variables declaration//GEN-END:variables
 }

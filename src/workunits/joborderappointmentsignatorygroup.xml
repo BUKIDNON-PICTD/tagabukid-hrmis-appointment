@@ -1,8 +1,8 @@
 
 <workunit schemaName="hrmis_appointment_signatorygrouping">
     <invokers>
-        <invoker type="hrmis_appointment_signatorygrouping:create" caption="Create Signatory Group (JO)" action="create"/>
-        <invoker type="hrmis_appointment_signatorygrouping:open" caption="Open Signatory Group (JO)" action="open"/>      
+        <invoker type="hrmis_appointment_signatorygrouping:create" caption="Create Signatory Group (JO)" action="create" role="MASTER"/>
+        <invoker type="hrmis_appointment_signatorygrouping:open" caption="Open Signatory Group (JO)" action="open" role="MASTER"/>      
     </invokers>
    <code class="tagabukid.hrmis.appointment.models.JobOrderAppointmentSignatoryGroupModel" />
     <pages>

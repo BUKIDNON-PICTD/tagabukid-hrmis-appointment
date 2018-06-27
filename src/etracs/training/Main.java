@@ -17,12 +17,11 @@ public class Main {
             env.put("app.cluster", "osiris3");
 
             Map roles = new HashMap();
-            roles.put("AGRI.MASTER", null);
-            roles.put("ENTITY.MASTER", null);
-            roles.put("AGRI.ENCODER", null);
-            roles.put("AGRI.APPROVER", null);
-            roles.put("AGRI.REPORTS", null);
-            roles.put("TREASURY.CHECKBYFUND", null);
+            roles.put("DEVELOPER.REPORT", null);
+            roles.put("HR.ENCODER", null);
+            roles.put("HR.APPROVER", null);
+            roles.put("HR.MASTER", null);
+            roles.put("HR.REPORTS", null);
             Map profile = new HashMap();
             profile.put("CLIENTTYPE", "desktop");
             profile.put("USERID", "ADMIN");

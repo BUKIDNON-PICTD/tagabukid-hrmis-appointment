@@ -1,6 +1,6 @@
 <workunit extends="rpt_wtemplates/ReportController.xml" >
     <invokers>
-        <invoker type="hrmis_appointmentcasualrai:form:formActions" caption="Preview RAI" action="preview" index="1" visibleWhen="#{allowPreviewAppointment==true}"/>        
+        <invoker type="hrmis_appointmentcasual:form:formActions" caption="Preview RAI" action="init" index="1" visibleWhen="#{allowPreviewAppointment==true}"/>        
     </invokers>
     <code>
     <![CDATA[
@@ -24,7 +24,7 @@
 
 
         void buildReportData(entity, asyncHandler){
-            svc.getAppointmentCasualById(entity,asyncHandler){);
+            svc.getAppointmentCasualRaiById(entity,asyncHandler);
         }
 
         Map getParameters(){
@@ -35,7 +35,7 @@
        def formControl = [
             getFormControls: {
                 return [
-                    new FormControl( "lookup", [caption:'Signatory Group', name:'entity.signatorygroup_objid', preferredSize:'[0,21]', handler:'signatorygroup:lookup',expression:'#{item.signatorygroupname}', captionWidth:100]),
+                    new FormControl( "lookup", [caption:'Signatory Group', name:'entity.signatorygroup', preferredSize:'[0,21]', handler:'signatorygroup:lookup',expression:'#{item.signatorygroupname}', captionWidth:150]),
                 ]    
             },
        ] as FormPanelModel;
@@ -43,7 +43,7 @@
         SubReport[] getSubReports() {
             return [ 
                     new SubReport("AppointmentItemList", REPORT_PATH + "appointmentcasualraiitems.jasper"),           
-                    new SubReport("SignatoryGroup", REPORT_PATH + "signatorygroupitems.jasper"),
+                    new SubReport("SignatoryGroup", REPORT_PATH + "signatorygroupitemsrai.jasper"),
                ] as SubReport[];    
        }
 

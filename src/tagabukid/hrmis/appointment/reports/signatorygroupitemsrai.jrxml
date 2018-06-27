@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="signatorygroupitemsrai"
+		 columnCount="3"
+		 printOrder="Horizontal"
+		 orientation="Landscape"
+		 pageWidth="935"
+		 pageHeight="612"
+		 columnWidth="311"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="TREDWHENNULL"
+		isDefault="false"
+		isBlankWhenNull="true"
+	>
+
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{ttitle}==null]]></conditionExpression>
+			<style 
+				name="TREDWHENNULL"
+				isDefault="false"
+				mode="Opaque"
+				backcolor="#FF0000"
+				isBlankWhenNull="true"
+			>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style 
+		name="EREDWHENNULL"
+		isDefault="false"
+		isBlankWhenNull="true"
+	>
+
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{etitle}==null]]></conditionExpression>
+			<style 
+				name="EREDWHENNULL"
+				isDefault="false"
+				mode="Opaque"
+				backcolor="#FF0000"
+				isBlankWhenNull="true"
+			>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style 
+		name="QREDWHENNULL"
+		isDefault="false"
+		isBlankWhenNull="true"
+	>
+
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{qtitle}==null]]></conditionExpression>
+			<style 
+				name="QREDWHENNULL"
+				isDefault="false"
+				mode="Opaque"
+				backcolor="#FF0000"
+				isBlankWhenNull="true"
+			>
+			</style>
+		</conditionalStyle>
+	</style>
+
+	<parameter name="effectivefrom" isForPrompting="false" class="java.util.Date"/>
+	<parameter name="effectiveuntil" isForPrompting="false" class="java.util.Date"/>
+	<parameter name="natureofappointment.name" isForPrompting="false" class="java.lang.String"/>
+
+	<field name="objid" class="java.lang.String"/>
+	<field name="parentid" class="java.lang.String"/>
+	<field name="signatoryname" class="java.lang.String"/>
+	<field name="signatorytitle" class="java.lang.String"/>
+	<field name="signatoryheading" class="java.lang.String"/>
+	<field name="remarks" class="java.lang.String"/>
+	<field name="level" class="java.lang.Integer"/>
+	<field name="org" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="false" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="182"  isSplitAllowed="false" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="134"
+						width="186"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatoryname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="147"
+						width="186"
+						height="13"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Tahoma" pdfFontName="Helvetica" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatorytitle}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="169"
+						width="43"
+						height="13"
+						key="staticText-1">
+							<printWhenExpression><![CDATA[new Boolean($F{signatorytitle}!=null)]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+				<text><![CDATA[Date:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="43"
+						y="169"
+						width="143"
+						height="13"
+						key="staticText-2">
+							<printWhenExpression><![CDATA[new Boolean($F{signatorytitle}!=null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="186"
+						height="110"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5"></box>
+					<textElement textAlignment="Justified" verticalAlignment="Top">
+						<font fontName="Tahoma"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatoryheading}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

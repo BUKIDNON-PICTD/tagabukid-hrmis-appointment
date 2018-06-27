@@ -1,6 +1,10 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
+<<<<<<< HEAD
         <invoker type="pds:section:open" caption="Education" action="open" index="3" />
+=======
+        <invoker type="pds:section:create" caption="Education" action="create" index="6" />
+>>>>>>> 33d6ec9dfb7d94037f130d79271558affad77191
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.PDSEducationalInfoController" />

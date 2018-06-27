@@ -42,7 +42,7 @@ public class PDSSkillPage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("LEARNING AND DEVELOPMENT (L&D) INTERVENTIONS/TRAINING PROGRAMS ATTENDED");
+        xTitledBorder1.setTitle("SPECIAL SKILLS and HOBBIES LIST");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
@@ -77,7 +77,6 @@ public class PDSSkillPage extends javax.swing.JPanel {
         });
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("skillListHandler");
-        xDataTable1.setId("skillListHandler");
         xDataTable1.setItems("");
         xDataTable1.setName("selectedSkillItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);

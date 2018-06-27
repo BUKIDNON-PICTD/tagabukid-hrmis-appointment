@@ -1,6 +1,6 @@
-<workunit schemaName="hrmis_pds_version_govid">
+<workunit schemaName="hrmis_pds">
     <invokers>
-        <invoker type="pds:section" caption="Government Issued ID" action="create" index="11" visibleWhen="#{true}"/>
+        <invoker type="pds:section:open" caption="Government Issued ID" action="open" index="100" visibleWhen="#{true}"/>
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.PDSGovIDController" />
