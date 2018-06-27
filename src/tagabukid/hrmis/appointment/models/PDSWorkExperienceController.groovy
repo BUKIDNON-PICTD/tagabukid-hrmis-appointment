@@ -8,22 +8,19 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  PDSFamilyInfoController extends CrudFormModel {
-     @Binding
+class  PDSWorkExperienceController extends CrudFormModel {
+    @Binding
     def binding;
-    
+
     def parententity
     def svc
-
-    @Service('DateService')
+        
+    @Service("DateService")
     def dtSvc
-    
-    @Service("PersistenceService")
-    def persistenceSvc;
 
-    String title = "Family Background";
+    String title = "Work Experience";
     
-    boolean isCreateAllowed(){
+     boolean isCreateAllowed(){
         return false
     }
     
@@ -38,40 +35,25 @@ class  PDSFamilyInfoController extends CrudFormModel {
     boolean isShowNavigation(){
         return false
     }
-    
-   public void beforeOpen() {
-        entity.putAll(parententity)
-    }
-        
-    public void afterOpen(){
-       loadpersonalinfo()
-    }
 
+    def selectedworkExperienceItem
+    public void beforeOpen() {
+       entity.putAll(parententity);
+    }
     public void beforeSave(o){
-       if (o == 'create'){
-           entity.pdsid = parententity.objid
-
-            // parententity.version._schemaname = 'hrmis_pds'
-            // parententity.version.versionno = svc.getVersionNo();
+        if(o=='create'){
+//            entity.skills{
+//                
+//            }
            
         }
     }
-   
-//    def loadpersonalinfo(){
-//         entity = persistenceSvc.read([ _schemaname: 'hrmis_pds_familybackground', objid: entity.objid])
-//         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
-//     }
-
-    public void afterCreate(){
-
-               //education section
-        entity.childInfos = []
-    }
-    def familyBackgroundItemListHandler = [
-        fetchList: { entity?.childInfos },
+    
+    def workExperienceItemHandler = [
+        fetchList: { entity?.workexperienceInfos },
         createItem : {
-            return[
-                recordlog : [
+           return[
+               recordlog : [
                     datecreated : dtSvc.getServerDate(),
                     createdbyuser : OsirisContext.env.FULLNAME,
                     createdbyuserid : OsirisContext.env.USERID,
@@ -79,29 +61,28 @@ class  PDSFamilyInfoController extends CrudFormModel {
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID,
                 ],
-            ]
+           ]
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.childInfos.remove(it)
-                familyBackgroundItemListHandler?.load();
+                entity.workexperienceInfos.remove(it)
+                workExperienceItemHandler?.load();
                 return true;
             }
             return false;
         },
-        onColumnUpdate: { o,col-> 
+       onColumnUpdate: { o,col-> 
             o.recordlog.dateoflastupdate = dtSvc.getServerDate();
             o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
-            
-        },
+       },
         onAddItem : {
-            entity.childInfos.add(it);
+            entity.workexperienceInfos.add(it);
         },
         validate:{li->
             //def item=li.item;
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
-    
+
 }

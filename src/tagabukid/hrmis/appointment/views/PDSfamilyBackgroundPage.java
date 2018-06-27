@@ -74,14 +74,16 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
 
         entityLookup2.setCaption("Mother's Name");
         entityLookup2.setCaptionWidth(140);
-        entityLookup2.setExpression("#{entity.mothersname}");
+        entityLookup2.setExpression("#{item.name}");
+        entityLookup2.setName("entity.mother"); // NOI18N
         entityLookup2.setStretchWidth(300);
         xFormPanel1.add(entityLookup2);
 
         entityLookup3.setCaption("Spouse's Name");
         entityLookup3.setCaptionWidth(140);
         entityLookup3.setCellPadding(new java.awt.Insets(10, 0, 0, 0));
-        entityLookup3.setExpression("#{entity.spousesname}");
+        entityLookup3.setExpression("#{item.name}");
+        entityLookup3.setName("entity.spouse"); // NOI18N
         entityLookup3.setStretchWidth(300);
         xFormPanel1.add(entityLookup3);
 
@@ -116,7 +118,7 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
 
         xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "child"}
+                new Object[]{"name", "name"}
                 , new Object[]{"caption", "Child Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -130,7 +132,7 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.child.name}", null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "child.birthdate"}
+                new Object[]{"name", "birthdate"}
                 , new Object[]{"caption", "Birth Date"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -141,9 +143,11 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM-dd-yyyy", "MM-dd-yyyy", "MM-dd-yyyy")}
             })
         });
+        xDataTable2.setHandler("familyBackgroundItemListHandler");
+        xDataTable2.setName("selectedchildInfo"); // NOI18N
         xHorizontalPanel2.add(xDataTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

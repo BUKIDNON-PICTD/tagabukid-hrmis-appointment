@@ -8,6 +8,7 @@ package tagabukid.hrmis.appointment.views;
 import com.rameses.rcp.ui.annotations.StyleSheet;
 import com.rameses.rcp.ui.annotations.Template;
 import com.rameses.seti2.views.CrudFormPage;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -55,10 +56,10 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xDateField1 = new com.rameses.rcp.control.XDateField();
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
-        xTextField5 = new com.rameses.rcp.control.XTextField();
-        xTextField6 = new com.rameses.rcp.control.XTextField();
+        civilStatusList1 = new com.rameses.enterprise.components.CivilStatusList();
+        genderList1 = new com.rameses.enterprise.components.GenderList();
+        xDecimalField1 = new com.rameses.rcp.control.XDecimalField();
+        xDecimalField2 = new com.rameses.rcp.control.XDecimalField();
         xTextField7 = new com.rameses.rcp.control.XTextField();
         xTextField8 = new com.rameses.rcp.control.XTextField();
         xTextField9 = new com.rameses.rcp.control.XTextField();
@@ -82,16 +83,15 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xHorizontalPanel3.setBorder(xTitledBorder1);
 
         entityAddress1.setCaption("Residential Address");
-        entityAddress1.setCaptionWidth(130);
+        entityAddress1.setCaptionWidth(150);
         entityAddress1.setDepends(new String[] {"entity.person"});
-        entityAddress1.setDisableWhen("");
         entityAddress1.setName("residentialAddress"); // NOI18N
         entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress1.setRequired(true);
         xFormPanel3.add(entityAddress1);
 
         entityAddress2.setCaption("Permanent Address");
-        entityAddress2.setCaptionWidth(130);
+        entityAddress2.setCaptionWidth(150);
         entityAddress2.setDepends(new String[] {"entity.person"});
         entityAddress2.setName("permanentAddress"); // NOI18N
         entityAddress2.setPreferredSize(new java.awt.Dimension(0, 86));
@@ -106,122 +106,107 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         entityLookup1.setCaption("Name");
         entityLookup1.setCaptionWidth(135);
-        entityLookup1.setExpression("#{item.name}");
-        entityLookup1.setName("entity.personalinfo.person"); // NOI18N
-        entityLookup1.setRequired(true);
-        entityLookup1.setStretchWidth(300);
+        entityLookup1.setExpression("#{entity.name}");
+        entityLookup1.setName("entity.person"); // NOI18N
+        entityLookup1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(entityLookup1);
 
         xTextField4.setCaption("Extension (Jr., Sr)");
         xTextField4.setCaptionWidth(135);
-        xTextField4.setName("entity.personalinfo.nameextension"); // NOI18N
+        xTextField4.setName("entity.nameextension"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField4);
 
-        xDateField1.setEditable(false);
         xDateField1.setCaption("Date of Birth");
         xDateField1.setCaptionWidth(135);
-        xDateField1.setDepends(new String[] {"entity.personalinfo.person"});
-        xDateField1.setName("entity.personalinfo.person.birthdate"); // NOI18N
+        xDateField1.setDepends(new String[] {"entity.person"});
+        xDateField1.setName("entity.person.birthdate"); // NOI18N
         xDateField1.setRequired(true);
         xFormPanel1.add(xDateField1);
 
-        xTextArea1.setEditable(false);
         xTextArea1.setCaption("Birth Place");
         xTextArea1.setCaptionWidth(135);
-        xTextArea1.setDepends(new String[] {"entity.personalinfo.person"});
-        xTextArea1.setEnabled(false);
-        xTextArea1.setName("entity.personalinfo.person.birthplace"); // NOI18N
+        xTextArea1.setDepends(new String[] {"entity.person"});
+        xTextArea1.setName("entity.person.birthplace"); // NOI18N
         xTextArea1.setPreferredSize(new java.awt.Dimension(300, 61));
+        xTextArea1.setRequired(true);
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel1.add(jScrollPane1);
 
-        xTextField1.setEditable(false);
-        xTextField1.setCaption("Gender");
-        xTextField1.setCaptionWidth(135);
-        xTextField1.setDepends(new String[] {"entity.personalinfo.person"});
-        xTextField1.setInputFormatErrorMsg("");
-        xTextField1.setName("entity.personalinfo.person.gendername"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(150, 20));
-        xTextField1.setRequired(true);
-        xFormPanel1.add(xTextField1);
+        civilStatusList1.setCaption("Civil Status");
+        civilStatusList1.setCaptionWidth(135);
+        civilStatusList1.setName("entity.person.civilstatus"); // NOI18N
+        civilStatusList1.setRequired(true);
+        xFormPanel1.add(civilStatusList1);
 
-        xTextField2.setEditable(false);
-        xTextField2.setCaption("Civil Status");
-        xTextField2.setCaptionWidth(135);
-        xTextField2.setDepends(new String[] {"entity.personalinfo.person"});
-        xTextField2.setName("entity.personalinfo.person.civilstatus"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(150, 20));
-        xTextField2.setRequired(true);
-        xFormPanel1.add(xTextField2);
+        genderList1.setCaption("Gender");
+        genderList1.setCaptionWidth(135);
+        genderList1.setName("entity.person.gender"); // NOI18N
+        genderList1.setRequired(true);
+        xFormPanel1.add(genderList1);
 
-        xTextField5.setCaption("Height (m)");
-        xTextField5.setCaptionFontStyle("");
-        xTextField5.setCaptionWidth(135);
-        xTextField5.setName("entity.personalinfo.height"); // NOI18N
-        xTextField5.setPreferredSize(new java.awt.Dimension(150, 20));
-        xFormPanel1.add(xTextField5);
+        xDecimalField1.setCaption("Height (m)");
+        xDecimalField1.setCaptionWidth(135);
+        xDecimalField1.setName("entity.height"); // NOI18N
+        xDecimalField1.setRequired(true);
+        xFormPanel1.add(xDecimalField1);
 
-        xTextField6.setCaption("Weight (kg)");
-        xTextField6.setCaptionWidth(135);
-        xTextField6.setName("entity.personalinfo.weight"); // NOI18N
-        xTextField6.setPreferredSize(new java.awt.Dimension(150, 20));
-        xFormPanel1.add(xTextField6);
+        xDecimalField2.setCaption("Weight (kg)");
+        xDecimalField2.setCaptionWidth(135);
+        xDecimalField2.setName("entity.weight"); // NOI18N
+        xDecimalField2.setRequired(true);
+        xFormPanel1.add(xDecimalField2);
 
         xTextField7.setCaption("Blood Type");
         xTextField7.setCaptionWidth(135);
-        xTextField7.setName("entity.personalinfo.bloodtype"); // NOI18N
+        xTextField7.setName("entity.bloodtype"); // NOI18N
         xTextField7.setPreferredSize(new java.awt.Dimension(150, 20));
+        xTextField7.setRequired(true);
         xFormPanel1.add(xTextField7);
 
         xTextField8.setCaption("GSIS ID No.");
         xTextField8.setCaptionWidth(135);
-        xTextField8.setName("entity.personalinfo.gsisid"); // NOI18N
+        xTextField8.setName("entity.gsisid"); // NOI18N
         xTextField8.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel1.add(xTextField8);
 
         xTextField9.setCaption("PAG-IBIG ID No.");
         xTextField9.setCaptionWidth(135);
-        xTextField9.setName("entity.personalinfo.pagibigid"); // NOI18N
+        xTextField9.setName("entity.pagibigid"); // NOI18N
         xTextField9.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel1.add(xTextField9);
 
         xTextField10.setCaption("PHILHEALTH No.");
         xTextField10.setCaptionWidth(135);
-        xTextField10.setName("entity.personalinfo.philhealth"); // NOI18N
+        xTextField10.setName("entity.philhealth"); // NOI18N
         xTextField10.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel1.add(xTextField10);
 
         xTextField11.setCaption("SSS No.");
         xTextField11.setCaptionWidth(135);
-        xTextField11.setName("entity.personalinfo.sss"); // NOI18N
+        xTextField11.setName("entity.sss"); // NOI18N
         xTextField11.setPreferredSize(new java.awt.Dimension(200, 20));
-        xTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                xTextField11ActionPerformed(evt);
-            }
-        });
         xFormPanel1.add(xTextField11);
 
         xTextField12.setCaption("TIN No.");
         xTextField12.setCaptionWidth(135);
-        xTextField12.setName("entity.personalinfo.tin"); // NOI18N
+        xTextField12.setName("entity.tin"); // NOI18N
         xTextField12.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel1.add(xTextField12);
 
-        xTextField13.setCaption("AGENCY EMPLOYEE No.");
+        xTextField13.setCaption("Employee No");
         xTextField13.setCaptionWidth(135);
-        xTextField13.setName("entity.personalinfo.employeeno"); // NOI18N
+        xTextField13.setName("entity.employeeno"); // NOI18N
         xTextField13.setPreferredSize(new java.awt.Dimension(200, 20));
         xFormPanel1.add(xTextField13);
 
         citizenshipSuggest1.setCaption("Citizenship");
         citizenshipSuggest1.setCaptionWidth(135);
-        citizenshipSuggest1.setDepends(new String[] {"entity.personalinfo.person"});
-        citizenshipSuggest1.setEditable(false);
-        citizenshipSuggest1.setName("entity.personalinfo.person.citizenship"); // NOI18N
+        citizenshipSuggest1.setDepends(new String[] {"entity.person"});
+        citizenshipSuggest1.setName("entity.person.citizenship"); // NOI18N
         citizenshipSuggest1.setPreferredSize(new java.awt.Dimension(0, 20));
+        citizenshipSuggest1.setRequired(true);
         xFormPanel1.add(citizenshipSuggest1);
 
         xHorizontalPanel1.add(xFormPanel1);
@@ -234,8 +219,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextField14.setEditable(false);
         xTextField14.setCaption("Telephone No.");
         xTextField14.setCaptionWidth(125);
-        xTextField14.setDepends(new String[] {"entity.personalinfo.person"});
-        xTextField14.setName("entity.personalinfo.person.phoneno"); // NOI18N
+        xTextField14.setDepends(new String[] {"entity.person"});
+        xTextField14.setName("entity.person.phoneno"); // NOI18N
         xTextField14.setNullWhenEmpty(false);
         xTextField14.setPreferredSize(new java.awt.Dimension(175, 20));
         xFormPanel2.add(xTextField14);
@@ -244,15 +229,14 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextField15.setCaption("Mobile No.");
         xTextField15.setCaptionWidth(125);
         xTextField15.setDepends(new String[] {"entity.person"});
-        xTextField15.setName("entity.personalinfo.person.mobileno"); // NOI18N
+        xTextField15.setName("entity.person.mobileno"); // NOI18N
         xTextField15.setPreferredSize(new java.awt.Dimension(175, 20));
         xFormPanel2.add(xTextField15);
 
-        xTextArea2.setEditable(false);
         xTextArea2.setCaption("E-mail Address (if any)");
         xTextArea2.setCaptionWidth(125);
         xTextArea2.setDepends(new String[] {"entity.person"});
-        xTextArea2.setName("entity.personalinfo.person.email"); // NOI18N
+        xTextArea2.setName("entity.person.email"); // NOI18N
         xTextArea2.setPreferredSize(new java.awt.Dimension(175, 61));
         jScrollPane2.setViewportView(xTextArea2);
 
@@ -314,16 +298,14 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void xTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_xTextField11ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.enterprise.components.CitizenshipSuggest citizenshipSuggest1;
+    private com.rameses.enterprise.components.CivilStatusList civilStatusList1;
     private com.rameses.enterprise.components.EntityAddress entityAddress1;
     private com.rameses.enterprise.components.EntityAddress entityAddress2;
     private com.rameses.entity.components.EntityLookup entityLookup1;
+    private com.rameses.enterprise.components.GenderList genderList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
@@ -331,6 +313,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XDataTable xDataTable1;
     private com.rameses.rcp.control.XDateField xDateField1;
     private com.rameses.rcp.control.XDateFieldBeanInfo xDateFieldBeanInfo1;
+    private com.rameses.rcp.control.XDecimalField xDecimalField1;
+    private com.rameses.rcp.control.XDecimalField xDecimalField2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XFormPanel xFormPanel3;
@@ -345,17 +329,13 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextAreaBeanInfo xTextAreaBeanInfo1;
-    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField10;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField12;
     private com.rameses.rcp.control.XTextField xTextField13;
     private com.rameses.rcp.control.XTextField xTextField14;
     private com.rameses.rcp.control.XTextField xTextField15;
-    private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField4;
-    private com.rameses.rcp.control.XTextField xTextField5;
-    private com.rameses.rcp.control.XTextField xTextField6;
     private com.rameses.rcp.control.XTextField xTextField7;
     private com.rameses.rcp.control.XTextField xTextField8;
     private com.rameses.rcp.control.XTextField xTextField9;
