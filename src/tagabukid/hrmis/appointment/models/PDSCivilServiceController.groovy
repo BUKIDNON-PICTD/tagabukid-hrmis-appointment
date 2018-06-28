@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  PDSEducationalInfoController extends CrudFormModel {
+class  PDSCivilServiceController extends CrudFormModel {
     @Binding
     def binding;
 
@@ -18,7 +18,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
 
-    String title = "Education";
+    String title = "Civil Service Eligibility";
     
      boolean isCreateAllowed(){
         return false
@@ -36,7 +36,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
         return false
     }
 
-    def selectedEducationalInfo
+    def selectedSkillItem
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -49,8 +49,8 @@ class  PDSEducationalInfoController extends CrudFormModel {
         }
     }
     
-    def educationalBackgroundItemListHandler = [
-        fetchList: { entity?.educationalInfos },
+    def civilServiceItemHandler = [
+        fetchList: { entity?.civilserviceInfos },
         createItem : {
            return[
                recordlog : [
@@ -65,8 +65,8 @@ class  PDSEducationalInfoController extends CrudFormModel {
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.educationinfoitems.remove(it)
-                educationalBackgroundItemListHandler?.load();
+                entity.civilserviceInfos.remove(it)
+                civilServiceItemHandler?.load();
                 return true;
             }
             return false;
@@ -77,7 +77,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
        },
         onAddItem : {
-            entity.educationalInfos.add(it);
+            entity.civilserviceInfos.add(it);
         },
         validate:{li->
             //def item=li.item;

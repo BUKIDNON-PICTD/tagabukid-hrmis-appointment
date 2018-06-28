@@ -88,7 +88,6 @@ class PDSTrainingController extends CrudFormModel {
         },
         onAddItem : {
             return[
-                entity.trainingcategoryid = entity.trainingcategory.name,
                 entity.trainings.add(it),
             ]
             },

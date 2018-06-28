@@ -1,0 +1,11 @@
+<workunit schemaName="hrmis_pds">
+    <invokers>
+        <invoker type="pds:section:open" caption="Work Experience" action="open" index="4" />
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.PDSWorkExperienceController" />
+    <pages>
+        <page  template="tagabukid.hrmis.appointment.views.PDSWorkExperiencePage"/>
+    </pages>
+
+</workunit>

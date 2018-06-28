@@ -12,20 +12,18 @@ class  PDSFamilyInfoController extends CrudFormModel {
      @Binding
     def binding;
     
+    def parententity
+    def svc
+
     @Service('DateService')
     def dtSvc
-    
-    // @Env
-    // def env
     
     @Service("PersistenceService")
     def persistenceSvc;
 
     String title = "Family Background";
-    def parententity
-    def svc
     
-    boolean isCreateAllowed(){
+     boolean isCreateAllowed(){
         return false
     }
     
@@ -40,37 +38,166 @@ class  PDSFamilyInfoController extends CrudFormModel {
     boolean isShowNavigation(){
         return false
     }
-    
-     public void beforeSave(o){
-       if (o == 'create'){
-    //         parententity._schemaname = 'hrmis_pds'
-    //         parententity.pdsno = svc.getPDSNo();
-    //         parententity.entityid = entity.person.objid
-            parententity.version._schemaname = 'hrmis_pds_version'
-            parententity.version.versionno = svc.getVersionNo();
-            // parententity.currentversionno
-            // persistenceSvc.create(parententity);             
-            // persistenceSvc.create(parententity.version); 
-            
-            
-    //         //save sa ang pds
-    //         //save dayon ang version
-        }
-    //     // entity.residentialaddress = residentialAddress
-    //     // entity.permanentaddress = permanentAddress
+   
+    def selectedSkillInfo
+    public void beforeOpen() {
+       entity.putAll(parententity);
     }
-    // public void afterCreate(){
-    //     entity = parententity.version.personalinfo
-    // }
-    
-    // def getResidentialAddress(){
-    //     return entity.person.address
-    // }
-    // def getPermanentAddress(){
-    //     return entity.person.address
-    // }
-//    def getPhoto() {
-//        return selectedItem.benificiary.photo;
-//    }
+    public void beforeSave(o){
+        if(o=='create'){
+//            entity.skills{
+//                
+//            }
+           
+        }
+    }
+    def familyBackgroundspousenameHandler = [
+        fetchList: { entity?.familyspouseInfos },
+        createItem : {
+            return[
+                recordlog : [
+                    datecreated : dtSvc.getServerDate(),
+                    createdbyuser : OsirisContext.env.FULLNAME,
+                    createdbyuserid : OsirisContext.env.USERID,
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID,
+                ],
+            ]
+        },
+        onRemoveItem : {
+            if (MsgBox.confirm('Delete item?')){                
+                entity.familyspouseInfos.remove(it)
+                familyBackgroundspousenameHandler?.load();
+                return true;
+            }
+            return false;
+        },
+        onColumnUpdate: { o,col-> 
+            o.recordlog.dateoflastupdate = dtSvc.getServerDate();
+            o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+            
+        },
+        onAddItem : {
+            entity.familyspouseInfos.add(it);
+        },
+        validate:{li->
+            //def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+    ] as EditorListModel
+
+
+    def familyBackgroundfathernameHandler = [
+        fetchList: { entity?.familyfatherInfos },
+        createItem : {
+            return[
+                recordlog : [
+                    datecreated : dtSvc.getServerDate(),
+                    createdbyuser : OsirisContext.env.FULLNAME,
+                    createdbyuserid : OsirisContext.env.USERID,
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID,
+                ],
+            ]
+        },
+        onRemoveItem : {
+            if (MsgBox.confirm('Delete item?')){                
+                entity.familyfatherInfos.remove(it)
+                familyBackgroundfathernameHandler?.load();
+                return true;
+            }
+            return false;
+        },
+        onColumnUpdate: { o,col-> 
+            o.recordlog.dateoflastupdate = dtSvc.getServerDate();
+            o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+            
+        },
+        onAddItem : {
+            entity.familyfatherInfos.add(it);
+        },
+        validate:{li->
+            //def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+    ] as EditorListModel
+
+    def familyBackgroundmothernameHandler = [
+        fetchList: { entity?.familymotherInfos },
+        createItem : {
+            return[
+                recordlog : [
+                    datecreated : dtSvc.getServerDate(),
+                    createdbyuser : OsirisContext.env.FULLNAME,
+                    createdbyuserid : OsirisContext.env.USERID,
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID,
+                ],
+            ]
+        },
+        onRemoveItem : {
+            if (MsgBox.confirm('Delete item?')){                
+                entity.familymotherInfos.remove(it)
+                familyBackgroundmothernameHandler?.load();
+                return true;
+            }
+            return false;
+        },
+        onColumnUpdate: { o,col-> 
+            o.recordlog.dateoflastupdate = dtSvc.getServerDate();
+            o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+            
+        },
+        onAddItem : {
+            entity.familymotherInfos.add(it);
+        },
+        validate:{li->
+            //def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+    ] as EditorListModel
+
+    def familyBackgroundchildnameHandler = [
+        fetchList: { entity?.familychildInfos },
+        createItem : {
+            return[
+                recordlog : [
+                    datecreated : dtSvc.getServerDate(),
+                    createdbyuser : OsirisContext.env.FULLNAME,
+                    createdbyuserid : OsirisContext.env.USERID,
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID,
+                ],
+            ]
+        },
+        onRemoveItem : {
+            if (MsgBox.confirm('Delete item?')){                
+                entity.familychildInfos.remove(it)
+                familyBackgroundchildnameHandler?.load();
+                return true;
+            }
+            return false;
+        },
+        onColumnUpdate: { o,col-> 
+            o.recordlog.dateoflastupdate = dtSvc.getServerDate();
+            o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+            
+        },
+        onAddItem : {
+            entity.familychildInfos.add(it);
+        },
+        validate:{li->
+            //def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+    ] as EditorListModel
     
 }

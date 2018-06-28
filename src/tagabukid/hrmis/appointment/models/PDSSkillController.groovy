@@ -69,7 +69,10 @@ class  PDSSkillController extends CrudFormModel {
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID,
                 ],
-                // satte : 'DRAFT'
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4cb690250de47a5e9a8b5e3c3bcd2332589e2e41
             ]
         },
         onRemoveItem : {
@@ -81,9 +84,9 @@ class  PDSSkillController extends CrudFormModel {
             return false;
         },
         onColumnUpdate: { o,col-> 
-            o.dateoflastupdate = dtSvc.getServerDate();
-            o.lastupdatedbyuser = OsirisContext.env.FULLNAME;
-            o.lastupdatedbyuserid = OsirisContext.env.USERID;
+            o.recordlog.dateoflastupdate = dtSvc.getServerDate();
+            o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
             
         },
         onAddItem : {
@@ -94,4 +97,8 @@ class  PDSSkillController extends CrudFormModel {
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 4cb690250de47a5e9a8b5e3c3bcd2332589e2e41
 }

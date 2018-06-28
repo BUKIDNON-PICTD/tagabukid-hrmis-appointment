@@ -51,6 +51,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
        loadpersonalinfo()
     }
     public void beforeSave(o){
+
    
          if (o == 'create'){
             entity.pdsno = svc.getPDSNo();

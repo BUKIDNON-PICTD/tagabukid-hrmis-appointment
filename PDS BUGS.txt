@@ -1,15 +1,21 @@
-As of June 26, 2018
+As of June 27, 2018
+
+@bylgrad
 
 BUGS:
 *********************************************
-Section: Voluntary Work
+Section: Training
 --------- Training Type lookup
+--------- Not Saving
 
 Section: Recognition
 --------- Recognition Category lookup
 
 Section: Government ID
 --------- Not Saving
+
+Section: Questions
+--------- Radio hidden
 *********************************************
 NEED FIXING:
 Section: Voluntary Work
@@ -20,3 +26,6 @@ Section: Membership in Organization
 
 Section: References
 ---------- Suggest / lookup details 
+
+Section: Questions
+--------- Fields visible
