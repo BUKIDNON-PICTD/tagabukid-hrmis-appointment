@@ -6,9 +6,9 @@
 		 columnCount="5"
 		 printOrder="Horizontal"
 		 orientation="Landscape"
-		 pageWidth="935"
+		 pageWidth="896"
 		 pageHeight="612"
-		 columnWidth="187"
+		 columnWidth="179"
 		 columnSpacing="0"
 		 leftMargin="0"
 		 rightMargin="0"
@@ -113,12 +113,12 @@
 					<reportElement
 						x="0"
 						y="134"
-						width="186"
+						width="180"
 						height="13"
 						key="textField"/>
 					<box></box>
 					<textElement textAlignment="Center">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="10" isBold="true" isUnderline="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatoryname}]]></textFieldExpression>
 				</textField>
@@ -126,12 +126,12 @@
 					<reportElement
 						x="0"
 						y="147"
-						width="186"
+						width="180"
 						height="13"
 						key="textField-1"/>
 					<box></box>
 					<textElement textAlignment="Center">
-						<font fontName="Tahoma" pdfFontName="Helvetica" isBold="false"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatorytitle}]]></textFieldExpression>
 				</textField>
@@ -146,7 +146,7 @@
 						</reportElement>
 					<box></box>
 					<textElement>
-						<font fontName="Tahoma"/>
+						<font fontName="Tahoma" size="10"/>
 					</textElement>
 				<text><![CDATA[Date:]]></text>
 				</staticText>
@@ -154,7 +154,7 @@
 					<reportElement
 						x="43"
 						y="169"
-						width="143"
+						width="104"
 						height="13"
 						key="staticText-2">
 							<printWhenExpression><![CDATA[new Boolean($F{signatorytitle}!=null)]]></printWhenExpression>
@@ -162,7 +162,7 @@
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font fontName="Tahoma"/>
+						<font fontName="Tahoma" size="10"/>
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
@@ -170,12 +170,12 @@
 					<reportElement
 						x="0"
 						y="0"
-						width="186"
+						width="180"
 						height="110"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5"></box>
 					<textElement textAlignment="Justified" verticalAlignment="Top">
-						<font fontName="Tahoma"/>
+						<font fontName="Tahoma" size="10"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatoryheading}]]></textFieldExpression>
 				</textField>

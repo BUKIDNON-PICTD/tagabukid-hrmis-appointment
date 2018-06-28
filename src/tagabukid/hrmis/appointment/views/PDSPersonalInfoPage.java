@@ -136,12 +136,14 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         civilStatusList1.setCaption("Civil Status");
         civilStatusList1.setCaptionWidth(135);
+        civilStatusList1.setDepends(new String[] {"entity.person"});
         civilStatusList1.setName("entity.person.civilstatus"); // NOI18N
         civilStatusList1.setRequired(true);
         xFormPanel1.add(civilStatusList1);
 
         genderList1.setCaption("Gender");
         genderList1.setCaptionWidth(135);
+        genderList1.setDepends(new String[] {"entity.person"});
         genderList1.setName("entity.person.gender"); // NOI18N
         genderList1.setRequired(true);
         xFormPanel1.add(genderList1);

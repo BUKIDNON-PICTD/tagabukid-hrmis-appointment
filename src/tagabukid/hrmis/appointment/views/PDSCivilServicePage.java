@@ -58,7 +58,7 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.eligibility.name}", "lookup:tagabukid_hrmis_eligibility")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "rating"}
@@ -129,7 +129,6 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
         });
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("civilServiceItemHandler");
-        xDataTable1.setId("civilServiceItemHandler");
         xDataTable1.setItems("");
         xDataTable1.setName("selectedSkillItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);

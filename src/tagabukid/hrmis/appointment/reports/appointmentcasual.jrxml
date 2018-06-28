@@ -283,7 +283,7 @@
 				</break>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="247"
 						width="239"
 						height="34"
@@ -300,7 +300,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="111"
 						width="239"
 						height="34"
@@ -317,7 +317,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="145"
 						width="642"
 						height="34"
@@ -334,7 +334,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="315"
 						width="394"
 						height="34"
@@ -351,7 +351,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="247"
 						width="394"
 						height="34"
@@ -368,7 +368,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="544"
+						x="536"
 						y="213"
 						width="113"
 						height="34"
@@ -385,7 +385,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="315"
 						width="239"
 						height="34"
@@ -402,7 +402,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="349"
 						width="239"
 						height="34"
@@ -419,7 +419,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="409"
+						x="401"
 						y="349"
 						width="135"
 						height="34"
@@ -436,7 +436,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="349"
 						width="394"
 						height="34"
@@ -454,9 +454,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="0"
+						x="7"
 						y="40"
-						width="896"
+						width="881"
 						height="37"
 						key="staticText-14"/>
 					<box>					<topPen lineWidth="0.5"/>
@@ -471,7 +471,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="111"
 						width="642"
 						height="34"
@@ -488,7 +488,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="409"
+						x="401"
 						y="213"
 						width="135"
 						height="34"
@@ -505,7 +505,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="409"
+						x="401"
 						y="179"
 						width="135"
 						height="34"
@@ -522,7 +522,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="544"
+						x="536"
 						y="349"
 						width="113"
 						height="34"
@@ -539,7 +539,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="409"
+						x="401"
 						y="247"
 						width="135"
 						height="34"
@@ -556,7 +556,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="179"
 						width="394"
 						height="34"
@@ -573,7 +573,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="544"
+						x="536"
 						y="179"
 						width="113"
 						height="34"
@@ -590,7 +590,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="544"
+						x="536"
 						y="281"
 						width="113"
 						height="34"
@@ -607,7 +607,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="544"
+						x="536"
 						y="247"
 						width="113"
 						height="34"
@@ -624,7 +624,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="77"
 						width="642"
 						height="34"
@@ -641,7 +641,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="409"
+						x="401"
 						y="281"
 						width="135"
 						height="34"
@@ -658,7 +658,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="213"
 						width="239"
 						height="34"
@@ -675,7 +675,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="179"
 						width="239"
 						height="34"
@@ -692,7 +692,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="213"
 						width="394"
 						height="34"
@@ -709,7 +709,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="77"
 						width="239"
 						height="34"
@@ -726,7 +726,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="544"
+						x="536"
 						y="315"
 						width="113"
 						height="34"
@@ -743,7 +743,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="409"
+						x="401"
 						y="315"
 						width="135"
 						height="34"
@@ -760,7 +760,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="281"
 						width="239"
 						height="34"
@@ -777,7 +777,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="657"
+						x="649"
 						y="145"
 						width="239"
 						height="34"
@@ -794,7 +794,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="15"
+						x="7"
 						y="281"
 						width="394"
 						height="34"
