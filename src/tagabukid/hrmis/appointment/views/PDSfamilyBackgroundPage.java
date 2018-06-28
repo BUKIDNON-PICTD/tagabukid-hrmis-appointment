@@ -34,83 +34,80 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        xDataTableBeanInfo1 = new com.rameses.rcp.control.XDataTableBeanInfo();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
-        xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        entityLookup1 = new com.rameses.entity.components.EntityLookup();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
-        entityLookup2 = new com.rameses.entity.components.EntityLookup();
-        entityLookup3 = new com.rameses.entity.components.EntityLookup();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
-        xLookupField1 = new com.rameses.rcp.control.XLookupField();
-        entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
+        xDataTable1 = new com.rameses.rcp.control.XDataTable();
         xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable2 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable3 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel4 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable4 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Family Info");
+        xTitledBorder1.setTitle("Father Name");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
-        entityLookup1.setCaption("Father's Name");
-        entityLookup1.setCaptionWidth(140);
-        entityLookup1.setExpression("#{item.name}");
-        entityLookup1.setName("entity.father"); // NOI18N
-        entityLookup1.setStretchWidth(300);
-        xFormPanel1.add(entityLookup1);
-
-        xTextField1.setText("entity.fathersextension");
-        xTextField1.setCaption("Extension (Jr., Sr)");
-        xTextField1.setCaptionWidth(140);
-        xTextField1.setPreferredSize(new java.awt.Dimension(312, 20));
-        xFormPanel1.add(xTextField1);
-
-        xTextField2.setText("entity.mothersmaiden");
-        xTextField2.setCaption("Mother's Maiden Name");
-        xTextField2.setCaptionWidth(140);
-        xTextField2.setCellPadding(new java.awt.Insets(10, 0, 0, 0));
-        xTextField2.setPreferredSize(new java.awt.Dimension(312, 20));
-        xFormPanel1.add(xTextField2);
-
-        entityLookup2.setCaption("Mother's Name");
-        entityLookup2.setCaptionWidth(140);
-        entityLookup2.setExpression("#{item.name}");
-        entityLookup2.setName("entity.mother"); // NOI18N
-        entityLookup2.setStretchWidth(300);
-        xFormPanel1.add(entityLookup2);
-
-        entityLookup3.setCaption("Spouse's Name");
-        entityLookup3.setCaptionWidth(140);
-        entityLookup3.setCellPadding(new java.awt.Insets(10, 0, 0, 0));
-        entityLookup3.setExpression("#{item.name}");
-        entityLookup3.setName("entity.spouse"); // NOI18N
-        entityLookup3.setStretchWidth(300);
-        xFormPanel1.add(entityLookup3);
-
-        xTextField3.setText("entity.Spouseextension");
-        xTextField3.setCaption("Extension (Jr., Sr)");
-        xTextField3.setCaptionWidth(140);
-        xTextField3.setPreferredSize(new java.awt.Dimension(312, 20));
-        xFormPanel1.add(xTextField3);
-
-        xLookupField1.setText("entity.businessname");
-        xLookupField1.setCaption("Employer/Business Name");
-        xLookupField1.setCaptionWidth(140);
-        xLookupField1.setPreferredSize(new java.awt.Dimension(312, 20));
-        xFormPanel1.add(xLookupField1);
-
-        entityAddress1.setCaption("Business Address");
-        entityAddress1.setCaptionWidth(140);
-        entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
-        xFormPanel1.add(entityAddress1);
-
-        xTextField4.setText("entity.telephoneno");
-        xTextField4.setCaption("Telephone No.");
-        xTextField4.setCaptionWidth(140);
-        xTextField4.setPreferredSize(new java.awt.Dimension(312, 20));
-        xFormPanel1.add(xTextField4);
-
-        xHorizontalPanel1.add(xFormPanel1);
+        xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "firstname"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "father.nameextension"}
+                , new Object[]{"caption", "nameextension"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable1.setHandler("familyBackgroundfathernameHandler");
+        xDataTable1.setName("selectedfatherInfo"); // NOI18N
+        xHorizontalPanel1.add(xDataTable1);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder2 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder2.setTitle("Children Info");
@@ -146,29 +143,228 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM-dd-yyyy", "MM-dd-yyyy", "MM-dd-yyyy")}
             })
         });
-        xDataTable2.setHandler("familyBackgroundItemListHandler");
+        xDataTable2.setHandler("familyBackgroundchildnameHandler");
         xDataTable2.setName("selectedchildInfo"); // NOI18N
         xHorizontalPanel2.add(xDataTable2);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder3 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder3.setTitle("Mother Name");
+        xHorizontalPanel3.setBorder(xTitledBorder3);
+
+        xDataTable3.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "firstname"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable3.setHandler("familyBackgroundmothernameHandler");
+        xDataTable3.setName("selectedmotherInfo"); // NOI18N
+        xHorizontalPanel3.add(xDataTable3);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder4 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder4.setTitle("Spouse Info");
+        xHorizontalPanel4.setBorder(xTitledBorder4);
+
+        xDataTable4.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "firstname"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "nameextension"}
+                , new Object[]{"caption", "Extension Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "occupation"}
+                , new Object[]{"caption", "Occupation"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "businessname"}
+                , new Object[]{"caption", "Employee/Business Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "businessadd"}
+                , new Object[]{"caption", "Business Address"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "phoneno"}
+                , new Object[]{"caption", "Telephone No."}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable4.setHandler("familyBackgroundspousenameHandler");
+        xDataTable4.setName("selectedspouseInfo"); // NOI18N
+        xHorizontalPanel4.add(xDataTable4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(96, 96, 96))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(95, 95, 95))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         getAccessibleContext().setAccessibleParent(this);
@@ -176,18 +372,14 @@ public class PDSfamilyBackgroundPage extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.enterprise.components.EntityAddress entityAddress1;
-    private com.rameses.entity.components.EntityLookup entityLookup1;
-    private com.rameses.entity.components.EntityLookup entityLookup2;
-    private com.rameses.entity.components.EntityLookup entityLookup3;
+    private com.rameses.rcp.control.XDataTable xDataTable1;
     private com.rameses.rcp.control.XDataTable xDataTable2;
-    private com.rameses.rcp.control.XFormPanel xFormPanel1;
+    private com.rameses.rcp.control.XDataTable xDataTable3;
+    private com.rameses.rcp.control.XDataTable xDataTable4;
+    private com.rameses.rcp.control.XDataTableBeanInfo xDataTableBeanInfo1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
-    private com.rameses.rcp.control.XLookupField xLookupField1;
-    private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
-    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel4;
     // End of variables declaration//GEN-END:variables
 }
