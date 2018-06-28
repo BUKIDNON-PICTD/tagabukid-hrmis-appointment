@@ -37,38 +37,38 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xLabel2 = new com.rameses.rcp.control.XLabel();
-        xRadioList1 = new com.rameses.rcp.control.XRadioList();
-        xRadioList2 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox11 = new com.rameses.rcp.control.XCheckBox();
+        xCheckBox12 = new com.rameses.rcp.control.XCheckBox();
         xTextField1 = new com.rameses.rcp.control.XTextField();
         xSeparator1 = new com.rameses.rcp.control.XSeparator();
-        xRadioList3 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox10 = new com.rameses.rcp.control.XCheckBox();
         xTextField4 = new com.rameses.rcp.control.XTextField();
-        xRadioList4 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox9 = new com.rameses.rcp.control.XCheckBox();
         xLabel1 = new com.rameses.rcp.control.XLabel();
         xDateField2 = new com.rameses.rcp.control.XDateField();
         xTextField5 = new com.rameses.rcp.control.XTextField();
         xSeparator3 = new com.rameses.rcp.control.XSeparator();
-        xRadioList5 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox8 = new com.rameses.rcp.control.XCheckBox();
         xTextField6 = new com.rameses.rcp.control.XTextField();
         xSeparator2 = new com.rameses.rcp.control.XSeparator();
-        xRadioList6 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox7 = new com.rameses.rcp.control.XCheckBox();
         xTextField7 = new com.rameses.rcp.control.XTextField();
         xSeparator4 = new com.rameses.rcp.control.XSeparator();
-        xRadioList7 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox6 = new com.rameses.rcp.control.XCheckBox();
         xTextField8 = new com.rameses.rcp.control.XTextField();
-        xRadioList8 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox5 = new com.rameses.rcp.control.XCheckBox();
         xTextField9 = new com.rameses.rcp.control.XTextField();
         xSeparator5 = new com.rameses.rcp.control.XSeparator();
-        xRadioList9 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox4 = new com.rameses.rcp.control.XCheckBox();
         xLabel3 = new com.rameses.rcp.control.XLabel();
         xTextField10 = new com.rameses.rcp.control.XTextField();
         xSeparator6 = new com.rameses.rcp.control.XSeparator();
         xLabel4 = new com.rameses.rcp.control.XLabel();
-        xRadioList10 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox3 = new com.rameses.rcp.control.XCheckBox();
         xTextField11 = new com.rameses.rcp.control.XTextField();
-        xRadioList11 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox2 = new com.rameses.rcp.control.XCheckBox();
         xTextField12 = new com.rameses.rcp.control.XTextField();
-        xRadioList12 = new com.rameses.rcp.control.XRadioList();
+        xCheckBox1 = new com.rameses.rcp.control.XCheckBox();
         xTextField13 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -76,24 +76,23 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xLabel2.setCaption("");
-        xLabel2.setPreferredSize(new java.awt.Dimension(500, 50));
+        xLabel2.setPreferredSize(new java.awt.Dimension(700, 50));
         xLabel2.setShowCaption(false);
         xLabel2.setText("Are you related by consanguinity or affinity to the appointing or recommending authority, or to the chief of bureau or office or to the person who has immediate supervision over you in the Office, Bureau or Department where you will be apppointed,");
         xLabel2.setUseHtml(true);
         xFormPanel1.add(xLabel2);
 
-        xRadioList1.setCaption("a. within the third degree?");
-        xRadioList1.setCaptionWidth(725);
-        xRadioList1.setHandler("choice");
-        xRadioList1.setItemGap(50);
-        xRadioList1.setName("entity.thirddegree"); // NOI18N
-        xFormPanel1.add(xRadioList1);
+        xCheckBox11.setCaption("a. within the third degree?");
+        xCheckBox11.setCaptionWidth(700);
+        xCheckBox11.setName("entity.thirddegree"); // NOI18N
+        xCheckBox11.setText("YES");
+        xFormPanel1.add(xCheckBox11);
 
-        xRadioList2.setCaption("b. within the fourth degree (for Local Government Unit - Career Employees)?");
-        xRadioList2.setCaptionWidth(725);
-        xRadioList2.setItemGap(50);
-        xRadioList2.setName("entity.fourthdegree"); // NOI18N
-        xFormPanel1.add(xRadioList2);
+        xCheckBox12.setCaption("b. within the fourth degree (for Local Government Unit - Career Employees)?");
+        xCheckBox12.setCaptionWidth(700);
+        xCheckBox12.setName("entity.fourthdegree"); // NOI18N
+        xCheckBox12.setText("YES");
+        xFormPanel1.add(xCheckBox12);
 
         xTextField1.setCaption("If YES, give details");
         xTextField1.setCaptionWidth(110);
@@ -105,13 +104,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xSeparator1.setPreferredSize(new java.awt.Dimension(0, 50));
         xFormPanel1.add(xSeparator1);
 
-        xRadioList3.setCaption("a. Have you ever been found guilty of any administrative offense?");
-        xRadioList3.setCaptionWidth(725);
-        xRadioList3.setHandler("choiceHandler");
-        xRadioList3.setItemExpression("");
-        xRadioList3.setItemGap(50);
-        xRadioList3.setName("entity.offense"); // NOI18N
-        xFormPanel1.add(xRadioList3);
+        xCheckBox10.setCaption("a. Have you ever been found guilty of any administrative offense?");
+        xCheckBox10.setCaptionWidth(700);
+        xCheckBox10.setName("entity.offense"); // NOI18N
+        xCheckBox10.setText("YES");
+        xFormPanel1.add(xCheckBox10);
 
         xTextField4.setCaption("If YES, give details");
         xTextField4.setCaptionWidth(110);
@@ -120,11 +117,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);
 
-        xRadioList4.setCaption("b. Have you been criminally charged before any court?");
-        xRadioList4.setCaptionWidth(725);
-        xRadioList4.setItemGap(50);
-        xRadioList4.setName("entity.criminalcharge"); // NOI18N
-        xFormPanel1.add(xRadioList4);
+        xCheckBox9.setCaption("b. Have you been criminally charged before any court?");
+        xCheckBox9.setCaptionWidth(700);
+        xCheckBox9.setName("entity.criminalcharge"); // NOI18N
+        xCheckBox9.setText("YES");
+        xFormPanel1.add(xCheckBox9);
 
         xLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         xLabel1.setCaption(" ");
@@ -149,11 +146,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xSeparator3.setPreferredSize(new java.awt.Dimension(0, 50));
         xFormPanel1.add(xSeparator3);
 
-        xRadioList5.setCaption("Have you ever been convicted of any crime or violation of any law, decree, ordinance or regulation\n by any court or tribunal?");
-        xRadioList5.setCaptionWidth(725);
-        xRadioList5.setItemGap(50);
-        xRadioList5.setName("entity.convicted"); // NOI18N
-        xFormPanel1.add(xRadioList5);
+        xCheckBox8.setCaption("Have you ever been convicted of any crime or violation of any law, decree, ordinance or regulation  by any court or tribunal?");
+        xCheckBox8.setCaptionWidth(700);
+        xCheckBox8.setName("entity.convicted"); // NOI18N
+        xCheckBox8.setText("YES");
+        xFormPanel1.add(xCheckBox8);
 
         xTextField6.setCaption("If YES, give details");
         xTextField6.setCaptionWidth(110);
@@ -165,11 +162,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xSeparator2.setPreferredSize(new java.awt.Dimension(0, 50));
         xFormPanel1.add(xSeparator2);
 
-        xRadioList6.setCaption("Have you ever been separated from the service in any of the following modes: resignation, retirement, dropped from the rolls, dismissal, termination, end of term, finished contract or phased out (abolition) in the public or private sector?");
-        xRadioList6.setCaptionWidth(725);
-        xRadioList6.setItemGap(50);
-        xRadioList6.setName("entity.separated"); // NOI18N
-        xFormPanel1.add(xRadioList6);
+        xCheckBox7.setCaption("Have you ever been separated from the service in any of the following modes: resignation, retirement, dropped from the rolls, dismissal, termination, end of term, finished contract or phased out (abolition) in the public or private sector?");
+        xCheckBox7.setCaptionWidth(700);
+        xCheckBox7.setName("entity.separated"); // NOI18N
+        xCheckBox7.setText("YES");
+        xFormPanel1.add(xCheckBox7);
 
         xTextField7.setCaption("If YES, give details");
         xTextField7.setCaptionWidth(110);
@@ -182,11 +179,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xSeparator4.setPreferredSize(new java.awt.Dimension(0, 50));
         xFormPanel1.add(xSeparator4);
 
-        xRadioList7.setCaption("a. Have you ever been a candidate in a national or local election held within the last year (except Barangay election)?");
-        xRadioList7.setCaptionWidth(725);
-        xRadioList7.setItemGap(50);
-        xRadioList7.setName("entity.candidate"); // NOI18N
-        xFormPanel1.add(xRadioList7);
+        xCheckBox6.setCaption("a. Have you ever been a candidate in a national or local election held within the last year (except Barangay election)?");
+        xCheckBox6.setCaptionWidth(700);
+        xCheckBox6.setName("entity.candidate"); // NOI18N
+        xCheckBox6.setText("YES");
+        xFormPanel1.add(xCheckBox6);
 
         xTextField8.setCaption("If YES, give details");
         xTextField8.setCaptionWidth(110);
@@ -195,11 +192,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xTextField8.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField8);
 
-        xRadioList8.setCaption("b. Have you resigned from the government service during the three (3)-month period before the last election to promote/actively campaign for a national or local candidate?");
-        xRadioList8.setCaptionWidth(725);
-        xRadioList8.setItemGap(50);
-        xRadioList8.setName("entity.resigncampaign"); // NOI18N
-        xFormPanel1.add(xRadioList8);
+        xCheckBox5.setCaption("b. Have you resigned from the government service during the three (3)-month period before the last election to promote/actively campaign for a national or local candidate?");
+        xCheckBox5.setCaptionWidth(700);
+        xCheckBox5.setName("entity.resigncampaign"); // NOI18N
+        xCheckBox5.setText("YES");
+        xFormPanel1.add(xCheckBox5);
 
         xTextField9.setCaption("If YES, give details");
         xTextField9.setCaptionWidth(110);
@@ -211,11 +208,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xSeparator5.setPreferredSize(new java.awt.Dimension(0, 50));
         xFormPanel1.add(xSeparator5);
 
-        xRadioList9.setCaption("Have you acquired the status of an immigrant or permanent resident of another country? ");
-        xRadioList9.setCaptionWidth(725);
-        xRadioList9.setItemGap(50);
-        xRadioList9.setName("entity.immigrant"); // NOI18N
-        xFormPanel1.add(xRadioList9);
+        xCheckBox4.setCaption("Have you acquired the status of an immigrant or permanent resident of another country? ");
+        xCheckBox4.setCaptionWidth(700);
+        xCheckBox4.setName("entity.immigrant"); // NOI18N
+        xCheckBox4.setText("YES");
+        xFormPanel1.add(xCheckBox4);
 
         xLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         xLabel3.setCaption(" ");
@@ -235,17 +232,16 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xFormPanel1.add(xSeparator6);
 
         xLabel4.setCaption("");
-        xLabel4.setPreferredSize(new java.awt.Dimension(500, 50));
+        xLabel4.setPreferredSize(new java.awt.Dimension(700, 50));
         xLabel4.setShowCaption(false);
-        xLabel4.setText("Pursuant to: (a) Indigenous People's Act (RA 8371); (b) Magna Carta for Disabled Persons (RA 7277); and (c) Solo Parents Welfare Act of 2000 (RA 8972), please answer the following items:");
         xLabel4.setUseHtml(true);
         xFormPanel1.add(xLabel4);
 
-        xRadioList10.setCaption("a. Are you a member of any indigenous group?");
-        xRadioList10.setCaptionWidth(725);
-        xRadioList10.setItemGap(50);
-        xRadioList10.setName("entity.indigenousgroup"); // NOI18N
-        xFormPanel1.add(xRadioList10);
+        xCheckBox3.setCaption("a. Are you a member of any indigenous group?");
+        xCheckBox3.setCaptionWidth(700);
+        xCheckBox3.setName("entity.indigenousgroup"); // NOI18N
+        xCheckBox3.setText("YES");
+        xFormPanel1.add(xCheckBox3);
 
         xTextField11.setCaption("If YES, please specify");
         xTextField11.setCaptionWidth(120);
@@ -254,11 +250,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xTextField11.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField11);
 
-        xRadioList11.setCaption("b. Are you a person with disability?");
-        xRadioList11.setCaptionWidth(725);
-        xRadioList11.setItemGap(50);
-        xRadioList11.setName("entity.pwd"); // NOI18N
-        xFormPanel1.add(xRadioList11);
+        xCheckBox2.setCaption("b. Are you a person with disability?");
+        xCheckBox2.setCaptionWidth(700);
+        xCheckBox2.setName("entity.pwd"); // NOI18N
+        xCheckBox2.setText("YES");
+        xFormPanel1.add(xCheckBox2);
 
         xTextField12.setCaption("If YES, please specify ID No");
         xTextField12.setCaptionWidth(150);
@@ -267,11 +263,11 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xTextField12.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField12);
 
-        xRadioList12.setCaption("c. Are you a solo parent?");
-        xRadioList12.setCaptionWidth(725);
-        xRadioList12.setItemGap(50);
-        xRadioList12.setName("entity.soloparent"); // NOI18N
-        xFormPanel1.add(xRadioList12);
+        xCheckBox1.setCaption("c. Are you a solo parent?");
+        xCheckBox1.setCaptionWidth(700);
+        xCheckBox1.setName("entity.soloparent"); // NOI18N
+        xCheckBox1.setText("YES");
+        xFormPanel1.add(xCheckBox1);
 
         xTextField13.setCaption("If YES, please specify ID No");
         xTextField13.setCaptionWidth(150);
@@ -297,13 +293,25 @@ public class PDSQuestionPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 998, Short.MAX_VALUE)
+                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.rameses.rcp.control.XCheckBox xCheckBox1;
+    private com.rameses.rcp.control.XCheckBox xCheckBox10;
+    private com.rameses.rcp.control.XCheckBox xCheckBox11;
+    private com.rameses.rcp.control.XCheckBox xCheckBox12;
+    private com.rameses.rcp.control.XCheckBox xCheckBox2;
+    private com.rameses.rcp.control.XCheckBox xCheckBox3;
+    private com.rameses.rcp.control.XCheckBox xCheckBox4;
+    private com.rameses.rcp.control.XCheckBox xCheckBox5;
+    private com.rameses.rcp.control.XCheckBox xCheckBox6;
+    private com.rameses.rcp.control.XCheckBox xCheckBox7;
+    private com.rameses.rcp.control.XCheckBox xCheckBox8;
+    private com.rameses.rcp.control.XCheckBox xCheckBox9;
     private com.rameses.rcp.control.XDateField xDateField2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
@@ -311,18 +319,6 @@ public class PDSQuestionPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLabel xLabel2;
     private com.rameses.rcp.control.XLabel xLabel3;
     private com.rameses.rcp.control.XLabel xLabel4;
-    private com.rameses.rcp.control.XRadioList xRadioList1;
-    private com.rameses.rcp.control.XRadioList xRadioList10;
-    private com.rameses.rcp.control.XRadioList xRadioList11;
-    private com.rameses.rcp.control.XRadioList xRadioList12;
-    private com.rameses.rcp.control.XRadioList xRadioList2;
-    private com.rameses.rcp.control.XRadioList xRadioList3;
-    private com.rameses.rcp.control.XRadioList xRadioList4;
-    private com.rameses.rcp.control.XRadioList xRadioList5;
-    private com.rameses.rcp.control.XRadioList xRadioList6;
-    private com.rameses.rcp.control.XRadioList xRadioList7;
-    private com.rameses.rcp.control.XRadioList xRadioList8;
-    private com.rameses.rcp.control.XRadioList xRadioList9;
     private com.rameses.rcp.control.XScrollPane xScrollPane1;
     private com.rameses.rcp.control.XSeparator xSeparator1;
     private com.rameses.rcp.control.XSeparator xSeparator2;
