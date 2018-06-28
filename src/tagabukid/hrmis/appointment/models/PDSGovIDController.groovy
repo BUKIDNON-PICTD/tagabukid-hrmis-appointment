@@ -48,21 +48,40 @@ class PDSGovIDController extends CrudFormModel{
     public void beforeOpen() {
        entity.putAll(parententity);
     }
+    
     public void beforeSave(o){
-            parententity._schemaname = 'hrmis_pds'
-            entity.pdsid = parententity.objid
-            // persistenceSvc.update(entity)
-        if(o == 'create'){
-            entity.recordlog_datecreated = dtSvc.getServerDate();
-            entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
-            entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
-            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
-            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
-            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
-        }else{
-            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
-            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
-            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
-            }
+            def govids = [
+                idtype: entity.idtype,
+                idno  : entity.idno,
+                issuance : entity.issuance,
+                recordlog : [
+                    datecreated : dtSvc.getServerDate(),
+                    createdbyuser : OsirisContext.env.FULLNAME,
+                    createdbyuserid : OsirisContext.env.USERID,  
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID 
+                ]
+            ]
+            entity.govids = []
+            entity.govids.add(govids)
+            println o
+        
+//            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
+//            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
+//            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
+            
+    }
+    
+    public void afterSave(){
+        entity.idtype=entity.govids[0].idtype
+        entity.idno=entity.govids[0].idno
+        entity.issuance=entity.govids[0].issuance
+    }
+
+    public void afterOpen(){
+        entity.idtype=entity.govids[0].idtype
+        entity.idno=entity.govids[0].idno
+        entity.issuance=entity.govids[0].issuance
     }
 }
