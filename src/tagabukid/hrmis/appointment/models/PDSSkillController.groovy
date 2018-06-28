@@ -18,9 +18,6 @@ class  PDSSkillController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
-<<<<<<< HEAD
-    String title = "Skills";
-=======
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -31,7 +28,6 @@ class  PDSSkillController extends CrudFormModel {
     // def txnsvc;
     
     String title = "SPECIAL SKILLS and HOBBIES";
->>>>>>> 33d6ec9dfb7d94037f130d79271558affad77191
     
      boolean isCreateAllowed(){
         return false
@@ -73,10 +69,6 @@ class  PDSSkillController extends CrudFormModel {
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID,
                 ],
-<<<<<<< HEAD
-=======
-                // satte : 'DRAFT'
->>>>>>> 33d6ec9dfb7d94037f130d79271558affad77191
             ]
         },
         onRemoveItem : {
@@ -101,8 +93,5 @@ class  PDSSkillController extends CrudFormModel {
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
-<<<<<<< HEAD
    
-=======
->>>>>>> 33d6ec9dfb7d94037f130d79271558affad77191
 }
