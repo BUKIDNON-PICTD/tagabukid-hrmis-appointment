@@ -61,7 +61,7 @@ class PDSGovIDController extends CrudFormModel{
                     datecreated : dtSvc.getServerDate(),
                     createdbyuser : OsirisContext.env.FULLNAME,
                     createdbyuserid : OsirisContext.env.USERID,  
-                    dateoflastupdate : dtSvc.getServerDate(),
+                    dateoflastupdate : dtgit Svc.getServerDate(),
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID 
                 ]
