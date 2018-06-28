@@ -107,9 +107,37 @@ class PDSQuestionController extends CrudFormModel {
                         lastupdatedbyuser   : OsirisContext.env.USERID,
             ],
         ]
+        entity.pdsqs = []
         entity.pdsqs.add(pdsqs)
     }
     public void afterSave(){
+        entity.thirddegree = entity.pdsqs[0].thirddegree
+        entity.fourthdegree = entity.pdsqs[0].fourthdegree
+        entity.degreedetails = entity.pdsqs[0].degreedetails
+        entity.offense = entity.pdsqs[0].offense
+        entity.offensedetails = entity.pdsqs[0].offensedetails
+        entity.criminalcharge = entity.pdsqs[0].criminalcharge
+        entity.criminalchargedate = entity.pdsqs[0].criminalchargedate
+        entity.criminalchargestatus = entity.pdsqs[0].criminalchargestatus
+        entity.convicted = entity.pdsqs[0].convicted
+        entity.convictiondetails = entity.pdsqs[0].convictiondetails
+        entity.separated = entity.pdsqs[0].separated
+        entity.separationdetails = entity.pdsqs[0].separationdetails
+        entity.candidate = entity.pdsqs[0].candidate
+        entity.candidacydetails = entity.pdsqs[0].candidacydetails
+        entity.resigncampaign = entity.pdsqs[0].resigncampaign
+        entity.resigncampaigndetails = entity.pdsqs[0].resigncampaigndetails
+        entity.immigrant = entity.pdsqs[0].immigrant
+        entity.immigrantcountry = entity.pdsqs[0].immigrantcountry
+        entity.indigenousgroup = entity.pdsqs[0].indigenousgroup
+        entity.indigenousgroupdetails = entity.pdsqs[0].indigenousgroupdetails
+        entity.pwd = entity.pdsqs[0].pwd
+        entity.pwdidno = entity.pdsqs[0].pwdidno
+        entity.soloparent = entity.pdsqs[0].soloparent
+        entity.soloparentidno = entity.pdsqs[0].soloparentidno
+    }
+    
+    public void afterOpen() {
         entity.thirddegree = entity.pdsqs[0].thirddegree
         entity.fourthdegree = entity.pdsqs[0].fourthdegree
         entity.degreedetails = entity.pdsqs[0].degreedetails
