@@ -80,8 +80,10 @@ class PDSGovIDController extends CrudFormModel{
     }
 
     public void afterOpen(){
-        entity.idtype=entity.govids[0].idtype
-        entity.idno=entity.govids[0].idno
-        entity.issuance=entity.govids[0].issuance
+        if(entity.govids){
+                entity.idtype=entity.govids[0].idtype
+                entity.idno=entity.govids[0].idno
+                entity.issuance=entity.govids[0].issuance
+            }
     }
 }
