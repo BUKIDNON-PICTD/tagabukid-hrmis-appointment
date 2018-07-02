@@ -207,24 +207,24 @@ class  PDSFamilyInfoController extends CrudFormModel {
     def getFatherLookupHandler(){
         return Inv.lookupOpener('lookup:individualwide',[
                 onselect :{
-                     selectedfatherInfo.father = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
-                     binding.refresh();
+                    selectedfatherInfo.father = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    binding.refresh();
                 }
             ]);
     }
     def getMotherLookupHandler(){
         return Inv.lookupOpener('lookup:individualwide',[
                 onselect :{
-                      selectedmotherInfo.mother = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
-                     binding.refresh();
+                    selectedmotherInfo.mother = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    // binding.refresh();
                 }
             ]);
     }
     def getSpouseLookupHandler(){
         return Inv.lookupOpener('lookup:individualwide',[
                 onselect :{
-                      selectedspouseInfo.spouse = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
-                     binding.refresh();
+                    selectedspouseInfo.spouse = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    // binding.refresh();
                 }
             ]);
     }
