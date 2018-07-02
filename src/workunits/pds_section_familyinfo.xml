@@ -6,7 +6,7 @@
     <code class="tagabukid.hrmis.appointment.models.PDSFamilyInfoController" />
     
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSfamilyBackgroundPage"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSFamilyBackgroundPage"/>
     </pages>
     
 </workunit>
