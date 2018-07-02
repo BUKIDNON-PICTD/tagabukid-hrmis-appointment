@@ -23,7 +23,7 @@ class  PDSFamilyInfoController extends CrudFormModel {
 
     String title = "Family Background";
     
-     boolean isCreateAllowed(){
+    boolean isCreateAllowed(){
         return false
     }
     
@@ -39,7 +39,10 @@ class  PDSFamilyInfoController extends CrudFormModel {
         return false
     }
    
-    def selectedSkillInfo
+    def selectedfatherInfo
+    def selectedmotherInfo
+    def selectedspouseInfo
+
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -200,4 +203,29 @@ class  PDSFamilyInfoController extends CrudFormModel {
         }
     ] as EditorListModel
     
+
+    def getFatherLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                     selectedfatherInfo.father = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                     binding.refresh();
+                }
+            ]);
+    }
+    def getMotherLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                      selectedmotherInfo.mother = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                     binding.refresh();
+                }
+            ]);
+    }
+    def getSpouseLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                      selectedspouseInfo.spouse = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                     binding.refresh();
+                }
+            ]);
+    }
 }

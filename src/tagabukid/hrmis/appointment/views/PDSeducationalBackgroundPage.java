@@ -71,7 +71,7 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.school.name + (item.school.address.addressdetails? ' - '+ item.school.address.addressdetails:'') }", "lookup:tagabukid_hrmis_institution")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "school"}
+                new Object[]{"name", "school.address.addressdetails"}
                 , new Object[]{"caption", "Address"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}

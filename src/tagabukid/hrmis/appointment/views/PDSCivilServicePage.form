@@ -38,7 +38,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <PropertyBean type="com.rameses.rcp.control.border.XTitledBorder">
-            <Property name="title" type="java.lang.String" value="Civil Service Eligibility"/>
+            <Property name="title" type="java.lang.String" value="Civil Service Eligibility Details"/>
           </PropertyBean>
         </Property>
       </Properties>
@@ -51,7 +51,8 @@
             <Property name="editable" type="boolean" value="true"/>
             <Property name="handler" type="java.lang.String" value="civilServiceItemHandler"/>
             <Property name="items" type="java.lang.String" value=""/>
-            <Property name="name" type="java.lang.String" value="selectedSkillItem" noResource="true"/>
+            <Property name="multiSelectName" type="java.lang.String" value=""/>
+            <Property name="name" type="java.lang.String" value="selectedCivilServiceItem" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>
