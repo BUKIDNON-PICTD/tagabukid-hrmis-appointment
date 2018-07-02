@@ -1,0 +1,7 @@
+"selectedfatherInfo|selectedmotherInfo|selectedspouseInfo|selectedchildInfo"[mode=='read']{
+    enabled:false;
+}
+
+"selectedfatherInfo|selectedmotherInfo|selectedspouseInfo|selectedchildInfo"[mode!='read']{
+    enabled:true;
+}
