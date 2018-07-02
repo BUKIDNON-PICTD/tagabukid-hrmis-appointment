@@ -42,7 +42,7 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Civil Service Eligibility");
+        xTitledBorder1.setTitle("Civil Service Eligibility Details");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
@@ -130,7 +130,8 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("civilServiceItemHandler");
         xDataTable1.setItems("");
-        xDataTable1.setName("selectedSkillItem"); // NOI18N
+        xDataTable1.setMultiSelectName("");
+        xDataTable1.setName("selectedCivilServiceItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
