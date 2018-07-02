@@ -34,9 +34,10 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
     
-    boolean isAllowEditGrid() {
-        return ( entity.currentsalarystep.objid != null ); 
-    }
+    boolean getAllowEditGrid(){
+        if(entity.currentsalarystep) return true;
+        return false
+    }   
     
     boolean isAllowPreviewAppointment() {
         return ( mode=='read'); 
@@ -73,8 +74,8 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         tag = invoker?.properties?.tag;
         if(tag=='renew'){
             entity.putAll(svc.initRenew(renewcaller.entity))
-            println entity.currentsalarystep
-            println mode
+//            println entity.currentsalarystep
+//            println mode
         }else{
             entity = svc.initCreate();
         }
@@ -168,20 +169,22 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
             loadData();
         }
     }
-    def getTranchLookupHandler(){
-        return Inv.lookupOpener('lookup:tagabukid_hrmis_tranche',[
-                onselect :{tranche ->
-                    entity.currentsalarystep.putAll(tranche)  
-                    entity.appointmentitems.each{
-                        it.salaryscheduleitem  = svc.getDailyWageByTranch(tranche,it.plantilla);
-                        it.monthlywage = it.salaryscheduleitem.amount
-                        it.dailywage = it.salaryscheduleitem.amount / 22
-                    }
-                    appointmentitemListHandler.reload();
-                }
-            ]);
+//    def getTranchLookupHandler(){
+//        return Inv.lookupOpener('lookup:tagabukid_hrmis_tranche',[
+//                onselect :{tranche ->
+////                    entity.currentsalarystep.putAll(tranche)  
+//                   
+//                }
+//            ]);
+//    }
+    void calculatewage(){
+        entity.appointmentitems.each{
+            it.salaryscheduleitem  = svc.getDailyWageByTranch(entity.currentsalarystep,it.plantilla);
+            it.monthlywage = it.salaryscheduleitem.amount
+            it.dailywage = it.salaryscheduleitem.amount / 22
+        }
+        appointmentitemListHandler.reload();
     }
-
     // def getPersonnelLookupHandler(){
     //     return Inv.lookupOpener('lookup:individualwide',[
     //             onselect :{personnel ->
