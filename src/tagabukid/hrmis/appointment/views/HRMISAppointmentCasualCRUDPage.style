@@ -1,10 +1,18 @@
-"entity.*|selectedAppointmentItem|selectedSignatoryItem"[mode == 'read']{
+"entity.*"[mode == 'read']{
     enabled:false;
 }
 
-"entity.*|selectedAppointmentItem|selectedSignatoryItem"[mode != 'read']{
+"entity.*"[mode != 'read']{
     enabled:true;
 }
+
+"selectedAppointmentItem|selectedSignatoryItem"[true==true]{
+    enabled:false;
+}
+
+"selectedAppointmentItem"[ entity.currentsalarystep != null] {
+    enabled:true;
+}   
 
 
 
