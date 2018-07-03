@@ -48,7 +48,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "name"}
+                new Object[]{"name", "voluntarywork.objid"}
                 , new Object[]{"caption", "NAME & ADDRESS OF ORGANIZATION"}
                 , new Object[]{"width", 200}
                 , new Object[]{"minWidth", 0}
@@ -59,10 +59,10 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.organizationname + item.addressdetails}", "lookup:tagabukid_hrmis_voluntarywork")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "from"}
+                new Object[]{"name", "voluntarywork.datefrom"}
                 , new Object[]{"caption", "FROM"}
                 , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
@@ -73,10 +73,10 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("mm//dd/yyyy", "mm/dd/yyyy", "mm/dd/yyyy")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "to"}
+                new Object[]{"name", "voluntarywork.dateto"}
                 , new Object[]{"caption", "TO"}
                 , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
@@ -87,10 +87,10 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("mm/dd/yyyy", "mm/dd/yyyy", "mm/dd/yyyy")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "hours"}
+                new Object[]{"name", "voluntarywork.numberofhours"}
                 , new Object[]{"caption", "NUMBER OF HOURS"}
                 , new Object[]{"width", 70}
                 , new Object[]{"minWidth", 0}

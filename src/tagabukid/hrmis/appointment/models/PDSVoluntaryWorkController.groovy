@@ -89,7 +89,7 @@ class PDSVoluntaryWorkController extends CrudFormModel {
         },
         onAddItem : {
             entity.voluntaryworks.add(it);
-            println it
+            // println it
         },
         validate:{li->
             //def item=li.item;
