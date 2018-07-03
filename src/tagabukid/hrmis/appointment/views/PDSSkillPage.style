@@ -1,0 +1,7 @@
+"selectedSkillItem"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedSkillItem"[mode != 'read']{
+    enabled:true;
+}

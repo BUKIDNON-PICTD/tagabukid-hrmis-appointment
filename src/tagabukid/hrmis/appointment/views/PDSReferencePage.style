@@ -1,0 +1,7 @@
+"selectedReferenceItem"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedReferenceItem"[mode != 'read']{
+    enabled:true;
+}

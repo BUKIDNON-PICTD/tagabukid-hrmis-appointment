@@ -43,6 +43,8 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("VOLUNTARY WORK OR INVOLVEMENT DETAILS");
         xHorizontalPanel1.setBorder(xTitledBorder1);
+        xHorizontalPanel1.setEnabled(false);
+        xHorizontalPanel1.setName("vwpane"); // NOI18N
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
@@ -118,7 +120,6 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
         });
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("voluntaryworkListHandler");
-        xDataTable1.setId("voluntaryworkListHandler");
         xDataTable1.setMultiSelectName("");
         xDataTable1.setName("selectedVoluntaryWorkItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
