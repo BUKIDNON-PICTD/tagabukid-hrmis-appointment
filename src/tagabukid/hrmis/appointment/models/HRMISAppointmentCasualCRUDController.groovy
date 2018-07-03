@@ -34,11 +34,6 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
     
-    boolean getAllowEditGrid(){
-        if(entity.currentsalarystep) return true;
-        return false
-    }   
-    
     boolean isAllowPreviewAppointment() {
         return ( mode=='read'); 
     }
@@ -47,7 +42,8 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         def currdate = new java.sql.Date(dtSvc.getServerDate().time);
         def datediff = entity.effectiveuntil.time - currdate.time
         def range = 0..60
-        return (mode=='read' && entity.state=='APPROVED' && range.contains((datediff / (60*60*24*1000)) as int)); 
+//        return (mode=='read' && entity.state=='APPROVED' && range.contains((datediff / (60*60*24*1000)) as int)); 
+        return (mode=='read' && entity.state=='APPROVED' && ((datediff / (60*60*24*1000)) as int) < 0); 
     }
 
     boolean isDeleteAllowed() {

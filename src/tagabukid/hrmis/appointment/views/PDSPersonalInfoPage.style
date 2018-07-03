@@ -1,0 +1,7 @@
+"residentialAddress|permanentAddress"[mode=='read']{
+    enabled:false;
+}
+
+"residentialAddress|permanentAddress"[mode!='read']{
+    enabled:true;
+}

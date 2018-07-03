@@ -45,6 +45,7 @@ class PDSInfoController{
         loadSections('create');
     }
     public void open(){
+        title = entity.pdsno + " - " + entity.person.name
         loadSections('open');
     }
 //    public void afterCreate (){

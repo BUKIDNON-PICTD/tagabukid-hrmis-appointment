@@ -69,6 +69,8 @@ class  PDSSkillController extends CrudFormModel {
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID,
                 ],
+
+
             ]
         },
         onRemoveItem : {
@@ -93,4 +95,5 @@ class  PDSSkillController extends CrudFormModel {
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
+
 }
