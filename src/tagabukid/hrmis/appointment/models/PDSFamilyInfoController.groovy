@@ -63,12 +63,19 @@ class  PDSFamilyInfoController extends CrudFormModel {
         }
     }
     public void beforeSave(o){
-        entity.familyfatherInfos[0].father._schemaname='entityindividual'
-        entity.familymotherInfos[0].mother._schemaname='entityindividual'
-        entity.familyspouseInfos[0].spouse._schemaname='entityindividual'
-        persistenceSvc.update(entity.familyfatherInfos[0].father)
-        persistenceSvc.update(entity.familymotherInfos[0].mother)
-        persistenceSvc.update(entity.familyspouseInfos[0].spouse)
+        if (entity.familyfatherInfos.size > 0){
+            entity.familyfatherInfos[0].father._schemaname='entityindividual'
+            persistenceSvc.update(entity.familyfatherInfos[0].father)
+        }
+        if (entity.familymotherInfos.size > 0){
+            entity.familymotherInfos[0].mother._schemaname='entityindividual'
+            persistenceSvc.update(entity.familymotherInfos[0].mother)
+        }
+        if (entity.familyspouseInfos.size > 0){
+            entity.familyspouseInfos[0].spouse._schemaname='entityindividual'
+             persistenceSvc.update(entity.familyspouseInfos[0].spouse)
+        }
+
         entity.familychildInfos.each{
             it.child._schemaname='entityindividual'
             it.child.bithdate = it.birthdate

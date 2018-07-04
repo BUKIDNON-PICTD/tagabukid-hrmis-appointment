@@ -58,7 +58,7 @@ public class PDSSkillPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.name}", "lookup:tagabukid_hrmis_skill")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.skill.name}", "lookup:tagabukid_hrmis_skill")}
             })
         });
         xDataTable1.setEditable(true);
