@@ -40,15 +40,21 @@ class  PDSEducationalInfoController extends CrudFormModel {
     public void beforeOpen() {
        entity.putAll(parententity);
     }
-    public void beforeSave(o){
-        if(o=='create'){
-//            entity.skills{
-//                
-//            }
-           
+    
+    public void afterOpen(){
+        entity.educationalInfos.each{
+            it.school = persistenceSvc.read( [_schemaname:'master_tblinstitution', objid:it.school.objid]);
+            
         }
     }
-    
+    // public void beforeSave(o){
+    //     entity.educationalInfos.each{
+    //         it.school._schemaname='master_tblinstitution'
+    //         it.school.address.addressdetails = it.address.addressdetails
+    //         persistenceSvc.update(it.school)
+    //     }
+    // }
+
     def educationalBackgroundItemListHandler = [
         fetchList: { entity?.educationalInfos },
         createItem : {
@@ -85,4 +91,11 @@ class  PDSEducationalInfoController extends CrudFormModel {
         }
     ] as EditorListModel
 
+    def getSchoolNameLookupHandler(){
+        return Inv.lookupOpener('lookup:tagabukid_hrmis_institution',[
+                onselect :{
+                    selectedEducationalInfo.school = persistenceSvc.read( [_schemaname:'master_tblinstitution', objid:it.objid] );
+                }
+            ]);
+    }
 }

@@ -1,0 +1,8 @@
+"selectedEducationalInfo"[mode=='read']{
+    enabled:false;
+}
+
+"selectedEducationalInfo"[mode!='read']{
+    enabled:true;
+}
+
