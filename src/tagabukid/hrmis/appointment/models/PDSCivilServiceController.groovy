@@ -86,12 +86,4 @@ class  PDSCivilServiceController extends CrudFormModel {
         }
     ] as EditorListModel
 
-    // def getCivilServiceLookupHandler(){
-    //     return Inv.lookupOpener('lookup:tagabukid_hrmis_eligibility',[
-    //             onselect :{
-    //                   selectedCivilServiceItem.eligibility = persistenceSvc.read( [_schemaname:'hrmis_pds_civilservice', objid:it.objid] );
-    //                  binding.refresh();
-    //             }
-    //         ]);
-    // }
 }
