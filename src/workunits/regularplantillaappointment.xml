@@ -2,7 +2,7 @@
     <invokers>
         <invoker type="hrmis_appointment:create" caption="Appointment (Regular)"/>
         <invoker type="hrmis_appointment:open" caption="Appointment (Regular)" action="open" />       
-        <invoker folderid="/home/hrmis" caption="Appointment (Regular)" action="create" index="2" role="ENCODER"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Regular)" action="create" index="2" role="ENCODER"/>
     </invokers>
    <code class="tagabukid.hrmis.appointment.models.ServiceTicketController" />
     <pages>
