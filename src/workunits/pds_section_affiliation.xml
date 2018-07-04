@@ -3,10 +3,10 @@
         <invoker type="pds:section:open" caption="Membership" action="open" index="97" visibleWhen="#{true}" />
     </invokers>
     
-    <code class="tagabukid.hrmis.appointment.models.PDSOrganizationController" />
+    <code class="tagabukid.hrmis.appointment.models.PDSAffiliationController" />
 
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSOrganizationPage"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSAffiliationPage"/>
     </pages>
     
 </workunit>

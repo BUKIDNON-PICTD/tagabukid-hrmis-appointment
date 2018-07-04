@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
      
-class PDSOrganizationController extends CrudFormModel {
+class PDSAffiliationController extends CrudFormModel {
     @Binding
     def binding;
 
