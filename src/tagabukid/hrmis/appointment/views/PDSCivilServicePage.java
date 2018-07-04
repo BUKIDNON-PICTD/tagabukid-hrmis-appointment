@@ -86,7 +86,7 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM-dd-yyyy", "MM-dd-yyyy", "MM-dd-yyyy")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "examinationaddress"}
@@ -128,7 +128,7 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM/dd/yyyy", "MM/dd/yyyy", "MM/dd/yyyy")}
             })
         });
         xDataTable1.setEditable(true);

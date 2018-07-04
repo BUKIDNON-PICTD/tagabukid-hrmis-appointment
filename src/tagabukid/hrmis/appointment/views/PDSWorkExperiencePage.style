@@ -1,0 +1,8 @@
+"selectedworkExperienceItem"[mode=='read']{
+    enabled:false;
+}
+
+"selectedworkExperienceItem"[mode!='read']{
+    enabled:true;
+}
+
