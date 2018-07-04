@@ -93,7 +93,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
 
         xLookupField1.setCaption("Tranche");
         xLookupField1.setExpression("#{item.name}");
-        xLookupField1.setHandler("tranchLookupHandler");
+        xLookupField1.setHandler("lookup:tagabukid_hrmis_tranche");
         xLookupField1.setName("entity.currentsalarystep"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField1.setRequired(true);
@@ -240,6 +240,8 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.attachment}", "lookupAttachment")}
             })
         });
+        xDataTable1.setDepends(new String[] {"entity.currentsalarystep"});
+        xDataTable1.setDynamic(true);
         xDataTable1.setHandler("appointmentitemListHandler");
         xDataTable1.setName("selectedAppointmentItem"); // NOI18N
         jTabbedPane1.addTab("Appointment Items", xDataTable1);

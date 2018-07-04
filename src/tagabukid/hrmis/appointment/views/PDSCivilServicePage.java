@@ -42,7 +42,7 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Civil Service Eligibility");
+        xTitledBorder1.setTitle("Civil Service Eligibility Details");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
@@ -83,7 +83,8 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             }),
@@ -96,22 +97,24 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "numberint"}
-                , new Object[]{"caption", "Number"}
+                new Object[]{"name", "licenseno"}
+                , new Object[]{"caption", "License No"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.IntegerColumnHandler(null, -1, -1)}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "validitydate"}
@@ -122,7 +125,8 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             })
@@ -130,7 +134,8 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("civilServiceItemHandler");
         xDataTable1.setItems("");
-        xDataTable1.setName("selectedSkillItem"); // NOI18N
+        xDataTable1.setMultiSelectName("");
+        xDataTable1.setName("selectedCivilServiceItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

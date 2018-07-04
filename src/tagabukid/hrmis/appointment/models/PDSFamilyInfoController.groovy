@@ -9,7 +9,7 @@ import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
 class  PDSFamilyInfoController extends CrudFormModel {
-     @Binding
+    @Binding
     def binding;
     
     def parententity
@@ -23,7 +23,7 @@ class  PDSFamilyInfoController extends CrudFormModel {
 
     String title = "Family Background";
     
-     boolean isCreateAllowed(){
+    boolean isCreateAllowed(){
         return false
     }
     
@@ -39,17 +39,46 @@ class  PDSFamilyInfoController extends CrudFormModel {
         return false
     }
    
-    def selectedSkillInfo
+    def selectedfatherInfo
+    def selectedmotherInfo
+    def selectedspouseInfo
+    def selectedchildInfo
+
     public void beforeOpen() {
-       entity.putAll(parententity);
+        entity.putAll(parententity);
+    }
+    public void afterOpen(){
+        entity.familyfatherInfos.each{
+            it.father = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.father.objid]);
+        }
+        entity.familymotherInfos.each{
+            it.mother = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.mother.objid]);
+        }
+        entity.familyspouseInfos.each{
+            it.spouse = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.spouse.objid]);
+        }
+        entity.familychildInfos.each{
+            it.child = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.child.objid]);
+            
+        }
     }
     public void beforeSave(o){
-        if(o=='create'){
-//            entity.skills{
-//                
-//            }
-           
+        entity.familyfatherInfos[0].father._schemaname='entityindividual'
+        entity.familymotherInfos[0].mother._schemaname='entityindividual'
+        entity.familyspouseInfos[0].spouse._schemaname='entityindividual'
+        persistenceSvc.update(entity.familyfatherInfos[0].father)
+        persistenceSvc.update(entity.familymotherInfos[0].mother)
+        persistenceSvc.update(entity.familyspouseInfos[0].spouse)
+        entity.familychildInfos.each{
+            it.child._schemaname='entityindividual'
+            it.child.bithdate = it.birthdate
+            persistenceSvc.update(it.child)
         }
+    }
+    
+    public void afterSave(){
+       
+        
     }
     def familyBackgroundspousenameHandler = [
         fetchList: { entity?.familyspouseInfos },
@@ -200,4 +229,41 @@ class  PDSFamilyInfoController extends CrudFormModel {
         }
     ] as EditorListModel
     
+
+    def getFatherLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                    selectedfatherInfo.father = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    //                    selectedfatherInfo.father.nameextension = ""
+                    //                     binding.refresh();
+                }
+            ]);
+    }
+    def getMotherLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                    selectedmotherInfo.mother = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    //                    selectedmotherInfo.mother.maidenname = ""
+                    //                     binding.refresh();
+                }
+            ]);
+    }
+    def getSpouseLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                    selectedspouseInfo.spouse = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    //                     binding.refresh();
+                }
+            ]);
+    }
+    
+    def getChildLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                    selectedchildInfo.child = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    selectedchildInfo.birthdate = selectedchildInfo.child.birthdate
+                    //                     binding.refresh();
+                }
+            ]);
+    }
 }
