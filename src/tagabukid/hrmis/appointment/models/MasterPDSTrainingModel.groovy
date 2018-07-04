@@ -8,7 +8,7 @@ import com.rameses.util.*;
  *
  * @author P0RA
  */
-class MasterPDSVoluntaryWorkModel extends CrudFormModel{
+class MasterPDSTrainingModel extends CrudFormModel{
 
     @Binding
     def binding;
@@ -21,18 +21,22 @@ class MasterPDSVoluntaryWorkModel extends CrudFormModel{
     }
 
     public void afterOpen(){   
-        if(entity.institutiontype)            
-        entity.institutiontype = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.institutiontypeid] );
-        if(entity.muncityaddr)
-        entity.muncityaddr = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.muncityaddrid] );
+        if(entity.trainingsubcategory)            
+        entity.trainingsubcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingsubcategory', objid:entity.trainingsubcategoryid] );
+        if(entity.sponsorinstitutiontype)
+        entity.sponsorinstitutiontype = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.sponsorinstitutiontypeid] );
+        if(entity.trainingcomprehensiveness)
+        entity.trainingcomprehensiveness = persistenceSvc.read( [_schemaname:'master_tbltrainingcomprehensiveness', objid:trainingcomprehensivenessid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(entity.institutiontype)
-        entity.institutiontypeid = entity.institutiontype.objid
-        if(entity.muncityaddr)
-        entity.muncityaddrid = entity.muncityaddr.objid
+        if(entity.trainingsubcategory)
+        entity.trainingsubcategoryid = entity.trainingsubcategory.objid
+        if(entity.sponsorinstitutiontype)
+        entity.sponsorinstitutiontypeid = entity.sponsorinstitutiontype.objid
+        if(entity.trainingcomprehensiveness)
+        entity.trainingcomprehensivenessid = entity.trainingcomprehensiveness.objid
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
@@ -50,7 +54,7 @@ class MasterPDSVoluntaryWorkModel extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'hrmis_tblprofilevoluntarywork', 
+               _schemaname: 'hrmis_tblprofiletrainingprogramattended', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 

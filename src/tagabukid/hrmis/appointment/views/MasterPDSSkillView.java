@@ -15,12 +15,12 @@ import com.rameses.seti2.views.CrudFormPage;
  */
 @StyleSheet
 @Template(CrudFormPage.class)
-public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
+public class MasterPDSSkillView extends javax.swing.JPanel {
 
     /**
-     * Creates new form MasterPDSVoluntaryWorkView
+     * Creates new form MasterPDSSkillView
      */
-    public MasterPDSVoluntaryWorkView() {
+    public MasterPDSSkillView() {
         initComponents();
     }
 
@@ -39,16 +39,10 @@ public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
-        xDateField1 = new com.rameses.rcp.control.XDateField();
-        xDateField2 = new com.rameses.rcp.control.XDateField();
-        xDecimalField1 = new com.rameses.rcp.control.XDecimalField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
 
-        setPreferredSize(new java.awt.Dimension(500, 378));
-
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Voluntary Work Details");
+        xTitledBorder1.setTitle("Special Skills / Hobbies Details");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -57,50 +51,27 @@ public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
         xTextField1.setVisible(false);
         xFormPanel1.add(xTextField1);
 
-        xTextField2.setCaption("Organization Name");
-        xTextField2.setCaptionWidth(200);
-        xTextField2.setName("entity.organizationname"); // NOI18N
+        xTextField2.setCaption("Name");
+        xTextField2.setCaptionWidth(125);
+        xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xLookupField1.setCaption("Institution Type");
-        xLookupField1.setCaptionWidth(200);
+        xLookupField1.setCaption("Category");
+        xLookupField1.setCaptionWidth(125);
         xLookupField1.setExpression("#{item.name}");
-        xLookupField1.setHandler("lookup:tagabukid_hrmis_institutiontype");
-        xLookupField1.setName("entity.institutiontype"); // NOI18N
+        xLookupField1.setHandler("lookup:tagabukid_hrmis_skillcategory");
+        xLookupField1.setName("entity.skillcategory"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField1);
 
-        xLookupField2.setCaption("Municipality / City");
-        xLookupField2.setCaptionWidth(200);
+        xLookupField2.setCaption("Competency Level");
+        xLookupField2.setCaptionWidth(125);
         xLookupField2.setExpression("#{item.name}");
-        xLookupField2.setHandler("lookup:tagabukid_hrmis_citymunicipality");
-        xLookupField2.setName("entity.muncityaddr"); // NOI18N
+        xLookupField2.setHandler("lookup:tagabukid_hrmis_skillcompetencylevel");
+        xLookupField2.setName("entity.skillcompetencylevel"); // NOI18N
         xLookupField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField2);
-
-        xTextField3.setCaption("Address Details");
-        xTextField3.setCaptionWidth(200);
-        xTextField3.setName("entity.addressdetails"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
-
-        xDateField1.setCaption("From");
-        xDateField1.setCaptionWidth(200);
-        xDateField1.setName("entity.datefrom"); // NOI18N
-        xDateField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xDateField1);
-
-        xDateField2.setCaption("To");
-        xDateField2.setCaptionWidth(200);
-        xDateField2.setName("entity.dateto"); // NOI18N
-        xDateField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xDateField2);
-
-        xDecimalField1.setCaption("Number Of Hours");
-        xDecimalField1.setCaptionWidth(200);
-        xDecimalField1.setName("entity.numberofhours"); // NOI18N
-        xFormPanel1.add(xDecimalField1);
 
         xTextField4.setCaption("Position / Nature of Work");
         xTextField4.setCaptionWidth(200);
@@ -125,22 +96,18 @@ public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.rcp.control.XDateField xDateField1;
-    private com.rameses.rcp.control.XDateField xDateField2;
-    private com.rameses.rcp.control.XDecimalField xDecimalField1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XLookupField xLookupField2;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables
 }

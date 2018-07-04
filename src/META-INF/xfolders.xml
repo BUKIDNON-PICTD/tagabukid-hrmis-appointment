@@ -13,7 +13,9 @@
     </folder> 
     <folder id="home">
         <folder id="hrmis" caption="HRMIS">
-            <folder id="hrmismaster" caption="Master File" index="5"/>
+            <folder id="hrmisappointment" caption="Appointment" index="1"/>
+            <folder id="hrmispds" caption="PDS" index="2"/>
+            <folder id="hrmismaster" caption="Master File" index="3"/>
         </folder>
     </folder>
 </folders>

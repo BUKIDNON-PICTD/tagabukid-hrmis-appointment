@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_tblprofilevoluntarywork">
     <invokers>
-        <invoker folderid="/home/hrmis/hrmismaster" caption="Voluntary Work" action="init" index="1" role="MASTER" />
+        <invoker folderid="/home/hrmis/hrmispds" caption="Voluntary Work" action="init" index="1" role="MASTER" />
         <invoker folderid="/explorer/master/hrmismaster" action="init" caption="Voluntary Work" index="20" role="MASTER" />   
     </invokers>
 </workunit>

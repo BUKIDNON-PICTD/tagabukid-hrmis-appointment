@@ -58,12 +58,7 @@ class PDSTrainingController extends CrudFormModel {
         }
     }
     def trainingListHandler = [
-        fetchList: { 
-            // entity?.trainings 
-            if(selectedTrainingItem.trainingcategory?.objid)
-                trainingcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingcategory', objid:trainingcategoryid] );
-                return entity?.trainings
-            },
+        fetchList: { entity?.trainings  },
         createItem : {
             return[
                 recordlog : [
@@ -92,7 +87,6 @@ class PDSTrainingController extends CrudFormModel {
             
         },
         onAddItem : {
-                it.trainingcategoryid = it.trainingcategory.objid
                 entity.trainings.add(it); 
             },
         validate:{li->
