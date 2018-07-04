@@ -41,7 +41,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("VOLUNTARY WORK OR INVOLVEMENT DETAILS");
+        xTitledBorder1.setTitle("VOLUNTARY WORK OR INVOLVEMENT LIST");
         xHorizontalPanel1.setBorder(xTitledBorder1);
         xHorizontalPanel1.setEnabled(false);
         xHorizontalPanel1.setName("vwpane"); // NOI18N
@@ -53,7 +53,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
@@ -67,7 +67,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", false}
@@ -80,7 +80,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", false}
@@ -93,7 +93,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"width", 70}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", false}
@@ -106,7 +106,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"width", 130}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
