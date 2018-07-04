@@ -21,22 +21,22 @@ class MasterPDSTrainingModel extends CrudFormModel{
     }
 
     public void afterOpen(){   
-        if(entity.trainingsubcategory)            
-        entity.trainingsubcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingsubcategory', objid:entity.trainingsubcategoryid] );
-        if(entity.sponsorinstitutiontype)
-        entity.sponsorinstitutiontype = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.sponsorinstitutiontypeid] );
-        if(entity.trainingcomprehensiveness)
-        entity.trainingcomprehensiveness = persistenceSvc.read( [_schemaname:'master_tbltrainingcomprehensiveness', objid:trainingcomprehensivenessid] );
+        // if(entity.trainingsubcategory)            
+        // entity.trainingsubcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingsubcategory', objid:entity.trainingsubcategoryid] );
+        // if(entity.sponsorinstitutiontype)
+        // entity.sponsorinstitutiontype = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.sponsorinstitutiontypeid] );
+        // if(entity.trainingcomprehensiveness)
+        // entity.trainingcomprehensiveness = persistenceSvc.read( [_schemaname:'master_tbltrainingcomprehensiveness', objid:trainingcomprehensivenessid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(entity.trainingsubcategory)
-        entity.trainingsubcategoryid = entity.trainingsubcategory.objid
-        if(entity.sponsorinstitutiontype)
-        entity.sponsorinstitutiontypeid = entity.sponsorinstitutiontype.objid
-        if(entity.trainingcomprehensiveness)
-        entity.trainingcomprehensivenessid = entity.trainingcomprehensiveness.objid
+        // if(entity.trainingsubcategory)
+        // entity.trainingsubcategoryid = entity.trainingsubcategory.objid
+        // if(entity.sponsorinstitutiontype)
+        // entity.sponsorinstitutiontypeid = entity.sponsorinstitutiontype.objid
+        // if(entity.trainingcomprehensiveness)
+        // entity.trainingcomprehensivenessid = entity.trainingcomprehensiveness.objid
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

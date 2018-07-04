@@ -21,18 +21,18 @@ class MasterPDSSkillModel extends CrudFormModel{
     }
 
     public void afterOpen(){   
-        if(entity.skillcategory)            
-        entity.skillcategory = persistenceSvc.read( [_schemaname:'master_tblskillcategory', objid:entity.skillcategoryid] );
-        if(entity.skillcompetencylevel)
-        entity.skillcompetencylevel = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.skillcompetencylevelid] );
+        // if(entity.skillcategory)            
+        // entity.skillcategory = persistenceSvc.read( [_schemaname:'master_tblskillcategory', objid:entity.skillcategoryid] );
+        // if(entity.skillcompetencylevel)
+        // entity.skillcompetencylevel = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.skillcompetencylevelid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(entity.skillcategory)
-        entity.skillcategoryid = entity.skillcategory.objid
-        if(entity.skillcompetencylevel)
-        entity.skillcompetencylevelid = entity.skillcompetencylevel.objid
+        // if(entity.skillcategory)
+        // entity.skillcategoryid = entity.skillcategory.objid
+        // if(entity.skillcompetencylevel)
+        // entity.skillcompetencylevelid = entity.skillcompetencylevel.objid
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
