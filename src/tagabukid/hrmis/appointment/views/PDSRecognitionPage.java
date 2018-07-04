@@ -37,13 +37,13 @@ public class PDSRecognitionPage extends javax.swing.JPanel {
         xDataTable2 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("NON-ACADEMIC DISTINCTIONS / RECOGNITION");
+        xTitledBorder1.setTitle("NON-ACADEMIC DISTINCTIONS / RECOGNITION LIST");
         xHorizontalPanel3.setBorder(xTitledBorder1);
 
         xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "recognitioncategory"}
-                , new Object[]{"caption", "Category"}
+                new Object[]{"name", "distinction"}
+                , new Object[]{"caption", "TITLE"}
                 , new Object[]{"width", 50}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -53,21 +53,7 @@ public class PDSRecognitionPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.recognitioncategory.name}", "lookup:tagabukid_hrmis_recognitioncategory")}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "name"}
-                , new Object[]{"caption", "Name"}
-                , new Object[]{"width", 150}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.distinction.recognition}", "lookup:tagabukid_hrmis_recognition")}
             })
         });
         xDataTable2.setEditable(true);

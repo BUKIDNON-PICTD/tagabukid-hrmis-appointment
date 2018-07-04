@@ -42,7 +42,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("L&D INTERVENTION / PROGRAM DETAILS");
+        xTitledBorder1.setTitle("L&D INTERVENTION / TRAINING PROGRAMS ATTENDED");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
