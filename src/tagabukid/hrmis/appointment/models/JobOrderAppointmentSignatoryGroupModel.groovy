@@ -15,6 +15,9 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
     @Service('DateService')
     def dtSvc
     
+    @Caller
+    def copycaller
+    
     @Service('SequenceService')
     def seqSvc
     
@@ -24,6 +27,8 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
     @Service('AppointmentSignatoryService')
     def sigSvc
     
+    def tag
+    
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
@@ -32,11 +37,17 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
     def selectedSignatoryGroupItem;
      
     public void afterCreate(){
-        
+        tag = invoker?.properties?.tag;        
+        if(tag=='copy'){
+            entity = sigSvc.initCopy(copycaller.entity)
+        }else{       
         entity.signatoryGroupItems = [];
         signatoryGroupItemHandler.reload();
        // entity.farmerid = OsirisContext.env.ORGID + "-FARM" + seqSvc.getNextFormattedSeries('farmer');
-       entity.code = "sig" + seqSvc.getNextFormattedSeries('signatory')
+       
+       
+        }
+        entity.code = "sig" + seqSvc.getNextFormattedSeries('signatory')
             
     }
 
@@ -89,6 +100,11 @@ class JobOrderAppointmentSignatoryGroupModel extends CrudFormModel{
                    return sigSvc.getSigType(o).signatorytype;
                }
            ] as SuggestModel;
+           
+           
+    def copy(){
+        return InvokerUtil.lookupOpener('hrmis_appointment_signatorygrouping:copy:create')
+    }
     
 
 }
