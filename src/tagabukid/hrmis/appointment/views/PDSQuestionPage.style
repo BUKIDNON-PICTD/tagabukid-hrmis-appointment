@@ -1,0 +1,3 @@
+"entity.question.degreedetails"[(entity.question.fourthdegree == 0 || entity.question.fourthdegree == false)]{
+    enabled:false;
+}
