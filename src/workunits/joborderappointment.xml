@@ -1,5 +1,7 @@
 <workunit schemaName="hrmis_appointmentjoborder">
     <invokers>
+        <invoker type="joborderappointmentdocument:create" caption="Create JO Appointment" action="create" role="ENCODER"/>
+        <invoker type="joborderappointmentdocument:open" caption="Open Appointment (JO)" action="open" role="ENCODER"/> 
         <invoker type="hrmis_appointmentjoborder:create" caption="Create JO Appointment" action="create" role="ENCODER"/>
         <invoker type="hrmis_appointmentjoborder:open" caption="Open Appointment (JO)" action="open" role="ENCODER"/> 
         <invoker type="hrmis_appointmentjoborder:renew:create" caption="Appointment (JO) Renew" action="create" tag="renew" role="ENCODER"/>       
