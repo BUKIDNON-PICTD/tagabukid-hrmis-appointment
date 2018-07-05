@@ -1,0 +1,7 @@
+"selectedAssociationOrganizationItem"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedAssociationOrganizationItem"[mode != 'read']{
+    enabled:true;
+}

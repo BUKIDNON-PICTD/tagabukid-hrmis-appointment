@@ -58,7 +58,9 @@ class PDSReferenceController extends CrudFormModel {
         }
     }
     def referenceListHandler = [
-        fetchList: { entity?.references },
+        fetchList: { 
+            entity?.references
+             },
         createItem : {
             return[
                 recordlog : [

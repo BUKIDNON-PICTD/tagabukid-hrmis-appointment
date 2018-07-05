@@ -1,6 +1,6 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" 
     schemaName="hrmis_pds" cols="pdsno,person.name,residentialaddress.text">
     <invokers>
-        <invoker folderid="/home/hrmis" caption="PDS List" action="init" index="3" role="ENCODER"/>
+        <invoker folderid="/home/hrmis/hrmispds" caption="PDS List" action="init" index="3" role="ENCODER"/>
     </invokers>
 </workunit>

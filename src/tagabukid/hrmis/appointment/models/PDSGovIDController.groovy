@@ -46,10 +46,13 @@ class PDSGovIDController extends CrudFormModel{
         return false
     }
     public void beforeOpen() {
-       entity.putAll(parententity);
+        entity.putAll(parententity);
     }
     
     public void beforeSave(o){
+        
+        if(entity.govids.size()<=0)
+        {
             def govids = [
                 idtype: entity.idtype,
                 idno  : entity.idno,
@@ -63,17 +66,25 @@ class PDSGovIDController extends CrudFormModel{
                     lastupdatedbyuserid : OsirisContext.env.USERID 
                 ]
             ]
-            entity.govids = []
-            entity.govids.add(govids)
-            println o
-        
-//            entity.recordlog_dateoflastupdate = dtSvc.getServerDate();
-//            entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
-//            entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID; 
-            
+            entity.govids << govids
+        }else{
+            def govids = [
+                objid : entity.govid,
+                idtype: entity.idtype,
+                idno  : entity.idno,
+                issuance : entity.issuance,
+                recordlog : [
+                    dateoflastupdate : dtSvc.getServerDate(),
+                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                    lastupdatedbyuserid : OsirisContext.env.USERID 
+                ]
+            ]
+            entity.govids << govids
+        }
     }
     
     public void afterSave(){
+        entity.govid=entity.govids[0].objid
         entity.idtype=entity.govids[0].idtype
         entity.idno=entity.govids[0].idno
         entity.issuance=entity.govids[0].issuance
@@ -81,9 +92,10 @@ class PDSGovIDController extends CrudFormModel{
 
     public void afterOpen(){
         if(entity.govids){
-                entity.idtype=entity.govids[0].idtype
-                entity.idno=entity.govids[0].idno
-                entity.issuance=entity.govids[0].issuance
-            }
+            entity.govid=entity.govids[0].objid
+            entity.idtype=entity.govids[0].idtype
+            entity.idno=entity.govids[0].idno
+            entity.issuance=entity.govids[0].issuance
+        }
     }
 }

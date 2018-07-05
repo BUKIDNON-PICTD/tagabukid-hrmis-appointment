@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblrecognitioncategory">
     <invokers>
-        <invoker type="master_tblrecognitioncategory:create" caption="New Recognition Category" action="create" role="MASTER"/>
-        <invoker type="master_tblrecognitioncategory:open" caption="Recognition Category" action="open" role="MASTER"/>
+        <invoker type="master_tblrecognitioncategory:create" caption="New Recognition Category" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblrecognitioncategory:open" caption="Recognition Category" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

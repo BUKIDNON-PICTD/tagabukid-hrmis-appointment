@@ -1,0 +1,7 @@
+"selectedVoluntaryWorkItem"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedVoluntaryWorkItem"[mode != 'read']{
+    enabled:true;
+}

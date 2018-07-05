@@ -1,0 +1,7 @@
+"selectedRecognitionItem"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedRecognitionItem"[mode != 'read']{
+    enabled:true;
+}

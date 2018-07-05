@@ -42,7 +42,7 @@ public class PDSReferencePage extends javax.swing.JPanel {
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "name"}
+                new Object[]{"name", "reference"}
                 , new Object[]{"caption", "NAME"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -53,10 +53,10 @@ public class PDSReferencePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("{item.reference.entityname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "address"}
+                new Object[]{"name", "reference.address.text"}
                 , new Object[]{"caption", "ADDRESS"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -64,8 +64,7 @@ public class PDSReferencePage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
+                , new Object[]{"editable", false}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
@@ -86,7 +85,6 @@ public class PDSReferencePage extends javax.swing.JPanel {
         });
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("referenceListHandler");
-        xDataTable1.setId("referenceListHandler");
         xDataTable1.setItems("");
         xDataTable1.setMultiSelectName("");
         xDataTable1.setName("selectedReferenceItem"); // NOI18N
@@ -105,8 +103,8 @@ public class PDSReferencePage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

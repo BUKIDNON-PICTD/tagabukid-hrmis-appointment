@@ -1,0 +1,7 @@
+"selectedTrainingItem"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedTrainingItem"[mode != 'read']{
+    enabled:true;
+}

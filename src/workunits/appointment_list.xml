@@ -2,7 +2,7 @@
      allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="appointmentdocument">
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List"  index="1" role="SHARED"/>
-        <invoker folderid="/home/hrmis" action="init" caption="Appointment List"  index="1" role="SHARED"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List"  index="1" role="SHARED"/>
     </invokers>
      <code>
     <![CDATA[
