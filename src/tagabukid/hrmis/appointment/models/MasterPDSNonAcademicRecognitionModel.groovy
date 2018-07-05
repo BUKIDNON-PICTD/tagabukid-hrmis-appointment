@@ -21,14 +21,14 @@ class MasterPDSNonAcademicRecognitionModel extends CrudFormModel{
     }
 
     public void afterOpen(){   
-        if(entity.recognitioncategory)            
-        entity.recognitioncategory = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.recognitioncategoryid] );
+        // if(entity.recognitioncategory)            
+        // entity.recognitioncategory = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.recognitioncategoryid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(entity.recognitioncategory)
-        entity.recognitioncategoryid = entity.recognitioncategory.objid
+        // if(entity.recognitioncategory)
+        // entity.recognitioncategoryid = entity.recognitioncategory.objid
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
