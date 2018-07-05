@@ -5,7 +5,7 @@
         <invoker type="hrmis_appointmentcasual:open" caption="Appointment (Casual)" action="open" role="ENCODER"/>  
         <invoker type="hrmis_appointmentcasual:create" caption="Appointment (Casual)" action="create" role="ENCODER"/>     
         <invoker type="hrmis_appointmentcasual:renew:create" caption="Appointment (Casual) Renew" action="create" tag="renew" role="ENCODER"/> 
-        <invoker folderid="/home/hrmis" caption="Appointment (Casual)" action="create" index="2" role="ENCODER"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Casual)" action="create" index="2" role="ENCODER"/>
         
         <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}" role="APPROVER"/> 
         <invoker type="formActions" caption="Renew" action="renew" visibleWhen="#{allowRenew==true}" role="ENCODER"/> 

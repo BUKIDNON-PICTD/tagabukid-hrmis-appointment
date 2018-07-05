@@ -2,7 +2,7 @@
           cols="state,appointmentgroupname,effectivefrom,effectiveuntil,org.name,natureofappointment.name"
     orderBy="appointmentgroupname ASC">>
     <invokers>
-        <invoker folderid="/home/hrmis" caption="Appointment List (JO)" action="init" index="3" role="ENCODER"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment List (JO)" action="init" index="3" role="ENCODER"/>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)" index="3" role="ENCODER"/>   
     </invokers>
 </workunit>

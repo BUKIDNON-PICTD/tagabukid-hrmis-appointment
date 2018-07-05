@@ -1,0 +1,12 @@
+<workunit schemaName="hrmis_tblprofileaffiliation">
+    <invokers>
+        <invoker type="hrmis_tblprofileaffiliation:create" caption="New Affiliation" action="create" target="popup" role="MASTER"/>
+        <invoker type="hrmis_tblprofileaffiliation:open" caption="Affiliation" action="open" target="popup" role="MASTER"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterPDSAffiliationModel"/>
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterPDSAffiliationView"/>
+    </pages>
+</workunit>

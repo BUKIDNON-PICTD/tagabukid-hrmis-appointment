@@ -58,7 +58,7 @@ class PDSTrainingController extends CrudFormModel {
         }
     }
     def trainingListHandler = [
-        fetchList: { entity?.trainings },
+        fetchList: { entity?.trainings  },
         createItem : {
             return[
                 recordlog : [
@@ -87,9 +87,7 @@ class PDSTrainingController extends CrudFormModel {
             
         },
         onAddItem : {
-            return[
-                entity.trainings.add(it),
-            ]
+                entity.trainings.add(it); 
             },
         validate:{li->
             //def item=li.item;

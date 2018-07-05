@@ -56,7 +56,6 @@ class PDSVoluntaryWorkController extends CrudFormModel {
 //            }
            
         }
-        println o + " save all"
     }
     def voluntaryworkListHandler = [
         fetchList: { entity?.voluntaryworks },
@@ -89,7 +88,6 @@ class PDSVoluntaryWorkController extends CrudFormModel {
         },
         onAddItem : {
             entity.voluntaryworks.add(it);
-            println it
         },
         validate:{li->
             //def item=li.item;

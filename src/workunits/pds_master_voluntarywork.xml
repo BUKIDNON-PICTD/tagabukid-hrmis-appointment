@@ -1,0 +1,12 @@
+<workunit schemaName="hrmis_tblprofilevoluntarywork">
+    <invokers>
+        <invoker type="hrmis_tblprofilevoluntarywork:create" caption="New Voluntary Work" action="create" target="popup" role="MASTER"/>
+        <invoker type="hrmis_tblprofilevoluntarywork:open" caption="Voluntary Work" action="open" target="popup" role="MASTER"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterPDSVoluntaryWorkModel"/>
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterPDSVoluntaryWorkView"/>
+    </pages>
+</workunit>

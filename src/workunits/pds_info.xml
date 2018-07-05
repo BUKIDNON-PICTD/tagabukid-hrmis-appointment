@@ -2,7 +2,7 @@
     <invokers>
         <invoker type="hrmis_pds:open"  action="open" target="window"/>
         <invoker type="hrmis_pds:create" action="create" target="window"/>
-        <invoker folderid="/home/hrmis" caption="New PDS" action="create" index="2"  role="ENCODER"/>
+        <invoker folderid="/home/hrmis/hrmispds" caption="New PDS" action="create" index="2"  role="ENCODER"/>
         <!-- <invoker type="formActions" caption="Close" action="_close" /> -->
         
     </invokers>

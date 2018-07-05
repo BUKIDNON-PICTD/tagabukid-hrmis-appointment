@@ -1,0 +1,8 @@
+"selectedCivilServiceItem"[mode=='read']{
+    enabled:false;
+}
+
+"selectedCivilServiceItem"[mode!='read']{
+    enabled:true;
+}
+

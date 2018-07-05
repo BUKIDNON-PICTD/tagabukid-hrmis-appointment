@@ -1,0 +1,12 @@
+<workunit schemaName="hrmis_tblprofilenonacademicrecognition">
+    <invokers>
+        <invoker type="hrmis_tblprofilenonacademicrecognition:create" caption="New Recognition" action="create" target="popup" role="MASTER"/>
+        <invoker type="hrmis_tblprofilenonacademicrecognition:open" caption="Recognition" action="open" target="popup" role="MASTER"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterPDSNonAcademicRecognitionModel"/>
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterPDSNonAcademicRecognitionView"/>
+    </pages>
+</workunit>

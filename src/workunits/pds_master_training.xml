@@ -1,0 +1,12 @@
+<workunit schemaName="hrmis_tblprofiletrainingprogramattended">
+    <invokers>
+        <invoker type="hrmis_tblprofiletrainingprogramattended:create" caption="New Training Program" action="create" target="popup" role="MASTER"/>
+        <invoker type="hrmis_tblprofiletrainingprogramattended:open" caption="Training Program" action="open" target="popup" role="MASTER"/>
+        <invoker type="formActions" caption="Approve" action="approve" 
+                 visibleWhen="#{allowApprove==true}"/>
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.MasterPDSTrainingModel"/>
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterPDSTrainingView"/>
+    </pages>
+</workunit>
