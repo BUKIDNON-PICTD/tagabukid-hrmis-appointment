@@ -128,7 +128,7 @@ public class PDSCivilServicePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM/dd/yyyy", "MM/dd/yyyy", "MM/dd/yyyy")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM-dd-yyyy", "MM-dd-yyyy", "MM-dd-yyyy")}
             })
         });
         xDataTable1.setEditable(true);

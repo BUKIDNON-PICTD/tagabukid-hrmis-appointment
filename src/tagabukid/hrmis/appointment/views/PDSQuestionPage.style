@@ -1,0 +1,3 @@
+"entity.question.*"[true==true]{
+    visible:true;
+}
