@@ -62,7 +62,6 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xCheckBox4 = new com.rameses.rcp.control.XCheckBox();
         xLabel3 = new com.rameses.rcp.control.XLabel();
         xSuggest1 = new com.rameses.rcp.control.XSuggest();
-        xTextField10 = new com.rameses.rcp.control.XTextField();
         xSeparator6 = new com.rameses.rcp.control.XSeparator();
         xLabel4 = new com.rameses.rcp.control.XLabel();
         xCheckBox3 = new com.rameses.rcp.control.XCheckBox();
@@ -99,7 +98,6 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xTextField1.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
         xTextField1.setName("entity.question.degreedetails"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField1.setVisibleWhen("#{entity.question.fourthdegree == 0 || entity.question.fourthdegree == false}");
         xFormPanel1.add(xTextField1);
 
         xSeparator1.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -235,20 +233,13 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xLabel3.setExpression(" If YES, give details (country):");
         xFormPanel1.add(xLabel3);
 
+        xSuggest1.setCaption("Country");
         xSuggest1.setCaptionWidth(700);
         xSuggest1.setExpression("#{item.name}");
         xSuggest1.setHandler("suggestCountry");
         xSuggest1.setName("entity.question.immigrantcountry"); // NOI18N
         xSuggest1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xSuggest1);
-
-        xTextField10.setCaption("If YES, give details");
-        xTextField10.setCaptionWidth(110);
-        xTextField10.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField10.setName("entity.question.immigrantcountry"); // NOI18N
-        xTextField10.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField10.setShowCaption(false);
-        xFormPanel1.add(xTextField10);
 
         xSeparator6.setPreferredSize(new java.awt.Dimension(0, 50));
         xFormPanel1.add(xSeparator6);
@@ -272,6 +263,7 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         xTextField11.setName("entity.question.indigenousgroupdetails"); // NOI18N
         xTextField11.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField11);
+        xTextField11.getAccessibleContext().setAccessibleDescription("");
 
         xCheckBox2.setCaption("b. Are you a person with disability?");
         xCheckBox2.setCaptionWidth(700);
@@ -353,7 +345,6 @@ public class PDSQuestionPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XSeparator xSeparator6;
     private com.rameses.rcp.control.XSuggest xSuggest1;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField10;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField12;
     private com.rameses.rcp.control.XTextField xTextField13;

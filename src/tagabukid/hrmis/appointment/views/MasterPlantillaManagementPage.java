@@ -81,7 +81,6 @@ public class MasterPlantillaManagementPage extends javax.swing.JPanel {
         xLookupField3.setHandler("lookup:tagabukid_hrmis_incrementtype");
         xLookupField3.setName("entity.incrementtype"); // NOI18N
         xLookupField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xLookupField3.setRequired(true);
         xFormPanel2.add(xLookupField3);
 
         xLookupField4.setCaption("Fund");
