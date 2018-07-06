@@ -195,7 +195,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "mother.maidenname"}
+                new Object[]{"name", "maidenname"}
                 , new Object[]{"caption", "Maiden Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
