@@ -40,8 +40,8 @@ public class MasterFinFundView extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         xTextField3 = new com.rameses.rcp.control.XTextField();
-        xTextField5 = new com.rameses.rcp.control.XTextField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Fund");
@@ -74,17 +74,20 @@ public class MasterFinFundView extends javax.swing.JPanel {
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
 
-        xTextField5.setCaption("Parent Fund ID");
-        xTextField5.setCaptionWidth(100);
-        xTextField5.setName("entity.parentfundid"); // NOI18N
-        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField5);
-
         xTextField4.setCaption("Position");
         xTextField4.setCaptionWidth(100);
         xTextField4.setName("entity.position"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField4.setVisible(false);
         xFormPanel1.add(xTextField4);
+
+        xLookupField1.setCaption("Parent Fund");
+        xLookupField1.setCaptionWidth(100);
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("lookup:tagabukid_hrmis_parentfund");
+        xLookupField1.setName("entity.parentfund"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xLookupField1);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -102,7 +105,7 @@ public class MasterFinFundView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,11 +114,11 @@ public class MasterFinFundView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
-    private com.rameses.rcp.control.XTextField xTextField5;
     // End of variables declaration//GEN-END:variables
 }
