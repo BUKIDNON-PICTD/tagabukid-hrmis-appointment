@@ -145,6 +145,14 @@ class JobOrderAppointmentModel extends CrudFormModel{
                 newitem : false,
             ]
         },
+        onColumnUpdate: { o,col-> 
+            if(col == 'position'){
+                o.salaryscheduleitem  = joSvc.getDailyWageByTranch(entity.currentsalarystep,o.position);
+                o.monthlysalary = o.salaryscheduleitem.amount
+                o.dailysalary = o.salaryscheduleitem.amount / 22
+            }
+            
+        },
         onAddItem : {
             entity.appointmentMemberItems << it;
         },
