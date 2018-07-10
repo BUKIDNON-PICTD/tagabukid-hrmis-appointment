@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblorganizationunit:create" caption="New Organization Unit" action="create" role="MASTER"/>
         <invoker type="master_tblorganizationunit:open" caption="Organization Unit" action="open" role="MASTER"/>
+        <invoker type="hrmisorg:create" caption="New Organization Unit" action="create" role="MASTER"/>
+        <invoker type="hrmisorg:open" caption="Organization Unit" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
