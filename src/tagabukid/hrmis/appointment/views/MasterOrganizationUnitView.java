@@ -31,14 +31,7 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField4 = new com.rameses.rcp.control.XTextField();
-        xLookupField2 = new com.rameses.rcp.control.XLookupField();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
-        xTextField7 = new com.rameses.rcp.control.XTextField();
-        xTextField8 = new com.rameses.rcp.control.XTextField();
-        xTextField9 = new com.rameses.rcp.control.XTextField();
-        xTextField10 = new com.rameses.rcp.control.XTextField();
-        xTextField11 = new com.rameses.rcp.control.XTextField();
-        xTextField12 = new com.rameses.rcp.control.XTextField();
         xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
         xLookupField3 = new com.rameses.rcp.control.XLookupField();
@@ -63,7 +56,7 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
         xFormPanel1.add(xTextField1);
 
         xTextField2.setCaption("Name");
-        xTextField2.setCaptionWidth(140);
+        xTextField2.setCaptionWidth(180);
         xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
@@ -72,70 +65,26 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Description");
-        xTextArea1.setCaptionWidth(140);
+        xTextArea1.setCaptionWidth(180);
         xTextArea1.setName("entity.description"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel1.add(jScrollPane1);
 
         xTextField4.setCaption("Code");
-        xTextField4.setCaptionWidth(140);
+        xTextField4.setCaptionWidth(180);
         xTextField4.setName("entity.code"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);
 
-        xLookupField2.setCaption("Parent Org Unit");
-        xLookupField2.setCaptionWidth(140);
-        xLookupField2.setExpression("#{item.name}");
-        xLookupField2.setHandler("parentorgunit:lookup");
-        xLookupField2.setName("entity.parentorgunit"); // NOI18N
-        xLookupField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xLookupField2);
-
         xLookupField1.setCaption("Organization Unit Type");
-        xLookupField1.setCaptionWidth(140);
+        xLookupField1.setCaptionWidth(180);
         xLookupField1.setExpression("#{item.description}");
         xLookupField1.setHandler("organizationunittype:lookup");
         xLookupField1.setName("entity.organizationunittype"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField1.setRequired(true);
         xFormPanel1.add(xLookupField1);
-
-        xTextField7.setCaption("Position 1");
-        xTextField7.setCaptionWidth(140);
-        xTextField7.setName("entity.position1"); // NOI18N
-        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField7);
-
-        xTextField8.setCaption("Left");
-        xTextField8.setCaptionWidth(140);
-        xTextField8.setName("entity.left"); // NOI18N
-        xTextField8.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField8);
-
-        xTextField9.setCaption("Right");
-        xTextField9.setCaptionWidth(140);
-        xTextField9.setName("entity.right"); // NOI18N
-        xTextField9.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField9);
-
-        xTextField10.setCaption("Position");
-        xTextField10.setCaptionWidth(140);
-        xTextField10.setName("entity.position"); // NOI18N
-        xTextField10.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField10);
-
-        xTextField11.setCaption("Level");
-        xTextField11.setCaptionWidth(140);
-        xTextField11.setName("entity.level"); // NOI18N
-        xTextField11.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField11);
-
-        xTextField12.setCaption("Type");
-        xTextField12.setCaptionWidth(140);
-        xTextField12.setName("entity.type"); // NOI18N
-        xTextField12.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField12);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -203,24 +152,23 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -234,14 +182,10 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
     private com.rameses.rcp.control.XLookupField xLookupField1;
-    private com.rameses.rcp.control.XLookupField xLookupField2;
     private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XLookupField xLookupField4;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField10;
-    private com.rameses.rcp.control.XTextField xTextField11;
-    private com.rameses.rcp.control.XTextField xTextField12;
     private com.rameses.rcp.control.XTextField xTextField15;
     private com.rameses.rcp.control.XTextField xTextField16;
     private com.rameses.rcp.control.XTextField xTextField17;
@@ -249,8 +193,5 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField19;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField4;
-    private com.rameses.rcp.control.XTextField xTextField7;
-    private com.rameses.rcp.control.XTextField xTextField8;
-    private com.rameses.rcp.control.XTextField xTextField9;
     // End of variables declaration//GEN-END:variables
 }

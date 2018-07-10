@@ -18,13 +18,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="xHorizontalPanel1" min="-2" pref="313" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="xHorizontalPanel2" max="32767" attributes="0"/>
-                  <Component id="xHorizontalPanel3" pref="392" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="xHorizontalPanel1" min="-2" pref="756" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="xHorizontalPanel2" max="32767" attributes="0"/>
+                      <Component id="xHorizontalPanel3" min="-2" pref="392" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace pref="114" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -32,15 +33,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="xHorizontalPanel1" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="xHorizontalPanel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="xHorizontalPanel3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="209" max="32767" attributes="0"/>
+              <Component id="xHorizontalPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="xHorizontalPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="xHorizontalPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="154" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,7 +69,7 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Name"/>
-                <Property name="captionWidth" type="int" value="140"/>
+                <Property name="captionWidth" type="int" value="180"/>
                 <Property name="name" type="java.lang.String" value="entity.name" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
@@ -94,7 +92,7 @@
                 <Component class="com.rameses.rcp.control.XTextArea" name="xTextArea1">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Description"/>
-                    <Property name="captionWidth" type="int" value="140"/>
+                    <Property name="captionWidth" type="int" value="180"/>
                     <Property name="name" type="java.lang.String" value="entity.description" noResource="true"/>
                   </Properties>
                 </Component>
@@ -103,20 +101,8 @@
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Code"/>
-                <Property name="captionWidth" type="int" value="140"/>
+                <Property name="captionWidth" type="int" value="180"/>
                 <Property name="name" type="java.lang.String" value="entity.code" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField2">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Parent Org Unit"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
-                <Property name="handler" type="java.lang.String" value="parentorgunit:lookup"/>
-                <Property name="name" type="java.lang.String" value="entity.parentorgunit" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>
@@ -125,7 +111,7 @@
             <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
               <Properties>
                 <Property name="caption" type="java.lang.String" value="Organization Unit Type"/>
-                <Property name="captionWidth" type="int" value="140"/>
+                <Property name="captionWidth" type="int" value="180"/>
                 <Property name="expression" type="java.lang.String" value="#{item.description}"/>
                 <Property name="handler" type="java.lang.String" value="organizationunittype:lookup"/>
                 <Property name="name" type="java.lang.String" value="entity.organizationunittype" noResource="true"/>
@@ -133,66 +119,6 @@
                   <Dimension value="[0, 20]"/>
                 </Property>
                 <Property name="required" type="boolean" value="true"/>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField7">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Position 1"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="name" type="java.lang.String" value="entity.position1" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField8">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Left"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="name" type="java.lang.String" value="entity.left" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField9">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Right"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="name" type="java.lang.String" value="entity.right" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField10">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Position"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="name" type="java.lang.String" value="entity.position" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField11">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Level"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="name" type="java.lang.String" value="entity.level" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField12">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Type"/>
-                <Property name="captionWidth" type="int" value="140"/>
-                <Property name="name" type="java.lang.String" value="entity.type" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
               </Properties>
             </Component>
           </SubComponents>

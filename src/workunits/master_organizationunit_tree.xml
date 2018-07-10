@@ -1,0 +1,37 @@
+<workunit extends="wtemplates/ExplorerViewController.xml" >
+    <invokers>
+        <invoker folderid="/home/hrmis/hrmismaster" caption="Organization Unit Management" action="init" role="MASTER"/> 
+        <invoker folderid="/explorer/master/hrmismaster" caption="Organization Unit Management" action="init" role="MASTER"/>  
+    </invokers>
+    <code>
+        import com.rameses.rcp.common.*;
+        import com.rameses.rcp.annotations.*;
+        import com.rameses.osiris2.client.*;
+        import com.rameses.osiris2.common.*;
+        import tagabukid.hrmis.appointment.models.*;
+       
+        class TagabukidHRMISOrganizationUntiManagementController extends OrganizationUntiManagementListController {
+       
+            String serviceName = 'TagabukidHRMISOrganizationUntiManagementService'
+            
+            @Service("TagabukidHRMISOrganizationUntiManagementService") 
+            def hrmisorgService
+        
+            public String getTitle() {
+                return "Plantilla Management";
+            }
+
+            public String getPrefixId() {
+                return "ORG";
+            }
+
+            void refresh(){
+                listHandler.reload();
+            }
+       
+        }
+    </code>
+<!--    <pages>
+        <page name="queryform" template="tagabukid.hrmis.appointment.views.TagabukidHRMISPlantillaManagementListQueryForm"/>
+    </pages>-->
+</workunit>
