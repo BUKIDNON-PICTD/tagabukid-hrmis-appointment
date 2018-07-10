@@ -1,7 +1,7 @@
-"residentialAddress|permanentAddress"[mode=='read']{
+"residentialAddress|permanentAddress"[mode=='open']{
     enabled:false;
 }
 
-"residentialAddress|permanentAddress"[mode!='read']{
+"residentialAddress|permanentAddress"[mode!='open']{
     enabled:true;
 }

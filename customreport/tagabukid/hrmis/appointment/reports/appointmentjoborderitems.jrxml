@@ -110,7 +110,7 @@
 	<field name="org.name" class="java.lang.String"/>
 	<field name="natureofappointmentid.name" class="java.lang.String"/>
 	<field name="org.code" class="java.lang.String"/>
-	<field name="dailysalary" class="java.lang.String"/>
+	<field name="dailysalary" class="java.math.BigDecimal"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -202,7 +202,7 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
 				<text><![CDATA[RATE PER DAY]]></text>
 				</staticText>
@@ -211,7 +211,7 @@
 						mode="Opaque"
 						x="327"
 						y="25"
-						width="67"
+						width="61"
 						height="53"
 						backcolor="#99CCFF"
 						key="staticText-12"/>
@@ -222,16 +222,16 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
-				<text><![CDATA[EMPLOYMENT (FROM)]]></text>
+				<text><![CDATA[EMPLOYMENT (FROM) (mm/dd/yyyy)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="394"
+						x="388"
 						y="25"
-						width="68"
+						width="62"
 						height="53"
 						backcolor="#99CCFF"
 						key="staticText-13"/>
@@ -242,16 +242,16 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
-				<text><![CDATA[EMPLOYMENT (TO)]]></text>
+				<text><![CDATA[EMPLOYMENT (TO) (mm/dd/yyyy)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="462"
+						x="450"
 						y="25"
-						width="69"
+						width="81"
 						height="53"
 						backcolor="#99CCFF"
 						key="staticText-16"/>
@@ -322,50 +322,53 @@
 						y="0"
 						width="21"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
+					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="21"
 						y="0"
 						width="149"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
+					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}+" "+$F{personnel.middlename}+" "+$F{personnel.lastname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="170"
 						y="0"
 						width="111"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
+					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{position.name}]]></textFieldExpression>
@@ -376,69 +379,73 @@
 						y="0"
 						width="46"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dailysalary}]]></textFieldExpression>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{dailysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="327"
 						y="0"
-						width="67"
+						width="61"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
-						<font size="8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectivefrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="394"
+						x="388"
 						y="0"
-						width="68"
+						width="62"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
-						<font size="8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectiveuntil}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="462"
+						x="450"
 						y="0"
-						width="69"
+						width="81"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement>
-						<font size="8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{natureofappointment.name}]]></textFieldExpression>
 				</textField>
@@ -449,7 +456,8 @@
 						y="0"
 						width="51"
 						height="11"
-						key="staticText-19"/>
+						key="staticText-19"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -482,7 +490,7 @@
 						<font size="8"/>
 					</textElement>
 				<text><![CDATA[          The said job order shall automatically cease upon its expiration as stipulated above, unless renewed. However, services of any or all of the above-named can be terminated prior to the expiration of this Job Order for lack of funds or when their services are no longer needed. Also, no-work/no-pay is strictly implemented.
-	     				The above-named hereby attests that he/she is not related within the third degree (fourth degree in case of LGU's) of consanguinity or affinity to the: 1) hiring authority and/or 2) representatives of the hiring agency; that he/she has not been previously dismissed from government service for reason of an administrative offense; that he/she has not already reached the compulsory retirement age of sixty five (65). Furthermore, the service rendered hereunder is not considered or will never be accredited as government service. Not to exceed calendar working days.]]></text>
+          The above-named hereby attests that he/she is not related within the third degree (fourth degree in case of LGU's) of consanguinity or affinity to the: 1) hiring authority and/or 2) representatives of the hiring agency; that he/she has not been previously dismissed from government service for reason of an administrative offense; that he/she has not already reached the compulsory retirement age of sixty five (65). Furthermore, the service rendered hereunder is not considered or will never be accredited as government service. Not to exceed calendar working days.]]></text>
 				</staticText>
 			</band>
 		</columnFooter>

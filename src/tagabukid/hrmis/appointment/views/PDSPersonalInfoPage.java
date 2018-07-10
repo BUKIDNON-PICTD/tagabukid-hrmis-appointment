@@ -85,6 +85,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityAddress1.setCaption("Residential Address");
         entityAddress1.setCaptionWidth(150);
         entityAddress1.setDepends(new String[] {"entity.person"});
+        entityAddress1.setDisableWhen("");
         entityAddress1.setName("residentialAddress"); // NOI18N
         entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress1.setRequired(true);
