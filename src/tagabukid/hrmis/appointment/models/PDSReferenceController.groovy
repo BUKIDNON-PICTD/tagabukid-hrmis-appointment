@@ -57,6 +57,13 @@ class PDSReferenceController extends CrudFormModel {
            
         }
     }
+
+    public void afterOpen(){
+        entity.references.each{
+            it.reference = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.reference.objid]);
+        }
+    }
+
     def referenceListHandler = [
         fetchList: { 
             entity?.references
@@ -96,4 +103,16 @@ class PDSReferenceController extends CrudFormModel {
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
+
+
+
+    def getReferenceLookupHandler(){
+        return Inv.lookupOpener('lookup:individualwide',[
+                onselect :{
+                    selectedReferenceItem.reference = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
+                    //                    selectedfatherInfo.father.nameextension = ""
+                    //                     binding.refresh();
+                }
+            ]);
+    }
 }

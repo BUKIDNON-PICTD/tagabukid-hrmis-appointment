@@ -1,0 +1,34 @@
+<workunit extends="wtemplates/ExplorerViewController.xml" serviceName="AppointmentJobOrderListService" 
+     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="joborderappointmentdocument">
+    <invokers>
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
+        <invoker folderid="/home/hrmis" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
+    </invokers>
+     <code>
+    <![CDATA[
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.common.*;
+
+    class AppointmentJobOrderListController extends ExplorerViewController {
+        
+        def params = [:]; 
+        
+        public void init() {
+            // params.yearcreated = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0]; 
+            params.dtfrom = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0] + "-01-01";
+            params.dtto = new java.sql.Date(System.currentTimeMillis());  
+        } 
+        
+        public void beforeFetchList( Map qry ) { 
+            if ( params ) qry.putAll( params ); 
+        }
+     }  
+    ]]> 
+    </code>
+
+    <pages>
+        <page name="queryform" template="tagabukid.hrmis.appointment.views.AppointmentJobOrderListQueryForm"/>
+    </pages>
+</workunit>
