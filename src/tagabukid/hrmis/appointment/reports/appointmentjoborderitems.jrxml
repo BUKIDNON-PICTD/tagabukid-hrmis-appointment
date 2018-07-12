@@ -110,7 +110,7 @@
 	<field name="org.name" class="java.lang.String"/>
 	<field name="natureofappointmentid.name" class="java.lang.String"/>
 	<field name="org.code" class="java.lang.String"/>
-	<field name="dailysalary" class="java.math.BigDecimal"/>
+	<field name="dailysalary" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -322,8 +322,7 @@
 						y="0"
 						width="21"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -335,14 +334,13 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="21"
 						y="0"
 						width="149"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -354,14 +352,13 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}+" "+$F{personnel.middlename}+" "+$F{personnel.lastname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="170"
 						y="0"
 						width="111"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -379,8 +376,7 @@
 						y="0"
 						width="46"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -390,7 +386,7 @@
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{dailysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dailysalary}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -398,8 +394,7 @@
 						y="0"
 						width="61"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -417,8 +412,7 @@
 						y="0"
 						width="62"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -436,8 +430,7 @@
 						y="0"
 						width="81"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
+						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -456,8 +449,7 @@
 						y="0"
 						width="51"
 						height="11"
-						key="staticText-19"
-						stretchType="RelativeToTallestObject"/>
+						key="staticText-19"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
