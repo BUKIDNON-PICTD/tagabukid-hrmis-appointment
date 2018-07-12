@@ -122,6 +122,596 @@
 	<field name="appointmentitems" class="java.lang.Object"/>
 	<field name="signatorygroup.signatoryGroupItems" class="java.lang.Object"/>
 
+
+		<group  name="FRONTPAGE" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="30"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="0"
+						width="896"
+						height="13"
+						key="subreport-1"
+						positionType="Float"/>
+					<subreportParameter  name="effectivefrom">
+						<subreportParameterExpression><![CDATA[$F{effectivefrom}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="effectiveuntil">
+						<subreportParameterExpression><![CDATA[$F{effectiveuntil}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="natureofappointment.name">
+						<subreportParameterExpression><![CDATA[$F{natureofappointment.name}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$F{appointmentitems}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{AppointmentItemList}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="17"
+						width="896"
+						height="13"
+						key="subreport-2"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{signatorygroup.signatoryGroupItems}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SignatoryGroup}]]></subreportExpression>
+				</subreport>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="BACKPAGE" isStartNewPage="true" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="356"  isSplitAllowed="true" >
+				<break>
+					<reportElement
+						x="0"
+						y="7"
+						width="896"
+						height="0"
+						key="element-1"/>
+				</break>
+				<staticText>
+					<reportElement
+						x="649"
+						y="220"
+						width="239"
+						height="34"
+						key="staticText-4"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="84"
+						width="239"
+						height="34"
+						key="staticText-5"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="118"
+						width="642"
+						height="34"
+						key="staticText-6"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ] Invalidated per CSCRO/ FO letter dated________________________________________________]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="288"
+						width="394"
+						height="34"
+						key="staticText-7"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ]  Court of Appeals]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="220"
+						width="394"
+						height="34"
+						key="staticText-8"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ]  Petition for Review]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="536"
+						y="186"
+						width="113"
+						height="34"
+						key="staticText-9"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="288"
+						width="239"
+						height="34"
+						key="staticText-10"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="322"
+						width="239"
+						height="34"
+						key="staticText-11"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="401"
+						y="322"
+						width="135"
+						height="34"
+						key="staticText-12"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="322"
+						width="394"
+						height="34"
+						key="staticText-13"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ]  Supreme Court]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="7"
+						y="13"
+						width="881"
+						height="37"
+						key="staticText-14"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[CSC/ HRMO Notation]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="84"
+						width="642"
+						height="34"
+						key="staticText-15"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ] Validated per RAI for the month of ____________________________________________________]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="401"
+						y="186"
+						width="135"
+						height="34"
+						key="staticText-16"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="401"
+						y="152"
+						width="135"
+						height="34"
+						key="staticText-17"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DATE FILED]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="536"
+						y="322"
+						width="113"
+						height="34"
+						key="staticText-18"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="401"
+						y="220"
+						width="135"
+						height="34"
+						key="staticText-19"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="152"
+						width="394"
+						height="34"
+						key="staticText-20"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ]  Appeal]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="536"
+						y="152"
+						width="113"
+						height="34"
+						key="staticText-21"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[STATUS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="536"
+						y="254"
+						width="113"
+						height="34"
+						key="staticText-22"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="536"
+						y="220"
+						width="113"
+						height="34"
+						key="staticText-23"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="50"
+						width="642"
+						height="34"
+						key="staticText-24"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ACTION ON APPOINTMENTS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="401"
+						y="254"
+						width="135"
+						height="34"
+						key="staticText-25"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="186"
+						width="239"
+						height="34"
+						key="staticText-26"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="152"
+						width="239"
+						height="34"
+						key="staticText-27"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="186"
+						width="394"
+						height="34"
+						key="staticText-28"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ]  CSCRO/ CSC-Commission]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="50"
+						width="239"
+						height="34"
+						key="staticText-29"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Recorded by]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="536"
+						y="288"
+						width="113"
+						height="34"
+						key="staticText-30"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="401"
+						y="288"
+						width="135"
+						height="34"
+						key="staticText-31"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="254"
+						width="239"
+						height="34"
+						key="staticText-32"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="649"
+						y="118"
+						width="239"
+						height="34"
+						key="staticText-33"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="254"
+						width="394"
+						height="34"
+						key="staticText-34"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[[  ]  CSC-Commision]]></text>
+				</staticText>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>
@@ -272,574 +862,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="383"  isSplitAllowed="true" >
-				<break>
-					<reportElement
-						x="0"
-						y="34"
-						width="896"
-						height="0"
-						key="element-1"/>
-				</break>
-				<staticText>
-					<reportElement
-						x="649"
-						y="247"
-						width="239"
-						height="34"
-						key="staticText-4"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="111"
-						width="239"
-						height="34"
-						key="staticText-5"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="145"
-						width="642"
-						height="34"
-						key="staticText-6"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ] Invalidated per CSCRO/ FO letter dated________________________________________________]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="315"
-						width="394"
-						height="34"
-						key="staticText-7"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ]  Court of Appeals]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="247"
-						width="394"
-						height="34"
-						key="staticText-8"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ]  Petition for Review]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="536"
-						y="213"
-						width="113"
-						height="34"
-						key="staticText-9"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="315"
-						width="239"
-						height="34"
-						key="staticText-10"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="349"
-						width="239"
-						height="34"
-						key="staticText-11"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="401"
-						y="349"
-						width="135"
-						height="34"
-						key="staticText-12"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="349"
-						width="394"
-						height="34"
-						key="staticText-13"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ]  Supreme Court]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="7"
-						y="40"
-						width="881"
-						height="37"
-						key="staticText-14"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="18" isBold="true"/>
-					</textElement>
-				<text><![CDATA[CSC/ HRMO Notation]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="111"
-						width="642"
-						height="34"
-						key="staticText-15"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ] Validated per RAI for the month of ____________________________________________________]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="401"
-						y="213"
-						width="135"
-						height="34"
-						key="staticText-16"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="401"
-						y="179"
-						width="135"
-						height="34"
-						key="staticText-17"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[DATE FILED]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="536"
-						y="349"
-						width="113"
-						height="34"
-						key="staticText-18"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="401"
-						y="247"
-						width="135"
-						height="34"
-						key="staticText-19"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="179"
-						width="394"
-						height="34"
-						key="staticText-20"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ]  Appeal]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="536"
-						y="179"
-						width="113"
-						height="34"
-						key="staticText-21"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[STATUS]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="536"
-						y="281"
-						width="113"
-						height="34"
-						key="staticText-22"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="536"
-						y="247"
-						width="113"
-						height="34"
-						key="staticText-23"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="77"
-						width="642"
-						height="34"
-						key="staticText-24"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[ACTION ON APPOINTMENTS]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="401"
-						y="281"
-						width="135"
-						height="34"
-						key="staticText-25"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="213"
-						width="239"
-						height="34"
-						key="staticText-26"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="179"
-						width="239"
-						height="34"
-						key="staticText-27"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="213"
-						width="394"
-						height="34"
-						key="staticText-28"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ]  CSCRO/ CSC-Commission]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="77"
-						width="239"
-						height="34"
-						key="staticText-29"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[Recorded by]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="536"
-						y="315"
-						width="113"
-						height="34"
-						key="staticText-30"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="401"
-						y="315"
-						width="135"
-						height="34"
-						key="staticText-31"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="281"
-						width="239"
-						height="34"
-						key="staticText-32"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="649"
-						y="145"
-						width="239"
-						height="34"
-						key="staticText-33"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="7"
-						y="281"
-						width="394"
-						height="34"
-						key="staticText-34"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="14" isBold="true"/>
-					</textElement>
-				<text><![CDATA[[  ]  CSC-Commision]]></text>
-				</staticText>
-				<subreport  isUsingCache="true">
-					<reportElement
-						x="0"
-						y="0"
-						width="896"
-						height="13"
-						key="subreport-1"
-						positionType="Float"/>
-					<subreportParameter  name="effectivefrom">
-						<subreportParameterExpression><![CDATA[$F{effectivefrom}]]></subreportParameterExpression>
-					</subreportParameter>
-					<subreportParameter  name="effectiveuntil">
-						<subreportParameterExpression><![CDATA[$F{effectiveuntil}]]></subreportParameterExpression>
-					</subreportParameter>
-					<subreportParameter  name="natureofappointment.name">
-						<subreportParameterExpression><![CDATA[$F{natureofappointment.name}]]></subreportParameterExpression>
-					</subreportParameter>
-					<dataSourceExpression><![CDATA[$F{appointmentitems}]]></dataSourceExpression>
-					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{AppointmentItemList}]]></subreportExpression>
-				</subreport>
-				<subreport  isUsingCache="true">
-					<reportElement
-						x="0"
-						y="17"
-						width="896"
-						height="13"
-						key="subreport-2"
-						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{signatorygroup.signatoryGroupItems}]]></dataSourceExpression>
-					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SignatoryGroup}]]></subreportExpression>
-				</subreport>
+			<band height="0"  isSplitAllowed="true" >
 			</band>
 		</detail>
 		<columnFooter>

@@ -10,7 +10,7 @@
     enabled:false;
 }
 
-"selectedAppointmentItem"[ entity.currentsalarystep != null] {
+"selectedAppointmentItem"[ entity.currentsalarystep != null && mode != 'read'] {
     enabled:true;
 }   
 

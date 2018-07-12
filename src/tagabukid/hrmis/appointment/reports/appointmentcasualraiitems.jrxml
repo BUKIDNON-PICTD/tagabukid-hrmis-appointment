@@ -154,7 +154,7 @@
 						mode="Opaque"
 						x="0"
 						y="12"
-						width="15"
+						width="17"
 						height="53"
 						backcolor="#99CCFF"
 						key="staticText-2"/>
@@ -433,9 +433,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="15"
+						x="17"
 						y="12"
-						width="40"
+						width="38"
 						height="53"
 						backcolor="#99CCFF"
 						key="staticText-22"/>
@@ -819,7 +819,7 @@ indicate period of publication
 						mode="Opaque"
 						x="0"
 						y="65"
-						width="15"
+						width="17"
 						height="8"
 						backcolor="#FFFFFF"
 						key="staticText-45"/>
@@ -837,9 +837,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="31"
+						x="55"
 						y="65"
-						width="222"
+						width="198"
 						height="8"
 						backcolor="#FFFFFF"
 						key="staticText-46"/>
@@ -897,9 +897,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="15"
+						x="17"
 						y="65"
-						width="40"
+						width="38"
 						height="8"
 						backcolor="#FFFFFF"
 						key="staticText-52"/>
@@ -938,13 +938,14 @@ indicate period of publication
 		</columnHeader>
 		<detail>
 			<band height="11"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
-						width="15"
+						width="17"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -956,13 +957,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="55"
 						y="0"
 						width="58"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -974,13 +976,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.lastname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="113"
 						y="0"
 						width="57"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -992,13 +995,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="196"
 						y="0"
 						width="57"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1010,13 +1014,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.middlename}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="170"
 						y="0"
 						width="26"
 						height="11"
-						key="textField-1"/>
+						key="textField-1"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1028,13 +1033,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="253"
 						y="0"
 						width="120"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1046,13 +1052,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.jobposition.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="399"
 						y="0"
 						width="26"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1064,13 +1071,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.paygradeandstepincrement.grade}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="499"
 						y="0"
 						width="84"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1082,13 +1090,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format($P{effectivefrom}) + " to " + new SimpleDateFormat("MM/dd/yyyy").format($P{effectiveuntil})]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="583"
 						y="0"
 						width="49"
 						height="11"
-						key="textField"/>
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1107,7 +1116,8 @@ indicate period of publication
 						y="0"
 						width="51"
 						height="11"
-						key="staticText-19"/>
+						key="staticText-19"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1126,7 +1136,8 @@ indicate period of publication
 						y="0"
 						width="48"
 						height="11"
-						key="staticText-20"/>
+						key="staticText-20"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1138,13 +1149,14 @@ indicate period of publication
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="15"
+						x="17"
 						y="0"
-						width="40"
+						width="38"
 						height="11"
-						key="textField-4"/>
+						key="textField-4"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1156,13 +1168,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectivefrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="373"
 						y="0"
 						width="26"
 						height="11"
-						key="textField-5"/>
+						key="textField-5"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1174,13 +1187,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.itemno}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="425"
 						y="0"
 						width="34"
 						height="11"
-						key="textField-6"/>
+						key="textField-6"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1192,13 +1206,14 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[($F{monthlywage} / 22).setScale(2, RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="459"
 						y="0"
 						width="40"
 						height="11"
-						key="textField-7"/>
+						key="textField-7"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1217,7 +1232,8 @@ indicate period of publication
 						y="0"
 						width="43"
 						height="11"
-						key="staticText-31"/>
+						key="staticText-31"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1236,7 +1252,8 @@ indicate period of publication
 						y="0"
 						width="40"
 						height="11"
-						key="staticText-32"/>
+						key="staticText-32"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1255,7 +1272,8 @@ indicate period of publication
 						y="0"
 						width="41"
 						height="11"
-						key="staticText-33"/>
+						key="staticText-33"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1274,7 +1292,8 @@ indicate period of publication
 						y="0"
 						width="41"
 						height="11"
-						key="staticText-34"/>
+						key="staticText-34"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
