@@ -30,6 +30,8 @@ class PDSQuestionController extends CrudFormModel {
     def parententity
     def svc
     
+    def selectedPDSQuestion
+      
     boolean isCreateAllowed(){
         return false
     }
@@ -47,171 +49,92 @@ class PDSQuestionController extends CrudFormModel {
     }
     public void beforeOpen() {
         entity.putAll(parententity);
+        
     }
     
-    def suggestCountry = [
-        fetchList: { o->
-            return svc.getList(o).name;
-        }
-    ] as SuggestModel;
+//    def suggestCountry = [
+//        fetchList: { o->
+//            return svc.getList(o).name;
+//        }
+//    ] as SuggestModel;
+//    
+  
     
     public void beforeSave(o){
-//        def pdsqs = [
-//            thirddegree             : entity.thirddegree,                    
-//            fourthdegree            : entity.fourthdegree,                   
-//            degreedetails           : entity.degreedetails,                  
-//            offense                 : entity.offense,                        
-//            offensedetails          : entity.offensedetails,                 
-//            criminalcharge          : entity.criminalcharge,                 
-//            criminalchargedate      : entity.criminalchargedate,
-//            criminalchargestatus    : entity.criminalchargestatus,           
-//            convicted               : entity.convicted,                      
-//            convictiondetails       : entity.convictiondetails,              
-//            separated               : entity.separated,                      
-//            separationdetails       : entity.separationdetails,              
-//            candidate               : entity.candidate,                      
-//            candidacydetails        : entity.candidacydetails,               
-//            resigncampaign          : entity.resigncampaign,                 
-//            resigncampaigndetails   : entity.resigncampaigndetails,          
-//            immigrant               : entity.immigrant,                      
-//            immigrantcountry        : entity.immigrantcountry,               
-//            indigenousgroup         : entity.indigenousgroup,                
-//            indigenousgroupdetails  : entity.indigenousgroupdetails,         
-//            pwd                     : entity.pwd,                            
-//            pwdidno                 : entity.pwdidno,                        
-//            soloparent              : entity.soloparent,                     
-//            soloparentidno          : entity.soloparentidno, 
-//            recordlog : [
-//                datecreated         : dtSvc.getServerDate(),
-//                createdbyuserid     : OsirisContext.env.FULLNAME,
-//                createdbyuser       : OsirisContext.env.USERID,
-//                dateoflastupdate    : dtSvc.getServerDate(),
-//                lastupdatedbyuserid : OsirisContext.env.FULLNAME,
-//                lastupdatedbyuser   : OsirisContext.env.USERID,
-//            ],
-//        ]
-//        entity.pdsqs = []
-//        entity.qustion
-//        entity.pdsqs.add(pdsqs)
-        
-        if(entity.pdsqs.size()<=0)
-        {
-//            def govids = [
-//                idtype: entity.idtype,
-//                idno  : entity.idno,
-//                issuance : entity.issuance,
-//                recordlog : [
-//                    datecreated : dtSvc.getServerDate(),
-//                    createdbyuser : OsirisContext.env.FULLNAME,
-//                    createdbyuserid : OsirisContext.env.USERID,  
-//                    dateoflastupdate : dtSvc.getServerDate(),
-//                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
-//                    lastupdatedbyuserid : OsirisContext.env.USERID 
-//                ]
-//            ]
-            entity.question.recordlog = [
-                    datecreated : dtSvc.getServerDate(),
-                    createdbyuser : OsirisContext.env.FULLNAME,
-                    createdbyuserid : OsirisContext.env.USERID,  
-                    dateoflastupdate : dtSvc.getServerDate(),
-                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
-                    lastupdatedbyuserid : OsirisContext.env.USERID 
-                ]
-            entity.pdsqs << entity.question
-        }else{
-//            def govids = [
-//                objid : entity.govid,
-//                idtype: entity.idtype,
-//                idno  : entity.idno,
-//                issuance : entity.issuance,
-//                recordlog : [
-//                    dateoflastupdate : dtSvc.getServerDate(),
-//                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
-//                    lastupdatedbyuserid : OsirisContext.env.USERID 
-//                ]
-//            ]
-            entity.question.recordlog
-            entity.question.recordlog = [
-                    dateoflastupdate : dtSvc.getServerDate(),
-                    lastupdatedbyuser : OsirisContext.env.FULLNAME,
-                    lastupdatedbyuserid : OsirisContext.env.USERID 
-                ]
-            entity.pdsqs << entity.question
-        }
+        // println entity.pdsquestions
     }
     public void afterSave(){
-        entity.question = [:]
-        entity.question.putAll(entity.pdsqs[0]);
-        //        entity.thirddegree=entity.pdsqs[0].thirddegree
-        //        entity.fourthdegree=entity.pdsqs[0].fourthdegree
-        //        entity.degreedetails=entity.pdsqs[0].degreedetails
-        //        entity.offense=entity.pdsqs[0].offense
-        //        entity.offensedetails=entity.pdsqs[0].offensedetails
-        //        entity.criminalcharge=entity.pdsqs[0].criminalcharge
-        //        entity.criminalchargedate=entity.pdsqs[0].criminalchargedate
-        //        entity.criminalchargestatus=entity.pdsqs[0].criminalchargestatus
-        //        entity.convicted=entity.pdsqs[0].convicted
-        //        entity.convictiondetails=entity.pdsqs[0].convictiondetails
-        //        entity.separated=entity.pdsqs[0].separated
-        //        entity.separationdetails=entity.pdsqs[0].separationdetails
-        //        entity.candidate=entity.pdsqs[0].candidate
-        //        entity.candidacydetails=entity.pdsqs[0].candidacydetails
-        //        entity.resigncampaign=entity.pdsqs[0].resigncampaign
-        //        entity.resigncampaigndetails=entity.pdsqs[0].resigncampaigndetails
-        //        entity.immigrant=entity.pdsqs[0].immigrant
-        //        entity.immigrantcountry=entity.pdsqs[0].immigrantcountry
-        //        entity.indigenousgroup=entity.pdsqs[0].indigenousgroup
-        //        entity.indigenousgroupdetails=entity.pdsqs[0].indigenousgroupdetails
-        //        entity.pwd=entity.pdsqs[0].pwd
-        //        entity.pwdido=entity.pdsqs[0].pwdidno
-        //        entity.soloparent=entity.pdsqs[0].soloparent
-        //        entity.soloparentidno=entity.pdsqs[0].soloparentidno
+        // entity.question = [:]
+        // entity.question.putAll(entity.pdsqs[0]);
     }
     
     public void afterOpen() {
-        entity.question = [:]
-        if(entity.pdsqs){
-            entity.question.putAll(entity.pdsqs[0]);
-            //            binding.refresh();
-            // entity.thirddegree=entity.pdsqs[0].thirddegree
-            // entity.fourthdegree=entity.pdsqs[0].fourthdegree
-            // entity.degreedetails=entity.pdsqs[0].degreedetails
-            // entity.offense=entity.pdsqs[0].offense
-            // entity.offensedetails=entity.pdsqs[0].offensedetails
-            // entity.criminalcharge=entity.pdsqs[0].criminalcharge
-            // entity.criminalchargedate=entity.pdsqs[0].criminalchargedate
-            // entity.criminalchargestatus=entity.pdsqs[0].criminalchargestatus
-            // entity.convicted=entity.pdsqs[0].convicted
-            // entity.convictiondetails=entity.pdsqs[0].convictiondetails
-            // entity.separated=entity.pdsqs[0].separated
-            // entity.separationdetails=entity.pdsqs[0].separationdetails
-            // entity.candidate=entity.pdsqs[0].candidate
-            // entity.candidacydetails=entity.pdsqs[0].candidacydetails
-            // entity.resigncampaign=entity.pdsqs[0].resigncampaign
-            // entity.resigncampaigndetails=entity.pdsqs[0].resigncampaigndetails
-            // entity.immigrant=entity.pdsqs[0].immigrant
-            // entity.immigrantcountry=entity.pdsqs[0].immigrantcountry
-            // entity.indigenousgroup=entity.pdsqs[0].indigenousgroup
-            // entity.indigenousgroupdetails=entity.pdsqs[0].indigenousgroupdetails
-            // entity.pwd=entity.pdsqs[0].pwd
-            // entity.pwdidno=entity.pdsqs[0].pwdidno
-            // entity.soloparent=entity.pdsqs[0].soloparent
-            // entity.soloparentidno=entity.pdsqs[0].soloparentidno            
+       entity.pdsq = svc.loadQuestions();
+       println entity.pdsquestions
+        if(!entity.pdsquestions){
+            entity.pdsquestions = []
+            entity.pdsq.each{
+               def newpdsquestion = [
+                    pdsq : it,
+                    recordlog : [
+                        datecreated : dtSvc.getServerDate(),
+                        createdbyuser : OsirisContext.env.FULLNAME,
+                        createdbyuserid : OsirisContext.env.USERID,  
+                        dateoflastupdate : dtSvc.getServerDate(),
+                        lastupdatedbyuser : OsirisContext.env.FULLNAME,
+                        lastupdatedbyuserid : OsirisContext.env.USERID 
+                    ]
+               ]
+               entity.pdsquestions.add(newpdsquestion)
+            }
         }
-        // else{
-        //         entity.thirddegree = 0
-        //         entity.fourthdegree = 0                
-        //         entity.offense = 0                
-        //         entity.criminalcharge = 0
-        //         entity.convicted = 0                
-        //         entity.separated = 0                
-        //         entity.candidate = 0                
-        //         entity.resigncampaign = 0                
-        //         entity.immigrant = 0                
-        //         entity.indigenousgroup = 0                
-        //         entity.pwd = 0                
-        //         entity.soloparent = 0
-                
-        //     }
+        // pdsqustionListHandler.reload();
     }
+    
+    def pdsqustionListHandler = [
+        fetchList: { entity.pdsquestions },
+        // createItem : {
+        //     return[
+        //         recordlog : [
+        //             datecreated : dtSvc.getServerDate(),
+        //             createdbyuser : OsirisContext.env.FULLNAME,
+        //             createdbyuserid : OsirisContext.env.USERID,
+        //             dateoflastupdate : dtSvc.getServerDate(),
+        //             lastupdatedbyuser : OsirisContext.env.FULLNAME,
+        //             lastupdatedbyuserid : OsirisContext.env.USERID,
+        //         ],
+        //     ]
+        // },
+        onRemoveItem : {
+            // if (MsgBox.confirm('Delete item?')){                
+            //     entity.pdsquestions.remove(it)
+            //     pdsqustionListHandler?.load();
+            //     return true;
+            // }
+            return false;
+        }
+        // onColumnUpdate: { o,col-> 
+        //     if (o.objid){
+        //         o.datecreated = dtSvc.getServerDate(),
+        //         o.createdbyuser = OsirisContext.env.FULLNAME,
+        //         o.createdbyuserid = OsirisContext.env.USERID,
+        //         o.dateoflastupdate = dtSvc.getServerDate(),
+        //         o.lastupdatedbyuser = OsirisContext.env.FULLNAME,
+        //         o.lastupdatedbyuserid = OsirisContext.env.USERID,
+        //     }else{
+        //         o.recordlog.dateoflastupdate = dtSvc.getServerDate();
+        //         o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+        //         o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+        //     }
+            
+            
+            
+        // },
+        // onAddItem : {
+        //     throw new Exception('You are not allowed to add a question. Please contact PICTD.');
+        //     // entity.pdsquestions.add(it);
+        // },
+        // validate:{li->
+        // }
+    ] as EditorListModel
 }
