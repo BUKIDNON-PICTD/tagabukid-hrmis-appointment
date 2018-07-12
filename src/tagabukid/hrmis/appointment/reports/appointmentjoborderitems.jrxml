@@ -27,7 +27,7 @@
 	<style 
 		name="TREDWHENNULL"
 		isDefault="false"
-		isBlankWhenNull="true"
+		isBlankWhenNull="true"  
 	>
 
 		<conditionalStyle>
