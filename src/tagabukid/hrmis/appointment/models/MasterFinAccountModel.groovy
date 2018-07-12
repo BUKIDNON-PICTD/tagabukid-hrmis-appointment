@@ -16,27 +16,34 @@ class MasterFinAccountModel extends CrudFormModel{
     @Service('DateService')
     def dtSvc
     
+    @Service("TagabukidHRMISAccountManagementService") 
+    def hrmisaccountService
+            
+    def node;
+    
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
     
     public void afterOpen(){ 
-        entity.fund = persistenceSvc.read( [_schemaname:'master_tblfinfund', objid:entity.fundid] );
-        if(!entity.parentaccountid)
-            entity.parentaccount = "";
-        else
-            entity.parentaccount = persistenceSvc.read( [_schemaname:'master_tblfinaccount', objid:entity.parentaccountid] );
+        // entity.fund = persistenceSvc.read( [_schemaname:'master_tblfinfund', objid:entity.fundid] );
+        // if(!entity.parentaccountid)
+        //     entity.parentaccount = "";
+        // else
+        //     entity.parentaccount = persistenceSvc.read( [_schemaname:'master_tblfinaccount', objid:entity.parentaccountid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        entity.fundid = entity.fund.objid;
-            if(!entity.parentaccount)
-                entity.parentaccountid = "";
-            else
-                entity.parentaccountid = entity.parentaccount.objid;
+        // entity.fundid = entity.fund.objid;
+        //     if(!entity.parentaccount)
+        //         entity.parentaccountid = "";
+        //     else
+        //         entity.parentaccountid = entity.parentaccount.objid;
+        entity.parentaccount = node
             
         if(o == 'create'){
+            entity = hrmisaccountService.manageLftRgt(entity)
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

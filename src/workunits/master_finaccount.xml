@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblfinaccount:create" caption="New Financial Account" action="create" role="MASTER"/>
         <invoker type="master_tblfinaccount:open" caption="Financial Account" action="open" role="MASTER"/>
+        <invoker type="hrmisaccount:create" caption="New Financial Account" action="create" role="MASTER"/>
+        <invoker type="hrmisaccount:open" caption="Financial Account" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

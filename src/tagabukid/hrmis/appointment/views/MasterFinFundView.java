@@ -41,10 +41,9 @@ public class MasterFinFundView extends javax.swing.JPanel {
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         xTextField3 = new com.rameses.rcp.control.XTextField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
-        xLookupField1 = new com.rameses.rcp.control.XLookupField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Fund");
+        xTitledBorder1.setTitle("Fund Details");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -81,14 +80,6 @@ public class MasterFinFundView extends javax.swing.JPanel {
         xTextField4.setVisible(false);
         xFormPanel1.add(xTextField4);
 
-        xLookupField1.setCaption("Parent Fund");
-        xLookupField1.setCaptionWidth(100);
-        xLookupField1.setExpression("#{item.name}");
-        xLookupField1.setHandler("lookup:tagabukid_hrmis_parentfund");
-        xLookupField1.setName("entity.parentfund"); // NOI18N
-        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xLookupField1);
-
         xHorizontalPanel1.add(xFormPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -105,7 +96,7 @@ public class MasterFinFundView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -114,7 +105,6 @@ public class MasterFinFundView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;

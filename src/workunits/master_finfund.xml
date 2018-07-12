@@ -2,6 +2,8 @@
     <invokers>
         <invoker type="master_tblfinfund:create" caption="New Fin Fund" action="create" role="MASTER"/>
         <invoker type="master_tblfinfund:open" caption="Fin Fund" action="open" role="MASTER"/>
+        <invoker type="hrmisfund:create" caption="New Fund" action="create" role="MASTER"/>
+        <invoker type="hrmisfund:open" caption="Fund" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

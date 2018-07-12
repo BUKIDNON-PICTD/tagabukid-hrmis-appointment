@@ -80,7 +80,7 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
         xLookupField1.setCaption("Organization Unit Type");
         xLookupField1.setCaptionWidth(180);
         xLookupField1.setExpression("#{item.description}");
-        xLookupField1.setHandler("organizationunittype:lookup");
+        xLookupField1.setHandler("lookup:tagabukid_hrmis_organizationunittype");
         xLookupField1.setName("entity.organizationunittype"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField1.setRequired(true);
@@ -95,7 +95,7 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
         xLookupField3.setCaption("City/Municipality");
         xLookupField3.setCaptionWidth(100);
         xLookupField3.setExpression("#{item.name}");
-        xLookupField3.setHandler("citymunicipality:lookup");
+        xLookupField3.setHandler("lookup:tagabukid_hrmis_citymunicipality");
         xLookupField3.setName("entity.addrcitymun"); // NOI18N
         xLookupField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xLookupField3);
@@ -103,13 +103,14 @@ public class MasterOrganizationUnitView extends javax.swing.JPanel {
         xLookupField4.setCaption("Barangay");
         xLookupField4.setCaptionWidth(100);
         xLookupField4.setExpression("#{item.name}");
-        xLookupField4.setHandler("barangay:lookup");
+        xLookupField4.setHandler("lookup:tagabukid_hrmis_barangay");
         xLookupField4.setName("entity.addrbarangay"); // NOI18N
         xLookupField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xLookupField4);
 
         xTextField15.setCaption("Address Details");
         xTextField15.setCaptionWidth(100);
+        xTextField15.setDepends(null);
         xTextField15.setName("entity.addressdetails"); // NOI18N
         xTextField15.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField15);

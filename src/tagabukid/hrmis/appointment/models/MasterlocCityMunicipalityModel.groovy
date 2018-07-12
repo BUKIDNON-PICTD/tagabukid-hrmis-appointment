@@ -18,17 +18,17 @@ class MasterlocCityMunicipalityModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.province = persistenceSvc.read( [_schemaname:'master_tbllocprovince', objid:entity.provinceid] );
-        if(entity.congressionaldistrict)
-        entity.congressionaldistrict = persistenceSvc.read( [_schemaname:'master_tblloccongressionaldistrict', objid:entity.congressionaldistrictid] );
+        // entity.province = persistenceSvc.read( [_schemaname:'master_tbllocprovince', objid:entity.provinceid] );
+        // if(entity.congressionaldistrict)
+        // entity.congressionaldistrict = persistenceSvc.read( [_schemaname:'master_tblloccongressionaldistrict', objid:entity.congressionaldistrictid] );
     
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-            entity.provinceid = entity.province.objid;
-            if(entity.congressionaldistrict)
-            entity.congressionaldistrictid = entity.congressionaldistrict.objid;        
+            // entity.provinceid = entity.province.objid;
+            // if(entity.congressionaldistrict)
+            // entity.congressionaldistrictid = entity.congressionaldistrict.objid;        
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
