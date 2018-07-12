@@ -14,8 +14,6 @@ public abstract class OrganizationUntiManagementListController extends ExplorerV
     public String getPrefixId() {
         return "ORG";
     }
-
-    def selectedItem
     
     public String getDefaultFileType() {
         return "hrmisorg";

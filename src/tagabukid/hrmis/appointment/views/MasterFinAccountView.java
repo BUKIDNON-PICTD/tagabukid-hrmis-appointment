@@ -36,7 +36,6 @@ public class MasterFinAccountView extends javax.swing.JPanel {
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Account Details");
@@ -78,12 +77,6 @@ public class MasterFinAccountView extends javax.swing.JPanel {
         xLookupField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField2);
 
-        xTextField3.setCaption("Position");
-        xTextField3.setCaptionWidth(125);
-        xTextField3.setName("entity.position"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
-
         xHorizontalPanel1.add(xFormPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -100,7 +93,7 @@ public class MasterFinAccountView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -113,7 +106,6 @@ public class MasterFinAccountView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField7;
     // End of variables declaration//GEN-END:variables
 }

@@ -40,7 +40,6 @@ public class MasterFinFundView extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
         xTextField3 = new com.rameses.rcp.control.XTextField();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Fund Details");
@@ -73,13 +72,6 @@ public class MasterFinFundView extends javax.swing.JPanel {
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
 
-        xTextField4.setCaption("Position");
-        xTextField4.setCaptionWidth(100);
-        xTextField4.setName("entity.position"); // NOI18N
-        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField4.setVisible(false);
-        xFormPanel1.add(xTextField4);
-
         xHorizontalPanel1.add(xFormPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -96,7 +88,7 @@ public class MasterFinFundView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -109,6 +101,5 @@ public class MasterFinFundView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
-    private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,32 +22,22 @@ class MasterOrganizationUnitModel extends CrudFormModel{
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
     
-//     public void test() {
-//         println entity
-//         println node
-////        entity.putAll(parententity);
-//    }
     public void afterOpen(){ 
-//        ((!entity.parentorgunitid) ? (entity.parentorgunit="") : (entity.parentorgunit = persistenceSvc.read( [_schemaname:'master_tblorganizationunit', orgunitid:entity.parentorgunitid] )))
-        // if(entity.organizationunittypeid)
-        //     entity.organizationunittype = persistenceSvc.read( [_schemaname:'master_tblorganizationunittype', orgunittypeid:entity.organizationunittypeid] )
-        // if(entity.addrcitymunid)
-        //     entity.addrcitymun = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.addrcitymunid] )
-        // if(entity.addrbarangayid)
-        //     entity.addrbarangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.addrbarangayid] )
+        ((!entity.organizationunittypeid) ? (entity.organizationunittype="") : (entity.organizationunittype = persistenceSvc.read( [_schemaname:'master_tblorganizationunittype', orgunittypeid:entity.organizationunittypeid] )))
+        ((!entity.addrcitymunid) ? (entity.addrcitymun="") : (entity.addrcitymun = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.addrcitymunid] )))
+        ((!entity.addrbarangayid) ? (entity.addrbarangay="") : (entity.addrbarangay = persistenceSvc.read( [_schemaname:'master_tbllocbarangay', objid:entity.addrbarangayid] )))
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
         
         entity.parentorgunitid = node.orgunitid
-//        ((!entity.parentorgunit) ? (entity.parentorgunitid = "") : (entity.parentorgunitid = entity.parentorgunit.orgunitid))
-        // ((!entity.organizationunittype) ? (entity.organizationunittypeid="") : (entity.organizationunittypeid=entity.organizationunittype.orgunittypeid))
-        // ((!entity.addrcitymun) ? (entity.addrcitymunid = "") : (entity.addrcitymunid = entity.addrcitymun.objid))
-        // ((!entity.addrbarangay) ? (entity.addrbarangayid = "") :  (entity.addrbarangayid = entity.addrbarangay.objid))
+        ((!entity.organizationunittype) ? (entity.organizationunittypeid="") : (entity.organizationunittypeid=entity.organizationunittype.orgunittypeid))
+        ((!entity.addrcitymun) ? (entity.addrcitymunid = "") : (entity.addrcitymunid = entity.addrcitymun.objid))
+        ((!entity.addrbarangay) ? (entity.addrbarangayid = "") :  (entity.addrbarangayid = entity.addrbarangay.objid))
              
         if(o == 'create'){
-            entity = hrmisorgService.manageLftRgt(entity)
+            entity = hrmisorgService.manageLftRgt(entity)       //note for Tree
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

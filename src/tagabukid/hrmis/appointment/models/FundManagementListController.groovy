@@ -12,10 +12,8 @@ public abstract class FundManagementListController extends ExplorerViewControlle
     
 //    def types = ['Casual', 'Permanent'];
     public String getPrefixId() {
-        return "FUND";
+        return "FUN";
     }
-
-    def selectedItem
     
     public String getDefaultFileType() {
         return "hrmisfund";

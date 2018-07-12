@@ -22,7 +22,7 @@
             }
 
             public String getPrefixId() {
-                return "FUND";
+                return "FUN";
             }
 
             void refresh(){
