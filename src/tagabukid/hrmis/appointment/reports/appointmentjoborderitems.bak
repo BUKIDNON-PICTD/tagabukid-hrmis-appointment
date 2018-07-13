@@ -27,7 +27,7 @@
 	<style 
 		name="TREDWHENNULL"
 		isDefault="false"
-		isBlankWhenNull="true"  
+		isBlankWhenNull="true"
 	>
 
 		<conditionalStyle>
@@ -390,7 +390,7 @@
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dailysalary}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dailysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
