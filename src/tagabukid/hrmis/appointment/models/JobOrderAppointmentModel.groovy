@@ -32,6 +32,8 @@ class JobOrderAppointmentModel extends CrudFormModel{
     
     def tag
     
+    //boolean deleteAllowed = true;
+    
     boolean isAllowApprove() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
