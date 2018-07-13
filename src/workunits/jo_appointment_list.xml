@@ -1,8 +1,9 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" serviceName="AppointmentJobOrderListService" 
-     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="joborderappointmentdocument">
+     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="joborderappointmentdocument" allowDelete = "true">
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
-        <invoker folderid="/home/hrmis" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
+        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}"/>
     </invokers>
      <code>
     <![CDATA[
@@ -13,7 +14,10 @@
 
     class AppointmentJobOrderListController extends ExplorerViewController {
         
-        def params = [:]; 
+        def params = [:];
+        
+        @Service("PersistenceService")
+        def persistenceSvc; 
         
         public void init() {
             // params.yearcreated = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0]; 
@@ -23,6 +27,17 @@
         
         public void beforeFetchList( Map qry ) { 
             if ( params ) qry.putAll( params ); 
+        }
+        
+        void delete(){
+            if (MsgBox.confirm('Are you sure you want to delete this item?')){                
+                persistenceSvc.removeEntity([_schemaname:'hrmis_appointmentjoborder',objid:selectedEntity.objid])
+                listHandler.reload()
+            }
+        }
+        
+        boolean isAllowDelete(){
+            return (selectedEntity.state == 'DRAFT');
         }
      }  
     ]]> 

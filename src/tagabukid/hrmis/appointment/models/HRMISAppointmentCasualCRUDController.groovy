@@ -46,12 +46,8 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return (mode=='read' && entity.state=='APPROVED' && ((datediff / (60*60*24*1000)) as int) < 0); 
     }
 
-    boolean isDeleteAllowed() {
-        return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
-    }
-
     boolean isEditAllowed() {
-        return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
+        return ( mode=='read' && entity.state=='DRAFT'); 
     }
 
     boolean isViewReportAllowed(){
@@ -81,14 +77,14 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     public void afterOpen(){
 //        println entity
 //        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
-        entity.appointmentitems.each{
-            //println it
-            it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
-            it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
-            //postgrehack
-//            it.plantilla.Id = it.plantilla.objid
-
-        }
+//        entity.appointmentitems.each{
+//            //println it
+//            it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
+//            it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
+//            //postgrehack
+////            it.plantilla.Id = it.plantilla.objid
+//
+//        }
     }
     def suggestGroupName = [
         fetchList: { o->
@@ -102,7 +98,14 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     ] as SuggestModel;
 
     def appointmentitemListHandler = [
-        fetchList: { entity.appointmentitems },
+        fetchList: { 
+            entity.appointmentitems.each{
+                it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
+                it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
+            }
+            return entity.appointmentitems 
+        
+        },
         createItem : {
             return[
                 objid : 'ACI' + new java.rmi.server.UID() +"-"+ dtSvc.getServerDate().year,
@@ -111,6 +114,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.appointmentitems.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_appointmentcasualitems',objid:it.objid])
                 appointmentitemListHandler?.load();
                 return true;
             }

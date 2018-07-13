@@ -1,3 +1,7 @@
-"entity.question.*"[true==true]{
-    visible:true;
+"selectedPDSQuestion"[mode == 'read']{
+    enabled:false;
+}
+
+"selectedPDSQuestion"[mode != 'read']{
+    enabled:true;
 }

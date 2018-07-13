@@ -27,7 +27,7 @@
 	<style 
 		name="TREDWHENNULL"
 		isDefault="false"
-		isBlankWhenNull="true"  
+		isBlankWhenNull="true"
 	>
 
 		<conditionalStyle>
@@ -110,7 +110,7 @@
 	<field name="org.name" class="java.lang.String"/>
 	<field name="natureofappointmentid.name" class="java.lang.String"/>
 	<field name="org.code" class="java.lang.String"/>
-	<field name="dailysalary" class="java.math.BigDecimal"/>
+	<field name="dailysalary" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -390,7 +390,7 @@
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{dailysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dailysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

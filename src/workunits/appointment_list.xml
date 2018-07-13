@@ -3,6 +3,7 @@
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List"  index="1" role="SHARED"/>
         <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List"  index="1" role="SHARED"/>
+        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}"/> 
     </invokers>
      <code>
     <![CDATA[
@@ -15,6 +16,9 @@
         
         def params = [:]; 
         
+        @Service("PersistenceService")
+        def persistenceSvc;
+    
         public void init() {
             // params.yearcreated = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0]; 
             params.dtfrom = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0] + "-01-01";
@@ -23,6 +27,17 @@
         
         public void beforeFetchList( Map qry ) { 
             if ( params ) qry.putAll( params ); 
+        }
+        
+        void delete(){
+            if (MsgBox.confirm('Are you sure you want to delete this item?')){                
+                persistenceSvc.removeEntity([_schemaname:'hrmis_appointmentcasual',objid:selectedEntity.objid])
+                listHandler.reload()
+            }
+        }
+        
+        boolean isAllowDelete(){
+            return (selectedEntity.state == 'DRAFT');
         }
      }  
     ]]> 

@@ -13,13 +13,21 @@ class MasterFinFundModel extends CrudFormModel{
     @Service('DateService')
     def dtSvc
     
+    @Service("TagabukidHRMISFundManagementService") 
+    def hrmisfundService
+            
+    def node;
+    
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
+
+        entity.parentfundid = node.objid
         if(o == 'create'){
+            entity = hrmisfundService.manageLftRgt(entity)
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
