@@ -1,0 +1,51 @@
+<workunit extends="rpt_wtemplates/ReportController.xml" >
+    <invokers>
+        <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Gender Count Report" 
+            target="window" index="1002" role="REPORTS"/>
+    </invokers>
+    <code>
+
+    <![CDATA[
+
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.reports.*;
+
+    class GenderCountReportController extends com.rameses.gov.etracs.rpt.report.AsyncReportController
+    {
+        @Service('GenderCountReportService') 
+        def svc 
+
+        String title = 'Gender Count By Office'
+
+        String reportName = 'tagabukid/hrmis/appointment/reports/gendercountreport.jasper';
+
+        void buildReportData(entity, asyncHandler){
+            svc.getGenderCountByOffice(entity, asyncHandler)
+        }
+        
+        Map getParameters(){
+            return data.parameters;
+        }
+        
+        def getOrgoffice(){
+             
+            return svc.getOrgOffice();
+                           
+        }
+        
+        def formControl = [
+            getFormControls: {
+                return [
+                    new FormControl( "date", [captionWidth:110, caption:'Date From', name:'entity.effectivefrom', required:true]),
+                    new FormControl( "date", [captionWidth:110, caption:'Date To', name:'entity.effectiveuntil', required:true]),
+                    new FormControl( "combo", [captionWidth:110, caption:'Office', name:'entity.orgoffice', items:'orgoffice', expression:'#{item.name}', preferredSize:'0,21', emptyText:'ALL'])                 
+                ]    
+            },
+        ] as FormPanelModel;
+    }
+    ]]>        
+        
+    </code>
+</workunit>
