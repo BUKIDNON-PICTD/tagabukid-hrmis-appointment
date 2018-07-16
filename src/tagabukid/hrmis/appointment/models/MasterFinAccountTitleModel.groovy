@@ -17,24 +17,32 @@ class MasterFinAccountTitleModel extends CrudFormModel{
     @Service('DateService')
     def dtSvc
     
+    @Service("TagabukidHRMISAccountTitleManagementService") 
+    def hrmisaccounttitleService
+            
+    def node;
+    
     boolean isAllowApprove() {
          return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
     
     public void afterOpen(){ 
-        if(!entity.parentaccounttitleid)
-        entity.parentaccounttitle = "";
-        else
-        entity.parentaccounttitle = persistenceSvc.read( [_schemaname:'master_tblfinaccounttitle', objid:entity.parentaccounttitleid] );
+        // if(!entity.parentaccounttitleid)
+        // entity.parentaccounttitle = "";
+        // else
+        // entity.parentaccounttitle = persistenceSvc.read( [_schemaname:'master_tblfinaccounttitle', objid:entity.parentaccounttitleid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(!entity.parentaccounttitle)
-            entity.parentaccounttitleid = entity.parentaccounttitle;
-        else
-            entity.parentaccounttitleid = entity.parentaccounttitle.objid;
+        // if(!entity.parentaccounttitle)
+        //     entity.parentaccounttitleid = entity.parentaccounttitle;
+        // else
+        //     entity.parentaccounttitleid = entity.parentaccounttitle.objid;
+        entity.parentaccounttitleid = node.objid
+
         if(o == 'create'){
+            entity = hrmisaccounttitleService.manageLftRgt(entity)
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  
