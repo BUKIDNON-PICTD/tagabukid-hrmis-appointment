@@ -131,7 +131,7 @@
 						mode="Opaque"
 						x="0"
 						y="25"
-						width="21"
+						width="24"
 						height="53"
 						backcolor="#99CCFF"
 						key="staticText-2"/>
@@ -149,7 +149,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="21"
+						x="25"
 						y="25"
 						width="149"
 						height="53"
@@ -169,7 +169,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="170"
+						x="174"
 						y="25"
 						width="111"
 						height="53"
@@ -189,7 +189,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="281"
+						x="285"
 						y="25"
 						width="46"
 						height="53"
@@ -209,7 +209,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="327"
+						x="331"
 						y="25"
 						width="61"
 						height="53"
@@ -229,7 +229,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="388"
+						x="392"
 						y="25"
 						width="62"
 						height="53"
@@ -249,7 +249,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="450"
+						x="454"
 						y="25"
 						width="81"
 						height="53"
@@ -269,7 +269,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="531"
+						x="535"
 						y="25"
 						width="51"
 						height="53"
@@ -320,7 +320,7 @@
 					<reportElement
 						x="0"
 						y="0"
-						width="21"
+						width="24"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -331,13 +331,13 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="8"/>
+						<font size="6"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="21"
+						x="25"
 						y="0"
 						width="149"
 						height="11"
@@ -356,7 +356,7 @@
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="170"
+						x="174"
 						y="0"
 						width="111"
 						height="11"
@@ -375,7 +375,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="281"
+						x="285"
 						y="0"
 						width="46"
 						height="11"
@@ -394,7 +394,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="327"
+						x="331"
 						y="0"
 						width="61"
 						height="11"
@@ -413,7 +413,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="388"
+						x="392"
 						y="0"
 						width="62"
 						height="11"
@@ -432,7 +432,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="450"
+						x="454"
 						y="0"
 						width="81"
 						height="11"
@@ -452,7 +452,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="531"
+						x="535"
 						y="0"
 						width="51"
 						height="11"
@@ -477,9 +477,10 @@
 					<reportElement
 						x="0"
 						y="0"
-						width="582"
+						width="585"
 						height="76"
-						key="staticText-21"/>
+						key="staticText-20"
+						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>

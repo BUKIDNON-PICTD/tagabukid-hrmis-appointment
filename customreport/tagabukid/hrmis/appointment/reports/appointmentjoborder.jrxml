@@ -7,7 +7,7 @@
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="612"
-		 pageHeight="1008"
+		 pageHeight="936"
 		 columnWidth="583"
 		 columnSpacing="0"
 		 leftMargin="20"
@@ -288,7 +288,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="102"  isSplitAllowed="true" >
+			<band height="26"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="-1"
@@ -315,7 +315,7 @@
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="-1"
-						y="89"
+						y="13"
 						width="572"
 						height="13"
 						key="subreport-2"
@@ -323,26 +323,6 @@
 					<dataSourceExpression><![CDATA[$F{signatorygroup.signatoryGroupItems}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SignatoryGroup}]]></subreportExpression>
 				</subreport>
-				<staticText>
-					<reportElement
-						x="-1"
-						y="13"
-						width="582"
-						height="76"
-						key="staticText-2"
-						positionType="Float"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Justified">
-						<font size="8"/>
-					</textElement>
-				<text><![CDATA[          The said job order shall automatically cease upon its expiration as stipulated above, unless renewed. However, services of any or all of the above-named can be terminated prior to the expiration of this Job Order for lack of funds or when their services are no longer needed. Also, no-work/no-pay is strictly implemented.
-          The above-named hereby attests that he/she is not related within the third degree (fourth degree in case of LGU's) of consanguinity or affinity to the: 1) hiring authority and/or 2) representatives of the hiring agency; that he/she has not been previously dismissed from government service for reason of an administrative offense; that he/she has not already reached the compulsory retirement age of sixty five (65). Furthermore, the service rendered hereunder is not considered or will never be accredited as government service. Not to exceed calendar working days.]]></text>
-				</staticText>
 			</band>
 		</detail>
 		<columnFooter>
