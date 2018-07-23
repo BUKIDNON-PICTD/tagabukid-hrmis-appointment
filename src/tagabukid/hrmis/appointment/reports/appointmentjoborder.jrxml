@@ -7,11 +7,11 @@
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="612"
-		 pageHeight="1008"
-		 columnWidth="572"
+		 pageHeight="936"
+		 columnWidth="583"
 		 columnSpacing="0"
 		 leftMargin="20"
-		 rightMargin="20"
+		 rightMargin="9"
 		 topMargin="20"
 		 bottomMargin="20"
 		 whenNoDataType="NoPages"
@@ -291,7 +291,7 @@
 			<band height="26"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
-						x="0"
+						x="-1"
 						y="0"
 						width="572"
 						height="13"
@@ -314,7 +314,7 @@
 				</subreport>
 				<subreport  isUsingCache="true">
 					<reportElement
-						x="0"
+						x="-1"
 						y="13"
 						width="572"
 						height="13"

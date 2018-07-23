@@ -162,6 +162,7 @@ class JobOrderAppointmentModel extends CrudFormModel{
             if (MsgBox.confirm('Delete item?')) {
                 //service.deleteFarmerItems(it)
                 entity.appointmentMemberItems.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_appointmentjoborderitems',objid:it.objid])
                 appointmentMemberItemHandler.reload();
                 return true;
             }
