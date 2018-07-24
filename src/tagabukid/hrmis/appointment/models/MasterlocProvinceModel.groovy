@@ -14,11 +14,11 @@ class MasterlocProvinceModel extends CrudFormModel{
     def dtSvc
     
     boolean isAllowApprove() {
-         return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
+         //return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
     }
 
     public void afterOpen(){               
-        entity.region = persistenceSvc.read( [_schemaname:'master_tbllocregion', objid:entity.regionid] );
+        //entity.region = persistenceSvc.read( [_schemaname:'master_tbllocregion', objid:entity.regionid] );
     }
 
 

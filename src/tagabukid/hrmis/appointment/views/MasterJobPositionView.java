@@ -116,6 +116,7 @@ public class MasterJobPositionView extends javax.swing.JPanel {
         xTextField10.setCaptionWidth(170);
         xTextField10.setName("entity.oldid"); // NOI18N
         xTextField10.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField10.setVisible(false);
         xTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xTextField10ActionPerformed(evt);
@@ -139,7 +140,7 @@ public class MasterJobPositionView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

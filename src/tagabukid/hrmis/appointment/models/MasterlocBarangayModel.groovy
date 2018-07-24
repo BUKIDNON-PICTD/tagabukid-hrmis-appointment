@@ -18,12 +18,12 @@ class MasterlocBarangayModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.citymunicipality = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.citymunicipalityid] );
+        //entity.citymunicipality = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.citymunicipalityid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-            entity.citymunicipalityid = entity.citymunicipality.objid;
+            //entity.citymunicipalityid = entity.citymunicipality.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

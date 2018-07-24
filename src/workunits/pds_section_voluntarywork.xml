@@ -2,6 +2,7 @@
     <invokers>
         <invoker type="pds:section:open" caption="Voluntary Work" action="open" index="93" visibleWhen="#{true}" />
     </invokers>
+    
     <code class="tagabukid.hrmis.appointment.models.PDSVoluntaryWorkController" />
     <pages>
         <page  template="tagabukid.hrmis.appointment.views.PDSVoluntaryWorkPage"/>

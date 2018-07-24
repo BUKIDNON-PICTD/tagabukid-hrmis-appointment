@@ -18,12 +18,12 @@ class MasterNationalityModel extends CrudFormModel{
     }
     
     public void afterOpen(){ 
-        entity.country = persistenceSvc.read( [_schemaname:'master_tblloccountry', objid:entity.countryid] );
+        //entity.country = persistenceSvc.read( [_schemaname:'master_tblloccountry', objid:entity.countryid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        entity.countryid = entity.country.objid;
+        //entity.countryid = entity.country.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

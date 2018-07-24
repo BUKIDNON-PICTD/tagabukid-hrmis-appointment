@@ -21,12 +21,12 @@ class MasterTrainingSubcategoryModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.trainingcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingcategory', objid:entity.trainingcategoryid] );
+        //entity.trainingcategory = persistenceSvc.read( [_schemaname:'master_tbltrainingcategory', objid:entity.trainingcategoryid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        entity.trainingcategoryid = entity.trainingcategory.objid;
+        //entity.trainingcategoryid = entity.trainingcategory.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
