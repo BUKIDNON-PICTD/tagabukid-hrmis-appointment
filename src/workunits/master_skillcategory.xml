@@ -1,6 +1,6 @@
 <workunit schemaName="master_tblskillcategory">
     <invokers>
-        <invoker type="master_tblskillcategory:create" caption="New Skill Category" action="create" role="MASTER"/>
+        <invoker type="master_tblskillcategory:create" caption="New Skill Category" action="create" target="popup" role="MASTER"/>
         <invoker type="master_tblskillcategory:open" caption="Skill Category" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
