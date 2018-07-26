@@ -201,7 +201,7 @@ class  PDSFamilyInfoController extends CrudFormModel {
     ] as EditorListModel
 
     def familyBackgroundchildnameHandler = [
-        fetchList: { entity?.familychildInfos },
+        fetchList: { entity?.familychildInfos.sort{it.child.birthdate} },
         createItem : {
             return[
                 recordlog : [

@@ -56,7 +56,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
     // }
 
     def educationalBackgroundItemListHandler = [
-        fetchList: { entity?.educationalInfos },
+        fetchList: { entity?.educationalInfos.sort{it.yeargraduated} },
         createItem : {
            return[
                recordlog : [
