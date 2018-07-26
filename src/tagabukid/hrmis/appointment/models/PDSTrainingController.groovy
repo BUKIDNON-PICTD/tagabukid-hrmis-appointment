@@ -18,6 +18,9 @@ class PDSTrainingController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
+    @Service("PersistenceService")
+    def persistenceSvc;
+    
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -75,6 +78,7 @@ class PDSTrainingController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.trainings.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_training',objid:it.objid])
                 trainingListHandler?.load();
                 return true;
             }

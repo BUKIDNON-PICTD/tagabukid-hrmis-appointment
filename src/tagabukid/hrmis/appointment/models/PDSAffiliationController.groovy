@@ -18,6 +18,9 @@ class PDSAffiliationController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
+    @Service("PersistenceService")
+    def persistenceSvc;
+    
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -75,6 +78,7 @@ class PDSAffiliationController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.organizations.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_organizationorassociation',objid:it.objid])
                 associationorganizationListHandler?.load();
                 return true;
             }

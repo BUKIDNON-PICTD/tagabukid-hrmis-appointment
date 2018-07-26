@@ -18,6 +18,9 @@ class PDSReferenceController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
+    @Service("PersistenceService")
+    def persistenceSvc;
+    
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -78,12 +81,12 @@ class PDSReferenceController extends CrudFormModel {
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID,
                 ],
-                // satte : 'DRAFT'
             ]
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.references.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_reference',objid:it.objid])
                 referenceListHandler?.load();
                 return true;
             }

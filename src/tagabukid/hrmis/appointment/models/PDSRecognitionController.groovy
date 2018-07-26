@@ -18,6 +18,9 @@ class PDSRecognitionController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
+    @Service("PersistenceService")
+    def persistenceSvc;
+    
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -75,6 +78,7 @@ class PDSRecognitionController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.recognitions.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_recognition',objid:it.objid])
                 recognitionListHandler?.load();
                 return true;
             }
