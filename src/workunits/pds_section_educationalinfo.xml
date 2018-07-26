@@ -6,7 +6,7 @@
     
     <code class="tagabukid.hrmis.appointment.models.PDSEducationalInfoController" />
     <pages>
-        <page  template="tagabukid.hrmis.appointment.views.PDSeducationalBackgroundPage"/>
+        <page  template="tagabukid.hrmis.appointment.views.PDSEducationalBackgroundPage"/>
     </pages>
 
 </workunit>

@@ -16,12 +16,12 @@ import com.rameses.seti2.views.CrudFormPage;
 @StyleSheet
 //@Template({FormPage.class})
 @Template(CrudFormPage.class)
-public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
+public class PDSEducationalBackgroundPage extends javax.swing.JPanel {
 
     /**
      * Creates new form PDSeducationalBackgroundPage
      */
-    public PDSeducationalBackgroundPage() {
+    public PDSEducationalBackgroundPage() {
         initComponents();
     }
 
