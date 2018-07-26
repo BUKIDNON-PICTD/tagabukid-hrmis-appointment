@@ -49,6 +49,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
         entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
         entityAddress2 = new com.rameses.enterprise.components.EntityAddress();
+        addressComponent2 = new com.rameses.enterprise.views.AddressComponent();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         entityLookup1 = new com.rameses.entity.components.EntityLookup();
@@ -84,20 +85,20 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         entityAddress1.setCaption("Residential Address");
         entityAddress1.setCaptionWidth(150);
-        entityAddress1.setDepends(new String[] {"entity.person"});
-        entityAddress1.setDisableWhen("");
-        entityAddress1.setName("residentialAddress"); // NOI18N
+        entityAddress1.setDepends(new String[] {"entity.copyresidential"});
+        entityAddress1.setName("entity.residential.address"); // NOI18N
         entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress1.setRequired(true);
         xFormPanel3.add(entityAddress1);
 
         entityAddress2.setCaption("Permanent Address");
         entityAddress2.setCaptionWidth(150);
-        entityAddress2.setDepends(new String[] {"entity.person"});
-        entityAddress2.setName("permanentAddress"); // NOI18N
+        entityAddress2.setDepends(new String[] {"entity.copypermanent"});
+        entityAddress2.setName("entity.residential.address"); // NOI18N
         entityAddress2.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress2.setRequired(true);
         xFormPanel3.add(entityAddress2);
+        xFormPanel3.add(addressComponent2);
 
         xHorizontalPanel3.add(xFormPanel3);
 
@@ -131,6 +132,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextArea1.setName("entity.person.birthplace"); // NOI18N
         xTextArea1.setPreferredSize(new java.awt.Dimension(300, 61));
         xTextArea1.setRequired(true);
+        xTextArea1.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
         jScrollPane1.setViewportView(xTextArea1);
 
         xFormPanel1.add(jScrollPane1);
@@ -278,8 +280,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
                         .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         jScrollPane4.setViewportView(xPanel1);
@@ -290,20 +292,21 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 854, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.rameses.enterprise.views.AddressComponent addressComponent2;
     private com.rameses.enterprise.components.CitizenshipSuggest citizenshipSuggest1;
     private com.rameses.enterprise.components.CivilStatusList civilStatusList1;
     private com.rameses.enterprise.components.EntityAddress entityAddress1;
