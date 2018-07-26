@@ -1,6 +1,6 @@
 <workunit schemaName="master_tbltrainingcomprehensiveness">
     <invokers>
-        <invoker type="master_tbltrainingcomprehensiveness:create" caption="New Training Comprehensiveness" action="create" role="MASTER"/>
+        <invoker type="master_tbltrainingcomprehensiveness:create" caption="New Training Comprehensiveness" action="create" target="popup" role="MASTER"/>
         <invoker type="master_tbltrainingcomprehensiveness:open" caption="Training Comprehensiveness" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>

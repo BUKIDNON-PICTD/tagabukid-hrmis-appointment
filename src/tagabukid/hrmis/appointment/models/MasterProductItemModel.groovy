@@ -18,13 +18,13 @@ class MasterProductItemModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.productcategory = persistenceSvc.read( [_schemaname:'master_tblproductcategory', objid:entity.productcategoryid] );
+        //entity.productcategory = persistenceSvc.read( [_schemaname:'master_tblproductcategory', objid:entity.productcategoryid] );
     }
 
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-            entity.productcategoryid = entity.productcategory.objid;
+            //entity.productcategoryid = entity.productcategory.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

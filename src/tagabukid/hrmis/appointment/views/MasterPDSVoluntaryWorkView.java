@@ -58,13 +58,13 @@ public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
         xFormPanel1.add(xTextField1);
 
         xTextField2.setCaption("Organization Name");
-        xTextField2.setCaptionWidth(200);
+        xTextField2.setCaptionWidth(125);
         xTextField2.setName("entity.organizationname"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
         xLookupField1.setCaption("Institution Type");
-        xLookupField1.setCaptionWidth(200);
+        xLookupField1.setCaptionWidth(125);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("lookup:tagabukid_hrmis_institutiontype");
         xLookupField1.setName("entity.institutiontype"); // NOI18N
@@ -72,7 +72,7 @@ public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
         xFormPanel1.add(xLookupField1);
 
         xLookupField2.setCaption("Municipality / City");
-        xLookupField2.setCaptionWidth(200);
+        xLookupField2.setCaptionWidth(125);
         xLookupField2.setExpression("#{item.name}");
         xLookupField2.setHandler("lookup:tagabukid_hrmis_citymunicipality");
         xLookupField2.setName("entity.muncityaddr"); // NOI18N
@@ -80,25 +80,25 @@ public class MasterPDSVoluntaryWorkView extends javax.swing.JPanel {
         xFormPanel1.add(xLookupField2);
 
         xTextField3.setCaption("Address Details");
-        xTextField3.setCaptionWidth(200);
+        xTextField3.setCaptionWidth(125);
         xTextField3.setName("entity.addressdetails"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
 
         xDateField1.setCaption("From");
-        xDateField1.setCaptionWidth(200);
+        xDateField1.setCaptionWidth(125);
         xDateField1.setName("entity.datefrom"); // NOI18N
         xDateField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xDateField1);
 
         xDateField2.setCaption("To");
-        xDateField2.setCaptionWidth(200);
+        xDateField2.setCaptionWidth(125);
         xDateField2.setName("entity.dateto"); // NOI18N
         xDateField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xDateField2);
 
         xDecimalField1.setCaption("Number Of Hours");
-        xDecimalField1.setCaptionWidth(200);
+        xDecimalField1.setCaptionWidth(125);
         xDecimalField1.setName("entity.numberofhours"); // NOI18N
         xFormPanel1.add(xDecimalField1);
 
