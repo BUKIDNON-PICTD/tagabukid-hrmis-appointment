@@ -49,75 +49,119 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "voluntarywork"}
-                , new Object[]{"caption", "NAME & ADDRESS OF ORGANIZATION"}
+                , new Object[]{"caption", "Organization Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.voluntarywork.organizationname + ' - ' + item.voluntarywork.addressdetails}", "lookup:tagabukid_hrmis_voluntarywork")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.voluntarywork.name}", "lookup:tagabukid_hrmis_voluntarywork")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "voluntarywork.datefrom"}
-                , new Object[]{"caption", "FROM"}
+                new Object[]{"name", "institutiontype"}
+                , new Object[]{"caption", "Oraganization Type"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.institutiontype.name}", "lookup:tagabukid_hrmis_institutiontype")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "organizationaddress"}
+                , new Object[]{"caption", "Organization Address"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.OpenerColumnHandler("#{item.organizationaddress.text}", "organizationAddressLookup")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "datefrom"}
+                , new Object[]{"caption", "From"}
                 , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "voluntarywork.dateto"}
-                , new Object[]{"caption", "TO"}
+                new Object[]{"name", "dateto"}
+                , new Object[]{"caption", "To"}
                 , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "voluntarywork.numberofhours"}
-                , new Object[]{"caption", "NUMBER OF HOURS"}
+                new Object[]{"name", "numberofhours"}
+                , new Object[]{"caption", "Number of Hours"}
                 , new Object[]{"width", 70}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.IntegerColumnHandler("#,#00", -1, -1)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "natureofwork"}
-                , new Object[]{"caption", "POSITION / NATURE OF WORK"}
+                new Object[]{"name", "positionornatureofwork"}
+                , new Object[]{"caption", "Position/ Nature of Work"}
                 , new Object[]{"width", 130}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "positionornatureofworkcategory"}
+                , new Object[]{"caption", "Position Category"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.positionornatureofworkcategory.name}", "lookup:tagabukid_hrmis_jobposition_category")}
             })
         });
         xDataTable1.setEditable(true);
         xDataTable1.setHandler("voluntaryworkListHandler");
-        xDataTable1.setMultiSelectName("");
         xDataTable1.setName("selectedVoluntaryWorkItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
 
