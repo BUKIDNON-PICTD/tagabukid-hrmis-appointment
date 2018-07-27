@@ -228,6 +228,11 @@ class  PDSFamilyInfoController extends CrudFormModel {
             o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
             
+            if (col == 'businessadd') { 
+                if(o.businessadd.type == 'local'){
+                    o.businessadd.text = svc.formatAddress(o.businessadd,"\n")
+                }
+            } 
         },
         onAddItem : {
             entity.familychildInfos.add(it);
