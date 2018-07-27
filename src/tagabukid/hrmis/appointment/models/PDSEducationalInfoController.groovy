@@ -72,6 +72,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.educationinfoitems.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_educationalinfo',objid:it.objid])
                 educationalBackgroundItemListHandler?.load();
                 return true;
             }

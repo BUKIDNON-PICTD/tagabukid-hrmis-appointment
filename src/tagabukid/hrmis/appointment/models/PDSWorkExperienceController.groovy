@@ -66,6 +66,7 @@ class  PDSWorkExperienceController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.workexperienceInfos.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_workexperience',objid:it.objid])
                 workExperienceItemHandler?.load();
                 return true;
             }

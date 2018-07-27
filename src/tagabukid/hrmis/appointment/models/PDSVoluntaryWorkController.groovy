@@ -76,6 +76,7 @@ class PDSVoluntaryWorkController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.voluntaryworks.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_voluntarywork',objid:it.objid])
                 voluntaryworkListHandler?.load();
                 return true;
             }
