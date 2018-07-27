@@ -18,9 +18,6 @@ class  PDSSkillController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
-    @Service("PersistenceService")
-    def persistenceSvc;
-    
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             

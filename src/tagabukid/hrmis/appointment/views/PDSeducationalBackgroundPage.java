@@ -16,12 +16,12 @@ import com.rameses.seti2.views.CrudFormPage;
 @StyleSheet
 //@Template({FormPage.class})
 @Template(CrudFormPage.class)
-public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
+public class PDSEducationalBackgroundPage extends javax.swing.JPanel {
 
     /**
      * Creates new form PDSeducationalBackgroundPage
      */
-    public PDSeducationalBackgroundPage() {
+    public PDSEducationalBackgroundPage() {
         initComponents();
     }
 
@@ -84,7 +84,7 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "degree"}
+                new Object[]{"name", "course"}
                 , new Object[]{"caption", "Basic Education/Degree/Course (Write in full)"}
                 , new Object[]{"width", 200}
                 , new Object[]{"minWidth", 0}
@@ -95,7 +95,21 @@ public class PDSeducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.course.name}", "lookup:tagabukid_hrmis_course")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "coursemajor"}
+                , new Object[]{"caption", "Major"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.coursemajor.name}", "lookup:tagabukid_hrmis_coursemajor")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "from"}

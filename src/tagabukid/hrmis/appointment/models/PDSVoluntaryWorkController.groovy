@@ -18,8 +18,6 @@ class PDSVoluntaryWorkController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
-    @Service("PersistenceService")
-    def persistenceSvc;
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -77,7 +75,6 @@ class PDSVoluntaryWorkController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.voluntaryworks.remove(it)
-                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_voluntarywork',objid:it.objid])
                 voluntaryworkListHandler?.load();
                 return true;
             }

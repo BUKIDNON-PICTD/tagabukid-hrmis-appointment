@@ -18,9 +18,6 @@ class PDSReferenceController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
-    @Service("PersistenceService")
-    def persistenceSvc;
-    
     // @Service("TagabukidSubayDocumentService")
     // def svc;
             
@@ -81,6 +78,7 @@ class PDSReferenceController extends CrudFormModel {
                     lastupdatedbyuser : OsirisContext.env.FULLNAME,
                     lastupdatedbyuserid : OsirisContext.env.USERID,
                 ],
+                // satte : 'DRAFT'
             ]
         },
         onRemoveItem : {
@@ -113,8 +111,6 @@ class PDSReferenceController extends CrudFormModel {
         return Inv.lookupOpener('lookup:individualwide',[
                 onselect :{
                     selectedReferenceItem.reference = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
-                    //                    selectedfatherInfo.father.nameextension = ""
-                    //                     binding.refresh();
                 }
             ]);
     }
