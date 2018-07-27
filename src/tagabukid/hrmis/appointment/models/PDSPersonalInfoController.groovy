@@ -28,6 +28,15 @@ class  PDSPersonalInfoController extends CrudFormModel{
     def parententity
     def svc
     
+    @PropertyChangeListener
+    def listener = [
+        'entity.person' : { 
+            
+            maincontroller.reloadphoto(entity.person);
+       
+        }
+    ]
+    
     boolean isCreateAllowed(){
         return false
     }
