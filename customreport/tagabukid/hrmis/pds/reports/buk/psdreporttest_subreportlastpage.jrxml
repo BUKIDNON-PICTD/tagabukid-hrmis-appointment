@@ -1281,46 +1281,19 @@
 						x="0"
 						y="483"
 						width="572"
-						height="17"
+						height="18"
 						key="subreport-1"/>
 					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportlastpage_subreportreferences.jasper"]]></subreportExpression>
 				</subreport>
-				<staticText>
+				<subreport  isUsingCache="true">
 					<reportElement
-						mode="Opaque"
 						x="0"
-						y="500"
-						width="434"
-						height="108"
-						backcolor="#E7E7E7"
-						key="staticText-53"/>
-					<box>					<topPen lineWidth="2.0"/>
-					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="2.0"/>
-					<rightPen lineWidth="2.0"/>
-</box>
-					<textElement lineSpacing="Single">
-						<font size="8" isUnderline="false" isStrikeThrough="false" />
-					</textElement>
-				<text><![CDATA[ 40. I declare under oath that i have personally accomplished this Personal Data Sheet which is a true, correct and
-       complete statement  pursuant to  the  provisions of pertinent laws, rules and regulations of the Republic of the
-       Philippines. I  authorize  the agency head/authorized representative to verify/validate the contents stated herein.
-       I   agree  that  any  misrepresentation made  in  this  document and its  attachment  shall  cause  the   filing   of
-       administrative/criminal case/s against me.]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="470"
-						y="512"
-						width="80"
-						height="96"
-						key="staticText-54"/>
-					<box></box>
-					<textElement>
-						<font/>
-					</textElement>
-				<text><![CDATA[Static Text]]></text>
-				</staticText>
+						y="501"
+						width="572"
+						height="18"
+						key="subreport-2"/>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportlastpage_subreportoath.jasper"]]></subreportExpression>
+				</subreport>
 			</band>
 		</columnHeader>
 		<detail>

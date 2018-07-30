@@ -669,15 +669,6 @@
 					</textElement>
 				<text><![CDATA[ II. FAMILY BACKGROUND]]></text>
 				</staticText>
-				<subreport  isUsingCache="true">
-					<reportElement
-						x="306"
-						y="20"
-						width="266"
-						height="18"
-						key="subreport-1"/>
-					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportfam_subreportchild.jasper"]]></subreportExpression>
-				</subreport>
 			</band>
 		</detail>
 		<columnFooter>
