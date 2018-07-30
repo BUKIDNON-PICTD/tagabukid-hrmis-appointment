@@ -375,7 +375,11 @@
 					<reportElement
 						mode="Transparent"
 						x="323"
+<<<<<<< HEAD
+						y="0"
+=======
 						y="10"
+>>>>>>> a4d89e903cf89064bb9f7ae96665fd1bc64e82d7
 						width="205"
 						height="10"
 						forecolor="#000000"

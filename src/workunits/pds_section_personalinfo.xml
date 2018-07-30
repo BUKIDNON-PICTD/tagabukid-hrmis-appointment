@@ -1,7 +1,7 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
-        <invoker type="pds:section:create" caption="Personal Info" action="create" index="1" visibleWhen="#{true}"/>
-        <invoker type="pds:section:open" caption="Personal Info" action="open" index="1" visibleWhen="#{true}"/>
+        <invoker type="pds:section:create" caption="Personal Info" action="create" index="1" visibleWhen="#{true}" role="PDS"/>
+        <invoker type="pds:section:open" caption="Personal Info" action="open" index="1" visibleWhen="#{true}" role="PDS"/>
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.PDSPersonalInfoController" />

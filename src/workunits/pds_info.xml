@@ -1,9 +1,11 @@
 <workunit>
     <invokers>
-        <invoker type="hrmis_pds:open"  action="open" target="window"/>
-        <invoker type="hrmis_pds:create" action="create" target="window"/>
-        <invoker folderid="/home/hrmis/hrmispds" caption="New PDS" action="create" index="2"  role="ENCODER"/>
-        <!-- <invoker type="formActions" caption="Close" action="_close" /> -->
+        <invoker type="hrmis_pds:open"  action="open" target="window" role="PDS"/>
+        <invoker type="hrmis_pds:create" action="create" target="window" role="PDS"/>
+        <invoker folderid="/home/hrmis/hrmispds" caption="New PDS" action="create" index="2"  role="PDS"/>
+
+        <invoker type="formActions" caption="Print Preview" action="preview" role="PDS_REPORTS"/>
+        <invoker type="formActions" caption="Approve" action="approve" role="PDS_REPORTS"/>
         
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.PDSInfoController"/>

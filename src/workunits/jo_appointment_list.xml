@@ -1,9 +1,9 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" serviceName="AppointmentJobOrderListService" 
      allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="joborderappointmentdocument" allowDelete = "true">
     <invokers>
-        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
-        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (JO)"  index="8" role="ENCODER"/>
-        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}"/>
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (JO)"  index="8" role="APPOINTMENT_SHARED"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (JO)"  index="8" role="APPOINTMENT_SHARED"/>
+        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}" role="APPOINTMENT_ENCODER"/>
     </invokers>
      <code>
     <![CDATA[

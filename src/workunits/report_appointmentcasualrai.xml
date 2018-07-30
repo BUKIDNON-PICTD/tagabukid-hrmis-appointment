@@ -1,6 +1,6 @@
 <workunit extends="rpt_wtemplates/ReportController.xml" >
     <invokers>
-        <invoker type="hrmis_appointmentcasual:form:formActions" caption="Preview RAI" action="init" index="1" visibleWhen="#{allowPreviewAppointment==true}"/>        
+        <invoker type="hrmis_appointmentcasual:form:formActions" caption="Preview RAI" action="init" index="1" visibleWhen="#{allowPreviewAppointment==true}" role="APPOINTMENT_REPORTS"/>        
     </invokers>
     <code>
     <![CDATA[

@@ -39,6 +39,24 @@ class PDSInfoController{
 //    public void afterSave(){
 //        loadSections();
 //    }
+
+    // boolean isAllowApprove() {
+    //     return ( mode=='read' && entity.state.toString().matches('DRAFT|ACTIVE') ); 
+    // }
+    
+    // boolean isAllowPreviewAppointment() {
+    //     return ( mode=='read'); 
+    // }
+    def preview(){
+       def op = Inv.lookupOpener("personalpdsreport:din",[entity: entity]);
+       op.target = 'self';
+       return op;
+    }
+
+    public void approve(){
+       loadSections('open');
+    }
+
     public void create(){
         title = "New PDS";
         entity = svc.initCreate();
