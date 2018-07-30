@@ -41,6 +41,7 @@
 	<parameter name="TRAINING" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="OTHERINFO" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="WORKEXPERIENCE" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="FAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="person.lastname" class="java.lang.String"/>
 	<field name="skills" class="java.lang.Object"/>
@@ -865,6 +866,9 @@
 						height="17"
 						key="subreport-1"
 						positionType="Float"/>
+					<subreportParameter  name="FAMILY_CHILD">
+						<subreportParameterExpression><![CDATA[$P{FAMILY_CHILD}]]></subreportParameterExpression>
+					</subreportParameter>
 					<dataSourceExpression><![CDATA[$F{family}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{FAMILY}]]></subreportExpression>
 				</subreport>
@@ -1834,7 +1838,7 @@
 						key="subreport-7"
 						positionType="Float"/>
 					<dataSourceExpression><![CDATA[$F{otherinfo}]]></dataSourceExpression>
-					<subreportExpression  class="java.lang.String"><![CDATA[$P{OTHERINFO}]]></subreportExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{OTHERINFO}]]></subreportExpression>
 				</subreport>
 			</band>
 			</groupHeader>
