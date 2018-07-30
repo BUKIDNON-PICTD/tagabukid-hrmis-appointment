@@ -35,13 +35,10 @@ public class MasterFinAccountView extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField2 = new com.rameses.rcp.control.XTextField();
-        xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
-        xTextField6 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Account");
+        xTitledBorder1.setTitle("Account Details");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xTextField1.setCaption("objid");
@@ -72,33 +69,13 @@ public class MasterFinAccountView extends javax.swing.JPanel {
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
-        xLookupField1.setCaption("Parent Account ID");
-        xLookupField1.setCaptionWidth(125);
-        xLookupField1.setExpression("#{item.name}");
-        xLookupField1.setHandler("finaccount:lookup");
-        xLookupField1.setName("entity.parentaccount"); // NOI18N
-        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xLookupField1);
-
-        xLookupField2.setCaption("Fund ID");
+        xLookupField2.setCaption("Fund");
         xLookupField2.setCaptionWidth(125);
         xLookupField2.setExpression("#{item.name}");
-        xLookupField2.setHandler("finfund:lookup");
+        xLookupField2.setHandler("lookup:tagabukid_hrmis_fund");
         xLookupField2.setName("entity.fund"); // NOI18N
         xLookupField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField2);
-
-        xTextField3.setCaption("Position");
-        xTextField3.setCaptionWidth(125);
-        xTextField3.setName("entity.position"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
-
-        xTextField6.setCaption("Account ID");
-        xTextField6.setCaptionWidth(125);
-        xTextField6.setName("entity.account_id"); // NOI18N
-        xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField6);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -116,7 +93,7 @@ public class MasterFinAccountView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -125,13 +102,10 @@ public class MasterFinAccountView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XLookupField xLookupField2;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
-    private com.rameses.rcp.control.XTextField xTextField6;
     private com.rameses.rcp.control.XTextField xTextField7;
     // End of variables declaration//GEN-END:variables
 }

@@ -49,7 +49,7 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "from"}
                 , new Object[]{"caption", "From"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 50}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", true}
@@ -75,8 +75,8 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler("MM-dd-yyyy", "MM-dd-yyyy", "MM-dd-yyyy")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "position"}
-                , new Object[]{"caption", "Position Title"}
+                new Object[]{"name", "institution"}
+                , new Object[]{"caption", "Institution"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -89,8 +89,22 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "departmentagencyofficecompany"}
-                , new Object[]{"caption", "Department/Agency/Office/Company"}
+                new Object[]{"name", "institutiontype"}
+                , new Object[]{"caption", "Institution Type"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.institutiontype.name}", "lookup:tagabukid_hrmis_institutiontype")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "jobposition"}
+                , new Object[]{"caption", "Position Title"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -100,7 +114,7 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.jobposition.name}", "lookup:tagabukid_hrmis_jobposition")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "monthlysalary"}
@@ -117,21 +131,21 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.DecimalColumnHandler("#,##0.00", -1.0, -1.0, false, 2)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "salatystep"}
+                new Object[]{"name", "paygradestepincrement"}
                 , new Object[]{"caption", "Salary/ Job/ Pay Grade & Step Increment"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
+                , new Object[]{"required", true}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.paygradestepincrement.grade + ' - ' + item.paygradestepincrement.step}", "lookup:tagabukid_hrmis_paygradeandstepincrement")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "appointmentstatus"}
+                new Object[]{"name", "employmentstatus"}
                 , new Object[]{"caption", "Status Of Appointment"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -142,10 +156,10 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.employmentstatus.name}", "lookup:tagabukid_hrmis_employmentstatus")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "govservice"}
+                new Object[]{"name", "isgovservice"}
                 , new Object[]{"caption", "Gov Service (Y/N)"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -156,7 +170,7 @@ public class PDSWorkExperiencePage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.CheckBoxColumnHandler(java.lang.Boolean.class, true, false)}
             })
         });
         xDataTable1.setEditable(true);

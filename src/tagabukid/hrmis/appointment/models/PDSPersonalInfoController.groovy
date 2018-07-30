@@ -28,6 +28,15 @@ class  PDSPersonalInfoController extends CrudFormModel{
     def parententity
     def svc
     
+    @PropertyChangeListener
+    def listener = [
+        'entity.person' : { 
+            
+            maincontroller.reloadphoto(entity.person);
+       
+        }
+    ]
+    
     boolean isCreateAllowed(){
         return false
     }
@@ -51,13 +60,10 @@ class  PDSPersonalInfoController extends CrudFormModel{
        loadpersonalinfo()
     }
     public void beforeSave(o){
-
-   
          if (o == 'create'){
             entity.pdsno = svc.getPDSNo();
             entity.versionno = svc.getVersionNo();
-            entity.residentialaddress = residentialAddress
-            entity.permanentaddress = permanentAddress
+            
         }
     }
     public void afterCreate(){
@@ -65,6 +71,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
     }
     public void afterSave(){
         entity.person._schemaname = 'entityindividual'
+        
         persistenceSvc.update(entity.person)
         maincontroller.reloadSections('open');
     }
@@ -72,20 +79,26 @@ class  PDSPersonalInfoController extends CrudFormModel{
     def loadpersonalinfo(){
         entity = persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.objid])
         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
+//        residentialAddress = entity.residential.address
+//        permanentAddress = entity.permanent.address
     }
-//    def setResidentialAddress(o){
-//        return o
+
+//    def getResidentialAddress(){
+//        if (entity.copyresidential){
+//            println "TEST"
+//            entity.residential.address = entity.person.address
+//            return entity.residential.address
+//        }
+//        return entity.residential.address
 //    }
-//    
-//    def setPermanentAddress(o){
-//        return o
+//    def getPermanentAddress(){
+//        if (entity.copypermanent){
+//             println "TESTTEST"
+//            entity.permanent.address = entity.residential.address
+//            return entity.permanent.address
+//        }
+//        return entity.permanent.address
 //    }
-    def getResidentialAddress(){
-        return entity.person.address
-    }
-    def getPermanentAddress(){
-        return entity.person.address
-    }
 //    def getPhoto() {
 //        return selectedItem.benificiary.photo;
 //    }

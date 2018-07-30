@@ -29,7 +29,7 @@ class PDSVoluntaryWorkController extends CrudFormModel {
     
     String title = "VOLUNTARY WORK OR INVOLVEMENT IN CIVIC / NON-GOVERNMENT / PEOPLE / VOLUNTARY ORGANIZATION/S";
     
-     boolean isCreateAllowed(){
+    boolean isCreateAllowed(){
         return false
     }
     
@@ -46,14 +46,15 @@ class PDSVoluntaryWorkController extends CrudFormModel {
     }
    
     def selectedVoluntaryWorkItem
+    
     public void beforeOpen() {
-       entity.putAll(parententity);
+        entity.putAll(parententity);
     }
     public void beforeSave(o){
         if(o=='create'){
-//            entity.skills{
-//                
-//            }
+            //            entity.skills{
+            //                
+            //            }
            
         }
     }
@@ -75,6 +76,7 @@ class PDSVoluntaryWorkController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.voluntaryworks.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_voluntarywork',objid:it.objid])
                 voluntaryworkListHandler?.load();
                 return true;
             }
@@ -85,6 +87,13 @@ class PDSVoluntaryWorkController extends CrudFormModel {
             o.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.lastupdatedbyuserid = OsirisContext.env.USERID;
             
+            //kani para ma kumpleto ang address pag local
+            if (col == 'organizationaddress') { 
+                if(o.organizationaddress.type == 'local'){
+                    o.organizationaddress.text = svc.formatAddress(o.organizationaddress,"\n")
+                }
+            } 
+            
         },
         onAddItem : {
             entity.voluntaryworks.add(it);
@@ -94,4 +103,30 @@ class PDSVoluntaryWorkController extends CrudFormModel {
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
+    
+    
+    def getOrganizationAddressLookup(){
+
+        if(!selectedVoluntaryWorkItem.organizationaddress?.objid) {
+            def h = { o->
+                selectedVoluntaryWorkItem.organizationaddress = o;
+            };
+            def m = selectedVoluntaryWorkItem.organizationaddress;
+            if(!m) m = [:];
+           
+            return Inv.lookupOpener( "address:editor", [handler:h, entity:m] );
+        }
+        else {
+            def h = { o->
+                o._schemaname = "entity_address";
+                persistenceSvc.update( o );
+                selectedVoluntaryWorkItem.organizationaddress = o;
+            };
+            def address = persistenceSvc.read( [_schemaname:'entity_address', objid:selectedVoluntaryWorkItem.organizationaddress.objid] );
+            return Inv.lookupOpener( "address:editor", [handler:h, entity:address ]);
+            //binding.refresh();
+           
+        }
+        
+    }
 }

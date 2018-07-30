@@ -18,7 +18,7 @@ import com.rameses.seti2.views.CrudFormPage;
 public class PDSQuestionPage extends javax.swing.JPanel {
 
     /**
-     * Creates new form PDSQuestionPage
+     * Creates new form PDSRecognitionPage
      */
     public PDSQuestionPage() {
         initComponents();
@@ -33,269 +33,61 @@ public class PDSQuestionPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        xScrollPane1 = new com.rameses.rcp.control.XScrollPane();
-        xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
-        xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        xLabel2 = new com.rameses.rcp.control.XLabel();
-        xCheckBox11 = new com.rameses.rcp.control.XCheckBox();
-        xCheckBox12 = new com.rameses.rcp.control.XCheckBox();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
-        xSeparator1 = new com.rameses.rcp.control.XSeparator();
-        xCheckBox10 = new com.rameses.rcp.control.XCheckBox();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
-        xCheckBox9 = new com.rameses.rcp.control.XCheckBox();
-        xLabel1 = new com.rameses.rcp.control.XLabel();
-        xDateField2 = new com.rameses.rcp.control.XDateField();
-        xTextField5 = new com.rameses.rcp.control.XTextField();
-        xSeparator3 = new com.rameses.rcp.control.XSeparator();
-        xCheckBox8 = new com.rameses.rcp.control.XCheckBox();
-        xTextField6 = new com.rameses.rcp.control.XTextField();
-        xSeparator2 = new com.rameses.rcp.control.XSeparator();
-        xCheckBox7 = new com.rameses.rcp.control.XCheckBox();
-        xTextField7 = new com.rameses.rcp.control.XTextField();
-        xSeparator4 = new com.rameses.rcp.control.XSeparator();
-        xCheckBox6 = new com.rameses.rcp.control.XCheckBox();
-        xTextField8 = new com.rameses.rcp.control.XTextField();
-        xCheckBox5 = new com.rameses.rcp.control.XCheckBox();
-        xTextField9 = new com.rameses.rcp.control.XTextField();
-        xSeparator5 = new com.rameses.rcp.control.XSeparator();
-        xCheckBox4 = new com.rameses.rcp.control.XCheckBox();
-        xLabel3 = new com.rameses.rcp.control.XLabel();
-        xSuggest1 = new com.rameses.rcp.control.XSuggest();
-        xSeparator6 = new com.rameses.rcp.control.XSeparator();
-        xLabel4 = new com.rameses.rcp.control.XLabel();
-        xCheckBox3 = new com.rameses.rcp.control.XCheckBox();
-        xTextField11 = new com.rameses.rcp.control.XTextField();
-        xCheckBox2 = new com.rameses.rcp.control.XCheckBox();
-        xTextField12 = new com.rameses.rcp.control.XTextField();
-        xCheckBox1 = new com.rameses.rcp.control.XCheckBox();
-        xTextField13 = new com.rameses.rcp.control.XTextField();
+        xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable2 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("PDS Questions");
-        xHorizontalPanel1.setBorder(xTitledBorder1);
+        xTitledBorder1.setTitle("PDS Question");
+        xHorizontalPanel3.setBorder(xTitledBorder1);
 
-        xLabel2.setCaption("");
-        xLabel2.setPreferredSize(new java.awt.Dimension(700, 50));
-        xLabel2.setShowCaption(false);
-        xLabel2.setUseHtml(true);
-        xFormPanel1.add(xLabel2);
-
-        xCheckBox11.setCaption("a. within the third degree?");
-        xCheckBox11.setCaptionWidth(700);
-        xCheckBox11.setName("entity.question.thirddegree"); // NOI18N
-        xCheckBox11.setText("YES");
-        xFormPanel1.add(xCheckBox11);
-
-        xCheckBox12.setCaption("b. within the fourth degree (for Local Government Unit - Career Employees)?");
-        xCheckBox12.setCaptionWidth(700);
-        xCheckBox12.setName("entity.question.fourthdegree"); // NOI18N
-        xCheckBox12.setText("YES");
-        xFormPanel1.add(xCheckBox12);
-
-        xTextField1.setCaption("If YES, give details");
-        xTextField1.setCaptionWidth(110);
-        xTextField1.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField1.setName("entity.question.degreedetails"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField1);
-
-        xSeparator1.setPreferredSize(new java.awt.Dimension(0, 50));
-        xFormPanel1.add(xSeparator1);
-
-        xCheckBox10.setCaption("a. Have you ever been found guilty of any administrative offense?");
-        xCheckBox10.setCaptionWidth(700);
-        xCheckBox10.setName("entity.question.offense"); // NOI18N
-        xCheckBox10.setText("YES");
-        xCheckBox10.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox10);
-
-        xTextField4.setCaption("If YES, give details");
-        xTextField4.setCaptionWidth(110);
-        xTextField4.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField4.setName("entity.question.offensedetails"); // NOI18N
-        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField4);
-
-        xCheckBox9.setCaption("b. Have you been criminally charged before any court?");
-        xCheckBox9.setCaptionWidth(700);
-        xCheckBox9.setName("entity.question.criminalcharge"); // NOI18N
-        xCheckBox9.setText("YES");
-        xCheckBox9.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox9);
-
-        xLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        xLabel1.setCaption(" ");
-        xLabel1.setCaptionWidth(700);
-        xLabel1.setDepends(new String[] {"entity.criminalcharge"});
-        xLabel1.setText(" If YES, give details:");
-        xLabel1.setVisible(false);
-        xLabel1.setVisibleWhen("#{entity.criminalcharge==true}");
-        xFormPanel1.add(xLabel1);
-
-        xDateField2.setCaption("Date Filed");
-        xDateField2.setCaptionWidth(110);
-        xDateField2.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xDateField2.setDepends(new String[] {"entity.criminalcharge"});
-        xDateField2.setDisableWhen("#{entity.criminalcharge=='true'}");
-        xDateField2.setName("entity.criminalchargedate"); // NOI18N
-        xDateField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xDateField2.setVisible(false);
-        xDateField2.setVisibleWhen("#{entity.criminalcharge==true}");
-        xFormPanel1.add(xDateField2);
-
-        xTextField5.setCaption("Status of Case/s");
-        xTextField5.setCaptionWidth(110);
-        xTextField5.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField5.setName("entity.question.criminalchargestatus"); // NOI18N
-        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField5);
-
-        xSeparator3.setPreferredSize(new java.awt.Dimension(0, 50));
-        xFormPanel1.add(xSeparator3);
-
-        xCheckBox8.setCaption("Have you ever been convicted of any crime or violation of any law, decree, ordinance or regulation  by any court or tribunal?");
-        xCheckBox8.setCaptionWidth(700);
-        xCheckBox8.setName("entity.question.convicted"); // NOI18N
-        xCheckBox8.setText("YES");
-        xCheckBox8.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox8);
-
-        xTextField6.setCaption("If YES, give details");
-        xTextField6.setCaptionWidth(110);
-        xTextField6.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField6.setName("entity.question.convictiondetails"); // NOI18N
-        xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField6);
-
-        xSeparator2.setPreferredSize(new java.awt.Dimension(0, 50));
-        xFormPanel1.add(xSeparator2);
-
-        xCheckBox7.setCaption("Have you ever been separated from the service in any of the following modes: resignation, retirement, dropped from the rolls, dismissal, termination, end of term, finished contract or phased out (abolition) in the public or private sector?");
-        xCheckBox7.setCaptionWidth(700);
-        xCheckBox7.setName("entity.question.separated"); // NOI18N
-        xCheckBox7.setText("YES");
-        xCheckBox7.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox7);
-
-        xTextField7.setCaption("If YES, give details");
-        xTextField7.setCaptionWidth(110);
-        xTextField7.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField7.setName("entity.question.separationdetails"); // NOI18N
-        xTextField7.setNullWhenEmpty(false);
-        xTextField7.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField7);
-
-        xSeparator4.setPreferredSize(new java.awt.Dimension(0, 50));
-        xFormPanel1.add(xSeparator4);
-
-        xCheckBox6.setCaption("a. Have you ever been a candidate in a national or local election held within the last year (except Barangay election)?");
-        xCheckBox6.setCaptionWidth(700);
-        xCheckBox6.setName("entity.question.candidate"); // NOI18N
-        xCheckBox6.setText("YES");
-        xCheckBox6.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox6);
-
-        xTextField8.setCaption("If YES, give details");
-        xTextField8.setCaptionWidth(110);
-        xTextField8.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField8.setName("entity.question.candidacydetails"); // NOI18N
-        xTextField8.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField8);
-
-        xCheckBox5.setCaption("b. Have you resigned from the government service during the three (3)-month period before the last election to promote/actively campaign for a national or local candidate?");
-        xCheckBox5.setCaptionWidth(700);
-        xCheckBox5.setName("entity.question.resigncampaign"); // NOI18N
-        xCheckBox5.setText("YES");
-        xCheckBox5.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox5);
-
-        xTextField9.setCaption("If YES, give details");
-        xTextField9.setCaptionWidth(110);
-        xTextField9.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField9.setName("entity.question.resigncampaigndetails"); // NOI18N
-        xTextField9.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField9);
-
-        xSeparator5.setPreferredSize(new java.awt.Dimension(0, 50));
-        xFormPanel1.add(xSeparator5);
-
-        xCheckBox4.setCaption("Have you acquired the status of an immigrant or permanent resident of another country? ");
-        xCheckBox4.setCaptionWidth(700);
-        xCheckBox4.setName("entity.question.immigrant"); // NOI18N
-        xCheckBox4.setText("YES");
-        xCheckBox4.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox4);
-
-        xLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        xLabel3.setCaption(" ");
-        xLabel3.setCaptionWidth(700);
-        xLabel3.setExpression(" If YES, give details (country):");
-        xFormPanel1.add(xLabel3);
-
-        xSuggest1.setCaption("Country");
-        xSuggest1.setCaptionWidth(700);
-        xSuggest1.setExpression("#{item.name}");
-        xSuggest1.setHandler("suggestCountry");
-        xSuggest1.setName("entity.question.immigrantcountry"); // NOI18N
-        xSuggest1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xSuggest1);
-
-        xSeparator6.setPreferredSize(new java.awt.Dimension(0, 50));
-        xFormPanel1.add(xSeparator6);
-
-        xLabel4.setCaption("");
-        xLabel4.setPreferredSize(new java.awt.Dimension(700, 50));
-        xLabel4.setShowCaption(false);
-        xLabel4.setUseHtml(true);
-        xFormPanel1.add(xLabel4);
-
-        xCheckBox3.setCaption("a. Are you a member of any indigenous group?");
-        xCheckBox3.setCaptionWidth(700);
-        xCheckBox3.setName("entity.question.indigenousgroup"); // NOI18N
-        xCheckBox3.setText("YES");
-        xCheckBox3.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox3);
-
-        xTextField11.setCaption("If YES, please specify");
-        xTextField11.setCaptionWidth(120);
-        xTextField11.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField11.setName("entity.question.indigenousgroupdetails"); // NOI18N
-        xTextField11.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField11);
-        xTextField11.getAccessibleContext().setAccessibleDescription("");
-
-        xCheckBox2.setCaption("b. Are you a person with disability?");
-        xCheckBox2.setCaptionWidth(700);
-        xCheckBox2.setName("entity.question.pwd"); // NOI18N
-        xCheckBox2.setText("YES");
-        xCheckBox2.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox2);
-
-        xTextField12.setCaption("If YES, please specify ID No");
-        xTextField12.setCaptionWidth(150);
-        xTextField12.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField12.setName("entity.question.pwdidno"); // NOI18N
-        xTextField12.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField12);
-
-        xCheckBox1.setCaption("c. Are you a solo parent?");
-        xCheckBox1.setCaptionWidth(700);
-        xCheckBox1.setName("entity.question.soloparent"); // NOI18N
-        xCheckBox1.setText("YES");
-        xCheckBox1.setUncheckValue("0");
-        xFormPanel1.add(xCheckBox1);
-
-        xTextField13.setCaption("If YES, please specify ID No");
-        xTextField13.setCaptionWidth(150);
-        xTextField13.setCellPadding(new java.awt.Insets(0, 700, 0, 0));
-        xTextField13.setName("entity.question.soloparentidno"); // NOI18N
-        xTextField13.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField13);
-
-        xHorizontalPanel1.add(xFormPanel1);
-
-        xScrollPane1.setViewportView(xHorizontalPanel1);
+        xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "pdsq.question"}
+                , new Object[]{"caption", "Question"}
+                , new Object[]{"width", 200}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "answer"}
+                , new Object[]{"caption", "Answer"}
+                , new Object[]{"width", 10}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", "#{item.pdsq != null}"}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.CheckBoxColumnHandler(java.lang.Boolean.class, true, false)}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "details"}
+                , new Object[]{"caption", "Details"}
+                , new Object[]{"width", 200}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", "#{item.pdsq != null}"}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable2.setEditable(true);
+        xDataTable2.setHandler("pdsqustionListHandler");
+        xDataTable2.setId("pdsqustionListHandler");
+        xDataTable2.setName("selectedPDSQuestion"); // NOI18N
+        xHorizontalPanel3.add(xDataTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -303,56 +95,21 @@ public class PDSQuestionPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 879, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.rcp.control.XCheckBox xCheckBox1;
-    private com.rameses.rcp.control.XCheckBox xCheckBox10;
-    private com.rameses.rcp.control.XCheckBox xCheckBox11;
-    private com.rameses.rcp.control.XCheckBox xCheckBox12;
-    private com.rameses.rcp.control.XCheckBox xCheckBox2;
-    private com.rameses.rcp.control.XCheckBox xCheckBox3;
-    private com.rameses.rcp.control.XCheckBox xCheckBox4;
-    private com.rameses.rcp.control.XCheckBox xCheckBox5;
-    private com.rameses.rcp.control.XCheckBox xCheckBox6;
-    private com.rameses.rcp.control.XCheckBox xCheckBox7;
-    private com.rameses.rcp.control.XCheckBox xCheckBox8;
-    private com.rameses.rcp.control.XCheckBox xCheckBox9;
-    private com.rameses.rcp.control.XDateField xDateField2;
-    private com.rameses.rcp.control.XFormPanel xFormPanel1;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XLabel xLabel1;
-    private com.rameses.rcp.control.XLabel xLabel2;
-    private com.rameses.rcp.control.XLabel xLabel3;
-    private com.rameses.rcp.control.XLabel xLabel4;
-    private com.rameses.rcp.control.XScrollPane xScrollPane1;
-    private com.rameses.rcp.control.XSeparator xSeparator1;
-    private com.rameses.rcp.control.XSeparator xSeparator2;
-    private com.rameses.rcp.control.XSeparator xSeparator3;
-    private com.rameses.rcp.control.XSeparator xSeparator4;
-    private com.rameses.rcp.control.XSeparator xSeparator5;
-    private com.rameses.rcp.control.XSeparator xSeparator6;
-    private com.rameses.rcp.control.XSuggest xSuggest1;
-    private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField11;
-    private com.rameses.rcp.control.XTextField xTextField12;
-    private com.rameses.rcp.control.XTextField xTextField13;
-    private com.rameses.rcp.control.XTextField xTextField4;
-    private com.rameses.rcp.control.XTextField xTextField5;
-    private com.rameses.rcp.control.XTextField xTextField6;
-    private com.rameses.rcp.control.XTextField xTextField7;
-    private com.rameses.rcp.control.XTextField xTextField8;
-    private com.rameses.rcp.control.XTextField xTextField9;
+    private com.rameses.rcp.control.XDataTable xDataTable2;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
     // End of variables declaration//GEN-END:variables
 }

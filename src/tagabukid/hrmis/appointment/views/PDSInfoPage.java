@@ -37,11 +37,16 @@ public class PDSInfoPage extends javax.swing.JPanel {
     private void initComponents() {
 
         jSplitPane1 = new javax.swing.JSplitPane();
+        jSplitPane2 = new javax.swing.JSplitPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         xList1 = new com.rameses.rcp.control.XList();
+        xPhoto1 = new com.rameses.rcp.control.XPhoto();
         xSubFormPanel1 = new com.rameses.rcp.control.XSubFormPanel();
 
         jSplitPane1.setDividerLocation(200);
+
+        jSplitPane2.setDividerLocation(500);
+        jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
         xList1.setDynamic(true);
         xList1.setExpression("#{item.caption}");
@@ -50,7 +55,13 @@ public class PDSInfoPage extends javax.swing.JPanel {
         xList1.setPreferredSize(new java.awt.Dimension(40, 100));
         jScrollPane1.setViewportView(xList1);
 
-        jSplitPane1.setLeftComponent(jScrollPane1);
+        jSplitPane2.setTopComponent(jScrollPane1);
+
+        xPhoto1.setName("entity.person.photo"); // NOI18N
+        xPhoto1.setText("xPhoto1");
+        jSplitPane2.setBottomComponent(xPhoto1);
+
+        jSplitPane1.setLeftComponent(jSplitPane2);
 
         xSubFormPanel1.setDepends(new String[] {"currentSection"});
         xSubFormPanel1.setDynamic(true);
@@ -80,7 +91,9 @@ public class PDSInfoPage extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JSplitPane jSplitPane2;
     private com.rameses.rcp.control.XList xList1;
+    private com.rameses.rcp.control.XPhoto xPhoto1;
     private com.rameses.rcp.control.XSubFormPanel xSubFormPanel1;
     // End of variables declaration//GEN-END:variables
 }

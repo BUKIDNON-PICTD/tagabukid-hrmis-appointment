@@ -52,7 +52,7 @@ public class MasterPDSNonAcademicRecognitionView extends javax.swing.JPanel {
 
         xTextField2.setCaption("Recognition");
         xTextField2.setCaptionWidth(125);
-        xTextField2.setName("entity.recognition"); // NOI18N
+        xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 

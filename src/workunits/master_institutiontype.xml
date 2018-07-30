@@ -1,6 +1,6 @@
 <workunit schemaName="master_tblinstitutiontype">
     <invokers>
-        <invoker type="master_tblinstitutiontype:create" caption="New Institution Type" action="create" role="MASTER"/>
+        <invoker type="master_tblinstitutiontype:create" caption="New Institution Type" action="create" target="popup" role="MASTER"/>
         <invoker type="master_tblinstitutiontype:open" caption="Institution Type" action="open" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>

@@ -76,6 +76,7 @@ class  PDSSkillController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.skills.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_skill',objid:it.objid])
                 skillListHandler?.load();
                 return true;
             }

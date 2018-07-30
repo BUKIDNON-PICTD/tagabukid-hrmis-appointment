@@ -67,6 +67,7 @@ class  PDSCivilServiceController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.civilserviceInfos.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_civilservice',objid:it.objid])
                 civilServiceItemHandler?.load();
                 return true;
             }

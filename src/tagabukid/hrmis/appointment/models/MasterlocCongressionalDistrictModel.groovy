@@ -18,12 +18,12 @@ class MasterlocCongressionalDistrictModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.province = persistenceSvc.read( [_schemaname:'master_tbllocprovince', objid:entity.provinceid] );
+        //entity.province = persistenceSvc.read( [_schemaname:'master_tbllocprovince', objid:entity.provinceid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-            entity.provinceid = entity.province.objid;
+            //entity.provinceid = entity.province.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

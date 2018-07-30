@@ -75,6 +75,7 @@ class PDSRecognitionController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.recognitions.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_recognition',objid:it.objid])
                 recognitionListHandler?.load();
                 return true;
             }

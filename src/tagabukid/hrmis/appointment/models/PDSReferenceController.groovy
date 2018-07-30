@@ -84,6 +84,7 @@ class PDSReferenceController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.references.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_pds_reference',objid:it.objid])
                 referenceListHandler?.load();
                 return true;
             }
@@ -110,8 +111,6 @@ class PDSReferenceController extends CrudFormModel {
         return Inv.lookupOpener('lookup:individualwide',[
                 onselect :{
                     selectedReferenceItem.reference = persistenceSvc.read( [_schemaname:'entityindividual', objid:it.objid] );
-                    //                    selectedfatherInfo.father.nameextension = ""
-                    //                     binding.refresh();
                 }
             ]);
     }

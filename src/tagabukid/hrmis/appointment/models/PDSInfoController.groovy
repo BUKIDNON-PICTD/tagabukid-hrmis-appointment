@@ -64,6 +64,8 @@ class PDSInfoController{
     }
     public void open(){
         title = entity.pdsno + " - " + entity.person.name
+        entity = persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.objid])
+        entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
         loadSections('open');
     }
 //    public void afterCreate (){
@@ -103,6 +105,11 @@ class PDSInfoController{
     
     void reloadCurrentSection() {
         MsgBox.alert( currentSection.name );
+    }
+    
+    void reloadphoto(person) {
+        entity.person = person
+        binding.refresh("entity.person.*");
     }
 
 }
