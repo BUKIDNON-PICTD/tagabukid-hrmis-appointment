@@ -16,9 +16,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
     @Caller
     def maincontroller
     
-    @Env
-    def env
-    
+        
     @Service("PersistenceService")
     def persistenceSvc;
     

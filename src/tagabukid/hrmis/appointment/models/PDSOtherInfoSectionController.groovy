@@ -20,8 +20,6 @@ class  PDSOtherInfoSectionController extends CrudFormModel{
     @Service("DateService")
     def dtSvc
     
-    @Env
-    def env
     
     @Service("PersistenceService")
     def persistenceSvc;

@@ -19,9 +19,6 @@ class PDSGovIDController extends CrudFormModel{
     @Caller
     def caller
     
-    @Env
-    def env
-    
     @Service("PersistenceService")
     def persistenceSvc;
     
