@@ -24,7 +24,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="xHorizontalPanel1" min="-2" pref="500" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="147" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -33,7 +33,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="xHorizontalPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="182" max="32767" attributes="0"/>
+              <EmptySpace pref="270" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,73 +62,12 @@
             </Component>
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
               <Properties>
-                <Property name="caption" type="java.lang.String" value="Organization Name"/>
+                <Property name="caption" type="java.lang.String" value="Name"/>
                 <Property name="captionWidth" type="int" value="125"/>
-                <Property name="name" type="java.lang.String" value="entity.organizationname" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="entity.name" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[0, 20]"/>
                 </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField1">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Institution Type"/>
-                <Property name="captionWidth" type="int" value="125"/>
-                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
-                <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_institutiontype"/>
-                <Property name="name" type="java.lang.String" value="entity.institutiontype" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField2">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Municipality / City"/>
-                <Property name="captionWidth" type="int" value="125"/>
-                <Property name="expression" type="java.lang.String" value="#{item.name}"/>
-                <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_citymunicipality"/>
-                <Property name="name" type="java.lang.String" value="entity.muncityaddr" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Address Details"/>
-                <Property name="captionWidth" type="int" value="125"/>
-                <Property name="name" type="java.lang.String" value="entity.addressdetails" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XDateField" name="xDateField1">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="From"/>
-                <Property name="captionWidth" type="int" value="125"/>
-                <Property name="name" type="java.lang.String" value="entity.datefrom" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XDateField" name="xDateField2">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="To"/>
-                <Property name="captionWidth" type="int" value="125"/>
-                <Property name="name" type="java.lang.String" value="entity.dateto" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[0, 20]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="com.rameses.rcp.control.XDecimalField" name="xDecimalField1">
-              <Properties>
-                <Property name="caption" type="java.lang.String" value="Number Of Hours"/>
-                <Property name="captionWidth" type="int" value="125"/>
-                <Property name="name" type="java.lang.String" value="entity.numberofhours" noResource="true"/>
               </Properties>
             </Component>
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
@@ -140,6 +79,26 @@
                   <Dimension value="[0, 20]"/>
                 </Property>
                 <Property name="visible" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="com.rameses.rcp.control.XTextField" name="xTextField5">
+              <Properties>
+                <Property name="caption" type="java.lang.String" value="Description"/>
+                <Property name="captionWidth" type="int" value="125"/>
+                <Property name="name" type="java.lang.String" value="entity.description" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[0, 20]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="com.rameses.rcp.control.XTextField" name="xTextField6">
+              <Properties>
+                <Property name="caption" type="java.lang.String" value="Code"/>
+                <Property name="captionWidth" type="int" value="125"/>
+                <Property name="name" type="java.lang.String" value="entity.code" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[0, 20]"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>

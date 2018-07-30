@@ -75,6 +75,7 @@ class PDSTrainingController extends CrudFormModel {
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
                 entity.trainings.remove(it)
+                
                 trainingListHandler?.load();
                 return true;
             }

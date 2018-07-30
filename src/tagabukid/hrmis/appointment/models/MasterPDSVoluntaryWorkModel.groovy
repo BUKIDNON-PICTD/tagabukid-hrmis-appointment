@@ -21,18 +21,18 @@ class MasterPDSVoluntaryWorkModel extends CrudFormModel{
     }
 
     public void afterOpen(){   
-        if(entity.institutiontype)            
-        entity.institutiontype = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.institutiontypeid] );
-        if(entity.muncityaddr)
-        entity.muncityaddr = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.muncityaddrid] );
+        // if(entity.institutiontype)            
+        // entity.institutiontype = persistenceSvc.read( [_schemaname:'master_tblinstitutiontype', objid:entity.institutiontypeid] );
+        // if(entity.muncityaddr)
+        // entity.muncityaddr = persistenceSvc.read( [_schemaname:'master_tblloccitymunicipality', objid:entity.muncityaddrid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        if(entity.institutiontype)
-        entity.institutiontypeid = entity.institutiontype.objid
-        if(entity.muncityaddr)
-        entity.muncityaddrid = entity.muncityaddr.objid
+        // if(entity.institutiontype)
+        // entity.institutiontypeid = entity.institutiontype.objid
+        // if(entity.muncityaddr)
+        // entity.muncityaddrid = entity.muncityaddr.objid
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
@@ -50,7 +50,7 @@ class MasterPDSVoluntaryWorkModel extends CrudFormModel{
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this information. Proceed?')) { 
             getPersistenceService().update([ 
-               _schemaname: 'hrmis_tblprofilevoluntarywork', 
+               _schemaname: 'master_tblvoluntarywork', 
                objid : entity.objid, 
                state : 'APPROVED' 
             ]); 
