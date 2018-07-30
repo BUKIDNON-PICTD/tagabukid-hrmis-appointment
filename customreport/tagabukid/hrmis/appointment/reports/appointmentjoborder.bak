@@ -354,9 +354,9 @@
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Transparent"
-						x="464"
+						x="323"
 						y="0"
-						width="64"
+						width="205"
 						height="10"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
