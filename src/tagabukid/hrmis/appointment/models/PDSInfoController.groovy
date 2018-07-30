@@ -47,7 +47,7 @@ class PDSInfoController{
     //     return ( mode=='read'); 
     // }
     def preview(){
-       def op = Inv.lookupOpener("personalpdsreport:din",[entity: entity]);
+       def op = Inv.lookupOpener("pds:report",[entity: entity]);
        op.target = 'self';
        return op;
     }

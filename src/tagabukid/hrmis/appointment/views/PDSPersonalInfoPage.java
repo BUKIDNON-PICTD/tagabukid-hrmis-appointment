@@ -5,10 +5,16 @@
  */
 package tagabukid.hrmis.appointment.views;
 
+import com.rameses.rcp.ui.annotations.StyleSheet;
+import com.rameses.rcp.ui.annotations.Template;
+import com.rameses.seti2.views.CrudFormPage;
+
 /**
  *
  * @author user
  */
+@StyleSheet
+@Template(CrudFormPage.class)
 public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
     /**

@@ -50,7 +50,7 @@ class  PDSWorkExperienceController extends CrudFormModel {
     }
     
     def workExperienceItemHandler = [
-        fetchList: { entity?.workexperienceInfos },
+        fetchList: { entity?.workexperienceInfos.sort{it.from} },
         createItem : {
            return[
                recordlog : [

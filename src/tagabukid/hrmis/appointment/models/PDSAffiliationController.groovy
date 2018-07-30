@@ -58,7 +58,7 @@ class PDSAffiliationController extends CrudFormModel {
         }
     }
     def associationorganizationListHandler = [
-        fetchList: { entity?.organizations },
+        fetchList: { entity?.organizations.sort{it.affiliation.name} },
         createItem : {
             return[
                 recordlog : [

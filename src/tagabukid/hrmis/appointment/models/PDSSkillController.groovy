@@ -58,7 +58,7 @@ class  PDSSkillController extends CrudFormModel {
         }
     }
     def skillListHandler = [
-        fetchList: { entity?.skills },
+        fetchList: { entity?.skills.sort{it.skill.name} },
         createItem : {
             return[
                 recordlog : [
