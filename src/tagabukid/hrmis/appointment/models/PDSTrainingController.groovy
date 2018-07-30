@@ -58,7 +58,7 @@ class PDSTrainingController extends CrudFormModel {
         }
     }
     def trainingListHandler = [
-        fetchList: { entity?.trainings  },
+        fetchList: { entity?.trainings.sort{it.attendedfrom}  },
         createItem : {
             return[
                 recordlog : [

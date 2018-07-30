@@ -59,7 +59,7 @@ class PDSVoluntaryWorkController extends CrudFormModel {
         }
     }
     def voluntaryworkListHandler = [
-        fetchList: { entity?.voluntaryworks },
+        fetchList: { entity?.voluntaryworks.sort{it.datefrom} },
         createItem : {
             return[
                 recordlog : [
