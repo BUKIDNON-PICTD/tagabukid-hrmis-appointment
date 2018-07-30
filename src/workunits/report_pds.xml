@@ -1,6 +1,6 @@
 <workunit extends="wtemplates/SimpleReportController.xml" >
     <invokers>
-        <invoker type="personalpdsreport:din" action="preview"/>        
+        <invoker type="personalpdsreport:din" action="preview" role="APPOINTMENT_REPORTS"/>        
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.ReportPDSController" />
 </workunit>

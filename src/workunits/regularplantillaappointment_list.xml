@@ -1,6 +1,6 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_appointmentregular">
     <invokers>
-        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment List (Regular)" action="init" index="3" role="ENCODER"/>
-        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List(Regular)" index="3" role="ENCODER"/>   
+        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment List (Regular)" action="init" index="3" role="APPOINTMENT_ENCODER"/>
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List(Regular)" index="3" role="APPOINTMENT_ENCODER"/>   
     </invokers>
 </workunit>

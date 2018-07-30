@@ -1,7 +1,7 @@
-<workunit schemaName="hrmis_tblprofiletrainingprogramattended">
+<workunit schemaName="master_tbltraining">
     <invokers>
-        <invoker type="hrmis_tblprofiletrainingprogramattended:create" caption="New Training Program" action="create" target="popup" role="MASTER"/>
-        <invoker type="hrmis_tblprofiletrainingprogramattended:open" caption="Training Program" action="open" target="popup" role="MASTER"/>
+        <invoker type="master_tbltraining:create" caption="New Training Program" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tbltraining:open" caption="Training Program" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

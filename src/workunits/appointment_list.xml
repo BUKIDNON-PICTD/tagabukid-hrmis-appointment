@@ -1,9 +1,9 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISAppointmentListService" 
      allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="appointmentdocument">
     <invokers>
-        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List"  index="1" role="SHARED"/>
-        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List"  index="1" role="SHARED"/>
-        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}"/> 
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List"  index="1" role="APPOINTMENT_SHARED"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List"  index="1" role="APPOINTMENT_SHARED"/>
+        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}" role="APPOINTMENT_ENCODER"/> 
     </invokers>
      <code>
     <![CDATA[

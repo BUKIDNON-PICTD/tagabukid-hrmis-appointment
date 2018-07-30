@@ -1,8 +1,8 @@
 <workunit schemaName="hrmis_appointmentregular">
     <invokers>
-        <invoker type="hrmis_appointment:create" caption="Appointment (Regular)"/>
-        <invoker type="hrmis_appointment:open" caption="Appointment (Regular)" action="open" />       
-        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Regular)" action="create" index="2" role="ENCODER"/>
+        <invoker type="hrmis_appointment:create" caption="Appointment (Regular)" role="APPOINTMENT_ENCODER"/>
+        <invoker type="hrmis_appointment:open" caption="Appointment (Regular)" action="open" role="APPOINTMENT_ENCODER"/>       
+        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Regular)" action="create" index="2" role="APPOINTMENT_ENCODER"/>
     </invokers>
    <code class="tagabukid.hrmis.appointment.models.ServiceTicketController" />
     <pages>

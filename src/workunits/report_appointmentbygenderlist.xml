@@ -1,6 +1,6 @@
 <workunit extends="rpt_wtemplates/ReportController.xml" >
     <invokers>
-        <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Report of Active Appointments By Gender" target="window" index="1" />
+        <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Report of Active Appointments By Gender" target="window" index="1" role="APPOINTMENT_REPORTS"/>
     </invokers>
     <code>
 

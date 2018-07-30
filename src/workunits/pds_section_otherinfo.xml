@@ -1,6 +1,6 @@
 <workunit>
     <invokers>
-        <invoker type="pds:section" caption="Other Information" action="create" index="9" />
+        <invoker type="pds:section" caption="Other Information" action="create" index="9" role="PDS_ENCODER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
