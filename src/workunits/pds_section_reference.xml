@@ -1,6 +1,6 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
-        <invoker type="pds:section:open" caption="References" action="open" index="99" visibleWhen="#{true}" role="PDS"/>
+        <invoker type="pds:section:open" caption="References" action="open" index="99" visibleWhen="#{true}" role="PDS_ENCODER"/>
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.PDSReferenceController" />

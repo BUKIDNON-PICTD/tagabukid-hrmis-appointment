@@ -1,6 +1,6 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
-        <invoker type="pds:section:open" caption="Trainings" action="open" index="94" role="PDS"/>
+        <invoker type="pds:section:open" caption="Trainings" action="open" index="94" role="PDS_ENCODER"/>
     </invokers>    
     <code class="tagabukid.hrmis.appointment.models.PDSTrainingController" />
     <pages>
