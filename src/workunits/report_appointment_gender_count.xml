@@ -1,7 +1,7 @@
 <workunit extends="rpt_wtemplates/ReportController.xml" >
     <invokers>
         <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Gender Count Report" 
-            target="window" index="1002" role="REPORTS"/>
+            target="window" index="1002" role="APPOINTMENT_REPORTS"/>
     </invokers>
     <code>
 

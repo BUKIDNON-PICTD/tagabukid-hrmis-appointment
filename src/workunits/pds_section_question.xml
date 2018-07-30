@@ -1,6 +1,6 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
-        <invoker type="pds:section:open" caption="PDS Question" action="open" index="98" visibleWhen="#{true}"/>
+        <invoker type="pds:section:open" caption="PDS Question" action="open" index="98" visibleWhen="#{true}" role="PDS"/>
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.PDSQuestionController" />

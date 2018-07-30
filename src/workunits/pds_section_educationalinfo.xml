@@ -1,6 +1,6 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
-        <invoker type="pds:section:open" caption="Education" action="open" index="3" />
+        <invoker type="pds:section:open" caption="Education" action="open" index="3" role="PDS"/>
 
     </invokers>
     
