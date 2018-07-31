@@ -2,7 +2,6 @@ import com.rameses.rcp.annotations.*
 import com.rameses.rcp.common.*
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*
-import com.rameses.annotations.Env
 import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
@@ -48,7 +47,7 @@ class PDSInfoController{
     //     return ( mode=='read'); 
     // }
     def preview(){
-       def op = Inv.lookupOpener("personalpdsreport:din",[entity: entity]);
+       def op = Inv.lookupOpener("pds:report",[entity: entity]);
        op.target = 'self';
        return op;
     }

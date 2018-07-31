@@ -51,7 +51,7 @@ class  PDSCivilServiceController extends CrudFormModel {
     }
     
     def civilServiceItemHandler = [
-        fetchList: { entity?.civilserviceInfos },
+        fetchList: { entity?.civilserviceInfos.sort{it.validitydate}  },
         createItem : {
            return[
                recordlog : [

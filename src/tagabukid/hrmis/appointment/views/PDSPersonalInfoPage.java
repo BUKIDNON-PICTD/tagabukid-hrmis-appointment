@@ -8,19 +8,17 @@ package tagabukid.hrmis.appointment.views;
 import com.rameses.rcp.ui.annotations.StyleSheet;
 import com.rameses.rcp.ui.annotations.Template;
 import com.rameses.seti2.views.CrudFormPage;
-import java.awt.event.ActionEvent;
 
 /**
  *
- * @author BlackHat
+ * @author user
  */
 @StyleSheet
-//@Template({FormPage.class})
 @Template(CrudFormPage.class)
 public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
     /**
-     * Creates new form PDSPersonalInfoView
+     * Creates new form PDSPersonalInfoNewPage
      */
     public PDSPersonalInfoPage() {
         initComponents();
@@ -35,14 +33,6 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        xTextFieldBeanInfo1 = new com.rameses.rcp.control.XTextFieldBeanInfo();
-        xDataTable1 = new com.rameses.rcp.control.XDataTable();
-        xDateFieldBeanInfo1 = new com.rameses.rcp.control.XDateFieldBeanInfo();
-        xFormPanelBeanInfo1 = new com.rameses.rcp.control.XFormPanelBeanInfo();
-        xComboBoxBeanInfo1 = new com.rameses.rcp.control.XComboBoxBeanInfo();
-        xFormPanelBeanInfo2 = new com.rameses.rcp.control.XFormPanelBeanInfo();
-        xFormPanelBeanInfo3 = new com.rameses.rcp.control.XFormPanelBeanInfo();
-        xTextAreaBeanInfo1 = new com.rameses.rcp.control.XTextAreaBeanInfo();
         jScrollPane4 = new javax.swing.JScrollPane();
         xPanel1 = new com.rameses.rcp.control.XPanel();
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
@@ -75,8 +65,6 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextField15 = new com.rameses.rcp.control.XTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         xTextArea2 = new com.rameses.rcp.control.XTextArea();
-
-        setDoubleBuffered(false);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Address");
@@ -214,7 +202,6 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xFormPanel1.add(citizenshipSuggest1);
 
         xHorizontalPanel1.add(xFormPanel1);
-        xFormPanel1.getAccessibleContext().setAccessibleParent(xFormPanel1);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder3 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder3.setTitle("Contact Info");
@@ -282,14 +269,14 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 981, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -306,25 +293,18 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
-    private com.rameses.rcp.control.XComboBoxBeanInfo xComboBoxBeanInfo1;
-    private com.rameses.rcp.control.XDataTable xDataTable1;
     private com.rameses.rcp.control.XDateField xDateField1;
-    private com.rameses.rcp.control.XDateFieldBeanInfo xDateFieldBeanInfo1;
     private com.rameses.rcp.control.XDecimalField xDecimalField1;
     private com.rameses.rcp.control.XDecimalField xDecimalField2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XFormPanel xFormPanel3;
-    private com.rameses.rcp.control.XFormPanelBeanInfo xFormPanelBeanInfo1;
-    private com.rameses.rcp.control.XFormPanelBeanInfo xFormPanelBeanInfo2;
-    private com.rameses.rcp.control.XFormPanelBeanInfo xFormPanelBeanInfo3;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
     private com.rameses.rcp.control.XPanel xPanel1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
-    private com.rameses.rcp.control.XTextAreaBeanInfo xTextAreaBeanInfo1;
     private com.rameses.rcp.control.XTextField xTextField10;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField12;
@@ -335,6 +315,5 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField7;
     private com.rameses.rcp.control.XTextField xTextField8;
     private com.rameses.rcp.control.XTextField xTextField9;
-    private com.rameses.rcp.control.XTextFieldBeanInfo xTextFieldBeanInfo1;
     // End of variables declaration//GEN-END:variables
 }

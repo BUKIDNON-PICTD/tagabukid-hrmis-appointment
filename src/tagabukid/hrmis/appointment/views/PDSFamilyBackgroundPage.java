@@ -11,15 +11,14 @@ import com.rameses.seti2.views.CrudFormPage;
 
 /**
  *
- * @author BlackHat
+ * @author user
  */
 @StyleSheet
-//@Template({FormPage.class})
 @Template(CrudFormPage.class)
 public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
 
     /**
-     * Creates new form PDSfamilyBackgroundPage
+     * Creates new form PDSFamilyBackgroundNewPage
      */
     public PDSFamilyBackgroundPage() {
         initComponents();
@@ -34,7 +33,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        xDataTableBeanInfo1 = new com.rameses.rcp.control.XDataTableBeanInfo();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
         xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
@@ -401,6 +399,19 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", false}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "nameextension"}
                 , new Object[]{"caption", "Extension Name"}
                 , new Object[]{"width", 20}
@@ -510,7 +521,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1131, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
                     .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -527,10 +538,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        getAccessibleContext().setAccessibleParent(this);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -539,7 +548,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XDataTable xDataTable2;
     private com.rameses.rcp.control.XDataTable xDataTable3;
     private com.rameses.rcp.control.XDataTable xDataTable4;
-    private com.rameses.rcp.control.XDataTableBeanInfo xDataTableBeanInfo1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;

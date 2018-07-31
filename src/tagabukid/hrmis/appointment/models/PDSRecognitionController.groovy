@@ -58,7 +58,7 @@ class PDSRecognitionController extends CrudFormModel {
         }
     }
     def recognitionListHandler = [
-        fetchList: { entity?.recognitions },
+        fetchList: { entity?.recognitions.sort{it.recognition.name} },
         createItem : {
             return[
                 recordlog : [

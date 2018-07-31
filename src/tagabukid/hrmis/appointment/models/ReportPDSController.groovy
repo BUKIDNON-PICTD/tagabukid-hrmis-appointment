@@ -30,7 +30,10 @@ class ReportPDSController extends ReportController {
     
     SubReport[] getSubReports() {
         return [ 
-           new SubReport("FAMILY", REPORT_PATH + "psdreporttest_subreportfam.jasper"),
+           new SubReport("FAMILY", REPORT_PATH + "psdreporttest_subreportfam.jasper"),           
+           new SubReport("FAMILY_CHILD", REPORT_PATH + "psdreporttest_subreportfam_subreportchild.jasper"),
+
+           
            new SubReport("EDUCATION", REPORT_PATH + "psdreporttest_subreportedu.jasper"),
 
            new SubReport("CIVILSERVICE", REPORT_PATH + "psdreporttest_subreportcivilservice.jasper"),
