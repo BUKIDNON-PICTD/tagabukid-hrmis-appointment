@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblacadeducationaldegree">
     <invokers>
-        <invoker type="master_tblacadeducationaldegree:create" caption="New Academic Educational Degree" action="create" role="MASTER"/>
-        <invoker type="master_tblacadeducationaldegree:open" caption="Academic Educational Degree" action="open" role="MASTER"/>
+        <invoker type="master_tblacadeducationaldegree:create" caption="New Academic Educational Degree" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblacadeducationaldegree:open" caption="Academic Educational Degree" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

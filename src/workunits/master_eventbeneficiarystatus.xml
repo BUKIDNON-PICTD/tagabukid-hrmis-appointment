@@ -1,7 +1,7 @@
 <workunit schemaName="master_tbleventbeneficiarystatus">
     <invokers>
-        <invoker type="master_tbleventbeneficiarystatus:create" caption="New Event Beneficiary Status" action="create" role="MASTER"/>
-        <invoker type="master_tbleventbeneficiarystatus:open" caption="Event Beneficiary Status" action="open" role="MASTER"/>
+        <invoker type="master_tbleventbeneficiarystatus:create" caption="New Event Beneficiary Status" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tbleventbeneficiarystatus:open" caption="Event Beneficiary Status" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

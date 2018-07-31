@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblproductcategory">
     <invokers>
-        <invoker type="master_tblproductcategory:create" caption="New Product Category" action="create" role="MASTER"/>
-        <invoker type="master_tblproductcategory:open" caption="Product Category" action="open" role="MASTER"/>
+        <invoker type="master_tblproductcategory:create" caption="New Product Category" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblproductcategory:open" caption="Product Category" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

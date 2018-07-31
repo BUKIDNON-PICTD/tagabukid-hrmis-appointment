@@ -1,7 +1,7 @@
-<workunit schemaName="hrmis_tblprofileskill">
+<workunit schemaName="master_tblskill">
     <invokers>
-        <invoker type="hrmis_tblprofileskill:create" caption="New Skill" action="create" target="popup" role="MASTER"/>
-        <invoker type="hrmis_tblprofileskill:open" caption="Skill" action="open" target="popup" role="MASTER"/>
+        <invoker type="master_tblskill:create" caption="New Skill" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblskill:open" caption="Skill" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

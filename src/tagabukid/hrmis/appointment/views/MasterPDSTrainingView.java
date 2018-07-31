@@ -57,7 +57,7 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
 
         xTextField2.setCaption("Training Title");
         xTextField2.setCaptionWidth(170);
-        xTextField2.setName("entity.trainingtitle"); // NOI18N
+        xTextField2.setName("entity.name"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 

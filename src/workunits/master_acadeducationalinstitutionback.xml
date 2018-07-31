@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblacadeducationalinstitutionback">
     <invokers>
-        <invoker type="master_tblacadeducationalinstitutionback:create" caption="New Educational Institution Back" action="create" role="MASTER"/>
-        <invoker type="master_tblacadeducationalinstitutionback:open" caption="Educational Institution Back" action="open" role="MASTER"/>
+        <invoker type="master_tblacadeducationalinstitutionback:create" caption="New Educational Institution Back" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblacadeducationalinstitutionback:open" caption="Educational Institution Back" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

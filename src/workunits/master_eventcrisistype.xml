@@ -1,7 +1,7 @@
 <workunit schemaName="master_tbleventcrisistype">
     <invokers>
-        <invoker type="master_tbleventcrisistype:create" caption="New Event Crisis Type" action="create" role="MASTER"/>
-        <invoker type="master_tbleventcrisistype:open" caption="Event Crisis Type" action="open" role="MASTER"/>
+        <invoker type="master_tbleventcrisistype:create" caption="New Event Crisis Type" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tbleventcrisistype:open" caption="Event Crisis Type" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
