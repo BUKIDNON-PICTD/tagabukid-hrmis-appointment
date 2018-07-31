@@ -167,8 +167,8 @@ in not acceptable]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="446"
-						y="143"
+						x="452"
+						y="160"
 						width="111"
 						height="82"
 						key="staticText-7"/>
@@ -185,8 +185,8 @@ in not acceptable]]></text>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="446"
-						y="215"
+						x="452"
+						y="232"
 						width="111"
 						height="11"
 						backcolor="#E7E7E7"

@@ -26,7 +26,6 @@
 	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
 		<defaultValueExpression ><![CDATA["D:\\EtracsProjects\\tagabukid-hrmis-appointment\\customreport\\tagabukid\\hrmis\\pds\\reports\\buk\\"]]></defaultValueExpression>
 	</parameter>
-	<parameter name="FAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="spousedata.spouse.lastname" class="java.lang.String"/>
 	<field name="spousedata.spouse.firstname" class="java.lang.String"/>
@@ -44,7 +43,8 @@
 	<field name="motherdata.mother.firstname" class="java.lang.String"/>
 	<field name="motherdata.mother.middlename" class="java.lang.String"/>
 	<field name="fatherdata.father.lastname" class="java.lang.String"/>
-	<field name="childdata" class="java.lang.Object"/>
+	<field name="childdata.child.name" class="java.lang.String"/>
+	<field name="childdata.child.birthdate" class="java.util.Date"/>
 
 		<background>
 			<band height="1"  isSplitAllowed="true" >
@@ -596,12 +596,11 @@
 					<reportElement
 						mode="Opaque"
 						x="306"
-						y="38"
+						y="253"
 						width="266"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-17"
-						positionType="Float"/>
+						key="staticText-17"/>
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -670,16 +669,6 @@
 					</textElement>
 				<text><![CDATA[ II. FAMILY BACKGROUND]]></text>
 				</staticText>
-				<subreport  isUsingCache="true">
-					<reportElement
-						x="306"
-						y="20"
-						width="266"
-						height="18"
-						key="subreport-1"/>
-					<dataSourceExpression><![CDATA[$F{childdata}]]></dataSourceExpression>
-					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{FAMILY_CHILD}]]></subreportExpression>
-				</subreport>
 			</band>
 		</detail>
 		<columnFooter>

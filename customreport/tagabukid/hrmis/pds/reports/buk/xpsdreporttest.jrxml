@@ -41,8 +41,8 @@
 	<parameter name="TRAINING" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="OTHERINFO" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="WORKEXPERIENCE" isForPrompting="false" class="java.lang.Object"/>
-	<parameter name="LASTPAGE" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="FAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="LASTPAGE" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="person.lastname" class="java.lang.String"/>
 	<field name="skills" class="java.lang.Object"/>
@@ -1775,11 +1775,11 @@
 		<group  name="2ndPage" isStartNewPage="true" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="61"  isSplitAllowed="true" >
+			<band height="52"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="27"
+						y="9"
 						width="572"
 						height="17"
 						key="subreport-3"
@@ -1790,7 +1790,7 @@
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="44"
+						y="26"
 						width="572"
 						height="17"
 						key="subreport-4"
@@ -1798,14 +1798,6 @@
 					<dataSourceExpression><![CDATA[$F{workexperience}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{WORKEXPERIENCE}]]></subreportExpression>
 				</subreport>
-				<break>
-					<reportElement
-						x="0"
-						y="17"
-						width="572"
-						height="0"
-						key="element-1"/>
-				</break>
 			</band>
 			</groupHeader>
 			<groupFooter>
@@ -1816,11 +1808,11 @@
 		<group  name="3rdPage" isStartNewPage="true" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="70"  isSplitAllowed="true" >
+			<band height="90"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="19"
+						y="17"
 						width="572"
 						height="17"
 						key="subreport-5"
@@ -1831,7 +1823,7 @@
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="36"
+						y="34"
 						width="572"
 						height="17"
 						key="subreport-6"
@@ -1842,7 +1834,7 @@
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="53"
+						y="51"
 						width="572"
 						height="17"
 						key="subreport-7"
@@ -1850,14 +1842,6 @@
 					<dataSourceExpression><![CDATA[$F{otherinfo}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{OTHERINFO}]]></subreportExpression>
 				</subreport>
-				<break>
-					<reportElement
-						x="0"
-						y="12"
-						width="572"
-						height="0"
-						key="element-2"/>
-				</break>
 			</band>
 			</groupHeader>
 			<groupFooter>
@@ -1869,22 +1853,13 @@
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
 			<band height="50"  isSplitAllowed="true" >
-				<break>
-					<reportElement
-						x="0"
-						y="13"
-						width="572"
-						height="0"
-						key="element-3"/>
-				</break>
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="21"
+						y="16"
 						width="572"
 						height="18"
-						key="subreport-8"
-						positionType="Float"/>
+						key="subreport-8"/>
 					<dataSourceExpression><![CDATA[$F{lastpage}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{LASTPAGE}]]></subreportExpression>
 				</subreport>

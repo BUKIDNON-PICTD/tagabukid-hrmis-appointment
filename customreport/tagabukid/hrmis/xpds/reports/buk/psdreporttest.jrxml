@@ -1883,8 +1883,7 @@
 						y="21"
 						width="572"
 						height="18"
-						key="subreport-8"
-						positionType="Float"/>
+						key="subreport-8"/>
 					<dataSourceExpression><![CDATA[$F{lastpage}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{LASTPAGE}]]></subreportExpression>
 				</subreport>

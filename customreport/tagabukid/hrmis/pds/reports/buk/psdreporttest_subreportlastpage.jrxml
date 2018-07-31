@@ -40,7 +40,7 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="802"  isSplitAllowed="true" >
+			<band height="519"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
@@ -1282,7 +1282,8 @@
 						y="483"
 						width="572"
 						height="18"
-						key="subreport-1"/>
+						key="subreport-1"
+						positionType="Float"/>
 					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportlastpage_subreportreferences.jasper"]]></subreportExpression>
 				</subreport>
 				<subreport  isUsingCache="true">
@@ -1291,7 +1292,8 @@
 						y="501"
 						width="572"
 						height="18"
-						key="subreport-2"/>
+						key="subreport-2"
+						positionType="Float"/>
 					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportlastpage_subreportoath.jasper"]]></subreportExpression>
 				</subreport>
 			</band>
