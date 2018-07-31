@@ -25,7 +25,7 @@ class MasterFinFundModel extends CrudFormModel{
     public void beforeSave(o){
         entity.state = "DRAFT";
 
-        entity.parentfundid = node.objid
+        entity.parentfund_objid = node.objid
         if(o == 'create'){
             entity = hrmisfundService.manageLftRgt(entity)
             entity.recordlog_datecreated = dtSvc.getServerDate();

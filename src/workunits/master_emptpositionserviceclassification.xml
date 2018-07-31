@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblemptpositionserviceclassification">
     <invokers>
-        <invoker type="master_tblemptpositionserviceclassification:create" caption="New Position Service Classification" action="create" role="MASTER"/>
-        <invoker type="master_tblemptpositionserviceclassification:open" caption="Position Service Classification" action="open" role="MASTER"/>
+        <invoker type="master_tblemptpositionserviceclassification:create" caption="New Position Service Classification" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblemptpositionserviceclassification:open" caption="Position Service Classification" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

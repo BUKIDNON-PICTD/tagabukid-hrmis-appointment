@@ -55,7 +55,7 @@ public class MasterAcadEducationalDegreeView extends javax.swing.JPanel {
 
         xTextField3.setCaption("Name");
         xTextField3.setCaptionFontStyle("");
-        xTextField3.setCaptionWidth(130);
+        xTextField3.setCaptionWidth(90);
         xTextField3.setName("entity.name"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField3);
@@ -64,7 +64,7 @@ public class MasterAcadEducationalDegreeView extends javax.swing.JPanel {
 
         xTextArea1.setCaption("Description");
         xTextArea1.setCaptionFontStyle("");
-        xTextArea1.setCaptionWidth(130);
+        xTextArea1.setCaptionWidth(90);
         xTextArea1.setName("entity.description"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
 
@@ -72,16 +72,18 @@ public class MasterAcadEducationalDegreeView extends javax.swing.JPanel {
 
         xTextField4.setCaption("Code");
         xTextField4.setCaptionFontStyle("");
-        xTextField4.setCaptionWidth(130);
+        xTextField4.setCaptionWidth(90);
         xTextField4.setName("entity.code"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField4);
 
+        xTextField6.setEditable(false);
         xTextField6.setCaption("Old ID");
         xTextField6.setCaptionFontStyle("");
-        xTextField6.setCaptionWidth(130);
+        xTextField6.setCaptionWidth(90);
         xTextField6.setName("entity.oldid"); // NOI18N
         xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
+        xTextField6.setVisible(false);
         xFormPanel2.add(xTextField6);
 
         xHorizontalPanel2.add(xFormPanel2);
@@ -100,7 +102,7 @@ public class MasterAcadEducationalDegreeView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

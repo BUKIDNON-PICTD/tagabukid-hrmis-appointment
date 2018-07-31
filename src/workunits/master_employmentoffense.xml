@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblemploymentoffense">
     <invokers>
-        <invoker type="master_tblemploymentoffense:create" caption="New Employment Offense" action="create" role="MASTER"/>
-        <invoker type="master_tblemploymentoffense:open" caption="Employment Offense" action="open" role="MASTER"/>
+        <invoker type="master_tblemploymentoffense:create" caption="New Employment Offense" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblemploymentoffense:open" caption="Employment Offense" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

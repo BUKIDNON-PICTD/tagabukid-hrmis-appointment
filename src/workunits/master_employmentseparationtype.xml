@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblemploymentseparationtype">
     <invokers>
-        <invoker type="master_tblemploymentseparationtype:create" caption="New Employment Separation Type" action="create" role="MASTER"/>
-        <invoker type="master_tblemploymentseparationtype:open" caption="Employment Separation Type" action="open" role="MASTER"/>
+        <invoker type="master_tblemploymentseparationtype:create" caption="New Employment Separation Type" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblemploymentseparationtype:open" caption="Employment Separation Type" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

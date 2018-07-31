@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblunitofmeasure">
     <invokers>
-        <invoker type="master_tblunitofmeasure:create" caption="New Unit of Measure" action="create" role="MASTER"/>
-        <invoker type="master_tblunitofmeasure:open" caption="Unit of Measure" action="open" role="MASTER"/>
+        <invoker type="master_tblunitofmeasure:create" caption="New Unit of Measure" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblunitofmeasure:open" caption="Unit of Measure" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

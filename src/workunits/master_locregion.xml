@@ -1,7 +1,7 @@
 <workunit schemaName="master_tbllocregion">
     <invokers>
-        <invoker type="master_tbllocregion:create" caption="New Region" action="create" role="MASTER"/>
-        <invoker type="master_tbllocregion:open" caption="Region" action="open" role="MASTER"/>
+        <invoker type="master_tbllocregion:create" caption="New Region" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tbllocregion:open" caption="Region" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
