@@ -1,5 +1,5 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" 
-    schemaName="hrmis_pds" cols="pdsno,person.name,residentialaddress.text">
+    schemaName="hrmis_pds" cols="pdsno,person.name,residentialaddress.text" orderBy="person.name">
     <invokers>
         <invoker folderid="/home/hrmis/hrmispds" caption="PDS List" action="init" index="3" role="PDS_SHARED"/>
     </invokers>
