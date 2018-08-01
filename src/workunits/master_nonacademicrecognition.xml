@@ -1,7 +1,7 @@
-<workunit schemaName="hrmis_tblprofilenonacademicrecognition">
+<workunit schemaName="master_tblrecognition">
     <invokers>
-        <invoker type="hrmis_tblprofilenonacademicrecognition:create" caption="New Recognition" action="create" target="popup" role="MASTER"/>
-        <invoker type="hrmis_tblprofilenonacademicrecognition:open" caption="Recognition" action="open" target="popup" role="MASTER"/>
+        <invoker type="master_tblrecognition:create" caption="New Recognition" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblrecognition:open" caption="Recognition" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
