@@ -22,7 +22,7 @@ class JobPositionModel extends CrudFormModel{
     
     public void beforeSave(o){
         entity.state = "DRAFT";
-        entity.paygradeid = entity.paygrade.objid;
+//        entity.paygradeid = entity.paygrade.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
