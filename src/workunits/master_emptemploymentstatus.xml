@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblemptemploymentstatus">
     <invokers>
-        <invoker type="master_tblemptemploymentstatus:create" caption="New Employment Status" action="create" role="MASTER"/>
-        <invoker type="master_tblemptemploymentstatus:open" caption="Employment Status" action="open" role="MASTER"/>
+        <invoker type="master_tblemptemploymentstatus:create" caption="New Employment Status" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblemptemploymentstatus:open" caption="Employment Status" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
