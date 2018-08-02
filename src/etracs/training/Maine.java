@@ -22,10 +22,15 @@ public class Maine {
             roles.put("TREASURY.RB", null);
             roles.put("TREASURY.CHECKMASTER", null);
             roles.put("DEVELOPER.REPORT", null);
-            roles.put("HR.ENCODER", null);
-            roles.put("HR.APPROVER", null);
+            roles.put("HR.PDS_REPORTS", null);
+            roles.put("HR.PDS_ENCODER", null);
             roles.put("HR.MASTER", null);
-            roles.put("HR.REPORTS", null);
+            roles.put("HR.PDS_APPROVER", null);
+            roles.put("HR.PDS_SHARED", null);
+            roles.put("HR.APPOINTMENT_ENCODER", null);
+            roles.put("HR.APPOINTMENT_APPROVER", null);
+            roles.put("HR.APPOINTMENT_REPORTS", null);
+            roles.put("HR.APPOINTMENT_SHARED", null);
             Map profile = new HashMap();
             profile.put("CLIENTTYPE", "desktop");
             profile.put("USERID", "ADMIN");
