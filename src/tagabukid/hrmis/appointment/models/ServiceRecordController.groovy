@@ -50,7 +50,7 @@ class  ServiceRecordController extends CrudFormModel {
     }
     
     def serviceRecordItemHandler = [
-        fetchList: { entity?.servicerecordInfos.sort{it.from} },
+        fetchList: { entity?.servicerecordInfos.sort{it.datefrom} },
         createItem : {
            return[
                recordlog : [

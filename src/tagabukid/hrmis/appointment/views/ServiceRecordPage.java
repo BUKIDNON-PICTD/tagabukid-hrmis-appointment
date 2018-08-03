@@ -58,7 +58,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.personnelaction.name}", "lookup:tagabukid_hrmis_servicerecordaction")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "datefrom"}
@@ -158,7 +158,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "entity.org"}
+                new Object[]{"name", "org"}
                 , new Object[]{"caption", "Office"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -169,7 +169,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.name}", "lookup:tagabukid_hrmis_org")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.org.name}", "lookup:tagabukid_hrmis_org")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "branch"}
@@ -191,7 +191,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
@@ -233,7 +233,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
+                , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
