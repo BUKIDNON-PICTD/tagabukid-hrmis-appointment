@@ -22,12 +22,12 @@ class MasterEligibilityModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.eligibilitytype = persistenceSvc.read( [_schemaname:'master_tbleligibilitytype', objid:entity.eligibilitytypeid] );
+        //entity.eligibilitytype = persistenceSvc.read( [_schemaname:'master_tbleligibilitytype', objid:entity.eligibilitytypeid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-        entity.eligibilitytypeid = entity.eligibilitytype.objid;
+        //entity.eligibilitytypeid = entity.eligibilitytype.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
