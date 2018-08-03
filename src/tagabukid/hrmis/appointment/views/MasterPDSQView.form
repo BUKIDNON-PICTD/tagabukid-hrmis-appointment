@@ -101,6 +101,7 @@
             </Component>
             <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="caption" type="java.lang.String" value="oldid"/>
                 <Property name="captionWidth" type="int" value="75"/>
                 <Property name="name" type="java.lang.String" value="entity.oldid" noResource="true"/>

@@ -21,14 +21,14 @@ class MasterAcadCourseMajorModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        if(entity.course)
-        entity.course = persistenceSvc.read( [_schemaname:'master_tblacadcourse', objid:entity.courseid] );
+        // if(entity.course)
+        // entity.course = persistenceSvc.read( [_schemaname:'master_tblacadcourse', objid:entity.courseid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";             
-        if(entity.course)
-        entity.courseid = entity.course.objid;
+        // if(entity.course)
+        // entity.courseid = entity.course.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

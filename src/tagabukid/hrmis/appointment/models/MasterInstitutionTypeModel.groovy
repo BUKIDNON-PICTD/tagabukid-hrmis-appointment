@@ -18,12 +18,12 @@ class MasterInstitutionTypeModel extends CrudFormModel{
     }
 
     public void afterOpen(){               
-        entity.sector = persistenceSvc.read( [_schemaname:'master_tblsector', objid:entity.sectorid] );
+        //entity.sector = persistenceSvc.read( [_schemaname:'master_tblsector', objid:entity.sectorid] );
     }
 
     public void beforeSave(o){
         entity.state = "DRAFT";
-            entity.sectorid = entity.sector.objid;
+           // entity.sectorid = entity.sector.objid;
         if(o == 'create'){
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;

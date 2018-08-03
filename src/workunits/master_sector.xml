@@ -1,7 +1,7 @@
 <workunit schemaName="master_tblsector">
     <invokers>
         <invoker type="master_tblsector:create" caption="New Sector" action="create" target="popup" role="MASTER"/>
-        <invoker type="master_tblsector:open" caption="Sector" action="open" role="MASTER"/>
+        <invoker type="master_tblsector:open" caption="Sector" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>
