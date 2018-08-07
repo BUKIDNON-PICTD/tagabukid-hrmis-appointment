@@ -30,7 +30,7 @@
 	<parameter name="PRINTDATE" isForPrompting="false" class="java.util.Date"/>
 	<parameter name="LOGOLGU" isForPrompting="false" class="java.io.InputStream"/>
 	<parameter name="Names" isForPrompting="false" class="java.lang.Object"/>
-	<parameter name="Skills" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="SKILL" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
 		<defaultValueExpression ><![CDATA["D:\\EtracsProjects\\tagabukid-hrmis-appointment\\customreport\\tagabukid\\hrmis\\pds\\reports\\buk\\"]]></defaultValueExpression>
 	</parameter>
@@ -39,10 +39,12 @@
 	<parameter name="CIVILSERVICE" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="VOLUNTARYWORK" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="TRAINING" isForPrompting="false" class="java.lang.Object"/>
-	<parameter name="OTHERINFO" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="NONACADEMIC" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="WORKEXPERIENCE" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="LASTPAGE" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="FAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="MEMBERSHIP" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="REFERENCE" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="person.lastname" class="java.lang.String"/>
 	<field name="skills" class="java.lang.Object"/>
@@ -65,35 +67,37 @@
 	<field name="person.phoneno" class="java.lang.String"/>
 	<field name="person.mobileno" class="java.lang.String"/>
 	<field name="person.email" class="java.lang.String"/>
-	<field name="permanentaddress.text.street" class="java.lang.String"/>
-	<field name="residentialaddress.text.street" class="java.lang.String"/>
+	<field name="permanent.address.street" class="java.lang.String"/>
+	<field name="residential.address.street" class="java.lang.String"/>
 	<field name="nameextension" class="java.lang.String"/>
 	<field name="family" class="java.lang.Object"/>
 	<field name="educationalInfos" class="java.lang.Object"/>
-	<field name="permanentaddress.text.subdivision" class="java.lang.String"/>
-	<field name="permanentaddress.text.barangay" class="java.lang.String"/>
-	<field name="permanentaddress.text.municipality" class="java.lang.String"/>
-	<field name="permanentaddress.text.province" class="java.lang.String"/>
-	<field name="permanentaddress.text.block" class="java.lang.String"/>
-	<field name="residentialaddress.text.block" class="java.lang.String"/>
-	<field name="residentialaddress.text.subdivition" class="java.lang.String"/>
-	<field name="residentialaddress.text.barangay" class="java.lang.String"/>
-	<field name="residentialaddress.text.municipality" class="java.lang.String"/>
-	<field name="residentialaddress.text.province" class="java.lang.String"/>
+	<field name="permanent.address.subdivision" class="java.lang.String"/>
+	<field name="permanent.address.barangay_name" class="java.lang.String"/>
+	<field name="permanent.address.municipality" class="java.lang.String"/>
+	<field name="permanent.address.province" class="java.lang.String"/>
+	<field name="permanent.address.bldgno" class="java.lang.String"/>
+	<field name="residential.address.bldgno" class="java.lang.String"/>
+	<field name="residential.address.subdivision" class="java.lang.String"/>
+	<field name="residential.address.barangay_name" class="java.lang.String"/>
+	<field name="residential.address.municipality" class="java.lang.String"/>
+	<field name="residential.address.province" class="java.lang.String"/>
 	<field name="residentialaddress.text.pin" class="java.lang.String"/>
 	<field name="permanentaddress.text.pin" class="java.lang.String"/>
-	<field name="civilservice" class="java.lang.Object"/>
+	<field name="civilserviceInfos" class="java.lang.Object"/>
 	<field name="voluntarywork" class="java.lang.Object"/>
-	<field name="training" class="java.lang.Object"/>
-	<field name="otherinfo" class="java.lang.Object"/>
-	<field name="workexperience" class="java.lang.Object"/>
+	<field name="trainings" class="java.lang.Object"/>
+	<field name="recognitions" class="java.lang.Object"/>
+	<field name="workexperienceInfos" class="java.lang.Object"/>
 	<field name="lastpage" class="java.lang.Object"/>
+	<field name="organizations" class="java.lang.Object"/>
+	<field name="references" class="java.lang.Object"/>
 
 
 		<group  name="1stPage" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="345"  isSplitAllowed="true" >
+			<band height="346"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="76"
@@ -101,7 +105,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -119,7 +123,7 @@
 						width="496"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
@@ -138,7 +142,7 @@
 						width="496"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -156,7 +160,7 @@
 						width="496"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -174,7 +178,7 @@
 						width="159"
 						height="23"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -192,7 +196,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -210,7 +214,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -228,7 +232,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -246,7 +250,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -264,7 +268,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -282,7 +286,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -300,7 +304,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -318,7 +322,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -336,7 +340,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -354,7 +358,7 @@
 						width="266"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -372,7 +376,7 @@
 						width="266"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -390,7 +394,7 @@
 						width="266"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -1519,7 +1523,9 @@
 						y="71"
 						width="6"
 						height="5"
-						key="line-11"/>
+						key="line-11">
+							<printWhenExpression><![CDATA[new Boolean(!$F{person.citizenship}.equals( "FILIPINO" )&&!$F{person.citizenship}.equals( "Filipino" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -1528,7 +1534,9 @@
 						y="71"
 						width="6"
 						height="5"
-						key="line-12"/>
+						key="line-12">
+							<printWhenExpression><![CDATA[new Boolean(!$F{person.citizenship}.equals( "FILIPINO" )&&!$F{person.citizenship}.equals( "Filipino" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<subreport  isUsingCache="true">
@@ -1559,7 +1567,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.street}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanent.address.street}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1572,7 +1580,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.block}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanent.address.bldgno}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1585,7 +1593,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.subdivision}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanent.address.subdivision}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1603,7 +1611,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.barangay}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanent.address.barangay_name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1616,7 +1624,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.municipality}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanent.address.municipality}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1634,7 +1642,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.province}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanent.address.province}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1647,7 +1655,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.block}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residential.address.bldgno}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1665,7 +1673,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.street}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residential.address.street}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1678,7 +1686,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.subdivition}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residential.address.subdivision}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1696,7 +1704,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.barangay}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residential.address.barangay_name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1709,7 +1717,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.municipality}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residential.address.municipality}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1727,7 +1735,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.province}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residential.address.province}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1754,7 +1762,7 @@
 						width="266"
 						height="17"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
@@ -1765,6 +1773,17 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.pin}]]></textFieldExpression>
 				</textField>
+				<rectangle>
+					<reportElement
+						x="1"
+						y="345"
+						width="571"
+						height="1"
+						backcolor="#000000"
+						key="rectangle-17"
+						positionType="Float"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
 			</band>
 			</groupHeader>
 			<groupFooter>
@@ -1784,7 +1803,7 @@
 						height="17"
 						key="subreport-3"
 						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{civilservice}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[$F{civilserviceInfos}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{CIVILSERVICE}]]></subreportExpression>
 				</subreport>
 				<subreport  isUsingCache="true">
@@ -1795,13 +1814,13 @@
 						height="17"
 						key="subreport-4"
 						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{workexperience}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[$F{workexperienceInfos}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{WORKEXPERIENCE}]]></subreportExpression>
 				</subreport>
 				<break>
 					<reportElement
 						x="0"
-						y="17"
+						y="16"
 						width="572"
 						height="0"
 						key="element-1"/>
@@ -1816,7 +1835,7 @@
 		<group  name="3rdPage" isStartNewPage="true" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="70"  isSplitAllowed="true" >
+			<band height="90"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
@@ -1836,19 +1855,8 @@
 						height="17"
 						key="subreport-6"
 						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{training}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[$F{trainings}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{TRAINING}]]></subreportExpression>
-				</subreport>
-				<subreport  isUsingCache="true">
-					<reportElement
-						x="0"
-						y="53"
-						width="572"
-						height="17"
-						key="subreport-7"
-						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{otherinfo}]]></dataSourceExpression>
-					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{OTHERINFO}]]></subreportExpression>
 				</subreport>
 				<break>
 					<reportElement
@@ -1858,6 +1866,59 @@
 						height="0"
 						key="element-2"/>
 				</break>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="53"
+						width="572"
+						height="18"
+						forecolor="#FFFFFF"
+						backcolor="#999999"
+						key="staticText-50"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="2.0" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineColor="#000000"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Segoe UI" pdfFontName="Helvetica-BoldOblique" size="8" isBold="true" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[ VIII. OTHER INFORMATION]]></text>
+				</staticText>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="72"
+						width="157"
+						height="18"
+						key="subreport-9"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{skills}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SKILL}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="409"
+						y="72"
+						width="163"
+						height="18"
+						key="subreport-10"
+						positionType="Float"/>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportmembership.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="157"
+						y="72"
+						width="252"
+						height="18"
+						key="subreport-7"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{recognitions}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{NONACADEMIC}]]></subreportExpression>
+				</subreport>
 			</band>
 			</groupHeader>
 			<groupFooter>
@@ -1868,7 +1929,7 @@
 		<group  name="4thPage" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="50"  isSplitAllowed="true" >
+			<band height="75"  isSplitAllowed="true" >
 				<break>
 					<reportElement
 						x="0"
@@ -1887,6 +1948,27 @@
 						positionType="Float"/>
 					<dataSourceExpression><![CDATA[$F{lastpage}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{LASTPAGE}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="39"
+						width="572"
+						height="18"
+						key="subreport-11"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{references}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{REFERENCE}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="57"
+						width="572"
+						height="18"
+						key="subreport-12"
+						positionType="Float"/>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportlastpage_subreportoath.jasper"]]></subreportExpression>
 				</subreport>
 			</band>
 			</groupHeader>
@@ -2061,7 +2143,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="33"  isSplitAllowed="true" >
+			<band height="0"  isSplitAllowed="true" >
 			</band>
 		</detail>
 		<columnFooter>

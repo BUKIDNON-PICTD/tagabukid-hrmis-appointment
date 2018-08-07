@@ -128,7 +128,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -203,7 +203,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -221,7 +221,7 @@
 						height="11"
 						backcolor="#E7E7E7"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -237,7 +237,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -291,7 +291,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -307,7 +307,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -361,7 +361,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -377,7 +377,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -393,7 +393,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -409,7 +409,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -427,7 +427,7 @@
 						height="11"
 						backcolor="#E7E7E7"
 						key="textField"/>
-					<box>					<bottomPen lineWidth="1.0"/>
+					<box leftPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement>
@@ -442,7 +442,7 @@
 						width="159"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -534,7 +534,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -550,7 +550,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -566,7 +566,7 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -582,10 +582,10 @@
 						width="230"
 						height="18"
 						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
 					<textElement>
 						<font/>
@@ -603,9 +603,9 @@
 						key="staticText-17"
 						positionType="Float"/>
 					<box>					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
