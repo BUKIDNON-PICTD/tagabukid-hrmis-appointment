@@ -1,7 +1,7 @@
-<workunit schemaName="hrmis_tblprofileaffiliation">
+<workunit schemaName="master_tblaffiliation">
     <invokers>
-        <invoker type="hrmis_tblprofileaffiliation:create" caption="New Affiliation" action="create" target="popup" role="MASTER"/>
-        <invoker type="hrmis_tblprofileaffiliation:open" caption="Affiliation" action="open" target="popup" role="MASTER"/>
+        <invoker type="master_tblaffiliation:create" caption="New Affiliation" action="create" target="popup" role="MASTER"/>
+        <invoker type="master_tblaffiliation:open" caption="Affiliation" action="open" target="popup" role="MASTER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                  visibleWhen="#{allowApprove==true}"/>
     </invokers>

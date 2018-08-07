@@ -17,7 +17,7 @@ class JobPositionModel extends CrudFormModel{
     }
     
     public void afterOpen(){ 
-        entity.paygrade = persistenceSvc.read( [_schemaname:'master_tblpaygradeandstepincrement', objid:entity.paygradeid] );
+        //entity.paygrade = persistenceSvc.read( [_schemaname:'master_tblpaygradeandstepincrement', objid:entity.paygradeid] );
     }
     
     public void beforeSave(o){

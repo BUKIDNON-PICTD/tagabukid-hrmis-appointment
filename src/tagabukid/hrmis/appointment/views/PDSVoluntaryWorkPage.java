@@ -72,7 +72,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.institutiontype.name}", "lookup:tagabukid_hrmis_institutiontype")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
@@ -86,7 +86,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.OpenerColumnHandler("#{item.organizationaddress.text}", "organizationAddressLookup")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
@@ -101,7 +101,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, "MM/dd/yyyy", null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "dateto"}
@@ -115,7 +115,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, "MM/dd/yyyy", null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "numberofhours"}
@@ -156,7 +156,7 @@ public class PDSVoluntaryWorkPage extends javax.swing.JPanel {
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.positionornatureofworkcategory.name}", "lookup:tagabukid_hrmis_jobposition_category")}
             })
         });

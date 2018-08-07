@@ -48,7 +48,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "training"}
-                , new Object[]{"caption", "Title of th Program"}
+                , new Object[]{"caption", "Title of the Program"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -72,7 +72,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, "MM/dd/yyyy", null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "attendedto"}
@@ -86,7 +86,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, null, null)}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.DateColumnHandler(null, "MM/dd/yyyy", null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "numberofhours"}
@@ -113,7 +113,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
@@ -139,7 +139,7 @@ public class PDSTrainingPage extends javax.swing.JPanel {
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", false}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{

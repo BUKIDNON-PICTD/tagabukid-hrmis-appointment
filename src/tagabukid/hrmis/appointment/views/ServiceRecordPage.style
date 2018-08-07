@@ -1,0 +1,8 @@
+"selectedserviceRecordItem"[mode=='read']{
+    enabled:false;
+}
+
+"selectedserviceRecordItem"[mode!='read']{
+    enabled:true;
+}
+
