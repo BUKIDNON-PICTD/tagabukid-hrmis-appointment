@@ -17,6 +17,9 @@ class  ServiceRecordController extends CrudFormModel {
         
     @Service("DateService")
     def dtSvc
+    
+    @Service("ServiceRecordService")
+    def srSvc
 
     String title = "Service Record";
     
@@ -35,6 +38,8 @@ class  ServiceRecordController extends CrudFormModel {
     boolean isShowNavigation(){
         return false
     }
+    
+    def reportdisplay = ['HOURLY', 'DAILY', 'WEEKLY', 'MONTHLY', 'ANNUALLY', 'HONORARIUM', 'NA'];
 
     def selectedserviceRecordItem
     public void beforeOpen() {
@@ -72,7 +77,31 @@ class  ServiceRecordController extends CrudFormModel {
             }
             return false;
         },
-       onColumnUpdate: { o,col-> 
+       onColumnUpdate: { o,col->
+//            if(col == 'paygradestepincrement'){
+//                o.salaryscheduleitem  = srSvc.getDailyWageByTranch(o.tranche,o.paygradestepincrement);
+//                o.wage = o.salaryscheduleitem.amount
+//                //o.wage = o.salaryscheduleitem.amount / 22
+//            }
+
+            if(col == 'compensationtype'){
+                if (o.compensationtype.name == 'HOURLY'){
+                    o.monthlysalary = o.wage * 8 * 22
+                }
+                if (o.compensationtype.name == 'DAILY'){
+                    o.monthlysalary = o.wage * 22
+                }
+                if (o.compensationtype.name == 'WEEKLY'){
+                    o.monthlysalary = (o.wage * 22) / 4
+                }
+                if (o.compensationtype.name == 'MONTHLY' || o.compensationtype.name == 'HONORARIUM' || o.compensationtype.name == 'NA'){
+                    o.monthlysalary = o.wage
+                }
+                if (o.compensationtype.name == 'ANNUALLY'){
+                    o.monthlysalary = o.wage / 12
+                }
+
+            }
             o.recordlog.dateoflastupdate = dtSvc.getServerDate();
             o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
@@ -85,5 +114,11 @@ class  ServiceRecordController extends CrudFormModel {
             //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
         }
     ] as EditorListModel
+    
+    def print() {
+        def op = Inv.lookupOpener( "test:servicerecord", [entity: entity] );
+        op.target = 'self';
+        return op;
+    }
 
 }
