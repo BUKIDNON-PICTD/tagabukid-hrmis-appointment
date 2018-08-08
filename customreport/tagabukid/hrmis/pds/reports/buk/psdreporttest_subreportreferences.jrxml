@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="psdreporttest_subreportreferences"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="572"
+		 pageHeight="802"
+		 columnWidth="572"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="reference.name" class="java.lang.String"/>
+	<field name="reference.address.text" class="java.lang.String"/>
+	<field name="reference.phoneno" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="226"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="55"
+						width="434"
+						height="57"
+						backcolor="#E7E7E7"
+						key="staticText-1"/>
+					<box>					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement lineSpacing="Single">
+						<font size="8" isUnderline="false" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[ 40. I declare under oath that i have personally accomplished this Personal Data Sheet which is a true, correct and
+       complete statement  pursuant to  the  provisions of pertinent laws, rules and regulations of the Republic of the
+       Philippines. I  authorize  the agency head/authorized representative to verify/validate the contents stated herein.
+       I   agree  that  any  misrepresentation made  in  this  document and its  attachment  shall  cause  the   filing   of
+       administrative/criminal case/s against me.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="470"
+						y="24"
+						width="75"
+						height="96"
+						key="staticText-2"/>
+					<box>					<topPen lineWidth="1.5"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[ID picture taken within 
+the last 6 months
+3.5 cm. X 4.5 cm
+(passport size)
+
+With full and handwritten
+name tag and signature over
+printed name
+
+Computer generated
+or photocopied picture
+in not acceptable]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="434"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-3"/>
+					<box>					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement verticalAlignment="Middle" lineSpacing="Single">
+						<font size="8" isUnderline="false" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[ 40. REFERENCES (Person not related by consanguinity or affinity to applicant /appointee)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="19"
+						width="220"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-4"/>
+					<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+						<font size="6" isUnderline="false" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[NAME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="220"
+						y="19"
+						width="148"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-5"/>
+					<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+						<font size="6" isUnderline="false" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[ADDRESS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="368"
+						y="19"
+						width="66"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-6"/>
+					<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+						<font size="6" isUnderline="false" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[TEL NO.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="446"
+						y="143"
+						width="111"
+						height="82"
+						key="staticText-7"/>
+					<box>					<topPen lineWidth="1.5"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="446"
+						y="215"
+						width="111"
+						height="11"
+						backcolor="#E7E7E7"
+						key="staticText-8"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[Right Thumbmark]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="6"
+						y="132"
+						width="197"
+						height="82"
+						key="staticText-9"/>
+					<box>					<topPen lineWidth="1.5"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="220"
+						y="132"
+						width="213"
+						height="82"
+						key="staticText-10"/>
+					<box>					<topPen lineWidth="1.5"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="220"
+						y="183"
+						width="213"
+						height="11"
+						backcolor="#E7E7E7"
+						key="staticText-11"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[Signature (Sign inside the box)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="220"
+						y="203"
+						width="213"
+						height="11"
+						backcolor="#E7E7E7"
+						key="staticText-12"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[Date Accomplished]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="6"
+						y="132"
+						width="197"
+						height="22"
+						backcolor="#E7E7E7"
+						key="staticText-13"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<text><![CDATA[Govenment Issued ID (i.e.Passport, GSIS, SSS, PRC, Driver`s License, etc.)
+PLEASE INDICATE ID Number and Date of Issuance]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="37"
+						width="220"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="220"
+						y="37"
+						width="148"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.address.text}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="368"
+						y="37"
+						width="66"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.phoneno}]]></textFieldExpression>
+				</textField>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

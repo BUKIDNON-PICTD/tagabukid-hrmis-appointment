@@ -33,112 +33,53 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
-        xDataTable1 = new com.rameses.rcp.control.XDataTable();
+        xScrollPane1 = new com.rameses.rcp.control.XScrollPane();
+        xPanel1 = new com.rameses.rcp.control.XPanel();
         xHorizontalPanel2 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable2 = new com.rameses.rcp.control.XDataTable();
+        xPanel2 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable1 = new com.rameses.rcp.control.XDataTable();
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable3 = new com.rameses.rcp.control.XDataTable();
+        xPanel12 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel19 = new com.rameses.rcp.control.XHorizontalPanel();
+        xPanel13 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel20 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable15 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel21 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable16 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel22 = new com.rameses.rcp.control.XHorizontalPanel();
+        xPanel14 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel23 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable17 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel24 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable18 = new com.rameses.rcp.control.XDataTable();
+        xPanel3 = new com.rameses.rcp.control.XPanel();
         xHorizontalPanel4 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable4 = new com.rameses.rcp.control.XDataTable();
+        xPanel4 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel5 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable5 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel6 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable6 = new com.rameses.rcp.control.XDataTable();
+        xPanel7 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel13 = new com.rameses.rcp.control.XHorizontalPanel();
+        xPanel8 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel14 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable11 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel15 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable12 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel16 = new com.rameses.rcp.control.XHorizontalPanel();
+        xPanel9 = new com.rameses.rcp.control.XPanel();
+        xHorizontalPanel17 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable13 = new com.rameses.rcp.control.XDataTable();
+        xHorizontalPanel18 = new com.rameses.rcp.control.XHorizontalPanel();
+        xDataTable14 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Father Name");
-        xHorizontalPanel1.setBorder(xTitledBorder1);
-
-        xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "father"}
-                , new Object[]{"caption", "Last Name"}
-                , new Object[]{"width", 100}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.father.lastname}", "lookup:individualwide")}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "father.firstname"}
-                , new Object[]{"caption", "First Name"}
-                , new Object[]{"width", 100}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "father.middlename"}
-                , new Object[]{"caption", "Middle Name"}
-                , new Object[]{"width", 100}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "nameextension"}
-                , new Object[]{"caption", "Extension Name"}
-                , new Object[]{"width", 20}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "prenametitle"}
-                , new Object[]{"caption", "Pre Name Title"}
-                , new Object[]{"width", 20}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "postnametitle"}
-                , new Object[]{"caption", "Post Name Title"}
-                , new Object[]{"width", 20}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", false}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
-            })
-        });
-        xDataTable1.setHandler("familyBackgroundfathernameHandler");
-        xDataTable1.setName("selectedfatherInfo"); // NOI18N
-        xHorizontalPanel1.add(xDataTable1);
-
-        com.rameses.rcp.control.border.XTitledBorder xTitledBorder2 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder2.setTitle("Children Info");
-        xHorizontalPanel2.setBorder(xTitledBorder2);
+        xTitledBorder1.setTitle("Children Info");
+        xHorizontalPanel2.setBorder(xTitledBorder1);
 
         xDataTable2.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
@@ -257,9 +198,107 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable2.setName("selectedchildInfo"); // NOI18N
         xHorizontalPanel2.add(xDataTable2);
 
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder2 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder2.setTitle("For the Applicant");
+        xPanel2.setBorder(xTitledBorder2);
+
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder3 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder3.setTitle("Mother Name");
-        xHorizontalPanel3.setBorder(xTitledBorder3);
+        xTitledBorder3.setTitle("Father Name");
+        xHorizontalPanel1.setBorder(xTitledBorder3);
+
+        xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "father"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.father.lastname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "father.firstname"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "father.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "nameextension"}
+                , new Object[]{"caption", "Extension Name"}
+                , new Object[]{"width", 20}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "prenametitle"}
+                , new Object[]{"caption", "Pre Name Title"}
+                , new Object[]{"width", 20}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "postnametitle"}
+                , new Object[]{"caption", "Post Name Title"}
+                , new Object[]{"width", 20}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", false}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable1.setHandler("familyBackgroundfathernameHandler");
+        xDataTable1.setName("selectedfatherInfo"); // NOI18N
+        xHorizontalPanel1.add(xDataTable1);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder4 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder4.setTitle("Mother Name");
+        xHorizontalPanel3.setBorder(xTitledBorder4);
 
         xDataTable3.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
@@ -351,9 +390,295 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable3.setName("selectedmotherInfo"); // NOI18N
         xHorizontalPanel3.add(xDataTable3);
 
-        com.rameses.rcp.control.border.XTitledBorder xTitledBorder4 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder4.setTitle("Spouse Info");
-        xHorizontalPanel4.setBorder(xTitledBorder4);
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder5 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder5.setTitle("GRANDPARENTS (Applicant)");
+        xPanel12.setBorder(xTitledBorder5);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder6 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder6.setTitle("Mother's Side");
+        xHorizontalPanel19.setBorder(xTitledBorder6);
+
+        xHorizontalPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Grandfather (Lolo)"));
+
+        xDataTable15.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandfather"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.mothersidegrandfather.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandfather.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable15.setHandler("applicantMOTHERsidegrandFATHERItemHandler");
+        xDataTable15.setId("applicantMOTHERsidegrandFATHERItemHandler");
+        xDataTable15.setName("selectedApplicantMOTHERsidegrandFATHERItem"); // NOI18N
+        xHorizontalPanel20.add(xDataTable15);
+
+        xHorizontalPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+
+        xDataTable16.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandmother"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.mothersidegrandmother.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandmother.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandmother.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable16.setHandler("applicantMOTHERsidegrandMOTHERItemHandler");
+        xDataTable16.setId("applicantMOTHERsidegrandMOTHERItemHandler");
+        xDataTable16.setName("selectedApplicantMOTHERsidegrandMOTHERItem"); // NOI18N
+        xHorizontalPanel21.add(xDataTable16);
+
+        javax.swing.GroupLayout xPanel13Layout = new javax.swing.GroupLayout(xPanel13);
+        xPanel13.setLayout(xPanel13Layout);
+        xPanel13Layout.setHorizontalGroup(
+            xPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, 1077, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel13Layout.setVerticalGroup(
+            xPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        xHorizontalPanel19.add(xPanel13);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder7 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder7.setTitle("Father's Side");
+        xHorizontalPanel22.setBorder(xTitledBorder7);
+
+        xHorizontalPanel23.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Grandfather (Lolo)"));
+
+        xDataTable17.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandfather"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandfather.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandfather.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable17.setHandler("applicantFATHERsidegrandFATHERItemHandler");
+        xDataTable17.setId("applicantFATHERsidegrandFATHERItemHandler");
+        xDataTable17.setName("selectedApplicantFATHERsidegrandFATHERItem"); // NOI18N
+        xHorizontalPanel23.add(xDataTable17);
+
+        xHorizontalPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+
+        xDataTable18.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandmother"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandmother.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandmother.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandmother.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable18.setHandler("applicantFATHERsidegrandMOTHERItemHandler");
+        xDataTable18.setId("applicantFATHERsidegrandMOTHERItemHandler");
+        xDataTable18.setName("selectedApplicantFATHERsidegrandMOTHERItem"); // NOI18N
+        xHorizontalPanel24.add(xDataTable18);
+
+        javax.swing.GroupLayout xPanel14Layout = new javax.swing.GroupLayout(xPanel14);
+        xPanel14.setLayout(xPanel14Layout);
+        xPanel14Layout.setHorizontalGroup(
+            xPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, 1077, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel14Layout.setVerticalGroup(
+            xPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        xHorizontalPanel22.add(xPanel14);
+
+        javax.swing.GroupLayout xPanel12Layout = new javax.swing.GroupLayout(xPanel12);
+        xPanel12.setLayout(xPanel12Layout);
+        xPanel12Layout.setHorizontalGroup(
+            xPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, 1102, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel12Layout.setVerticalGroup(
+            xPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel12Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(xHorizontalPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder8 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder8.setTitle("For the Spouse");
+        xPanel3.setBorder(xTitledBorder8);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder9 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder9.setTitle("Spouse Info");
+        xHorizontalPanel4.setBorder(xTitledBorder9);
 
         xDataTable4.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
@@ -407,7 +732,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
@@ -514,43 +840,563 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable4.setName("selectedspouseInfo"); // NOI18N
         xHorizontalPanel4.add(xDataTable4);
 
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder10 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder10.setTitle("Spouse's Parents");
+        xPanel4.setBorder(xTitledBorder10);
+
+        xHorizontalPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Father's Name (Spouse)"));
+
+        xDataTable5.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefather"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefather.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefather.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable5.setHandler("spouseFatherItemHandler");
+        xDataTable5.setMultiSelectName("");
+        xDataTable5.setName("selectedSpouseFatherItem"); // NOI18N
+        xHorizontalPanel5.add(xDataTable5);
+
+        xHorizontalPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Mother's Maiden Name (Spouse)"));
+
+        xDataTable6.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemother"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemother.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemother.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemother.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable6.setHandler("spouseMotherItemHandler");
+        xDataTable6.setName("selectedSpouseMotherItem"); // NOI18N
+        xHorizontalPanel6.add(xDataTable6);
+
+        javax.swing.GroupLayout xPanel4Layout = new javax.swing.GroupLayout(xPanel4);
+        xPanel4.setLayout(xPanel4Layout);
+        xPanel4Layout.setHorizontalGroup(
+            xPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel4Layout.setVerticalGroup(
+            xPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder11 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder11.setTitle("GRANDPARENTS (Spouse)");
+        xPanel7.setBorder(xTitledBorder11);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder12 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder12.setTitle("Mother's Side");
+        xHorizontalPanel13.setBorder(xTitledBorder12);
+
+        xHorizontalPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Grandfather (Lolo)"));
+
+        xDataTable11.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandfather"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemothersidegrandfather.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandfather.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable11.setHandler("spouseMOTHERsidegrandFATHERItemHandler");
+        xDataTable11.setId("spouseMOTHERsidegrandFATHERItemHandler");
+        xDataTable11.setName("selectedSpouseMOTHERsidegrandFATHERItem"); // NOI18N
+        xHorizontalPanel14.add(xDataTable11);
+
+        xHorizontalPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+
+        xDataTable12.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandmother"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemothersidegrandmother.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandmother.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandmother.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable12.setHandler("spouseMOTHERsidegrandMOTHERItemHandler");
+        xDataTable12.setId("spouseMOTHERsidegrandMOTHERItemHandler");
+        xDataTable12.setName("selectedSpouseMOTHERsidegrandMOTHERItem"); // NOI18N
+        xHorizontalPanel15.add(xDataTable12);
+
+        javax.swing.GroupLayout xPanel8Layout = new javax.swing.GroupLayout(xPanel8);
+        xPanel8.setLayout(xPanel8Layout);
+        xPanel8Layout.setHorizontalGroup(
+            xPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, 1053, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel8Layout.setVerticalGroup(
+            xPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        xHorizontalPanel13.add(xPanel8);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder13 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder13.setTitle("Father's Side");
+        xHorizontalPanel16.setBorder(xTitledBorder13);
+
+        xHorizontalPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder("1. Grandfather (Lolo)"));
+
+        xDataTable13.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandfather"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefathersidegrandfather.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandfather.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable13.setHandler("spouseFATHERsidegrandFATHERItemHandler");
+        xDataTable13.setId("spouseFATHERsidegrandFATHERItemHandler");
+        xDataTable13.setName("selectedSpouseFATHERsidegrandFATHERItem"); // NOI18N
+        xHorizontalPanel17.add(xDataTable13);
+
+        xHorizontalPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+
+        xDataTable14.setColumns(new com.rameses.rcp.common.Column[]{
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandmother"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefathersidegrandmother.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandmother.middlename"}
+                , new Object[]{"caption", "Middle Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandmother.lastname"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            })
+        });
+        xDataTable14.setHandler("spouseFATHERsidegrandMOTHERItemHandler");
+        xDataTable14.setId("spouseFATHERsidegrandMOTHERItemHandler");
+        xDataTable14.setName("selectedSpouseFATHERsidegrandMOTHERItem"); // NOI18N
+        xHorizontalPanel18.add(xDataTable14);
+
+        javax.swing.GroupLayout xPanel9Layout = new javax.swing.GroupLayout(xPanel9);
+        xPanel9.setLayout(xPanel9Layout);
+        xPanel9Layout.setHorizontalGroup(
+            xPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, 1053, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel9Layout.setVerticalGroup(
+            xPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        xHorizontalPanel16.add(xPanel9);
+
+        javax.swing.GroupLayout xPanel7Layout = new javax.swing.GroupLayout(xPanel7);
+        xPanel7.setLayout(xPanel7Layout);
+        xPanel7Layout.setHorizontalGroup(
+            xPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel7Layout.setVerticalGroup(
+            xPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xHorizontalPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout xPanel3Layout = new javax.swing.GroupLayout(xPanel3);
+        xPanel3.setLayout(xPanel3Layout);
+        xPanel3Layout.setHorizontalGroup(
+            xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel3Layout.setVerticalGroup(
+            xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel3Layout.createSequentialGroup()
+                .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
+        );
+
+        javax.swing.GroupLayout xPanel2Layout = new javax.swing.GroupLayout(xPanel2);
+        xPanel2.setLayout(xPanel2Layout);
+        xPanel2Layout.setHorizontalGroup(
+            xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel2Layout.setVerticalGroup(
+            xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel2Layout.createSequentialGroup()
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout xPanel1Layout = new javax.swing.GroupLayout(xPanel1);
+        xPanel1.setLayout(xPanel1Layout);
+        xPanel1Layout.setHorizontalGroup(
+            xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        xPanel1Layout.setVerticalGroup(
+            xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        xScrollPane1.setViewportView(xPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
-                    .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xHorizontalPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.rcp.control.XDataTable xDataTable1;
+    private com.rameses.rcp.control.XDataTable xDataTable10;
+    private com.rameses.rcp.control.XDataTable xDataTable11;
+    private com.rameses.rcp.control.XDataTable xDataTable12;
+    private com.rameses.rcp.control.XDataTable xDataTable13;
+    private com.rameses.rcp.control.XDataTable xDataTable14;
+    private com.rameses.rcp.control.XDataTable xDataTable15;
+    private com.rameses.rcp.control.XDataTable xDataTable16;
+    private com.rameses.rcp.control.XDataTable xDataTable17;
+    private com.rameses.rcp.control.XDataTable xDataTable18;
     private com.rameses.rcp.control.XDataTable xDataTable2;
     private com.rameses.rcp.control.XDataTable xDataTable3;
     private com.rameses.rcp.control.XDataTable xDataTable4;
+    private com.rameses.rcp.control.XDataTable xDataTable5;
+    private com.rameses.rcp.control.XDataTable xDataTable6;
+    private com.rameses.rcp.control.XDataTable xDataTable7;
+    private com.rameses.rcp.control.XDataTable xDataTable8;
+    private com.rameses.rcp.control.XDataTable xDataTable9;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel10;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel11;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel12;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel13;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel14;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel15;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel16;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel17;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel18;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel19;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel2;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel20;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel21;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel22;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel23;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel24;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel3;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel4;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel5;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel6;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel7;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel8;
+    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel9;
+    private com.rameses.rcp.control.XPanel xPanel1;
+    private com.rameses.rcp.control.XPanel xPanel10;
+    private com.rameses.rcp.control.XPanel xPanel11;
+    private com.rameses.rcp.control.XPanel xPanel12;
+    private com.rameses.rcp.control.XPanel xPanel13;
+    private com.rameses.rcp.control.XPanel xPanel14;
+    private com.rameses.rcp.control.XPanel xPanel2;
+    private com.rameses.rcp.control.XPanel xPanel3;
+    private com.rameses.rcp.control.XPanel xPanel4;
+    private com.rameses.rcp.control.XPanel xPanel5;
+    private com.rameses.rcp.control.XPanel xPanel6;
+    private com.rameses.rcp.control.XPanel xPanel7;
+    private com.rameses.rcp.control.XPanel xPanel8;
+    private com.rameses.rcp.control.XPanel xPanel9;
+    private com.rameses.rcp.control.XScrollPane xScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

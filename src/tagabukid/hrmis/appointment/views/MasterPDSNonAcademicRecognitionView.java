@@ -35,41 +35,31 @@ public class MasterPDSNonAcademicRecognitionView extends javax.swing.JPanel {
 
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
-        xTextField2 = new com.rameses.rcp.control.XTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
-        xTextField4 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Non-Academic Distinction / Recognition Details");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
-        xTextField1.setCaption("objid");
-        xTextField1.setName("entity.objid"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField1.setVisible(false);
-        xFormPanel1.add(xTextField1);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 100));
 
-        xTextField2.setCaption("Recognition");
-        xTextField2.setCaptionWidth(125);
-        xTextField2.setName("entity.name"); // NOI18N
-        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField2);
+        xTextArea1.setLineWrap(true);
+        xTextArea1.setCaption("Recognition Title");
+        xTextArea1.setCaptionWidth(100);
+        xTextArea1.setName("entity.name"); // NOI18N
+        jScrollPane1.setViewportView(xTextArea1);
+
+        xFormPanel1.add(jScrollPane1);
 
         xLookupField1.setCaption("Category");
-        xLookupField1.setCaptionWidth(125);
+        xLookupField1.setCaptionWidth(100);
         xLookupField1.setExpression("#{item.name}");
         xLookupField1.setHandler("lookup:tagabukid_hrmis_recognitioncategory");
         xLookupField1.setName("entity.recognitioncategory"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField1);
-
-        xTextField4.setCaption("Position / Nature of Work");
-        xTextField4.setCaptionWidth(200);
-        xTextField4.setName("entity.positionornatureofwork"); // NOI18N
-        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xTextField4.setVisible(false);
-        xFormPanel1.add(xTextField4);
 
         xHorizontalPanel1.add(xFormPanel1);
 
@@ -87,17 +77,16 @@ public class MasterPDSNonAcademicRecognitionView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XLookupField xLookupField1;
-    private com.rameses.rcp.control.XTextField xTextField1;
-    private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextArea xTextArea1;
     // End of variables declaration//GEN-END:variables
 }

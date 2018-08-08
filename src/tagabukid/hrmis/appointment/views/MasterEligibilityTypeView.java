@@ -40,7 +40,6 @@ public class MasterEligibilityTypeView extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xTextField4 = new com.rameses.rcp.control.XTextField();
-        xTextField6 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Eligibility Type");
@@ -77,13 +76,6 @@ public class MasterEligibilityTypeView extends javax.swing.JPanel {
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField4);
 
-        xTextField6.setCaption("Old ID");
-        xTextField6.setCaptionFontStyle("");
-        xTextField6.setCaptionWidth(125);
-        xTextField6.setName("entity.oldid"); // NOI18N
-        xTextField6.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel2.add(xTextField6);
-
         xHorizontalPanel2.add(xFormPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -100,7 +92,7 @@ public class MasterEligibilityTypeView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -113,6 +105,5 @@ public class MasterEligibilityTypeView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
-    private com.rameses.rcp.control.XTextField xTextField6;
     // End of variables declaration//GEN-END:variables
 }

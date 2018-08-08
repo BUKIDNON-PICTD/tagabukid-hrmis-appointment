@@ -67,6 +67,7 @@ public class MasterPDSQView extends javax.swing.JPanel {
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField1);
 
+        xTextField4.setEditable(false);
         xTextField4.setCaption("oldid");
         xTextField4.setCaptionWidth(75);
         xTextField4.setName("entity.oldid"); // NOI18N

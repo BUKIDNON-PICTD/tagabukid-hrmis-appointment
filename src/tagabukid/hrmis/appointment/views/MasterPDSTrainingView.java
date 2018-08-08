@@ -36,14 +36,12 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xTextField1 = new com.rameses.rcp.control.XTextField();
+        xTextField5 = new com.rameses.rcp.control.XTextField();
+        xTextField4 = new com.rameses.rcp.control.XTextField();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
-        xDateField1 = new com.rameses.rcp.control.XDateField();
-        xDateField2 = new com.rameses.rcp.control.XDateField();
-        xDecimalField1 = new com.rameses.rcp.control.XDecimalField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
         xLookupField3 = new com.rameses.rcp.control.XLookupField();
-        xTextField3 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Training Program Details");
@@ -55,9 +53,22 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
         xTextField1.setVisible(false);
         xFormPanel1.add(xTextField1);
 
-        xTextField2.setCaption("Training Title");
+        xTextField5.setCaption("Training Title");
+        xTextField5.setCaptionWidth(170);
+        xTextField5.setName("entity.name"); // NOI18N
+        xTextField5.setNullWhenEmpty(false);
+        xTextField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField5);
+
+        xTextField4.setCaption("Training Description");
+        xTextField4.setCaptionWidth(170);
+        xTextField4.setName("entity.description"); // NOI18N
+        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField4);
+
+        xTextField2.setCaption("Training Code");
         xTextField2.setCaptionWidth(170);
-        xTextField2.setName("entity.name"); // NOI18N
+        xTextField2.setName("entity.code"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
@@ -68,23 +79,6 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
         xLookupField1.setName("entity.trainingsubcategory"); // NOI18N
         xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField1);
-
-        xDateField1.setCaption("From");
-        xDateField1.setCaptionWidth(170);
-        xDateField1.setName("entity.attendancefrom"); // NOI18N
-        xDateField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xDateField1);
-
-        xDateField2.setCaption("To");
-        xDateField2.setCaptionWidth(170);
-        xDateField2.setName("entity.attendanceto"); // NOI18N
-        xDateField2.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xDateField2);
-
-        xDecimalField1.setCaption("Number Of Hours");
-        xDecimalField1.setCaptionWidth(170);
-        xDecimalField1.setName("entity.numberofhours"); // NOI18N
-        xFormPanel1.add(xDecimalField1);
 
         xLookupField2.setCaption("Sponsor Institution Type");
         xLookupField2.setCaptionWidth(170);
@@ -102,12 +96,6 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
         xLookupField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLookupField3);
 
-        xTextField3.setCaption("Sponsor");
-        xTextField3.setCaptionWidth(170);
-        xTextField3.setName("entity.sponsor"); // NOI18N
-        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(xTextField3);
-
         xHorizontalPanel1.add(xFormPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -124,15 +112,12 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.rcp.control.XDateField xDateField1;
-    private com.rameses.rcp.control.XDateField xDateField2;
-    private com.rameses.rcp.control.XDecimalField xDecimalField1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XLookupField xLookupField1;
@@ -140,6 +125,7 @@ public class MasterPDSTrainingView extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
-    private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField5;
     // End of variables declaration//GEN-END:variables
 }

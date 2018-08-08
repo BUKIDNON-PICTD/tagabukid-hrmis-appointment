@@ -53,6 +53,7 @@ public class MasterPDSQsItemView extends javax.swing.JPanel {
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
+        xTextArea1.setLineWrap(true);
         xTextArea1.setCaption("Item");
         xTextArea1.setName("entity.item"); // NOI18N
         jScrollPane1.setViewportView(xTextArea1);
@@ -64,6 +65,7 @@ public class MasterPDSQsItemView extends javax.swing.JPanel {
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField2);
 
+        xTextField3.setEditable(false);
         xTextField3.setCaption("oldid");
         xTextField3.setName("entity.oldid"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
