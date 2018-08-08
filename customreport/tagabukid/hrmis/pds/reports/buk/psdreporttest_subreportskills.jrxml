@@ -2,20 +2,19 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="skillslist"
-
-		 language="groovy"		 columnCount="1"
+		 name="psdreporttest_subreportskills"
+		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
-		 pageWidth="612"
-		 pageHeight="1008"
-		 columnWidth="612"
+		 pageWidth="157"
+		 pageHeight="802"
+		 columnWidth="157"
 		 columnSpacing="0"
 		 leftMargin="0"
 		 rightMargin="0"
 		 topMargin="0"
 		 bottomMargin="0"
-		 whenNoDataType="NoPages"
+		 whenNoDataType="AllSectionsNoDetail"
 		 isTitleNewPage="false"
 		 isSummaryNewPage="false">
 	<property name="ireport.scriptlethandling" value="0" />
@@ -24,63 +23,8 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<style 
-		name="TREDWHENNULL"
-		isDefault="false"
-		isBlankWhenNull="true"
-	>
 
-		<conditionalStyle>
-			<conditionExpression><![CDATA[$F{ttitle}==null]]></conditionExpression>
-			<style 
-				name="TREDWHENNULL"
-				isDefault="false"
-				mode="Opaque"
-				backcolor="#FF0000"
-				isBlankWhenNull="true"
-			>
-			</style>
-		</conditionalStyle>
-	</style>
-	<style 
-		name="EREDWHENNULL"
-		isDefault="false"
-		isBlankWhenNull="true"
-	>
-
-		<conditionalStyle>
-			<conditionExpression><![CDATA[$F{etitle}==null]]></conditionExpression>
-			<style 
-				name="EREDWHENNULL"
-				isDefault="false"
-				mode="Opaque"
-				backcolor="#FF0000"
-				isBlankWhenNull="true"
-			>
-			</style>
-		</conditionalStyle>
-	</style>
-	<style 
-		name="QREDWHENNULL"
-		isDefault="false"
-		isBlankWhenNull="true"
-	>
-
-		<conditionalStyle>
-			<conditionExpression><![CDATA[$F{qtitle}==null]]></conditionExpression>
-			<style 
-				name="QREDWHENNULL"
-				isDefault="false"
-				mode="Opaque"
-				backcolor="#FF0000"
-				isBlankWhenNull="true"
-			>
-			</style>
-		</conditionalStyle>
-	</style>
-
-
-	<field name="name" class="java.lang.String"/>
+	<field name="skill.name" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -96,22 +40,43 @@
 		</pageHeader>
 		<columnHeader>
 			<band height="25"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="157"
+						height="25"
+						backcolor="#E7E7E7"
+						key="staticText-1"/>
+					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[SPECIAL SKILLS and HOBBIES]]></text>
+				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="52"  isSplitAllowed="true" >
+			<band height="18"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="-5"
+						x="0"
 						y="0"
-						width="100"
+						width="157"
 						height="18"
 						key="textField"/>
-					<box></box>
-					<textElement>
-						<font/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{skill.name}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

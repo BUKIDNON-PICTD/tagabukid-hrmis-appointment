@@ -39,7 +39,7 @@ class MasterFinAccountTitleModel extends CrudFormModel{
         //     entity.parentaccounttitleid = entity.parentaccounttitle;
         // else
         //     entity.parentaccounttitleid = entity.parentaccounttitle.objid;
-        entity.parentaccounttitleid = node.objid
+        entity.parentaccounttitle_objid = node.objid
 
         if(o == 'create'){
             entity = hrmisaccounttitleService.manageLftRgt(entity)

@@ -23,13 +23,6 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<parameter name="name" isForPrompting="false" class="java.lang.String"/>
-
-	<field name="child.name" class="java.lang.String"/>
-	<field name="child.birthdate" class="java.util.Date"/>
-	<field name="child.firstname" class="java.lang.String"/>
-	<field name="child.middlename" class="java.lang.String"/>
-	<field name="child.lastname" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -58,10 +51,10 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
+					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[ 23. NAME of CHILDREN (Write full name and list all)]]></text>
+				<text><![CDATA[NAME of CHILDREN (Write full name and list all)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -84,43 +77,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="18"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="0"
-						width="159"
-						height="18"
-						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{child.firstname} + " " + $F{child.middlename} + " " + $F{child.lastname}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="159"
-						y="0"
-						width="107"
-						height="18"
-						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$F{child.birthdate}]]></textFieldExpression>
-				</textField>
+			<band height="98"  isSplitAllowed="true" >
 			</band>
 		</detail>
 		<columnFooter>
