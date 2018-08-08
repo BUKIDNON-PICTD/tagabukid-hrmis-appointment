@@ -61,10 +61,12 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="0.0"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Top">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[LEVEL]]></text>
+				<text><![CDATA[
+ 26. 
+               LEVEL]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

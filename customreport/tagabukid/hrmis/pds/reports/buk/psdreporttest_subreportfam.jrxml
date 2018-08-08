@@ -63,13 +63,13 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="271"  isSplitAllowed="true" >
+			<band height="274"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="20"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-1"/>
@@ -81,14 +81,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  SURNAME]]></text>
+				<text><![CDATA[  22. SURNAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="38"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
@@ -100,14 +100,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  FIRST NAME]]></text>
+				<text><![CDATA[      FIRST NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="56"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
@@ -119,13 +119,13 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MIDDLE NAME]]></text>
+				<text><![CDATA[      MIDDLE NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="20"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<pen lineWidth="1.0"/>
@@ -144,7 +144,7 @@
 						mode="Opaque"
 						x="0"
 						y="145"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
@@ -156,14 +156,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[   FATHER'S SURNAME]]></text>
+				<text><![CDATA[   24. FATHER'S SURNAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="163"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
@@ -175,14 +175,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[   FIRST NAME]]></text>
+				<text><![CDATA[       FIRST NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="181"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-6"/>
@@ -194,13 +194,13 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MIDDLE NAME]]></text>
+				<text><![CDATA[      MIDDLE NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="38"
-						width="159"
+						width="151"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -217,7 +217,7 @@
 						mode="Opaque"
 						x="235"
 						y="45"
-						width="71"
+						width="81"
 						height="11"
 						backcolor="#E7E7E7"
 						key="textField"/>
@@ -232,9 +232,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="56"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -251,7 +251,7 @@
 						mode="Opaque"
 						x="0"
 						y="74"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-7"/>
@@ -263,14 +263,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  OCCUPATION]]></text>
+				<text><![CDATA[      OCCUPATION]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="92"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
@@ -280,15 +280,15 @@
 					<rightPen lineWidth="0.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Yu Gothic UI" size="6"/>
+						<font fontName="Yu Gothic UI" size="5"/>
 					</textElement>
-				<text><![CDATA[  EMPLOYER/BUSINESS NAME]]></text>
+				<text><![CDATA[         EMPLOYER/BUSINESS NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="74"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -302,9 +302,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="92"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -321,7 +321,7 @@
 						mode="Opaque"
 						x="0"
 						y="110"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-9"/>
@@ -333,14 +333,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  BUSINESS ADDRESS]]></text>
+				<text><![CDATA[      BUSINESS ADDRESS]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="128"
-						width="76"
+						width="84"
 						height="17"
 						backcolor="#E7E7E7"
 						key="staticText-10"/>
@@ -352,13 +352,13 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  TELEPHONE NO.]]></text>
+				<text><![CDATA[      TELEPHONE NO.]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="110"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -372,9 +372,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="127"
-						width="230"
+						x="84"
+						y="128"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -388,9 +388,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="145"
-						width="230"
+						x="84"
+						y="146"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -404,9 +404,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="181"
-						width="230"
+						x="84"
+						y="182"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -422,8 +422,8 @@
 					<reportElement
 						mode="Opaque"
 						x="235"
-						y="170"
-						width="71"
+						y="171"
+						width="81"
 						height="11"
 						backcolor="#E7E7E7"
 						key="textField"/>
@@ -437,9 +437,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="163"
-						width="159"
+						x="84"
+						y="164"
+						width="151"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -456,7 +456,7 @@
 						mode="Opaque"
 						x="0"
 						y="199"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-13"/>
@@ -466,16 +466,16 @@
 					<rightPen lineWidth="0.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Yu Gothic UI" size="6"/>
+						<font fontName="Yu Gothic UI" size="5"/>
 					</textElement>
-				<text><![CDATA[  MOTHER'S MAIDEN NAME]]></text>
+				<text><![CDATA[  25. MOTHER'S MAIDEN NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="217"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-14"/>
@@ -487,14 +487,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  SURNAME]]></text>
+				<text><![CDATA[     SURNAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="253"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-15"/>
@@ -506,14 +506,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MIDDLE NAME]]></text>
+				<text><![CDATA[     MIDDLE NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="235"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-16"/>
@@ -525,13 +525,13 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  FIRST NAME]]></text>
+				<text><![CDATA[     FIRST NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="199"
-						width="230"
+						x="84"
+						y="200"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -545,9 +545,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="217"
-						width="230"
+						x="84"
+						y="218"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -561,9 +561,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="235"
-						width="230"
+						x="84"
+						y="236"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
@@ -577,9 +577,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="253"
-						width="230"
+						x="84"
+						y="254"
+						width="232"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5">					<topPen lineWidth="0.0"/>
@@ -595,9 +595,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="306"
+						x="316"
 						y="38"
-						width="266"
+						width="256"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-17"
@@ -616,12 +616,12 @@
 					<reportElement
 						mode="Opaque"
 						x="235"
-						y="163"
-						width="71"
+						y="164"
+						width="81"
 						height="7"
 						backcolor="#E7E7E7"
 						key="staticText-18"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -636,11 +636,11 @@
 						mode="Opaque"
 						x="235"
 						y="38"
-						width="71"
+						width="81"
 						height="7"
 						backcolor="#E7E7E7"
 						key="staticText-19"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -672,9 +672,9 @@
 				</staticText>
 				<subreport  isUsingCache="true">
 					<reportElement
-						x="306"
+						x="316"
 						y="20"
-						width="266"
+						width="256"
 						height="18"
 						key="subreport-1"/>
 					<dataSourceExpression><![CDATA[$F{childdata}]]></dataSourceExpression>
