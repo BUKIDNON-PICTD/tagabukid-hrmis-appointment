@@ -42,7 +42,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder1.setTitle("Work Experience");
+        xTitledBorder1.setTitle("Service Record");
         xHorizontalPanel1.setBorder(xTitledBorder1);
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
@@ -104,8 +104,8 @@ public class ServiceRecordPage extends javax.swing.JPanel {
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "paygradestepincrement"}
-                , new Object[]{"caption", "Salary/ Job/ Pay Grade & Step Increment"}
-                , new Object[]{"width", 100}
+                , new Object[]{"caption", "Grade/Step"}
+                , new Object[]{"width", 50}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", true}
@@ -117,23 +117,9 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.paygradestepincrement.grade + ' - ' + item.paygradestepincrement.step}", "lookup:tagabukid_hrmis_paygradeandstepincrement")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "employmentstatus"}
-                , new Object[]{"caption", "Status Of Appointment"}
-                , new Object[]{"width", 100}
-                , new Object[]{"minWidth", 0}
-                , new Object[]{"maxWidth", 0}
-                , new Object[]{"required", true}
-                , new Object[]{"resizable", true}
-                , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", true}
-                , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.employmentstatus.name}", "lookup:tagabukid_hrmis_employmentstatus")}
-            }),
-            new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "wage"}
                 , new Object[]{"caption", "Wage"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 60}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", true}
@@ -153,9 +139,24 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"required", false}
                 , new Object[]{"resizable", true}
                 , new Object[]{"nullWhenEmpty", true}
-                , new Object[]{"editable", false}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.compensationtype.name}", "lookup:tagabukid_hrmis_compensationtype")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "employmentstatus"}
+                , new Object[]{"caption", "Status Of Appointment"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.employmentstatus.name}", "lookup:tagabukid_hrmis_employmentstatus")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "org"}
@@ -188,7 +189,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "lawop"}
                 , new Object[]{"caption", "Lv w/o pay"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 40}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -216,7 +217,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "separationdate"}
                 , new Object[]{"caption", "Separation Date"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 50}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -230,7 +231,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "isgovservice"}
                 , new Object[]{"caption", "Gov Service (Y/N)"}
-                , new Object[]{"width", 100}
+                , new Object[]{"width", 30}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
                 , new Object[]{"required", false}
@@ -240,6 +241,20 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.CheckBoxColumnHandler(java.lang.Boolean.class, true, false)}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "reportdisplay"}
+                , new Object[]{"caption", "Display As"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.ComboBoxColumnHandler("reportdisplay", null, null)}
             })
         });
         xDataTable1.setEditable(true);

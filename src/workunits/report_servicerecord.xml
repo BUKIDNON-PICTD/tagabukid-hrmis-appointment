@@ -1,0 +1,56 @@
+<workunit extends="rpt_wtemplates/ReportController.xml" >
+    <invokers>
+        <invoker type="test:servicerecord" caption="Preview Service Record" action="init" index="1" target="window" />  
+    </invokers>
+<!--    <code class="tagabukid.hrmis.appointment.models.ReportServiceRecordModel" />-->
+    <code>
+    <![CDATA[
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.reports.*;
+
+    class ReportServiceRecordModel extends com.rameses.gov.etracs.rpt.report.AsyncReportController
+    {
+        @Service('ServiceRecordReportService') 
+        def svc
+
+        @Service("TagabukidSubayLookupService")
+        def subaylookupsvc
+
+        String title = 'Service Record'
+        String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/'
+        String reportName = REPORT_PATH + 'servicerecord.jasper';
+        def data 
+
+
+        void buildReportData(entity, asyncHandler){
+            svc.getServiceRecordById(entity,asyncHandler);
+        }
+
+        Map getParameters(){
+            return data.parameters;
+        }
+
+
+       def formControl = [
+            getFormControls: {
+                return [
+                    new FormControl( "checkbox", [caption:'For Retirement', name:'entity.forretirement', preferredSize:'[0,21]', captionWidth:150]),
+                    new FormControl( "checkbox", [caption:'For GSIS', name:'entity.forgsis', preferredSize:'[0,21]', captionWidth:150]),
+
+                ]    
+            },
+       ] as FormPanelModel;
+
+        SubReport[] getSubReports() {
+            return [ 
+                    new SubReport("ServiceRecordItemList", REPORT_PATH + "servicerecorditems.jasper"),           
+               ] as SubReport[];    
+       }
+
+    }
+    ]]>        
+        
+    </code>
+</workunit>
