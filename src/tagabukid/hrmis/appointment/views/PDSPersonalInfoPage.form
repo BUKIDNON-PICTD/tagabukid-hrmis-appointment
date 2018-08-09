@@ -18,7 +18,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane4" pref="376" max="32767" attributes="0"/>
+              <Component id="jScrollPane4" pref="875" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -27,7 +27,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane4" pref="274" max="32767" attributes="0"/>
+              <Component id="jScrollPane4" pref="395" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -116,7 +116,10 @@
                         <Property name="required" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="com.rameses.enterprise.views.AddressComponent" name="addressComponent2">
+                    <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="xTextField1"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>

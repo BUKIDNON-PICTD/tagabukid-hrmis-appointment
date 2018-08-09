@@ -39,7 +39,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
         entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
         entityAddress2 = new com.rameses.enterprise.components.EntityAddress();
-        addressComponent2 = new com.rameses.enterprise.views.AddressComponent();
+        xTextField1 = new com.rameses.rcp.control.XTextField();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         entityLookup1 = new com.rameses.entity.components.EntityLookup();
@@ -85,7 +85,9 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityAddress2.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress2.setRequired(true);
         xFormPanel3.add(entityAddress2);
-        xFormPanel3.add(addressComponent2);
+
+        xTextField1.setText("xTextField1");
+        xFormPanel3.add(xTextField1);
 
         xHorizontalPanel3.add(xFormPanel3);
 
@@ -269,21 +271,20 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.enterprise.views.AddressComponent addressComponent2;
     private com.rameses.enterprise.components.CitizenshipSuggest citizenshipSuggest1;
     private com.rameses.enterprise.components.CivilStatusList civilStatusList1;
     private com.rameses.enterprise.components.EntityAddress entityAddress1;
@@ -305,6 +306,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XPanel xPanel1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
+    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField10;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField12;
