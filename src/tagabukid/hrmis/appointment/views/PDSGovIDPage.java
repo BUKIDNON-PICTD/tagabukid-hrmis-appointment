@@ -37,7 +37,7 @@ public class PDSGovIDPage extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        idTypeList1 = new com.rameses.enterprise.components.IdTypeList();
+        xTextField1 = new com.rameses.rcp.control.XTextField();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
 
@@ -47,12 +47,11 @@ public class PDSGovIDPage extends javax.swing.JPanel {
 
         xFormPanel1.setPadding(new java.awt.Insets(20, 20, 5, 20));
 
-        idTypeList1.setCaption("Government Issued ID");
-        idTypeList1.setCaptionWidth(150);
-        idTypeList1.setMinimumSize(new java.awt.Dimension(359, 20));
-        idTypeList1.setName("entity.idtype"); // NOI18N
-        idTypeList1.setPreferredSize(new java.awt.Dimension(0, 22));
-        xFormPanel1.add(idTypeList1);
+        xTextField1.setCaption("ID Type");
+        xTextField1.setCaptionWidth(150);
+        xTextField1.setName("entity.idtype"); // NOI18N
+        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField1);
 
         xTextField2.setCaption("ID/License/Passport No.");
         xTextField2.setCaptionWidth(150);
@@ -76,7 +75,7 @@ public class PDSGovIDPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1017, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -84,16 +83,16 @@ public class PDSGovIDPage extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(313, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.enterprise.components.IdTypeList idTypeList1;
     private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     // End of variables declaration//GEN-END:variables
