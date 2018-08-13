@@ -1,6 +1,8 @@
 <workunit schemaName="hrmis_pds">
     <invokers>
         <invoker type="pds:section:open" caption="Service Record" action="open" index="200" role="PDS_ENCODER"/>
+        <invoker type="formActions" caption="Print Service Record"  
+            action="print"/>
     </invokers>
     
     <code class="tagabukid.hrmis.appointment.models.ServiceRecordController" />
