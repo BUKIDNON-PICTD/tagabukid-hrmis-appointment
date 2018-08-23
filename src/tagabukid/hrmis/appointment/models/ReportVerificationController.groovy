@@ -20,7 +20,7 @@ class ReportVerificationController extends ReportController {
         // data = svc.getPersonalInfoByIds(entity);
         // return data.reportdata
         // println entity
-        data = svc.getTestReportData(entity)
+        data = svc.getVerificationReportData(entity)
         return data.reportdata;
     } 
 
@@ -29,9 +29,9 @@ class ReportVerificationController extends ReportController {
     }
     
     SubReport[] getSubReports() {
-//        return [ 
-//           new SubReport("FAMILY", REPORT_PATH + "psdreporttest_subreportfam.jasper"),           
-//           new SubReport("FAMILY_CHILD", REPORT_PATH + "psdreporttest_subreportfam_subreportchild.jasper"),
+        return [ 
+//           new SubReport("FAMILY", REPORT_PATH + "psdreportverification_subreportfamily.jasper"),           
+//           new SubReport("HITS", REPORT_PATH + "psdreportverification_subreporthits.jasper"),
 //
 //           new SubReport("EDUCATION", REPORT_PATH + "psdreporttest_subreportedu.jasper"),
 //
@@ -48,6 +48,6 @@ class ReportVerificationController extends ReportController {
 //           new SubReport("REFERENCE", REPORT_PATH + "psdreporttest_subreportreferences.jasper"),
 //
 //
-//        ] as SubReport[];    
+        ] as SubReport[];    
     }
 } 
