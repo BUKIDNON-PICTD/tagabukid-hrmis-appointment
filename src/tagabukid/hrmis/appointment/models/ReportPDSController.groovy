@@ -46,6 +46,7 @@ class ReportPDSController extends ReportController {
 
            new SubReport("LASTPAGE", REPORT_PATH + "psdreporttest_subreportlastpage.jasper"),
            new SubReport("REFERENCE", REPORT_PATH + "psdreporttest_subreportreferences.jasper"),
+           new SubReport("OATH", REPORT_PATH + "psdreporttest_subreportoath.jasper"),
 
 
         ] as SubReport[];    

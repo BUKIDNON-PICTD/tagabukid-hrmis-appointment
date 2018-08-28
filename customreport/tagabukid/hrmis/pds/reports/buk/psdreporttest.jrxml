@@ -43,6 +43,7 @@
 	<parameter name="FAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="MEMBERSHIP" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="REFERENCE" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="OATH" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="person.lastname" class="java.lang.String"/>
 	<field name="skills" class="java.lang.Object"/>
@@ -80,8 +81,8 @@
 	<field name="residential.address.barangay_name" class="java.lang.String"/>
 	<field name="residential.address.municipality" class="java.lang.String"/>
 	<field name="residential.address.province" class="java.lang.String"/>
-	<field name="residentialaddress.text.pin" class="java.lang.String"/>
-	<field name="permanentaddress.text.pin" class="java.lang.String"/>
+	<field name="residentialzipcode" class="java.lang.Integer"/>
+	<field name="permanentzipcode" class="java.lang.Integer"/>
 	<field name="civilserviceInfos" class="java.lang.Object"/>
 	<field name="voluntarywork" class="java.lang.Object"/>
 	<field name="trainings" class="java.lang.Object"/>
@@ -95,7 +96,7 @@
 		<group  name="1stPage" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="373"  isSplitAllowed="true" >
+			<band height="380"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="84"
@@ -109,8 +110,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{tin}]]></textFieldExpression>
 				</textField>
@@ -124,11 +125,11 @@
 					<box leftPadding="5">					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
-					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.lastname}]]></textFieldExpression>
 				</textField>
@@ -146,8 +147,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.firstname}]]></textFieldExpression>
 				</textField>
@@ -162,14 +163,14 @@
 					<topPen lineWidth="0.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
-					<rightPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.middlename}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="84"
 						y="54"
@@ -177,13 +178,13 @@
 						height="23"
 						key="textField"/>
 					<box leftPadding="5">					<pen lineWidth="1.0"/>
-					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="2.0" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{person.birthdate}]]></textFieldExpression>
 				</textField>
@@ -200,8 +201,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.birthplace}]]></textFieldExpression>
 				</textField>
@@ -218,8 +219,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{height}]]></textFieldExpression>
 				</textField>
@@ -236,8 +237,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{weight}]]></textFieldExpression>
 				</textField>
@@ -254,8 +255,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bloodtype}]]></textFieldExpression>
 				</textField>
@@ -272,8 +273,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{gsisid}]]></textFieldExpression>
 				</textField>
@@ -290,8 +291,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{pagibigid}]]></textFieldExpression>
 				</textField>
@@ -308,8 +309,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{philhealth}]]></textFieldExpression>
 				</textField>
@@ -326,8 +327,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{sss}]]></textFieldExpression>
 				</textField>
@@ -344,8 +345,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{employeeno}]]></textFieldExpression>
 				</textField>
@@ -362,8 +363,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.phoneno}]]></textFieldExpression>
 				</textField>
@@ -380,8 +381,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.mobileno}]]></textFieldExpression>
 				</textField>
@@ -398,8 +399,8 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.email}]]></textFieldExpression>
 				</textField>
@@ -415,7 +416,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -431,10 +432,10 @@
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -467,7 +468,7 @@
 						x="443"
 						y="25"
 						width="129"
-						height="10"
+						height="11"
 						backcolor="#E7E7E7"
 						key="textField"/>
 					<box leftPadding="5">					<topPen lineWidth="0.0"/>
@@ -489,10 +490,10 @@
 						height="23"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -512,7 +513,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -547,10 +548,10 @@
 						height="59"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
-					<box>					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="2.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Top">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -593,7 +594,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -612,7 +613,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -631,7 +632,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -650,7 +651,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -669,7 +670,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -688,7 +689,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -707,7 +708,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -726,7 +727,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -745,7 +746,7 @@
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -776,6 +777,7 @@
 
 
 
+
                  ZIP CODE]]></text>
 				</staticText>
 				<staticText>
@@ -796,6 +798,7 @@
 						<font fontName="Yu Gothic UI" size="5"/>
 					</textElement>
 				<text><![CDATA[ 18. PERMANENT ADDRESS
+
 
 
 
@@ -923,7 +926,7 @@
 						key="staticText-26"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -960,7 +963,7 @@
 						key="staticText-28"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -997,7 +1000,7 @@
 						key="staticText-30"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1034,7 +1037,7 @@
 						key="staticText-32"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1071,7 +1074,7 @@
 						key="staticText-34"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1108,7 +1111,7 @@
 						key="staticText-36"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1122,7 +1125,7 @@
 						mode="Transparent"
 						x="84"
 						y="95"
-						width="150"
+						width="151"
 						height="18"
 						key="rectangle-3"/>
 					<graphicElement stretchType="NoStretch"/>
@@ -1178,7 +1181,7 @@
 						mode="Transparent"
 						x="84"
 						y="113"
-						width="150"
+						width="151"
 						height="36"
 						key="rectangle-6"/>
 					<graphicElement stretchType="NoStretch"/>
@@ -1548,7 +1551,7 @@
 						key="textField"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1592,7 +1595,7 @@
 						key="textField"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1623,7 +1626,7 @@
 						key="textField"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1654,7 +1657,7 @@
 						key="textField"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1685,7 +1688,7 @@
 						key="textField"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1716,7 +1719,7 @@
 						key="textField"/>
 					<box>					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1738,10 +1741,10 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{residentialaddress.text.pin}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{residentialzipcode}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1756,10 +1759,10 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{permanentaddress.text.pin}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{permanentzipcode}]]></textFieldExpression>
 				</textField>
 				<rectangle>
 					<reportElement
@@ -1774,14 +1777,47 @@
 				</rectangle>
 				<staticText>
 					<reportElement
+						x="348"
+						y="54"
+						width="224"
+						height="40"
+						key="staticText-70"/>
+					<box>					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="348"
+						y="94"
+						width="224"
+						height="19"
+						key="textField-8"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
 						mode="Opaque"
-						x="1"
+						x="0"
 						y="355"
-						width="82"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-55"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+						key="staticText-71"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1793,12 +1829,13 @@
 				<staticText>
 					<reportElement
 						mode="Transparent"
-						x="83"
+						x="84"
 						y="355"
-						width="265"
+						width="264"
 						height="18"
-						key="staticText-56"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+						key="staticText-72"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1812,11 +1849,12 @@
 						mode="Opaque"
 						x="348"
 						y="355"
-						width="82"
+						width="80"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-57"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+						key="staticText-73"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1828,12 +1866,13 @@
 				<staticText>
 					<reportElement
 						mode="Transparent"
-						x="430"
+						x="428"
 						y="355"
-						width="142"
+						width="144"
 						height="18"
-						key="staticText-58"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+						key="staticText-74"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1850,8 +1889,9 @@
 						width="572"
 						height="9"
 						backcolor="#E7E7E7"
-						key="staticText-59"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+						key="staticText-75"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
@@ -1859,22 +1899,6 @@
 						<font pdfFontName="Helvetica-BoldOblique" size="6" isBold="true" isItalic="true"/>
 					</textElement>
 				<text><![CDATA[(Continue on separate sheet if necessary)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="348"
-						y="54"
-						width="224"
-						height="40"
-						key="staticText-70"/>
-					<box>					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<rightPen lineWidth="2.0"/>
-</box>
-					<textElement>
-						<font/>
-					</textElement>
-				<text><![CDATA[]]></text>
 				</staticText>
 			</band>
 			</groupHeader>
@@ -1909,12 +1933,13 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="1"
-						y="65"
-						width="75"
+						x="0"
+						y="64"
+						width="92"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-60"/>
+						key="staticText-60"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -1927,14 +1952,15 @@
 				<staticText>
 					<reportElement
 						mode="Transparent"
-						x="76"
-						y="65"
-						width="272"
+						x="93"
+						y="64"
+						width="229"
 						height="18"
-						key="staticText-61"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+						key="staticText-61"
+						positionType="Float"/>
+					<box>					<leftPen lineWidth="0.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
-					<rightPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
@@ -1944,12 +1970,13 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="348"
-						y="65"
-						width="82"
+						x="322"
+						y="64"
+						width="57"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-62"/>
+						key="staticText-62"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -1962,11 +1989,12 @@
 				<staticText>
 					<reportElement
 						mode="Transparent"
-						x="430"
-						y="65"
-						width="142"
+						x="379"
+						y="64"
+						width="193"
 						height="18"
-						key="staticText-63"/>
+						key="staticText-63"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -1980,11 +2008,12 @@
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="56"
+						y="55"
 						width="572"
 						height="9"
 						backcolor="#E7E7E7"
-						key="staticText-64"/>
+						key="staticText-64"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -2107,7 +2136,8 @@
 						width="75"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-65"/>
+						key="staticText-65"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -2124,7 +2154,8 @@
 						y="100"
 						width="272"
 						height="18"
-						key="staticText-66"/>
+						key="staticText-66"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -2142,7 +2173,8 @@
 						width="82"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-67"/>
+						key="staticText-67"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -2159,7 +2191,8 @@
 						y="100"
 						width="142"
 						height="18"
-						key="staticText-68"/>
+						key="staticText-68"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -2177,7 +2210,8 @@
 						width="572"
 						height="9"
 						backcolor="#E7E7E7"
-						key="staticText-69"/>
+						key="staticText-69"
+						positionType="Float"/>
 					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
 					<bottomPen lineWidth="2.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
@@ -2236,7 +2270,7 @@
 						height="18"
 						key="subreport-12"
 						positionType="Float"/>
-					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportlastpage_subreportoath.jasper"]]></subreportExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{OATH}]]></subreportExpression>
 				</subreport>
 			</band>
 			</groupHeader>

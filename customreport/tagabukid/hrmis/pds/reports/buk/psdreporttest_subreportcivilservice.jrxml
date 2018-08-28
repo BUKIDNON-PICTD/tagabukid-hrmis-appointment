@@ -106,9 +106,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="536"
+						x="530"
 						y="32"
-						width="36"
+						width="42"
 						height="21"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
@@ -128,7 +128,7 @@ Validity]]></text>
 						mode="Opaque"
 						x="476"
 						y="32"
-						width="60"
+						width="54"
 						height="21"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
@@ -221,7 +221,7 @@ CONFERMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{eligibility.name}]]></textFieldExpression>
 				</textField>
@@ -235,12 +235,12 @@ CONFERMENT]]></text>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{rating}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="216"
 						y="0"
@@ -251,7 +251,7 @@ CONFERMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{examinationdate}]]></textFieldExpression>
 				</textField>
@@ -266,7 +266,7 @@ CONFERMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{examinationaddress}]]></textFieldExpression>
 				</textField>
@@ -274,29 +274,29 @@ CONFERMENT]]></text>
 					<reportElement
 						x="476"
 						y="0"
-						width="60"
+						width="54"
 						height="18"
 						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<box>					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{licenseno}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="536"
+						x="530"
 						y="0"
-						width="36"
+						width="42"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{validitydate}]]></textFieldExpression>
 				</textField>

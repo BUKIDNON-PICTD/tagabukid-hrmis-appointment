@@ -38,11 +38,13 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xHorizontalPanel3 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
         entityAddress1 = new com.rameses.enterprise.components.EntityAddress();
+        xTextField2 = new com.rameses.rcp.control.XTextField();
         entityAddress2 = new com.rameses.enterprise.components.EntityAddress();
-        addressComponent2 = new com.rameses.enterprise.views.AddressComponent();
+        xTextField3 = new com.rameses.rcp.control.XTextField();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         entityLookup1 = new com.rameses.entity.components.EntityLookup();
+        xTextField1 = new com.rameses.rcp.control.XTextField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xDateField1 = new com.rameses.rcp.control.XDateField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -78,6 +80,13 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityAddress1.setRequired(true);
         xFormPanel3.add(entityAddress1);
 
+        xTextField2.setText("entity.residentialzipcode");
+        xTextField2.setCaption("ZIP Code");
+        xTextField2.setCaptionWidth(150);
+        xTextField2.setName("entity.residentialzipcode"); // NOI18N
+        xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel3.add(xTextField2);
+
         entityAddress2.setCaption("Permanent Address");
         entityAddress2.setCaptionWidth(150);
         entityAddress2.setDepends(new String[] {"entity.copypermanent"});
@@ -85,7 +94,14 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityAddress2.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress2.setRequired(true);
         xFormPanel3.add(entityAddress2);
-        xFormPanel3.add(addressComponent2);
+
+        xTextField3.setText("entity.permanentzipcode");
+        xTextField3.setCaption("ZIP Code");
+        xTextField3.setCaptionFontStyle("");
+        xTextField3.setCaptionWidth(150);
+        xTextField3.setName("entity.permanentzipcode"); // NOI18N
+        xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel3.add(xTextField3);
 
         xHorizontalPanel3.add(xFormPanel3);
 
@@ -99,6 +115,13 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityLookup1.setName("entity.person"); // NOI18N
         entityLookup1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(entityLookup1);
+
+        xTextField1.setText("entity.maidenname");
+        xTextField1.setCaption("Maiden Name:");
+        xTextField1.setCaptionWidth(135);
+        xTextField1.setName("entity.maidenname"); // NOI18N
+        xTextField1.setPreferredSize(new java.awt.Dimension(300, 20));
+        xFormPanel1.add(xTextField1);
 
         xTextField4.setCaption("Extension (Jr., Sr)");
         xTextField4.setCaptionWidth(135);
@@ -253,12 +276,12 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
             .addGroup(xPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(xPanel1Layout.createSequentialGroup()
                         .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
 
         jScrollPane4.setViewportView(xPanel1);
@@ -269,21 +292,20 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1025, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.enterprise.views.AddressComponent addressComponent2;
     private com.rameses.enterprise.components.CitizenshipSuggest citizenshipSuggest1;
     private com.rameses.enterprise.components.CivilStatusList civilStatusList1;
     private com.rameses.enterprise.components.EntityAddress entityAddress1;
@@ -305,12 +327,15 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XPanel xPanel1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextArea xTextArea2;
+    private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField10;
     private com.rameses.rcp.control.XTextField xTextField11;
     private com.rameses.rcp.control.XTextField xTextField12;
     private com.rameses.rcp.control.XTextField xTextField13;
     private com.rameses.rcp.control.XTextField xTextField14;
     private com.rameses.rcp.control.XTextField xTextField15;
+    private com.rameses.rcp.control.XTextField xTextField2;
+    private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField7;
     private com.rameses.rcp.control.XTextField xTextField8;

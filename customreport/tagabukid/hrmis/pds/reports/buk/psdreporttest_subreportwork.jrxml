@@ -71,9 +71,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="536"
+						x="530"
 						y="18"
-						width="36"
+						width="42"
 						height="44"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
@@ -101,7 +101,7 @@ SERVICE
 						key="staticText-3"/>
 					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -114,12 +114,12 @@ SERVICE
 					<reportElement
 						mode="Opaque"
 						x="46"
-						y="48"
+						y="47"
 						width="46"
-						height="14"
+						height="15"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
-					<box>					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -133,12 +133,12 @@ SERVICE
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="48"
+						y="47"
 						width="46"
-						height="14"
+						height="15"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
-					<box>					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="0.0"/>
@@ -196,7 +196,7 @@ INCREMENT]]></text>
 						mode="Opaque"
 						x="476"
 						y="18"
-						width="60"
+						width="54"
 						height="44"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
@@ -253,7 +253,7 @@ INCREMENT]]></text>
 		</columnHeader>
 		<detail>
 			<band height="18"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
@@ -265,11 +265,11 @@ INCREMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{from}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="46"
 						y="0"
@@ -280,7 +280,7 @@ INCREMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{to}]]></textFieldExpression>
 				</textField>
@@ -325,7 +325,7 @@ INCREMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{monthlysalary}]]></textFieldExpression>
 				</textField>
@@ -348,29 +348,29 @@ INCREMENT]]></text>
 					<reportElement
 						x="476"
 						y="0"
-						width="60"
+						width="54"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{employmentstatus.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="536"
+						x="530"
 						y="0"
-						width="36"
+						width="42"
 						height="18"
 						key="textField-2"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[($F{isgovservice}.equals("1"))? "YES" : "NO"]]></textFieldExpression>
 				</textField>
