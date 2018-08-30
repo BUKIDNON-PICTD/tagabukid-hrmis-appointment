@@ -30,8 +30,8 @@ class ReportVerificationController extends ReportController {
     
     SubReport[] getSubReports() {
         return [ 
-//           new SubReport("FAMILY", REPORT_PATH + "psdreportverification_subreportfamily.jasper"),           
-//           new SubReport("HITS", REPORT_PATH + "psdreportverification_subreporthits.jasper"),
+           new SubReport("FAMILY", REPORT_PATH + "psdreportverification_subreportfamily.jasper"),           
+           new SubReport("HITS_FAMILY", REPORT_PATH + "psdreportverification_subreporthits.jasper"),
 //
 //           new SubReport("EDUCATION", REPORT_PATH + "psdreporttest_subreportedu.jasper"),
 //
