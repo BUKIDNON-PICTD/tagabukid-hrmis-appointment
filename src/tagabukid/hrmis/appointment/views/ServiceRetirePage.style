@@ -1,0 +1,8 @@
+"selectedserviceRetireItem"[mode=='read']{
+    enabled:false;
+}
+
+"selectedserviceRetireItem"[mode!='read']{
+    enabled:true;
+}
+
