@@ -103,6 +103,20 @@ public class ServiceRecordPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.jobposition.name}", "lookup:tagabukid_hrmis_jobposition")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "otherjobposition"}
+                , new Object[]{"caption", "if Others"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", "item.jobposition.name=='OTHERS'"}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "paygradestepincrement"}
                 , new Object[]{"caption", "Grade/Step"}
                 , new Object[]{"width", 50}

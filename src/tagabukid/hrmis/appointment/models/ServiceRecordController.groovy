@@ -115,6 +115,15 @@ class  ServiceRecordController extends CrudFormModel {
                 }
 
             }
+            
+            if(col == 'jobposition'){
+                if (o.jobposition.name!='OTHERS'){
+                    o.otherjobposition = o.jobposition.name
+                }
+                if (o.jobposition.name == 'OTHERS'){
+                    o.otherjobposition = null
+                }
+            }
             o.recordlog.dateoflastupdate = dtSvc.getServerDate();
             o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
