@@ -89,10 +89,12 @@
 						width="162"
 						height="18"
 						key="textField-1"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{father.father.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -107,9 +109,9 @@
 						height="18"
 						key="textField-2"
 						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -123,10 +125,12 @@
 						width="162"
 						height="18"
 						key="textField-3"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spouse.spouse.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -140,10 +144,12 @@
 						width="162"
 						height="18"
 						key="textField-4"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{fathergrandmother.fathersidegrandmother.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -157,10 +163,12 @@
 						width="162"
 						height="18"
 						key="textField-5"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{fathergrandfather.fathersidegrandfather.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -174,10 +182,12 @@
 						width="162"
 						height="18"
 						key="textField-6"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{mothergrandmother.mothersidegrandmother.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -191,10 +201,12 @@
 						width="162"
 						height="18"
 						key="textField-7"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{mothergrandfather.mothersidegrandfather.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -208,10 +220,12 @@
 						width="162"
 						height="18"
 						key="textField-8"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spousefather.spousefather.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -225,10 +239,12 @@
 						width="162"
 						height="18"
 						key="textField-10"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spousefathergrandmother.spousefathersidegrandmother.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -242,10 +258,12 @@
 						width="162"
 						height="18"
 						key="textField-11"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spousefathergrandfather.spousefathersidegrandfather.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -259,10 +277,12 @@
 						width="162"
 						height="18"
 						key="textField-12"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandmother.spousemothersidegrandmother.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -276,10 +296,12 @@
 						width="162"
 						height="18"
 						key="textField-13"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandfather.spousemothersidegrandfather.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
@@ -293,10 +315,12 @@
 						width="162"
 						height="18"
 						key="textField-14"
-						isRemoveLineWhenBlank="true"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{spousemother.spousemother.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
