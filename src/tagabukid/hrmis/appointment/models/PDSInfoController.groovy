@@ -51,6 +51,13 @@ class PDSInfoController{
        op.target = 'self';
        return op;
     }
+    def verify(){
+       def op = Inv.lookupOpener("verification:report",[entity: entity]);
+       op.target = 'self';
+       return op;
+    }
+    
+    
 
     public void approve(){
        loadSections('open');

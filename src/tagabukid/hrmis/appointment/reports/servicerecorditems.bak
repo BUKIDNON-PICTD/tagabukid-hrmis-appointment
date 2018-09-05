@@ -87,8 +87,8 @@
 	<parameter name="org.name" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="personnel.objid" class="java.lang.String"/>
-	<field name="dailywage" class="java.math.BigDecimal"/>
-	<field name="monthlywage" class="java.math.BigDecimal"/>
+	<field name="wage" class="java.math.BigDecimal"/>
+	<field name="monthlysalary" class="java.math.BigDecimal"/>
 	<field name="personnel.birthdate" class="java.lang.String"/>
 	<field name="personnel.gender" class="java.lang.String"/>
 	<field name="personnel.lastname" class="java.lang.String"/>
@@ -103,7 +103,7 @@
 	<field name="personnel.phoneno" class="java.lang.String"/>
 	<field name="personnel.name" class="java.lang.String"/>
 	<field name="personnel.remarks" class="java.lang.String"/>
-	<field name="position.name" class="java.lang.String"/>
+	<field name="jobposition.name" class="java.lang.String"/>
 	<field name="fund.name" class="java.lang.String"/>
 	<field name="account.name" class="java.lang.String"/>
 	<field name="account.accountcode" class="java.lang.String"/>
@@ -111,6 +111,13 @@
 	<field name="natureofappointmentid.name" class="java.lang.String"/>
 	<field name="org.code" class="java.lang.String"/>
 	<field name="dailysalary" class="java.math.BigDecimal"/>
+	<field name="datefrom" class="java.util.Date"/>
+	<field name="dateto" class="java.util.Date"/>
+	<field name="employmentstatus.name" class="java.lang.String"/>
+	<field name="branch.name" class="java.lang.String"/>
+	<field name="lawop" class="java.lang.String"/>
+	<field name="personnelaction.name" class="java.lang.String"/>
+	<field name="reportdisplay" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -125,14 +132,14 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="78"  isSplitAllowed="true" >
+			<band height="44"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="25"
-						width="24"
-						height="53"
+						y="22"
+						width="52"
+						height="22"
 						backcolor="#99CCFF"
 						key="staticText-2"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
@@ -144,35 +151,15 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<text><![CDATA[]]></text>
+				<text><![CDATA[From]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="24"
-						y="25"
-						width="149"
-						height="53"
-						backcolor="#99CCFF"
-						key="staticText-3"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
-					</textElement>
-				<text><![CDATA[NAME]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="173"
-						y="25"
-						width="111"
-						height="53"
+						x="104"
+						y="22"
+						width="130"
+						height="22"
 						backcolor="#99CCFF"
 						key="staticText-8"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
@@ -184,35 +171,15 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<text><![CDATA[DESIGNATION]]></text>
+				<text><![CDATA[Designation]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="284"
-						y="25"
-						width="46"
-						height="53"
-						backcolor="#99CCFF"
-						key="staticText-10"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[RATE PER DAY]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="330"
-						y="25"
-						width="53"
-						height="53"
+						x="328"
+						y="22"
+						width="90"
+						height="22"
 						backcolor="#99CCFF"
 						key="staticText-12"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
@@ -224,15 +191,15 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
-				<text><![CDATA[EMPLOYMENT (FROM) (mm/dd/yyyy)]]></text>
+				<text><![CDATA[Station/Place]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="383"
-						y="25"
-						width="56"
-						height="53"
+						x="472"
+						y="0"
+						width="21"
+						height="44"
 						backcolor="#99CCFF"
 						key="staticText-13"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
@@ -241,18 +208,18 @@
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
-				<text><![CDATA[EMPLOYMENT (TO) (mm/dd/yyyy)]]></text>
+				<text><![CDATA[LAWOP]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="439"
-						y="25"
-						width="81"
-						height="53"
+						x="493"
+						y="0"
+						width="94"
+						height="44"
 						backcolor="#99CCFF"
 						key="staticText-16"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
@@ -264,17 +231,17 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="7" isBold="true"/>
 					</textElement>
-				<text><![CDATA[ACKNOWLEDGEMENT]]></text>
+				<text><![CDATA[PERSONNEL ACTION / SALARY INCREASE / SEPARATION]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="520"
-						y="25"
-						width="51"
-						height="53"
+						x="0"
+						y="0"
+						width="104"
+						height="22"
 						backcolor="#99CCFF"
-						key="staticText-17"/>
+						key="staticText-21"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -284,43 +251,157 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<text><![CDATA[REMARKS]]></text>
+				<text><![CDATA[SERVICE]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<staticText>
 					<reportElement
-						x="0"
-						y="12"
-						width="488"
-						height="13"
-						key="textField-2"/>
-					<box></box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="Tahoma" size="8"/>
+						mode="Opaque"
+						x="52"
+						y="22"
+						width="52"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-22"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Funding/Charges: " +$F{fund.name}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<text><![CDATA[To]]></text>
+				</staticText>
+				<staticText>
 					<reportElement
-						x="0"
+						mode="Opaque"
+						x="234"
+						y="22"
+						width="26"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-23"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Status]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="260"
+						y="22"
+						width="45"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-24"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Salary]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="305"
+						y="22"
+						width="23"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-25"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="104"
 						y="0"
-						width="480"
-						height="13"
-						key="textField-3"/>
-					<box></box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="Tahoma" size="8"/>
+						width="224"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-26"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Office Assignment: " +$P{org.name}]]></textFieldExpression>
-				</textField>
+				<text><![CDATA[RECORDS OF APPOINTMENT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="418"
+						y="22"
+						width="54"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-27"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Branch]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="328"
+						y="0"
+						width="144"
+						height="22"
+						backcolor="#99CCFF"
+						key="staticText-28"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[OFFICE/DIVISION]]></text>
+				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
 			<band height="11"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
-						width="24"
+						width="52"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -333,13 +414,13 @@
 					<textElement verticalAlignment="Middle">
 						<font size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{datefrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="24"
+						x="104"
 						y="0"
-						width="149"
+						width="130"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -352,13 +433,13 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}+" "+$F{personnel.middlename}+" "+$F{personnel.lastname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{jobposition.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="173"
+						x="328"
 						y="0"
-						width="111"
+						width="90"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -369,17 +450,93 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="8"/>
+						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{position.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{org.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="284"
+						x="472"
 						y="0"
-						width="46"
+						width="21"
 						height="11"
 						key="textField"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{lawop}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="493"
+						y="0"
+						width="94"
+						height="11"
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnelaction.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="52"
+						y="0"
+						width="52"
+						height="11"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{dateto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="234"
+						y="0"
+						width="26"
+						height="11"
+						key="textField-2"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{employmentstatus.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="260"
+						y="0"
+						width="45"
+						height="11"
+						key="textField-3"
 						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -390,73 +547,15 @@
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{dailysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{monthlysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="330"
+						x="305"
 						y="0"
-						width="53"
+						width="23"
 						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="7"/>
-					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectivefrom}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="383"
-						y="0"
-						width="56"
-						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="7"/>
-					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectiveuntil}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="439"
-						y="0"
-						width="81"
-						height="11"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="7"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{natureofappointment.name}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="520"
-						y="0"
-						width="51"
-						height="11"
-						key="staticText-19"
+						key="textField-4"
 						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -465,34 +564,33 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font size="8"/>
 					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="76"  isSplitAllowed="true" >
-				<staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reportdisplay}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="0"
+						x="418"
 						y="0"
-						width="571"
-						height="76"
-						key="staticText-20"
-						positionType="Float"/>
+						width="54"
+						height="11"
+						key="textField-5"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement textAlignment="Justified">
-						<font size="8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
 					</textElement>
-				<text><![CDATA[          The said job order shall automatically cease upon its expiration as stipulated above, unless renewed. However, services of any or all of the above-named can be terminated prior to the expiration of this Job Order for lack of funds or when their services are no longer needed. Also, no-work/no-pay is strictly implemented.
-          The above-named hereby attests that he/she is not related within the third degree (fourth degree in case of LGU's) of consanguinity or affinity to the: 1) hiring authority and/or 2) representatives of the hiring agency; that he/she has not been previously dismissed from government service for reason of an administrative offense; that he/she has not already reached the compulsory retirement age of sixty five (65). Furthermore, the service rendered hereunder is not considered or will never be accredited as government service. Not to exceed calendar working days.]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{branch.name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
 			</band>
 		</columnFooter>
 		<pageFooter>

@@ -36,6 +36,9 @@
 	<parameter name="ServiceRecordItemList" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="SignatoryGroup" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="LGUADDRESS" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="receiptno" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="receiptdate" isForPrompting="false" class="java.util.Date"/>
+	<parameter name="forretirement" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -128,6 +131,7 @@
 	<field name="person.birthdate" class="java.util.Date"/>
 	<field name="person.birthplace" class="java.lang.String"/>
 	<field name="person.maidenname" class="java.lang.String"/>
+	<field name="serviceretireInfos" class="java.lang.Object"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -260,7 +264,7 @@
 					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Appointment of "+$F{appointmentgroupname}+" - Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Service Record of "+$F{person.name}+" - Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -290,11 +294,11 @@
 						height="27"
 						key="staticText-2"
 						positionType="Float"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.25" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Justified">
 						<font size="8"/>
@@ -306,7 +310,7 @@
 					<reportElement
 						x="0"
 						y="82"
-						width="86"
+						width="102"
 						height="14"
 						key="staticText-3"
 						positionType="Float"/>
@@ -325,7 +329,7 @@
 					<reportElement
 						x="0"
 						y="96"
-						width="86"
+						width="102"
 						height="14"
 						key="staticText-4"
 						positionType="Float"/>
@@ -344,7 +348,7 @@
 					<reportElement
 						x="0"
 						y="110"
-						width="86"
+						width="102"
 						height="14"
 						key="staticText-5"
 						positionType="Float"/>
@@ -361,7 +365,7 @@
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="86"
+						x="102"
 						y="82"
 						width="166"
 						height="14"
@@ -372,9 +376,9 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="86"
+						x="102"
 						y="96"
 						width="166"
 						height="14"
@@ -387,7 +391,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="86"
+						x="102"
 						y="110"
 						width="166"
 						height="14"
@@ -417,7 +421,7 @@
 					</textElement>
 				<text><![CDATA[(If married woman, give maiden name)]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="329"
 						y="96"
@@ -460,7 +464,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="61"  isSplitAllowed="true" >
+			<band height="112"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="-1"
@@ -481,22 +485,22 @@
 					<subreportParameter  name="org.name">
 						<subreportParameterExpression><![CDATA[$F{org.name}]]></subreportParameterExpression>
 					</subreportParameter>
-					<dataSourceExpression><![CDATA[$F{appointmentMemberItems}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[$F{servicerecordInfos}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{ServiceRecordItemList}]]></subreportExpression>
 				</subreport>
 				<staticText>
 					<reportElement
 						x="0"
-						y="36"
+						y="20"
 						width="571"
 						height="15"
-						key="staticText-8"
+						key="staticText-9"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Justified">
 						<font size="8"/>
@@ -504,6 +508,143 @@
 				<text><![CDATA[Issued in compliance with Executive Order No. 54 dated August 10, 1954, and in accordance with circular No. 58, dated August 10
 * This document is not valid if there is any erasure or alteration in it.]]></text>
 				</staticText>
+				<staticText>
+					<reportElement
+						x="329"
+						y="48"
+						width="104"
+						height="15"
+						key="staticText-10"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[CERTIFIED CORRECT:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="350"
+						y="82"
+						width="104"
+						height="15"
+						key="staticText-11"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
+						<font size="8" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[AIDA B. LOVERES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="329"
+						y="93"
+						width="140"
+						height="15"
+						key="staticText-12"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[P.G. Department Head - PHRMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="54"
+						width="79"
+						height="14"
+						key="staticText-13"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
+						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Receipt No.     :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="68"
+						width="79"
+						height="14"
+						key="staticText-14"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
+						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Receipt Date   :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="79"
+						y="68"
+						width="166"
+						height="14"
+						key="textField-10"
+						positionType="Float"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$P{receiptdate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="79"
+						y="54"
+						width="166"
+						height="14"
+						key="textField-11"
+						positionType="Float"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{receiptno}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="35"
+						width="572"
+						height="14"
+						key="textField-12"
+						positionType="Float"/>
+					<box leftPadding="5"></box>
+					<textElement>
+						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{forretirement}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>
@@ -550,7 +691,7 @@
 					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Appointment of "+$F{appointmentgroupname}+" - Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Service Record of "+$F{person.name}+" - Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

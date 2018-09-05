@@ -1,0 +1,15 @@
+<workunit schemaName="hrmis_pds">
+    <invokers>
+        <invoker type="pds:section:open" caption="Service Retire" action="open" index="201" role="PDS_ENCODER"/>
+<!--        <invoker type="formActions" caption="Print Service Record"  
+            action="print"/>
+        <invoker type="formActions" caption="Payment Order"  
+            action="pay"/>-->
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.ServiceRetireController" />
+    <pages>
+        <page  template="tagabukid.hrmis.appointment.views.ServiceRetirePage"/>
+    </pages>
+
+</workunit>

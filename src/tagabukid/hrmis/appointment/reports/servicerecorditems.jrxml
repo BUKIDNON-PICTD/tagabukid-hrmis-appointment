@@ -115,7 +115,7 @@
 	<field name="dateto" class="java.util.Date"/>
 	<field name="employmentstatus.name" class="java.lang.String"/>
 	<field name="branch.name" class="java.lang.String"/>
-	<field name="lawop" class="java.lang.Double"/>
+	<field name="lawop" class="java.lang.String"/>
 	<field name="personnelaction.name" class="java.lang.String"/>
 	<field name="reportdisplay" class="java.lang.String"/>
 
@@ -158,7 +158,7 @@
 						mode="Opaque"
 						x="104"
 						y="22"
-						width="111"
+						width="130"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-8"/>
@@ -176,9 +176,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="309"
+						x="328"
 						y="22"
-						width="67"
+						width="90"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-12"/>
@@ -196,9 +196,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="417"
+						x="472"
 						y="0"
-						width="21"
+						width="28"
 						height="44"
 						backcolor="#99CCFF"
 						key="staticText-13"/>
@@ -216,9 +216,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="438"
+						x="500"
 						y="0"
-						width="81"
+						width="87"
 						height="44"
 						backcolor="#99CCFF"
 						key="staticText-16"/>
@@ -276,9 +276,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="215"
+						x="234"
 						y="22"
-						width="32"
+						width="26"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-23"/>
@@ -296,7 +296,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="247"
+						x="260"
 						y="22"
 						width="45"
 						height="22"
@@ -316,9 +316,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="292"
+						x="305"
 						y="22"
-						width="17"
+						width="23"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-25"/>
@@ -338,7 +338,7 @@
 						mode="Opaque"
 						x="104"
 						y="0"
-						width="205"
+						width="224"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-26"/>
@@ -356,9 +356,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="376"
+						x="418"
 						y="22"
-						width="41"
+						width="54"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-27"/>
@@ -376,9 +376,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="309"
+						x="328"
 						y="0"
-						width="108"
+						width="144"
 						height="22"
 						backcolor="#99CCFF"
 						key="staticText-28"/>
@@ -397,7 +397,7 @@
 		</columnHeader>
 		<detail>
 			<band height="11"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
@@ -414,13 +414,13 @@
 					<textElement verticalAlignment="Middle">
 						<font size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{datefrom}]]></textFieldExpression>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{datefrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="104"
 						y="0"
-						width="111"
+						width="130"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -435,11 +435,11 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{jobposition.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="309"
+						x="328"
 						y="0"
-						width="67"
+						width="90"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -452,13 +452,13 @@
 					<textElement verticalAlignment="Middle">
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$F{org.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{org.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="417"
+						x="472"
 						y="0"
-						width="21"
+						width="28"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -471,13 +471,13 @@
 					<textElement verticalAlignment="Middle">
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectiveuntil}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{lawop}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="438"
+						x="500"
 						y="0"
-						width="81"
+						width="87"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -492,7 +492,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnelaction.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="52"
 						y="0"
@@ -509,13 +509,13 @@
 					<textElement verticalAlignment="Middle">
 						<font size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{dateto}]]></textFieldExpression>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{dateto}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="215"
+						x="234"
 						y="0"
-						width="32"
+						width="26"
 						height="11"
 						key="textField-2"
 						stretchType="RelativeToTallestObject"/>
@@ -525,14 +525,14 @@
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
+					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{employmentstatus.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{employmentstatus.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="247"
+						x="260"
 						y="0"
 						width="45"
 						height="11"
@@ -549,11 +549,11 @@
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{monthlysalary}.setScale(2,RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="292"
+						x="305"
 						y="0"
-						width="17"
+						width="23"
 						height="11"
 						key="textField-4"
 						stretchType="RelativeToTallestObject"/>
@@ -563,16 +563,16 @@
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
+					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{reportdisplay}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reportdisplay}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="376"
+						x="418"
 						y="0"
-						width="41"
+						width="54"
 						height="11"
 						key="textField-5"
 						stretchType="RelativeToTallestObject"/>
@@ -585,7 +585,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$F{branch.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{branch.name}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

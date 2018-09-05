@@ -3,7 +3,11 @@
         <invoker type="pds:section:open" caption="Service Record" action="open" index="200" role="PDS_ENCODER"/>
         <invoker type="formActions" caption="Print Service Record"  
             action="print"/>
+        <invoker type="formActions" caption="Payment Order"  
+            action="pay" visibleWhen="#{allowPaymentOrder==true}"/>
+
     </invokers>
+    
     
     <code class="tagabukid.hrmis.appointment.models.ServiceRecordController" />
     <pages>

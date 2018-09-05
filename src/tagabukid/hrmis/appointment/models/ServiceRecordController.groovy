@@ -39,6 +39,19 @@ class  ServiceRecordController extends CrudFormModel {
         return false
     }
     
+    boolean isAllowPaymentOrder(){
+        def t = srSvc.findReceiptData(entity)
+        
+        //MsgBox.alert(t)
+        
+        if (t>90){
+            return true
+        }else{
+            return false
+        }
+        
+    }
+    
     def reportdisplay = ['HOURLY', 'DAILY', 'WEEKLY', 'MONTHLY', 'ANNUALLY', 'HONORARIUM', 'NA'];
 
     def selectedserviceRecordItem
@@ -102,6 +115,15 @@ class  ServiceRecordController extends CrudFormModel {
                 }
 
             }
+            
+            if(col == 'jobposition'){
+                if (o.jobposition.name!='OTHERS'){
+                    o.otherjobposition = o.jobposition.name
+                }
+                if (o.jobposition.name == 'OTHERS'){
+                    o.otherjobposition = null
+                }
+            }
             o.recordlog.dateoflastupdate = dtSvc.getServerDate();
             o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
@@ -120,5 +142,30 @@ class  ServiceRecordController extends CrudFormModel {
         op.target = 'self';
         return op;
     }
+    
+    def pay() {
+//        def op = Inv.lookupOpener( "payorder:open", [entity: entity] );
+//        op.target = 'self';
+//        return op;
+
+        def po = [
+            
+            permobjid : entity.objid,
+            name : entity.person.name,
+            address : (entity.residential.address.city ? entity.residential.address.city : entity.residential.address.municipality),
+        ]
+
+        def x = srSvc.paymentorderSupport(po)
+        
+        MsgBox.alert "Payment Order Number : " + x.ordernum
+    }
+    
+//    def retire() {
+//        def op = Inv.lookupOpener( "servicerecordretire:open", [entity: entity] );
+//        op.target = 'self';
+//        return op;
+//
+//       // srSvc.retireEmployee(entity.objid)
+//    }
 
 }
