@@ -177,7 +177,6 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextField7.setCaptionWidth(135);
         xTextField7.setName("entity.bloodtype"); // NOI18N
         xTextField7.setPreferredSize(new java.awt.Dimension(150, 20));
-        xTextField7.setRequired(true);
         xFormPanel1.add(xTextField7);
 
         xTextField8.setCaption("GSIS ID No.");

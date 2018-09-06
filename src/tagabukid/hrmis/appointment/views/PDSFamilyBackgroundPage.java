@@ -195,6 +195,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable2.setHandler("familyBackgroundchildnameHandler");
+        xDataTable2.setImmediate(true);
         xDataTable2.setName("selectedchildInfo"); // NOI18N
         xHorizontalPanel2.add(xDataTable2);
 
@@ -445,7 +446,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable15.setHandler("applicantMOTHERsidegrandFATHERItemHandler");
-        xDataTable15.setId("applicantMOTHERsidegrandFATHERItemHandler");
         xDataTable15.setName("selectedApplicantMOTHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel20.add(xDataTable15);
 
@@ -496,7 +496,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable16.setHandler("applicantMOTHERsidegrandMOTHERItemHandler");
-        xDataTable16.setId("applicantMOTHERsidegrandMOTHERItemHandler");
         xDataTable16.setName("selectedApplicantMOTHERsidegrandMOTHERItem"); // NOI18N
         xHorizontalPanel21.add(xDataTable16);
 
@@ -574,7 +573,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable17.setHandler("applicantFATHERsidegrandFATHERItemHandler");
-        xDataTable17.setId("applicantFATHERsidegrandFATHERItemHandler");
         xDataTable17.setName("selectedApplicantFATHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel23.add(xDataTable17);
 
@@ -625,7 +623,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable18.setHandler("applicantFATHERsidegrandMOTHERItemHandler");
-        xDataTable18.setId("applicantFATHERsidegrandMOTHERItemHandler");
         xDataTable18.setName("selectedApplicantFATHERsidegrandMOTHERItem"); // NOI18N
         xHorizontalPanel24.add(xDataTable18);
 
@@ -1021,7 +1018,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable11.setHandler("spouseMOTHERsidegrandFATHERItemHandler");
-        xDataTable11.setId("spouseMOTHERsidegrandFATHERItemHandler");
         xDataTable11.setName("selectedSpouseMOTHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel14.add(xDataTable11);
 
@@ -1072,7 +1068,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable12.setHandler("spouseMOTHERsidegrandMOTHERItemHandler");
-        xDataTable12.setId("spouseMOTHERsidegrandMOTHERItemHandler");
         xDataTable12.setName("selectedSpouseMOTHERsidegrandMOTHERItem"); // NOI18N
         xHorizontalPanel15.add(xDataTable12);
 
@@ -1150,7 +1145,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable13.setHandler("spouseFATHERsidegrandFATHERItemHandler");
-        xDataTable13.setId("spouseFATHERsidegrandFATHERItemHandler");
         xDataTable13.setName("selectedSpouseFATHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel17.add(xDataTable13);
 
@@ -1201,7 +1195,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable14.setHandler("spouseFATHERsidegrandMOTHERItemHandler");
-        xDataTable14.setId("spouseFATHERsidegrandMOTHERItemHandler");
         xDataTable14.setName("selectedSpouseFATHERsidegrandMOTHERItem"); // NOI18N
         xHorizontalPanel18.add(xDataTable14);
 
@@ -1342,7 +1335,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.rcp.control.XDataTable xDataTable1;
-    private com.rameses.rcp.control.XDataTable xDataTable10;
     private com.rameses.rcp.control.XDataTable xDataTable11;
     private com.rameses.rcp.control.XDataTable xDataTable12;
     private com.rameses.rcp.control.XDataTable xDataTable13;
@@ -1356,13 +1348,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XDataTable xDataTable4;
     private com.rameses.rcp.control.XDataTable xDataTable5;
     private com.rameses.rcp.control.XDataTable xDataTable6;
-    private com.rameses.rcp.control.XDataTable xDataTable7;
-    private com.rameses.rcp.control.XDataTable xDataTable8;
-    private com.rameses.rcp.control.XDataTable xDataTable9;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel10;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel11;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel12;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel13;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel14;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel15;
@@ -1380,20 +1366,13 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel4;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel5;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel6;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel7;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel8;
-    private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel9;
     private com.rameses.rcp.control.XPanel xPanel1;
-    private com.rameses.rcp.control.XPanel xPanel10;
-    private com.rameses.rcp.control.XPanel xPanel11;
     private com.rameses.rcp.control.XPanel xPanel12;
     private com.rameses.rcp.control.XPanel xPanel13;
     private com.rameses.rcp.control.XPanel xPanel14;
     private com.rameses.rcp.control.XPanel xPanel2;
     private com.rameses.rcp.control.XPanel xPanel3;
     private com.rameses.rcp.control.XPanel xPanel4;
-    private com.rameses.rcp.control.XPanel xPanel5;
-    private com.rameses.rcp.control.XPanel xPanel6;
     private com.rameses.rcp.control.XPanel xPanel7;
     private com.rameses.rcp.control.XPanel xPanel8;
     private com.rameses.rcp.control.XPanel xPanel9;

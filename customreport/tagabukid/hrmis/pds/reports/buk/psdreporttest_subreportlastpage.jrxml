@@ -278,7 +278,7 @@
 						key="staticText-13"/>
 					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="2.0"/>
+					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement>
@@ -302,7 +302,7 @@
 						height="108"
 						key="staticText-14"/>
 					<box>					<topPen lineWidth="0.0"/>
-					<bottomPen lineWidth="2.0"/>
+					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement>

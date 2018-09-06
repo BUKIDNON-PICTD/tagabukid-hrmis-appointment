@@ -47,14 +47,14 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="62"  isSplitAllowed="true" >
+			<band height="72"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="215"
-						y="18"
+						y="23"
 						width="164"
-						height="44"
+						height="49"
 						backcolor="#E7E7E7"
 						key="staticText-1"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -72,9 +72,9 @@
 					<reportElement
 						mode="Opaque"
 						x="530"
-						y="18"
+						y="23"
 						width="42"
-						height="44"
+						height="49"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
 					<box>					<pen lineWidth="2.0" lineColor="#000000"/>
@@ -94,9 +94,9 @@ SERVICE
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="18"
+						y="23"
 						width="92"
-						height="29"
+						height="32"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -104,19 +104,19 @@ SERVICE
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[INCLUSIVE DATE
-(mm/dd/yyyy)]]></text>
+				<text><![CDATA[28.          INCLUSIVE DATE
+                (mm/dd/yyyy)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="46"
-						y="47"
+						y="56"
 						width="46"
-						height="15"
+						height="16"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
 					<box>					<topPen lineWidth="1.0"/>
@@ -133,9 +133,9 @@ SERVICE
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="47"
+						y="56"
 						width="46"
-						height="15"
+						height="16"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
 					<box>					<topPen lineWidth="1.0"/>
@@ -152,9 +152,9 @@ SERVICE
 					<reportElement
 						mode="Opaque"
 						x="92"
-						y="18"
+						y="23"
 						width="123"
-						height="44"
+						height="49"
 						backcolor="#E7E7E7"
 						key="staticText-6"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -172,9 +172,9 @@ SERVICE
 					<reportElement
 						mode="Opaque"
 						x="418"
-						y="18"
+						y="23"
 						width="58"
-						height="44"
+						height="49"
 						backcolor="#E7E7E7"
 						key="staticText-7"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -195,9 +195,9 @@ INCREMENT]]></text>
 					<reportElement
 						mode="Opaque"
 						x="476"
-						y="18"
+						y="23"
 						width="54"
-						height="44"
+						height="49"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -214,9 +214,9 @@ INCREMENT]]></text>
 					<reportElement
 						mode="Opaque"
 						x="379"
-						y="18"
+						y="23"
 						width="39"
-						height="44"
+						height="49"
 						backcolor="#E7E7E7"
 						key="staticText-9"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -235,13 +235,13 @@ INCREMENT]]></text>
 						x="0"
 						y="-1"
 						width="572"
-						height="18"
+						height="15"
 						forecolor="#FFFFFF"
 						backcolor="#999999"
 						key="staticText-10"/>
 					<box>					<topPen lineWidth="2.0" lineColor="#000000"/>
 					<leftPen lineWidth="2.0" lineColor="#000000"/>
-					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
 					<rightPen lineWidth="2.0" lineColor="#000000"/>
 </box>
 					<textElement verticalAlignment="Middle">
@@ -249,16 +249,36 @@ INCREMENT]]></text>
 					</textElement>
 				<text><![CDATA[ V. WORK EXPERIENCE]]></text>
 				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="13"
+						width="572"
+						height="10"
+						forecolor="#FFFFFF"
+						backcolor="#999999"
+						key="staticText-11"/>
+					<box>					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineColor="#000000"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-BoldOblique" size="7" isBold="true" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[(Include private employment. Start from your recent work) Description of duties should be indicated in the attached Work Experieance sheet.]]></text>
+				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="18"  isSplitAllowed="true" >
+			<band height="22"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
 						width="46"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -274,7 +294,7 @@ INCREMENT]]></text>
 						x="46"
 						y="0"
 						width="46"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -289,7 +309,7 @@ INCREMENT]]></text>
 						x="92"
 						y="0"
 						width="123"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -304,7 +324,7 @@ INCREMENT]]></text>
 						x="215"
 						y="0"
 						width="164"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -319,7 +339,7 @@ INCREMENT]]></text>
 						x="379"
 						y="0"
 						width="39"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -334,7 +354,7 @@ INCREMENT]]></text>
 						x="418"
 						y="0"
 						width="58"
-						height="18"
+						height="22"
 						key="textField-1"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -342,14 +362,14 @@ INCREMENT]]></text>
 					<textElement verticalAlignment="Middle">
 						<font size="5"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{jobposition.name} +" "+ $F{paygradestepincrement.grade} + "-" + $F{paygradestepincrement.step}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{jobposition.name} != null ? $F{jobposition.name} +" "+ $F{paygradestepincrement.grade} + "-" + $F{paygradestepincrement.step} : " " )]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="476"
 						y="0"
 						width="54"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -364,7 +384,7 @@ INCREMENT]]></text>
 						x="530"
 						y="0"
 						width="42"
-						height="18"
+						height="22"
 						key="textField-2"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
