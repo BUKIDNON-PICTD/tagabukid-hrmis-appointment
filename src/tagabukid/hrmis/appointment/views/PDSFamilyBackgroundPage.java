@@ -404,7 +404,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable15.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "mothersidegrandfather"}
-                , new Object[]{"caption", "First Name"}
+                , new Object[]{"caption", "Last Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -414,11 +414,11 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.mothersidegrandfather.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.mothersidegrandfather.lastname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "mothersidegrandfather.middlename"}
-                , new Object[]{"caption", "Middle Name"}
+                new Object[]{"name", "mothersidegrandfather.firstname"}
+                , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -431,8 +431,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "mothersidegrandfather.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "mothersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -449,11 +449,25 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable15.setName("selectedApplicantMOTHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel20.add(xDataTable15);
 
-        xHorizontalPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+        xHorizontalPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola)"));
 
         xDataTable16.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "mothersidegrandmother"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.mothersidegrandmother.lastname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "mothersidegrandmother.firstname"}
                 , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -464,7 +478,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.mothersidegrandmother.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "mothersidegrandmother.middlename"}
@@ -481,8 +495,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "mothersidegrandmother.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -531,7 +545,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable17.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "fathersidegrandfather"}
-                , new Object[]{"caption", "First Name"}
+                , new Object[]{"caption", "Last Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -540,12 +554,12 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"nullWhenEmpty", true}
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
-                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandfather.firstname}", "lookup:individualwide")}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandfather.lastname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "fathersidegrandfather.middlename"}
-                , new Object[]{"caption", "Middle Name"}
+                new Object[]{"name", "fathersidegrandfather.firstname"}
+                , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -558,8 +572,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "fathersidegrandfather.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "fathersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -576,12 +590,12 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable17.setName("selectedApplicantFATHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel23.add(xDataTable17);
 
-        xHorizontalPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+        xHorizontalPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola)"));
 
         xDataTable18.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "fathersidegrandmother"}
-                , new Object[]{"caption", "First Name"}
+                , new Object[]{"caption", "Last Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -592,6 +606,20 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandmother.firstname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "fathersidegrandmother.firstname"}
+                , new Object[]{"caption", "First Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "fathersidegrandmother.middlename"}
@@ -608,8 +636,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "fathersidegrandmother.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -846,7 +874,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable5.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousefather"}
-                , new Object[]{"caption", "First Name"}
+                , new Object[]{"caption", "Last Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -856,11 +884,11 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefather.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefather.lastname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousefather.middlename"}
-                , new Object[]{"caption", "Middle Name"}
+                new Object[]{"name", "spousefather.firstname"}
+                , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -873,8 +901,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousefather.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "spousefather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -892,11 +920,25 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable5.setName("selectedSpouseFatherItem"); // NOI18N
         xHorizontalPanel5.add(xDataTable5);
 
-        xHorizontalPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Mother's Maiden Name (Spouse)"));
+        xHorizontalPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Mother's Name (Spouse)"));
 
         xDataTable6.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousemother"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemother.lastname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemother.firstname"}
                 , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -907,7 +949,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemother.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousemother.middlename"}
@@ -924,8 +966,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousemother.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -976,7 +1018,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable11.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousemothersidegrandfather"}
-                , new Object[]{"caption", "First Name"}
+                , new Object[]{"caption", "Last Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -986,11 +1028,11 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemothersidegrandfather.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemothersidegrandfather.lastname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousemothersidegrandfather.middlename"}
-                , new Object[]{"caption", "Middle Name"}
+                new Object[]{"name", "spousemothersidegrandfather.firstname"}
+                , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -1003,8 +1045,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousemothersidegrandfather.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "spousemothersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -1021,11 +1063,25 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable11.setName("selectedSpouseMOTHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel14.add(xDataTable11);
 
-        xHorizontalPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+        xHorizontalPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola)"));
 
         xDataTable12.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousemothersidegrandmother"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemothersidegrandmother.lastname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousemothersidegrandmother.firstname"}
                 , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -1036,7 +1092,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousemothersidegrandmother.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler(null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousemothersidegrandmother.middlename"}
@@ -1053,8 +1109,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousemothersidegrandmother.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -1103,7 +1159,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable13.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousefathersidegrandfather"}
-                , new Object[]{"caption", "First Name"}
+                , new Object[]{"caption", "Last Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -1113,11 +1169,11 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefathersidegrandfather.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefathersidegrandfather.lastname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousefathersidegrandfather.middlename"}
-                , new Object[]{"caption", "Middle Name"}
+                new Object[]{"name", "spousefathersidegrandfather.firstname"}
+                , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -1130,8 +1186,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousefathersidegrandfather.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "spousefathersidegrandfather.middlename"}
+                , new Object[]{"caption", "Middle Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}
@@ -1148,11 +1204,25 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
         xDataTable13.setName("selectedSpouseFATHERsidegrandFATHERItem"); // NOI18N
         xHorizontalPanel17.add(xDataTable13);
 
-        xHorizontalPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola) Maiden Name"));
+        xHorizontalPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Grandmother (Lola)"));
 
         xDataTable14.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousefathersidegrandmother"}
+                , new Object[]{"caption", "Last Name"}
+                , new Object[]{"width", 100}
+                , new Object[]{"minWidth", 0}
+                , new Object[]{"maxWidth", 0}
+                , new Object[]{"required", true}
+                , new Object[]{"resizable", true}
+                , new Object[]{"nullWhenEmpty", true}
+                , new Object[]{"editable", true}
+                , new Object[]{"editableWhen", null}
+                , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefathersidegrandmother.lastname}", "lookup:individualwide")}
+            }),
+            new com.rameses.rcp.common.Column(new Object[]{
+                new Object[]{"name", "spousefathersidegrandmother.firstname"}
                 , new Object[]{"caption", "First Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -1163,7 +1233,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.spousefathersidegrandmother.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "spousefathersidegrandmother.middlename"}
@@ -1180,8 +1250,8 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "spousefathersidegrandmother.lastname"}
-                , new Object[]{"caption", "Last Name"}
+                new Object[]{"name", "maidenname"}
+                , new Object[]{"caption", "Maiden Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
                 , new Object[]{"maxWidth", 0}

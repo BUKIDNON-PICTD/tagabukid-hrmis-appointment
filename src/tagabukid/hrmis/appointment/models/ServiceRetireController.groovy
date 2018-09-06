@@ -8,7 +8,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  ServiceRecordController extends CrudFormModel {
+class  ServiceRetireController extends CrudFormModel {
     @Binding
     def binding;
 
@@ -18,10 +18,10 @@ class  ServiceRecordController extends CrudFormModel {
     @Service("DateService")
     def dtSvc
     
-    @Service("ServiceRecordService")
+    @Service("ServiceRetireService")
     def srSvc
 
-    String title = "Service Record";
+    String title = "Retire";
     
      boolean isCreateAllowed(){
         return false
@@ -39,22 +39,9 @@ class  ServiceRecordController extends CrudFormModel {
         return false
     }
     
-    boolean isAllowPaymentOrder(){
-        def t = srSvc.findReceiptData(entity)
-        
-        //MsgBox.alert(t)
-        
-        if (t>90){
-            return true
-        }else{
-            return false
-        }
-        
-    }
-    
-    def reportdisplay = ['HOURLY', 'DAILY', 'WEEKLY', 'MONTHLY', 'ANNUALLY', 'HONORARIUM', 'NA'];
+    //def reportdisplay = ['HOURLY', 'DAILY', 'WEEKLY', 'MONTHLY', 'ANNUALLY', 'HONORARIUM', 'NA'];
 
-    def selectedserviceRecordItem
+    def selectedserviceRetireItem
     public void beforeOpen() {
        entity.putAll(parententity);
     }
@@ -67,8 +54,8 @@ class  ServiceRecordController extends CrudFormModel {
         }
     }
     
-    def serviceRecordItemHandler = [
-        fetchList: { entity?.servicerecordInfos.sort{it.datefrom} },
+    def serviceRetireItemHandler = [
+        fetchList: { entity?.serviceretireInfos.sort{it.datefrom} },
         createItem : {
            return[
                recordlog : [
@@ -83,9 +70,9 @@ class  ServiceRecordController extends CrudFormModel {
         },
         onRemoveItem : {
             if (MsgBox.confirm('Delete item?')){                
-                entity.servicerecordInfos.remove(it)
-                persistenceSvc.removeEntity([_schemaname:'hrmis_servicerecords',objid:it.objid])
-                serviceRecordItemHandler?.load();
+                entity.serviceretireInfos.remove(it)
+                persistenceSvc.removeEntity([_schemaname:'hrmis_serviceretire',objid:it.objid])
+                serviceRetireItemHandler?.load();
                 return true;
             }
             return false;
@@ -96,40 +83,31 @@ class  ServiceRecordController extends CrudFormModel {
 //                o.wage = o.salaryscheduleitem.amount
 //                //o.wage = o.salaryscheduleitem.amount / 22
 //            }
-
-            if(col == 'compensationtype'){
-                if (o.compensationtype.name == 'HOURLY'){
-                    o.monthlysalary = o.wage * 8 * 22
-                }
-                if (o.compensationtype.name == 'DAILY'){
-                    o.monthlysalary = o.wage * 22
-                }
-                if (o.compensationtype.name == 'WEEKLY'){
-                    o.monthlysalary = (o.wage * 22) / 4
-                }
-                if (o.compensationtype.name == 'MONTHLY' || o.compensationtype.name == 'HONORARIUM' || o.compensationtype.name == 'NA'){
-                    o.monthlysalary = o.wage
-                }
-                if (o.compensationtype.name == 'ANNUALLY'){
-                    o.monthlysalary = o.wage / 12
-                }
-
-            }
-            
-            if(col == 'jobposition'){
-                if (o.jobposition.name!='OTHERS'){
-                    o.otherjobposition = o.jobposition.name
-                }
-                if (o.jobposition.name == 'OTHERS'){
-                    o.otherjobposition = null
-                }
-            }
+//
+//            if(col == 'compensationtype'){
+//                if (o.compensationtype.name == 'HOURLY'){
+//                    o.monthlysalary = o.wage * 8 * 22
+//                }
+//                if (o.compensationtype.name == 'DAILY'){
+//                    o.monthlysalary = o.wage * 22
+//                }
+//                if (o.compensationtype.name == 'WEEKLY'){
+//                    o.monthlysalary = (o.wage * 22) / 4
+//                }
+//                if (o.compensationtype.name == 'MONTHLY' || o.compensationtype.name == 'HONORARIUM' || o.compensationtype.name == 'NA'){
+//                    o.monthlysalary = o.wage
+//                }
+//                if (o.compensationtype.name == 'ANNUALLY'){
+//                    o.monthlysalary = o.wage / 12
+//                }
+//
+//            }
             o.recordlog.dateoflastupdate = dtSvc.getServerDate();
             o.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
        },
         onAddItem : {
-            entity.servicerecordInfos.add(it);
+            entity.serviceretireInfos.add(it);
         },
         validate:{li->
             //def item=li.item;
@@ -137,28 +115,28 @@ class  ServiceRecordController extends CrudFormModel {
         }
     ] as EditorListModel
     
-    def print() {
-        def op = Inv.lookupOpener( "test:servicerecord", [entity: entity] );
-        op.target = 'self';
-        return op;
-    }
-    
-    def pay() {
-//        def op = Inv.lookupOpener( "payorder:open", [entity: entity] );
+//    def print() {
+//        def op = Inv.lookupOpener( "test:servicerecord", [entity: entity] );
 //        op.target = 'self';
 //        return op;
-
-        def po = [
-            
-            permobjid : entity.objid,
-            name : entity.person.name,
-            address : (entity.residential.address.city ? entity.residential.address.city : entity.residential.address.municipality),
-        ]
-
-        def x = srSvc.paymentorderSupport(po)
-        
-        MsgBox.alert "Payment Order Number : " + x.ordernum
-    }
+//    }
+    
+//    def pay() {
+////        def op = Inv.lookupOpener( "payorder:open", [entity: entity] );
+////        op.target = 'self';
+////        return op;
+//
+//        def po = [
+//            
+//            permobjid : entity.objid,
+//            name : entity.person.name,
+//            address : (entity.residential.address.city ? entity.residential.address.city : entity.residential.address.municipality),
+//        ]
+//
+//        def x = srSvc.paymentorderSupport(po)
+//        
+//        MsgBox.alert "Payment Order Number : " + x.ordernum
+//    }
     
 //    def retire() {
 //        def op = Inv.lookupOpener( "servicerecordretire:open", [entity: entity] );

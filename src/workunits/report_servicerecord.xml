@@ -21,7 +21,9 @@
         String title = 'Service Record'
         String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/'
         String reportName = REPORT_PATH + 'servicerecord.jasper';
-        def data 
+        def data
+        
+         def servicetypes = ['Government', 'Non-Government', 'Both'] 
 
 
         void buildReportData(entity, asyncHandler){
@@ -38,7 +40,8 @@
                 return [
                     new FormControl( "checkbox", [caption:'For Retirement', name:'entity.forretirement', preferredSize:'[0,21]', captionWidth:150]),
                     new FormControl( "checkbox", [caption:'For GSIS', name:'entity.forgsis', preferredSize:'[0,21]', captionWidth:150]),
-
+                    new FormControl( "combo", [caption:'Service Type', name:'entity.servicetype', items:'servicetypes', preferredSize:'[0,21]', captionWidth:150]),
+                  
                 ]    
             },
        ] as FormPanelModel;
