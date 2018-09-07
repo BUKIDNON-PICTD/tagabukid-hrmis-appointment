@@ -44,14 +44,14 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="53"  isSplitAllowed="true" >
+			<band height="55"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="160"
 						y="19"
 						width="56"
-						height="34"
+						height="36"
 						backcolor="#E7E7E7"
 						key="staticText-1"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -71,7 +71,7 @@
 						x="291"
 						y="19"
 						width="185"
-						height="34"
+						height="36"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -90,7 +90,7 @@
 						x="476"
 						y="19"
 						width="96"
-						height="13"
+						height="15"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -106,9 +106,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="536"
-						y="32"
-						width="36"
+						x="530"
+						y="34"
+						width="42"
 						height="21"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
@@ -127,8 +127,8 @@ Validity]]></text>
 					<reportElement
 						mode="Opaque"
 						x="476"
-						y="32"
-						width="60"
+						y="34"
+						width="54"
 						height="21"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
@@ -148,7 +148,7 @@ Validity]]></text>
 						x="0"
 						y="19"
 						width="160"
-						height="34"
+						height="36"
 						backcolor="#E7E7E7"
 						key="staticText-6"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -156,12 +156,12 @@ Validity]]></text>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="0.0"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[CAREER SERVICE/ RA 1080 (BOARD/ BAR) UNDER
-SPECIAL LAWS/ CES/ CSEE
-BARANGAY ELIGIBILITY / DRIVER'S LICENSE]]></text>
+				<text><![CDATA[27.    CAREER SERVICE/ RA 1080 (BOARD/ BAR) UNDER
+                    SPECIAL LAWS/ CES/ CSEE
+          BARANGAY ELIGIBILITY / DRIVER'S LICENSE]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -169,7 +169,7 @@ BARANGAY ELIGIBILITY / DRIVER'S LICENSE]]></text>
 						x="216"
 						y="19"
 						width="75"
-						height="34"
+						height="36"
 						backcolor="#E7E7E7"
 						key="staticText-7"/>
 					<box>					<topPen lineWidth="0.0"/>
@@ -207,13 +207,13 @@ CONFERMENT]]></text>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="18"  isSplitAllowed="true" >
+			<band height="22"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
 						width="160"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
@@ -221,7 +221,7 @@ CONFERMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{eligibility.name}]]></textFieldExpression>
 				</textField>
@@ -230,28 +230,28 @@ CONFERMENT]]></text>
 						x="160"
 						y="0"
 						width="56"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{rating}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="216"
 						y="0"
 						width="75"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{examinationdate}]]></textFieldExpression>
 				</textField>
@@ -260,13 +260,13 @@ CONFERMENT]]></text>
 						x="291"
 						y="0"
 						width="185"
-						height="18"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{examinationaddress}]]></textFieldExpression>
 				</textField>
@@ -274,29 +274,29 @@ CONFERMENT]]></text>
 					<reportElement
 						x="476"
 						y="0"
-						width="60"
-						height="18"
+						width="54"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{licenseno}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="536"
+						x="530"
 						y="0"
-						width="36"
-						height="18"
+						width="42"
+						height="22"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{validitydate}]]></textFieldExpression>
 				</textField>

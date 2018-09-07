@@ -24,6 +24,13 @@
 	<import value="net.sf.jasperreports.engine.data.*" />
 
 
+	<field name="training.name" class="java.lang.String"/>
+	<field name="attendedfrom" class="java.util.Date"/>
+	<field name="attendedto" class="java.util.Date"/>
+	<field name="numberofhours" class="java.math.BigDecimal"/>
+	<field name="training.trainingsubcategory.name" class="java.lang.String"/>
+	<field name="sponsor" class="java.lang.String"/>
+
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>
@@ -159,7 +166,7 @@ ATTENDANCE
 						key="staticText-7"/>
 					<box>					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
-					<rightPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="5"/>
@@ -171,13 +178,13 @@ ATTENDANCE
 						mode="Opaque"
 						x="358"
 						y="23"
-						width="47"
+						width="51"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
 					<box>					<leftPen lineWidth="1.0" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
-					<rightPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="5"/>
@@ -190,9 +197,9 @@ Technical/etc)]]></text>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="405"
+						x="409"
 						y="23"
-						width="167"
+						width="163"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-9"/>
@@ -209,7 +216,98 @@ Technical/etc)]]></text>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="172"  isSplitAllowed="true" >
+			<band height="18"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="213"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{training.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="213"
+						y="0"
+						width="43"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{attendedfrom}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="256"
+						y="0"
+						width="43"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{attendedto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="299"
+						y="0"
+						width="59"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{numberofhours}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="358"
+						y="0"
+						width="51"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{training.trainingsubcategory.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="409"
+						y="0"
+						width="163"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{sponsor}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>

@@ -93,14 +93,14 @@
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
-					<box>					<leftPen lineWidth="2.0"/>
+					<box leftPadding="2">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="5"/>
 					</textElement>
-				<text><![CDATA[TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS
-(Write in full)]]></text>
+				<text><![CDATA[30.      TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS
+                                                                                     (Write in full)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

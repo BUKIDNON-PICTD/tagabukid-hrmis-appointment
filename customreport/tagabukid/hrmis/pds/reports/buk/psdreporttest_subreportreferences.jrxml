@@ -23,10 +23,9 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
+	<parameter name="REFERENCE_LIST" isForPrompting="false" class="java.lang.Object"/>
 
-	<field name="reference.name" class="java.lang.String"/>
-	<field name="reference.address.text" class="java.lang.String"/>
-	<field name="reference.phoneno" class="java.lang.String"/>
+	<field name="referencedata" class="java.lang.Object"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -41,16 +40,39 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="226"  isSplitAllowed="true" >
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="250"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="1"
+						width="572"
+						height="249"
+						key="staticText-14"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="55"
+						y="25"
 						width="434"
 						height="57"
 						backcolor="#E7E7E7"
-						key="staticText-1"/>
+						key="staticText-1"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="2.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="2.0"/>
@@ -67,9 +89,9 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="470"
+						x="462"
 						y="24"
-						width="75"
+						width="87"
 						height="96"
 						key="staticText-2"/>
 					<box>					<topPen lineWidth="1.5"/>
@@ -95,86 +117,10 @@ in not acceptable]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						mode="Opaque"
-						x="0"
-						y="0"
-						width="434"
-						height="18"
-						backcolor="#E7E7E7"
-						key="staticText-3"/>
-					<box>					<topPen lineWidth="2.0"/>
-					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="2.0"/>
-					<rightPen lineWidth="2.0"/>
-</box>
-					<textElement verticalAlignment="Middle" lineSpacing="Single">
-						<font size="8" isUnderline="false" isStrikeThrough="false" />
-					</textElement>
-				<text><![CDATA[ 40. REFERENCES (Person not related by consanguinity or affinity to applicant /appointee)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="0"
-						y="19"
-						width="220"
-						height="18"
-						backcolor="#E7E7E7"
-						key="staticText-4"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
-						<font size="6" isUnderline="false" isStrikeThrough="false" />
-					</textElement>
-				<text><![CDATA[NAME]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="220"
-						y="19"
-						width="148"
-						height="18"
-						backcolor="#E7E7E7"
-						key="staticText-5"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
-						<font size="6" isUnderline="false" isStrikeThrough="false" />
-					</textElement>
-				<text><![CDATA[ADDRESS]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="368"
-						y="19"
-						width="66"
-						height="18"
-						backcolor="#E7E7E7"
-						key="staticText-6"/>
-					<box>					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="2.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
-						<font size="6" isUnderline="false" isStrikeThrough="false" />
-					</textElement>
-				<text><![CDATA[TEL NO.]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="446"
-						y="143"
-						width="111"
-						height="82"
+						x="445"
+						y="148"
+						width="119"
+						height="96"
 						key="staticText-7"/>
 					<box>					<topPen lineWidth="1.5"/>
 					<leftPen lineWidth="1.5"/>
@@ -189,9 +135,9 @@ in not acceptable]]></text>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="446"
-						y="215"
-						width="111"
+						x="445"
+						y="233"
+						width="119"
 						height="11"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
@@ -207,11 +153,12 @@ in not acceptable]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="6"
-						y="132"
+						x="7"
+						y="91"
 						width="197"
 						height="82"
-						key="staticText-9"/>
+						key="staticText-9"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="1.5"/>
 					<leftPen lineWidth="1.5"/>
 					<bottomPen lineWidth="1.5"/>
@@ -224,11 +171,12 @@ in not acceptable]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="220"
-						y="132"
+						x="221"
+						y="91"
 						width="213"
 						height="82"
-						key="staticText-10"/>
+						key="staticText-10"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="1.5"/>
 					<leftPen lineWidth="1.5"/>
 					<bottomPen lineWidth="1.5"/>
@@ -242,12 +190,13 @@ in not acceptable]]></text>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="220"
-						y="183"
+						x="221"
+						y="142"
 						width="213"
 						height="11"
 						backcolor="#E7E7E7"
-						key="staticText-11"/>
+						key="staticText-11"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.5"/>
 					<bottomPen lineWidth="1.5"/>
@@ -261,12 +210,13 @@ in not acceptable]]></text>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="220"
-						y="203"
+						x="221"
+						y="162"
 						width="213"
 						height="11"
 						backcolor="#E7E7E7"
-						key="staticText-12"/>
+						key="staticText-12"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.5"/>
 					<bottomPen lineWidth="1.5"/>
@@ -280,12 +230,13 @@ in not acceptable]]></text>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="6"
-						y="132"
+						x="7"
+						y="91"
 						width="197"
 						height="22"
 						backcolor="#E7E7E7"
-						key="staticText-13"/>
+						key="staticText-13"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.5"/>
 					<bottomPen lineWidth="1.5"/>
@@ -297,56 +248,17 @@ in not acceptable]]></text>
 				<text><![CDATA[Govenment Issued ID (i.e.Passport, GSIS, SSS, PRC, Driver`s License, etc.)
 PLEASE INDICATE ID Number and Date of Issuance]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
-						y="37"
-						width="220"
-						height="18"
-						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.name}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="220"
-						y="37"
-						width="148"
-						height="18"
-						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.address.text}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="368"
-						y="37"
-						width="66"
-						height="18"
-						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="2.0"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.phoneno}]]></textFieldExpression>
-				</textField>
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="0"  isSplitAllowed="true" >
+						y="2"
+						width="434"
+						height="23"
+						key="subreport-1"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{referencedata}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{REFERENCE_LIST}]]></subreportExpression>
+				</subreport>
 			</band>
 		</detail>
 		<columnFooter>

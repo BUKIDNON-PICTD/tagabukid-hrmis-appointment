@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="psdreporttest_subreportotherinfo"
+		 name="psdreporttest_subreportoath"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -37,87 +37,60 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="44"  isSplitAllowed="true" >
+			<band height="113"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
-						mode="Opaque"
 						x="0"
-						y="0"
+						y="4"
 						width="572"
-						height="18"
-						forecolor="#FFFFFF"
-						backcolor="#999999"
+						height="21"
 						key="staticText-1"/>
-					<box>					<topPen lineWidth="2.0" lineColor="#000000"/>
-					<leftPen lineWidth="2.0" lineColor="#000000"/>
-					<bottomPen lineWidth="2.0" lineColor="#000000"/>
-					<rightPen lineWidth="2.0" lineColor="#000000"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Segoe UI" pdfFontName="Helvetica-BoldOblique" size="8" isBold="true" isItalic="true"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font size="8"/>
 					</textElement>
-				<text><![CDATA[ VIII. OTHER INFORMATION]]></text>
+				<text><![CDATA[SUBSCRIBED AND SWORN to before me this ________________ , affiant exhibiting his/her validly issued government ID as indicated above.]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						mode="Opaque"
-						x="405"
-						y="19"
-						width="167"
-						height="25"
-						backcolor="#E7E7E7"
+						x="187"
+						y="25"
+						width="195"
+						height="82"
 						key="staticText-2"/>
-					<box>					<leftPen lineWidth="1.0" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineColor="#000000"/>
-					<rightPen lineWidth="2.0" lineColor="#000000"/>
+					<box>					<topPen lineWidth="1.5"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="5"/>
 					</textElement>
-				<text><![CDATA[MEMBERSHIP IN ASSOCIATION/ORGANIZATION
-(Write in full)]]></text>
+				<text><![CDATA[]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="157"
-						y="19"
-						width="248"
-						height="25"
+						x="187"
+						y="91"
+						width="195"
+						height="15"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
-					<box>					<leftPen lineWidth="1.0" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineColor="#000000"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
-				<text><![CDATA[NON-ACADEMIC DISTINCTIONS / RECOGNITION
-(Write in full)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="0"
-						y="19"
-						width="157"
-						height="25"
-						backcolor="#E7E7E7"
-						key="staticText-4"/>
-					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineColor="#000000"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="6"/>
-					</textElement>
-				<text><![CDATA[SPECIAL SKILLS and HOBBIES]]></text>
+				<text><![CDATA[Person Administering Oath]]></text>
 				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="71"  isSplitAllowed="true" >
+			<band height="0"  isSplitAllowed="true" >
 			</band>
 		</detail>
 		<columnFooter>
