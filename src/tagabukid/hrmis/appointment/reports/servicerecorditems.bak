@@ -198,7 +198,7 @@
 						mode="Opaque"
 						x="472"
 						y="0"
-						width="21"
+						width="28"
 						height="44"
 						backcolor="#99CCFF"
 						key="staticText-13"/>
@@ -216,9 +216,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="493"
+						x="500"
 						y="0"
-						width="94"
+						width="87"
 						height="44"
 						backcolor="#99CCFF"
 						key="staticText-16"/>
@@ -458,7 +458,7 @@
 					<reportElement
 						x="472"
 						y="0"
-						width="21"
+						width="28"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -475,9 +475,9 @@
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="493"
+						x="500"
 						y="0"
-						width="94"
+						width="87"
 						height="11"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
