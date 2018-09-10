@@ -639,7 +639,7 @@
 						height="14"
 						key="textField-12"
 						positionType="Float"/>
-					<box></box>
+					<box leftPadding="5"></box>
 					<textElement>
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
