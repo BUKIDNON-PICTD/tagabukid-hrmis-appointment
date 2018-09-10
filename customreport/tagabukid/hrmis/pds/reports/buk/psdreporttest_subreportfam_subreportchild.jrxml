@@ -6,9 +6,9 @@
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
-		 pageWidth="266"
+		 pageWidth="256"
 		 pageHeight="802"
-		 columnWidth="266"
+		 columnWidth="256"
 		 columnSpacing="0"
 		 leftMargin="0"
 		 rightMargin="0"
@@ -48,6 +48,24 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
+						x="159"
+						y="0"
+						width="97"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-2"/>
+					<box>					<topPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Yu Gothic UI" size="6"/>
+					</textElement>
+				<text><![CDATA[DATE OF BIRTH (mm/dd/yyyy)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
 						x="0"
 						y="0"
 						width="159"
@@ -63,29 +81,11 @@
 					</textElement>
 				<text><![CDATA[ 23. NAME of CHILDREN (Write full name and list all)]]></text>
 				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="159"
-						y="0"
-						width="107"
-						height="18"
-						backcolor="#E7E7E7"
-						key="staticText-2"/>
-					<box>					<topPen lineWidth="2.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="2.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Yu Gothic UI" size="6"/>
-					</textElement>
-				<text><![CDATA[DATE OF BIRTH (mm/dd/yyyy)]]></text>
-				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
 			<band height="18"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
@@ -99,25 +99,25 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font/>
+						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{child.firstname} + " " + $F{child.middlename} + " " + $F{child.lastname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{child.firstname}!= null ?$F{child.firstname} + " " + $F{child.middlename} + " " + $F{child.lastname} : " ")]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="159"
 						y="0"
-						width="107"
+						width="97"
 						height="18"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{child.birthdate}]]></textFieldExpression>
 				</textField>

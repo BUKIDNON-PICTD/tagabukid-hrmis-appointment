@@ -36,6 +36,13 @@
             getFormControls: {
                 return [
                     new FormControl( "lookup", [caption:'Signatory Group', name:'entity.signatorygroup', preferredSize:'[0,21]', handler:'signatorygroup:lookup',expression:'#{item.signatorygroupname}', captionWidth:150]),
+                    new FormControl( "checkbox", [caption:'Appointment Forms', name:'entity.appointmentforms', preferredSize:'100,19' , captionWidth:300]),
+                    new FormControl( "checkbox", [caption:'Plantilla of Casual Appointment', name:'entity.casualappointment', preferredSize:'100,19' , captionWidth:300]),
+                    new FormControl( "checkbox", [caption:'Personal Data Sheet', name:'entity.pds', preferredSize:'100,19' , captionWidth:300]),
+                    new FormControl( "checkbox", [caption:'Original Copy of Authenticated Certificate of Eligiblity/Rating/License', name:'entity.eligibility', preferredSize:'100,19' , captionWidth:300]),
+                    new FormControl( "checkbox", [caption:'Position Description Form', name:'entity.positiondescription', preferredSize:'100,19' , captionWidth:300]),
+                    new FormControl( "checkbox", [caption:'Oath of Office', name:'entity.oathofoffice', preferredSize:'100,19' , captionWidth:300]),
+                    new FormControl( "checkbox", [caption:'Certificate of Assumption of Duty', name:'entity.assumptionofduty', preferredSize:'100,19' , captionWidth:300]),
                 ]    
             },
        ] as FormPanelModel;

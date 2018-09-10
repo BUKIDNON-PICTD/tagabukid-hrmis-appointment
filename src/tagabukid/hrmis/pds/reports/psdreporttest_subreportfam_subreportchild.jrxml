@@ -58,10 +58,10 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[NAME of CHILDREN (Write full name and list all)]]></text>
+				<text><![CDATA[ 23. NAME of CHILDREN (Write full name and list all)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

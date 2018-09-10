@@ -175,7 +175,7 @@
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5"></box>
 					<textElement textAlignment="Justified" verticalAlignment="Top">
-						<font fontName="Tahoma"/>
+						<font fontName="Tahoma" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{signatoryheading}]]></textFieldExpression>
 				</textField>

@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="psdreporttest_subreportlastpage_subreportreferences"
+		 name="psdreporttest_subreportreferences"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -24,6 +24,10 @@
 	<import value="net.sf.jasperreports.engine.data.*" />
 
 
+	<field name="reference.name" class="java.lang.String"/>
+	<field name="reference.address.text" class="java.lang.String"/>
+	<field name="reference.phoneno" class="java.lang.String"/>
+
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>
@@ -37,12 +41,12 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="243"  isSplitAllowed="true" >
+			<band height="226"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="62"
+						y="55"
 						width="434"
 						height="57"
 						backcolor="#E7E7E7"
@@ -239,7 +243,7 @@ in not acceptable]]></text>
 					<reportElement
 						mode="Opaque"
 						x="220"
-						y="175"
+						y="183"
 						width="213"
 						height="11"
 						backcolor="#E7E7E7"
@@ -279,7 +283,7 @@ in not acceptable]]></text>
 						x="6"
 						y="132"
 						width="197"
-						height="17"
+						height="22"
 						backcolor="#E7E7E7"
 						key="staticText-13"/>
 					<box>					<topPen lineWidth="1.0"/>
@@ -293,6 +297,52 @@ in not acceptable]]></text>
 				<text><![CDATA[Govenment Issued ID (i.e.Passport, GSIS, SSS, PRC, Driver`s License, etc.)
 PLEASE INDICATE ID Number and Date of Issuance]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="37"
+						width="220"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="220"
+						y="37"
+						width="148"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.address.text}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="368"
+						y="37"
+						width="66"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{reference.phoneno}]]></textFieldExpression>
+				</textField>
 			</band>
 		</columnHeader>
 		<detail>

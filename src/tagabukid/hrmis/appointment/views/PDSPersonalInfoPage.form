@@ -18,7 +18,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane4" pref="376" max="32767" attributes="0"/>
+              <Component id="jScrollPane4" pref="1025" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -27,7 +27,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane4" pref="274" max="32767" attributes="0"/>
+              <Component id="jScrollPane4" pref="547" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -60,14 +60,14 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="xHorizontalPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="xHorizontalPanel1" min="-2" pref="455" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="xHorizontalPanel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="xHorizontalPanel2" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="440" max="32767" attributes="0"/>
+                      <EmptySpace pref="410" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -100,6 +100,17 @@
                         <Property name="required" type="boolean" value="true"/>
                       </Properties>
                     </Component>
+                    <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="entity.residentialzipcode"/>
+                        <Property name="caption" type="java.lang.String" value="ZIP Code"/>
+                        <Property name="captionWidth" type="int" value="150"/>
+                        <Property name="name" type="java.lang.String" value="entity.residentialzipcode" noResource="true"/>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[0, 20]"/>
+                        </Property>
+                      </Properties>
+                    </Component>
                     <Component class="com.rameses.enterprise.components.EntityAddress" name="entityAddress2">
                       <Properties>
                         <Property name="caption" type="java.lang.String" value="Permanent Address"/>
@@ -116,7 +127,17 @@
                         <Property name="required" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="com.rameses.enterprise.views.AddressComponent" name="addressComponent2">
+                    <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="entity.permanentzipcode"/>
+                        <Property name="caption" type="java.lang.String" value="ZIP Code"/>
+                        <Property name="captionFontStyle" type="java.lang.String" value=""/>
+                        <Property name="captionWidth" type="int" value="150"/>
+                        <Property name="name" type="java.lang.String" value="entity.permanentzipcode" noResource="true"/>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[0, 20]"/>
+                        </Property>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -141,6 +162,17 @@
                         <Property name="name" type="java.lang.String" value="entity.person" noResource="true"/>
                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[0, 20]"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="entity.maidenname"/>
+                        <Property name="caption" type="java.lang.String" value="Maiden Name:"/>
+                        <Property name="captionWidth" type="int" value="135"/>
+                        <Property name="name" type="java.lang.String" value="entity.maidenname" noResource="true"/>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[300, 20]"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -245,7 +277,6 @@
                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[150, 20]"/>
                         </Property>
-                        <Property name="required" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                     <Component class="com.rameses.rcp.control.XTextField" name="xTextField8">

@@ -67,14 +67,14 @@
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
-					<box>					<leftPen lineWidth="2.0"/>
+					<box leftPadding="2">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="6"/>
 					</textElement>
-				<text><![CDATA[NAME & ADDRESS OF ORGANIZATION
-(Write in full)]]></text>
+				<text><![CDATA[29.                   NAME & ADDRESS OF ORGANIZATION
+                                         (Write in full)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
