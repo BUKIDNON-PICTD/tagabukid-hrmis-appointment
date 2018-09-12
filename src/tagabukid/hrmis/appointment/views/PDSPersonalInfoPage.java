@@ -74,13 +74,11 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         entityAddress1.setCaption("Residential Address");
         entityAddress1.setCaptionWidth(150);
-        entityAddress1.setDepends(new String[] {"entity.copyresidential"});
         entityAddress1.setName("entity.residential.address"); // NOI18N
         entityAddress1.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress1.setRequired(true);
         xFormPanel3.add(entityAddress1);
 
-        xTextField2.setText("entity.residentialzipcode");
         xTextField2.setCaption("ZIP Code");
         xTextField2.setCaptionWidth(150);
         xTextField2.setName("entity.residentialzipcode"); // NOI18N
@@ -89,7 +87,6 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         entityAddress2.setCaption("Permanent Address");
         entityAddress2.setCaptionWidth(150);
-        entityAddress2.setDepends(new String[] {"entity.copypermanent"});
         entityAddress2.setName("entity.permanent.address"); // NOI18N
         entityAddress2.setPreferredSize(new java.awt.Dimension(0, 86));
         entityAddress2.setRequired(true);

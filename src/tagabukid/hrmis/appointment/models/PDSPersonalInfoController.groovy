@@ -28,10 +28,15 @@ class  PDSPersonalInfoController extends CrudFormModel{
     @PropertyChangeListener
     def listener = [
         'entity.person' : { 
-            
-            maincontroller.reloadphoto(entity.person);
+          
+            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
+            entity.residential.address = entity.person.address
+            entity.permanent.address = entity.person.address
        
+            binding.refresh();
+            maincontroller.reloadphoto(entity.person);
         }
+        
     ]
     
     boolean isCreateAllowed(){
@@ -81,19 +86,33 @@ class  PDSPersonalInfoController extends CrudFormModel{
     }
 
 //    def getResidentialAddress(){
-//        if (entity.copyresidential){
-//         //    println "TEST"
+////        if (entity.copyresidential){
+////            entity.residential.address = entity.person.address
+////            return entity.residential.address
+////        }
+//        if (entity.residential){
+//            entity.residential.address.text = svc.formatAddress(entity.residential.address,"\n")
+//        }else{
+//            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
 //            entity.residential.address = entity.person.address
-//            return entity.residential.address
 //        }
+//        
 //        return entity.residential.address
 //    }
 //    def getPermanentAddress(){
-//        if (entity.copypermanent){
-//             // println "TESTTEST"
-//            entity.permanent.address = entity.residential.address
-//            return entity.permanent.address
+////        if (entity.copypermanent){
+////            entity.permanent.address = entity.residential.address
+////            return entity.permanent.address
+////        }
+//        
+//        if (entity.permanent.address != entity.person.address){
+//            entity.permanent.address.text = svc.formatAddress(entity.permanent.address,"\n")
+//        }else{
+//            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
+//            entity.permanent.address = entity.person.address
 //        }
+//        
+//        println entity.permanent.address
 //        return entity.permanent.address
 //    }
 //    def getPhoto() {
