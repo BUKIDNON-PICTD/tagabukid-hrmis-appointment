@@ -169,7 +169,7 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="entity.maidenname"/>
                         <Property name="caption" type="java.lang.String" value="Maiden Name"/>
-                        <Property name="captionWidth" type="int" value="136"/>
+                        <Property name="captionWidth" type="int" value="135"/>
                         <Property name="name" type="java.lang.String" value="entity.maidenname" noResource="true"/>
                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[300, 20]"/>
