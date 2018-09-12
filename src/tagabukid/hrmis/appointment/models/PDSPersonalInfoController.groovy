@@ -32,7 +32,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
             entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
             entity.residential.address = entity.person.address
             entity.permanent.address = entity.person.address
-            println entity.residential.address
+       
             binding.refresh();
             maincontroller.reloadphoto(entity.person);
         }
