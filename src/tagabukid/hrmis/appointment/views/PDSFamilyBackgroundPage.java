@@ -195,7 +195,6 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable2.setHandler("familyBackgroundchildnameHandler");
-        xDataTable2.setImmediate(true);
         xDataTable2.setName("selectedchildInfo"); // NOI18N
         xHorizontalPanel2.add(xDataTable2);
 

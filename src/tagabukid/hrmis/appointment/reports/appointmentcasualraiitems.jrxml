@@ -377,7 +377,7 @@
 						mode="Opaque"
 						x="714"
 						y="23"
-						width="43"
+						width="53"
 						height="42"
 						backcolor="#99CCFF"
 						key="staticText-17"/>
@@ -395,9 +395,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="757"
+						x="767"
 						y="23"
-						width="51"
+						width="41"
 						height="42"
 						backcolor="#99CCFF"
 						key="staticText-18"/>
@@ -408,7 +408,7 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
 					</textElement>
 				<text><![CDATA[DATE OF ACTION
 (mm/dd/yyyy)]]></text>
@@ -659,7 +659,7 @@ indicate period of publication
 						mode="Opaque"
 						x="714"
 						y="65"
-						width="43"
+						width="53"
 						height="8"
 						backcolor="#FFFFFF"
 						key="staticText-37"/>
@@ -677,9 +677,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="757"
+						x="767"
 						y="65"
-						width="51"
+						width="41"
 						height="8"
 						backcolor="#FFFFFF"
 						key="staticText-38"/>
@@ -1112,9 +1112,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="757"
+						x="767"
 						y="0"
-						width="51"
+						width="41"
 						height="11"
 						key="staticText-19"
 						stretchType="RelativeToTallestObject"/>
@@ -1230,7 +1230,7 @@ indicate period of publication
 						mode="Opaque"
 						x="714"
 						y="0"
-						width="43"
+						width="53"
 						height="11"
 						key="staticText-31"
 						stretchType="RelativeToTallestObject"/>

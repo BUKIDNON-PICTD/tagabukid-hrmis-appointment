@@ -4,7 +4,7 @@ import com.rameses.osiris2.client.*;
 import com.rameses.osiris2.common.*;
 import com.rameses.osiris2.reports.*;
 
-class ReportAppointmentCasualController extends ReportController {
+class ReportAppointmentCasualController extends com.rameses.etracs.shared.ReportController {
     
     @Service("TagabukidHRMISAppointmentCasualReportService")
     def svc;
@@ -13,12 +13,27 @@ class ReportAppointmentCasualController extends ReportController {
     final String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/';
     String reportName = REPORT_PATH + 'appointmentcasual.jasper';
     def data
+    def pagelist
+    def page
+    def initReport() {
+        println "TEST"
+        pagelist = svc.getPages( entity ); 
+        page = (pagelist ? pagelist.first() : null); 
+        return preview();
+    }
     
     def getReportData() { 
         entity._schemaname = 'hrmis_appointmentcasual'
-        data = svc.getAppointmentCasualById(entity);
+        data = svc.getAppointmentCasualById(entity,page,pagelist);
+//        data.reportdata.appointment.appointmentitems = data.reportdata.appointment.appointmentitems[page.start..page.end]
         return data.reportdata
     } 
+    
+    void setPage( o ) {
+        this.page = o; 
+        preview(); 
+        binding.refresh() 
+    }
 
 //    void buildReportData(entity, asyncHandler){
 //        svc.getSIByIPCRId(entity, asyncHandler)
