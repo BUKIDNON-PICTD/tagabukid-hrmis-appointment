@@ -36,6 +36,8 @@ class  PDSEducationalInfoController extends CrudFormModel {
         return false
     }
 
+    def levels = ["ELEMENTARY", "SECONDARY" ,"VOCATIONAL / TRADE COURSE" , "COLLEGE", "GRADUATE STUDIES"];
+
     def selectedEducationalInfo
     public void beforeOpen() {
        entity.putAll(parententity);
@@ -47,6 +49,9 @@ class  PDSEducationalInfoController extends CrudFormModel {
             
         }
     }
+
+   
+
     // public void beforeSave(o){
     //     entity.educationalInfos.each{
     //         it.school._schemaname='master_tblinstitution'

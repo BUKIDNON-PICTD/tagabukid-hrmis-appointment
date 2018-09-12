@@ -345,7 +345,7 @@ INCREMENT]]></text>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="8"/>
+						<font size="6"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{monthlysalary}]]></textFieldExpression>
 				</textField>

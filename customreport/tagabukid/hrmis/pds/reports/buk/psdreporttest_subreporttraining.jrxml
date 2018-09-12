@@ -233,7 +233,7 @@ Technical/etc)]]></text>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{training.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="213"
 						y="0"
@@ -248,7 +248,7 @@ Technical/etc)]]></text>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{attendedfrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="256"
 						y="0"

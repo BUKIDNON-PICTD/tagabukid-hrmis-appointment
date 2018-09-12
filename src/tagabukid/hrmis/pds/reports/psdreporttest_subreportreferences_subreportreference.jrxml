@@ -41,17 +41,17 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="37"  isSplitAllowed="true" >
+			<band height="40"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="0"
 						width="434"
-						height="18"
+						height="22"
 						backcolor="#E7E7E7"
 						key="staticText-1"/>
-					<box>					<topPen lineWidth="2.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="2.0"/>
 					<rightPen lineWidth="2.0"/>
@@ -65,15 +65,15 @@
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="19"
+						y="22"
 						width="220"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
-					<box>					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
 						<font size="6" isUnderline="false" isStrikeThrough="false" />
@@ -84,7 +84,7 @@
 					<reportElement
 						mode="Opaque"
 						x="220"
-						y="19"
+						y="22"
 						width="148"
 						height="18"
 						backcolor="#E7E7E7"
@@ -103,7 +103,7 @@
 					<reportElement
 						mode="Opaque"
 						x="368"
-						y="19"
+						y="22"
 						width="66"
 						height="18"
 						backcolor="#E7E7E7"
@@ -129,7 +129,8 @@
 						width="220"
 						height="18"
 						key="textField-1"/>
-					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
