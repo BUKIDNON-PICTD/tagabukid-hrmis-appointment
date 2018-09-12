@@ -80,8 +80,8 @@ class  PDSPersonalInfoController extends CrudFormModel{
     def loadpersonalinfo(){
         entity = persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.objid])
         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
-//        residentialAddress = entity.residential.address
-//        permanentAddress = entity.permanent.address
+    //    residentialAddress = entity.residential.address
+    //    permanentAddress = entity.permanent.address
     }
 
 //    def getResidentialAddress(){
