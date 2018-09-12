@@ -93,14 +93,14 @@
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
-					<box>					<leftPen lineWidth="2.0"/>
+					<box leftPadding="2">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="5"/>
 					</textElement>
-				<text><![CDATA[TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS
-(Write in full)]]></text>
+				<text><![CDATA[30.      TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS
+                                                                                     (Write in full)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -233,7 +233,7 @@ Technical/etc)]]></text>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{training.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="213"
 						y="0"
@@ -248,7 +248,7 @@ Technical/etc)]]></text>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{attendedfrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="256"
 						y="0"

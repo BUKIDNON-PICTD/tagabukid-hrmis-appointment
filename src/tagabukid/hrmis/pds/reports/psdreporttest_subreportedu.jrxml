@@ -52,7 +52,7 @@
 						mode="Opaque"
 						x="0"
 						y="20"
-						width="76"
+						width="84"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-1"/>
@@ -71,9 +71,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="76"
+						x="84"
 						y="20"
-						width="136"
+						width="138"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
@@ -93,7 +93,7 @@
 						mode="Opaque"
 						x="428"
 						y="20"
-						width="46"
+						width="48"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
@@ -110,9 +110,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="212"
+						x="222"
 						y="20"
-						width="136"
+						width="126"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
@@ -130,9 +130,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="474"
+						x="476"
 						y="20"
-						width="48"
+						width="46"
 						height="38"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
@@ -252,7 +252,7 @@
 						mode="Opaque"
 						x="0"
 						y="0"
-						width="76"
+						width="84"
 						height="19"
 						backcolor="#E7E7E7"
 						key="textField"/>
@@ -268,9 +268,9 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="0"
-						width="136"
+						width="138"
 						height="19"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
@@ -279,15 +279,15 @@
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{school.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="212"
+						x="222"
 						y="0"
-						width="136"
+						width="126"
 						height="19"
 						key="textField"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
@@ -296,7 +296,7 @@
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{school.address.addressdetails}]]></textFieldExpression>
 				</textField>
@@ -313,7 +313,7 @@
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{from}]]></textFieldExpression>
 				</textField>
@@ -330,30 +330,13 @@
 					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{to}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="428"
-						y="0"
-						width="46"
-						height="19"
-						key="textField"/>
-					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{levelunitearned}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="474"
 						y="0"
 						width="48"
 						height="19"
@@ -364,7 +347,24 @@
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{levelunitearned}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="476"
+						y="0"
+						width="46"
+						height="19"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{yeargraduated}]]></textFieldExpression>
 				</textField>
@@ -381,7 +381,7 @@
 					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
-						<font size="6"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{scholarshipacademic}]]></textFieldExpression>
 				</textField>

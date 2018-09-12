@@ -54,7 +54,7 @@ public class PDSEducationalBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.ComboBoxColumnHandler("levels", null, null)}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "school.name"}
@@ -183,6 +183,7 @@ public class PDSEducationalBackgroundPage extends javax.swing.JPanel {
             })
         });
         xDataTable1.setHandler("educationalBackgroundItemListHandler");
+        xDataTable1.setItems("");
         xDataTable1.setName("selectedEducationalInfo"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
 
