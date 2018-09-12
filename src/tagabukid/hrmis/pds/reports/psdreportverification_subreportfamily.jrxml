@@ -6,12 +6,12 @@
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
-		 pageWidth="162"
+		 pageWidth="168"
 		 pageHeight="1008"
 		 columnWidth="162"
 		 columnSpacing="0"
-		 leftMargin="0"
-		 rightMargin="0"
+		 leftMargin="3"
+		 rightMargin="3"
 		 topMargin="0"
 		 bottomMargin="0"
 		 whenNoDataType="NoPages"
@@ -92,7 +92,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{father.father.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -108,8 +108,10 @@
 						width="162"
 						height="18"
 						key="textField-2"
-						isRemoveLineWhenBlank="true"/>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean($F{mother.mother.lastname} != null)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -128,7 +130,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spouse.spouse.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -147,7 +149,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{fathergrandmother.fathersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -166,7 +168,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{fathergrandfather.fathersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -185,7 +187,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{mothergrandmother.mothersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -204,7 +206,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{mothergrandfather.mothersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -223,7 +225,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousefather.spousefather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -242,7 +244,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousefathergrandmother.spousefathersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -261,7 +263,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousefathergrandfather.spousefathersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -280,7 +282,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandmother.spousemothersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -297,9 +299,10 @@
 						height="18"
 						key="textField-13"
 						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandfather.spousemothersidegrandfather.lastname} != null)]]></printWhenExpression>
+							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandfather.spousemothersidegrandfather.lastname} != null)
+]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -318,7 +321,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousemother.spousemother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box leftPadding="5">					<topPen lineWidth="0.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>

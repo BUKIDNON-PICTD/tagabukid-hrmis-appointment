@@ -41,6 +41,23 @@
 				<staticText>
 					<reportElement
 						x="0"
+						y="1"
+						width="572"
+						height="112"
+						key="staticText-4"
+						positionType="Float"/>
+					<box>					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
 						y="4"
 						width="572"
 						height="21"

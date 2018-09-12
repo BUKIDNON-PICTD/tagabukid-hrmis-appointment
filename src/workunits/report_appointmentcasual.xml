@@ -1,6 +1,9 @@
 <workunit extends="wtemplates/SimpleReportController.xml" >
     <invokers>
-        <invoker type="hrmis_appointmentcasual:form:formActions" caption="Preview Appointment" action="preview" index="1" visibleWhen="#{allowPreviewAppointment==true}" role="APPOINTMENT_REPORTS"/>        
+        <invoker type="hrmis_appointmentcasual:form:formActions" caption="Preview Appointment" action="initReport" target="self" index="1" visibleWhen="#{allowPreviewAppointment==true}" role="APPOINTMENT_REPORTS"/>        
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.ReportAppointmentCasualController" />
+    <pages>
+        <page name="preview" template="tagabukid.hrmis.appointment.views.ReportCasualAppointment" />
+    </pages>
 </workunit>
