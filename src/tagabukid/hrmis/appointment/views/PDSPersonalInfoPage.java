@@ -118,7 +118,7 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
 
         xTextField1.setText("entity.maidenname");
         xTextField1.setCaption("Maiden Name");
-        xTextField1.setCaptionWidth(135);
+        xTextField1.setCaptionWidth(136);
         xTextField1.setName("entity.maidenname"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField1);
