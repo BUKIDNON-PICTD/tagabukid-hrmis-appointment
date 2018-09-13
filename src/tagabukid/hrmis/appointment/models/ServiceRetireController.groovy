@@ -20,6 +20,9 @@ class  ServiceRetireController extends CrudFormModel {
     
     @Service("ServiceRetireService")
     def srSvc
+    
+    @Caller
+    def caller
 
     String title = "Retire";
     
@@ -108,6 +111,21 @@ class  ServiceRetireController extends CrudFormModel {
        },
         onAddItem : {
             entity.serviceretireInfos.add(it);
+            def sr = entity?.servicerecordInfos.sort{it.datefrom}            
+            def lastitem = sr.last()
+            
+//            println lastitem
+//            
+//            def editlast = [
+//                
+            lastitem.separationtype.objid = entity.serviceretireInfos.separationtype.objid[0]
+            lastitem.separationdate = entity.serviceretireInfos.datefrom[0]
+            lastitem.dateto = entity.serviceretireInfos.datefrom[0].previous()
+//            ]
+            //entity?.servicerecordInfos.find{it.lastitem.objidputAll(lastitem)
+            
+            //println lastitem
+           
         },
         validate:{li->
             //def item=li.item;

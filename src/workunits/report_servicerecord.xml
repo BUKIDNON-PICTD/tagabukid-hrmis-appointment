@@ -39,8 +39,9 @@
             getFormControls: {
                 return [
                     new FormControl( "checkbox", [caption:'For Retirement', name:'entity.forretirement', preferredSize:'[0,21]', captionWidth:150]),
-                    new FormControl( "checkbox", [caption:'For GSIS', name:'entity.forgsis', preferredSize:'[0,21]', captionWidth:150]),
-                    new FormControl( "combo", [caption:'Service Type', name:'entity.servicetype', items:'servicetypes', preferredSize:'[0,21]', captionWidth:150]),
+                    //new FormControl( "checkbox", [caption:'For GSIS', name:'entity.forgsis', preferredSize:'[0,21]', captionWidth:150]),
+                    new FormControl( "text", [caption:'Purpose', name:'entity.forpurpose', preferredSize:'[0,50]', captionWidth:150]),
+                   // new FormControl( "combo", [caption:'Service Type', name:'entity.servicetype', items:'servicetypes', preferredSize:'[0,21]', captionWidth:150]),
                   
                 ]    
             },

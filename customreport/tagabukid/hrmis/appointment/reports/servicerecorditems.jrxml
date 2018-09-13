@@ -118,6 +118,7 @@
 	<field name="lawop" class="java.lang.String"/>
 	<field name="personnelaction.name" class="java.lang.String"/>
 	<field name="reportdisplay" class="java.lang.String"/>
+	<field name="datestr" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -499,7 +500,9 @@
 						width="52"
 						height="11"
 						key="textField-1"
-						stretchType="RelativeToTallestObject"/>
+						stretchType="RelativeToTallestObject">
+							<printWhenExpression><![CDATA[new Boolean($F{dateto} != null)]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -586,6 +589,27 @@
 						<font size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{branch.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="52"
+						y="0"
+						width="52"
+						height="11"
+						key="textField-6"
+						stretchType="RelativeToTallestObject">
+							<printWhenExpression><![CDATA[new Boolean($F{dateto} == null)]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{datestr}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>
