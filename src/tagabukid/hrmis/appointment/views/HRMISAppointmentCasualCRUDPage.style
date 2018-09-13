@@ -6,6 +6,10 @@
     enabled:true;
 }
 
+"entity.*"[entity.state == 'CUTOFF']{
+    enabled:false;
+}
+
 "selectedAppointmentItem|selectedSignatoryItem"[true==true]{
     enabled:false;
 }
