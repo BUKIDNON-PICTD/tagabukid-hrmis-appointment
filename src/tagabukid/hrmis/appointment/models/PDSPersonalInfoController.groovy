@@ -25,16 +25,25 @@ class  PDSPersonalInfoController extends CrudFormModel{
     def parententity
     def svc
     
+    @Service('QueryService') 
+    def querySvc; 
+    
     @PropertyChangeListener
     def listener = [
         'entity.person' : { 
-          
-            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
-            entity.residential.address = entity.person.address
-            entity.permanent.address = entity.person.address
        
-            binding.refresh();
-            maincontroller.reloadphoto(entity.person);
+            if(!isPDSExist()){
+                entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
+                entity.residential.address = entity.person.address
+                entity.permanent.address = entity.person.address
+                
+                binding.refresh();
+                maincontroller.reloadphoto(entity.person);
+            }else{
+                 MsgBox.err("PDS for " + entity.person.name + " already exist.");
+                 entity.person = [:]
+                 binding.refresh();
+            }
         }
         
     ]
@@ -59,10 +68,10 @@ class  PDSPersonalInfoController extends CrudFormModel{
     }
         
     public void afterOpen(){
-       loadpersonalinfo()
+        loadpersonalinfo()
     }
     public void beforeSave(o){
-         if (o == 'create'){
+        if (o == 'create'){
             entity.pdsno = svc.getPDSNo();
             entity.versionno = svc.getVersionNo();
             
@@ -81,41 +90,47 @@ class  PDSPersonalInfoController extends CrudFormModel{
     def loadpersonalinfo(){
         entity = persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.objid])
         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
-    //    residentialAddress = entity.residential.address
-    //    permanentAddress = entity.permanent.address
+        //    residentialAddress = entity.residential.address
+        //    permanentAddress = entity.permanent.address
     }
-
-//    def getResidentialAddress(){
-////        if (entity.copyresidential){
-////            entity.residential.address = entity.person.address
-////            return entity.residential.address
-////        }
-//        if (entity.residential){
-//            entity.residential.address.text = svc.formatAddress(entity.residential.address,"\n")
-//        }else{
-//            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
-//            entity.residential.address = entity.person.address
-//        }
-//        
-//        return entity.residential.address
-//    }
-//    def getPermanentAddress(){
-////        if (entity.copypermanent){
-////            entity.permanent.address = entity.residential.address
-////            return entity.permanent.address
-////        }
-//        
-//        if (entity.permanent.address != entity.person.address){
-//            entity.permanent.address.text = svc.formatAddress(entity.permanent.address,"\n")
-//        }else{
-//            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
-//            entity.permanent.address = entity.person.address
-//        }
-//        
-//        println entity.permanent.address
-//        return entity.permanent.address
-//    }
-//    def getPhoto() {
-//        return selectedItem.benificiary.photo;
-//    }
+    
+    def isPDSExist(){
+        def p = [_schemaname: 'hrmis_pds'];
+        def params = [:]
+        p.findBy = [person_objid:entity.person.objid];
+        return querySvc.findFirst(p)
+    }
+    //    def getResidentialAddress(){
+    ////        if (entity.copyresidential){
+    ////            entity.residential.address = entity.person.address
+    ////            return entity.residential.address
+    ////        }
+    //        if (entity.residential){
+    //            entity.residential.address.text = svc.formatAddress(entity.residential.address,"\n")
+    //        }else{
+    //            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
+    //            entity.residential.address = entity.person.address
+    //        }
+    //        
+    //        return entity.residential.address
+    //    }
+    //    def getPermanentAddress(){
+    ////        if (entity.copypermanent){
+    ////            entity.permanent.address = entity.residential.address
+    ////            return entity.permanent.address
+    ////        }
+    //        
+    //        if (entity.permanent.address != entity.person.address){
+    //            entity.permanent.address.text = svc.formatAddress(entity.permanent.address,"\n")
+    //        }else{
+    //            entity.person.address.text = svc.formatAddress(entity.person.address,"\n")
+    //            entity.permanent.address = entity.person.address
+    //        }
+    //        
+    //        println entity.permanent.address
+    //        return entity.permanent.address
+    //    }
+    //    def getPhoto() {
+    //        return selectedItem.benificiary.photo;
+    //    }
 }
