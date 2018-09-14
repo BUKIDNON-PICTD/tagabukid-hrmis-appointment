@@ -39,6 +39,7 @@
 	<parameter name="receiptno" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="receiptdate" isForPrompting="false" class="java.util.Date"/>
 	<parameter name="forretirement" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="forpurpose" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -389,7 +390,7 @@
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{person.birthdate}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="102"
 						y="110"
@@ -464,7 +465,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="112"  isSplitAllowed="true" >
+			<band height="129"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="-1"
@@ -511,7 +512,7 @@
 				<staticText>
 					<reportElement
 						x="329"
-						y="48"
+						y="67"
 						width="104"
 						height="15"
 						key="staticText-10"
@@ -530,7 +531,7 @@
 				<staticText>
 					<reportElement
 						x="350"
-						y="82"
+						y="101"
 						width="104"
 						height="15"
 						key="staticText-11"
@@ -549,7 +550,7 @@
 				<staticText>
 					<reportElement
 						x="329"
-						y="93"
+						y="112"
 						width="140"
 						height="15"
 						key="staticText-12"
@@ -568,7 +569,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="54"
+						y="73"
 						width="79"
 						height="14"
 						key="staticText-13"
@@ -587,7 +588,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="68"
+						y="87"
 						width="79"
 						height="14"
 						key="staticText-14"
@@ -606,7 +607,7 @@
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="79"
-						y="68"
+						y="87"
 						width="166"
 						height="14"
 						key="textField-10"
@@ -620,7 +621,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="79"
-						y="54"
+						y="73"
 						width="166"
 						height="14"
 						key="textField-11"
@@ -644,6 +645,20 @@
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{forretirement}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="49"
+						width="572"
+						height="14"
+						key="textField-13"
+						positionType="Float"/>
+					<box leftPadding="5"></box>
+					<textElement>
+						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{forpurpose}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>
