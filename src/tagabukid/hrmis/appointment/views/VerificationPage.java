@@ -43,6 +43,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
+        xTextField29 = new com.rameses.rcp.control.XTextField();
         xSeparator1 = new com.rameses.rcp.control.XSeparator();
         xFormPanel4 = new com.rameses.rcp.control.XFormPanel();
         xLookupField3 = new com.rameses.rcp.control.XLookupField();
@@ -52,6 +53,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField4 = new com.rameses.rcp.control.XLookupField();
         xTextField8 = new com.rameses.rcp.control.XTextField();
         xTextField7 = new com.rameses.rcp.control.XTextField();
+        xTextField30 = new com.rameses.rcp.control.XTextField();
         xFormPanel6 = new com.rameses.rcp.control.XFormPanel();
         xLookupField5 = new com.rameses.rcp.control.XLookupField();
         xTextField9 = new com.rameses.rcp.control.XTextField();
@@ -61,6 +63,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField6 = new com.rameses.rcp.control.XLookupField();
         xTextField11 = new com.rameses.rcp.control.XTextField();
         xTextField12 = new com.rameses.rcp.control.XTextField();
+        xTextField31 = new com.rameses.rcp.control.XTextField();
         xSeparator3 = new com.rameses.rcp.control.XSeparator();
         xPanel2 = new com.rameses.rcp.control.XPanel();
         xPanel3 = new com.rameses.rcp.control.XPanel();
@@ -72,6 +75,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField8 = new com.rameses.rcp.control.XLookupField();
         xTextField15 = new com.rameses.rcp.control.XTextField();
         xTextField16 = new com.rameses.rcp.control.XTextField();
+        xTextField32 = new com.rameses.rcp.control.XTextField();
         xPanel4 = new com.rameses.rcp.control.XPanel();
         xFormPanel9 = new com.rameses.rcp.control.XFormPanel();
         xLookupField9 = new com.rameses.rcp.control.XLookupField();
@@ -81,6 +85,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField10 = new com.rameses.rcp.control.XLookupField();
         xTextField19 = new com.rameses.rcp.control.XTextField();
         xTextField20 = new com.rameses.rcp.control.XTextField();
+        xTextField33 = new com.rameses.rcp.control.XTextField();
         xPanel5 = new com.rameses.rcp.control.XPanel();
         xPanel6 = new com.rameses.rcp.control.XPanel();
         xFormPanel11 = new com.rameses.rcp.control.XFormPanel();
@@ -91,6 +96,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField12 = new com.rameses.rcp.control.XLookupField();
         xTextField23 = new com.rameses.rcp.control.XTextField();
         xTextField24 = new com.rameses.rcp.control.XTextField();
+        xTextField34 = new com.rameses.rcp.control.XTextField();
         xPanel7 = new com.rameses.rcp.control.XPanel();
         xFormPanel13 = new com.rameses.rcp.control.XFormPanel();
         xLookupField13 = new com.rameses.rcp.control.XLookupField();
@@ -100,6 +106,7 @@ public class VerificationPage extends javax.swing.JPanel {
         xLookupField14 = new com.rameses.rcp.control.XLookupField();
         xTextField27 = new com.rameses.rcp.control.XTextField();
         xTextField28 = new com.rameses.rcp.control.XTextField();
+        xTextField35 = new com.rameses.rcp.control.XTextField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Applicant's Name");
@@ -116,12 +123,12 @@ public class VerificationPage extends javax.swing.JPanel {
 
         xTextField2.setCaption("Middle Name");
         xTextField2.setDepends(new String[] {"entity.person"});
-        xTextField2.setName("person.middlename"); // NOI18N
+        xTextField2.setName("entity.person.middlename"); // NOI18N
         xFormPanel2.add(xTextField2);
 
         xTextField1.setCaption("Last Name");
         xTextField1.setDepends(new String[] {"entity.person"});
-        xTextField1.setName("person.lastname"); // NOI18N
+        xTextField1.setName("entity.person.lastname"); // NOI18N
         xFormPanel2.add(xTextField1);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder2 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -130,17 +137,26 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel3.setCellspacing(10);
         xFormPanel3.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField2.setText("xLookupField1");
         xLookupField2.setCaption("First Name");
+        xLookupField2.setExpression("#{item.firstname}");
+        xLookupField2.setHandler("lookup:individualwide");
+        xLookupField2.setName("entity.spouse"); // NOI18N
         xFormPanel3.add(xLookupField2);
 
-        xTextField4.setText("xTextField2");
         xTextField4.setCaption("Middle Name");
+        xTextField4.setDepends(new String[] {"entity.spouse"});
+        xTextField4.setInputFormat("");
+        xTextField4.setName("entity.spouse.middlename"); // NOI18N
         xFormPanel3.add(xTextField4);
 
-        xTextField3.setText("xTextField1");
         xTextField3.setCaption("Last Name");
+        xTextField3.setDepends(new String[] {"entity.spouse"});
+        xTextField3.setName("entity.spouse.lastname"); // NOI18N
         xFormPanel3.add(xTextField3);
+
+        xTextField29.setCaption("Maiden Name");
+        xTextField29.setName("entity.spouse.maidenname"); // NOI18N
+        xFormPanel3.add(xTextField29);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder3 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder3.setTitle("Father's Name");
@@ -148,16 +164,21 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel4.setCellspacing(10);
         xFormPanel4.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField3.setText("xLookupField1");
         xLookupField3.setCaption("First Name");
+        xLookupField3.setExpression("#{item.firstname}");
+        xLookupField3.setHandler("lookup:individualwide");
+        xLookupField3.setName("entity.father"); // NOI18N
         xFormPanel4.add(xLookupField3);
 
-        xTextField6.setText("xTextField2");
         xTextField6.setCaption("Middle Name");
+        xTextField6.setDepends(new String[] {"entity.father"});
+        xTextField6.setName("entity.father.middlename"); // NOI18N
         xFormPanel4.add(xTextField6);
+        xTextField6.getAccessibleContext().setAccessibleDescription("");
 
-        xTextField5.setText("xTextField1");
         xTextField5.setCaption("Last Name");
+        xTextField5.setDepends(new String[] {"entity.father"});
+        xTextField5.setName("entity.father.lastname"); // NOI18N
         xFormPanel4.add(xTextField5);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder4 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -166,17 +187,30 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel5.setCellspacing(10);
         xFormPanel5.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField4.setText("xLookupField1");
         xLookupField4.setCaption("First Name");
+        xLookupField4.setExpression("#{item.firstname}");
+        xLookupField4.setHandler("lookup:individualwide");
+        xLookupField4.setName("entity.mother"); // NOI18N
         xFormPanel5.add(xLookupField4);
 
-        xTextField8.setText("xTextField2");
         xTextField8.setCaption("Middle Name");
+        xTextField8.setDepends(new String[] {"entity.mother"});
+        xTextField8.setName("entity.mother.middlename"); // NOI18N
         xFormPanel5.add(xTextField8);
 
-        xTextField7.setText("xTextField1");
         xTextField7.setCaption("Last Name");
+        xTextField7.setDepends(new String[] {"entity.mother"});
+        xTextField7.setName("entity.mother.lastname"); // NOI18N
         xFormPanel5.add(xTextField7);
+
+        xTextField30.setCaption("Maiden Name");
+        xTextField30.setName("entity.mother.maidenname"); // NOI18N
+        xTextField30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField30ActionPerformed(evt);
+            }
+        });
+        xFormPanel5.add(xTextField30);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder5 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder5.setTitle("Spouse's Father");
@@ -184,16 +218,21 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel6.setCellspacing(10);
         xFormPanel6.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField5.setText("xLookupField1");
         xLookupField5.setCaption("First Name");
+        xLookupField5.setExpression("#{item.firstname}");
+        xLookupField5.setHandler("lookup:individualwide");
+        xLookupField5.setName("entity.spousefather"); // NOI18N
+        xLookupField5.setNullWhenEmpty(false);
         xFormPanel6.add(xLookupField5);
 
-        xTextField9.setText("xTextField1");
         xTextField9.setCaption("Middle Name");
+        xTextField9.setDepends(new String[] {"entity.spousefather"});
+        xTextField9.setName("entity.spousefather.middlename"); // NOI18N
         xFormPanel6.add(xTextField9);
 
-        xTextField10.setText("xTextField2");
         xTextField10.setCaption("Last Name");
+        xTextField10.setDepends(new String[] {"entity.spousefather"});
+        xTextField10.setName("entity.spousefather.lastname"); // NOI18N
         xFormPanel6.add(xTextField10);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder6 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -202,17 +241,31 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel7.setCellspacing(10);
         xFormPanel7.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField6.setText("xLookupField1");
         xLookupField6.setCaption("First Name");
+        xLookupField6.setExpression("#{item.firstname}");
+        xLookupField6.setHandler("lookup:individualwide");
+        xLookupField6.setName("entity.spousemother"); // NOI18N
         xFormPanel7.add(xLookupField6);
 
-        xTextField11.setText("xTextField1");
         xTextField11.setCaption("Middle Name");
+        xTextField11.setDepends(new String[] {"entity.spousemother"});
+        xTextField11.setName("entity.spousemother.middlename"); // NOI18N
         xFormPanel7.add(xTextField11);
 
-        xTextField12.setText("xTextField2");
         xTextField12.setCaption("Last Name");
+        xTextField12.setDepends(new String[] {"entity.spousemother"});
+        xTextField12.setName("entity.spousemother.lastname"); // NOI18N
         xFormPanel7.add(xTextField12);
+
+        xTextField31.setCaption("Maiden Name");
+        xTextField31.setDepends(new String[] {"entity.spousemother"});
+        xTextField31.setName("entity.spousemother.maidenname"); // NOI18N
+        xTextField31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField31ActionPerformed(evt);
+            }
+        });
+        xFormPanel7.add(xTextField31);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder7 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder7.setTitle("GRANDPARENTS (Applicant)");
@@ -226,16 +279,20 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel1.setCellspacing(10);
         xFormPanel1.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField7.setText("xLookupField7");
         xLookupField7.setCaption("First Name");
+        xLookupField7.setExpression("#{item.firstname}");
+        xLookupField7.setHandler("lookup:individualwide");
+        xLookupField7.setName("entity.mothersidegrandfather"); // NOI18N
         xFormPanel1.add(xLookupField7);
 
-        xTextField13.setText("xTextField13");
         xTextField13.setCaption("Middle Name");
+        xTextField13.setDepends(new String[] {"entity.mothersidegrandfather"});
+        xTextField13.setName("entity.mothersidegrandfather.middlename"); // NOI18N
         xFormPanel1.add(xTextField13);
 
-        xTextField14.setText("xTextField14");
         xTextField14.setCaption("Last Name");
+        xTextField14.setDepends(new String[] {"entity.mothersidegrandfather"});
+        xTextField14.setName("entity.mothersidegrandfather.lastname"); // NOI18N
         xFormPanel1.add(xTextField14);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder9 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -244,34 +301,51 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel8.setCellspacing(10);
         xFormPanel8.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField8.setText("xLookupField7");
         xLookupField8.setCaption("First Name");
+        xLookupField8.setExpression("#{item.firstname}");
+        xLookupField8.setHandler("lookup:individualwide");
+        xLookupField8.setName("entity.mothersidegrandmother"); // NOI18N
         xFormPanel8.add(xLookupField8);
 
-        xTextField15.setText("xTextField13");
         xTextField15.setCaption("Middle Name");
+        xTextField15.setDepends(new String[] {"entity.mothersidegrandmother"});
+        xTextField15.setName("entity.mothersidegrandmother.middlename"); // NOI18N
         xFormPanel8.add(xTextField15);
 
-        xTextField16.setText("xTextField14");
         xTextField16.setCaption("Last Name");
+        xTextField16.setDepends(new String[] {"entity.mothersidegrandmother"});
+        xTextField16.setName("entity.mothersidegrandmother.lastname"); // NOI18N
         xFormPanel8.add(xTextField16);
+
+        xTextField32.setCaption("Maiden Name");
+        xTextField32.setDepends(new String[] {"entity.mothersidegrandmother"});
+        xTextField32.setName("entity.spousemother.maidenname"); // NOI18N
+        xTextField32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField32ActionPerformed(evt);
+            }
+        });
+        xFormPanel8.add(xTextField32);
 
         javax.swing.GroupLayout xPanel3Layout = new javax.swing.GroupLayout(xPanel3);
         xPanel3.setLayout(xPanel3Layout);
         xPanel3Layout.setHorizontalGroup(
             xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(xPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(xFormPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap()
+                .addGroup(xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(xPanel3Layout.createSequentialGroup()
+                        .addComponent(xFormPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         xPanel3Layout.setVerticalGroup(
             xPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, xPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(xFormPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(xFormPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6))
         );
@@ -284,16 +358,20 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel9.setCellspacing(10);
         xFormPanel9.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField9.setText("xLookupField7");
         xLookupField9.setCaption("First Name");
+        xLookupField9.setExpression("#{item.firstname}");
+        xLookupField9.setHandler("lookup:individualwide");
+        xLookupField9.setName("entity.fathersidegrandfather"); // NOI18N
         xFormPanel9.add(xLookupField9);
 
-        xTextField17.setText("xTextField13");
         xTextField17.setCaption("Middle Name");
+        xTextField17.setDepends(new String[] {"entity.fathersidegrandfather"});
+        xTextField17.setName("entity.fathersidegrandfather.middlename"); // NOI18N
         xFormPanel9.add(xTextField17);
 
-        xTextField18.setText("xTextField14");
         xTextField18.setCaption("Last Name");
+        xTextField18.setDepends(new String[] {"entity.fathersidegrandfather"});
+        xTextField18.setName("entity.fathersidegrandfather.lastname"); // NOI18N
         xFormPanel9.add(xTextField18);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder11 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -302,27 +380,42 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel10.setCellspacing(10);
         xFormPanel10.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField10.setText("xLookupField7");
         xLookupField10.setCaption("First Name");
+        xLookupField10.setExpression("#{item.firstname}");
+        xLookupField10.setHandler("lookup:individualwide");
+        xLookupField10.setName("entity.fathersidegrandmother"); // NOI18N
         xFormPanel10.add(xLookupField10);
 
-        xTextField19.setText("xTextField13");
         xTextField19.setCaption("Middle Name");
+        xTextField19.setDepends(new String[] {"entity.fathersidegrandmother"});
+        xTextField19.setName("entity.fathersidegrandmother.middlename"); // NOI18N
         xFormPanel10.add(xTextField19);
 
-        xTextField20.setText("xTextField14");
         xTextField20.setCaption("Last Name");
+        xTextField20.setDepends(new String[] {"entity.fathersidegrandmother"});
+        xTextField20.setName("entity.fathersidegrandmother.lastname"); // NOI18N
         xFormPanel10.add(xTextField20);
+
+        xTextField33.setCaption("Maiden Name");
+        xTextField33.setDepends(new String[] {"entity.fathersidegrandmother"});
+        xTextField33.setName("entity.spousemother.maidenname"); // NOI18N
+        xTextField33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField33ActionPerformed(evt);
+            }
+        });
+        xFormPanel10.add(xTextField33);
 
         javax.swing.GroupLayout xPanel4Layout = new javax.swing.GroupLayout(xPanel4);
         xPanel4.setLayout(xPanel4Layout);
         xPanel4Layout.setHorizontalGroup(
             xPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(xPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(xPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(xFormPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xFormPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(xFormPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         xPanel4Layout.setVerticalGroup(
             xPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,10 +433,10 @@ public class VerificationPage extends javax.swing.JPanel {
             xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(xPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(xPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(xPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         xPanel2Layout.setVerticalGroup(
             xPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,16 +460,20 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel11.setCellspacing(10);
         xFormPanel11.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField11.setText("xLookupField7");
         xLookupField11.setCaption("First Name");
+        xLookupField11.setExpression("#{item.firstname}");
+        xLookupField11.setHandler("lookup:individualwide");
+        xLookupField11.setName("entity.spousemothersidegrandfather"); // NOI18N
         xFormPanel11.add(xLookupField11);
 
-        xTextField21.setText("xTextField13");
         xTextField21.setCaption("Middle Name");
+        xTextField21.setDepends(new String[] {"entity.spousemothersidegrandfather"});
+        xTextField21.setName("entity.spousemothersidegrandfather.middlename"); // NOI18N
         xFormPanel11.add(xTextField21);
 
-        xTextField22.setText("xTextField14");
         xTextField22.setCaption("Last Name");
+        xTextField22.setDepends(new String[] {"entity.spousemothersidegrandfather"});
+        xTextField22.setName("entity.spousemothersidegrandfather.lastname"); // NOI18N
         xFormPanel11.add(xTextField22);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder14 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -385,27 +482,42 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel12.setCellspacing(10);
         xFormPanel12.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField12.setText("xLookupField7");
         xLookupField12.setCaption("First Name");
+        xLookupField12.setExpression("#{item.firstname}");
+        xLookupField12.setHandler("lookup:individualwide");
+        xLookupField12.setName("entity.spousemothersidegrandmother"); // NOI18N
         xFormPanel12.add(xLookupField12);
 
-        xTextField23.setText("xTextField13");
         xTextField23.setCaption("Middle Name");
+        xTextField23.setDepends(new String[] {"entity.spousemothersidegrandmother"});
+        xTextField23.setName("entity.spousemothersidegrandmother.middlename"); // NOI18N
         xFormPanel12.add(xTextField23);
 
-        xTextField24.setText("xTextField14");
         xTextField24.setCaption("Last Name");
+        xTextField24.setDepends(new String[] {"entity.spousemothersidegrandmother"});
+        xTextField24.setName("entity.spousemothersidegrandmother.lastname"); // NOI18N
         xFormPanel12.add(xTextField24);
+
+        xTextField34.setCaption("Maiden Name");
+        xTextField34.setDepends(new String[] {"entity.spousemothersidegrandmother"});
+        xTextField34.setName("entity.spousemother.maidenname"); // NOI18N
+        xTextField34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField34ActionPerformed(evt);
+            }
+        });
+        xFormPanel12.add(xTextField34);
 
         javax.swing.GroupLayout xPanel6Layout = new javax.swing.GroupLayout(xPanel6);
         xPanel6.setLayout(xPanel6Layout);
         xPanel6Layout.setHorizontalGroup(
             xPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(xPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(xPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(xFormPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xFormPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(xFormPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         xPanel6Layout.setVerticalGroup(
             xPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,16 +537,20 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel13.setCellspacing(10);
         xFormPanel13.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField13.setText("xLookupField7");
         xLookupField13.setCaption("First Name");
+        xLookupField13.setExpression("#{item.firstname}");
+        xLookupField13.setHandler("lookup:individualwide");
+        xLookupField13.setName("entity.spousefathersidegrandfather"); // NOI18N
         xFormPanel13.add(xLookupField13);
 
-        xTextField25.setText("xTextField13");
         xTextField25.setCaption("Middle Name");
+        xTextField25.setDepends(new String[] {"entity.spousefathersidegrandfather"});
+        xTextField25.setName("entity.spousefathersidegrandfather.middlename"); // NOI18N
         xFormPanel13.add(xTextField25);
 
-        xTextField26.setText("xTextField14");
         xTextField26.setCaption("Last Name");
+        xTextField26.setDepends(new String[] {"entity.spousefathersidegrandfather"});
+        xTextField26.setName("entity.spousefathersidegrandfather.lastname"); // NOI18N
         xFormPanel13.add(xTextField26);
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder16 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -443,34 +559,49 @@ public class VerificationPage extends javax.swing.JPanel {
         xFormPanel14.setCellspacing(10);
         xFormPanel14.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
-        xLookupField14.setText("xLookupField7");
         xLookupField14.setCaption("First Name");
+        xLookupField14.setExpression("#{item.firstname}");
+        xLookupField14.setHandler("lookup:individualwide");
+        xLookupField14.setName("entity.spousefathersidegrandmother"); // NOI18N
         xFormPanel14.add(xLookupField14);
 
-        xTextField27.setText("xTextField13");
         xTextField27.setCaption("Middle Name");
+        xTextField27.setDepends(new String[] {"entity.spousefathersidegrandmother"});
+        xTextField27.setName("entity.spousefathersidegrandmother.middlename"); // NOI18N
         xFormPanel14.add(xTextField27);
 
-        xTextField28.setText("xTextField14");
         xTextField28.setCaption("Last Name");
+        xTextField28.setDepends(new String[] {"entity.spousefathersidegrandmother"});
+        xTextField28.setName("entity.spousefathersidegrandmother.lastname"); // NOI18N
         xFormPanel14.add(xTextField28);
+
+        xTextField35.setCaption("Maiden Name");
+        xTextField35.setDepends(new String[] {"entity.spousefathersidegrandmother"});
+        xTextField35.setName("entity.spousemother.maidenname"); // NOI18N
+        xTextField35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xTextField35ActionPerformed(evt);
+            }
+        });
+        xFormPanel14.add(xTextField35);
 
         javax.swing.GroupLayout xPanel7Layout = new javax.swing.GroupLayout(xPanel7);
         xPanel7.setLayout(xPanel7Layout);
         xPanel7Layout.setHorizontalGroup(
             xPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(xPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(xPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(xFormPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xFormPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(xFormPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         xPanel7Layout.setVerticalGroup(
             xPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, xPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(xFormPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(xFormPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6))
         );
@@ -503,27 +634,28 @@ public class VerificationPage extends javax.swing.JPanel {
             .addGroup(xPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(xSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(xPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(xFormPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(xFormPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 40, Short.MAX_VALUE))
-                    .addGroup(xPanel1Layout.createSequentialGroup()
-                        .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(xFormPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(xPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, xPanel1Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(xSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(xFormPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(xFormPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(xFormPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(xSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(xPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(xSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(xSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(xPanel1Layout.createSequentialGroup()
+                                        .addGap(17, 17, 17)
+                                        .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(xFormPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 754, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(xFormPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(xFormPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(xFormPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(xFormPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(xFormPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addComponent(xPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 46, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         xPanel1Layout.setVerticalGroup(
@@ -573,6 +705,30 @@ public class VerificationPage extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void xTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField30ActionPerformed
+
+    private void xTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField31ActionPerformed
+
+    private void xTextField32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField32ActionPerformed
+
+    private void xTextField33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField33ActionPerformed
+
+    private void xTextField34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField34ActionPerformed
+
+    private void xTextField35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xTextField35ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xTextField35ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -636,7 +792,14 @@ public class VerificationPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField26;
     private com.rameses.rcp.control.XTextField xTextField27;
     private com.rameses.rcp.control.XTextField xTextField28;
+    private com.rameses.rcp.control.XTextField xTextField29;
     private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField30;
+    private com.rameses.rcp.control.XTextField xTextField31;
+    private com.rameses.rcp.control.XTextField xTextField32;
+    private com.rameses.rcp.control.XTextField xTextField33;
+    private com.rameses.rcp.control.XTextField xTextField34;
+    private com.rameses.rcp.control.XTextField xTextField35;
     private com.rameses.rcp.control.XTextField xTextField4;
     private com.rameses.rcp.control.XTextField xTextField5;
     private com.rameses.rcp.control.XTextField xTextField6;

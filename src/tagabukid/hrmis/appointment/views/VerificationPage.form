@@ -43,36 +43,39 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="xSeparator3" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="xFormPanel7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="xFormPanel2" min="-2" pref="564" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="20" pref="40" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="xFormPanel3" alignment="1" min="-2" pref="564" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="xPanel5" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="xSeparator1" max="32767" attributes="0"/>
-                                          <Component id="xFormPanel6" max="32767" attributes="0"/>
-                                          <Component id="xFormPanel5" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="xFormPanel4" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="xSeparator2" alignment="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="xSeparator1" max="32767" attributes="0"/>
+                                              <Component id="xSeparator2" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="xFormPanel2" min="-2" pref="754" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="xFormPanel7" max="32767" attributes="0"/>
+                                                      <Component id="xFormPanel5" max="32767" attributes="0"/>
+                                                      <Component id="xFormPanel6" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="xFormPanel4" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="xFormPanel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
+                                  <Component id="xPanel2" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="46" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="xPanel2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="xPanel5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="xSeparator3" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -137,7 +140,7 @@
                         <StringItem index="0" value="entity.person"/>
                       </StringArray>
                     </Property>
-                    <Property name="name" type="java.lang.String" value="person.middlename" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.person.middlename" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
@@ -148,7 +151,7 @@
                         <StringItem index="0" value="entity.person"/>
                       </StringArray>
                     </Property>
-                    <Property name="name" type="java.lang.String" value="person.lastname" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.person.lastname" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -166,20 +169,39 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xLookupField1"/>
                     <Property name="caption" type="java.lang.String" value="First Name"/>
+                    <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                    <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                    <Property name="name" type="java.lang.String" value="entity.spouse" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField2"/>
                     <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spouse"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="inputFormat" type="java.lang.String" value=""/>
+                    <Property name="name" type="java.lang.String" value="entity.spouse.middlename" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Last Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spouse"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.spouse.lastname" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XTextField" name="xTextField29">
+                  <Properties>
+                    <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                    <Property name="name" type="java.lang.String" value="entity.spouse.maidenname" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -203,20 +225,35 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xLookupField1"/>
                     <Property name="caption" type="java.lang.String" value="First Name"/>
+                    <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                    <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                    <Property name="name" type="java.lang.String" value="entity.father" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField6">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField2"/>
                     <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.father"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.father.middlename" noResource="true"/>
                   </Properties>
+                  <AccessibilityProperties>
+                    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+                  </AccessibilityProperties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Last Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.father"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.father.lastname" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -234,21 +271,42 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xLookupField1"/>
                     <Property name="caption" type="java.lang.String" value="First Name"/>
+                    <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                    <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                    <Property name="name" type="java.lang.String" value="entity.mother" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField8">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField2"/>
                     <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.mother"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.mother.middlename" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField7">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Last Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.mother"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.mother.lastname" noResource="true"/>
                   </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XTextField" name="xTextField30">
+                  <Properties>
+                    <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                    <Property name="name" type="java.lang.String" value="entity.mother.maidenname" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xTextField30ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -265,20 +323,33 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xLookupField1"/>
                     <Property name="caption" type="java.lang.String" value="First Name"/>
+                    <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                    <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                    <Property name="name" type="java.lang.String" value="entity.spousefather" noResource="true"/>
+                    <Property name="nullWhenEmpty" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField9">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spousefather"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.spousefather.middlename" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField10">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField2"/>
                     <Property name="caption" type="java.lang.String" value="Last Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spousefather"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.spousefather.lastname" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -302,21 +373,47 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField6">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xLookupField1"/>
                     <Property name="caption" type="java.lang.String" value="First Name"/>
+                    <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                    <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                    <Property name="name" type="java.lang.String" value="entity.spousemother" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField11">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spousemother"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.spousemother.middlename" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField12">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField2"/>
                     <Property name="caption" type="java.lang.String" value="Last Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spousemother"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.spousemother.lastname" noResource="true"/>
                   </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XTextField" name="xTextField31">
+                  <Properties>
+                    <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                    <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="entity.spousemother"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="entity.spousemother.maidenname" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xTextField31ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -338,13 +435,13 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="xPanel3" min="-2" max="-2" attributes="0"/>
-                              <Component id="xPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="xPanel4" max="32767" attributes="0"/>
+                              <Component id="xPanel3" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -373,21 +470,25 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="xFormPanel8" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="xFormPanel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                                   <Component id="xFormPanel1" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="xFormPanel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="xFormPanel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="xFormPanel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
@@ -408,20 +509,32 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField7">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.mothersidegrandfather" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField13">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.mothersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.mothersidegrandfather.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField14">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.mothersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.mothersidegrandfather.lastname" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -439,21 +552,47 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField8">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.mothersidegrandmother" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField15">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.mothersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.mothersidegrandmother.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField16">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.mothersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.mothersidegrandmother.lastname" noResource="true"/>
                           </Properties>
+                        </Component>
+                        <Component class="com.rameses.rcp.control.XTextField" name="xTextField32">
+                          <Properties>
+                            <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.mothersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemother.maidenname" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xTextField32ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -472,11 +611,12 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="xFormPanel10" max="32767" attributes="0"/>
                                   <Component id="xFormPanel9" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -506,20 +646,32 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField9">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.fathersidegrandfather" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField17">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.fathersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.fathersidegrandfather.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField18">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.fathersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.fathersidegrandfather.lastname" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -537,21 +689,47 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField10">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.fathersidegrandmother" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField19">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.fathersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.fathersidegrandmother.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField20">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.fathersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.fathersidegrandmother.lastname" noResource="true"/>
                           </Properties>
+                        </Component>
+                        <Component class="com.rameses.rcp.control.XTextField" name="xTextField33">
+                          <Properties>
+                            <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.fathersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemother.maidenname" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xTextField33ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -607,11 +785,12 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="xFormPanel12" max="32767" attributes="0"/>
                                   <Component id="xFormPanel11" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -641,20 +820,32 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField11">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.spousemothersidegrandfather" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField21">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousemothersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemothersidegrandfather.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField22">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousemothersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemothersidegrandfather.lastname" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -672,21 +863,47 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField12">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.spousemothersidegrandmother" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField23">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousemothersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemothersidegrandmother.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField24">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousemothersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemothersidegrandmother.lastname" noResource="true"/>
                           </Properties>
+                        </Component>
+                        <Component class="com.rameses.rcp.control.XTextField" name="xTextField34">
+                          <Properties>
+                            <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousemothersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemother.maidenname" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xTextField34ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -704,21 +921,22 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="xFormPanel14" max="32767" attributes="0"/>
                                   <Component id="xFormPanel13" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="xFormPanel13" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="xFormPanel13" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="xFormPanel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
@@ -739,20 +957,32 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField13">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.spousefathersidegrandfather" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField25">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousefathersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousefathersidegrandfather.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField26">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousefathersidegrandfather"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousefathersidegrandfather.lastname" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -770,21 +1000,47 @@
                       <SubComponents>
                         <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField14">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xLookupField7"/>
                             <Property name="caption" type="java.lang.String" value="First Name"/>
+                            <Property name="expression" type="java.lang.String" value="#{item.firstname}"/>
+                            <Property name="handler" type="java.lang.String" value="lookup:individualwide"/>
+                            <Property name="name" type="java.lang.String" value="entity.spousefathersidegrandmother" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField27">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField13"/>
                             <Property name="caption" type="java.lang.String" value="Middle Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousefathersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousefathersidegrandmother.middlename" noResource="true"/>
                           </Properties>
                         </Component>
                         <Component class="com.rameses.rcp.control.XTextField" name="xTextField28">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="xTextField14"/>
                             <Property name="caption" type="java.lang.String" value="Last Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousefathersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousefathersidegrandmother.lastname" noResource="true"/>
                           </Properties>
+                        </Component>
+                        <Component class="com.rameses.rcp.control.XTextField" name="xTextField35">
+                          <Properties>
+                            <Property name="caption" type="java.lang.String" value="Maiden Name"/>
+                            <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="entity.spousefathersidegrandmother"/>
+                              </StringArray>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="entity.spousemother.maidenname" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xTextField35ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
