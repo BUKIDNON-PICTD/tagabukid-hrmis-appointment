@@ -133,20 +133,20 @@
 					<reportElement
 						x="0"
 						y="138"
-						width="122"
+						width="540"
 						height="21"
 						key="staticText-4"/>
 					<box></box>
 					<textElement verticalAlignment="Bottom">
 						<font fontName="Century Gothic" size="12"/>
 					</textElement>
-				<text><![CDATA[Name of Applicant :]]></text>
+				<text><![CDATA[Name of Applicant :  ___________________________________________________________________]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="122"
+						x="130"
 						y="138"
-						width="418"
+						width="410"
 						height="21"
 						key="textField-1"/>
 					<box></box>
@@ -159,14 +159,14 @@
 					<reportElement
 						x="0"
 						y="159"
-						width="109"
+						width="540"
 						height="21"
 						key="staticText-5"/>
 					<box></box>
 					<textElement verticalAlignment="Bottom">
 						<font fontName="Century Gothic" size="12"/>
 					</textElement>
-				<text><![CDATA[Applied Position :]]></text>
+				<text><![CDATA[Applied Position : _______________________________________________________________________]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
