@@ -85,7 +85,7 @@
 	<field name="residentialzipcode" class="java.lang.Integer"/>
 	<field name="permanentzipcode" class="java.lang.Integer"/>
 	<field name="civilserviceInfos" class="java.lang.Object"/>
-	<field name="voluntarywork" class="java.lang.Object"/>
+	<field name="voluntaryworks" class="java.lang.Object"/>
 	<field name="trainings" class="java.lang.Object"/>
 	<field name="recognitions" class="java.lang.Object"/>
 	<field name="workexperienceInfos" class="java.lang.Object"/>
@@ -97,7 +97,7 @@
 		<group  name="1stPage" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="387"  isSplitAllowed="true" >
+			<band height="383"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						x="348"
@@ -1911,7 +1911,7 @@
 		<group  name="2ndPage" isStartNewPage="true" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="116"  isSplitAllowed="true" >
+			<band height="91"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
@@ -2075,7 +2075,7 @@
 						height="17"
 						key="subreport-5"
 						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{voluntarywork}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[$F{voluntaryworks}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{VOLUNTARYWORK}]]></subreportExpression>
 				</subreport>
 				<subreport  isUsingCache="true">

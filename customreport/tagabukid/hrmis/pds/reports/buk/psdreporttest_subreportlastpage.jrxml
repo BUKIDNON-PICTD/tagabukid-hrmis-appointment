@@ -548,7 +548,8 @@
 						y="29"
 						width="9"
 						height="9"
-						key="line-1"/>
+						key="line-1"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -557,7 +558,8 @@
 						y="29"
 						width="9"
 						height="9"
-						key="line-2"/>
+						key="line-2"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -566,7 +568,8 @@
 						y="49"
 						width="9"
 						height="9"
-						key="line-3"/>
+						key="line-3"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -575,7 +578,8 @@
 						y="49"
 						width="9"
 						height="9"
-						key="line-4"/>
+						key="line-4"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -584,7 +588,8 @@
 						y="93"
 						width="9"
 						height="9"
-						key="line-5"/>
+						key="line-5"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -593,7 +598,8 @@
 						y="93"
 						width="9"
 						height="9"
-						key="line-6"/>
+						key="line-6"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -602,7 +608,8 @@
 						y="135"
 						width="9"
 						height="9"
-						key="line-7"/>
+						key="line-7"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -611,7 +618,8 @@
 						y="135"
 						width="9"
 						height="9"
-						key="line-8"/>
+						key="line-8"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -620,7 +628,8 @@
 						y="190"
 						width="9"
 						height="9"
-						key="line-9"/>
+						key="line-9"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -629,7 +638,8 @@
 						y="190"
 						width="9"
 						height="9"
-						key="line-10"/>
+						key="line-10"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -638,7 +648,8 @@
 						y="234"
 						width="9"
 						height="9"
-						key="line-11"/>
+						key="line-11"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -647,7 +658,8 @@
 						y="234"
 						width="9"
 						height="9"
-						key="line-12"/>
+						key="line-12"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -656,7 +668,8 @@
 						y="275"
 						width="9"
 						height="9"
-						key="line-13"/>
+						key="line-13"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -665,7 +678,8 @@
 						y="275"
 						width="9"
 						height="9"
-						key="line-14"/>
+						key="line-14"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -674,7 +688,8 @@
 						y="303"
 						width="9"
 						height="9"
-						key="line-15"/>
+						key="line-15"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -683,7 +698,8 @@
 						y="303"
 						width="9"
 						height="9"
-						key="line-16"/>
+						key="line-16"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -692,7 +708,8 @@
 						y="337"
 						width="9"
 						height="9"
-						key="line-17"/>
+						key="line-17"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -701,7 +718,8 @@
 						y="336"
 						width="9"
 						height="9"
-						key="line-18"/>
+						key="line-18"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -710,7 +728,8 @@
 						y="395"
 						width="9"
 						height="9"
-						key="line-19"/>
+						key="line-19"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -719,7 +738,8 @@
 						y="395"
 						width="9"
 						height="9"
-						key="line-20"/>
+						key="line-20"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -728,7 +748,8 @@
 						y="426"
 						width="9"
 						height="9"
-						key="line-21"/>
+						key="line-21"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -737,7 +758,8 @@
 						y="425"
 						width="9"
 						height="9"
-						key="line-22"/>
+						key="line-22"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -746,7 +768,8 @@
 						y="455"
 						width="9"
 						height="9"
-						key="line-23"/>
+						key="line-23"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -755,7 +778,8 @@
 						y="455"
 						width="9"
 						height="9"
-						key="line-24"/>
+						key="line-24"
+						isPrintRepeatedValues="false"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<staticText>
