@@ -21,7 +21,7 @@ class ReportVerificationController extends ReportController {
         // return data.reportdata
         // println entity
         data = svc.getVerificationReportData(entity)
-        
+         
         return data.reportdata;
     } 
 
