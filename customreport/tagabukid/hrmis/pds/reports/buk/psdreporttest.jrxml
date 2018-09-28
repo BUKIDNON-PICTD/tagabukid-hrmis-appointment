@@ -2137,7 +2137,8 @@
 						height="18"
 						key="subreport-10"
 						positionType="Float"/>
-					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "psdreporttest_subreportmembership.jasper"]]></subreportExpression>
+					<dataSourceExpression><![CDATA[$F{organizations}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{MEMBERSHIP}]]></subreportExpression>
 				</subreport>
 				<subreport  isUsingCache="true">
 					<reportElement
