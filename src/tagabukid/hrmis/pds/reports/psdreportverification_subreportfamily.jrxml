@@ -103,7 +103,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{father.father.lastname} + ", " + $F{father.father.firstname} + " " + $F{father.father.middlename}]]></textFieldExpression>
 				</textField>
@@ -122,7 +122,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mother.mother.lastname} + ", " + $F{mother.mother.firstname} + " " + $F{mother.mother.middlename}]]></textFieldExpression>
 				</textField>
@@ -141,7 +141,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spouse.spouse.middlename} + ", " + $F{spouse.spouse.firstname} + " " + $F{spouse.maidenname}]]></textFieldExpression>
 				</textField>
@@ -160,7 +160,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandmother.fathersidegrandmother.middlename} + ", " + $F{fathergrandmother.fathersidegrandmother.firstname} + " " + $F{fathergrandmother.maidenname}]]></textFieldExpression>
 				</textField>
@@ -179,7 +179,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandfather.fathersidegrandfather.lastname} + ", " + $F{fathergrandfather.fathersidegrandfather.firstname} + " " + $F{fathergrandfather.fathersidegrandfather.middlename}]]></textFieldExpression>
 				</textField>
@@ -198,7 +198,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandmother.mothersidegrandmother.middlename} + ", " + $F{mothergrandmother.mothersidegrandmother.firstname} + " " + $F{mothergrandmother.maidenname}]]></textFieldExpression>
 				</textField>
@@ -217,7 +217,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandfather.mothersidegrandfather.lastname} + ", " + $F{mothergrandfather.mothersidegrandfather.firstname} + " " + $F{mothergrandfather.mothersidegrandfather.middlename}]]></textFieldExpression>
 				</textField>
@@ -236,7 +236,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefather.spousefather.lastname} + ", " + $F{spousefather.spousefather.firstname} + " " + $F{spousefather.spousefather.middlename}]]></textFieldExpression>
 				</textField>
@@ -255,7 +255,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandmother.spousefathersidegrandmother.middlename} + ", " + $F{spousefathergrandmother.spousefathersidegrandmother.firstname} + " " + $F{spousefathergrandmother.maidenname}]]></textFieldExpression>
 				</textField>
@@ -274,7 +274,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandfather.spousefathersidegrandfather.lastname} + ", " + $F{spousefathergrandfather.spousefathersidegrandfather.firstname} + " " + $F{spousefathergrandfather.spousefathersidegrandfather.middlename}]]></textFieldExpression>
 				</textField>
@@ -293,7 +293,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandmother.spousemothersidegrandmother.middlename} + ", " + $F{spousemothergrandmother.spousemothersidegrandmother.firstname} + " " + $F{spousemothergrandmother.maidenname}]]></textFieldExpression>
 				</textField>
@@ -312,7 +312,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandfather.spousemothersidegrandfather.lastname} + ", " + $F{spousemothergrandfather.spousemothersidegrandfather.firstname} + " " + $F{spousemothergrandfather.spousemothersidegrandfather.middlename}]]></textFieldExpression>
 				</textField>
@@ -331,7 +331,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemother.spousemother.middlename} + ", " + $F{spousemother.spousemother.firstname} + " " + $F{spousemother.maidenname}]]></textFieldExpression>
 				</textField>
