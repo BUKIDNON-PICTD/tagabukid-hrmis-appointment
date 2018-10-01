@@ -63,12 +63,6 @@
 	<field name="spousemothergrandfather.spousemothersidegrandfather.lastname" class="java.lang.String"/>
 	<field name="spousemothergrandfather.spousemothersidegrandfather.firstname" class="java.lang.String"/>
 	<field name="spousemothergrandfather.spousemothersidegrandfather.middlename" class="java.lang.String"/>
-	<field name="fathergrandmother.maidenname" class="java.lang.String"/>
-	<field name="mothergrandmother.maidenname" class="java.lang.String"/>
-	<field name="spouse.maidenname" class="java.lang.String"/>
-	<field name="spousemother.maidenname" class="java.lang.String"/>
-	<field name="spousefathergrandmother.maidenname" class="java.lang.String"/>
-	<field name="spousemothergrandmother.maidenname" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -98,7 +92,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{father.father.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -117,7 +111,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{mother.mother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -136,14 +130,14 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spouse.spouse.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spouse.spouse.middlename} + ", " + $F{spouse.spouse.firstname} + " " + $F{spouse.maidenname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spouse.spouse.lastname} + ", " + $F{spouse.spouse.firstname} + " " + $F{spouse.spouse.middlename}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -155,14 +149,14 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{fathergrandmother.fathersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandmother.fathersidegrandmother.middlename} + ", " + $F{fathergrandmother.fathersidegrandmother.firstname} + " " + $F{fathergrandmother.maidenname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandmother.fathersidegrandmother.lastname} + ", " + $F{fathergrandmother.fathersidegrandmother.firstname} + " " + $F{fathergrandmother.fathersidegrandmother.middlename}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -174,7 +168,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{fathergrandfather.fathersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -193,14 +187,14 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{mothergrandmother.mothersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandmother.mothersidegrandmother.middlename} + ", " + $F{mothergrandmother.mothersidegrandmother.firstname} + " " + $F{mothergrandmother.maidenname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandmother.mothersidegrandmother.lastname} + ", " + $F{mothergrandmother.mothersidegrandmother.firstname} + " " + $F{mothergrandmother.mothersidegrandmother.middlename}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -212,7 +206,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{mothergrandfather.mothersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -231,7 +225,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousefather.spousefather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -250,14 +244,14 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousefathergrandmother.spousefathersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandmother.spousefathersidegrandmother.middlename} + ", " + $F{spousefathergrandmother.spousefathersidegrandmother.firstname} + " " + $F{spousefathergrandmother.maidenname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandmother.spousefathersidegrandmother.lastname} + ", " + $F{spousefathergrandmother.spousefathersidegrandmother.firstname} + " " + $F{spousefathergrandmother.spousefathersidegrandmother.middlename}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -269,7 +263,7 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousefathergrandfather.spousefathersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -288,14 +282,14 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandmother.spousemothersidegrandmother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandmother.spousemothersidegrandmother.middlename} + ", " + $F{spousemothergrandmother.spousemothersidegrandmother.firstname} + " " + $F{spousemothergrandmother.maidenname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandmother.spousemothersidegrandmother.lastname} + ", " + $F{spousemothergrandmother.spousemothersidegrandmother.firstname} + " " + $F{spousemothergrandmother.spousemothersidegrandmother.middlename}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -305,10 +299,9 @@
 						height="18"
 						key="textField-13"
 						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandfather.spousemothersidegrandfather.lastname} != null)
-]]></printWhenExpression>
+							<printWhenExpression><![CDATA[new Boolean($F{spousemothergrandfather.spousemothersidegrandfather.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
@@ -327,14 +320,14 @@
 						isRemoveLineWhenBlank="true">
 							<printWhenExpression><![CDATA[new Boolean($F{spousemother.spousemother.lastname} != null)]]></printWhenExpression>
 						</reportElement>
-					<box>					<topPen lineWidth="0.0"/>
+					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid"/>
 </box>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemother.spousemother.middlename} + ", " + $F{spousemother.spousemother.firstname} + " " + $F{spousemother.maidenname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemother.spousemother.lastname} + ", " + $F{spousemother.spousemother.firstname} + " " + $F{spousemother.spousemother.middlename}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>
