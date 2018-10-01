@@ -24,6 +24,8 @@
 	<import value="net.sf.jasperreports.engine.data.*" />
 
 
+	<field name="affiliation.name" class="java.lang.String"/>
+
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>
@@ -60,7 +62,23 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="104"  isSplitAllowed="true" >
+			<band height="22"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="163"
+						height="22"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{affiliation.name}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>

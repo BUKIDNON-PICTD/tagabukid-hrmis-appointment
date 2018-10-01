@@ -183,7 +183,7 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="-16"
+						x="-15"
 						y="-27"
 						width="141"
 						height="30"
