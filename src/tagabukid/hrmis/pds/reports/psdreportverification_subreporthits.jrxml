@@ -12,7 +12,7 @@
 		 columnSpacing="0"
 		 leftMargin="3"
 		 rightMargin="3"
-		 topMargin="0"
+		 topMargin="3"
 		 bottomMargin="0"
 		 whenNoDataType="NoPages"
 		 isTitleNewPage="false"
@@ -52,19 +52,19 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="18"  isSplitAllowed="true" >
+			<band height="15"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
 						width="190"
-						height="18"
+						height="15"
 						key="textField"/>
 					<box>					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fullname}]]></textFieldExpression>
 				</textField>

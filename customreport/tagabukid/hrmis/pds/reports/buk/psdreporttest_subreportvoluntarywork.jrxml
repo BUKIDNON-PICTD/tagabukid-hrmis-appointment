@@ -24,6 +24,13 @@
 	<import value="net.sf.jasperreports.engine.data.*" />
 
 
+	<field name="datefrom" class="java.util.Date"/>
+	<field name="dateto" class="java.util.Date"/>
+	<field name="organizationaddress.text" class="java.lang.String"/>
+	<field name="voluntarywork.description" class="java.lang.String"/>
+	<field name="numberofhours" class="java.lang.Number"/>
+	<field name="positionornatureofwork" class="java.lang.String"/>
+
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>
@@ -167,7 +174,83 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="129"  isSplitAllowed="true" >
+			<band height="22"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="357"
+						y="0"
+						width="215"
+						height="22"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{positionornatureofwork}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="298"
+						y="0"
+						width="59"
+						height="22"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Number"><![CDATA[$F{numberofhours}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="255"
+						y="0"
+						width="43"
+						height="22"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{dateto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="212"
+						y="0"
+						width="43"
+						height="22"
+						key="textField"/>
+					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{datefrom}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="212"
+						height="22"
+						key="textField-1"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{voluntarywork.} != null ? $F{voluntarywork.description} +" - "+ $F{organizationaddress.text} : " ")]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>

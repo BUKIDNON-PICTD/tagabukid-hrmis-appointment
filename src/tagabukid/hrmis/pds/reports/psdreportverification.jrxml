@@ -22,6 +22,7 @@
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
+	<reportFont name="Century Gothic" isDefault="false" fontName="Century Gothic" size="3" isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="true" pdfFontName="Century Gothic" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
 
 	<parameter name="FAMILY" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="HITS_FAMILY" isForPrompting="false" class="java.lang.Object"/>
@@ -40,13 +41,13 @@
 			</band>
 		</background>
 		<title>
-			<band height="284"  isSplitAllowed="true" >
+			<band height="224"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						x="0"
-						y="27"
+						y="11"
 						width="540"
-						height="23"
+						height="18"
 						key="staticText-1"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -57,7 +58,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="50"
+						y="29"
 						width="540"
 						height="18"
 						key="staticText-2"/>
@@ -70,9 +71,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="67"
+						y="47"
 						width="540"
-						height="20"
+						height="15"
 						key="staticText-3"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -83,9 +84,9 @@
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="73"
-						y="32"
-						width="60"
-						height="63"
+						y="16"
+						width="50"
+						height="50"
 						key="image-1"/>
 					<box></box>
 					<graphicElement stretchType="NoStretch"/>
@@ -94,7 +95,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="95"
+						y="67"
 						width="540"
 						height="32"
 						key="staticText-12"/>
@@ -107,7 +108,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="127"
+						y="99"
 						width="540"
 						height="22"
 						key="staticText-13"/>
@@ -120,9 +121,9 @@
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="400"
-						y="32"
-						width="60"
-						height="63"
+						y="16"
+						width="50"
+						height="50"
 						key="image-2"/>
 					<box></box>
 					<graphicElement stretchType="NoStretch"/>
@@ -131,25 +132,25 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="178"
-						width="122"
+						y="138"
+						width="540"
 						height="21"
 						key="staticText-4"/>
 					<box></box>
 					<textElement verticalAlignment="Bottom">
 						<font fontName="Century Gothic" size="12"/>
 					</textElement>
-				<text><![CDATA[Name of Applicant :]]></text>
+				<text><![CDATA[Name of Applicant :  ___________________________________________________________________]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="122"
-						y="178"
-						width="418"
+						x="130"
+						y="138"
+						width="410"
 						height="21"
 						key="textField-1"/>
 					<box></box>
-					<textElement verticalAlignment="Bottom">
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
 						<font fontName="Century Gothic" size="12"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.name}]]></textFieldExpression>
@@ -157,20 +158,20 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="199"
-						width="109"
+						y="159"
+						width="540"
 						height="21"
 						key="staticText-5"/>
 					<box></box>
 					<textElement verticalAlignment="Bottom">
 						<font fontName="Century Gothic" size="12"/>
 					</textElement>
-				<text><![CDATA[Applied Position :]]></text>
+				<text><![CDATA[Applied Position : _______________________________________________________________________]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="240"
+						y="186"
 						width="540"
 						height="38"
 						key="staticText-6"/>
@@ -182,8 +183,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="-19"
-						y="-23"
+						x="-15"
+						y="-27"
 						width="141"
 						height="30"
 						key="staticText-26"/>
@@ -191,7 +192,7 @@
 					<textElement>
 						<font/>
 					</textElement>
-				<text><![CDATA[PHRMO PTD APP No. 0001 (Sept. 2017)]]></text>
+				<text><![CDATA[PHRMO PTD APPT No. 0001 (Sept. 2017)]]></text>
 				</staticText>
 			</band>
 		</title>
@@ -397,11 +398,11 @@
 			</band>
 		</pageFooter>
 		<summary>
-			<band height="337"  isSplitAllowed="true" >
+			<band height="306"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						x="0"
-						y="206"
+						y="184"
 						width="540"
 						height="45"
 						key="staticText-20"
@@ -425,12 +426,12 @@
 					<textElement textAlignment="Justified">
 						<font fontName="Century Gothic" size="12"/>
 					</textElement>
-				<text><![CDATA[		        I declare under the penalties of perjury that the above answer are made in good faith and to the best of my knowledge and belief are true and correct. That if I will be appointed as employee of PGB and later found that I have relatives in the Provincial Government of Bukidnon I am willing to have my appointment revoked under the existing policy of Provincial Government of Bukidnon of no hiring relative up to 5th degree of consanguinity /affinity.]]></text>
+				<text><![CDATA[		      I declare under the penalties of perjury that the above answer are made in good faith and to the best of my knowledge and belief are true and correct. That if I will be appointed as employee of PGB and later found that I have relatives in the Provincial Government of Bukidnon I am willing to have my appointment revoked under the existing policy of Provincial Government of Bukidnon of no hiring relative up to 5th degree of consanguinity /affinity.]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="352"
-						y="135"
+						y="125"
 						width="137"
 						height="19"
 						key="staticText-14"
@@ -444,7 +445,7 @@
 				<line direction="TopDown">
 					<reportElement
 						x="333"
-						y="130"
+						y="120"
 						width="175"
 						height="0"
 						key="line-1"
@@ -456,9 +457,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="261"
+						y="242"
 						width="540"
-						height="19"
+						height="16"
 						key="staticText-16"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
@@ -470,9 +471,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="280"
+						y="258"
 						width="540"
-						height="19"
+						height="16"
 						key="staticText-17"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
@@ -484,9 +485,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="299"
+						y="274"
 						width="540"
-						height="19"
+						height="16"
 						key="staticText-18"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
@@ -498,9 +499,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="318"
+						y="290"
 						width="51"
-						height="19"
+						height="16"
 						key="staticText-19"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
@@ -512,9 +513,9 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="50"
-						y="318"
+						y="290"
 						width="56"
-						height="19"
+						height="16"
 						key="textField-3"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
@@ -526,7 +527,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="436"
-						y="206"
+						y="184"
 						width="53"
 						height="18"
 						key="textField-6"
@@ -540,9 +541,9 @@
 				<staticText>
 					<reportElement
 						x="19"
-						y="206"
+						y="184"
 						width="167"
-						height="45"
+						height="17"
 						key="staticText-27"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
