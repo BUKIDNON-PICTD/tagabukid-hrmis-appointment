@@ -1,14 +1,14 @@
 <workunit>
     <invokers>
-        <invoker type="hrmis_verify_applicant:open" caption="FOR VERIFICATION" action="open" role="PDS_ENCODER"/>
-        <invoker type="hrmis_verify_applicant:create" caption="Applicant Info" action="create" role="PDS_ENCODER"/>      
+        <invoker type="hrmis_verify_applicant:open" caption="FOR VERIFICATION" action="open" target="popup" role="PDS_ENCODER"/>
+        <invoker type="hrmis_verify_applicant:create" caption="Applicant Info" action="create" target="popup" role="PDS_ENCODER"/>   
         <invoker type="formActions" caption="Approve" action="approve" role="PDS_REPORTS"/>        
         <invoker type="formActions" caption="Verification" action="verify" role="PDS_REPORTS"/>        
     </invokers>
     
-    <code class="tagabukid.hrmis.appointment.models.VerificationController"/>
+    <code class="tagabukid.hrmis.appointment.models.VerifyController"/>
     
     <pages>
-        <page template="tagabukid.hrmis.appointment.views.VerificationPage"/>
+        <page template="tagabukid.hrmis.appointment.views.VerifyPage"/>
     </pages>
 </workunit>
