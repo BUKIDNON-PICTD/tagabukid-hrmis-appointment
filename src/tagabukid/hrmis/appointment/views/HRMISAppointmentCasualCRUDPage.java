@@ -185,7 +185,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
 
         xDataTable1.setColumns(new com.rameses.rcp.common.Column[]{
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "personnel"}
+                new Object[]{"name", "pds"}
                 , new Object[]{"caption", "Name"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -196,7 +196,7 @@ public class HRMISAppointmentCasualCRUDPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", "entity.state == 'DRAFT'"}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.personnel.entityname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{(item.pds.prenametitle == '' ||  !item.pds.prenametitle ?'': item.pds.prenametitle + ' ') + item.pds.person.name + (item.pds.nameextension=='' || !item.pds.nameextension?'' :' ' + item.pds.nameextension)}", "lookup:tagabukid_hrmis_pds")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "plantilla"}

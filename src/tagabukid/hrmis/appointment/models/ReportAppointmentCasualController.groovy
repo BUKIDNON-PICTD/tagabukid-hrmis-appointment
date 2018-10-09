@@ -22,7 +22,6 @@ class ReportAppointmentCasualController extends com.rameses.etracs.shared.Report
     }
     
     def getReportData() { 
-        entity._schemaname = 'hrmis_appointmentcasual'
         data = svc.getAppointmentCasualById(entity,page,pagelist);
 
         return data.reportdata
