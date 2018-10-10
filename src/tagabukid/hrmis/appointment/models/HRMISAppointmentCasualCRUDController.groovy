@@ -63,8 +63,11 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return false
     }
 
-    public void beforeSave(){
-
+    public void beforeSave(o){
+        entity.appointmentitems.each{
+            def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
+            it.personnel = pds.person
+        }
     }
 
     public void afterCreate(){
@@ -83,12 +86,8 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
 //        println entity
 //        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
 //        entity.appointmentitems.each{
-//            //println it
-//            it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
-//            it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
-//            //postgrehack
-////            it.plantilla.Id = it.plantilla.objid
-//
+//            def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
+//            it.personnel = pds
 //        }
     }
     def suggestGroupName = [
@@ -105,7 +104,9 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def appointmentitemListHandler = [
         fetchList: { 
             entity.appointmentitems.each{
-                it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
+                def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
+//                it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
+                it.pds = pds
                 it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
             }
             return entity.appointmentitems 
@@ -146,7 +147,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
             
         },
         onCommitItem:{ x ->
-            println x
+//            println x
             if (x.cutoffdate && !x.cutoffreason.objid){
                 throw new Exception("Cut-off Reason is required.");
             }

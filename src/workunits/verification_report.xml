@@ -1,0 +1,6 @@
+<workunit extends="wtemplates/SimpleReportController.xml" >
+    <invokers>
+        <invoker type="verify:report" action="preview" role="PDS_REPORTS"/>        
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.ReportVerifyController" />
+</workunit>

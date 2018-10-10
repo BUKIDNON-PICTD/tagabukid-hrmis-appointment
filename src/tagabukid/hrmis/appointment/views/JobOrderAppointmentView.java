@@ -71,7 +71,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.NONE}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.employee.name}", "lookup:tagabukid_hrmis_personnel")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{(item.employee.prenametitle == '' ||  !item.employee.prenametitle ?'': item.employee.prenametitle + ' ') + item.employee.person.name + (item.employee.nameextension=='' || !item.employee.nameextension?'' :' ' + item.employee.nameextension)}", "lookup:tagabukid_hrmis_pds")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "position"}
@@ -261,7 +261,7 @@ public class JobOrderAppointmentView extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder2 = new com.rameses.rcp.control.border.XTitledBorder();

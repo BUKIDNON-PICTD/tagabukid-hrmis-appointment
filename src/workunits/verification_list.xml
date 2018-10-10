@@ -1,6 +1,6 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" 
     schemaName="hrmis_verify_applicant" cols="itemno,person.name" orderBy="person.name">
     <invokers>
-        <invoker folderid="/home/hrmis/hrmispds" caption="Applicant" action="init" index="3" role="PDS_SHARED"/>
+        <invoker folderid="/home/hrmis" caption="Applicant" action="init" index="7" role="PDS_SHARED"/>
     </invokers>
 </workunit>
