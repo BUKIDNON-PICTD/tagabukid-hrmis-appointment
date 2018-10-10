@@ -60,7 +60,7 @@
 						width="190"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>

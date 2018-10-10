@@ -16,16 +16,14 @@ class ReportAppointmentCasualController extends com.rameses.etracs.shared.Report
     def pagelist
     def page
     def initReport() {
-        println "TEST"
         pagelist = svc.getPages( entity ); 
         page = (pagelist ? pagelist.first() : null); 
         return preview();
     }
     
     def getReportData() { 
-        entity._schemaname = 'hrmis_appointmentcasual'
         data = svc.getAppointmentCasualById(entity,page,pagelist);
-//        data.reportdata.appointment.appointmentitems = data.reportdata.appointment.appointmentitems[page.start..page.end]
+
         return data.reportdata
     } 
     

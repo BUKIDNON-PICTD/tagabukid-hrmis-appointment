@@ -31,7 +31,7 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def selectedAppointmentItem
     
     boolean isAllowApprove() {
-        return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
+        return ( mode=='read' && entity.state.toString().matches('DRAFT|CUTOFF') ); 
     }
     
     boolean isAllowPreviewAppointment() {
@@ -45,9 +45,14 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
 //        return (mode=='read' && entity.state=='APPROVED' && range.contains((datediff / (60*60*24*1000)) as int)); 
         return (mode=='read' && entity.state=='APPROVED' && ((datediff / (60*60*24*1000)) as int) < 0); 
     }
+    
+    boolean isAllowCutoff() {
+        return (mode=='read' && entity.state=='APPROVED'); 
+    }
+    
 
     boolean isEditAllowed() {
-        return ( mode=='read' && entity.state=='DRAFT'); 
+        return ( mode=='read' && entity.state.matches('DRAFT|CUTOFF')); 
     }
 
     boolean isViewReportAllowed(){
@@ -58,8 +63,11 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         return false
     }
 
-    public void beforeSave(){
-
+    public void beforeSave(o){
+        entity.appointmentitems.each{
+            def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
+            it.personnel = pds.person
+        }
     }
 
     public void afterCreate(){
@@ -78,12 +86,8 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
 //        println entity
 //        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
 //        entity.appointmentitems.each{
-//            //println it
-//            it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
-//            it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
-//            //postgrehack
-////            it.plantilla.Id = it.plantilla.objid
-//
+//            def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
+//            it.personnel = pds
 //        }
     }
     def suggestGroupName = [
@@ -100,7 +104,9 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def appointmentitemListHandler = [
         fetchList: { 
             entity.appointmentitems.each{
-                it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
+                def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
+//                it.personnel = tgbkdSvc.getEntityByObjid([entityid:it.personnel.objid]);
+                it.pds = pds
                 it.plantilla = tgbkdSvc.findPlantillaById([plantillaid:it.plantilla.objid]);
             }
             return entity.appointmentitems 
@@ -112,7 +118,10 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
             ]
         },
         onRemoveItem : {
-            if (MsgBox.confirm('Delete item?')){                
+            if (entity.state != 'DRAFT'){
+                MsgBox.alert("Delete is not allowed.")
+                return false
+            }else if (MsgBox.confirm('Delete item?')){                
                 entity.appointmentitems.remove(it)
                 persistenceSvc.removeEntity([_schemaname:'hrmis_appointmentcasualitems',objid:it.objid])
                 appointmentitemListHandler?.load();
@@ -127,6 +136,21 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
                 o.dailywage = o.salaryscheduleitem.amount / 22
             }
             
+            if(col == 'cutoffdate'){
+                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+                java.util.Date date = sdf1.parse(o.cutoffdate);
+                java.sql.Date cutoffdate = new java.sql.Date(date.getTime()); 
+                if (entity.effectivefrom >= cutoffdate || cutoffdate >= entity.effectiveuntil){
+                    throw new Exception("Cut-off date must be between Effective From and Effective Until.");
+                }
+            }
+            
+        },
+        onCommitItem:{ x ->
+//            println x
+            if (x.cutoffdate && !x.cutoffreason.objid){
+                throw new Exception("Cut-off Reason is required.");
+            }
         },
         onAddItem : {
 //            it.plantilla.Id = it.plantilla.Id.toString()
@@ -165,6 +189,17 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
                     _schemaname: 'hrmis_appointmentcasual', 
                     objid : entity.objid, 
                     state : 'APPROVED' 
+                ]); 
+            loadData();
+        }
+    }
+    
+     void cutoff() { 
+        if ( MsgBox.confirm('You are about to edit this document. Proceed?')) { 
+            getPersistenceService().update([ 
+                    _schemaname: 'hrmis_appointmentcasual', 
+                    objid : entity.objid, 
+                    state : 'CUTOFF' 
                 ]); 
             loadData();
         }

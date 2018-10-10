@@ -36,7 +36,7 @@ class  PDSEducationalInfoController extends CrudFormModel {
         return false
     }
 
-    def levels = ["ELEMENTARY", "SECONDARY" ,"VOCATIONAL / TRADE COURSE" , "COLLEGE", "GRADUATE STUDIES"];
+    def levels = ["ELEMENTARY", "SECONDARY" ,"VOCATIONAL / TRADE COURSE" , "TERTIARY", "GRADUATE STUDIES"];
 
     def selectedEducationalInfo
     public void beforeOpen() {

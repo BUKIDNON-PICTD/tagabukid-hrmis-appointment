@@ -4,9 +4,9 @@ import com.rameses.osiris2.client.*;
 import com.rameses.osiris2.common.*;
 import com.rameses.osiris2.reports.*;
 
-class ReportVerificationController extends ReportController {
+class ReportVerifyController extends ReportController {
     
-    @Service("TagabukidHRMISVerificationReportService")
+    @Service("TagabukidHRMISVerifyReportService")
     def svc;
 
     def title = "FOR VERIFICATION";

@@ -40,7 +40,7 @@ class ReportPDSController extends ReportController {
 
            new SubReport("VOLUNTARYWORK", REPORT_PATH + "psdreporttest_subreportvoluntarywork.jasper"),
            new SubReport("TRAINING", REPORT_PATH + "psdreporttest_subreporttraining.jasper"),
-//           new SubReport("SKILL", REPORT_PATH + "psdreporttest_subreportskills.jasper"),
+           new SubReport("SKILL", REPORT_PATH + "psdreporttest_subreportskills.jasper"),
            new SubReport("NONACADEMIC", REPORT_PATH + "psdreporttest_subreportnonacademic.jasper"),
            new SubReport("MEMBERSHIP", REPORT_PATH + "psdreporttest_subreportmembership.jasper"),
 
