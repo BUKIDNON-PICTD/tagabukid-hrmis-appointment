@@ -590,7 +590,7 @@ public class PDSFamilyBackgroundPage extends javax.swing.JPanel {
                 , new Object[]{"editable", true}
                 , new Object[]{"editableWhen", null}
                 , new Object[]{"textCase", com.rameses.rcp.constant.TextCase.UPPER}
-                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandmother.firstname}", "lookup:individualwide")}
+                , new Object[]{"typeHandler", new com.rameses.rcp.common.LookupColumnHandler("#{item.fathersidegrandmother.lastname}", "lookup:individualwide")}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
                 new Object[]{"name", "fathersidegrandmother.firstname"}
