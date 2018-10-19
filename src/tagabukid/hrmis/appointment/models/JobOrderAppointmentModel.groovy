@@ -6,6 +6,7 @@ import com.rameses.seti2.models.*;
 import com.rameses.osiris2.client.*
 import com.rameses.osiris2.common.*;
 import com.rameses.util.*;
+import java.text.SimpleDateFormat
 
 class JobOrderAppointmentModel extends CrudFormModel{
 
@@ -49,13 +50,17 @@ class JobOrderAppointmentModel extends CrudFormModel{
         //return (mode=='read' && entity.state=='APPROVED' && range.contains((datediff / (60*60*24*1000)) as int));
         return (mode=='read' && entity.state=='APPROVED' && ((datediff / (60*60*24*1000)) as int) < 0); 
     }
+    
+    boolean isAllowCutoff() {
+        return (mode=='read' && entity.state=='APPROVED'); 
+    }
 
     boolean isDeleteAllowed() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
 
     boolean isEditAllowed() {
-        return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
+        return ( mode=='read' && entity.state.toString().matches('DRAFT|CUTOFF') ); 
     }
 
     boolean isViewReportAllowed(){
@@ -157,7 +162,24 @@ class JobOrderAppointmentModel extends CrudFormModel{
                 o.dailysalary = o.salaryscheduleitem.amount / 22
             }
             
+             if(col == 'cutoffdate'){
+                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+                java.util.Date date = sdf1.parse(o.cutoffdate);
+                java.sql.Date cutoffdate = new java.sql.Date(date.getTime()); 
+                if (entity.effectivefrom >= cutoffdate || cutoffdate >= entity.effectiveuntil){
+                    throw new Exception("Cut-off date must be between Effective From and Effective Until.");
+                }
+            }
+            
         },
+        
+        onCommitItem:{ x ->
+//            println x
+            if (x.cutoffdate && !x.cutoffreason.objid){
+                throw new Exception("Cut-off Reason is required.");
+            }
+        },
+        
         onAddItem : {
             entity.appointmentMemberItems << it;
         },
@@ -170,9 +192,14 @@ class JobOrderAppointmentModel extends CrudFormModel{
                 return true;
             }
             return false;
-        }
-            
+        },
         
+        validate:{li->
+            def item=li.item;
+            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
+        }
+        
+            
     ] as EditorListModel;
 
         
@@ -214,6 +241,17 @@ class JobOrderAppointmentModel extends CrudFormModel{
                state : 'APPROVED' 
             ]); 
             loadData(); 
+        }
+    }
+    
+    void cutoff() { 
+        if ( MsgBox.confirm('You are about to edit this document. Proceed?')) { 
+            getPersistenceService().update([ 
+                    _schemaname: 'hrmis_appointmentjoborder', 
+                    objid : entity.objid, 
+                    state : 'CUTOFF' 
+                ]); 
+            loadData();
         }
     }
     
