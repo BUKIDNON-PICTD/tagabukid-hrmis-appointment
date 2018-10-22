@@ -97,9 +97,14 @@ class JobOrderAppointmentModel extends CrudFormModel{
         //entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
         
         entity.appointmentMemberItems.each{
-            def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pdsid])
-            it.employee = pds
-//            it.employee = tgbkdSvc.getEntityByObjid([entityid:it.entityid]);
+            if (it.pdsid){
+                def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pdsid])
+                it.employee = pds  
+            }else{
+                it.employee = tgbkdSvc.getEntityByObjid([entityid:it.entityid]);
+            }
+            
+           
             it.position = persistenceSvc.read( [_schemaname:'master_tbljobposition', objid:it.positionid] );
             it.fund = persistenceSvc.read( [_schemaname:'master_tblfinfund', objid:it.fundid] );
             it.account = persistenceSvc.read( [_schemaname:'master_tblfinaccounttitle', objid:it.accountid] );

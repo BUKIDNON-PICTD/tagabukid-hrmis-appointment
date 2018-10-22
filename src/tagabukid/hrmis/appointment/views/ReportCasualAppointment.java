@@ -33,7 +33,10 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
 
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xComboBox1 = new com.rameses.rcp.control.XComboBox();
+        xCheckBox1 = new com.rameses.rcp.control.XCheckBox();
         xReportPanel1 = new com.rameses.osiris2.reports.ui.XReportPanel();
+
+        xFormPanel1.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
 
         xComboBox1.setAllowNull(false);
         xComboBox1.setCaption("Page");
@@ -43,6 +46,11 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
         xComboBox1.setPreferredSize(new java.awt.Dimension(200, 20));
         xComboBox1.setRequired(true);
         xFormPanel1.add(xComboBox1);
+
+        xCheckBox1.setName("hidenoa"); // NOI18N
+        xCheckBox1.setShowCaption(false);
+        xCheckBox1.setText("Hide Nature of Appointment");
+        xFormPanel1.add(xCheckBox1);
 
         xReportPanel1.setDepends(new String[] {"page"});
         xReportPanel1.setName("report"); // NOI18N
@@ -71,6 +79,7 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.rameses.rcp.control.XCheckBox xCheckBox1;
     private com.rameses.rcp.control.XComboBox xComboBox1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.osiris2.reports.ui.XReportPanel xReportPanel1;
