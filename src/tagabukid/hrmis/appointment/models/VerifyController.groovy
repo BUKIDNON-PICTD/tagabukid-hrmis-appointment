@@ -58,30 +58,30 @@ class VerifyController extends CrudFormModel {
     public void beforeSave(o){
        // Father Side
         if (entity.father.size > 0){
-            entity.father[0]._schemaname='entityindividual'
+            // entity.father[0]._schemaname='entityindividual'
             // persistenceSvc.update(entity.father[0])
         }
         
         if (entity.fathersidegrandfather.size > 0){
-            entity.fathersidegrandfather[0]._schemaname='entityindividual'
+            // entity.fathersidegrandfather[0]._schemaname='entityindividual'
             // persistenceSvc.update(entity.father[0])
         }
         if (entity.fathersidegrandmother.size > 0){
-            entity.fathersidegrandmother[0]._schemaname='entityindividual'
+            // entity.fathersidegrandmother[0]._schemaname='entityindividual'
             // persistenceSvc.update(entity.father[0])
         }
 
         // Mother Side
         if (entity.mother.size > 0){
-            entity.mother[0]._schemaname='entityindividual'
+            // entity.mother[0]._schemaname='entityindividual'
             // persistenceSvc.update(entity.mother[0])
         }
         if (entity.mothersidegrandfather.size > 0){
-            entity.mothersidegrandfather[0]._schemaname='entityindividual'
+            // entity.mothersidegrandfather[0]._schemaname='entityindividual'
             // persistenceSvc.update(entity.father[0])
         }
         if (entity.mothersidegrandmother.size > 0){
-            entity.mothersidegrandmother[0]._schemaname='entityindividual'
+            // entity.mothersidegrandmother[0]._schemaname='entityindividual'
             // persistenceSvc.update(entity.father[0])
         }
 

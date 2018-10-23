@@ -134,10 +134,9 @@ public class MasterInstitutionView extends javax.swing.JPanel {
         xLookupField3.setCaption("Barangay");
         xLookupField3.setCaptionWidth(100);
         xLookupField3.setExpression("#{item.name}");
-        xLookupField3.setHandler("barangay:lookup");
+        xLookupField3.setHandler("lookup:tagabukid_hrmis_barangay");
         xLookupField3.setName("entity.barangay"); // NOI18N
         xLookupField3.setPreferredSize(new java.awt.Dimension(0, 20));
-        xLookupField3.setRequired(true);
         xFormPanel2.add(xLookupField3);
 
         xLookupField4.setCaption("City/Municipality");
@@ -146,7 +145,6 @@ public class MasterInstitutionView extends javax.swing.JPanel {
         xLookupField4.setHandler("citymunicipality:lookup");
         xLookupField4.setName("entity.citymunicipality"); // NOI18N
         xLookupField4.setPreferredSize(new java.awt.Dimension(0, 20));
-        xLookupField4.setRequired(true);
         xFormPanel2.add(xLookupField4);
 
         xHorizontalPanel2.add(xFormPanel2);
