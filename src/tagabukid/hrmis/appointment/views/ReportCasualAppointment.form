@@ -40,6 +40,9 @@
   </Layout>
   <SubComponents>
     <Container class="com.rameses.rcp.control.XFormPanel" name="xFormPanel1">
+      <Properties>
+        <Property name="orientation" type="java.lang.String" value="HORIZONTAL"/>
+      </Properties>
       <SubComponents>
         <Component class="com.rameses.rcp.control.XComboBox" name="xComboBox1">
           <Properties>
@@ -52,6 +55,13 @@
               <Dimension value="[200, 20]"/>
             </Property>
             <Property name="required" type="boolean" value="true"/>
+          </Properties>
+        </Component>
+        <Component class="com.rameses.rcp.control.XCheckBox" name="xCheckBox1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="hidenoa" noResource="true"/>
+            <Property name="showCaption" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="Hide Nature of Appointment"/>
           </Properties>
         </Component>
       </SubComponents>
