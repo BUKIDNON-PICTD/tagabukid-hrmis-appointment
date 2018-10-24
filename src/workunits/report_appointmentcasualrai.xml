@@ -35,6 +35,7 @@
        List getPagelist() {
             pagelist = svc.getPages( entity ); 
             page = (pagelist ? pagelist.first() : null); 
+            entity.hidenoa = false;
             return pagelist
        }
 
@@ -50,6 +51,7 @@
                     new FormControl( "checkbox", [caption:'Oath of Office', name:'entity.oathofoffice', preferredSize:'100,19' , captionWidth:300]),
                     new FormControl( "checkbox", [caption:'Certificate of Assumption of Duty', name:'entity.assumptionofduty', preferredSize:'100,19' , captionWidth:300]),
                     new FormControl( "combo", [caption:'Page List', name:'page', items:'pagelist', expression:'#{item.title}', preferredSize:'0,19', captionWidth:300, allowNull:'false']),
+                    new FormControl( "checkbox", [caption:'Hide Nature of Appointment', name:'entity.hidenoa', preferredSize:'100,19' , captionWidth:300]),
                 ]    
             },
        ] as FormPanelModel;

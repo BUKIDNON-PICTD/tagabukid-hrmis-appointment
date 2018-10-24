@@ -49,6 +49,7 @@
 	<parameter name="LASTPAGE" isForPrompting="false" class="java.lang.Boolean"/>
 	<parameter name="PAGENUMBER" isForPrompting="false" class="java.lang.Integer"/>
 	<parameter name="PAGECOUNT" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -156,6 +157,9 @@
 					</subreportParameter>
 					<subreportParameter  name="natureofappointment.name">
 						<subreportParameterExpression><![CDATA[$F{natureofappointment.name}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="HIDENOA">
+						<subreportParameterExpression><![CDATA[$P{HIDENOA}]]></subreportParameterExpression>
 					</subreportParameter>
 					<dataSourceExpression><![CDATA[$F{appointmentitems}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{AppointmentItemList}]]></subreportExpression>
@@ -653,7 +657,7 @@
 						x="0"
 						y="211"
 						width="22"
-						height="34"
+						height="54"
 						key="staticText-57"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -670,7 +674,7 @@
 						x="642"
 						y="211"
 						width="254"
-						height="34"
+						height="54"
 						key="staticText-58"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -687,7 +691,7 @@
 						x="22"
 						y="211"
 						width="361"
-						height="34"
+						height="54"
 						key="staticText-59"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -702,9 +706,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="245"
+						y="265"
 						width="22"
-						height="34"
+						height="24"
 						key="staticText-61"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -719,9 +723,9 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="245"
+						y="265"
 						width="254"
-						height="34"
+						height="24"
 						key="staticText-62"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -736,9 +740,9 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="245"
+						y="265"
 						width="361"
-						height="34"
+						height="24"
 						key="staticText-63"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -753,9 +757,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="279"
+						y="289"
 						width="22"
-						height="34"
+						height="24"
 						key="staticText-65"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -770,9 +774,9 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="279"
+						y="288"
 						width="254"
-						height="34"
+						height="25"
 						key="staticText-66"/>
 					<box>					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -787,9 +791,9 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="279"
+						y="289"
 						width="361"
-						height="34"
+						height="24"
 						key="staticText-67"/>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -948,9 +952,9 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{appointmentforms}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{appointmentforms}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -965,9 +969,9 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{casualappointment}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{casualappointment}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -982,16 +986,16 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{pds}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{pds}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
 						y="211"
 						width="259"
-						height="34"
+						height="54"
 						key="textField-13"/>
 					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -999,16 +1003,16 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{eligibility}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{eligibility}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="245"
+						y="265"
 						width="259"
-						height="34"
+						height="24"
 						key="textField-14"/>
 					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1016,16 +1020,16 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{positiondescription}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{positiondescription}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="279"
+						y="289"
 						width="259"
-						height="34"
+						height="24"
 						key="textField-15"/>
 					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1033,9 +1037,9 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{oathofoffice}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{oathofoffice}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1050,9 +1054,9 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{assumptionofduty}.toString().equals("true") ? "✓" : null]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{assumptionofduty}.toString().equals("true") ? "/" : null]]></textFieldExpression>
 				</textField>
 			</band>
 			</groupHeader>
@@ -1179,24 +1183,6 @@
 						<font size="6" isBold="false" isItalic="true"/>
 					</textElement>
 				<text><![CDATA[Revised 2017]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="745"
-						y="0"
-						width="150"
-						height="11"
-						key="staticText-35"/>
-					<box>					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center">
-						<font pdfFontName="Helvetica" size="8" isBold="false" isItalic="false"/>
-					</textElement>
-				<text><![CDATA[For Use of Accredited Agency Only]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

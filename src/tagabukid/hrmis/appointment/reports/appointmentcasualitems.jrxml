@@ -93,6 +93,7 @@
 	<parameter name="PRINTEDBY" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="signatorygroup.signatoryGroupItems" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="START" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
 
 	<field name="personnel.objid" class="java.lang.String"/>
 	<field name="dailywage" class="java.math.BigDecimal"/>
@@ -420,7 +421,9 @@
 						width="96"
 						height="24"
 						backcolor="#99CCFF"
-						key="staticText-14"/>
+						key="staticText-14">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -440,7 +443,10 @@
 						width="143"
 						height="24"
 						backcolor="#99CCFF"
-						key="staticText-15"/>
+						key="staticText-15"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -460,7 +466,9 @@
 						width="96"
 						height="29"
 						backcolor="#99CCFF"
-						key="staticText-16"/>
+						key="staticText-16">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -480,7 +488,10 @@
 						width="76"
 						height="29"
 						backcolor="#99CCFF"
-						key="staticText-17"/>
+						key="staticText-17"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -500,7 +511,10 @@
 						width="67"
 						height="29"
 						backcolor="#99CCFF"
-						key="staticText-18"/>
+						key="staticText-18"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -618,6 +632,75 @@
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
 				<text><![CDATA[(3) Provide proper pagination (Page n of n page/s).]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="656"
+						y="69"
+						width="143"
+						height="24"
+						backcolor="#99CCFF"
+						key="staticText-27"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ACKNOWLEDGEMENT OF APPOINTMENT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="656"
+						y="93"
+						width="76"
+						height="29"
+						backcolor="#99CCFF"
+						key="staticText-28"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[SIGNATURE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="732"
+						y="93"
+						width="67"
+						height="29"
+						backcolor="#99CCFF"
+						key="staticText-29"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DATE RECEIVED]]></text>
 				</staticText>
 			</band>
 		</columnHeader>
@@ -820,7 +903,9 @@
 						width="96"
 						height="9"
 						key="textField"
-						positionType="Float"/>
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -840,7 +925,9 @@
 						width="76"
 						height="9"
 						key="staticText-19"
-						positionType="Float"/>
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -860,7 +947,53 @@
 						width="67"
 						height="9"
 						key="staticText-20"
-						positionType="Float"/>
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="656"
+						y="0"
+						width="76"
+						height="9"
+						key="staticText-30"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="732"
+						y="0"
+						width="67"
+						height="9"
+						key="staticText-31"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -875,22 +1008,47 @@
 			</band>
 		</detail>
 		<columnFooter>
-			<band height="24"  isSplitAllowed="false" >
+			<band height="30"  isSplitAllowed="false" >
 				<staticText>
 					<reportElement
 						x="0"
 						y="0"
 						width="895"
-						height="24"
+						height="30"
 						key="staticText-26"
-						positionType="Float"/>
+						positionType="Float"
+						isPrintWhenDetailOverflows="true">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Justified">
+						<font fontName="Tahoma" size="8"/>
+					</textElement>
+				<text><![CDATA[The above-named personnel are hereby hired/appointed as casuals/contractuals at the rate of compensation stated opposite their/his name(s) for the period indicated. It is understood that such employment will cease automatically at the end of the period stated unless renewed. Any or all of them may be laid-off any time before the expiration of the employment period when their services are no longer needed or funds are no longer available or the project has already been completed/finished or their performance are below par.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="799"
+						height="30"
+						key="staticText-32"
+						positionType="Float"
+						isPrintWhenDetailOverflows="true">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
 						<font fontName="Tahoma" size="8"/>
 					</textElement>
 				<text><![CDATA[The above-named personnel are hereby hired/appointed as casuals/contractuals at the rate of compensation stated opposite their/his name(s) for the period indicated. It is understood that such employment will cease automatically at the end of the period stated unless renewed. Any or all of them may be laid-off any time before the expiration of the employment period when their services are no longer needed or funds are no longer available or the project has already been completed/finished or their performance are below par.]]></text>

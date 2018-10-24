@@ -40,6 +40,7 @@
 	<parameter name="LASTPAGE" isForPrompting="false" class="java.lang.Boolean"/>
 	<parameter name="PAGENUMBER" isForPrompting="false" class="java.lang.Integer"/>
 	<parameter name="PAGECOUNT" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -174,6 +175,9 @@
 					</subreportParameter>
 					<subreportParameter  name="LIMIT">
 						<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="HIDENOA">
+						<subreportParameterExpression><![CDATA[$P{HIDENOA}]]></subreportParameterExpression>
 					</subreportParameter>
 					<dataSourceExpression><![CDATA[$F{appointmentitems}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{AppointmentItemList}]]></subreportExpression>
