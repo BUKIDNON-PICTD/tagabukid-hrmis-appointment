@@ -44,6 +44,9 @@ class VerifyController extends CrudFormModel {
     def selectedSpouseFATHERsidegrandMOTHERItem
 
 
+    def father
+
+
     def verify(){
        def op = Inv.lookupOpener("verify:report",[entity: entity]);
        op.target = 'self';
@@ -87,6 +90,7 @@ class VerifyController extends CrudFormModel {
 
 
         entity.state = "DRAFT";
+
         if(o == 'create'){
             entity.person_name = entity.person.lastname + ", " + entity.person.firstname + " " + entity.person.middlename;
             entity.itemno = svc.getApplicantNo();
@@ -102,6 +106,7 @@ class VerifyController extends CrudFormModel {
             entity.recordlog_lastupdatedbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_lastupdatedbyuserid = OsirisContext.env.USERID;
         }
+        println entity
     }
 
 
@@ -135,7 +140,9 @@ class VerifyController extends CrudFormModel {
             
         },
         onAddItem : {
+            it.father.name = it.father.entityname
             entity.father.add(it);
+            println entity.father
         },
         validate:{li->
             //def item=li.item;
@@ -173,6 +180,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.fathersidegrandfather.name = it.fathersidegrandfather.entityname
             entity.fathersidegrandfather.add(it);
         },
         validate:{li->
@@ -209,6 +217,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.fathersidegrandmother.name = it.fathersidegrandmother.entityname
             entity.fathersidegrandmother.add(it);
         },
         validate:{li->
@@ -246,6 +255,7 @@ class VerifyController extends CrudFormModel {
             
         },
         onAddItem : {
+            it.mother.name = it.mother.entityname
             entity.mother.add(it);
         },
         validate:{li->
@@ -283,6 +293,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.mothersidegrandfather.name = it.mothersidegrandfather.entityname
             entity.mothersidegrandfather.add(it);
         },
         validate:{li->
@@ -319,6 +330,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.mothersidegrandmother.name = it.mothersidegrandmother.entityname
             entity.mothersidegrandmother.add(it);
         },
         validate:{li->
@@ -355,6 +367,7 @@ class VerifyController extends CrudFormModel {
             
         },
         onAddItem : {
+            it.spouse.name = it.spouse.entityname
             entity.spouse.add(it);
         },
         validate:{li->
@@ -393,6 +406,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.spousefather.name = it.spousefather.entityname
             entity.spousefather.add(it);
         },
         validate:{li->
@@ -429,6 +443,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.spousemother.name = it.spousemother.entityname
             entity.spousemother.add(it);
         },
         validate:{li->
@@ -466,6 +481,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.spousemothersidegrandfather.name = it.spousemothersidegrandfather.entityname
             entity.spousemothersidegrandfather.add(it);
         },
         validate:{li->
@@ -503,6 +519,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.spousemothersidegrandmother.name = it.spousemothersidegrandmother.entityname
             entity.spousemothersidegrandmother.add(it);
         },
         validate:{li->
@@ -540,6 +557,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.spousefathersidegrandmother.name = it.spousefathersidegrandmother.entityname
             entity.spousefathersidegrandmother.add(it);
         },
         validate:{li->
@@ -577,6 +595,7 @@ class VerifyController extends CrudFormModel {
             o.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
         },
         onAddItem : {
+            it.spousefathersidegrandfather.name = it.spousefathersidegrandfather.entityname
             entity.spousefathersidegrandfather.add(it);
         },
         validate:{li->

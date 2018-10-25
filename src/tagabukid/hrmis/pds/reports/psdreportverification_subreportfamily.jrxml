@@ -69,6 +69,19 @@
 	<field name="spousemother.maidenname" class="java.lang.String"/>
 	<field name="spousefathergrandmother.maidenname" class="java.lang.String"/>
 	<field name="spousemothergrandmother.maidenname" class="java.lang.String"/>
+	<field name="father.father.name" class="java.lang.String"/>
+	<field name="mother.mother.name" class="java.lang.String"/>
+	<field name="spouse.spouse.name" class="java.lang.String"/>
+	<field name="fathergrandmother.fathersidegrandmother.name" class="java.lang.String"/>
+	<field name="fathergrandfather.fathersidegrandfather.name" class="java.lang.String"/>
+	<field name="mothergrandmother.mothersidegrandmother.name" class="java.lang.String"/>
+	<field name="mothergrandfather.mothersidegrandfather.name" class="java.lang.String"/>
+	<field name="spousefather.spousefather.name" class="java.lang.String"/>
+	<field name="spousemother.spousemother.name" class="java.lang.String"/>
+	<field name="spousefathergrandmother.spousefathersidegrandmother.name" class="java.lang.String"/>
+	<field name="spousefathergrandfather.spousefathersidegrandfather.name" class="java.lang.String"/>
+	<field name="spousemothergrandmother.spousemothersidegrandmother.name" class="java.lang.String"/>
+	<field name="spousemothergrandfather.spousemothersidegrandfather.name" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -105,7 +118,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{father.father.lastname} + ", " + $F{father.father.firstname} + " " + $F{father.father.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{father.father.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -124,7 +137,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mother.mother.lastname} + ", " + $F{mother.mother.firstname} + " " + $F{mother.mother.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mother.mother.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -143,7 +156,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spouse.spouse.lastname} + ", " + $F{spouse.spouse.firstname} + " " + $F{spouse.spouse.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spouse.spouse.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -162,7 +175,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandmother.fathersidegrandmother.lastname} + ", " + $F{fathergrandmother.fathersidegrandmother.firstname} + " " + $F{fathergrandmother.fathersidegrandmother.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandmother.fathersidegrandmother.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -181,7 +194,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandfather.fathersidegrandfather.lastname} + ", " + $F{fathergrandfather.fathersidegrandfather.firstname} + " " + $F{fathergrandfather.fathersidegrandfather.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fathergrandfather.fathersidegrandfather.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -200,7 +213,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandmother.mothersidegrandmother.lastname} + ", " + $F{mothergrandmother.mothersidegrandmother.firstname} + " " + $F{mothergrandmother.mothersidegrandmother.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandmother.mothersidegrandmother.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -219,7 +232,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandfather.mothersidegrandfather.lastname} + ", " + $F{mothergrandfather.mothersidegrandfather.firstname} + " " + $F{mothergrandfather.mothersidegrandfather.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mothergrandfather.mothersidegrandfather.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -238,7 +251,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefather.spousefather.lastname} + ", " + $F{spousefather.spousefather.firstname} + " " + $F{spousefather.spousefather.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefather.spousefather.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -257,7 +270,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandmother.spousefathersidegrandmother.lastname} + ", " + $F{spousefathergrandmother.spousefathersidegrandmother.firstname} + " " + $F{spousefathergrandmother.spousefathersidegrandmother.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandmother.spousefathersidegrandmother.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -276,7 +289,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandfather.spousefathersidegrandfather.lastname} + ", " + $F{spousefathergrandfather.spousefathersidegrandfather.firstname} + " " + $F{spousefathergrandfather.spousefathersidegrandfather.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousefathergrandfather.spousefathersidegrandfather.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -295,7 +308,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandmother.spousemothersidegrandmother.lastname} + ", " + $F{spousemothergrandmother.spousemothersidegrandmother.firstname} + " " + $F{spousemothergrandmother.spousemothersidegrandmother.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandmother.spousemothersidegrandmother.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -314,7 +327,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandfather.spousemothersidegrandfather.lastname} + ", " + $F{spousemothergrandfather.spousemothersidegrandfather.firstname} + " " + $F{spousemothergrandfather.spousemothersidegrandfather.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemothergrandfather.spousemothersidegrandfather.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -333,7 +346,7 @@
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemother.spousemother.lastname} + ", " + $F{spousemother.spousemother.firstname} + " " + $F{spousemother.spousemother.middlename}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousemother.spousemother.name}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>
