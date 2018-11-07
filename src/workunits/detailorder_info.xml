@@ -1,0 +1,14 @@
+<workunit>
+    <invokers>
+        <invoker type="hrmis_detailorder_list:open" caption="Detail Order" action="open" target="popup"/>
+        <invoker type="hrmis_detailorder_list:create" caption="Detail Order" action="create" target="popup"/>   
+        <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}"/>            
+        <invoker type="formActions" caption="Return to Office" action="returned" visibleWhen="#{returnToOffice==true}"/>           
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.DetailOrderController"/>
+    
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.DetailOrderPage"/>
+    </pages>
+</workunit>
