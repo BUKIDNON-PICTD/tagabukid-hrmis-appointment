@@ -1,3 +1,4 @@
+
 import com.rameses.rcp.annotations.*
 import com.rameses.rcp.common.*
 import com.rameses.osiris2.client.*
@@ -5,6 +6,11 @@ import com.rameses.osiris2.common.*
 import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import javax.swing.JFrame
+import javax.swing.JOptionPane;
+
 import com.rameses.rcp.annotations.*;
 import com.rameses.rcp.common.*;
 import com.rameses.seti2.models.*;
@@ -74,12 +80,27 @@ class DetailOrderControlller extends CrudFormModel {
 
     void returned() { 
         
-        if ( MsgBox.confirm('Proceed?')) { 
-            getPersistenceService().update([ 
-               _schemaname: 'hrmis_detailorder_list', 
-               objid : entity.objid, 
-               returned : 'TRUE',
-            ]); 
+        // if ( MsgBox.confirm('Proceed?')) { 
+        //     getPersistenceService().update([ 
+        //        _schemaname: 'hrmis_detailorder_list', 
+        //        objid : entity.objid, 
+        //        returned : 'TRUE',
+        //     ]); 
+        //     loadData(); 
+        // }
+        JFrame frame = new JFrame();
+        Object result = JOptionPane.showInputDialog(frame, "Enter Return Date:");
+        if ( result ) {
+                SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+                Date date = formatter.parse(result);
+
+
+                getPersistenceService().update([
+                   _schemaname: 'hrmis_detailorder_list', 
+                   objid : entity.objid, 
+                   returned : 'TRUE',
+                   returndate: formatter.format(date),
+                ]);        
             loadData(); 
         }
     }

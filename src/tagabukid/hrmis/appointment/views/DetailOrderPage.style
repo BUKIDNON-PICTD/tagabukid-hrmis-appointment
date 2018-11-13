@@ -1,0 +1,3 @@
+"entity.returndate"[mode == 'edit' || mode == 'create']{
+    enabled:false;
+}

@@ -48,6 +48,8 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xTextField1 = new com.rameses.rcp.control.XTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
+        xSeparator1 = new com.rameses.rcp.control.XSeparator();
+        xDateField2 = new com.rameses.rcp.control.XDateField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
         xTitledBorder1.setTitle("Detail Order Information");
@@ -135,6 +137,23 @@ public class DetailOrderPage extends javax.swing.JPanel {
 
         xFormPanel3.add(jScrollPane1);
 
+        xSeparator1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel3.add(xSeparator1);
+
+        xDateField2.setCaption("Date Returned");
+        xDateField2.setCaptionFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        xDateField2.setCaptionWidth(150);
+        xDateField2.setCellPadding(new java.awt.Insets(30, 20, 30, 20));
+        xDateField2.setDepends(new String[] {});
+        xDateField2.setEnabled(false);
+        xDateField2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        xDateField2.setInputFormat("");
+        xDateField2.setName("entity.returndate"); // NOI18N
+        xDateField2.setOutputFormat("MMM dd, yyyy");
+        xDateField2.setPreferredSize(new java.awt.Dimension(0, 20));
+        xDateField2.setVisibleWhen("");
+        xFormPanel3.add(xDateField2);
+
         javax.swing.GroupLayout xPanel1Layout = new javax.swing.GroupLayout(xPanel1);
         xPanel1.setLayout(xPanel1Layout);
         xPanel1Layout.setHorizontalGroup(
@@ -155,8 +174,8 @@ public class DetailOrderPage extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(xFormPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xFormPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(xFormPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         xHorizontalPanel1.add(xPanel1);
@@ -184,6 +203,7 @@ public class DetailOrderPage extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private com.rameses.rcp.control.XComboBox xComboBox1;
     private com.rameses.rcp.control.XDateField xDateField1;
+    private com.rameses.rcp.control.XDateField xDateField2;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XFormPanel xFormPanel3;
@@ -192,6 +212,7 @@ public class DetailOrderPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLookupField xLookupField2;
     private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XPanel xPanel1;
+    private com.rameses.rcp.control.XSeparator xSeparator1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextAreaBeanInfo xTextAreaBeanInfo1;
     private com.rameses.rcp.control.XTextAreaBeanInfo xTextAreaBeanInfo2;
