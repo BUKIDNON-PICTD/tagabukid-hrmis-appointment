@@ -63,11 +63,11 @@ public class PDSInfoPage extends javax.swing.JPanel {
 
         jSplitPane1.setLeftComponent(jSplitPane2);
 
+        xSubFormPanel1.setCellPadding(new java.awt.Insets(0, 0, 10, 0));
         xSubFormPanel1.setDepends(new String[] {"currentSection"});
         xSubFormPanel1.setDynamic(true);
         xSubFormPanel1.setHandler("currentSection");
         xSubFormPanel1.setName("subform"); // NOI18N
-        xSubFormPanel1.setLayout(new java.awt.BorderLayout(0, 10));
         jSplitPane1.setRightComponent(xSubFormPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -23,16 +23,25 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
+	<parameter name="date" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="details" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="signatory" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="subject" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="signatorytitle" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="to" class="java.lang.String"/>
 	<field name="charges.name" class="java.lang.String"/>
-	<field name="personnel" class="java.lang.String"/>
+	<field name="personnel.name" class="java.lang.String"/>
 	<field name="date" class="java.lang.String"/>
 	<field name="admin" class="java.lang.String"/>
 	<field name="subject" class="java.lang.String"/>
 	<field name="charges.code" class="java.lang.String"/>
 	<field name="body" class="java.lang.String"/>
 	<field name="supervisor" class="java.lang.String"/>
+	<field name="supervisortitle" class="java.lang.String"/>
+	<field name="details" class="java.lang.String"/>
+	<field name="signatory" class="java.lang.String"/>
+	<field name="signatorytitle" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -82,9 +91,9 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="63"
+						y="61"
 						width="379"
-						height="29"
+						height="23"
 						key="staticText-4"/>
 					<box></box>
 					<textElement textAlignment="Center">
@@ -103,7 +112,7 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="506"  isSplitAllowed="true" >
+			<band height="557"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						x="0"
@@ -113,127 +122,10 @@
 						key="staticText-5"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[MEMORANDUM]]></text>
 				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
-						y="33"
-						width="379"
-						height="15"
-						key="staticText-6"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="12" isBold="false"/>
-					</textElement>
-				<text><![CDATA[No. 170 s. 2016]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
-						y="61"
-						width="77"
-						height="15"
-						key="staticText-7"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
-					</textElement>
-				<text><![CDATA[DATE]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="147"
-						y="61"
-						width="232"
-						height="15"
-						key="textField-1"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{date}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="0"
-						y="97"
-						width="77"
-						height="15"
-						key="staticText-8"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
-					</textElement>
-				<text><![CDATA[TO]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="147"
-						y="97"
-						width="232"
-						height="15"
-						key="textField-2"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="0"
-						y="133"
-						width="77"
-						height="15"
-						key="staticText-9"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
-					</textElement>
-				<text><![CDATA[FROM]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="147"
-						y="132"
-						width="232"
-						height="15"
-						key="textField-3"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{admin}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="-1"
-						y="170"
-						width="77"
-						height="15"
-						key="staticText-10"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
-					</textElement>
-				<text><![CDATA[SUBJECT]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="146"
-						y="169"
-						width="232"
-						height="15"
-						key="textField-4"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICB.TTF" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{subject}]]></textFieldExpression>
-				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
@@ -243,46 +135,46 @@
 						key="textField-5"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["In the exigency of service, you are hereby reassigned at the " + $F{charges.name} + "(" + $F{charges.code}+ ")."]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="239"
-						width="379"
-						height="43"
-						key="textField-6"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{body}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
-						y="281"
+						y="239"
+						width="379"
+						height="94"
+						key="textField-6"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{details}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="333"
 						width="379"
 						height="80"
 						key="textField-7"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Further, you are directly under the supervision of " + $F{supervisor} + " for instructions of your new assignment after clearing yourself of your work and accountabilities from the office where you were previously assigned."]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Further, you are directly under the supervision of " + $F{supervisor} + ", " + $F{supervisortitle} + " for instructions of your new assignment after clearing yourself of your work and accountabilities from the office where you were previously assigned."]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
 						x="0"
-						y="361"
+						y="413"
 						width="379"
-						height="43"
+						height="51"
 						key="staticText-11"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
 					</textElement>
 				<text><![CDATA[Added to this, you are ordered to follow policies and guidelines and to perform the duties and responsibilities as directed by your new supervisor.]]></text>
 				</staticText>
@@ -295,9 +187,9 @@
 						key="textField-8"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICI.TTF" size="10" isBold="false" isItalic="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Oblique" size="10" isBold="false" isItalic="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -308,49 +200,184 @@
 						key="textField-9"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHICI.TTF" size="10" isBold="false" isItalic="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Oblique" size="10" isBold="false" isItalic="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{admin}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Provincial Governor"]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
 						x="-1"
-						y="412"
+						y="464"
 						width="379"
 						height="18"
 						key="staticText-12"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
 					</textElement>
 				<text><![CDATA[FOR COMPLIANCE.]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="147"
-						y="454"
-						width="232"
-						height="15"
-						key="textField-10"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{admin}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="147"
-						y="469"
+						y="521"
 						width="232"
 						height="15"
 						key="textField-11"/>
 					<box></box>
 					<textElement textAlignment="Center">
-						<font fontName="Century Gothic" pdfFontName="GOTHIC.TTF" size="10" isBold="false" isItalic="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false" isItalic="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{admin}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Provincial Governor"]]></textFieldExpression>
 				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="22"
+						y="46"
+						width="22"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="175"
+						y="520"
+						width="180"
+						height="0"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="147"
+						y="502"
+						width="232"
+						height="19"
+						key="textField-12"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["JOSE MA. R. ZUBIRI, JR."]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="61"
+						width="130"
+						height="19"
+						key="staticText-27"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DATE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="97"
+						width="130"
+						height="19"
+						key="staticText-28"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="132"
+						width="130"
+						height="19"
+						key="staticText-29"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[FROM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="169"
+						width="130"
+						height="19"
+						key="staticText-30"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[SUBJECT]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="147"
+						y="169"
+						width="232"
+						height="19"
+						key="textField-17"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{subject}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="147"
+						y="132"
+						width="232"
+						height="19"
+						key="textField-18"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["JOSE MA. R. ZUBIRI, JR."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="147"
+						y="97"
+						width="232"
+						height="19"
+						key="textField-19"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="147"
+						y="61"
+						width="232"
+						height="19"
+						key="textField-20"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{date}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="33"
+						width="379"
+						height="19"
+						key="staticText-31"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<text><![CDATA[No. 170 s. 2016]]></text>
+				</staticText>
 			</band>
 		</detail>
 		<columnFooter>
@@ -387,7 +414,7 @@
 						key="staticText-13"/>
 					<box></box>
 					<textElement>
-						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[(088) 221-2532]]></text>
 				</staticText>
@@ -400,7 +427,7 @@
 						key="staticText-14"/>
 					<box></box>
 					<textElement>
-						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[(088) 813-2457	]]></text>
 				</staticText>
@@ -413,7 +440,7 @@
 						key="staticText-15"/>
 					<box></box>
 					<textElement>
-						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[(088) 813-2457]]></text>
 				</staticText>
@@ -426,7 +453,7 @@
 						key="staticText-16"/>
 					<box></box>
 					<textElement>
-						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[E-mail Add: joe_zubiri@yahoo.com]]></text>
 				</staticText>
@@ -439,7 +466,7 @@
 						key="staticText-17"/>
 					<box></box>
 					<textElement>
-						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[www.bukidnon.gov.ph]]></text>
 				</staticText>

@@ -94,6 +94,9 @@
         </Container>
         <Container class="com.rameses.rcp.control.XSubFormPanel" name="xSubFormPanel1">
           <Properties>
+            <Property name="cellPadding" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+              <Insets value="[0, 0, 10, 0]"/>
+            </Property>
             <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
               <StringArray count="1">
                 <StringItem index="0" value="currentSection"/>
@@ -109,9 +112,7 @@
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout">
-            <Property name="verticalGap" type="int" value="10"/>
-          </Layout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
         </Container>
       </SubComponents>
     </Container>
