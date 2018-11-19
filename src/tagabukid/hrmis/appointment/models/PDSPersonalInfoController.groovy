@@ -69,6 +69,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
         
     public void afterOpen(){
         loadpersonalinfo()
+        // loadBTACSidIncrement()
     }
     public void beforeSave(o){
         if (o == 'create'){
@@ -85,6 +86,8 @@ class  PDSPersonalInfoController extends CrudFormModel{
         
         persistenceSvc.update(entity.person)
         maincontroller.reloadSections('open');
+
+        // loadBTACSidIncrement()
     }
     
     def loadpersonalinfo(){
@@ -100,6 +103,14 @@ class  PDSPersonalInfoController extends CrudFormModel{
         p.findBy = [person_objid:entity.person.objid];
         return querySvc.findFirst(p)
     }
+    // PDS to BTACS
+    // def loadBTACSidIncrement(){
+    //     def btacsuserid = svc.getBTACSid();
+    //     // btacsuserid = btacsuserid + 1;
+    //     println btacsuserid;
+    // }
+
+    
     //    def getResidentialAddress(){
     ////        if (entity.copyresidential){
     ////            entity.residential.address = entity.person.address
