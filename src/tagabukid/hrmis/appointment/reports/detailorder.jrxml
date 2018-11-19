@@ -189,7 +189,7 @@
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica-Oblique" size="10" isBold="false" isItalic="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
