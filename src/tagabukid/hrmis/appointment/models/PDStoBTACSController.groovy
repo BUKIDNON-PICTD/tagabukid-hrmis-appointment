@@ -10,6 +10,11 @@ import com.rameses.util.*;
 
 class PDStoBTACSController extends CrudFormModel {
 
+def svc
 
+def loadBTACSidIncrement(){
+    def btacsuserid = svc.getbtacsid()
+    btacsuserid = btacsuserid + 1
+}
     
 }
