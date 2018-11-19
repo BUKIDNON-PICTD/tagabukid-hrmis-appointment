@@ -41,50 +41,50 @@
 			</band>
 		</background>
 		<title>
-			<band height="224"  isSplitAllowed="true" >
+			<band height="209"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						x="0"
-						y="11"
+						y="3"
 						width="540"
 						height="18"
 						key="staticText-1"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" size="12" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[Republic of the Philippines]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="29"
+						y="21"
 						width="540"
 						height="18"
 						key="staticText-2"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[PROVINCE OF BUKIDNON]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="47"
+						y="38"
 						width="540"
 						height="15"
 						key="staticText-3"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" size="12" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[Provincial Capitol]]></text>
 				</staticText>
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="73"
-						y="16"
+						x="108"
+						y="4"
 						width="50"
 						height="50"
 						key="image-1"/>
@@ -97,31 +97,31 @@
 						x="0"
 						y="67"
 						width="540"
-						height="32"
+						height="24"
 						key="staticText-12"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Bottom">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[PROVINCIAL HUMAN RESOURCE MANAGEMENT OFFICE]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="99"
+						y="91"
 						width="540"
-						height="22"
+						height="15"
 						key="staticText-13"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Bottom">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[IDENTIFICATION OF CONSANGUINITY / AFFINITY FORM]]></text>
 				</staticText>
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="400"
-						y="16"
+						x="384"
+						y="4"
 						width="50"
 						height="50"
 						key="image-2"/>
@@ -132,52 +132,52 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="138"
+						y="123"
 						width="540"
-						height="21"
+						height="15"
 						key="staticText-4"/>
 					<box></box>
 					<textElement verticalAlignment="Bottom">
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
-				<text><![CDATA[Name of Applicant :  ___________________________________________________________________]]></text>
+				<text><![CDATA[Name of Applicant :  ____________________________________________________________________]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="130"
-						y="138"
-						width="410"
-						height="21"
+						x="102"
+						y="123"
+						width="437"
+						height="15"
 						key="textField-1"/>
 					<box></box>
 					<textElement textAlignment="Left" verticalAlignment="Bottom">
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{person.name}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
 						x="0"
-						y="159"
+						y="138"
 						width="540"
-						height="21"
+						height="15"
 						key="staticText-5"/>
 					<box></box>
 					<textElement verticalAlignment="Bottom">
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
-				<text><![CDATA[Applied Position : _______________________________________________________________________]]></text>
+				<text><![CDATA[Applied Position : ______________________________________________________________________]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="186"
+						y="169"
 						width="540"
-						height="38"
+						height="25"
 						key="staticText-6"/>
 					<box></box>
 					<textElement verticalAlignment="Top">
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<text><![CDATA[Please check the herein List of PGB Employees with Same Middle Name and Family Name of the Applicant.]]></text>
 				</staticText>
@@ -190,7 +190,7 @@
 						key="staticText-26"/>
 					<box></box>
 					<textElement>
-						<font/>
+						<font pdfFontName="Helvetica"/>
 					</textElement>
 				<text><![CDATA[PHRMO PTD APPT No. 0001 (Sept. 2017)]]></text>
 				</staticText>
@@ -216,7 +216,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[Parents/ Spouse/ Grandmothers/ Grandfathers]]></text>
 				</staticText>
@@ -234,7 +234,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[PGB Employees with same Last Name/ Middle Name of the applicant]]></text>
 				</staticText>
@@ -252,7 +252,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[Relationship]]></text>
 				</staticText>
@@ -270,7 +270,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[Remarks]]></text>
 				</staticText>
@@ -296,7 +296,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
@@ -341,7 +341,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
@@ -362,7 +362,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
@@ -383,7 +383,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="11" isBold="true"/>
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
@@ -398,54 +398,54 @@
 			</band>
 		</pageFooter>
 		<summary>
-			<band height="306"  isSplitAllowed="true" >
-				<staticText>
+			<band height="233"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
-						y="184"
+						y="122"
 						width="540"
-						height="45"
-						key="staticText-20"
+						height="31"
+						key="textField-4"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" pdfFontName="Helvetica" size="12" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
-				<text><![CDATA[	                                                    to before me this ____ day of ______________,         , affiant exhibited to me his/her __________________________________ with ID number _______________________.]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA["	                                                    to before me this ____ day of ______________, "+$V{year}+", affiant exhibited to me his/her __________________________________ with ID number _______________________."]]></textFieldExpression>
+				</textField>
 				<staticText>
 					<reportElement
 						x="0"
 						y="14"
 						width="540"
-						height="93"
+						height="63"
 						key="staticText-11"
 						positionType="FixRelativeToBottom"
 						isPrintWhenDetailOverflows="true"/>
 					<box></box>
 					<textElement textAlignment="Justified">
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<text><![CDATA[		      I declare under the penalties of perjury that the above answer are made in good faith and to the best of my knowledge and belief are true and correct. That if I will be appointed as employee of PGB and later found that I have relatives in the Provincial Government of Bukidnon I am willing to have my appointment revoked under the existing policy of Provincial Government of Bukidnon of no hiring relative up to 5th degree of consanguinity /affinity.]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="352"
-						y="125"
+						x="358"
+						y="94"
 						width="137"
 						height="19"
 						key="staticText-14"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement textAlignment="Center" verticalAlignment="Top">
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<text><![CDATA[Signature of Applicant]]></text>
 				</staticText>
 				<line direction="TopDown">
 					<reportElement
-						x="333"
-						y="120"
+						x="339"
+						y="92"
 						width="175"
 						height="0"
 						key="line-1"
@@ -457,98 +457,70 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="242"
+						y="168"
 						width="540"
-						height="16"
+						height="15"
 						key="staticText-16"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<text><![CDATA[Doc. No. ___________]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="258"
+						y="183"
 						width="540"
-						height="16"
+						height="15"
 						key="staticText-17"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<text><![CDATA[Page No. __________]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="274"
+						y="198"
 						width="540"
-						height="16"
+						height="15"
 						key="staticText-18"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
 				<text><![CDATA[Book No. __________]]></text>
 				</staticText>
-				<staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
-						y="290"
-						width="51"
-						height="16"
-						key="staticText-19"
+						y="213"
+						width="122"
+						height="15"
+						key="textField-5"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement>
-						<font fontName="Century Gothic" size="12"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="10"/>
 					</textElement>
-				<text><![CDATA[Series of]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="50"
-						y="290"
-						width="56"
-						height="16"
-						key="textField-3"
-						positionType="FixRelativeToBottom"/>
-					<box></box>
-					<textElement>
-						<font fontName="Century Gothic" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{year}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="436"
-						y="184"
-						width="53"
-						height="18"
-						key="textField-6"
-						positionType="FixRelativeToBottom"/>
-					<box></box>
-					<textElement verticalAlignment="Top">
-						<font fontName="Century Gothic" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{year}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Series of "+$V{year}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
-						x="19"
-						y="184"
+						x="14"
+						y="122"
 						width="167"
 						height="17"
 						key="staticText-27"
 						positionType="FixRelativeToBottom"/>
 					<box></box>
 					<textElement verticalAlignment="Top">
-						<font fontName="Century Gothic" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
 				<text><![CDATA[	SUBSCRIBE AND SWORN]]></text>
 				</staticText>

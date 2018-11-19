@@ -38,6 +38,7 @@ public class ServiceRecordPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        xScrollPane1 = new com.rameses.rcp.control.XScrollPane();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
 
@@ -277,21 +278,17 @@ public class ServiceRecordPage extends javax.swing.JPanel {
         xDataTable1.setName("selectedserviceRecordItem"); // NOI18N
         xHorizontalPanel1.add(xDataTable1);
 
+        xScrollPane1.setViewportView(xHorizontalPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(xScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(xScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -299,5 +296,6 @@ public class ServiceRecordPage extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.rcp.control.XDataTable xDataTable1;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
+    private com.rameses.rcp.control.XScrollPane xScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
