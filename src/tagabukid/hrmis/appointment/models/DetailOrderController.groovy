@@ -52,8 +52,8 @@ class DetailOrderControlller extends CrudFormModel {
             entity.state = "DRAFT";
             entity.returned = "FALSE";
         if(o == 'create'){
-        	entity.pdsid = entity.personnel.pdsno;
-        	entity.personnel_name = entity.personnel.person.name;
+        	entity.pdsid = entity.personnel.pdsid;
+        	// entity.personnel_name = entity.personnel.person.name;
             entity.recordlog_datecreated = dtSvc.getServerDate();
             entity.recordlog_createdbyuser = OsirisContext.env.FULLNAME;
             entity.recordlog_createdbyuserid = OsirisContext.env.USERID;  

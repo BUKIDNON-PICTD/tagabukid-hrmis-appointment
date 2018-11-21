@@ -32,7 +32,7 @@
        def formControl = [
             getFormControls: {
                 return [
-                    new FormControl( "text", [caption:'Date', name:'entity.date', preferredSize:'[0,21]', captionWidth:150, value:'This time']),
+                    new FormControl( "date", [caption:'Date', name:'entity.prevdate', preferredSize:'[0,21]', captionWidth:150]),
                     new FormControl( "text", [caption:'Subject', name:'entity.subject', preferredSize:'[0,21]', captionWidth:150]),
                     new FormControl( "text", [caption:'Work Assignment Details', name:'entity.details', textCast:'NONE', preferredSize:'[0,100]', captionWidth:150]),
                     // new FormControl( "text", [caption:'Signatory Name', name:'entity.signatory', preferredSize:'[0,100]', captionWidth:150]),

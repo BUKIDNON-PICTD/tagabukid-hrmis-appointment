@@ -36,19 +36,22 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xPanel1 = new com.rameses.rcp.control.XPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
-        xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xComboBox1 = new com.rameses.rcp.control.XComboBox();
-        xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
+        xLookupField1 = new com.rameses.rcp.control.XLookupField();
+        xLookupField5 = new com.rameses.rcp.control.XLookupField();
+        xTextField4 = new com.rameses.rcp.control.XTextField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
+        xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
         xLookupField3 = new com.rameses.rcp.control.XLookupField();
         xTextField2 = new com.rameses.rcp.control.XTextField();
         xTextField3 = new com.rameses.rcp.control.XTextField();
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
+        xLookupField4 = new com.rameses.rcp.control.XLookupField();
         xDateField1 = new com.rameses.rcp.control.XDateField();
-        xTextField1 = new com.rameses.rcp.control.XTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xSeparator1 = new com.rameses.rcp.control.XSeparator();
+        xTextField1 = new com.rameses.rcp.control.XTextField();
         xDateField2 = new com.rameses.rcp.control.XDateField();
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder1 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -61,17 +64,6 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xFormPanel1.setCaption("");
         xFormPanel1.setCellpadding(new java.awt.Insets(5, 20, 5, 20));
 
-        xLookupField1.setCaption("Personnel Name");
-        xLookupField1.setCaptionWidth(150);
-        xLookupField1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
-        xLookupField1.setExpression("#{item.person.name}");
-        xLookupField1.setHandler("lookup:tagabukid_hrmis_employee");
-        xLookupField1.setName("entity.personnel"); // NOI18N
-        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xLookupField1.setRequired(true);
-        xLookupField1.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
-        xFormPanel1.add(xLookupField1);
-
         xComboBox1.setCaption("Status");
         xComboBox1.setCaptionWidth(150);
         xComboBox1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
@@ -79,10 +71,39 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xComboBox1.setName("entity.status"); // NOI18N
         xFormPanel1.add(xComboBox1);
 
-        com.rameses.rcp.control.border.XTitledBorder xTitledBorder3 = new com.rameses.rcp.control.border.XTitledBorder();
-        xTitledBorder3.setTitle("Office");
-        xFormPanel2.setBorder(xTitledBorder3);
-        xFormPanel2.setCellpadding(new java.awt.Insets(5, 20, 5, 20));
+        xLookupField1.setCaption("Employee Name");
+        xLookupField1.setCaptionWidth(150);
+        xLookupField1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xLookupField1.setDepends(new String[] {"entity.status"});
+        xLookupField1.setExpression("#{item.name}");
+        xLookupField1.setHandler("lookup:tagabukid_hrmis_personnel_casual");
+        xLookupField1.setName("entity.personnel"); // NOI18N
+        xLookupField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField1.setRequired(true);
+        xLookupField1.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
+        xLookupField1.setVisibleWhen("#{entity.status=='CASUAL'}");
+        xFormPanel1.add(xLookupField1);
+
+        xLookupField5.setCaption("Personnel Name");
+        xLookupField5.setCaptionWidth(150);
+        xLookupField5.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xLookupField5.setDepends(new String[] {"entity.status"});
+        xLookupField5.setExpression("#{item.name}");
+        xLookupField5.setHandler("lookup:tagabukid_hrmis_personnel_jo");
+        xLookupField5.setName("entity.personnel"); // NOI18N
+        xLookupField5.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField5.setRequired(true);
+        xLookupField5.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
+        xLookupField5.setVisibleWhen("#{entity.status=='JO'}");
+        xFormPanel1.add(xLookupField5);
+
+        xTextField4.setCaption("Position");
+        xTextField4.setCaptionWidth(150);
+        xTextField4.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xTextField4.setDepends(new String[] {"entity.personnel"});
+        xTextField4.setName("entity.personnel.position"); // NOI18N
+        xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(xTextField4);
 
         xLookupField2.setCaption("Charges");
         xLookupField2.setCaptionWidth(150);
@@ -94,7 +115,12 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xLookupField2.setRequired(true);
         xLookupField2.setReturnFields("");
         xLookupField2.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
-        xFormPanel2.add(xLookupField2);
+        xFormPanel1.add(xLookupField2);
+
+        com.rameses.rcp.control.border.XTitledBorder xTitledBorder3 = new com.rameses.rcp.control.border.XTitledBorder();
+        xTitledBorder3.setTitle("Office");
+        xFormPanel2.setBorder(xTitledBorder3);
+        xFormPanel2.setCellpadding(new java.awt.Insets(5, 20, 5, 20));
 
         xLookupField3.setCaption("Assigned To");
         xLookupField3.setCaptionWidth(150);
@@ -127,6 +153,16 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xFormPanel3.setCaption("");
         xFormPanel3.setCellpadding(new java.awt.Insets(5, 20, 5, 20));
 
+        xLookupField4.setCaption("Signatory");
+        xLookupField4.setCaptionWidth(150);
+        xLookupField4.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xLookupField4.setExpression("#{item.signatoryname}");
+        xLookupField4.setHandler("lookup:tagabukid_hrmis_signatory");
+        xLookupField4.setName("entity.signatory"); // NOI18N
+        xLookupField4.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField4.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
+        xFormPanel3.add(xLookupField4);
+
         xDateField1.setCaption("Effectivity Date");
         xDateField1.setCaptionWidth(150);
         xDateField1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
@@ -136,13 +172,6 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xDateField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xDateField1.setRequired(true);
         xFormPanel3.add(xDateField1);
-
-        xTextField1.setCaption("No. of Years Reassigned");
-        xTextField1.setCaptionWidth(150);
-        xTextField1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
-        xTextField1.setName("entity.years"); // NOI18N
-        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel3.add(xTextField1);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
@@ -157,10 +186,19 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xSeparator1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel3.add(xSeparator1);
 
+        xTextField1.setCaption("No. of Years Reassigned");
+        xTextField1.setCaptionFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        xTextField1.setCaptionWidth(200);
+        xTextField1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xTextField1.setEnabled(false);
+        xTextField1.setName("entity.years"); // NOI18N
+        xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel3.add(xTextField1);
+
         xDateField2.setCaption("Date Returned");
         xDateField2.setCaptionFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        xDateField2.setCaptionWidth(150);
-        xDateField2.setCellPadding(new java.awt.Insets(30, 20, 30, 20));
+        xDateField2.setCaptionWidth(200);
+        xDateField2.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
         xDateField2.setDepends(new String[] {});
         xDateField2.setEnabled(false);
         xDateField2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -191,8 +229,8 @@ public class DetailOrderPage extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(xFormPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(xFormPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(xFormPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         xHorizontalPanel1.add(xPanel1);
@@ -210,8 +248,8 @@ public class DetailOrderPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -228,11 +266,14 @@ public class DetailOrderPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLookupField xLookupField1;
     private com.rameses.rcp.control.XLookupField xLookupField2;
     private com.rameses.rcp.control.XLookupField xLookupField3;
+    private com.rameses.rcp.control.XLookupField xLookupField4;
+    private com.rameses.rcp.control.XLookupField xLookupField5;
     private com.rameses.rcp.control.XPanel xPanel1;
     private com.rameses.rcp.control.XSeparator xSeparator1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
+    private com.rameses.rcp.control.XTextField xTextField4;
     // End of variables declaration//GEN-END:variables
 }

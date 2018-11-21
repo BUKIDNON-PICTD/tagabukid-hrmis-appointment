@@ -23,16 +23,17 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<parameter name="date" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="prevdate" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="details" isForPrompting="false" class="java.lang.String"/>
-	<parameter name="signatory" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="signatoryname" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="subject" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="signatorytitle" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="effectivity" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="to" class="java.lang.String"/>
 	<field name="charges.name" class="java.lang.String"/>
 	<field name="personnel.name" class="java.lang.String"/>
-	<field name="date" class="java.lang.String"/>
+	<field name="date" class="java.util.Date"/>
 	<field name="admin" class="java.lang.String"/>
 	<field name="subject" class="java.lang.String"/>
 	<field name="charges.code" class="java.lang.String"/>
@@ -42,6 +43,11 @@
 	<field name="details" class="java.lang.String"/>
 	<field name="signatory" class="java.lang.String"/>
 	<field name="signatorytitle" class="java.lang.String"/>
+	<field name="personnel.position" class="java.lang.String"/>
+	<field name="signature" class="java.lang.String"/>
+	<field name="signature.signatorytitle" class="java.lang.String"/>
+	<field name="signature.signatoryname" class="java.lang.String"/>
+	<field name="effectivity" class="java.util.Date"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -189,7 +195,7 @@
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica-Oblique" size="10" isBold="false" isItalic="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.position}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -202,7 +208,7 @@
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica-Oblique" size="10" isBold="false" isItalic="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Provincial Governor"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{signatorytitle}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -228,7 +234,7 @@
 					<textElement textAlignment="Center">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false" isItalic="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Provincial Governor"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{signatorytitle}]]></textFieldExpression>
 				</textField>
 				<line direction="TopDown">
 					<reportElement
@@ -259,7 +265,7 @@
 					<textElement textAlignment="Center">
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["JOSE MA. R. ZUBIRI, JR."]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{signatoryname}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -337,7 +343,7 @@
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["JOSE MA. R. ZUBIRI, JR."]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{signatoryname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -352,7 +358,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="147"
 						y="61"
@@ -363,7 +369,7 @@
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="12" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{date}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{prevdate}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement

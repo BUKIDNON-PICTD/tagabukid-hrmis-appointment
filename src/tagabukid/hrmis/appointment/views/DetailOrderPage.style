@@ -1,3 +1,11 @@
 "entity.returndate"[mode == 'edit' || mode == 'create']{
     enabled:false;
 }
+
+"entity.years"[mode == 'edit' || mode == 'create']{
+    enabled:false;
+}
+
+"entity.personnel.position"[mode == 'edit' || mode == 'create']{
+    enabled:false;
+}
