@@ -33,12 +33,14 @@ public class DetailOrderPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        xScrollPane1 = new com.rameses.rcp.control.XScrollPane();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xPanel1 = new com.rameses.rcp.control.XPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xComboBox1 = new com.rameses.rcp.control.XComboBox();
         xLookupField1 = new com.rameses.rcp.control.XLookupField();
         xLookupField5 = new com.rameses.rcp.control.XLookupField();
+        xLookupField6 = new com.rameses.rcp.control.XLookupField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
         xLookupField2 = new com.rameses.rcp.control.XLookupField();
         xFormPanel2 = new com.rameses.rcp.control.XFormPanel();
@@ -96,6 +98,19 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xLookupField5.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
         xLookupField5.setVisibleWhen("#{entity.status=='JO'}");
         xFormPanel1.add(xLookupField5);
+
+        xLookupField6.setCaption("Employee");
+        xLookupField6.setCaptionWidth(150);
+        xLookupField6.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xLookupField6.setDepends(new String[] {"entity.status"});
+        xLookupField6.setExpression("#{item.name}");
+        xLookupField6.setHandler("lookup:tagabukid_hrmis_personnel_casual");
+        xLookupField6.setName("entity.personnel"); // NOI18N
+        xLookupField6.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField6.setRequired(true);
+        xLookupField6.setTextCase(com.rameses.rcp.constant.TextCase.UPPER);
+        xLookupField6.setVisibleWhen("#{entity.status=='PERMANENT'}");
+        xFormPanel1.add(xLookupField6);
 
         xTextField4.setCaption("Position");
         xTextField4.setCaptionWidth(150);
@@ -186,9 +201,9 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xSeparator1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel3.add(xSeparator1);
 
-        xTextField1.setCaption("No. of Years Reassigned");
+        xTextField1.setCaption("Years Reassigned / Detailed");
         xTextField1.setCaptionFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        xTextField1.setCaptionWidth(200);
+        xTextField1.setCaptionWidth(250);
         xTextField1.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
         xTextField1.setEnabled(false);
         xTextField1.setName("entity.years"); // NOI18N
@@ -197,7 +212,7 @@ public class DetailOrderPage extends javax.swing.JPanel {
 
         xDateField2.setCaption("Date Returned");
         xDateField2.setCaptionFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        xDateField2.setCaptionWidth(200);
+        xDateField2.setCaptionWidth(250);
         xDateField2.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
         xDateField2.setDepends(new String[] {});
         xDateField2.setEnabled(false);
@@ -235,21 +250,23 @@ public class DetailOrderPage extends javax.swing.JPanel {
 
         xHorizontalPanel1.add(xPanel1);
 
+        xScrollPane1.setViewportView(xHorizontalPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 617, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -268,7 +285,9 @@ public class DetailOrderPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XLookupField xLookupField4;
     private com.rameses.rcp.control.XLookupField xLookupField5;
+    private com.rameses.rcp.control.XLookupField xLookupField6;
     private com.rameses.rcp.control.XPanel xPanel1;
+    private com.rameses.rcp.control.XScrollPane xScrollPane1;
     private com.rameses.rcp.control.XSeparator xSeparator1;
     private com.rameses.rcp.control.XTextArea xTextArea1;
     private com.rameses.rcp.control.XTextField xTextField1;

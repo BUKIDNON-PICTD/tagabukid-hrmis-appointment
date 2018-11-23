@@ -79,15 +79,7 @@ class DetailOrderControlller extends CrudFormModel {
     }
 
     void returned() { 
-        
-        // if ( MsgBox.confirm('Proceed?')) { 
-        //     getPersistenceService().update([ 
-        //        _schemaname: 'hrmis_detailorder_list', 
-        //        objid : entity.objid, 
-        //        returned : 'TRUE',
-        //     ]); 
-        //     loadData(); 
-        // }
+
         JFrame frame = new JFrame();
         Object result = JOptionPane.showInputDialog(frame, "Enter Return Date:");
         if ( result ) {
@@ -103,5 +95,13 @@ class DetailOrderControlller extends CrudFormModel {
                 ]);        
             loadData(); 
         }
+
+        // commented out
+
+        // JDateChooser jd = new JDateChooser();
+        // String message = "Choose start date:\n";
+        // Object[] params = {message,jd};
+        // JOptionPane.showConfirmDialog(null,params,"Start date", JOptionPane.PLAIN_MESSAGE);
+
     }
 }
