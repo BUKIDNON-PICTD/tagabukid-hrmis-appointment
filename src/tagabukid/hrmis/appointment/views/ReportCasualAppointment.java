@@ -34,6 +34,8 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xComboBox1 = new com.rameses.rcp.control.XComboBox();
         xCheckBox1 = new com.rameses.rcp.control.XCheckBox();
+        xCheckBox2 = new com.rameses.rcp.control.XCheckBox();
+        xCheckBox3 = new com.rameses.rcp.control.XCheckBox();
         xReportPanel1 = new com.rameses.osiris2.reports.ui.XReportPanel();
 
         xFormPanel1.setOrientation(com.rameses.rcp.constant.UIConstants.HORIZONTAL);
@@ -52,6 +54,17 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
         xCheckBox1.setText("Hide Nature of Appointment");
         xFormPanel1.add(xCheckBox1);
 
+        xCheckBox2.setName("hidenoaheader"); // NOI18N
+        xCheckBox2.setShowCaption(false);
+        xCheckBox2.setText("Hide Nature of Appointment Header");
+        xFormPanel1.add(xCheckBox2);
+
+        xCheckBox3.setName("nothingfollows"); // NOI18N
+        xCheckBox3.setShowCaption(false);
+        xCheckBox3.setText("Hide NOTHING FOLLOWS");
+        xFormPanel1.add(xCheckBox3);
+        xCheckBox3.getAccessibleContext().setAccessibleName("Hide \"NOTHING FOLLOWS\"");
+
         xReportPanel1.setDepends(new String[] {"page"});
         xReportPanel1.setName("report"); // NOI18N
 
@@ -63,7 +76,7 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(xReportPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE))
+                    .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -80,6 +93,8 @@ public class ReportCasualAppointment extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.rcp.control.XCheckBox xCheckBox1;
+    private com.rameses.rcp.control.XCheckBox xCheckBox2;
+    private com.rameses.rcp.control.XCheckBox xCheckBox3;
     private com.rameses.rcp.control.XComboBox xComboBox1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.osiris2.reports.ui.XReportPanel xReportPanel1;
