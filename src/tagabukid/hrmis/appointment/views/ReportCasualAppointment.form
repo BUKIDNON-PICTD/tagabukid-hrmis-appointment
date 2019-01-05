@@ -71,16 +71,6 @@
             <Property name="text" type="java.lang.String" value="Hide Nature of Appointment Header"/>
           </Properties>
         </Component>
-        <Component class="com.rameses.rcp.control.XCheckBox" name="xCheckBox3">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="nothingfollows" noResource="true"/>
-            <Property name="showCaption" type="boolean" value="false"/>
-            <Property name="text" type="java.lang.String" value="Hide NOTHING FOLLOWS"/>
-          </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Hide &quot;NOTHING FOLLOWS&quot;"/>
-          </AccessibilityProperties>
-        </Component>
       </SubComponents>
     </Container>
     <Container class="com.rameses.osiris2.reports.ui.XReportPanel" name="xReportPanel1">

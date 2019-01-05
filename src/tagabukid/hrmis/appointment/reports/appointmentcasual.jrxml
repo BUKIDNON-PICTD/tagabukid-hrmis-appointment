@@ -43,7 +43,7 @@
 	<parameter name="PAGECOUNT" isForPrompting="false" class="java.lang.Integer"/>
 	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
 	<parameter name="HIDENOAHEADER" isForPrompting="false" class="java.lang.Boolean"/>
-	<parameter name="SHOWNOTHINGFOLLOWS" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="NATUREOFAPPOINTMENT" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -181,9 +181,6 @@
 					</subreportParameter>
 					<subreportParameter  name="HIDENOA">
 						<subreportParameterExpression><![CDATA[$P{HIDENOA}]]></subreportParameterExpression>
-					</subreportParameter>
-					<subreportParameter  name="SHOWNOTHINGFOLLOWS">
-						<subreportParameterExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}]]></subreportParameterExpression>
 					</subreportParameter>
 					<dataSourceExpression><![CDATA[$F{appointmentitems}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{AppointmentItemList}]]></subreportExpression>
@@ -891,7 +888,7 @@
 					<textElement>
 						<font size="6" isBold="false" isItalic="true"/>
 					</textElement>
-				<text><![CDATA[Revised 2017]]></text>
+				<text><![CDATA[Revised 2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -931,7 +928,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["("+$F{natureofappointment.name}+")"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["("+$P{NATUREOFAPPOINTMENT}+")"]]></textFieldExpression>
 				</textField>
 			</band>
 		</title>

@@ -1222,7 +1222,7 @@
 					<textElement>
 						<font size="6" isBold="false" isItalic="true"/>
 					</textElement>
-				<text><![CDATA[Revised 2017]]></text>
+				<text><![CDATA[Revised 2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

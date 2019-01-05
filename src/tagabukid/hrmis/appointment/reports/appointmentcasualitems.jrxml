@@ -94,7 +94,6 @@
 	<parameter name="signatorygroup.signatoryGroupItems" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="START" isForPrompting="false" class="java.lang.Integer"/>
 	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
-	<parameter name="SHOWNOTHINGFOLLOWS" isForPrompting="false" class="java.lang.Boolean"/>
 
 	<field name="personnel.objid" class="java.lang.String"/>
 	<field name="dailywage" class="java.math.BigDecimal"/>
@@ -707,7 +706,7 @@
 		</columnHeader>
 		<detail>
 			<band height="9"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
@@ -726,7 +725,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[($P{START} - 1) +$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="21"
 						y="0"
@@ -745,7 +744,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.lastname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="106"
 						y="0"
@@ -764,7 +763,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="219"
 						y="0"
@@ -802,7 +801,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="293"
 						y="0"
@@ -821,7 +820,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.jobposition.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="439"
 						y="0"
@@ -840,7 +839,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.paygradeandstepincrement.grade}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="491"
 						y="0"
@@ -859,7 +858,7 @@
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{dailywage}.setScale(2, RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="548"
 						y="0"
@@ -876,9 +875,9 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectivefrom}]]></textFieldExpression>
+				<textFieldExpression   class="java.util.Date"><![CDATA[( $F{personnel.firstname} != null ? $P{effectivefrom} : null )]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="603"
 						y="0"
@@ -895,9 +894,9 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectiveuntil}]]></textFieldExpression>
+				<textFieldExpression   class="java.util.Date"><![CDATA[( $F{personnel.firstname} != null ? $P{effectiveuntil} : null )]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="656"
 						y="0"
@@ -905,7 +904,7 @@
 						height="9"
 						key="textField"
 						positionType="Float">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false ]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -916,7 +915,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{natureofappointment.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname} != null ? $P{natureofappointment.name} : null )]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -1009,53 +1008,11 @@
 			</band>
 		</detail>
 		<columnFooter>
-			<band height="33"  isSplitAllowed="false" >
-				<staticText>
-					<reportElement
-						x="752"
-						y="0"
-						width="76"
-						height="9"
-						key="staticText-43"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false && $P{HIDENOA} == false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="656"
-						y="0"
-						width="96"
-						height="9"
-						key="staticText-42"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false && $P{HIDENOA} == false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
+			<band height="24"  isSplitAllowed="false" >
 				<staticText>
 					<reportElement
 						x="0"
-						y="9"
+						y="0"
 						width="895"
 						height="24"
 						key="staticText-26"
@@ -1077,7 +1034,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="9"
+						y="0"
 						width="799"
 						height="24"
 						key="staticText-32"
@@ -1095,216 +1052,6 @@
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
 				<text><![CDATA[The above-named personnel are hereby hired/appointed as casuals/contractuals at the rate of compensation stated opposite their/his name(s) for the period indicated. It is understood that such employment will cease automatically at the end of the period stated unless renewed. Any or all of them may be laid-off any time before the expiration of the employment period when their services are no longer needed or funds are no longer available or the project has already been completed/finished or their performance are below par.]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="21"
-						y="0"
-						width="272"
-						height="9"
-						key="staticText-33"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[** NOTHNIG FOLLOWS **]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
-						y="0"
-						width="21"
-						height="9"
-						key="staticText-34"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="293"
-						y="0"
-						width="146"
-						height="9"
-						key="staticText-35"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="439"
-						y="0"
-						width="52"
-						height="9"
-						key="staticText-36"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="491"
-						y="0"
-						width="57"
-						height="9"
-						key="staticText-37"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="548"
-						y="0"
-						width="55"
-						height="9"
-						key="staticText-38"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="603"
-						y="0"
-						width="53"
-						height="9"
-						key="staticText-39"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="656"
-						y="0"
-						width="76"
-						height="9"
-						key="staticText-40"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false && $P{HIDENOA} ==true]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="732"
-						y="0"
-						width="67"
-						height="9"
-						key="staticText-41"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false && $P{HIDENOA} ==true]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="828"
-						y="0"
-						width="67"
-						height="9"
-						key="staticText-44"
-						positionType="Float"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[$P{SHOWNOTHINGFOLLOWS}==false && $P{HIDENOA} == false]]></printWhenExpression>
-						</reportElement>
-					<box>					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<text><![CDATA[]]></text>
 				</staticText>
 			</band>
 		</columnFooter>
