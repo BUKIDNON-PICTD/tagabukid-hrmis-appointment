@@ -44,6 +44,7 @@
 	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
 	<parameter name="HIDENOAHEADER" isForPrompting="false" class="java.lang.Boolean"/>
 	<parameter name="NATUREOFAPPOINTMENT" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="FORMNO" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -867,19 +868,6 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="0"
-						width="150"
-						height="20"
-						key="staticText-36"/>
-					<box></box>
-					<textElement>
-						<font size="8" isBold="false" isItalic="true"/>
-					</textElement>
-				<text><![CDATA[CS FORM NO. 34-D]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
 						y="11"
 						width="150"
 						height="20"
@@ -929,6 +917,19 @@
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["("+$P{NATUREOFAPPOINTMENT}+")"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="150"
+						height="25"
+						key="textField-14"/>
+					<box></box>
+					<textElement>
+						<font size="8" isBold="false" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["CS FORM NO. " + $P{FORMNO}]]></textFieldExpression>
 				</textField>
 			</band>
 		</title>
