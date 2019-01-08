@@ -16,15 +16,21 @@ class ReportAppointmentCasualController extends com.rameses.etracs.shared.Report
     def pagelist
     def page
     def hidenoa;
+    def hidenoaheader;    
+//    def nothingfollows;
+
     def initReport() {
         pagelist = svc.getPages( entity ); 
         page = (pagelist ? pagelist.first() : null);
-        hidenoa = false;
+        hidenoa = false;        
+        hidenoaheader = false;
+//        nothingfollows = false;
+
         return preview();
     }
     
     def getReportData() { 
-        data = svc.getAppointmentCasualById(entity,page,pagelist,hidenoa);
+        data = svc.getAppointmentCasualById(entity,page,pagelist,hidenoa,hidenoaheader);
 
         return data.reportdata
     } 
@@ -40,6 +46,18 @@ class ReportAppointmentCasualController extends com.rameses.etracs.shared.Report
         preview();
         binding.refresh();
     }
+    
+    void setHidenoaheader(o){
+        this.hidenoaheader = o;
+        preview();
+        binding.refresh();
+    }
+    
+//    void setNothingfollows(o){
+//        this.nothingfollows = o;
+//        preview();
+//        binding.refresh();
+//    }
 
 //    void buildReportData(entity, asyncHandler){
 //        svc.getSIByIPCRId(entity, asyncHandler)

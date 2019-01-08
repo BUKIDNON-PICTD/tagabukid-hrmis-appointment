@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="appointmentcasual"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Landscape"
 		 pageWidth="936"
@@ -41,6 +42,9 @@
 	<parameter name="PAGENUMBER" isForPrompting="false" class="java.lang.Integer"/>
 	<parameter name="PAGECOUNT" isForPrompting="false" class="java.lang.Integer"/>
 	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="HIDENOAHEADER" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="NATUREOFAPPOINTMENT" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="FORMNO" isForPrompting="false" class="java.lang.String"/>
 
 	<field name="objid" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
@@ -753,7 +757,7 @@
 			</band>
 		</background>
 		<title>
-			<band height="69"  isSplitAllowed="true" >
+			<band height="80"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Transparent"
@@ -864,19 +868,6 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="0"
-						width="150"
-						height="20"
-						key="staticText-36"/>
-					<box></box>
-					<textElement>
-						<font size="8" isBold="false" isItalic="true"/>
-					</textElement>
-				<text><![CDATA[CS FORM NO. 34-D]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
 						y="11"
 						width="150"
 						height="20"
@@ -885,7 +876,7 @@
 					<textElement>
 						<font size="6" isBold="false" isItalic="true"/>
 					</textElement>
-				<text><![CDATA[Revised 2017]]></text>
+				<text><![CDATA[Revised 2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -905,6 +896,41 @@
 					</textElement>
 				<text><![CDATA[For Accredited/ Deregulated Local Government Unit]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="69"
+						width="896"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-13">
+							<printWhenExpression><![CDATA[$P{HIDENOAHEADER}==false]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["("+$P{NATUREOFAPPOINTMENT}+")"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="150"
+						height="25"
+						key="textField-14"/>
+					<box></box>
+					<textElement>
+						<font size="8" isBold="false" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["CS FORM NO. " + $P{FORMNO}]]></textFieldExpression>
+				</textField>
 			</band>
 		</title>
 		<pageHeader>
