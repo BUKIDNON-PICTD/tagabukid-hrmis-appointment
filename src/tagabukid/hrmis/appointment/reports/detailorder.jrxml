@@ -29,6 +29,7 @@
 	<parameter name="subject" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="signatorytitle" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="effectivity" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="detail" isForPrompting="true" class="java.lang.String"/>
 
 	<field name="to" class="java.lang.String"/>
 	<field name="charges.name" class="java.lang.String"/>
@@ -73,7 +74,7 @@
 						x="0"
 						y="16"
 						width="379"
-						height="20"
+						height="18"
 						key="staticText-2"/>
 					<box></box>
 					<textElement textAlignment="Center">
@@ -84,7 +85,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="39"
+						y="34"
 						width="379"
 						height="17"
 						key="staticText-3"/>
@@ -137,53 +138,14 @@
 						x="0"
 						y="196"
 						width="379"
-						height="44"
+						height="296"
 						key="textField-5"/>
 					<box></box>
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["In the exigency of service, you are hereby reassigned at the " + $F{charges.name} + "(" + $F{charges.code}+ ")."]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["In the exigency of service, you are hereby reassigned at the " + $F{charges.name} + "(" + $F{charges.code}+ ").\n\n\t" + $P{details} + "\n\n\tFurther, you are directly under the supervision of " + $F{supervisor} + ", " + $F{supervisortitle} + " for instructions of your new assignment after clearing yourself of your work and accountabilities from the office where you were previously assigned." + "\n\n\tAdded to this, you are ordered to follow policies and guidelines and to perform the duties and responsibilities as directed by your new supervisor." + "\n\nFOR COMPLIANCE."]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="239"
-						width="379"
-						height="94"
-						key="textField-6"/>
-					<box></box>
-					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{details}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="333"
-						width="379"
-						height="80"
-						key="textField-7"/>
-					<box></box>
-					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Further, you are directly under the supervision of " + $F{supervisor} + ", " + $F{supervisortitle} + " for instructions of your new assignment after clearing yourself of your work and accountabilities from the office where you were previously assigned."]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="0"
-						y="413"
-						width="379"
-						height="51"
-						key="staticText-11"/>
-					<box></box>
-					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
-					</textElement>
-				<text><![CDATA[Added to this, you are ordered to follow policies and guidelines and to perform the duties and responsibilities as directed by your new supervisor.]]></text>
-				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="147"
@@ -210,19 +172,6 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{signatorytitle}]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement
-						x="-1"
-						y="464"
-						width="379"
-						height="18"
-						key="staticText-12"/>
-					<box></box>
-					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="12"/>
-					</textElement>
-				<text><![CDATA[FOR COMPLIANCE.]]></text>
-				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="147"
