@@ -71,6 +71,22 @@ class JobOrderAppointmentModel extends CrudFormModel{
         return false
     }
     
+    @PropertyChangeListener
+    def listener = [
+        'entity.currentsalarystep' : { 
+            calculatewage()
+        }
+        
+    ]
+    
+    void calculatewage(){
+        entity.appointmentMemberItems.each{o->
+            o.salaryscheduleitem  = joSvc.getDailyWageByTranch(entity.currentsalarystep,o.position);
+            o.monthlysalary = o.salaryscheduleitem.amount
+            o.dailysalary = o.salaryscheduleitem.amount / 22
+        }
+        appointmentMemberItemHandler.reload();
+    }
     
     def selectedAppointmentMemberItem;
      
