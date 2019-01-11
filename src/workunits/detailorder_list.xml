@@ -1,5 +1,5 @@
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_detailorder_list"
-	cols="pdsid,personnel.name,charges.code,to.code,status,effectivity" orderBy="personnel.name ASC">
+	cols="pdsid,personnel.name,status,charges.code,to.code,effectivity" orderBy="personnel.name ASC">
     <invokers>
         <invoker folderid="/home/hrmis" caption="Detail Order" action="init" index="8" role="MASTER" />
     </invokers>
