@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportwork"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -279,7 +280,9 @@ INCREMENT]]></text>
 						y="0"
 						width="46"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -295,7 +298,9 @@ INCREMENT]]></text>
 						y="0"
 						width="46"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -310,7 +315,9 @@ INCREMENT]]></text>
 						y="0"
 						width="123"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -325,7 +332,9 @@ INCREMENT]]></text>
 						y="0"
 						width="164"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -340,7 +349,9 @@ INCREMENT]]></text>
 						y="0"
 						width="39"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -355,7 +366,9 @@ INCREMENT]]></text>
 						y="0"
 						width="58"
 						height="22"
-						key="textField-1"/>
+						key="textField-1">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -370,7 +383,9 @@ INCREMENT]]></text>
 						y="0"
 						width="54"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -385,7 +400,9 @@ INCREMENT]]></text>
 						y="0"
 						width="42"
 						height="22"
-						key="textField-2"/>
+						key="textField-2">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>

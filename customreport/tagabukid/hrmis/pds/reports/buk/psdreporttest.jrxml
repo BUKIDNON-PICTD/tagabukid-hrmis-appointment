@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="612"
@@ -45,6 +46,18 @@
 	<parameter name="REFERENCE" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="OATH" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="REFERENCE_LIST" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="CONTINUEDEDUCATION" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="CONTINUEDFAMILY_CHILD" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="CONTINUEDCIVILSERVICE" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="CONTINUEDWORKEXPERIENCES" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="CONTINUEDVOLUNTARYWORK" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="CONTINUEDTRAINING" isForPrompting="false" class="java.lang.Boolean"/>
+	<parameter name="SUBRPTCONTINUEDEDUCATION" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="SUBRPTCONTINUEDFAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="SUBRPTCONTINUEDCIVILSERVICE" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="SUBRPTCONTINUEDWORKEXPERIENCES" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="SUBRPTCONTINUEDVOLUNTARYWORK" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="SUBRPTCONTINUEDTRAINING" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="person.lastname" class="java.lang.String"/>
 	<field name="skills" class="java.lang.Object"/>
@@ -92,6 +105,14 @@
 	<field name="lastpage" class="java.lang.Object"/>
 	<field name="organizations" class="java.lang.Object"/>
 	<field name="referenceperson" class="java.lang.Object"/>
+	<field name="Pdsqstatic" class="java.lang.Object"/>
+	<field name="continuededucationalInfos" class="java.lang.Object"/>
+	<field name="continuedchilddata" class="java.lang.Object"/>
+	<field name="continuedcivilserviceInfos" class="java.lang.Object"/>
+	<field name="continuedworkexperienceInfos" class="java.lang.Object"/>
+	<field name="continuedvoluntaryworks" class="java.lang.Object"/>
+	<field name="continuedtrainings" class="java.lang.Object"/>
+	<field name="educationalInfosext" class="java.lang.Object"/>
 
 
 		<group  name="1stPage" >
@@ -884,6 +905,7 @@
 				</staticText>
 				<subreport  isUsingCache="true">
 					<reportElement
+						mode="Transparent"
 						x="0"
 						y="321"
 						width="572"
@@ -2066,7 +2088,7 @@
 		<group  name="3rdPage" isStartNewPage="true" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
-			<band height="118"  isSplitAllowed="true" >
+			<band height="117"  isSplitAllowed="true" >
 				<subreport  isUsingCache="true">
 					<reportElement
 						x="0"
@@ -2154,8 +2176,8 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="1"
-						y="100"
+						x="0"
+						y="99"
 						width="75"
 						height="18"
 						backcolor="#E7E7E7"
@@ -2174,7 +2196,7 @@
 					<reportElement
 						mode="Transparent"
 						x="76"
-						y="100"
+						y="99"
 						width="272"
 						height="18"
 						key="staticText-66"
@@ -2192,7 +2214,7 @@
 					<reportElement
 						mode="Opaque"
 						x="348"
-						y="100"
+						y="99"
 						width="82"
 						height="18"
 						backcolor="#E7E7E7"
@@ -2211,7 +2233,7 @@
 					<reportElement
 						mode="Transparent"
 						x="430"
-						y="100"
+						y="99"
 						width="142"
 						height="18"
 						key="staticText-68"
@@ -2229,7 +2251,7 @@
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="91"
+						y="90"
 						width="572"
 						height="9"
 						backcolor="#E7E7E7"
@@ -2251,7 +2273,7 @@
 			</band>
 			</groupFooter>
 		</group>
-		<group  name="4thPage" >
+		<group  name="4thPage" isStartNewPage="true" >
 			<groupExpression><![CDATA[]]></groupExpression>
 			<groupHeader>
 			<band height="92"  isSplitAllowed="true" >
@@ -2271,7 +2293,10 @@
 						height="18"
 						key="subreport-8"
 						positionType="Float"/>
-					<dataSourceExpression><![CDATA[$F{lastpage}]]></dataSourceExpression>
+					<subreportParameter  name="pdsquestions">
+						<subreportParameterExpression><![CDATA[$F{Pdsqstatic}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$F{Pdsqstatic}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{LASTPAGE}]]></subreportExpression>
 				</subreport>
 				<subreport  isUsingCache="true">
@@ -2297,6 +2322,177 @@
 						key="subreport-12"
 						positionType="Float"/>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{OATH}]]></subreportExpression>
+				</subreport>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="5thPage" isStartNewPage="true" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="196"  isSplitAllowed="true" >
+				<break>
+					<reportElement
+						x="0"
+						y="9"
+						width="572"
+						height="0"
+						key="element-4"/>
+				</break>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="132"
+						width="75"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-77"
+						positionType="Float"/>
+					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
+					</textElement>
+				<text><![CDATA[SIGNATURE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="76"
+						y="132"
+						width="272"
+						height="18"
+						key="staticText-78"
+						positionType="Float"/>
+					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="348"
+						y="132"
+						width="82"
+						height="18"
+						backcolor="#E7E7E7"
+						key="staticText-79"
+						positionType="Float"/>
+					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DATE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="430"
+						y="132"
+						width="142"
+						height="18"
+						key="staticText-80"
+						positionType="Float"/>
+					<box>					<leftPen lineWidth="2.0" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="6" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="24"
+						width="572"
+						height="18"
+						key="subreport-13"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{CONTINUEDEDUCATION} == true]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[$F{continuedchilddata}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBRPTCONTINUEDFAMILY_CHILD}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="42"
+						width="572"
+						height="18"
+						key="subreport-14"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{CONTINUEDEDUCATION} == true]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[$F{continuededucationalInfos}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBRPTCONTINUEDEDUCATION}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="60"
+						width="572"
+						height="18"
+						key="subreport-15"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{CONTINUEDCIVILSERVICE} == true]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[$F{continuedcivilserviceInfos}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBRPTCONTINUEDCIVILSERVICE}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="78"
+						width="572"
+						height="18"
+						key="subreport-16"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{CONTINUEDWORKEXPERIENCES} == true]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[$F{continuedworkexperienceInfos}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBRPTCONTINUEDWORKEXPERIENCES}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="114"
+						width="572"
+						height="18"
+						key="subreport-17"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{CONTINUEDTRAINING} == true]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[$F{continuedtrainings}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBRPTCONTINUEDTRAINING}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="96"
+						width="572"
+						height="18"
+						key="subreport-18"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{CONTINUEDVOLUNTARYWORK} == true]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[$F{continuedvoluntaryworks}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBRPTCONTINUEDVOLUNTARYWORK}]]></subreportExpression>
 				</subreport>
 			</band>
 			</groupHeader>
@@ -2422,7 +2618,7 @@ concerned.]]></text>
 			</band>
 		</columnFooter>
 		<pageFooter>
-			<band height="10"  isSplitAllowed="true" >
+			<band height="21"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Transparent"
@@ -2490,7 +2686,7 @@ concerned.]]></text>
 			</band>
 		</summary>
 		<noData>
-			<band height="3"  isSplitAllowed="true" >
+			<band height="7"  isSplitAllowed="true" >
 			</band>
 		</noData>
 </jasperReport>

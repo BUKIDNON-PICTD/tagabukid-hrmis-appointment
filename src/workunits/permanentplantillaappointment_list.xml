@@ -1,0 +1,47 @@
+<workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISPermanentAppointmentListService" 
+     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="hrmis_appointmentpermanent">
+    <invokers>
+        <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (PERM)"  index="3" role="APPOINTMENT_SHARED"/>
+        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (PERM)"  index="3" role="APPOINTMENT_SHARED"/>
+        <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}" role="APPOINTMENT_ENCODER"/> 
+    </invokers>
+     <code>
+    <![CDATA[
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.common.*;
+
+    class TagabukidHRMISPermanentAppointmentListController extends ExplorerViewController {
+        
+        def params = [:]; 
+        
+        @Service("PersistenceService")
+        def persistenceSvc;
+    
+        //public void init() {
+        //    // params.yearcreated = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0]; 
+        //    params.dtfrom = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0] + "-01-01";
+        //    params.dtto = new java.sql.Date(System.currentTimeMillis());  
+        //} 
+        
+        //public void beforeFetchList( Map qry ) { 
+        //    if ( params ) qry.putAll( params ); 
+        //}
+        
+        void delete(){
+            if (MsgBox.confirm('Are you sure you want to delete this item?')){                
+                persistenceSvc.removeEntity([_schemaname:'hrmis_appointmentpermanent',objid:selectedEntity.objid])
+                listHandler.reload()
+            }
+        }
+        
+        boolean isAllowDelete(){
+            return (selectedEntity.state == 'PENDING');
+        }
+     }  
+    ]]> 
+    </code>
+
+
+</workunit>

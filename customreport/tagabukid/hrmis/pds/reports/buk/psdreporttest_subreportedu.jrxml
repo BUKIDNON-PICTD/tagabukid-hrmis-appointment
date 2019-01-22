@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportedu"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -247,7 +248,7 @@
 		</columnHeader>
 		<detail>
 			<band height="19"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Opaque"
 						x="0"
@@ -255,7 +256,10 @@
 						width="84"
 						height="19"
 						backcolor="#E7E7E7"
-						key="textField"/>
+						key="textField"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -272,7 +276,9 @@
 						y="0"
 						width="138"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -281,7 +287,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{school.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{school.name} == null || $F{school.name} == ""  ? "-":$F{school.name})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -289,7 +295,9 @@
 						y="0"
 						width="126"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -298,7 +306,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{school.address.addressdetails}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{school.address.addressdetails} == null || $F{school.address.addressdetails} == "" ? "-":$F{school.address.addressdetails})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -306,7 +314,9 @@
 						y="0"
 						width="41"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -315,15 +325,17 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{from}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{from} == null || $F{from} == "" ? "-":$F{from})]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="389"
 						y="0"
 						width="39"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -332,15 +344,17 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{to}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{to} == null || $F{to} == "" ? "-":$F{to})]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="428"
 						y="0"
 						width="48"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -349,15 +363,17 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{levelunitearned}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{levelunitearned} == null || $F{levelunitearned} == "" ? "-":$F{levelunitearned})]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="476"
 						y="0"
 						width="46"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -366,7 +382,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{yeargraduated}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{yeargraduated} == null || $F{yeargraduated} == "" ? "-":$F{yeargraduated})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -374,7 +390,9 @@
 						y="0"
 						width="50"
 						height="19"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -383,7 +401,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{scholarshipacademic}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{scholarshipacademic} == null || $F{scholarshipacademic} == "" ? "-":$F{scholarshipacademic})]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

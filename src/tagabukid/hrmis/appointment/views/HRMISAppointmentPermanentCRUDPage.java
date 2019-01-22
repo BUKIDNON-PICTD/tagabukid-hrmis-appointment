@@ -133,7 +133,7 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
 
         xLookupField10.setCaption("Plantilla Info");
         xLookupField10.setExpression("#{item.name}");
-        xLookupField10.setHandler("lookup:tagabukid_hrmis_org");
+        xLookupField10.setHandler("lookup:tagabukid_hrmis_vacantpermanentplantilla");
         xLookupField10.setName("entity.org"); // NOI18N
         xLookupField10.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField10.setRequired(true);
