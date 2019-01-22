@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportcivilservice"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -214,7 +215,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="160"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -231,7 +234,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="56"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -246,7 +251,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="75"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -261,7 +268,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="185"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -276,7 +285,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="54"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -291,7 +302,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="42"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>

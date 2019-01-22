@@ -30,26 +30,34 @@ class ReportPDSController extends ReportController {
     
     SubReport[] getSubReports() {
         return [ 
-           new SubReport("FAMILY", REPORT_PATH + "psdreporttest_subreportfam.jasper"),           
-           new SubReport("FAMILY_CHILD", REPORT_PATH + "psdreporttest_subreportfam_subreportchild.jasper"),
+            new SubReport("FAMILY", REPORT_PATH + "psdreporttest_subreportfam.jasper"),           
+            new SubReport("FAMILY_CHILD", REPORT_PATH + "psdreporttest_subreportfam_subreportchild.jasper"),
 
-           new SubReport("EDUCATION", REPORT_PATH + "psdreporttest_subreportedu.jasper"),
+            new SubReport("EDUCATION", REPORT_PATH + "psdreporttest_subreportedu.jasper"),
+           
 
-           new SubReport("CIVILSERVICE", REPORT_PATH + "psdreporttest_subreportcivilservice.jasper"),
-           new SubReport("WORKEXPERIENCE", REPORT_PATH + "psdreporttest_subreportwork.jasper"),
+            new SubReport("CIVILSERVICE", REPORT_PATH + "psdreporttest_subreportcivilservice.jasper"),
+            new SubReport("WORKEXPERIENCE", REPORT_PATH + "psdreporttest_subreportwork.jasper"),
 
-           new SubReport("VOLUNTARYWORK", REPORT_PATH + "psdreporttest_subreportvoluntarywork.jasper"),
-           new SubReport("TRAINING", REPORT_PATH + "psdreporttest_subreporttraining.jasper"),
-           new SubReport("SKILL", REPORT_PATH + "psdreporttest_subreportskills.jasper"),
-           new SubReport("NONACADEMIC", REPORT_PATH + "psdreporttest_subreportnonacademic.jasper"),
-           new SubReport("MEMBERSHIP", REPORT_PATH + "psdreporttest_subreportmembership.jasper"),
+            new SubReport("VOLUNTARYWORK", REPORT_PATH + "psdreporttest_subreportvoluntarywork.jasper"),
+            new SubReport("TRAINING", REPORT_PATH + "psdreporttest_subreporttraining.jasper"),
+            new SubReport("SKILL", REPORT_PATH + "psdreporttest_subreportskills.jasper"),
+            new SubReport("NONACADEMIC", REPORT_PATH + "psdreporttest_subreportnonacademic.jasper"),
+            new SubReport("MEMBERSHIP", REPORT_PATH + "psdreporttest_subreportmembership.jasper"),
 
-           new SubReport("LASTPAGE", REPORT_PATH + "psdreporttest_subreportlastpage.jasper"),
-           new SubReport("REFERENCE", REPORT_PATH + "psdreporttest_subreportreferences.jasper"),
-           new SubReport("REFERENCE_LIST", REPORT_PATH + "psdreporttest_subreportreferences_subreportreference.jasper"),
-           new SubReport("OATH", REPORT_PATH + "psdreporttest_subreportoath.jasper"),
+            new SubReport("LASTPAGE", REPORT_PATH + "psdreporttest_subreportlastpage.jasper"),
+            new SubReport("REFERENCE", REPORT_PATH + "psdreporttest_subreportreferences.jasper"),
+            new SubReport("REFERENCE_LIST", REPORT_PATH + "psdreporttest_subreportreferences_subreportreference.jasper"),
+            new SubReport("OATH", REPORT_PATH + "psdreporttest_subreportoath.jasper"),
 
+            new SubReport("SUBRPTCONTINUEDFAMILY_CHILD", REPORT_PATH + "continuedChildren_subreport.jasper"),
+            new SubReport("SUBRPTCONTINUEDEDUCATION", REPORT_PATH + "continuedEducationInfo_subreport.jasper"),
+            new SubReport("SUBRPTCONTINUEDCIVILSERVICE", REPORT_PATH + "continuedCivilService_subreport.jasper"),
+            new SubReport("SUBRPTCONTINUEDWORKEXPERIENCES", REPORT_PATH + "continuedworkexperience_subreport.jasper"),
+            new SubReport("SUBRPTCONTINUEDVOLUNTARYWORK", REPORT_PATH + "continuedvoluntaryworks_subreport.jasper"),
+            new SubReport("SUBRPTCONTINUEDTRAINING", REPORT_PATH + "continuedtrainings_subreport.jasper"),
 
+        
         ] as SubReport[];    
     }
 } 
