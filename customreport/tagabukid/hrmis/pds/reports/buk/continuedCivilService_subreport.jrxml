@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="psdreporttest_subreportcivilservice"
+		 name="continuedCivilService_subreport"
 
 		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
@@ -160,7 +160,7 @@ Validity]]></text>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[27.    CAREER SERVICE/ RA 1080 (BOARD/ BAR) UNDER
+				<text><![CDATA[    CAREER SERVICE/ RA 1080 (BOARD/ BAR) UNDER
                     SPECIAL LAWS/ CES/ CSEE
           BARANGAY ELIGIBILITY / DRIVER'S LICENSE]]></text>
 				</staticText>
@@ -215,8 +215,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="160"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-1"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
@@ -234,8 +235,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="56"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-2"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -251,8 +253,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="75"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-3"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -268,8 +271,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="185"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-4"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -285,8 +289,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="54"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-5"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -302,8 +307,9 @@ CONFERMENT]]></text>
 						y="0"
 						width="42"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-6"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>

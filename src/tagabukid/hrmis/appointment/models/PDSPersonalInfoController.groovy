@@ -103,11 +103,13 @@ class  PDSPersonalInfoController extends CrudFormModel{
         p.findBy = [person_objid:entity.person.objid];
         return querySvc.findFirst(p)
     }
+
     // PDS to BTACS
     // def loadBTACSidIncrement(){
-    //     def btacsuserid = svc.getBTACSid();
-    //     // btacsuserid = btacsuserid + 1;
-    //     println btacsuserid;
+    //     println "btacsuserid";
+    //     def btacsuserid = svc.findbtacsid();
+    //     btacsuserid = btacsuserid + 1;
+    //     // println btacsuserid;
     // }
 
     

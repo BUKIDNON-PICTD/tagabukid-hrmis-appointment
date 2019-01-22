@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="psdreporttest_subreportvoluntarywork"
+		 name="continuedvoluntaryworks_subreport"
 
 		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
@@ -81,7 +81,7 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="6"/>
 					</textElement>
-				<text><![CDATA[29.                   NAME & ADDRESS OF ORGANIZATION
+				<text><![CDATA[                   NAME & ADDRESS OF ORGANIZATION
                                          (Write in full)]]></text>
 				</staticText>
 				<staticText>
@@ -182,8 +182,8 @@
 						y="0"
 						width="215"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-1">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
@@ -199,8 +199,8 @@
 						y="0"
 						width="59"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-2">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -216,8 +216,8 @@
 						y="0"
 						width="43"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-3">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -233,8 +233,8 @@
 						y="0"
 						width="43"
 						height="22"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-4">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -250,8 +250,8 @@
 						y="0"
 						width="212"
 						height="22"
-						key="textField-1">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						key="textField-5">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>7]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>

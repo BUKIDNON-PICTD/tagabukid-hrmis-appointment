@@ -2,14 +2,14 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="psdreporttest_subreportfam_subreportchild"
+		 name="continuedChildren_subreport"
 
 		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
-		 pageWidth="256"
+		 pageWidth="572"
 		 pageHeight="802"
-		 columnWidth="256"
+		 columnWidth="572"
 		 columnSpacing="0"
 		 leftMargin="0"
 		 rightMargin="0"
@@ -49,12 +49,12 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="159"
+						x="336"
 						y="0"
-						width="97"
+						width="236"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-2"/>
+						key="staticText-1"/>
 					<box>					<topPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
@@ -69,18 +69,18 @@
 						mode="Opaque"
 						x="0"
 						y="0"
-						width="159"
+						width="336"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-1"/>
+						key="staticText-2"/>
 					<box>					<topPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
+					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[ 23. NAME of CHILDREN (Write full name and list all)]]></text>
+				<text><![CDATA[ NAME of CHILDREN (Write full name and list all)]]></text>
 				</staticText>
 			</band>
 		</columnHeader>
@@ -90,10 +90,11 @@
 					<reportElement
 						x="0"
 						y="0"
-						width="159"
+						width="336"
 						height="18"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<13]]></printWhenExpression>
+						key="textField-1"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>12]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -108,18 +109,19 @@
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="159"
+						x="336"
 						y="0"
-						width="97"
+						width="236"
 						height="18"
-						key="textField">
-							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<13]]></printWhenExpression>
+						key="textField-2"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}>12]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.0" lineStyle="Solid"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="2.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
