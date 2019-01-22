@@ -1,7 +1,7 @@
 <workunit extends="rpt_wtemplates/ReportController.xml" >
     <invokers>
-        <invoker type="hrmis_detailorder_list:form:formActions" caption="Preview Detail Order" action="init" index="1" visibleWhen="#{returnToOffice==true}"/>        
-        <invoker type="detailorder:form:formActions" caption="Preview Detail Order" action="init" index="1" />        
+        <invoker type="hrmis_detailorder_list:form:formActions" caption="Preview Detail Order" action="init" index="1" visibleWhen="#{returnToOffice==true}" role="DETAILORDER_REPORTS"/>        
+        <invoker type="detailorder:form:formActions" caption="Preview Detail Order" action="init" index="1" role="DETAILORDER_REPORTS" />        
     </invokers>
     <code>
     <![CDATA[
