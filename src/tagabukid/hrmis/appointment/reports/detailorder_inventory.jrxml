@@ -31,6 +31,7 @@
 	<parameter name="ASOF" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="personnel" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="category" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="LOGOLGU" isForPrompting="false" class="java.io.InputStream"/>
 
 	<field name="personnel.name" class="java.lang.String"/>
 	<field name="persona" class="java.lang.String"/>
@@ -110,6 +111,17 @@
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 				</textField>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="112"
+						y="0"
+						width="73"
+						height="64"
+						key="image-3"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.io.InputStream"><![CDATA[$P{LOGOLGU}]]></imageExpression>
+				</image>
 			</band>
 		</title>
 		<pageHeader>
