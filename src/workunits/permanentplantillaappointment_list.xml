@@ -1,5 +1,5 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISPermanentAppointmentListService" 
-     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="permanentappointmentdocument">
+     allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="hrmis_appointmentpermanent">
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (PERM)"  index="3" role="APPOINTMENT_SHARED"/>
         <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (PERM)"  index="3" role="APPOINTMENT_SHARED"/>
@@ -37,7 +37,7 @@
         }
         
         boolean isAllowDelete(){
-            return (selectedEntity.state == 'DRAFT');
+            return (selectedEntity.state == 'PENDING');
         }
      }  
     ]]> 

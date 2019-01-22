@@ -2,9 +2,9 @@
     <invokers>
         <invoker type="appointmentdocument:open" caption="Appointment (Casual)" action="open" index="100" target="window" role="APPOINTMENT_ENCODER"/>
         <invoker type="appointmentdocument:create" caption="Appointment (Casual)" action="create" index="100" target="window" role="APPOINTMENT_ENCODER"/>
-        <invoker type="hrmis_appointmentcasual:open" caption="Appointment (Casual)" action="open" role="APPOINTMENT_ENCODER"/>  
-        <invoker type="hrmis_appointmentcasual:create" caption="Appointment (Casual)" action="create" role="APPOINTMENT_ENCODER"/>     
-        <invoker type="hrmis_appointmentcasual:renew:create" caption="Appointment (Casual) Renew" action="create" tag="renew" role="APPOINTMENT_ENCODER"/> 
+        <invoker type="hrmis_appointmentcasual:open" caption="Appointment (Casual)" action="open" target="window" role="APPOINTMENT_ENCODER"/>  
+        <invoker type="hrmis_appointmentcasual:create" caption="Appointment (Casual)" action="create" target="window" role="APPOINTMENT_ENCODER"/>     
+        <invoker type="hrmis_appointmentcasual:renew:create" caption="Appointment (Casual) Renew" action="create" target="window" tag="renew" role="APPOINTMENT_ENCODER"/> 
         <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Casual)" action="create" index="5" role="APPOINTMENT_ENCODER"/>
         
         <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}" role="APPOINTMENT_APPROVER"/> 

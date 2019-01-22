@@ -1,10 +1,10 @@
 <workunit schemaName="hrmis_appointmentjoborder">
     <invokers>
-        <invoker type="joborderappointmentdocument:create" caption="Create JO Appointment" action="create" role="APPOINTMENT_ENCODER"/>
-        <invoker type="joborderappointmentdocument:open" caption="Open Appointment (JO)" action="open" role="APPOINTMENT_ENCODER"/> 
-        <invoker type="hrmis_appointmentjoborder:create" caption="Create JO Appointment" action="create" role="APPOINTMENT_ENCODER"/>
-        <invoker type="hrmis_appointmentjoborder:open" caption="Open Appointment (JO)" action="open" role="APPOINTMENT_ENCODER"/> 
-        <invoker type="hrmis_appointmentjoborder:renew:create" caption="Appointment (JO) Renew" action="create" tag="renew" role="APPOINTMENT_ENCODER"/>       
+        <invoker type="joborderappointmentdocument:create" caption="Create JO Appointment" action="create" target="window" role="APPOINTMENT_ENCODER"/>
+        <invoker type="joborderappointmentdocument:open" caption="Open Appointment (JO)" action="open" target="window" role="APPOINTMENT_ENCODER"/> 
+        <invoker type="hrmis_appointmentjoborder:create" caption="Create JO Appointment" action="create" target="window" role="APPOINTMENT_ENCODER"/>
+        <invoker type="hrmis_appointmentjoborder:open" caption="Open Appointment (JO)" action="open" target="window" role="APPOINTMENT_ENCODER"/> 
+        <invoker type="hrmis_appointmentjoborder:renew:create" caption="Appointment (JO) Renew" target="window" action="create" tag="renew" role="APPOINTMENT_ENCODER"/>       
         <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (JO)" action="create" index="4" role="APPOINTMENT_ENCODER"/>
         <invoker type="formActions" caption="Approve" action="approve" 
                   visibleWhen="#{allowApprove==true}" role="APPOINTMENT_APPROVER"/> 
