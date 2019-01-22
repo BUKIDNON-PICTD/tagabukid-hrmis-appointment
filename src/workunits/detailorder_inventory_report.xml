@@ -1,7 +1,6 @@
 <workunit extends="rpt_wtemplates/ReportController.xml" >
     <invokers>
-        <invoker type="hrmis_detailorder_list:form:formActions" caption="Preview Detail Order" action="init" index="1" visibleWhen="#{returnToOffice==true}"/>        
-        <invoker type="detailorder:form:formActions" caption="Preview Detail Order" action="init" index="1" />        
+        <invoker type="hrmis_detailorder_list:formActions" caption="Preview Detail Order" action="init" index="1"/>        
     </invokers>
     <code>
     <![CDATA[
@@ -17,7 +16,7 @@
 
         String title = 'Detail Order Form'
         String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/'
-        String reportName = REPORT_PATH + 'detailorder.jasper';
+        String reportName = REPORT_PATH + 'detailorder_inventory.jasper';
         def data 
         // def entity
 

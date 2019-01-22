@@ -30,6 +30,14 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     def tag
     def selectedAppointmentItem
     
+    @PropertyChangeListener
+    def listener = [
+        'entity.currentsalarystep' : { 
+            calculatewage()
+        }
+        
+    ]
+    
     boolean isAllowApprove() {
         return ( mode=='read' && entity.state.toString().matches('DRAFT|CUTOFF') ); 
     }

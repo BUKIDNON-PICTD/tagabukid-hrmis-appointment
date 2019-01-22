@@ -1,0 +1,11 @@
+<workunit schemaName="hrmis_appointmentpermanent">
+    <invokers>
+        <invoker type="hrmis_appointmentpermanent:create" caption="Appointment (Permanent)" target="window" role="APPOINTMENT_ENCODER"/>
+        <invoker type="hrmis_appointmentpermanent:open" caption="Appointment (Permanent)" target="window" action="open" role="APPOINTMENT_ENCODER"/>       
+        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Permanent)" target="window" action="create" index="6" role="APPOINTMENT_ENCODER"/>
+    </invokers>
+   <code class="tagabukid.hrmis.appointment.models.HRMISAppointmentPermanentCRUDController" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.HRMISAppointmentPermanentCRUDPage" />
+    </pages>
+</workunit>

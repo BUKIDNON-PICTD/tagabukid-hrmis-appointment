@@ -47,12 +47,12 @@ class PDSQuestionController extends CrudFormModel {
         entity.putAll(parententity);
     }
     
-//    def suggestCountry = [
-//        fetchList: { o->
-//            return svc.getList(o).name;
-//        }
-//    ] as SuggestModel;
-//    
+    //    def suggestCountry = [
+    //        fetchList: { o->
+    //            return svc.getList(o).name;
+    //        }
+    //    ] as SuggestModel;
+    //    
   
     
     public void beforeSave(o){
@@ -64,15 +64,20 @@ class PDSQuestionController extends CrudFormModel {
     }
     
     public void afterOpen() {
+
         // entity.pdsq = svc.loadQuestions();
         entity.pdsquestions = entity.pdsquestions.sort {
             it.pdsq.position
         }
         
+
+        // println entity.pdsquestions  
+        // entity.pdsq = svc.loadQuestions();
+
         if(!entity.pdsquestions){
             entity.pdsquestions = []
             entity.pdsq.each{
-               def newpdsquestion = [
+                def newpdsquestion = [
                     pdsq : it,
                     recordlog : [
                         datecreated : dtSvc.getServerDate(),
@@ -82,8 +87,8 @@ class PDSQuestionController extends CrudFormModel {
                         lastupdatedbyuser : OsirisContext.env.FULLNAME,
                         lastupdatedbyuserid : OsirisContext.env.USERID 
                     ]
-               ]
-               entity.pdsquestions.add(newpdsquestion)
+                ]
+                entity.pdsquestions.add(newpdsquestion)
             }
         }
         // pdsqustionListHandler.reload();

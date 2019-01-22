@@ -20,7 +20,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="xReportPanel1" max="32767" attributes="0"/>
-                  <Component id="xFormPanel1" pref="590" max="32767" attributes="0"/>
+                  <Component id="xFormPanel1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -62,6 +62,13 @@
             <Property name="name" type="java.lang.String" value="hidenoa" noResource="true"/>
             <Property name="showCaption" type="boolean" value="false"/>
             <Property name="text" type="java.lang.String" value="Hide Nature of Appointment"/>
+          </Properties>
+        </Component>
+        <Component class="com.rameses.rcp.control.XCheckBox" name="xCheckBox2">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="hidenoaheader" noResource="true"/>
+            <Property name="showCaption" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="Hide Nature of Appointment Header"/>
           </Properties>
         </Component>
       </SubComponents>
