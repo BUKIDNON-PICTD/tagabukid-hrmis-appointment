@@ -1,6 +1,6 @@
 <workunit>
     <invokers>
-        <invoker type="hrmis_leave:open"  action="open" target="window" role="PDS_ENCODER"/>
+        <invoker type="leaveledger:open"  action="open" target="window" role="PDS_ENCODER"/>
         <!-- <invoker type="hrmis_leave:create" action="create" target="window" role="PDS_ENCODER"/> -->
         <!-- <invoker folderid="/home/hrmis/hrmispds" caption="New PDS" action="create" index="2"  role="PDS_ENCODER"/> -->
 

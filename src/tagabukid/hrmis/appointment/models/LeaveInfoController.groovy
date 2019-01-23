@@ -22,7 +22,7 @@ class LeaveInfoController{
     def sections;
     def currentSection;
     def entity;
-
+    def selectedItem
 //    public void beforeSave(o){
 //        if (o == 'create'){
 //            entity.pdsno = svc.getPDSNo();
@@ -56,22 +56,22 @@ class LeaveInfoController{
        op.target = 'self';
        return op;
     }
-    
-    
 
-    public void approve(){
-       loadSections('open');
-    }
-
-    public void create(){
-        title = "New Leave";
-        entity = svc.initCreate();
-        loadSections('create');
-    }
+//    public void approve(){
+//       loadSections('open');
+//    }
+//
+//    public void create(){
+//        title = "New Leave";
+//        entity = svc.initCreate();
+//        loadSections('create');
+//    }
     public void open(){
+       
         title = entity.pdsno + " - " + entity.person.name
-        entity = persistenceSvc.read([ _schemaname: 'hrmis_leave', objid: entity.objid])
+        entity = persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.objid])
         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
+        selectedItem = entity
         loadSections('open');
     }
 //    public void afterCreate (){

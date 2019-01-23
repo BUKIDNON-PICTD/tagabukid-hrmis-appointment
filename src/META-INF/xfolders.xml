@@ -16,6 +16,7 @@
         <folder id="hrmis" caption="HRMIS">
             <folder id="hrmisappointment" caption="Appointment" index="1"/>
             <folder id="hrmispds" caption="PDS" index="2"/>
+            <folder id="hrmisleave" caption="Leave Management" index="2"/>
             <folder id="hrmismaster" caption="Master File" index="3"/>
         </folder>
     </folder>

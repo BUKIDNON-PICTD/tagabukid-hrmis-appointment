@@ -1,6 +1,0 @@
-<workunit extends="com/rameses/seti2/templates/CrudList.xml" 
-    schemaName="hrmis_leave" cols="pdsno,person.name" orderBy="person.name">
-    <invokers>
-        <invoker folderid="/home/hrmis" caption="Leave Ledger" action="init" index="3" role="PDS_SHARED"/>
-    </invokers>
-</workunit>
