@@ -59,10 +59,14 @@ class  LeaveLegerInfoController extends CrudFormModel{
         return ( selectedLeaveDetail.status.matches('APPROVED')); 
     }
     
+    boolean isAllowDraft() {
+        return ( selectedLeaveDetail.status.matches('CANCELLED')); 
+    }
+    
     public void beforeOpen() {
         entity.putAll(parententity)
     }
-        
+
     public void afterOpen(){
 //        loadpersonalinfo()
         loadleave()
@@ -88,7 +92,7 @@ class  LeaveLegerInfoController extends CrudFormModel{
     }
     
     def capture(){
-        if (MsgBox.confirm('you are about to capture an unposted transaction?')){
+        if (MsgBox.confirm('you are about to capture an unposted transaction. Proceed?')){
             return InvokerUtil.lookupOpener('hrmis_leave:create')
         }
         
@@ -214,4 +218,35 @@ class  LeaveLegerInfoController extends CrudFormModel{
 //            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
 //        }
     ] as EditorListModel;
+    
+    void approve() { 
+        if ( MsgBox.confirm('You are about to approve this transaction. Proceed?')) { 
+            getPersistenceService().update([ 
+                    _schemaname: 'hrmis_leavedetails', 
+                    objid : selectedLeaveDetail.objid, 
+                    status : 'APPROVED' 
+                ]); 
+            maincontroller.reloadSections('open');
+        }
+    }
+    void cancel() { 
+        if ( MsgBox.confirm('You are about to cancel this transaction. Proceed?')) { 
+            getPersistenceService().update([ 
+                    _schemaname: 'hrmis_leavedetails', 
+                    objid : selectedLeaveDetail.objid, 
+                    status : 'CANCELLED' 
+                ]); 
+            maincontroller.reloadSections('open');
+        }
+    }
+    void draft() { 
+        if ( MsgBox.confirm('You are about to draft this transaction. Proceed?')) { 
+            getPersistenceService().update([ 
+                    _schemaname: 'hrmis_leavedetails', 
+                    objid : selectedLeaveDetail.objid, 
+                    status : 'DRAFT' 
+                ]); 
+            maincontroller.reloadSections('open');
+        }
+    }
 }
