@@ -6,7 +6,7 @@ import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
         
-class  LeaveLegerInfoController extends CrudFormModel{
+class  LeaveCardController extends CrudFormModel{
     @Binding
     def binding;
     
@@ -28,8 +28,8 @@ class  LeaveLegerInfoController extends CrudFormModel{
     @Service('QueryService') 
     def querySvc; 
     
-    def selectedLeave
-    def selectedLeaveDetail
+    def selectedLeaveCard
+    def selectedLeaveCardDetail
     
     boolean isCreateAllowed(){
         return false
@@ -46,19 +46,9 @@ class  LeaveLegerInfoController extends CrudFormModel{
     boolean isPrintReportAllowed(){
         return false
     }
-    
     boolean isShowNavigation(){
         return false
     }
-    
-    boolean isAllowApprove() {
-        return ( selectedLeaveDetail.status.matches('DRAFT')); 
-    }
-    
-    boolean isAllowCancel() {
-        return ( selectedLeaveDetail.status.matches('APPROVED')); 
-    }
-    
     public void beforeOpen() {
         entity.putAll(parententity)
     }
@@ -66,7 +56,7 @@ class  LeaveLegerInfoController extends CrudFormModel{
     public void afterOpen(){
 //        loadpersonalinfo()
         loadleave()
-        leaveListHandler.reload();
+        leaveCardListHandler.reload();
     }
     // public void beforeSave(o){
     //     if (o == 'create'){
@@ -87,12 +77,17 @@ class  LeaveLegerInfoController extends CrudFormModel{
         // loadBTACSidIncrement()
     }
     
-    def capture(){
-        if (MsgBox.confirm('you are about to capture an unposted transaction?')){
-            return InvokerUtil.lookupOpener('hrmis_leave:create')
+    def capturedr(){
+        if (MsgBox.confirm('you are about to post DR transaction?')){
+            return InvokerUtil.lookupOpener('hrmis_leavecard:dr:create',[entity:selectedLeaveCard])
         }
-        
     }
+    def capturecr(){
+        if (MsgBox.confirm('you are about to post CR transaction?')){
+            return InvokerUtil.lookupOpener('hrmis_leavecard:cr:create',[entity:selectedLeaveCard])
+        }
+    }
+    
     void loadpersonalinfo(){
         entity = persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.objid])
         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
@@ -101,19 +96,17 @@ class  LeaveLegerInfoController extends CrudFormModel{
     }
     
     void loadleave(){
-        def p = [_schemaname: 'hrmis_leave'];
+        def p = [_schemaname: 'hrmis_leavecard'];
             p.findBy = [ 'pds_objid': entity.objid];
-        entity.leave = querySvc.getList( p )
-        entity.leave.each{
-            it.putAll(persistenceSvc.read([_schemaname:'hrmis_leave',objid:it.objid]))
+        entity.leavecard = querySvc.getList( p )
+        entity.leavecard.each{
+            it.putAll(persistenceSvc.read([_schemaname:'hrmis_leavecard',objid:it.objid]))
         }
-//        entity.leave
-        
     }   
     
-    def leaveListHandler = [
+    def leaveCardListHandler = [
         fetchList: { o->
-            return entity.leave.sort{it.datefiled}.reverse();
+            return entity.leavecard.sort{it.code}.reverse();
         },
         createItem : {
             return[
@@ -163,9 +156,9 @@ class  LeaveLegerInfoController extends CrudFormModel{
 //        }
     ] as EditorListModel;
     
-    def leaveDetailHandler = [
+    def leaveCardDetailHandler = [
         fetchList: { o->
-            return selectedLeave?.leavedetails?.sort{it.fromdate};
+            return selectedLeaveCard?.leavecarddetails?.sort{it.txndate};
         },
         createItem : {
             return[
