@@ -132,7 +132,7 @@ public class LeaveCardPage extends javax.swing.JPanel {
                 , new Object[]{"typeHandler", new com.rameses.rcp.common.TextColumnHandler()}
             }),
             new com.rameses.rcp.common.Column(new Object[]{
-                new Object[]{"name", "endingbalance"}
+                new Object[]{"name", "endbalance"}
                 , new Object[]{"caption", "Ending Balance"}
                 , new Object[]{"width", 100}
                 , new Object[]{"minWidth", 0}
@@ -146,7 +146,6 @@ public class LeaveCardPage extends javax.swing.JPanel {
             })
         });
         xDataTable3.setHandler("leaveCardListHandler");
-        xDataTable3.setId("leaveCardListHandler");
         xDataTable3.setName("selectedLeaveCard"); // NOI18N
 
         com.rameses.rcp.control.border.XTitledBorder xTitledBorder2 = new com.rameses.rcp.control.border.XTitledBorder();
@@ -274,7 +273,6 @@ public class LeaveCardPage extends javax.swing.JPanel {
         xDataTable1.setDepends(new String[] {"selectedLeaveCard"});
         xDataTable1.setDynamic(true);
         xDataTable1.setHandler("leaveCardDetailHandler");
-        xDataTable1.setId("leaveCardDetailHandler");
         xDataTable1.setName("selectedLeaveCardDetail"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -302,7 +300,6 @@ public class LeaveCardPage extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.rcp.control.XDataTable xDataTable1;
-    private com.rameses.rcp.control.XDataTable xDataTable2;
     private com.rameses.rcp.control.XDataTable xDataTable3;
     // End of variables declaration//GEN-END:variables
 }
