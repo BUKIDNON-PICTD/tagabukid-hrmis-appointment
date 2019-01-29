@@ -37,7 +37,10 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xLabel1 = new com.rameses.rcp.control.XLabel();
-        xLookupField12 = new com.rameses.rcp.control.XLookupField();
+        entityLookup1 = new com.rameses.entity.components.EntityLookup();
+        xTextField7 = new com.rameses.rcp.control.XTextField();
+        xTextField6 = new com.rameses.rcp.control.XTextField();
+        xTextField5 = new com.rameses.rcp.control.XTextField();
         xDateField1 = new com.rameses.rcp.control.XDateField();
         xDateField2 = new com.rameses.rcp.control.XDateField();
         xLookupField8 = new com.rameses.rcp.control.XLookupField();
@@ -89,13 +92,30 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xLabel1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLabel1);
 
-        xLookupField12.setCaption("Employee Name");
-        xLookupField12.setExpression("#{item.name}");
-        xLookupField12.setHandler("lookup:tagabukid_hrmis_org");
-        xLookupField12.setName("entity.org"); // NOI18N
-        xLookupField12.setPreferredSize(new java.awt.Dimension(0, 20));
-        xLookupField12.setRequired(true);
-        xFormPanel1.add(xLookupField12);
+        entityLookup1.setCaption("Employee Name");
+        entityLookup1.setCaptionWidth(160);
+        entityLookup1.setExpression("#{entity.name}");
+        entityLookup1.setName("entity.pds.person"); // NOI18N
+        entityLookup1.setPreferredSize(new java.awt.Dimension(0, 20));
+        xFormPanel1.add(entityLookup1);
+
+        xTextField7.setCaption("Pre Name Title");
+        xTextField7.setCaptionWidth(160);
+        xTextField7.setName("entity.pds.prenametitle"); // NOI18N
+        xTextField7.setPreferredSize(new java.awt.Dimension(300, 20));
+        xFormPanel1.add(xTextField7);
+
+        xTextField6.setCaption("Post Name Title");
+        xTextField6.setCaptionWidth(160);
+        xTextField6.setName("entity.pds.postnametitle"); // NOI18N
+        xTextField6.setPreferredSize(new java.awt.Dimension(300, 20));
+        xFormPanel1.add(xTextField6);
+
+        xTextField5.setCaption("Extension (Jr., Sr)");
+        xTextField5.setCaptionWidth(160);
+        xTextField5.setName("entity.pds.nameextension"); // NOI18N
+        xTextField5.setPreferredSize(new java.awt.Dimension(300, 20));
+        xFormPanel1.add(xTextField5);
 
         xDateField1.setCaption("Effective From");
         xDateField1.setName("entity.effectivefrom"); // NOI18N
@@ -110,7 +130,7 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xLookupField8.setCaption("Status");
         xLookupField8.setExpression("#{item.name}");
         xLookupField8.setHandler("lookup:tagabukid_hrmis_employmentstatus");
-        xLookupField8.setName("entity.org"); // NOI18N
+        xLookupField8.setName("entity.status"); // NOI18N
         xLookupField8.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField8.setRequired(true);
         xFormPanel1.add(xLookupField8);
@@ -132,9 +152,9 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xFormPanel1.add(xLookupField9);
 
         xLookupField10.setCaption("Plantilla Info");
-        xLookupField10.setExpression("#{item.name}");
+        xLookupField10.setExpression("#{item.jobposition.name + ' |  Item No. ' + item.itemno}");
         xLookupField10.setHandler("lookup:tagabukid_hrmis_vacantpermanentplantilla");
-        xLookupField10.setName("entity.org"); // NOI18N
+        xLookupField10.setName("entity.plantilla"); // NOI18N
         xLookupField10.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField10.setRequired(true);
         xFormPanel1.add(xLookupField10);
@@ -145,15 +165,15 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xFormPanel1.add(xDateField4);
 
         xLookupField11.setCaption("Current salary step");
-        xLookupField11.setExpression("#{item.name}");
+        xLookupField11.setExpression("#{'Grade - ' + item.grade + ' | Step - ' + item.step}");
         xLookupField11.setHandler("lookup:tagabukid_hrmis_paygradeandstepincrement");
-        xLookupField11.setName("entity.org"); // NOI18N
+        xLookupField11.setName("entity.paygradeandstepincrement"); // NOI18N
         xLookupField11.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField11.setRequired(true);
         xFormPanel1.add(xLookupField11);
 
-        xDecimalField1.setText("xDecimalField1");
         xDecimalField1.setCaption("Compensation");
+        xDecimalField1.setName("entity.compensation"); // NOI18N
         xFormPanel1.add(xDecimalField1);
 
         xDateField3.setCaption("Date Issued");
@@ -161,13 +181,13 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xDateField3.setRequired(true);
         xFormPanel1.add(xDateField3);
 
-        xTextField3.setText("xTextField1");
         xTextField3.setCaption("Succeeded Person");
+        xTextField3.setName("entity.succeededperson"); // NOI18N
         xTextField3.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField3);
 
-        xTextField4.setText("xTextField1");
         xTextField4.setCaption("Cause of Succession");
+        xTextField4.setName("entity.casueofsuccession"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xTextField4);
 
@@ -177,43 +197,43 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xFormPanel2.setCaptionWidth(160);
         xFormPanel2.setPreferredSize(new java.awt.Dimension(500, 100));
 
-        xTextField1.setText("xTextField1");
         xTextField1.setCaption("Position published (location)");
+        xTextField1.setName("entity.positionpublishedlocation"); // NOI18N
         xTextField1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField1);
 
         xDateField5.setCaption("Position published from");
-        xDateField5.setName("entity.dateissued"); // NOI18N
+        xDateField5.setName("entity.positionpublishedlocationdatefrom"); // NOI18N
         xDateField5.setRequired(true);
         xFormPanel2.add(xDateField5);
 
         xDateField6.setCaption("Position published to");
-        xDateField6.setName("entity.dateissued"); // NOI18N
+        xDateField6.setName("entity.positionpublishedlocationdateto"); // NOI18N
         xDateField6.setRequired(true);
         xFormPanel2.add(xDateField6);
 
-        xTextField2.setText("xTextField1");
         xTextField2.setCaption("Position posted in (location)");
+        xTextField2.setName("entity.positionpostedlocation"); // NOI18N
         xTextField2.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel2.add(xTextField2);
 
         xDateField7.setCaption("Position posted from");
-        xDateField7.setName("entity.dateissued"); // NOI18N
+        xDateField7.setName("entity.positionpostedlocationdatefrom"); // NOI18N
         xDateField7.setRequired(true);
         xFormPanel2.add(xDateField7);
 
         xDateField8.setCaption("Position posted to");
-        xDateField8.setName("entity.dateissued"); // NOI18N
+        xDateField8.setName("entity.positionpostedlocationdateto"); // NOI18N
         xDateField8.setRequired(true);
         xFormPanel2.add(xDateField8);
 
         xDateField9.setCaption("Assessment date start");
-        xDateField9.setName("entity.dateissued"); // NOI18N
+        xDateField9.setName("entity.assessmentdatestart"); // NOI18N
         xDateField9.setRequired(true);
         xFormPanel2.add(xDateField9);
 
         xDateField10.setCaption("Deliberation date");
-        xDateField10.setName("entity.dateissued"); // NOI18N
+        xDateField10.setName("entity.deliberationdate"); // NOI18N
         xDateField10.setRequired(true);
         xFormPanel2.add(xDateField10);
 
@@ -372,14 +392,14 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1223, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(xFormPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE)
-                            .addComponent(xFormPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(xFormPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1223, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(xFormPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 717, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(xFormPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(xFormPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 717, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -387,13 +407,13 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(xFormPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xFormPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(xFormPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xFormPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(xFormPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(505, Short.MAX_VALUE))
+                .addContainerGap(421, Short.MAX_VALUE))
         );
 
         xScrollPane1.setViewportView(jPanel2);
@@ -418,6 +438,7 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.rameses.entity.components.EntityLookup entityLookup1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
@@ -443,7 +464,6 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLabel xLabel7;
     private com.rameses.rcp.control.XLookupField xLookupField10;
     private com.rameses.rcp.control.XLookupField xLookupField11;
-    private com.rameses.rcp.control.XLookupField xLookupField12;
     private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XLookupField xLookupField4;
     private com.rameses.rcp.control.XLookupField xLookupField8;
@@ -455,5 +475,8 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;
+    private com.rameses.rcp.control.XTextField xTextField5;
+    private com.rameses.rcp.control.XTextField xTextField6;
+    private com.rameses.rcp.control.XTextField xTextField7;
     // End of variables declaration//GEN-END:variables
 }

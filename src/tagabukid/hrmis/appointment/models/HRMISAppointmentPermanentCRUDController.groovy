@@ -34,7 +34,7 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
         return ( mode=='read' && entity.state.toString().matches('DRAFT|CUTOFF') ); 
     }
     
-    boolean isAllowPreviewAppointment() {
+    boolean isallowPreviewAssumptionOfDuty() {
         return ( mode=='read'); 
     }
     
@@ -52,7 +52,7 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
     
 
     boolean isEditAllowed() {
-        return ( mode=='read' && entity.state.matches('DRAFT|CUTOFF')); 
+        return ( mode=='read' && entity.state.matches('PENDING|CUTOFF')); 
     }
 
     boolean isViewReportAllowed(){
@@ -82,14 +82,10 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
       
     }
 
-    public void afterOpen(){
+//    public void afterOpen(){
 //        println entity
-//        entity.signatorygroup = persistenceSvc.read( [_schemaname:'hrmis_appointment_signatorygrouping', objid:entity.signatorygroup.objid] );
-//        entity.appointmentitems.each{
-//            def pds = persistenceSvc.read([_schemaname:'hrmis_pds', objid:it.pds.objid])
-//            it.personnel = pds
-//        }
-    }
+//    }
+
     def suggestGroupName = [
         fetchList: { o->
             return svc.getList(o).appointmentgroupname;
