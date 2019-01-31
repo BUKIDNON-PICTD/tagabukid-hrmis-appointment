@@ -317,7 +317,7 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<text><![CDATA[REMARKS/COMMENTS/RECOMMENDATIONS (e.g. Reasons for Invalidation):]]></text>
+				<text><![CDATA[REMARKS/COMMENTS/RECOMMENDATIONS (e.g. Reasons for Disapproval of Appointment):]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -384,23 +384,6 @@
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
 				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Transparent"
-						x="0"
-						y="94"
-						width="896"
-						height="10"
-						forecolor="#000000"
-						backcolor="#FFFFFF"
-						key="staticText-88"
-						positionType="Float"/>
-					<box leftPadding="5" rightPadding="5"></box>
-					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Oblique" size="8" isBold="false" isItalic="true" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
-					</textElement>
-				<text><![CDATA[For CSC Use Only:]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

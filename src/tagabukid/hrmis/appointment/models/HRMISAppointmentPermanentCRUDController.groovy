@@ -191,9 +191,10 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
                 cancel._schemaname = 'hrmis_appointmentpermanent_cancel'
                 cancel.appointmentid = entity.objid
                 cancel.reason = reason
+                cancel.recordlog = [:]
                 cancel.recordlog.datecreated = dtSvc.getServerDate();
-                cancel.recordlog.recordlog_createdbyuserid = OsirisContext.env.FULLNAME;
-                cancel.recordlog.recordlog_createdbyuser = OsirisContext.env.USERID;
+                cancel.recordlog.createdbyuserid = OsirisContext.env.FULLNAME;
+                cancel.recordlog.createdbyuser = OsirisContext.env.USERID;
                 cancel.recordlog.dateupdated = dtSvc.getServerDate();
                 cancel.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
                 cancel.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
