@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreporttraining"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -223,7 +224,9 @@ Technical/etc)]]></text>
 						y="0"
 						width="213"
 						height="20"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<23]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -239,7 +242,9 @@ Technical/etc)]]></text>
 						y="0"
 						width="43"
 						height="20"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<23]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -254,7 +259,9 @@ Technical/etc)]]></text>
 						y="0"
 						width="43"
 						height="20"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<23]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -269,7 +276,9 @@ Technical/etc)]]></text>
 						y="0"
 						width="59"
 						height="20"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<23]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -284,7 +293,9 @@ Technical/etc)]]></text>
 						y="0"
 						width="51"
 						height="20"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<23]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -299,7 +310,9 @@ Technical/etc)]]></text>
 						y="0"
 						width="163"
 						height="20"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<23]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>

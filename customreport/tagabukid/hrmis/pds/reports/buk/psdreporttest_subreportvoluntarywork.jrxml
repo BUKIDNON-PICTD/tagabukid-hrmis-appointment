@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportvoluntarywork"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -181,7 +182,9 @@
 						y="0"
 						width="215"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="2.0"/>
 </box>
@@ -196,7 +199,9 @@
 						y="0"
 						width="59"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -211,7 +216,9 @@
 						y="0"
 						width="43"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -226,7 +233,9 @@
 						y="0"
 						width="43"
 						height="22"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
@@ -241,7 +250,9 @@
 						y="0"
 						width="212"
 						height="22"
-						key="textField-1"/>
+						key="textField-1">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<8]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -249,7 +260,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{voluntarywork.} != null ? $F{voluntarywork.description} +" - "+ $F{organizationaddress.text} : " ")]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{voluntarywork.description} != null ? $F{voluntarywork.description} +" - "+ $F{organizationaddress.text} : " ")]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

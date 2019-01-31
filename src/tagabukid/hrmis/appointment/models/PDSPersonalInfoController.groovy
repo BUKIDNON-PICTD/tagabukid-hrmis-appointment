@@ -83,7 +83,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
     }
     public void afterSave(){
         entity.person._schemaname = 'entityindividual'
-        
+        // entity.person.putAll(persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.person.objid])) 
         persistenceSvc.update(entity.person)
         maincontroller.reloadSections('open');
 
@@ -103,11 +103,13 @@ class  PDSPersonalInfoController extends CrudFormModel{
         p.findBy = [person_objid:entity.person.objid];
         return querySvc.findFirst(p)
     }
+
     // PDS to BTACS
     // def loadBTACSidIncrement(){
-    //     def btacsuserid = svc.getBTACSid();
-    //     // btacsuserid = btacsuserid + 1;
-    //     println btacsuserid;
+    //     println "btacsuserid";
+    //     def btacsuserid = svc.findbtacsid();
+    //     btacsuserid = btacsuserid + 1;
+    //     // println btacsuserid;
     // }
 
     

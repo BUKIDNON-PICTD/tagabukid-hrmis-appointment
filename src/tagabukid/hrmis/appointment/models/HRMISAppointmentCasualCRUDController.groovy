@@ -29,11 +29,12 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     
     def tag
     def selectedAppointmentItem
+
     
     @PropertyChangeListener
     def listener = [
         'entity.currentsalarystep' : { 
-            calculatewage()
+               calculatewage() 
         }
         
     ]
@@ -82,8 +83,6 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
         tag = invoker?.properties?.tag;
         if(tag=='renew'){
             entity.putAll(svc.initRenew(renewcaller.entity))
-//            println entity.currentsalarystep
-//            println mode
         }else{
             entity = svc.initCreate();
         }
@@ -246,6 +245,9 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
     // }
    
     def renew(){
-        return InvokerUtil.lookupOpener('hrmis_appointmentcasual:renew:create')
+        if (MsgBox.confirm('you are about to renew this transaction?')){
+            return InvokerUtil.lookupOpener('hrmis_appointmentcasual:renew:create')
+        }
+        
     }
 }  

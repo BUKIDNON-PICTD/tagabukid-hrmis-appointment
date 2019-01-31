@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportlastpage"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -26,6 +27,33 @@
 	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
 		<defaultValueExpression ><![CDATA["D:\\EtracsProjects\\tagabukid-hrmis-appointment\\customreport\\tagabukid\\hrmis\\pds\\reports\\buk\\"]]></defaultValueExpression>
 	</parameter>
+	<parameter name="answer" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="pdsquestions" isForPrompting="false" class="java.lang.Object"/>
+
+	<field name="answer1" class="java.lang.String"/>
+	<field name="position1" class="java.lang.Integer"/>
+	<field name="position5" class="java.lang.Integer"/>
+	<field name="position2" class="java.lang.Integer"/>
+	<field name="position3" class="java.lang.Integer"/>
+	<field name="position4" class="java.lang.Integer"/>
+	<field name="position6" class="java.lang.Integer"/>
+	<field name="position7" class="java.lang.Integer"/>
+	<field name="position8" class="java.lang.Integer"/>
+	<field name="position9" class="java.lang.Integer"/>
+	<field name="position10" class="java.lang.Integer"/>
+	<field name="position11" class="java.lang.Integer"/>
+	<field name="position12" class="java.lang.Integer"/>
+	<field name="answer2" class="java.lang.String"/>
+	<field name="answer3" class="java.lang.String"/>
+	<field name="answer4" class="java.lang.String"/>
+	<field name="answer5" class="java.lang.String"/>
+	<field name="answer6" class="java.lang.String"/>
+	<field name="answer7" class="java.lang.String"/>
+	<field name="answer8" class="java.lang.String"/>
+	<field name="answer9" class="java.lang.String"/>
+	<field name="answer10" class="java.lang.String"/>
+	<field name="answer11" class="java.lang.String"/>
+	<field name="answer12" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -549,7 +577,9 @@
 						width="9"
 						height="9"
 						key="line-1"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position1} == new Integer(1) && $F{answer1}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -559,7 +589,9 @@
 						width="9"
 						height="9"
 						key="line-2"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position1} == new Integer(1) && $F{answer1}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -569,7 +601,9 @@
 						width="9"
 						height="9"
 						key="line-3"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position2} == new Integer(2) && $F{answer2}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -579,7 +613,9 @@
 						width="9"
 						height="9"
 						key="line-4"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position2} == new Integer(2) && $F{answer2}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -589,7 +625,9 @@
 						width="9"
 						height="9"
 						key="line-5"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position3} == new Integer(3) && $F{answer3}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -599,7 +637,9 @@
 						width="9"
 						height="9"
 						key="line-6"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position3} == new Integer(3) && $F{answer3}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -609,7 +649,9 @@
 						width="9"
 						height="9"
 						key="line-7"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position4} == new Integer(4) && $F{answer4}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -619,7 +661,9 @@
 						width="9"
 						height="9"
 						key="line-8"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position4} == new Integer(4) && $F{answer4}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -629,7 +673,9 @@
 						width="9"
 						height="9"
 						key="line-9"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position5} == new Integer(5) && $F{answer5}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -639,7 +685,9 @@
 						width="9"
 						height="9"
 						key="line-10"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position5} == new Integer(5) && $F{answer5}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -649,7 +697,9 @@
 						width="9"
 						height="9"
 						key="line-11"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position6} == new Integer(6) && $F{answer6}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -659,7 +709,9 @@
 						width="9"
 						height="9"
 						key="line-12"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position6} == new Integer(6) && $F{answer6}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -669,7 +721,9 @@
 						width="9"
 						height="9"
 						key="line-13"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position7} == new Integer(7) && $F{answer7}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -679,7 +733,9 @@
 						width="9"
 						height="9"
 						key="line-14"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position7} == new Integer(7) && $F{answer7}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -689,7 +745,9 @@
 						width="9"
 						height="9"
 						key="line-15"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position8} == new Integer(8) && $F{answer8}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -699,7 +757,9 @@
 						width="9"
 						height="9"
 						key="line-16"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position8} == new Integer(8) && $F{answer8}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -709,7 +769,9 @@
 						width="9"
 						height="9"
 						key="line-17"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position9} == new Integer(9) && $F{answer9}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -719,7 +781,9 @@
 						width="9"
 						height="9"
 						key="line-18"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position9} == new Integer(9) && $F{answer9}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -729,7 +793,9 @@
 						width="9"
 						height="9"
 						key="line-19"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position10} == new Integer(10) && $F{answer10}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -739,7 +805,9 @@
 						width="9"
 						height="9"
 						key="line-20"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position10} == new Integer(10) && $F{answer10}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -749,7 +817,9 @@
 						width="9"
 						height="9"
 						key="line-21"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position11} == new Integer(11) && $F{answer11}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -759,7 +829,9 @@
 						width="9"
 						height="9"
 						key="line-22"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position11} == new Integer(11) && $F{answer11}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -769,7 +841,9 @@
 						width="9"
 						height="9"
 						key="line-23"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position12} == new Integer(12) && $F{answer12}.equals( "1" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<line direction="BottomUp">
@@ -779,7 +853,9 @@
 						width="9"
 						height="9"
 						key="line-24"
-						isPrintRepeatedValues="false"/>
+						isPrintRepeatedValues="false">
+							<printWhenExpression><![CDATA[new Boolean($F{position12} == new Integer(12) && $F{answer12}.equals( "0" ))]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
 				<staticText>

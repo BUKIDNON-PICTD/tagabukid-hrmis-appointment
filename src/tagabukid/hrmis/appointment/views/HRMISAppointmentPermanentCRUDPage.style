@@ -6,18 +6,6 @@
     enabled:true;
 }
 
-"entity.*"[entity.state == 'CUTOFF']{
-    enabled:false;
-}
-
-"selectedAppointmentItem|selectedSignatoryItem"[true==true]{
-    enabled:false;
-}
-
-"selectedAppointmentItem"[ entity.currentsalarystep != null && mode != 'read'] {
-    enabled:true;
-}   
-
 
 
 

@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportfam_subreportchild"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="256"
@@ -91,7 +92,9 @@
 						y="0"
 						width="159"
 						height="18"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<13]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -109,7 +112,9 @@
 						y="0"
 						width="97"
 						height="18"
-						key="textField"/>
+						key="textField">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<13]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.0" lineStyle="Solid"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid"/>

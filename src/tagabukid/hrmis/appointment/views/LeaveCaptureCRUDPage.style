@@ -1,0 +1,19 @@
+"entity.*"[mode == 'read']{
+    enabled:false;
+}
+
+"entity.*"[mode != 'read']{
+    enabled:true;
+}
+
+"selectedLeave"[true==true]{
+    enabled:false;
+}
+
+"selectedLeave"[ mode != 'read'] {
+    enabled:true;
+}   
+
+
+
+

@@ -10,6 +10,9 @@ class PDSInfoController{
     @Binding
     def binding;
     
+    @Controller
+    def workunit;
+    
     @Service("TagabukidHRMISPDSService")
     def svc;
 

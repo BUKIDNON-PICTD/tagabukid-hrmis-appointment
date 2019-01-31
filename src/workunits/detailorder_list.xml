@@ -1,6 +1,60 @@
-<workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="hrmis_detailorder_list"
-	cols="pdsid,personnel.name,status,charges.code,to.code,effectivity" orderBy="personnel.name ASC">
+<workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISDetailOrderListService" 
+     allowOpen="true" allowCreate="true" autoSelect="true" allowDelete="true" allowReport="true" defaultFileType="detailorder">
     <invokers>
-        <invoker folderid="/home/hrmis" caption="Detail Order" action="init" index="8" role="MASTER" />
+        <invoker folderid="/home/hrmis" action="init" caption="Detail Order"  index="6" role="DETAILORDER_SHARED"/>
+        <invoker type="formActions" caption="Generate Report" action="generate" role="DETAILORDER_REPORTS"/> 
     </invokers>
+     <code>
+    <![CDATA[
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.common.*;
+
+    class TagabukidHRMISDetailOrderListController extends ExplorerViewController {
+        
+        def params = [:]; 
+        
+        @Service("PersistenceService")
+        def persistenceSvc;
+    
+        public void init() {
+
+        } 
+        
+        public void beforeFetchList( Map qry ) { 
+            if ( params ) qry.putAll( params ); 
+        }
+        
+        boolean isEditAllowed() {
+            return ( mode=='read' && entity.returned != 'TRUE' );
+        }
+
+        boolean isCategory(){
+            return ( mode=='read' && qry.nodes.name != 'returned');
+        }
+
+        void delete(){
+            if (MsgBox.confirm('Are you sure you want to delete this item?')){                
+                persistenceSvc.removeEntity([_schemaname:'hrmis_detailorder_list',objid:selectedEntity.objid])
+                listHandler.reload()
+            }
+        }
+        
+        def generate(){
+            def op = Inv.lookupOpener( "detailorder:report", [nowd: node.name] )
+            op.target = 'self'
+            return op
+        }
+
+        boolean isAllowDelete(){
+            return (selectedEntity.state == 'DRAFT');
+        }
+     }  
+    ]]> 
+    </code>
+
+    <pages>
+        <page name="queryform" template="tagabukid.hrmis.appointment.views.DetailOrderListQueryForm"/>
+    </pages>
 </workunit>

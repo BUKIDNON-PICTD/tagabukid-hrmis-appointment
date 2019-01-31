@@ -1,0 +1,17 @@
+<workunit schemaName="hrmis_pds">
+    <invokers>
+         <!--<invoker type="leave:section:create" caption="Personal Info" action="create" index="1" visibleWhen="#{true}" role="PDS_ENCODER"/>--> 
+        <invoker type="leave:section:open" caption="Leave Ledger" action="open" index="1" visibleWhen="#{true}" role="PDS_ENCODER"/>
+        <invoker type="formActions" caption="Capture Leave" action="capture"/>
+        <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}" role="APPOINTMENT_APPROVER" depends="selectedLeaveDetail"/> 
+        <invoker type="formActions" caption="Cancel" action="cancel" visibleWhen="#{allowCancel==true}" role="APPOINTMENT_ENCODER" depends="selectedLeaveDetail"/> 
+        <invoker type="formActions" caption="Move to Draft" action="draft" visibleWhen="#{allowDraft==true}" role="APPOINTMENT_ENCODER" depends="selectedLeaveDetail"/> 
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.LeaveLedgerInfoController" />
+
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.LeaveLedgerInfoPage"/>
+    </pages>
+    
+</workunit>

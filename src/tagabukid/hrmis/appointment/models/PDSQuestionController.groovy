@@ -45,7 +45,6 @@ class PDSQuestionController extends CrudFormModel {
     }
     public void beforeOpen() {
         entity.putAll(parententity);
-        
     }
     
     //    def suggestCountry = [
@@ -65,8 +64,16 @@ class PDSQuestionController extends CrudFormModel {
     }
     
     public void afterOpen() {
-        println entity.pdsquestions  
-        entity.pdsq = svc.loadQuestions();
+
+        // entity.pdsq = svc.loadQuestions();
+        entity.pdsquestions = entity.pdsquestions.sort {
+            it.pdsq.position
+        }
+        
+
+        // println entity.pdsquestions  
+        // entity.pdsq = svc.loadQuestions();
+
         if(!entity.pdsquestions){
             entity.pdsquestions = []
             entity.pdsq.each{
@@ -88,6 +95,7 @@ class PDSQuestionController extends CrudFormModel {
     }
     
     def pdsqustionListHandler = [
+        
         fetchList: { entity.pdsquestions },
         // createItem : {
         //     return[

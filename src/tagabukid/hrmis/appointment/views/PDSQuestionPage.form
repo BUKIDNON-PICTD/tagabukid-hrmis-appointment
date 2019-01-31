@@ -50,7 +50,6 @@
             </Property>
             <Property name="editable" type="boolean" value="true"/>
             <Property name="handler" type="java.lang.String" value="pdsqustionListHandler"/>
-            <Property name="id" type="java.lang.String" value="pdsqustionListHandler"/>
             <Property name="name" type="java.lang.String" value="selectedPDSQuestion" noResource="true"/>
           </Properties>
         </Component>

@@ -1,0 +1,9 @@
+<workunit extends="wtemplates/SimpleReportController.xml" >
+    <invokers>
+        <invoker type="hrmis_appointmentpermanent:form:formActions" caption="Assumption to Duty" action="preview" target="self" index="1" role="APPOINTMENT_REPORTS"/>        
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.ReportAppointmentPermanentAssumptionToDutyController" />
+<!--    <pages>
+        <page name="preview" template="tagabukid.hrmis.appointment.views.ReportCasualAppointment" />
+    </pages>-->
+</workunit>

@@ -53,18 +53,18 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jPanel4" pref="1223" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="xFormPanel1" pref="717" max="32767" attributes="0"/>
-                                  <Component id="xFormPanel2" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jPanel4" pref="1223" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="xFormPanel1" min="-2" pref="717" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="xFormPanel5" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="xFormPanel5" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="xFormPanel2" alignment="0" min="-2" pref="717" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -75,14 +75,14 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="xFormPanel1" min="-2" pref="335" max="-2" attributes="0"/>
-                          <Component id="xFormPanel5" min="-2" pref="162" max="-2" attributes="0"/>
+                          <Component id="xFormPanel1" min="-2" pref="407" max="-2" attributes="0"/>
+                          <Component id="xFormPanel5" min="-2" pref="224" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="xFormPanel2" min="-2" pref="206" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" pref="210" max="-2" attributes="0"/>
-                      <EmptySpace pref="505" max="32767" attributes="0"/>
+                      <EmptySpace pref="421" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -115,16 +115,45 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField12">
+                <Component class="com.rameses.entity.components.EntityLookup" name="entityLookup1">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Employee Name"/>
-                    <Property name="expression" type="java.lang.String" value="#{item.name}"/>
-                    <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_org"/>
-                    <Property name="name" type="java.lang.String" value="entity.org" noResource="true"/>
+                    <Property name="captionWidth" type="int" value="160"/>
+                    <Property name="expression" type="java.lang.String" value="#{entity.name}"/>
+                    <Property name="name" type="java.lang.String" value="entity.pds.person" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
-                    <Property name="required" type="boolean" value="true"/>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XTextField" name="xTextField7">
+                  <Properties>
+                    <Property name="caption" type="java.lang.String" value="Pre Name Title"/>
+                    <Property name="captionWidth" type="int" value="160"/>
+                    <Property name="name" type="java.lang.String" value="entity.pds.prenametitle" noResource="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[300, 20]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XTextField" name="xTextField6">
+                  <Properties>
+                    <Property name="caption" type="java.lang.String" value="Post Name Title"/>
+                    <Property name="captionWidth" type="int" value="160"/>
+                    <Property name="name" type="java.lang.String" value="entity.pds.postnametitle" noResource="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[300, 20]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XTextField" name="xTextField5">
+                  <Properties>
+                    <Property name="caption" type="java.lang.String" value="Extension (Jr., Sr)"/>
+                    <Property name="captionWidth" type="int" value="160"/>
+                    <Property name="name" type="java.lang.String" value="entity.pds.nameextension" noResource="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[300, 20]"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField1">
@@ -146,7 +175,7 @@
                     <Property name="caption" type="java.lang.String" value="Status"/>
                     <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                     <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_employmentstatus"/>
-                    <Property name="name" type="java.lang.String" value="entity.org" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.status" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
@@ -180,13 +209,27 @@
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField10">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Plantilla Info"/>
-                    <Property name="expression" type="java.lang.String" value="#{item.name}"/>
-                    <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_org"/>
-                    <Property name="name" type="java.lang.String" value="entity.org" noResource="true"/>
+                    <Property name="expression" type="java.lang.String" value="#{item.jobposition.name + &apos; |  Item No. &apos; + item.itemno}"/>
+                    <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_vacantpermanentplantilla"/>
+                    <Property name="name" type="java.lang.String" value="entity.plantilla" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
                     <Property name="required" type="boolean" value="true"/>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XLabel" name="xLabel2">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                        <PropertyBean type="com.rameses.rcp.control.border.XLineBorder"/>
+                    </Property>
+                    <Property name="caption" type="java.lang.String" value="Salary Grade and Step Inc."/>
+                    <Property name="expression" type="java.lang.String" value="#{&apos;Grade - &apos; + item.grade + &apos; | Step - &apos; + item.step}"/>
+                    <Property name="name" type="java.lang.String" value="entity.paygradeandstepincrement" noResource="true"/>
+                    <Property name="opaque" type="boolean" value="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[0, 20]"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField4">
@@ -196,22 +239,10 @@
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
-                <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField11">
-                  <Properties>
-                    <Property name="caption" type="java.lang.String" value="Current salary step"/>
-                    <Property name="expression" type="java.lang.String" value="#{item.name}"/>
-                    <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_paygradeandstepincrement"/>
-                    <Property name="name" type="java.lang.String" value="entity.org" noResource="true"/>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[0, 20]"/>
-                    </Property>
-                    <Property name="required" type="boolean" value="true"/>
-                  </Properties>
-                </Component>
                 <Component class="com.rameses.rcp.control.XDecimalField" name="xDecimalField1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xDecimalField1"/>
                     <Property name="caption" type="java.lang.String" value="Compensation"/>
+                    <Property name="name" type="java.lang.String" value="entity.compensation" noResource="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField3">
@@ -223,8 +254,8 @@
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Succeeded Person"/>
+                    <Property name="name" type="java.lang.String" value="entity.succeededperson" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
@@ -232,8 +263,8 @@
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Cause of Succession"/>
+                    <Property name="name" type="java.lang.String" value="entity.casueofsuccession" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
@@ -256,8 +287,8 @@
               <SubComponents>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Position published (location)"/>
+                    <Property name="name" type="java.lang.String" value="entity.positionpublishedlocation" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
@@ -266,21 +297,21 @@
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField5">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Position published from"/>
-                    <Property name="name" type="java.lang.String" value="entity.dateissued" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.positionpublishedlocationdatefrom" noResource="true"/>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField6">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Position published to"/>
-                    <Property name="name" type="java.lang.String" value="entity.dateissued" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.positionpublishedlocationdateto" noResource="true"/>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XTextField" name="xTextField2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="xTextField1"/>
                     <Property name="caption" type="java.lang.String" value="Position posted in (location)"/>
+                    <Property name="name" type="java.lang.String" value="entity.positionpostedlocation" noResource="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 20]"/>
                     </Property>
@@ -289,28 +320,28 @@
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField7">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Position posted from"/>
-                    <Property name="name" type="java.lang.String" value="entity.dateissued" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.positionpostedlocationdatefrom" noResource="true"/>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField8">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Position posted to"/>
-                    <Property name="name" type="java.lang.String" value="entity.dateissued" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.positionpostedlocationdateto" noResource="true"/>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField9">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Assessment date start"/>
-                    <Property name="name" type="java.lang.String" value="entity.dateissued" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.assessmentdatestart" noResource="true"/>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
                 <Component class="com.rameses.rcp.control.XDateField" name="xDateField10">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Deliberation date"/>
-                    <Property name="name" type="java.lang.String" value="entity.dateissued" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="entity.deliberationdate" noResource="true"/>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
                 </Component>
@@ -456,6 +487,36 @@
                     <Property name="caption" type="java.lang.String" value="Date Created"/>
                     <Property name="expression" type="java.lang.String" value="#{entity.recordlog.datecreated}"/>
                     <Property name="for" type="java.lang.String" value=""/>
+                    <Property name="opaque" type="boolean" value="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[0, 16]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XLabel" name="xLabel8">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                        <PropertyBean type="com.rameses.rcp.control.border.XLineBorder"/>
+                    </Property>
+                    <Property name="caption" type="java.lang.String" value="Updated  By"/>
+                    <Property name="expression" type="java.lang.String" value="#{entity.recordlog.lastupdatedbyuser}"/>
+                    <Property name="for" type="java.lang.String" value=""/>
+                    <Property name="name" type="java.lang.String" value="" noResource="true"/>
+                    <Property name="opaque" type="boolean" value="true"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[0, 16]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="com.rameses.rcp.control.XLabel" name="xLabel9">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                        <PropertyBean type="com.rameses.rcp.control.border.XLineBorder"/>
+                    </Property>
+                    <Property name="caption" type="java.lang.String" value="Date Updated"/>
+                    <Property name="expression" type="java.lang.String" value="#{entity.recordlog.dateupdated}"/>
+                    <Property name="for" type="java.lang.String" value=""/>
+                    <Property name="name" type="java.lang.String" value="" noResource="true"/>
                     <Property name="opaque" type="boolean" value="true"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[0, 16]"/>

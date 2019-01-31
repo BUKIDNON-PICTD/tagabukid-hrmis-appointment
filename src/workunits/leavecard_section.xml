@@ -1,0 +1,40 @@
+<workunit schemaName="hrmis_pds">
+    <invokers>
+         <!--<invoker type="leave:section:create" caption="Personal Info" action="create" index="1" visibleWhen="#{true}" role="PDS_ENCODER"/>--> 
+        <invoker type="leave:section:open" caption="Leave Card" action="open" index="2" visibleWhen="#{true}" role="PDS_ENCODER"/>
+        <invoker type="formActions" caption="Capture DR" action="capturedr"/>        
+        <invoker type="formActions" caption="Capture CR" action="capturecr"/>
+
+    </invokers>
+    
+    <code class="tagabukid.hrmis.appointment.models.LeaveCardController" />
+
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.LeaveCardPage"/>
+    </pages>
+    
+</workunit>
+
+<!--<workunit extends="com/rameses/seti2/templates/CrudList.xml" 
+          schemaName="hrmis_leavecard"
+          cols='state,code,title,leavetype.name,leavetype.code,totaldr,totalcr,endbalance'>
+    <invokers>
+        <invoker type="leave:section:open" caption="Leave Card" action="init" index="2" visibleWhen="#{true}" role="PDS_ENCODER"/>
+    </invokers>
+    <code>
+        <![CDATA[ 
+        import com.rameses.rcp.annotations.*;
+        import com.rameses.seti2.models.*;
+        
+        class LeaveCardList extends CrudListModel {
+            @Caller
+            def caller;
+        
+            def getCustomFilter() {
+                return ["pds_objid=:pdsid", [pdsid:caller.entity.objid]];
+            }
+        }
+         ]]>
+    </code>  
+</workunit>-->
+

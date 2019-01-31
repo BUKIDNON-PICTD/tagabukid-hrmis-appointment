@@ -85,7 +85,6 @@ public class PDSQuestionPage extends javax.swing.JPanel {
         });
         xDataTable2.setEditable(true);
         xDataTable2.setHandler("pdsqustionListHandler");
-        xDataTable2.setId("pdsqustionListHandler");
         xDataTable2.setName("selectedPDSQuestion"); // NOI18N
         xHorizontalPanel3.add(xDataTable2);
 

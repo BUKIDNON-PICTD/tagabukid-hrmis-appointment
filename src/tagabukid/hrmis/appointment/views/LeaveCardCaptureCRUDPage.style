@@ -1,0 +1,20 @@
+"entity.*"[mode == 'read']{
+    enabled:false;
+}
+
+"entity.*"[mode != 'read']{
+    enabled:true;
+}
+
+"entity.dr"[tag != 'dr']{
+    visible:false;
+}
+
+"entity.cr"[tag != 'cr']{
+    visible:false;
+}
+
+
+
+
+
