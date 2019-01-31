@@ -58,6 +58,14 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
         return (mode=='read' && entity.state=='APPROVED'); 
     }
     
+    boolean isAllowCancel() {
+        return (mode=='read' && entity.state=='APPROVED'); 
+    }
+    
+    boolean isAllowDisapprove() {
+        return (mode=='read' && entity.state=='APPROVED'); 
+    }
+    
 
     boolean isEditAllowed() {
         return ( mode=='read' && entity.state.matches('PENDING|CUTOFF')); 
@@ -128,7 +136,7 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
     ] as EditorListModel
 
     void approve() { 
-        if ( MsgBox.confirm('You are about to approve this document. Proceed?')) { 
+         if ( MsgBox.confirm('You are about to approve this document. Proceed?')) { 
             getPersistenceService().update([ 
                     _schemaname: 'hrmis_appointmentpermanent', 
                     objid : entity.objid, 
@@ -138,16 +146,48 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
         }
     }
     
-     void cutoff() { 
-        if ( MsgBox.confirm('You are about to edit this document. Proceed?')) { 
-            getPersistenceService().update([ 
-                    _schemaname: 'hrmis_appointmentpermanent', 
-                    objid : entity.objid, 
-                    state : 'CUTOFF' 
-                ]); 
-            loadData();
+    void disapprove() { 
+       if ( MsgBox.confirm('You are about to approve this document. Proceed?')) { 
+            def reason = MsgBox.prompt("Please enter the reason for disapproval.")
+            if (!reason?.trim()){
+                 MsgBox.alert('Disapproval reason is required'); 
+            }else{
+                entity.datedisapproved = dtSvc.getServerDate();
+                entity.disapprovalreason = reason
+                entity.recordlog.dateupdated = dtSvc.getServerDate();
+                entity.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+                entity.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+                entity._schemaname = 'hrmis_appointmentpermanent'
+                entity.state = "DISAPPROVED"
+		persistenceSvc.update(entity)
+                loadData();
+            }
+            
         }
     }
+    
+    void cutoff() { 
+       if ( MsgBox.confirm('You are about to cutoff this document. Proceed?')) { 
+            def reason = MsgBox.prompt("Please enter the reason for cutoff.")
+            if (!reason?.trim()){
+                 MsgBox.alert('Cutoff reason is required'); 
+            }else{
+                entity.cutoffdate = dtSvc.getServerDate();
+                entity.cutoffreason = reason
+                entity.recordlog.dateupdated = dtSvc.getServerDate();
+                entity.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+                entity.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+                entity._schemaname = 'hrmis_appointmentpermanent'
+                entity.state = "CUTOFF"
+		persistenceSvc.update(entity)
+                loadData();
+            }
+        }
+    }
+    
+//     boolean verifyReprint() {
+//        return (MsgBox.prompt("Please enter security code") == "etracs"); 
+//    }
 //    def getTranchLookupHandler(){
 //        return Inv.lookupOpener('lookup:tagabukid_hrmis_tranche',[
 //                onselect :{tranche ->

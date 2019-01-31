@@ -429,7 +429,7 @@
 						width="896"
 						height="13"
 						key="textField-3">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -489,7 +489,9 @@
 						width="35"
 						height="40"
 						backcolor="#99CCFF"
-						key="staticText-24"/>
+						key="staticText-24">
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -504,9 +506,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="459"
+						x="425"
 						y="12"
-						width="40"
+						width="74"
 						height="40"
 						backcolor="#99CCFF"
 						key="staticText-25"/>
@@ -729,7 +731,9 @@ indicate period of publication
 						width="35"
 						height="8"
 						backcolor="#FFFFFF"
-						key="staticText-39"/>
+						key="staticText-39">
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -744,9 +748,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="459"
+						x="425"
 						y="52"
-						width="40"
+						width="74"
 						height="8"
 						backcolor="#FFFFFF"
 						key="staticText-40"/>
@@ -1289,7 +1293,7 @@ indicate period of publication
 						width="847"
 						height="13"
 						key="textField-8">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
 						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1567,7 +1571,9 @@ indicate period of publication
 						width="34"
 						height="10"
 						key="textField-6"
-						stretchType="RelativeToTallestObject"/>
+						stretchType="RelativeToTallestObject">
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1581,9 +1587,9 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="459"
+						x="425"
 						y="0"
-						width="40"
+						width="74"
 						height="10"
 						key="textField-7"
 						stretchType="RelativeToTallestObject"/>
