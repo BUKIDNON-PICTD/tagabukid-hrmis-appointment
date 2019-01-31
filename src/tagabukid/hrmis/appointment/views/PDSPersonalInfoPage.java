@@ -46,6 +46,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         entityLookup1 = new com.rameses.entity.components.EntityLookup();
         xTextField1 = new com.rameses.rcp.control.XTextField();
         xTextField4 = new com.rameses.rcp.control.XTextField();
+        xTextField16 = new com.rameses.rcp.control.XTextField();
+        xTextField17 = new com.rameses.rcp.control.XTextField();
         xDateField1 = new com.rameses.rcp.control.XDateField();
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
@@ -126,6 +128,23 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
         xTextField4.setName("entity.nameextension"); // NOI18N
         xTextField4.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField4);
+
+        xTextField16.setText("entity.prenametitle");
+        xTextField16.setCaption("Pre Name Title");
+        xTextField16.setCaptionFontStyle("");
+        xTextField16.setCaptionWidth(135);
+        xTextField16.setName("entity.prenametitle"); // NOI18N
+        xTextField16.setPreferredSize(new java.awt.Dimension(300, 20));
+        xFormPanel1.add(xTextField16);
+
+        xTextField17.setText("entity.postnametitle");
+        xTextField17.setCaption("Post Name Title");
+        xTextField17.setCaptionFontStyle("");
+        xTextField17.setCaptionWidth(135);
+        xTextField17.setInputFormatErrorMsg("");
+        xTextField17.setName("entity.postnametitle"); // NOI18N
+        xTextField17.setPreferredSize(new java.awt.Dimension(300, 20));
+        xFormPanel1.add(xTextField17);
 
         xDateField1.setCaption("Date of Birth");
         xDateField1.setCaptionWidth(135);
@@ -273,12 +292,12 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
             .addGroup(xPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(xPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xHorizontalPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(xPanel1Layout.createSequentialGroup()
                         .addComponent(xHorizontalPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(xHorizontalPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(410, Short.MAX_VALUE))
+                .addContainerGap(374, Short.MAX_VALUE))
         );
 
         jScrollPane4.setViewportView(xPanel1);
@@ -331,6 +350,8 @@ public class PDSPersonalInfoPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XTextField xTextField13;
     private com.rameses.rcp.control.XTextField xTextField14;
     private com.rameses.rcp.control.XTextField xTextField15;
+    private com.rameses.rcp.control.XTextField xTextField16;
+    private com.rameses.rcp.control.XTextField xTextField17;
     private com.rameses.rcp.control.XTextField xTextField2;
     private com.rameses.rcp.control.XTextField xTextField3;
     private com.rameses.rcp.control.XTextField xTextField4;

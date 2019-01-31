@@ -83,7 +83,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
     }
     public void afterSave(){
         entity.person._schemaname = 'entityindividual'
-        
+        // entity.person.putAll(persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.person.objid])) 
         persistenceSvc.update(entity.person)
         maincontroller.reloadSections('open');
 
