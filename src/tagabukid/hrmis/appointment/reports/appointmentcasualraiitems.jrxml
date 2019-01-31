@@ -173,7 +173,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="53"
+						x="17"
 						y="23"
 						width="67"
 						height="29"
@@ -193,7 +193,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="120"
+						x="84"
 						y="23"
 						width="57"
 						height="29"
@@ -213,7 +213,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="53"
+						x="17"
 						y="12"
 						width="207"
 						height="11"
@@ -233,7 +233,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="177"
+						x="141"
 						y="23"
 						width="26"
 						height="29"
@@ -253,7 +253,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="203"
+						x="167"
 						y="23"
 						width="57"
 						height="29"
@@ -273,28 +273,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="260"
-						y="12"
-						width="113"
-						height="40"
-						backcolor="#99CCFF"
-						key="staticText-8"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[POSITION TITLE 
-(indicate parenthetical title if applicatable)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="399"
+						x="363"
 						y="12"
 						width="26"
 						height="40"
@@ -314,7 +293,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="499"
+						x="463"
 						y="12"
 						width="84"
 						height="40"
@@ -336,7 +315,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="583"
+						x="547"
 						y="12"
 						width="49"
 						height="40"
@@ -358,9 +337,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="714"
+						x="723"
 						y="12"
-						width="142"
+						width="133"
 						height="11"
 						backcolor="#99CCFF"
 						key="staticText-15">
@@ -380,9 +359,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="714"
+						x="723"
 						y="23"
-						width="53"
+						width="44"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-17">
@@ -397,7 +376,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
 					</textElement>
-				<text><![CDATA[V-VALIDATED   INV-INVALIDATED]]></text>
+				<text><![CDATA[A - Approved or D - Disapproved or N - Noted]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -444,12 +423,14 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="17"
+						x="596"
 						y="12"
 						width="36"
 						height="40"
 						backcolor="#99CCFF"
-						key="staticText-22"/>
+						key="staticText-22">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -464,12 +445,14 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="373"
+						x="337"
 						y="12"
 						width="26"
 						height="40"
 						backcolor="#99CCFF"
-						key="staticText-23"/>
+						key="staticText-23">
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -484,7 +467,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="425"
+						x="389"
 						y="12"
 						width="35"
 						height="40"
@@ -506,7 +489,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="425"
+						x="389"
 						y="12"
 						width="74"
 						height="40"
@@ -528,7 +511,7 @@
 						mode="Opaque"
 						x="632"
 						y="12"
-						width="82"
+						width="91"
 						height="11"
 						backcolor="#99CCFF"
 						key="staticText-26">
@@ -574,7 +557,7 @@ indicate period of publication
 						mode="Opaque"
 						x="673"
 						y="23"
-						width="41"
+						width="50"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-28">
@@ -587,10 +570,10 @@ indicate period of publication
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
 					</textElement>
 				<text><![CDATA[MODE
-(CSC Bulletin of Vacant Position)]]></text>
+(CSC Bulletin of Vacant Position, Agency Website, Newspaper, etc.)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -640,345 +623,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="499"
-						y="52"
-						width="84"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-35"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(8)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="583"
-						y="52"
-						width="49"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-36">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(9)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="714"
-						y="52"
-						width="53"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-37">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(12)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="767"
-						y="52"
-						width="41"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-38">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(13)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="425"
-						y="52"
-						width="35"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-39">
-							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(6)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="425"
-						y="52"
-						width="74"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-40"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(7)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="632"
-						y="52"
-						width="41"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-41">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(10)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="673"
-						y="52"
-						width="41"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-42">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(11)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="808"
-						y="52"
-						width="48"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-43">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(14)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="856"
-						y="52"
-						width="40"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-44">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(15)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="0"
-						y="52"
-						width="17"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-45"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="53"
-						y="52"
-						width="207"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-46"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(2)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="260"
-						y="52"
-						width="113"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-50"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(3)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="399"
-						y="52"
-						width="26"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-51"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(5)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="17"
-						y="52"
-						width="36"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-52"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(1)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="373"
-						y="52"
-						width="26"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-53"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(4)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="665"
+						x="637"
 						y="12"
-						width="142"
+						width="134"
 						height="11"
 						backcolor="#99CCFF"
 						key="staticText-54">
@@ -998,9 +645,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="665"
+						x="637"
 						y="23"
-						width="53"
+						width="45"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-55">
@@ -1015,12 +662,12 @@ indicate period of publication
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
 					</textElement>
-				<text><![CDATA[V-VALIDATED   INV-INVALIDATED]]></text>
+				<text><![CDATA[A - Approved or D - Disapproved or N - Noted]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="718"
+						x="682"
 						y="23"
 						width="41"
 						height="29"
@@ -1043,9 +690,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="583"
+						x="547"
 						y="12"
-						width="82"
+						width="90"
 						height="11"
 						backcolor="#99CCFF"
 						key="staticText-57">
@@ -1065,7 +712,7 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="583"
+						x="547"
 						y="23"
 						width="41"
 						height="29"
@@ -1083,15 +730,14 @@ indicate period of publication
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
 					</textElement>
 				<text><![CDATA[DATE
-indicate period of publication
-(mm/dd/yyyy to mm/dd/yyyy)]]></text>
+indicafte period of publication(mm/dd/yyyy to mm/dd/yyyy)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="624"
+						x="588"
 						y="23"
-						width="41"
+						width="49"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-59">
@@ -1104,15 +750,15 @@ indicate period of publication
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
 					</textElement>
 				<text><![CDATA[MODE
-(CSC Bulletin of Vacant Position)]]></text>
+(CSC Bulletin of Vacant Position, Agency Website, Newspaper, etc.)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="759"
+						x="723"
 						y="23"
 						width="48"
 						height="29"
@@ -1135,7 +781,7 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="807"
+						x="771"
 						y="12"
 						width="40"
 						height="40"
@@ -1153,138 +799,6 @@ indicate period of publication
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
 				<text><![CDATA[AGENCY RECEIVING OFFICER]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="665"
-						y="52"
-						width="53"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-62">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(12)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="718"
-						y="52"
-						width="41"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-63">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(13)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="583"
-						y="52"
-						width="41"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-64">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(10)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="624"
-						y="52"
-						width="41"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-65">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(11)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="759"
-						y="52"
-						width="48"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-66">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(14)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="807"
-						y="52"
-						width="40"
-						height="8"
-						backcolor="#FFFFFF"
-						key="staticText-67">
-							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
-						</reportElement>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[(15)]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1305,14 +819,35 @@ indicate period of publication
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["Pertinent data on appointment issued"]]></textFieldExpression>
 				</textField>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="224"
+						y="12"
+						width="139"
+						height="40"
+						backcolor="#99CCFF"
+						key="staticText-8"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
+					</textElement>
+				<text><![CDATA[POSITION TITLE 
+(indicate parenthetical title if applicatable)]]></text>
+				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="10"  isSplitAllowed="true" >
+			<band height="2"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
-						y="0"
+						y="-8"
 						width="17"
 						height="10"
 						key="textField"
@@ -1330,8 +865,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="53"
-						y="0"
+						x="17"
+						y="-8"
 						width="67"
 						height="10"
 						key="textField"
@@ -1349,8 +884,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="120"
-						y="0"
+						x="84"
+						y="-8"
 						width="57"
 						height="10"
 						key="textField"
@@ -1368,8 +903,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="203"
-						y="0"
+						x="167"
+						y="-8"
 						width="57"
 						height="10"
 						key="textField"
@@ -1387,8 +922,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="177"
-						y="0"
+						x="141"
+						y="-8"
 						width="26"
 						height="10"
 						key="textField-1"
@@ -1406,27 +941,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="260"
-						y="0"
-						width="113"
-						height="10"
-						key="textField"
-						stretchType="RelativeToTallestObject"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="5"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.jobposition.name}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="399"
-						y="0"
+						x="363"
+						y="-8"
 						width="26"
 						height="10"
 						key="textField"
@@ -1444,8 +960,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="499"
-						y="0"
+						x="463"
+						y="-8"
 						width="84"
 						height="10"
 						key="textField"
@@ -1463,8 +979,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="583"
-						y="0"
+						x="547"
+						y="-8"
 						width="49"
 						height="10"
 						key="textField"
@@ -1486,7 +1002,7 @@ indicate period of publication
 					<reportElement
 						mode="Opaque"
 						x="767"
-						y="0"
+						y="-8"
 						width="41"
 						height="10"
 						key="staticText-19"
@@ -1508,7 +1024,7 @@ indicate period of publication
 					<reportElement
 						mode="Opaque"
 						x="808"
-						y="0"
+						y="-8"
 						width="48"
 						height="10"
 						key="staticText-20"
@@ -1528,12 +1044,14 @@ indicate period of publication
 				</staticText>
 				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="17"
-						y="0"
+						x="596"
+						y="-8"
 						width="36"
 						height="10"
 						key="textField-4"
-						stretchType="RelativeToTallestObject"/>
+						stretchType="RelativeToTallestObject">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1547,12 +1065,14 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="373"
-						y="0"
+						x="337"
+						y="-8"
 						width="26"
 						height="10"
 						key="textField-5"
-						stretchType="RelativeToTallestObject"/>
+						stretchType="RelativeToTallestObject">
+							<printWhenExpression><![CDATA[1!=1]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -1566,8 +1086,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="425"
-						y="0"
+						x="389"
+						y="-8"
 						width="34"
 						height="10"
 						key="textField-6"
@@ -1587,8 +1107,8 @@ indicate period of publication
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="425"
-						y="0"
+						x="389"
+						y="-8"
 						width="74"
 						height="10"
 						key="textField-7"
@@ -1607,9 +1127,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="714"
-						y="0"
-						width="53"
+						x="723"
+						y="-8"
+						width="44"
 						height="10"
 						key="staticText-31"
 						stretchType="RelativeToTallestObject">
@@ -1630,7 +1150,7 @@ indicate period of publication
 					<reportElement
 						mode="Opaque"
 						x="856"
-						y="0"
+						y="-8"
 						width="40"
 						height="10"
 						key="staticText-32"
@@ -1652,7 +1172,7 @@ indicate period of publication
 					<reportElement
 						mode="Opaque"
 						x="632"
-						y="0"
+						y="-8"
 						width="41"
 						height="10"
 						key="staticText-33"
@@ -1674,8 +1194,8 @@ indicate period of publication
 					<reportElement
 						mode="Opaque"
 						x="673"
-						y="0"
-						width="41"
+						y="-8"
+						width="50"
 						height="10"
 						key="staticText-34"
 						stretchType="RelativeToTallestObject">
@@ -1695,8 +1215,8 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="718"
-						y="0"
+						x="682"
+						y="-8"
 						width="41"
 						height="10"
 						key="staticText-68"
@@ -1717,8 +1237,8 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="759"
-						y="0"
+						x="723"
+						y="-8"
 						width="48"
 						height="10"
 						key="staticText-69"
@@ -1739,9 +1259,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="665"
-						y="0"
-						width="53"
+						x="637"
+						y="-8"
+						width="45"
 						height="10"
 						key="staticText-70"
 						stretchType="RelativeToTallestObject">
@@ -1761,8 +1281,8 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="807"
-						y="0"
+						x="771"
+						y="-8"
 						width="40"
 						height="10"
 						key="staticText-71"
@@ -1783,8 +1303,8 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="583"
-						y="0"
+						x="547"
+						y="-8"
 						width="41"
 						height="10"
 						key="staticText-72"
@@ -1805,9 +1325,9 @@ indicate period of publication
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="624"
-						y="0"
-						width="41"
+						x="588"
+						y="-8"
+						width="49"
 						height="10"
 						key="staticText-73"
 						stretchType="RelativeToTallestObject">
@@ -1824,6 +1344,25 @@ indicate period of publication
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="224"
+						y="-8"
+						width="139"
+						height="10"
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.jobposition.name}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>

@@ -295,7 +295,7 @@
 					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<text><![CDATA[     together with the original CSC copy of appointments and supporting documents within the 30th day of the succeeding month. ]]></text>
+				<text><![CDATA[     together with the original CSC copy of appointments and supporting documents. ]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
