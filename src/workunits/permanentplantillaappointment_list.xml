@@ -18,7 +18,7 @@
         
         @Service("PersistenceService")
         def persistenceSvc;
-    
+        def selectedItem
         //public void init() {
         //    // params.yearcreated = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0]; 
         //    params.dtfrom = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0] + "-01-01";
