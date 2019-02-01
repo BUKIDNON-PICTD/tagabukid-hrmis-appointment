@@ -192,22 +192,34 @@ class HRMISAppointmentCasualCRUDController  extends CrudFormModel{
 
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this document. Proceed?')) { 
-            getPersistenceService().update([ 
-                    _schemaname: 'hrmis_appointmentcasual', 
-                    objid : entity.objid, 
-                    state : 'APPROVED' 
-                ]); 
+//            getPersistenceService().update([ 
+//                    _schemaname: 'hrmis_appointmentcasual', 
+//                    objid : entity.objid, 
+//                    state : 'APPROVED' 
+//                ]); 
+            entity.recordlog.dateupdated = dtSvc.getServerDate();
+            entity.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+            entity._schemaname = 'hrmis_appointmentcasual'
+            entity.state = "APPROVED"
+            persistenceSvc.update(entity)
             loadData();
         }
     }
     
      void cutoff() { 
         if ( MsgBox.confirm('You are about to edit this document. Proceed?')) { 
-            getPersistenceService().update([ 
-                    _schemaname: 'hrmis_appointmentcasual', 
-                    objid : entity.objid, 
-                    state : 'CUTOFF' 
-                ]); 
+//            getPersistenceService().update([ 
+//                    _schemaname: 'hrmis_appointmentcasual', 
+//                    objid : entity.objid, 
+//                    state : 'CUTOFF' 
+//                ]); 
+            entity.recordlog.dateupdated = dtSvc.getServerDate();
+            entity.recordlog.lastupdatedbyuser = OsirisContext.env.FULLNAME;
+            entity.recordlog.lastupdatedbyuserid = OsirisContext.env.USERID;
+            entity._schemaname = 'hrmis_appointmentcasual'
+            entity.state = "CUTOFF"
+            persistenceSvc.update(entity)
             loadData();
         }
     }
