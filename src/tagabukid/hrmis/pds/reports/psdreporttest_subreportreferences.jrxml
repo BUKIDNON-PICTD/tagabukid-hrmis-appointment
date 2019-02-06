@@ -26,6 +26,9 @@
 	<parameter name="REFERENCE_LIST" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="referencedata" class="java.lang.Object"/>
+	<field name="goviddata.idtype" class="java.lang.String"/>
+	<field name="goviddata.idno" class="java.lang.String"/>
+	<field name="goviddata.issuance" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -259,6 +262,94 @@ PLEASE INDICATE ID Number and Date of Issuance]]></text>
 					<dataSourceExpression><![CDATA[$F{referencedata}]]></dataSourceExpression>
 					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{REFERENCE_LIST}]]></subreportExpression>
 				</subreport>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="99"
+						y="114"
+						width="105"
+						height="18"
+						key="textField"
+						positionType="Float"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{goviddata.idtype}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="99"
+						y="132"
+						width="105"
+						height="18"
+						key="textField"
+						positionType="Float"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{goviddata.idno}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="99"
+						y="150"
+						width="105"
+						height="18"
+						key="textField"
+						positionType="Float"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{goviddata.issuance}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="7"
+						y="114"
+						width="91"
+						height="18"
+						key="staticText-15"
+						positionType="Float"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[Government Issued ID:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="132"
+						width="91"
+						height="18"
+						key="staticText-16"
+						positionType="Float"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[ID/License/Passport No:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="150"
+						width="91"
+						height="18"
+						key="staticText-17"
+						positionType="Float"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[Date/Place of Issuance:]]></text>
+				</staticText>
 			</band>
 		</detail>
 		<columnFooter>

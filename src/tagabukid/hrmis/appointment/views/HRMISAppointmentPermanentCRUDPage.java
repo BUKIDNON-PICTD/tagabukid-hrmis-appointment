@@ -37,7 +37,7 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
         xLabel1 = new com.rameses.rcp.control.XLabel();
-        entityLookup1 = new com.rameses.entity.components.EntityLookup();
+        xLookupField11 = new com.rameses.rcp.control.XLookupField();
         xTextField7 = new com.rameses.rcp.control.XTextField();
         xTextField6 = new com.rameses.rcp.control.XTextField();
         xTextField5 = new com.rameses.rcp.control.XTextField();
@@ -94,27 +94,31 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xLabel1.setPreferredSize(new java.awt.Dimension(0, 20));
         xFormPanel1.add(xLabel1);
 
-        entityLookup1.setCaption("Employee Name");
-        entityLookup1.setCaptionWidth(160);
-        entityLookup1.setExpression("#{entity.name}");
-        entityLookup1.setName("entity.pds.person"); // NOI18N
-        entityLookup1.setPreferredSize(new java.awt.Dimension(0, 20));
-        xFormPanel1.add(entityLookup1);
+        xLookupField11.setCaption("Employee Name");
+        xLookupField11.setExpression("#{(item.prenametitle == '' ||  !item.prenametitle ?'': item.prenametitle + ' ') + item.person.name + (item.nameextension=='' || !item.nameextension?'' :' ' + item.nameextension)}");
+        xLookupField11.setHandler("lookup:tagabukid_hrmis_pds");
+        xLookupField11.setName("entity.pds"); // NOI18N
+        xLookupField11.setPreferredSize(new java.awt.Dimension(0, 20));
+        xLookupField11.setRequired(true);
+        xFormPanel1.add(xLookupField11);
 
         xTextField7.setCaption("Pre Name Title");
         xTextField7.setCaptionWidth(160);
+        xTextField7.setDepends(new String[] {"entity.pds"});
         xTextField7.setName("entity.pds.prenametitle"); // NOI18N
         xTextField7.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField7);
 
         xTextField6.setCaption("Post Name Title");
         xTextField6.setCaptionWidth(160);
+        xTextField6.setDepends(new String[] {"entity.pds"});
         xTextField6.setName("entity.pds.postnametitle"); // NOI18N
         xTextField6.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField6);
 
         xTextField5.setCaption("Extension (Jr., Sr)");
         xTextField5.setCaptionWidth(160);
+        xTextField5.setDepends(new String[] {"entity.pds"});
         xTextField5.setName("entity.pds.nameextension"); // NOI18N
         xTextField5.setPreferredSize(new java.awt.Dimension(300, 20));
         xFormPanel1.add(xTextField5);
@@ -458,7 +462,6 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.rameses.entity.components.EntityLookup entityLookup1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
@@ -486,6 +489,7 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XLabel xLabel8;
     private com.rameses.rcp.control.XLabel xLabel9;
     private com.rameses.rcp.control.XLookupField xLookupField10;
+    private com.rameses.rcp.control.XLookupField xLookupField11;
     private com.rameses.rcp.control.XLookupField xLookupField3;
     private com.rameses.rcp.control.XLookupField xLookupField4;
     private com.rameses.rcp.control.XLookupField xLookupField8;
