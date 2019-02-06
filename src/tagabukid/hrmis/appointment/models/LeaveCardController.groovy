@@ -5,6 +5,7 @@ import com.rameses.osiris2.common.*
 import com.rameses.common.*;
 import com.rameses.seti2.models.*;
 import com.rameses.util.*;
+import tagabukid.utils.*;
         
 class  LeaveCardController extends CrudFormModel{
     @Binding
@@ -30,7 +31,8 @@ class  LeaveCardController extends CrudFormModel{
     
     def selectedLeaveCard
     def selectedLeaveCardDetail
-    
+    def attachmentSelectedItem;
+       
     boolean isCreateAllowed(){
         return false
     }
@@ -56,7 +58,9 @@ class  LeaveCardController extends CrudFormModel{
     public void afterOpen(){
 //        loadpersonalinfo()
         loadleave()
+//        loadAttachments()
         leaveCardListHandler.reload();
+//        attachmentListHandler.reload();
     }
     // public void beforeSave(o){
     //     if (o == 'create'){
@@ -157,7 +161,10 @@ class  LeaveCardController extends CrudFormModel{
     ] as EditorListModel;
     
     def leaveCardDetailHandler = [
-        fetchList: { o->
+        fetchList: { 
+            selectedLeaveCard?.leavecarddetails?.each{
+                it.attachments = TagabukidDBImageUtil.getInstance().getImages(it?.objid);
+            }
             return selectedLeaveCard?.leavecarddetails?.sort{it.txndate};
         },
         createItem : {
@@ -207,4 +214,56 @@ class  LeaveCardController extends CrudFormModel{
 //            //checkDuplicateIPCR(selectedDPCR.ipcrlist,item);
 //        }
     ] as EditorListModel;
+    
+    //ATTACHMENT PART
+    
+    def attachmentListHandler = [
+        fetchList : {
+            return selectedLeaveCardDetail?.attachments 
+        },
+    ] as BasicListModel
+    
+    def viewAttachment(){
+        if (!attachmentSelectedItem) return null;
+
+        if (attachmentSelectedItem.extension.contains("pdf")){
+            return InvokerUtil.lookupOpener('attachmentpdf:view', [
+                    entity : attachmentSelectedItem,
+                ]); 
+        }else{
+            return InvokerUtil.lookupOpener('attachment:view', [
+                    entity : attachmentSelectedItem,
+                ]); 
+        }
+
+    }
+    
+    void deleteAttachment(){
+        if (!attachmentSelectedItem) return;
+        if (MsgBox.confirm('Delete selected Attachment?')){
+            TagabukidDBImageUtil.getInstance().deleteImage(attachmentSelectedItem.objid);
+            loadAttachments();
+        }
+    }
+    
+    def addAttachment(){
+        return InvokerUtil.lookupOpener('upload:attachment', [
+                entity : selectedLeaveCardDetail,
+                afterupload: {
+                    loadAttachments();
+                }
+            ]);
+    }
+    
+    void loadAttachments(){
+        selectedLeaveCardDetail?.attachments = [];
+        try{
+            selectedLeaveCardDetail.attachments = TagabukidDBImageUtil.getInstance().getImages(selectedLeaveCardDetail?.objid);
+        }
+        catch(e){
+            println 'Load Attachment error ============';
+            e.printStackTrace();
+        }
+        attachmentListHandler?.load();
+    }
 }
