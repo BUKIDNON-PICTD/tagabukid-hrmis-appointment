@@ -42,7 +42,11 @@ class LeaveCardCaptureCRUDController {
         title = entity.title
     }
     public def save(){
-        if (MsgBox.confirm('You are about to post transaction?')){    
+        if (MsgBox.confirm('You are about to post transaction?')){  
+            entity.refid = OsirisContext.env.USERID;
+            entity.reftype = "Manual Capture"
+            entity.refno = OsirisContext.env.FULLNAME;
+            entity.refdate = dtSvc.getServerDate();
             if ((tag == 'dr' ? svc.postDR(entity): svc.postCR(entity))){
                 caller?.reloadEntity();
                 return '_close';

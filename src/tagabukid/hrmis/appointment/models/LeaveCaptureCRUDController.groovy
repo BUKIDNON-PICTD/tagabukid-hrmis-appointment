@@ -100,7 +100,8 @@ class LeaveCaptureCRUDController  extends CrudFormModel{
         createItem : {
             return[
                 objid : 'LD' + new java.rmi.server.UID(),
-                status: "DRAFT"
+                status: "DRAFT",
+                ispaid: true,
             ]
         },
 //        onRemoveItem : {

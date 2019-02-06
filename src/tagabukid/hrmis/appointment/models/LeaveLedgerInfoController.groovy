@@ -227,7 +227,7 @@ class  LeaveLegerInfoController extends CrudFormModel{
     
     void approve() { 
         if ( MsgBox.confirm('You are about to approve this transaction. Proceed?')) { 
-            getPersistenceService().update([ 
+            persistenceSvc.update([ 
                     _schemaname: 'hrmis_leavedetails', 
                     objid : selectedLeaveDetail.objid, 
                     status : 'APPROVED' 
@@ -237,7 +237,7 @@ class  LeaveLegerInfoController extends CrudFormModel{
     }
     void cancel() { 
         if ( MsgBox.confirm('You are about to cancel this transaction. Proceed?')) { 
-            getPersistenceService().update([ 
+            persistenceSvc.update([ 
                     _schemaname: 'hrmis_leavedetails', 
                     objid : selectedLeaveDetail.objid, 
                     status : 'CANCELLED' 
@@ -247,7 +247,7 @@ class  LeaveLegerInfoController extends CrudFormModel{
     }
     void draft() { 
         if ( MsgBox.confirm('You are about to draft this transaction. Proceed?')) { 
-            getPersistenceService().update([ 
+            persistenceSvc.update([ 
                     _schemaname: 'hrmis_leavedetails', 
                     objid : selectedLeaveDetail.objid, 
                     status : 'DRAFT' 
