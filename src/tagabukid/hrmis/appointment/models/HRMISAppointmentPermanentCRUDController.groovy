@@ -96,9 +96,9 @@ class HRMISAppointmentPermanentCRUDController  extends CrudFormModel{
         entity = svc.initCreate();
     }
 
-    public void afterEdit(){
-        println entity
-    }
+//    public void afterEdit(){
+//        println entity
+//    }
     
 //    def suggestGroupName = [
 //        fetchList: { o->
