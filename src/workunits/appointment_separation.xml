@@ -1,0 +1,11 @@
+<workunit schemaName="hrmis_appointmentseparation">
+    <invokers>
+<!--        <invoker type="hrmis_appointmentseparation:create" caption="Appointment Separation" action="create" target="popup" role="APPOINTMENT_APPROVER"/>
+        <invoker type="hrmis_appointmentseparation:open" caption="Appointment Separation" action="open" target="popup" role="APPOINTMENT_APPROVER"/>
+        <invoker type="formActions" caption="Approve" action="approve"  visibleWhen="#{allowApprove==true}" role="APPOINTMENT_APPROVER"/>-->
+    </invokers>
+<!--    <code class="tagabukid.hrmis.appointment.models.MasterAcadCourseMajorModel" />
+    <pages>
+        <page template="tagabukid.hrmis.appointment.views.MasterAcadCourseMajorView" />
+    </pages>-->
+</workunit>

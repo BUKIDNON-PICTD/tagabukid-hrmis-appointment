@@ -6,8 +6,8 @@
         
          <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}" role="APPOINTMENT_APPROVER"/> 
          <invoker type="formActions" caption="Disapprove" action="disapprove" visibleWhen="#{allowDisapprove==true}" role="APPOINTMENT_APPROVER"/> 
-         <invoker type="formActions" caption="Cut-off" action="cutoff" visibleWhen="#{allowCutoff==true}" role="APPOINTMENT_ENCODER"/> 
-         <invoker type="formActions" caption="Cancel" action="cancel" visibleWhen="#{allowCancel==true}" role="APPOINTMENT_ENCODER"/> 
+         <!--<invoker type="formActions" caption="Separation" action="separtaion" visibleWhen="#{allowSeparation==true}" role="APPOINTMENT_APPROVER"/>--> 
+         <invoker type="formActions" caption="Cancel" action="cancel" visibleWhen="#{allowCancel==true}" role="APPOINTMENT_APPROVER"/> 
     </invokers>
    <code class="tagabukid.hrmis.appointment.models.HRMISAppointmentPermanentCRUDController" />
     <pages>

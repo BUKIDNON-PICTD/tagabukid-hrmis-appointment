@@ -2,6 +2,7 @@
     <invokers>
         <invoker folderid="/home/hrmis/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/> 
         <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/>  
+        <invoker type="formActions" caption="Generate Report" action="generate" role="MASTER"/> 
     </invokers>
     <code>
         import com.rameses.rcp.common.*;
@@ -23,6 +24,13 @@
 
             public String getPrefixId() {
                 return "PM";
+            }
+
+
+            def generate(){
+                def op = Inv.lookupOpener( "plantilla:report", [origin: node] )
+                op.target = 'self'
+                return op
             }
 
             void refresh(){

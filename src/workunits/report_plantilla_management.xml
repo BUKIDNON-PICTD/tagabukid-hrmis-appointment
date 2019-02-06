@@ -1,0 +1,6 @@
+<workunit extends="wtemplates/SimpleReportController.xml" >
+    <invokers>      
+        <invoker type="plantilla:report" caption="Generate" action="preview" index="1"/>       
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.ReportPlantillaManagementController" />
+</workunit>
