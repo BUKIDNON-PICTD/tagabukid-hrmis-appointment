@@ -90,27 +90,14 @@
 					<reportElement
 						x="0"
 						y="48"
-						width="387"
+						width="876"
 						height="19"
 						key="textField-9"/>
 					<box></box>
-					<textElement textAlignment="Right">
+					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica" size="14" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["As of "]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="387"
-						y="48"
-						width="489"
-						height="19"
-						key="textField"/>
-					<box></box>
-					<textElement>
-						<font size="14"/>
-					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["As of " + new SimpleDateFormat("MMMM dd, yyyy").format(new Date())]]></textFieldExpression>
 				</textField>
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
