@@ -3,7 +3,8 @@
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
 		 name="psdreporttest_subreportfam"
-		 columnCount="1"
+
+		 language="groovy"		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="572"
@@ -26,6 +27,7 @@
 	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
 		<defaultValueExpression ><![CDATA["D:\\EtracsProjects\\tagabukid-hrmis-appointment\\customreport\\tagabukid\\hrmis\\pds\\reports\\buk\\"]]></defaultValueExpression>
 	</parameter>
+	<parameter name="FAMILY_CHILD" isForPrompting="false" class="java.lang.Object"/>
 
 	<field name="spousedata.spouse.lastname" class="java.lang.String"/>
 	<field name="spousedata.spouse.firstname" class="java.lang.String"/>
@@ -43,8 +45,7 @@
 	<field name="motherdata.mother.firstname" class="java.lang.String"/>
 	<field name="motherdata.mother.middlename" class="java.lang.String"/>
 	<field name="fatherdata.father.lastname" class="java.lang.String"/>
-	<field name="childdata.child.name" class="java.lang.String"/>
-	<field name="childdata.child.birthdate" class="java.util.Date"/>
+	<field name="childdata" class="java.lang.Object"/>
 
 		<background>
 			<band height="1"  isSplitAllowed="true" >
@@ -63,13 +64,13 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="271"  isSplitAllowed="true" >
+			<band height="272"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="20"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-1"/>
@@ -81,18 +82,18 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  SURNAME]]></text>
+				<text><![CDATA[  22. SURNAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="38"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-2"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
@@ -100,51 +101,33 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  FIRST NAME]]></text>
+				<text><![CDATA[      FIRST NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="56"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-3"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="0.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MIDDLE NAME]]></text>
+				<text><![CDATA[      MIDDLE NAME]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="76"
-						y="20"
-						width="230"
-						height="18"
-						key="textField"/>
-					<box>					<pen lineWidth="1.0"/>
-					<topPen lineWidth="0.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement>
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.lastname}]]></textFieldExpression>
-				</textField>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="145"
-						width="76"
+						y="146"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-4"/>
@@ -156,18 +139,18 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[   FATHER'S SURNAME]]></text>
+				<text><![CDATA[  24. FATHER'S SURNAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="163"
-						width="76"
+						y="164"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-5"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
@@ -175,74 +158,56 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[   FIRST NAME]]></text>
+				<text><![CDATA[       FIRST NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="181"
-						width="76"
+						y="182"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-6"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
-					<bottomPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="0.0"/>
 </box>
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MIDDLE NAME]]></text>
+				<text><![CDATA[      MIDDLE NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="38"
-						width="159"
+						width="151"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.firstname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						mode="Opaque"
-						x="235"
-						y="45"
-						width="71"
-						height="11"
-						backcolor="#E7E7E7"
-						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.nameextension}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="76"
+						x="84"
 						y="56"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.middlename}]]></textFieldExpression>
 				</textField>
@@ -251,7 +216,7 @@
 						mode="Opaque"
 						x="0"
 						y="74"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-7"/>
@@ -263,14 +228,14 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  OCCUPATION]]></text>
+				<text><![CDATA[      OCCUPATION]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="92"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-8"/>
@@ -282,37 +247,37 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  EMPLOYER/BUSINESS NAME]]></text>
+				<text><![CDATA[   EMPLOYER/BUSINESS NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="74"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.occupation}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="92"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.businessname}]]></textFieldExpression>
 				</textField>
@@ -321,7 +286,7 @@
 						mode="Opaque"
 						x="0"
 						y="110"
-						width="76"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-9"/>
@@ -333,15 +298,15 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  BUSINESS ADDRESS]]></text>
+				<text><![CDATA[      BUSINESS ADDRESS]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="128"
-						width="76"
-						height="17"
+						width="84"
+						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-10"/>
 					<box>					<topPen lineWidth="1.0"/>
@@ -352,69 +317,69 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  TELEPHONE NO.]]></text>
+				<text><![CDATA[      TELEPHONE NO.]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
+						x="84"
 						y="110"
-						width="230"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.businessadd}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="127"
-						width="230"
+						x="84"
+						y="128"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.phoneno}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="145"
-						width="230"
+						x="84"
+						y="146"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fatherdata.father.lastname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="181"
-						width="230"
+						x="84"
+						y="182"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fatherdata.father.middlename}]]></textFieldExpression>
 				</textField>
@@ -422,12 +387,12 @@
 					<reportElement
 						mode="Opaque"
 						x="235"
-						y="170"
-						width="71"
+						y="171"
+						width="81"
 						height="11"
 						backcolor="#E7E7E7"
 						key="textField"/>
-					<box>					<bottomPen lineWidth="1.0"/>
+					<box leftPadding="5">					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
 					<textElement>
@@ -437,17 +402,17 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="163"
-						width="159"
+						x="84"
+						y="164"
+						width="151"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fatherdata.father.firstname}]]></textFieldExpression>
 				</textField>
@@ -455,8 +420,8 @@
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="199"
-						width="76"
+						y="200"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-13"/>
@@ -468,18 +433,18 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MOTHER'S MAIDEN NAME]]></text>
+				<text><![CDATA[  25.MOTHER'S MAIDEN NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="217"
-						width="76"
+						y="218"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-14"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
@@ -487,18 +452,18 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  SURNAME]]></text>
+				<text><![CDATA[     SURNAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="253"
-						width="76"
+						y="254"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-15"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="0.0"/>
@@ -506,18 +471,18 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  MIDDLE NAME]]></text>
+				<text><![CDATA[     MIDDLE NAME]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="235"
-						width="76"
+						y="236"
+						width="84"
 						height="18"
 						backcolor="#E7E7E7"
 						key="staticText-16"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box>					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="2.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
@@ -525,86 +490,87 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
 					</textElement>
-				<text><![CDATA[  FIRST NAME]]></text>
+				<text><![CDATA[     FIRST NAME]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="199"
-						width="230"
+						x="84"
+						y="200"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{motherdata.maidenname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="217"
-						width="230"
+						x="84"
+						y="218"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{motherdata.mother.lastname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="235"
-						width="230"
+						x="84"
+						y="236"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<leftPen lineWidth="1.0"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{motherdata.mother.firstname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="76"
-						y="253"
-						width="230"
+						x="84"
+						y="254"
+						width="232"
 						height="18"
 						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
 </box>
-					<textElement>
-						<font/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{motherdata.mother.middlename}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="306"
-						y="253"
-						width="266"
+						x="316"
+						y="38"
+						width="256"
 						height="18"
 						backcolor="#E7E7E7"
-						key="staticText-17"/>
+						key="staticText-17"
+						positionType="Float"/>
 					<box>					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<rightPen lineWidth="2.0"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Yu Gothic UI" size="6"/>
@@ -615,12 +581,12 @@
 					<reportElement
 						mode="Opaque"
 						x="235"
-						y="163"
-						width="71"
+						y="164"
+						width="81"
 						height="7"
 						backcolor="#E7E7E7"
 						key="staticText-18"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -635,11 +601,11 @@
 						mode="Opaque"
 						x="235"
 						y="38"
-						width="71"
+						width="81"
 						height="7"
 						backcolor="#E7E7E7"
 						key="staticText-19"/>
-					<box>					<topPen lineWidth="1.0"/>
+					<box leftPadding="5">					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -669,6 +635,52 @@
 					</textElement>
 				<text><![CDATA[ II. FAMILY BACKGROUND]]></text>
 				</staticText>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="316"
+						y="20"
+						width="256"
+						height="18"
+						key="subreport-1"/>
+					<dataSourceExpression><![CDATA[$F{childdata}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{FAMILY_CHILD}]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="84"
+						y="20"
+						width="232"
+						height="18"
+						key="textField"/>
+					<box leftPadding="5">					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.lastname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="235"
+						y="45"
+						width="81"
+						height="11"
+						backcolor="#E7E7E7"
+						key="textField"/>
+					<box leftPadding="5">					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{spousedata.spouse.nameextension}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>
