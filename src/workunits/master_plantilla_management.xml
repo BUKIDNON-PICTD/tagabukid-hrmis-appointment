@@ -2,7 +2,8 @@
     <invokers>
         <invoker folderid="/home/hrmis/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/> 
         <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/>  
-        <invoker type="formActions" caption="Generate Report" action="generate" role="MASTER"/> 
+        <invoker type="formActions" caption="Generate Permanent Plantilla" action="permanent" role="MASTER"/>   
+        <invoker type="formActions" caption="Generate Casual Plantilla" action="casual" role="MASTER"/> 
     </invokers>
     <code>
         import com.rameses.rcp.common.*;
@@ -15,8 +16,10 @@
        
             String serviceName = 'TagabukidHRMISPlantillaManagementService'
 
-            @Service("TagabukidHRMISPlantillaManagementService") 
+            @Service("TagabukidHRMISPlantillaManagementService")
             def pmService
+
+            def tag 
 
             public String getTitle() {
                 return "Plantilla Management";
@@ -27,11 +30,21 @@
             }
 
 
-            def generate(){
+            def permanent(){
+                node.type = "permanent"
                 def op = Inv.lookupOpener( "plantilla:report", [origin: node] )
                 op.target = 'self'
                 return op
             }
+
+            def casual(){
+                node.type = "casual"
+                def op = Inv.lookupOpener( "plantilla:report", [origin: node] )
+                op.target = 'self'
+                return op
+            }
+
+
 
             void refresh(){
                 listHandler.reload();

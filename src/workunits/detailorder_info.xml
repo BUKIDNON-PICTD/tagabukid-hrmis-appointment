@@ -6,7 +6,11 @@
         <invoker type="hrmis_detailorder_list:create" caption="Detail Order (NEW)" action="create" role="DETAILORDER_ENCODER" /> 
 
         <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}" role="DETAILORDER_APPROVER"/>
+
         <invoker type="formActions" caption="Return to Office" action="returned" visibleWhen="#{returnToOffice==true}" role="DETAILORDER_ENCODER"/>  
+
+        <invoker type="formActions" caption="Resume" action="resume" visibleWhen="#{returnToOffice==false}" role="DETAILORDER_ENCODER"/>  
+
     </invokers>
 
     <code class="tagabukid.hrmis.appointment.models.DetailOrderController"/>

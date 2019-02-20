@@ -46,7 +46,7 @@
 	<field name="signatory1" class="java.lang.String"/>
 	<field name="signatory2" class="java.lang.String"/>
 	<field name="signatory3" class="java.lang.String"/>
-	<field name="previtemno" class="java.lang.String"/>
+	<field name="previtemno" class="java.lang.Long"/>
 	<field name="TRANCHE.name" class="java.lang.String"/>
 
 	<variable name="totalPrevious" class="java.lang.Double" resetType="Report" calculation="Sum">
@@ -320,7 +320,7 @@ No.
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Current Year\nProposed\nRate/Annum "+$P{YEAR}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Budget Year\nProposed\nRate/Annum "+$P{YEAR}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -445,7 +445,7 @@ $P{TRANCHE_CODE}
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{previtemno}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Long"><![CDATA[$F{previtemno}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -481,7 +481,7 @@ $P{TRANCHE_CODE}
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel} != null ? $F{personnel} : "---"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel} != null ? $F{personnel} : "\t---"]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
