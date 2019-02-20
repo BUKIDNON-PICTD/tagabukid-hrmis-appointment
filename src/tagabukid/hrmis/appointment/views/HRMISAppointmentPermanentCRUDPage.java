@@ -150,11 +150,17 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
         xFormPanel1.add(xLookupField4);
 
         xLookupField9.setCaption("Org Unit");
+        xLookupField9.setEnabled(false);
         xLookupField9.setExpression("#{item.name}");
         xLookupField9.setHandler("lookup:tagabukid_hrmis_org");
         xLookupField9.setName("entity.org"); // NOI18N
         xLookupField9.setPreferredSize(new java.awt.Dimension(0, 20));
         xLookupField9.setRequired(true);
+        xLookupField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xLookupField9ActionPerformed(evt);
+            }
+        });
         xFormPanel1.add(xLookupField9);
 
         xLookupField10.setCaption("Plantilla Info");
@@ -459,6 +465,10 @@ public class HRMISAppointmentPermanentCRUDPage extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void xLookupField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xLookupField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_xLookupField9ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
