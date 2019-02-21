@@ -213,6 +213,7 @@
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField9">
                   <Properties>
                     <Property name="caption" type="java.lang.String" value="Org Unit"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                     <Property name="expression" type="java.lang.String" value="#{item.name}"/>
                     <Property name="handler" type="java.lang.String" value="lookup:tagabukid_hrmis_org"/>
                     <Property name="name" type="java.lang.String" value="entity.org" noResource="true"/>
@@ -221,6 +222,9 @@
                     </Property>
                     <Property name="required" type="boolean" value="true"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xLookupField9ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="com.rameses.rcp.control.XLookupField" name="xLookupField10">
                   <Properties>

@@ -247,14 +247,14 @@
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="19"  isSplitAllowed="true" >
+			<band height="20"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Opaque"
 						x="0"
 						y="0"
 						width="84"
-						height="19"
+						height="20"
 						backcolor="#E7E7E7"
 						key="textField"
 						isRemoveLineWhenBlank="true">
@@ -275,7 +275,7 @@
 						x="84"
 						y="0"
 						width="138"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>
@@ -294,7 +294,7 @@
 						x="222"
 						y="0"
 						width="126"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>
@@ -313,7 +313,7 @@
 						x="348"
 						y="0"
 						width="41"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>
@@ -332,7 +332,7 @@
 						x="389"
 						y="0"
 						width="39"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>
@@ -351,7 +351,7 @@
 						x="428"
 						y="0"
 						width="48"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>
@@ -370,7 +370,7 @@
 						x="476"
 						y="0"
 						width="46"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>
@@ -389,7 +389,7 @@
 						x="522"
 						y="0"
 						width="50"
-						height="19"
+						height="20"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<6]]></printWhenExpression>
 						</reportElement>

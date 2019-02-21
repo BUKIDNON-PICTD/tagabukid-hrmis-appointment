@@ -1,0 +1,7 @@
+<workunit extends="wtemplates/SimpleReportController.xml" >
+    <invokers>        
+        <invoker folderid="/explorer/report/hrmisreports" action="preview" caption="Optional/Mandatory Retirement" 
+            target="window" index="1002" role="APPOINTMENT_REPORTS"/>      
+    </invokers>
+    <code class="tagabukid.hrmis.appointment.models.ReportEmployeeRetirement" />
+</workunit>

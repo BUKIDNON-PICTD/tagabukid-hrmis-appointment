@@ -273,13 +273,13 @@ INCREMENT]]></text>
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="22"  isSplitAllowed="true" >
+			<band height="21"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
 						width="46"
-						height="22"
+						height="21"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -297,7 +297,7 @@ INCREMENT]]></text>
 						x="46"
 						y="0"
 						width="46"
-						height="22"
+						height="21"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -314,7 +314,7 @@ INCREMENT]]></text>
 						x="92"
 						y="0"
 						width="123"
-						height="22"
+						height="21"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -331,7 +331,7 @@ INCREMENT]]></text>
 						x="215"
 						y="0"
 						width="164"
-						height="22"
+						height="21"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -348,7 +348,7 @@ INCREMENT]]></text>
 						x="379"
 						y="0"
 						width="39"
-						height="22"
+						height="21"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -365,7 +365,7 @@ INCREMENT]]></text>
 						x="418"
 						y="0"
 						width="58"
-						height="22"
+						height="21"
 						key="textField-1">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -382,7 +382,7 @@ INCREMENT]]></text>
 						x="476"
 						y="0"
 						width="54"
-						height="22"
+						height="21"
 						key="textField">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
@@ -399,7 +399,7 @@ INCREMENT]]></text>
 						x="530"
 						y="0"
 						width="42"
-						height="22"
+						height="21"
 						key="textField-2">
 							<printWhenExpression><![CDATA[$V{REPORT_COUNT}<29]]></printWhenExpression>
 						</reportElement>
