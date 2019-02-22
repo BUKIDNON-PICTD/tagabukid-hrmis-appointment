@@ -9,7 +9,7 @@
 
         <invoker type="formActions" caption="Return to Office" action="returned" visibleWhen="#{returnToOffice==true}" role="DETAILORDER_ENCODER"/>  
 
-        <invoker type="formActions" caption="Resume" action="resume" visibleWhen="#{returnToOffice==false}" role="DETAILORDER_ENCODER"/>  
+        <invoker type="formActions" caption="Resume" action="start" visibleWhen="#{recalled==true}" role="DETAILORDER_ENCODER"/>  
 
     </invokers>
 
