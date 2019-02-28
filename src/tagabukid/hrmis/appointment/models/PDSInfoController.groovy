@@ -26,18 +26,18 @@ class PDSInfoController{
     def currentSection;
     def entity;
 
-//    public void beforeSave(o){
-//        if (o == 'create'){
-//            entity.pdsno = svc.getPDSNo();
-//            entity.entityid = entity.person.objid
-//            entity.name = entity.person.name;
-//            entity.versions.each{
-//                it.versionno = svc.getVersionNo();
-//                entity.currentversionno = it.versionno
-//                it.person.putAll(entity.person)
-//            }
-//        }
-//    }
+    public void beforeSave(o){
+        if (o == 'create'){
+            entity.pdsno = svc.getPDSNo();
+            entity.entityid = entity.person.objid
+            entity.name = entity.person.name;
+            entity.versions.each{
+                it.versionno = svc.getVersionNo();
+                entity.currentversionno = it.versionno
+                it.person.putAll(entity.person)
+            }
+        }
+    }
 //    public void afterSave(){
 //        loadSections();
 //    }
