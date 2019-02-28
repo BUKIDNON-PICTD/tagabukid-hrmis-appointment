@@ -5,7 +5,7 @@ import com.rameses.osiris2.reports.*;
 
 class ReportPersonnelPlantillaController extends tagabukid.common.models.AsyncReportController {
     
-    @Service("TagabukidHRMISPersonnelPlantillaService")
+    @Service("TagabukidHRMISPersonnelPlantillaReportService")
     def svc;
 
     String title = 'Personnel Plantilla'
@@ -45,10 +45,9 @@ class ReportPersonnelPlantillaController extends tagabukid.common.models.AsyncRe
     // List getOrgs() {
     //     return subaylookupsvc.lookupOrgUnit([:]);
     // }
-    
     // SubReport[] getSubReports() {
     //     return [ 
-          
+    //        new SubReport("PLANTILLAPERSONLIST", reportPath + "personnelplantillacscform_subreport.jasper"),
     //     ] as SubReport[];    
     // }
 } 

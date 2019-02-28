@@ -18,7 +18,7 @@ class TagabukidServiceCardController extends tagabukid.common.models.AsyncReport
     
     String title = 'Service Card'
     String reportPath = 'tagabukid/hrmis/appointment/reports/'
-    String reportName = reportPath + 'servicecard.jasper';
+    String reportName = reportPath + 'servicecardMain.jasper';
     
     def data 
         
@@ -35,8 +35,9 @@ class TagabukidServiceCardController extends tagabukid.common.models.AsyncReport
         getFormControls: {
             return [
                 //new FormControl( "combo", [caption:'Gender', name:'entity.gender', items:'genderList', preferredSize:'100,19', captionWidth:100, allowNull:false, required:true]),
-                //new FormControl( "combo", [caption:'Status', name:'entity.status', items:'statusList', preferredSize:'100,19', captionWidth:100, allowNull:false, required:true]),
-                new FormControl( "lookup", [caption:' Employee', name:'entity.pds', preferredSize:'[0,21]', handler:'lookup:tagabukid_hrmis_pds', expression:'#{item.person.name}', captionWidth:100]),
+                new FormControl( "combo", [caption:'Status', name:'entity.status', items:'statusList', preferredSize:'100,19', captionWidth:100, allowNull:false, required:true]),
+                //new FormControl( "lookup", [caption:' Employee', name:'entity.pds', preferredSize:'[0,21]', handler:'lookup:tagabukid_hrmis_pds', expression:'#{item.person.name}', captionWidth:100]),
+                new FormControl( "lookup", [caption:'Org Name', name:'entity.org', handler:'lookup:tagabukid_hrmis_org', expression:'#{item.name}',  preferredSize:'250,19', captionWidth:100, allowNull:false, required:true])
                 //new FormControl( "checkbox", [caption:'Rerport As of', name:'entity.asof', preferredSize:'100,19' , captionWidth:100]),
                 //new FormControl( "integer", [caption:'Year', name:'entity.year', required:true, preferredSize:'100,19' , captionWidth:100]),
                 //new FormControl( "combo", [caption:'Quarter', name:'entity.qtr', items:'quarters', preferredSize:'100,19', immediate:true  , captionWidth:100,required:true]),
@@ -56,11 +57,15 @@ class TagabukidServiceCardController extends tagabukid.common.models.AsyncReport
         return subaylookupsvc.lookupOrgUnit([:]);
     }
     
-     //SubReport[] getSubReports() {
-           // return [ 
-             //       new SubReport("ServiceCardItemList", REPORT_PATH + "servicecarditems.jasper"),           
-               //] as SubReport[];    
-     //  }
+    List getStatusList() {
+        return ['Permanent','Casual','Job Order']
+   }
+
+     SubReport[] getSubReports() {
+            return [ 
+                    new SubReport("servicecards", reportPath + "servicecard.jasper"),           
+               ] as SubReport[];    
+       }
 
 }
 ]]>        
