@@ -50,6 +50,7 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xFormPanel3 = new com.rameses.rcp.control.XFormPanel();
         xLookupField4 = new com.rameses.rcp.control.XLookupField();
         xDateField1 = new com.rameses.rcp.control.XDateField();
+        xDateField3 = new com.rameses.rcp.control.XDateField();
         jScrollPane1 = new javax.swing.JScrollPane();
         xTextArea1 = new com.rameses.rcp.control.XTextArea();
         xSeparator1 = new com.rameses.rcp.control.XSeparator();
@@ -188,6 +189,17 @@ public class DetailOrderPage extends javax.swing.JPanel {
         xDateField1.setRequired(true);
         xFormPanel3.add(xDateField1);
 
+        xDateField3.setCaption("Expiry Date");
+        xDateField3.setCaptionWidth(150);
+        xDateField3.setCellPadding(new java.awt.Insets(0, 50, 0, 50));
+        xDateField3.setDepends(new String[] {"entity.personnel"});
+        xDateField3.setInputFormat("");
+        xDateField3.setName("entity.effectivityuntil"); // NOI18N
+        xDateField3.setOutputFormat("MMM dd, yyyy");
+        xDateField3.setPreferredSize(new java.awt.Dimension(0, 20));
+        xDateField3.setRequired(true);
+        xFormPanel3.add(xDateField3);
+
         jScrollPane1.setPreferredSize(new java.awt.Dimension(0, 63));
 
         xTextArea1.setCaption("Remarks");
@@ -265,7 +277,7 @@ public class DetailOrderPage extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 617, Short.MAX_VALUE)
+                .addComponent(xScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -276,6 +288,7 @@ public class DetailOrderPage extends javax.swing.JPanel {
     private com.rameses.rcp.control.XComboBox xComboBox1;
     private com.rameses.rcp.control.XDateField xDateField1;
     private com.rameses.rcp.control.XDateField xDateField2;
+    private com.rameses.rcp.control.XDateField xDateField3;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
     private com.rameses.rcp.control.XFormPanel xFormPanel2;
     private com.rameses.rcp.control.XFormPanel xFormPanel3;

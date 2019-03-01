@@ -2,7 +2,7 @@
      allowOpen="true" allowCreate="true" autoSelect="true" allowDelete="true" allowReport="true" defaultFileType="detailorder">
     <invokers>
         <invoker folderid="/home/hrmis" action="init" caption="Detail Order"  index="6" role="DETAILORDER_SHARED"/>
-        <invoker type="formActions" caption="Generate Report" action="generate" role="DETAILORDER_REPORTS"/> 
+        <invoker type="formActions" caption="Generate Inventory" action="generate" visibleWhen="#{category==true}" role="DETAILORDER_REPORTS"/> 
     </invokers>
      <code>
     <![CDATA[
@@ -31,7 +31,7 @@
         }
 
         boolean isCategory(){
-            return ( mode=='read' && qry.nodes.name != 'returned');
+            return ( node.name.toString().matches('detailed|reassigned') ); 
         }
 
         void delete(){
