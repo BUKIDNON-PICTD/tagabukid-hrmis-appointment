@@ -42,12 +42,12 @@ class ReportPersonnelPlantillaController extends tagabukid.common.models.AsyncRe
     ] as FormPanelModel;
    
    
-    // List getOrgs() {
-    //     return subaylookupsvc.lookupOrgUnit([:]);
-    // }
-    // SubReport[] getSubReports() {
-    //     return [ 
-    //        new SubReport("PLANTILLAPERSONLIST", reportPath + "personnelplantillacscform_subreport.jasper"),
-    //     ] as SubReport[];    
-    // }
+    List getOrgs() {
+        return subaylookupsvc.lookupOrgUnit([:]);
+    }
+    SubReport[] getSubReports() {
+        return [ 
+           new SubReport("PLANTILLAPERSONLIST", reportPath + "personnelplantillacscform_subreport.jasper"),
+        ] as SubReport[];    
+    }
 } 

@@ -67,7 +67,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Top">
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["As of " + new SimpleDateFormat("MMMM dd, yyyy").format($P{AS_OF}) ]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["As of " + new SimpleDateFormat("MMMM dd, yyyy").format($P{AS_OF})]]></textFieldExpression>
 				</textField>
 			</band>
 		</title>
