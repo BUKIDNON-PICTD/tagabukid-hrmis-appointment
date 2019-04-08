@@ -36,6 +36,7 @@ class ReportPersonnelPlantillaController extends tagabukid.common.models.AsyncRe
     def formControl = [
         getFormControls: {
             return [
+                 new FormControl( "combo", [caption:'Status', name:'entity.status', items:'statusList', preferredSize:'100,19', captionWidth:100, allowNull:false, required:true]),
                 new FormControl( "lookup", [caption:'Org Name', name:'entity.org', handler:'lookup:tagabukid_hrmis_org', expression:'#{item.name}',  preferredSize:'250,19', captionWidth:100, allowNull:false, required:true]) 
             ]    
         },
@@ -45,6 +46,11 @@ class ReportPersonnelPlantillaController extends tagabukid.common.models.AsyncRe
     List getOrgs() {
         return subaylookupsvc.lookupOrgUnit([:]);
     }
+
+    List getStatusList() {
+        return ['Permanent','Casual']
+    }
+
     SubReport[] getSubReports() {
         return [ 
            new SubReport("PLANTILLAPERSONLIST", reportPath + "personnelplantillacscform_subreport.jasper"),
