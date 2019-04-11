@@ -455,7 +455,7 @@ $P{TRANCHE_CODE}
 						height="17"
 						key="textField-15"
 						stretchType="RelativeToTallestObject"/>
-					<box leftPadding="2">					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<box leftPadding="4" rightPadding="3" topPadding="3" bottomPadding="3">					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
