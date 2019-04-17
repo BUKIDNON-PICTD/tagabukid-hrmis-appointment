@@ -36,8 +36,8 @@ class DetailOrderControlller extends CrudFormModel {
          return ( mode=='read' && entity.state.toString().matches('DRAFT') ); 
     }
 
-    boolean isReturnToOffice() {
-        return ( mode=='read' && entity.returned.toString().matches('FALSE') );
+    boolean isRecalled() {
+        return ( mode=='read' && entity.returned.toString().matches('TRUE') );
     }
 
     boolean isEditAllowed() {

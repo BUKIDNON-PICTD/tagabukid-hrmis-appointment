@@ -9,6 +9,8 @@ public abstract class PlantillaManagementListController extends ExplorerViewCont
     public abstract String getTitle();
     
     def params = [:]; 
+
+    def tag
     
     def types = ['Casual', 'Permanent'];
     public String getPrefixId() {
@@ -48,5 +50,5 @@ public abstract class PlantillaManagementListController extends ExplorerViewCont
 //    void sync() {
 //        if(! MsgBox.confirm("This will update your current records. Continue? ")) return;
 //        getAccountService().syncFromCloud();
-//    }
+//    } 
 }

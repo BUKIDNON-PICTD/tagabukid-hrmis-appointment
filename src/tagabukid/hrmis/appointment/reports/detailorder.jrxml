@@ -23,7 +23,7 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<parameter name="prevdate" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="prevdate" isForPrompting="false" class="java.util.Date"/>
 	<parameter name="details" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="signatoryname" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="subject" isForPrompting="false" class="java.lang.String"/>
@@ -318,7 +318,7 @@
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="12" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{prevdate}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new SimpleDateFormat("MMMM dd, yyyy").format(new Date())]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement

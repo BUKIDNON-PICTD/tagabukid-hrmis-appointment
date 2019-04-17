@@ -9,18 +9,14 @@ class ReportPlantillaManagementController extends ReportController {
     @Service("TagabukidHRMISPlantillaManagementReportService")
     def svc;
 
-    String title = 'Plantilla'
+    String title = 'Plantilla Management Report'
         String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/'
         String reportName = REPORT_PATH + 'plantilla_management_report.jasper';
         def data 
         def entity
         def origin
 
-    // def ralph(){
-    //         getReportData();
-    // }
-
-    def getReportData() {             
+    def getReportData() {         
             data = svc.getPlantilla(origin) 
             return data.reportdata;
         } 

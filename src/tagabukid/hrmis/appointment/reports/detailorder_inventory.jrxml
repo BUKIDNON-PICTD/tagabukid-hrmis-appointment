@@ -38,10 +38,10 @@
 	<field name="status" class="java.lang.String"/>
 	<field name="charged" class="java.lang.String"/>
 	<field name="destined" class="java.lang.String"/>
-	<field name="effectivity" class="java.lang.String"/>
+	<field name="effectivity" class="java.util.Date"/>
 	<field name="years" class="java.lang.String"/>
 	<field name="remarks" class="java.lang.String"/>
-	<field name="no" class="java.lang.Double"/>
+	<field name="no" class="java.lang.Integer"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -90,27 +90,14 @@
 					<reportElement
 						x="0"
 						y="48"
-						width="387"
+						width="876"
 						height="19"
 						key="textField-9"/>
 					<box></box>
-					<textElement textAlignment="Right">
+					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica" size="14" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["As of "]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="MMMMM dd, yyyy" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="387"
-						y="48"
-						width="489"
-						height="19"
-						key="textField"/>
-					<box></box>
-					<textElement>
-						<font size="14"/>
-					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["As of " + new SimpleDateFormat("MMMM dd, yyyy").format(new Date())]]></textFieldExpression>
 				</textField>
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -130,13 +117,15 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="38"  isSplitAllowed="true" >
+			<band height="50"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="0"
 						y="0"
-						width="43"
-						height="38"
+						width="42"
+						height="50"
+						backcolor="#99CCFF"
 						key="staticText-4"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -151,10 +140,12 @@
 				</staticText>
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="42"
 						y="0"
 						width="196"
-						height="38"
+						height="50"
+						backcolor="#99CCFF"
 						key="staticText-5"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -169,10 +160,12 @@
 				</staticText>
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="238"
 						y="0"
 						width="98"
-						height="38"
+						height="50"
+						backcolor="#99CCFF"
 						key="staticText-6"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -187,10 +180,12 @@
 				</staticText>
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="336"
 						y="0"
 						width="240"
-						height="18"
+						height="25"
+						backcolor="#99CCFF"
 						key="staticText-7"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -203,13 +198,15 @@
 					</textElement>
 				<text><![CDATA[OFFICE]]></text>
 				</staticText>
-				<staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
+						mode="Opaque"
 						x="336"
-						y="18"
+						y="25"
 						width="92"
-						height="20"
-						key="staticText-8"/>
+						height="25"
+						backcolor="#99CCFF"
+						key="textField-12"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
 					<leftPen lineWidth="2.0" lineStyle="Solid"/>
@@ -219,14 +216,16 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[FROM]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{category}.matches( "DETAILED" ) ? "CHARGES" : "FROM" )]]></textFieldExpression>
+				</textField>
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="428"
-						y="18"
+						y="25"
 						width="148"
-						height="20"
+						height="25"
+						backcolor="#99CCFF"
 						key="staticText-9"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -241,10 +240,12 @@
 				</staticText>
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="576"
 						y="0"
 						width="100"
-						height="38"
+						height="50"
+						backcolor="#99CCFF"
 						key="staticText-10"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -259,10 +260,12 @@
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
+						mode="Opaque"
 						x="676"
 						y="0"
 						width="98"
-						height="38"
+						height="50"
+						backcolor="#99CCFF"
 						key="textField-11"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -277,10 +280,12 @@
 				</textField>
 				<staticText>
 					<reportElement
+						mode="Opaque"
 						x="774"
 						y="0"
 						width="102"
-						height="38"
+						height="50"
+						backcolor="#99CCFF"
 						key="staticText-12"/>
 					<box>					<pen lineWidth="2.0" lineStyle="Solid"/>
 					<topPen lineWidth="2.0" lineStyle="Solid"/>
@@ -297,13 +302,14 @@
 		</columnHeader>
 		<detail>
 			<band height="17"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" pattern="###0" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
-						width="43"
+						width="42"
 						height="17"
-						key="textField-1"/>
+						key="textField-1"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="2">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
@@ -313,15 +319,16 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{no}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="43"
+						x="42"
 						y="0"
 						width="196"
 						height="17"
-						key="textField-2"/>
+						key="textField-2"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
@@ -333,13 +340,14 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{persona}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="238"
 						y="0"
 						width="98"
 						height="17"
-						key="textField-3"/>
+						key="textField-3"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="2">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
@@ -351,13 +359,14 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{status}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="336"
 						y="0"
 						width="92"
 						height="17"
-						key="textField-4"/>
+						key="textField-4"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="2">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
@@ -369,13 +378,14 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{charged}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="428"
 						y="0"
 						width="148"
 						height="17"
-						key="textField-5"/>
+						key="textField-5"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="2">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
@@ -387,31 +397,33 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{destined}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MMMMM dd, yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="576"
 						y="0"
 						width="100"
 						height="17"
-						key="textField-6"/>
-					<box leftPadding="5">					<pen lineWidth="1.0" lineStyle="Solid"/>
+						key="textField-6"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="2">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid"/>
 </box>
-					<textElement verticalAlignment="Middle">
+					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{effectivity}]]></textFieldExpression>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{effectivity}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="676"
 						y="0"
 						width="98"
 						height="17"
-						key="textField-7"/>
+						key="textField-7"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="2">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>
@@ -423,13 +435,14 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{years}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="774"
 						y="0"
 						width="102"
 						height="17"
-						key="textField-8"/>
+						key="textField-8"
+						stretchType="RelativeToTallestObject"/>
 					<box leftPadding="5">					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid"/>

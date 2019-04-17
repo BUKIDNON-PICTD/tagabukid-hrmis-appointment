@@ -1,0 +1,9 @@
+<workunit extends="wtemplates/ReportController.xml" >
+    <invokers>      
+        <!-- <invoker type="personnelplantilla:report" caption="Personnel plantilla" action="preview" index="1"/>    -->
+        <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Personnel plantilla" target="window" index="1" role="APPOINTMENT_REPORTS"/>    
+    
+    </invokers>
+
+    <code class="tagabukid.hrmis.appointment.models.ReportPersonnelPlantillaController" />
+</workunit>
