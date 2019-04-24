@@ -23,9 +23,16 @@
         String reportName = REPORT_PATH + 'servicerecord.jasper';
         def data
         
-         def servicetypes = ['Government', 'Non-Government', 'Both'] 
-
-
+        //def servicetypes = ['Government', 'Non-Government', 'Both']
+        //def servicetypemaps = ['Government':'1', 'Non-Government':'0', 'Both':'2'] 
+        //def servicetypemap2 = [1 : 'Government', 0 : 'Non-Government', 2 : 'Both'] 
+        
+        def servicetypes = [
+            [isgovservice:0, caption:'Non-Government'],
+            [isgovservice:1, caption:'Government'],
+            [isgovservice:2, caption:'Both'],
+            ]
+        
         void buildReportData(entity, asyncHandler){
             svc.getServiceRecordById(entity,asyncHandler);
         }
@@ -33,7 +40,7 @@
         Map getParameters(){
             return data.parameters;
         }
-
+        
 
        def formControl = [
             getFormControls: {
@@ -41,8 +48,8 @@
                     new FormControl( "checkbox", [caption:'For Retirement', name:'entity.forretirement', preferredSize:'[0,21]', captionWidth:150]),
                     //new FormControl( "checkbox", [caption:'For GSIS', name:'entity.forgsis', preferredSize:'[0,21]', captionWidth:150]),
                     new FormControl( "text", [caption:'Purpose', name:'entity.forpurpose', preferredSize:'[0,50]', captionWidth:150]),
-                   // new FormControl( "combo", [caption:'Service Type', name:'entity.servicetype', items:'servicetypes', preferredSize:'[0,21]', captionWidth:150]),
-                  
+                    new FormControl( "combo", [caption:'Service Type', name:'entity.servicetype', items:'servicetypes', expression:'#{item.caption}', preferredSize:'[0,21]', captionWidth:150, allowNull:false, emptyText:'Both']),
+                   
                 ]    
             },
        ] as FormPanelModel;
