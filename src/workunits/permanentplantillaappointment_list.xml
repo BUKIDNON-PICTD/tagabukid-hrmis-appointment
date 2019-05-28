@@ -4,6 +4,8 @@
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (PERM)"  index="3" role="APPOINTMENT_SHARED"/>
         <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (PERM)"  index="3" role="APPOINTMENT_SHARED"/>
         <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}" role="APPOINTMENT_ENCODER"/> 
+        <invoker type="formActions" caption="Generate Transmittal" action="generatetransmittal" visibleWhen="#{allowTransmittal==true}" role="APPOINTMENT_REPORTS"/> 
+
     </invokers>
      <code>
     <![CDATA[
@@ -19,15 +21,15 @@
         @Service("PersistenceService")
         def persistenceSvc;
         def selectedItem
-        //public void init() {
+        public void init() {
         //    // params.yearcreated = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0]; 
         //    params.dtfrom = new java.sql.Date(System.currentTimeMillis()).toString().split("-")[0] + "-01-01";
-        //    params.dtto = new java.sql.Date(System.currentTimeMillis());  
-        //} 
+            //params.dtissued = new java.sql.Date(System.currentTimeMillis());  
+        } 
         
-        //public void beforeFetchList( Map qry ) { 
-        //    if ( params ) qry.putAll( params ); 
-        //}
+        public void beforeFetchList( Map qry ) { 
+            if ( params ) qry.putAll( params ); 
+        }
         
         void delete(){
             if (MsgBox.confirm('Are you sure you want to delete this item?')){                
@@ -39,9 +41,23 @@
         boolean isAllowDelete(){
             return (selectedEntity.state == 'PENDING');
         }
+        
+        boolean isAllowTransmittal(){
+            return (params.dtissued);
+        }
+        
+        def generatetransmittal(){
+            def op = Inv.lookupOpener("hrmis_appointmentpermanent_transmittal:report",[entity: params]);
+            op.target = 'self';
+            return op;
+         }
+        
+        
      }  
     ]]> 
     </code>
-
+     <pages>
+        <page name="queryform" template="tagabukid.hrmis.appointment.views.TagabukidHRMISPermanentAppointmentListQueryForm"/>
+    </pages>
 
 </workunit>

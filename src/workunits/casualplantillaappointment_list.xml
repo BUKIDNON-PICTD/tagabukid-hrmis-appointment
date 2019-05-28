@@ -1,4 +1,4 @@
-<workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISCasualAppointmentListService" 
+fhrmis_appointmentpermanent_transmittal<workunit extends="wtemplates/ExplorerViewController.xml" serviceName="TagabukidHRMISCasualAppointmentListService" 
      allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="hrmis_appointmentcasual">
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (Casual)"  index="2" role="APPOINTMENT_SHARED"/>

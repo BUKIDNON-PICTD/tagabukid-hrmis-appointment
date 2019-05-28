@@ -1,6 +1,7 @@
 <workunit extends="wtemplates/SimpleReportController.xml" >
     <invokers>
-        <invoker type="hrmis_appointmentpermanent:form:formActions" caption="Preview Transmittal" action="preview" target="self" index="1" role="APPOINTMENT_REPORTS"/>        
+        <!--<invoker type="hrmis_appointmentpermanent:list:formActions" caption="Preview Transmittal" action="preview" target="self" index="1" role="APPOINTMENT_REPORTS"/>-->        
+        <invoker type="hrmis_appointmentpermanent_transmittal:report" action="preview" role="APPOINTMENT_REPORTS"/>        
     </invokers>
     <code class="tagabukid.hrmis.appointment.models.ReportAppointmentPermanentTransmittalController" />
 <!--    <pages>

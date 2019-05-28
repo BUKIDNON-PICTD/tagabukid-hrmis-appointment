@@ -11,11 +11,11 @@ class ReportAppointmentPermanentAssumptionToDutyController extends com.rameses.e
 
     def title = "Assumption to Duty";
     final String REPORT_PATH = 'tagabukid/hrmis/appointment/reports/';
-    String reportName = REPORT_PATH + 'assumption_to_duty.jasper';
+    String reportName = REPORT_PATH + 'appointment_permanent_assumption_to_duty.jasper';
     def data
 
     def getReportData() { 
-        data = svc.getAppointmentPermanentAssumptionToDutyById(entity);
+        data = svc.getAppointmentPermanentById(entity);
         return data.reportdata
     } 
 
