@@ -77,16 +77,18 @@ class  PDSPersonalInfoController extends CrudFormModel{
             entity.versionno = svc.getVersionNo();
             
         }
+        println "past here1"
     }
     public void afterCreate(){
         entity.putAll(parententity)
+        println "past here2"
     }
     public void afterSave(){
         entity.person._schemaname = 'entityindividual'
         // entity.person.putAll(persistenceSvc.read([ _schemaname: 'hrmis_pds', objid: entity.person.objid])) 
         persistenceSvc.update(entity.person)
         maincontroller.reloadSections('open');
-
+        println "past here3"
         // loadBTACSidIncrement()
     }
     
@@ -95,6 +97,7 @@ class  PDSPersonalInfoController extends CrudFormModel{
         entity.person.putAll(persistenceSvc.read([ _schemaname: 'entityindividual', objid: entity.person.objid])) 
         //    residentialAddress = entity.residential.address
         //    permanentAddress = entity.permanent.address
+      
     }
     
     def isPDSExist(){
