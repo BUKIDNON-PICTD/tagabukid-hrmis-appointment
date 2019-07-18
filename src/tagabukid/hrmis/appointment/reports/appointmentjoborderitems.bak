@@ -111,6 +111,7 @@
 	<field name="natureofappointmentid.name" class="java.lang.String"/>
 	<field name="org.code" class="java.lang.String"/>
 	<field name="dailysalary" class="java.math.BigDecimal"/>
+	<field name="formalname" class="java.lang.String"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
@@ -352,7 +353,7 @@
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}+" "+$F{personnel.middlename}+" "+$F{personnel.lastname}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{formalname}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
