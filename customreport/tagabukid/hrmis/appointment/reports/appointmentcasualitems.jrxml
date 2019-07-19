@@ -197,7 +197,7 @@
 						mode="Opaque"
 						x="21"
 						y="93"
-						width="85"
+						width="103"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-3"/>
@@ -215,9 +215,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="106"
+						x="124"
 						y="93"
-						width="84"
+						width="95"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-4"/>
@@ -251,26 +251,6 @@
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[NAME OF APPOINTEE(S)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="190"
-						y="93"
-						width="29"
-						height="29"
-						backcolor="#99CCFF"
-						key="staticText-6"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
-					</textElement>
-				<text><![CDATA[NAME EXTENSION]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -623,7 +603,7 @@
 		</columnHeader>
 		<detail>
 			<band height="9"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
@@ -642,11 +622,11 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[($P{START} - 1) +$V{REPORT_COUNT}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="21"
 						y="0"
-						width="85"
+						width="103"
 						height="9"
 						key="textField"
 						positionType="Float"/>
@@ -661,11 +641,11 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.lastname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="106"
+						x="124"
 						y="0"
-						width="84"
+						width="95"
 						height="9"
 						key="textField"
 						positionType="Float"/>
@@ -680,7 +660,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.firstname}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="219"
 						y="0"
@@ -701,25 +681,6 @@
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="190"
-						y="0"
-						width="29"
-						height="9"
-						key="textField-1"
-						positionType="Float"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
 						x="293"
 						y="0"
 						width="146"
@@ -737,7 +698,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.jobposition.name}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="439"
 						y="0"
@@ -756,7 +717,7 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{plantilla.paygradeandstepincrement.grade}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="491"
 						y="0"
@@ -775,7 +736,7 @@
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{dailywage}.setScale(2, RoundingMode.DOWN)]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="548"
 						y="0"
@@ -794,7 +755,7 @@
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectivefrom}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="603"
 						y="0"
@@ -813,7 +774,7 @@
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectiveuntil}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="656"
 						y="0"
