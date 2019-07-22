@@ -17,11 +17,11 @@ class  LeaveCardController extends CrudFormModel{
     @Caller
     def maincontroller
     
-        
+           
     @Service("PersistenceService")
     def persistenceSvc;
     
-    String title = "Leave Ledger";
+    String title = "Leave Card";
     
     def parententity
     def svc
@@ -32,6 +32,8 @@ class  LeaveCardController extends CrudFormModel{
     def selectedLeaveCard
     def selectedLeaveCardDetail
     def attachmentSelectedItem;
+    
+    String formName = 'leavecard';
        
     boolean isCreateAllowed(){
         return false
