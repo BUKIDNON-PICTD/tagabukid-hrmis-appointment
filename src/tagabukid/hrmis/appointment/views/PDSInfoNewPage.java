@@ -34,14 +34,7 @@ public class PDSInfoNewPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        xTextFieldBeanInfo1 = new com.rameses.rcp.control.XTextFieldBeanInfo();
         xDataTable1 = new com.rameses.rcp.control.XDataTable();
-        xDateFieldBeanInfo1 = new com.rameses.rcp.control.XDateFieldBeanInfo();
-        xFormPanelBeanInfo1 = new com.rameses.rcp.control.XFormPanelBeanInfo();
-        xComboBoxBeanInfo1 = new com.rameses.rcp.control.XComboBoxBeanInfo();
-        xFormPanelBeanInfo2 = new com.rameses.rcp.control.XFormPanelBeanInfo();
-        xFormPanelBeanInfo3 = new com.rameses.rcp.control.XFormPanelBeanInfo();
-        xTextAreaBeanInfo1 = new com.rameses.rcp.control.XTextAreaBeanInfo();
         xPhoto1 = new com.rameses.rcp.control.XPhoto();
         xHorizontalPanel1 = new com.rameses.rcp.control.XHorizontalPanel();
         xFormPanel1 = new com.rameses.rcp.control.XFormPanel();
@@ -93,16 +86,9 @@ public class PDSInfoNewPage extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.rameses.entity.components.EntityLookup entityLookup1;
-    private com.rameses.rcp.control.XComboBoxBeanInfo xComboBoxBeanInfo1;
     private com.rameses.rcp.control.XDataTable xDataTable1;
-    private com.rameses.rcp.control.XDateFieldBeanInfo xDateFieldBeanInfo1;
     private com.rameses.rcp.control.XFormPanel xFormPanel1;
-    private com.rameses.rcp.control.XFormPanelBeanInfo xFormPanelBeanInfo1;
-    private com.rameses.rcp.control.XFormPanelBeanInfo xFormPanelBeanInfo2;
-    private com.rameses.rcp.control.XFormPanelBeanInfo xFormPanelBeanInfo3;
     private com.rameses.rcp.control.XHorizontalPanel xHorizontalPanel1;
     private com.rameses.rcp.control.XPhoto xPhoto1;
-    private com.rameses.rcp.control.XTextAreaBeanInfo xTextAreaBeanInfo1;
-    private com.rameses.rcp.control.XTextFieldBeanInfo xTextFieldBeanInfo1;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,21 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
-    <Component class="com.rameses.rcp.control.XTextFieldBeanInfo" name="xTextFieldBeanInfo1">
-    </Component>
     <Component class="com.rameses.rcp.control.XDataTable" name="xDataTable1">
-    </Component>
-    <Component class="com.rameses.rcp.control.XDateFieldBeanInfo" name="xDateFieldBeanInfo1">
-    </Component>
-    <Component class="com.rameses.rcp.control.XFormPanelBeanInfo" name="xFormPanelBeanInfo1">
-    </Component>
-    <Component class="com.rameses.rcp.control.XComboBoxBeanInfo" name="xComboBoxBeanInfo1">
-    </Component>
-    <Component class="com.rameses.rcp.control.XFormPanelBeanInfo" name="xFormPanelBeanInfo2">
-    </Component>
-    <Component class="com.rameses.rcp.control.XFormPanelBeanInfo" name="xFormPanelBeanInfo3">
-    </Component>
-    <Component class="com.rameses.rcp.control.XTextAreaBeanInfo" name="xTextAreaBeanInfo1">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -62,13 +48,13 @@
   <SubComponents>
     <Component class="com.rameses.rcp.control.XPhoto" name="xPhoto1">
       <Properties>
+        <Property name="text" type="java.lang.String" value="xPhoto1"/>
         <Property name="depends" type="[Ljava.lang.String;" editor="org.netbeans.beaninfo.editors.StringArrayEditor">
           <StringArray count="1">
             <StringItem index="0" value="entity.person"/>
           </StringArray>
         </Property>
         <Property name="name" type="java.lang.String" value="entity.person.photo" noResource="true"/>
-        <Property name="text" type="java.lang.String" value="xPhoto1"/>
       </Properties>
     </Component>
     <Container class="com.rameses.rcp.control.XHorizontalPanel" name="xHorizontalPanel1">
