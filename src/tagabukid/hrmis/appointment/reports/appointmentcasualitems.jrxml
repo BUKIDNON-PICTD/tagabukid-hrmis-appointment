@@ -145,6 +145,7 @@
 	<field name="plantilla.org.name" class="java.lang.String"/>
 	<field name="plantilla.org.description" class="java.lang.String"/>
 	<field name="plantilla.org.code" class="java.lang.String"/>
+	<field name="pds.nameextension" class="java.lang.String"/>
 
 
 		<group  name="test" >
@@ -217,7 +218,7 @@
 						mode="Opaque"
 						x="124"
 						y="93"
-						width="95"
+						width="76"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-4"/>
@@ -255,9 +256,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="219"
+						x="226"
 						y="93"
-						width="74"
+						width="67"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-7"/>
@@ -599,6 +600,26 @@
 					</textElement>
 				<text><![CDATA[(3) Provide proper pagination (Page n of n page/s).]]></text>
 				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="200"
+						y="93"
+						width="26"
+						height="29"
+						backcolor="#99CCFF"
+						key="staticText-27"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
+					</textElement>
+				<text><![CDATA[NAME EXT (Jr./III)]]></text>
+				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
@@ -645,7 +666,7 @@
 					<reportElement
 						x="124"
 						y="0"
-						width="95"
+						width="76"
 						height="9"
 						key="textField"
 						positionType="Float"/>
@@ -662,9 +683,9 @@
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="219"
+						x="226"
 						y="0"
-						width="74"
+						width="67"
 						height="9"
 						key="textField"
 						positionType="Float"/>
@@ -753,7 +774,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectivefrom}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? new SimpleDateFormat("MM/dd/yyyy").format($P{effectivefrom}): null)]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -772,7 +793,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.util.Date"><![CDATA[$P{effectiveuntil}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? new SimpleDateFormat("MM/dd/yyyy").format($P{effectiveuntil}): null)]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -791,7 +812,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{natureofappointment.name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? $P{natureofappointment.name} : null)]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -833,6 +854,25 @@
 					</textElement>
 				<text><![CDATA[]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="200"
+						y="0"
+						width="26"
+						height="9"
+						key="textField-4"
+						stretchType="RelativeToTallestObject"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{pds.nameextension}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>
