@@ -195,7 +195,7 @@
 						mode="Opaque"
 						x="84"
 						y="23"
-						width="57"
+						width="83"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-4"/>
@@ -229,26 +229,6 @@
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="5" isBold="true"/>
 					</textElement>
 				<text><![CDATA[NAME OF APPOINTEE(S)]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
-						x="141"
-						y="23"
-						width="26"
-						height="29"
-						backcolor="#99CCFF"
-						key="staticText-6"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
-					</textElement>
-				<text><![CDATA[NAME EXT (Jr./III)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -886,7 +866,7 @@ indicafte period of publication(mm/dd/yyyy to mm/dd/yyyy)]]></text>
 					<reportElement
 						x="84"
 						y="0"
-						width="57"
+						width="83"
 						height="10"
 						key="textField"
 						stretchType="RelativeToTallestObject"/>
@@ -919,25 +899,6 @@ indicafte period of publication(mm/dd/yyyy to mm/dd/yyyy)]]></text>
 						<font fontName="Tahoma" size="5"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.middlename}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="141"
-						y="0"
-						width="26"
-						height="10"
-						key="textField-1"
-						stretchType="RelativeToTallestObject"/>
-					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
-					<topPen lineWidth="0.5" lineStyle="Solid"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="Tahoma" size="5"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
