@@ -631,6 +631,7 @@
 						width="21"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -650,6 +651,7 @@
 						width="103"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -669,6 +671,7 @@
 						width="76"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -688,6 +691,7 @@
 						width="67"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -707,6 +711,7 @@
 						width="146"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -726,6 +731,7 @@
 						width="52"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -745,6 +751,7 @@
 						width="57"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -764,6 +771,7 @@
 						width="55"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -783,6 +791,7 @@
 						width="53"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -802,6 +811,7 @@
 						width="96"
 						height="9"
 						key="textField"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -822,6 +832,7 @@
 						width="76"
 						height="9"
 						key="staticText-19"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -842,6 +853,7 @@
 						width="67"
 						height="9"
 						key="staticText-20"
+						stretchType="RelativeToTallestObject"
 						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
@@ -861,7 +873,8 @@
 						width="26"
 						height="9"
 						key="textField-4"
-						stretchType="RelativeToTallestObject"/>
+						stretchType="RelativeToTallestObject"
+						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
