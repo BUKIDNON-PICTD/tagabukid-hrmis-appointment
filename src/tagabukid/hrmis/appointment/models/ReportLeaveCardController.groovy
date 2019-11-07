@@ -4,7 +4,7 @@ import com.rameses.osiris2.client.*;
 import com.rameses.osiris2.common.*;
 import com.rameses.osiris2.reports.*;
 
-class ReportLeaveCardController extends com.rameses.etracs.shared.ReportController {
+class ReportLeaveCardController extends ReportController {
     
     @Service("TagabukidHRMISLeaveCardReportService")
     def svc;

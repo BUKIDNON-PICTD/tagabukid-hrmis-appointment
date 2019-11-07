@@ -93,6 +93,7 @@
 	<parameter name="PRINTEDBY" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="signatorygroup.signatoryGroupItems" isForPrompting="false" class="java.lang.Object"/>
 	<parameter name="START" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="HIDENOA" isForPrompting="false" class="java.lang.Boolean"/>
 
 	<field name="personnel.objid" class="java.lang.String"/>
 	<field name="dailywage" class="java.math.BigDecimal"/>
@@ -172,12 +173,12 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="122"  isSplitAllowed="true" >
+			<band height="113"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						mode="Opaque"
 						x="0"
-						y="69"
+						y="60"
 						width="21"
 						height="53"
 						backcolor="#99CCFF"
@@ -197,8 +198,8 @@
 					<reportElement
 						mode="Opaque"
 						x="21"
-						y="93"
-						width="103"
+						y="84"
+						width="85"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-3"/>
@@ -237,7 +238,7 @@
 					<reportElement
 						mode="Opaque"
 						x="21"
-						y="69"
+						y="60"
 						width="272"
 						height="24"
 						backcolor="#99CCFF"
@@ -256,9 +257,6 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="226"
-						y="93"
-						width="67"
 						height="29"
 						backcolor="#99CCFF"
 						key="staticText-7"/>
@@ -277,7 +275,7 @@
 					<reportElement
 						mode="Opaque"
 						x="293"
-						y="69"
+						y="60"
 						width="146"
 						height="53"
 						backcolor="#99CCFF"
@@ -297,7 +295,7 @@
 					<reportElement
 						mode="Opaque"
 						x="439"
-						y="69"
+						y="60"
 						width="52"
 						height="53"
 						backcolor="#99CCFF"
@@ -317,7 +315,7 @@
 					<reportElement
 						mode="Opaque"
 						x="491"
-						y="69"
+						y="60"
 						width="57"
 						height="53"
 						backcolor="#99CCFF"
@@ -337,7 +335,7 @@
 					<reportElement
 						mode="Opaque"
 						x="548"
-						y="69"
+						y="60"
 						width="108"
 						height="24"
 						backcolor="#99CCFF"
@@ -357,7 +355,7 @@
 					<reportElement
 						mode="Opaque"
 						x="548"
-						y="93"
+						y="84"
 						width="55"
 						height="29"
 						backcolor="#99CCFF"
@@ -377,7 +375,7 @@
 					<reportElement
 						mode="Opaque"
 						x="603"
-						y="93"
+						y="84"
 						width="53"
 						height="29"
 						backcolor="#99CCFF"
@@ -397,11 +395,13 @@
 					<reportElement
 						mode="Opaque"
 						x="656"
-						y="69"
+						y="60"
 						width="96"
 						height="24"
 						backcolor="#99CCFF"
-						key="staticText-14"/>
+						key="staticText-14">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -417,11 +417,14 @@
 					<reportElement
 						mode="Opaque"
 						x="752"
-						y="69"
+						y="60"
 						width="143"
 						height="24"
 						backcolor="#99CCFF"
-						key="staticText-15"/>
+						key="staticText-15"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -437,11 +440,13 @@
 					<reportElement
 						mode="Opaque"
 						x="656"
-						y="93"
+						y="84"
 						width="96"
 						height="29"
 						backcolor="#99CCFF"
-						key="staticText-16"/>
+						key="staticText-16">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -457,11 +462,14 @@
 					<reportElement
 						mode="Opaque"
 						x="752"
-						y="93"
+						y="84"
 						width="76"
 						height="29"
 						backcolor="#99CCFF"
-						key="staticText-17"/>
+						key="staticText-17"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -477,11 +485,14 @@
 					<reportElement
 						mode="Opaque"
 						x="828"
-						y="93"
+						y="84"
 						width="67"
 						height="29"
 						backcolor="#99CCFF"
-						key="staticText-18"/>
+						key="staticText-18"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -546,7 +557,7 @@
 						x="7"
 						y="30"
 						width="318"
-						height="11"
+						height="9"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
 						key="staticText-23"/>
@@ -555,7 +566,7 @@
 					<bottomPen lineWidth="0.0" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
-					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
 				<text><![CDATA[(1) Only a maximum of fifteen(15) must be listed on each page of the Plantilla of Casual Appointments.]]></text>
@@ -564,9 +575,9 @@
 					<reportElement
 						mode="Transparent"
 						x="7"
-						y="41"
+						y="39"
 						width="422"
-						height="11"
+						height="9"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
 						key="staticText-24"/>
@@ -575,7 +586,7 @@
 					<bottomPen lineWidth="0.0" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
-					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
 				<text><![CDATA[(2) Indicate 'NOTHING FOLLOWS' on the row following the name of the last appointee on the last page of the Plantilla.]]></text>
@@ -584,9 +595,9 @@
 					<reportElement
 						mode="Transparent"
 						x="7"
-						y="52"
+						y="48"
 						width="318"
-						height="11"
+						height="9"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
 						key="staticText-25"/>
@@ -595,7 +606,7 @@
 					<bottomPen lineWidth="0.0" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
-					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
 				<text><![CDATA[(3) Provide proper pagination (Page n of n page/s).]]></text>
@@ -603,12 +614,9 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="200"
+						x="226"
 						y="93"
-						width="26"
-						height="29"
-						backcolor="#99CCFF"
-						key="staticText-27"/>
+						width="67"
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -616,9 +624,12 @@
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
-					</textElement>
-				<text><![CDATA[NAME EXT (Jr./III)]]></text>
+						x="200"
+						y="93"
+						width="26"
+						height="29"
+						backcolor="#99CCFF"
+						key="staticText-27"/>
 				</staticText>
 			</band>
 		</columnHeader>
@@ -648,7 +659,7 @@
 					<reportElement
 						x="21"
 						y="0"
-						width="103"
+						width="85"
 						height="9"
 						key="textField"
 						stretchType="RelativeToTallestObject"
@@ -666,9 +677,11 @@
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="124"
+						x="106"
 						y="0"
-						width="76"
+						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="4" isBold="true"/>
+					</textElement>
+				<text><![CDATA[NAME EXT (Jr./III)]]></text>
 						height="9"
 						key="textField"
 						stretchType="RelativeToTallestObject"
@@ -703,6 +716,26 @@
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personnel.middlename}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="190"
+						y="0"
+						width="29"
+						height="9"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						positionType="Float"/>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personel.nameextension}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -782,7 +815,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? new SimpleDateFormat("MM/dd/yyyy").format($P{effectivefrom}): null)]]></textFieldExpression>
+						width="76"
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -802,7 +835,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? new SimpleDateFormat("MM/dd/yyyy").format($P{effectiveuntil}): null)]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? new SimpleDateFormat("MM/dd/yyyy").format($P{effectivefrom}): null)]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -812,7 +845,6 @@
 						height="9"
 						key="textField"
 						stretchType="RelativeToTallestObject"
-						positionType="Float"/>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -822,7 +854,7 @@
 					<textElement verticalAlignment="Middle">
 						<font fontName="Tahoma" size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? $P{natureofappointment.name} : null)]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? new SimpleDateFormat("MM/dd/yyyy").format($P{effectiveuntil}): null)]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -854,7 +886,7 @@
 						height="9"
 						key="staticText-20"
 						stretchType="RelativeToTallestObject"
-						positionType="Float"/>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{personnel.firstname}!=null ? $P{natureofappointment.name} : null)]]></textFieldExpression>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -897,15 +929,40 @@
 						width="895"
 						height="24"
 						key="staticText-26"
-						positionType="Float"/>
+						positionType="Float"
+						isPrintWhenDetailOverflows="true">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==false]]></printWhenExpression>
+						</reportElement>
 					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid"/>
 </box>
-					<textElement textAlignment="Center">
-						<font fontName="Tahoma" size="8"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Tahoma" size="6"/>
+					</textElement>
+				<text><![CDATA[The above-named personnel are hereby hired/appointed as casuals/contractuals at the rate of compensation stated opposite their/his name(s) for the period indicated. It is understood that such employment will cease automatically at the end of the period stated unless renewed. Any or all of them may be laid-off any time before the expiration of the employment period when their services are no longer needed or funds are no longer available or the project has already been completed/finished or their performance are below par.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="894"
+						height="24"
+						key="staticText-32"
+						positionType="Float"
+						isPrintWhenDetailOverflows="true">
+							<printWhenExpression><![CDATA[$P{HIDENOA}==true]]></printWhenExpression>
+						</reportElement>
+					<box leftPadding="5" rightPadding="5">					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Justified">
+						<font fontName="Tahoma" size="6"/>
 					</textElement>
 				<text><![CDATA[The above-named personnel are hereby hired/appointed as casuals/contractuals at the rate of compensation stated opposite their/his name(s) for the period indicated. It is understood that such employment will cease automatically at the end of the period stated unless renewed. Any or all of them may be laid-off any time before the expiration of the employment period when their services are no longer needed or funds are no longer available or the project has already been completed/finished or their performance are below par.]]></text>
 				</staticText>
@@ -920,3 +977,4 @@
 			</band>
 		</summary>
 </jasperReport>
+						positionType="Float"/>
