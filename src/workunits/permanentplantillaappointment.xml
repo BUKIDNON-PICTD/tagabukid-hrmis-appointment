@@ -2,7 +2,7 @@
     <invokers>
         <invoker type="hrmis_appointmentpermanent:create" caption="Appointment (Permanent)" target="window" action="create" role="APPOINTMENT_ENCODER"/>
         <invoker type="hrmis_appointmentpermanent:open" caption="Appointment (Permanent)" target="window" action="open" role="APPOINTMENT_ENCODER"/>       
-        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment (Permanent)" target="window" action="create" index="6" role="APPOINTMENT_ENCODER"/>
+        <invoker folderid="menucategory/hrmis/hrmisappointment" caption="Appointment (Permanent)" target="window" action="create" index="6" role="APPOINTMENT_ENCODER"/>
         
          <invoker type="formActions" caption="Approve" action="approve" visibleWhen="#{allowApprove==true}" role="APPOINTMENT_APPROVER"/> 
          <invoker type="formActions" caption="Disapprove" action="disapprove" visibleWhen="#{allowDisapprove==true}" role="APPOINTMENT_APPROVER"/> 

@@ -1,6 +1,6 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" >
     <invokers>
-        <invoker folderid="/home/hrmis" caption="Plantilla Management" action="init" role="MASTER"/> 
+        <invoker folderid="menucategory/hrmis" caption="Plantilla Management" action="init" role="MASTER"/> 
         <invoker folderid="/explorer/master/hrmismaster" caption="Plantilla Management" action="init" role="MASTER"/>  
         <invoker type="formActions" caption="Generate Permanent Plantilla" action="permanent" role="MASTER"/>   
         <invoker type="formActions" caption="Generate Casual Plantilla" action="casual" role="MASTER"/> 

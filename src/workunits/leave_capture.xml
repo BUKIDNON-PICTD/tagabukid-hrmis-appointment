@@ -5,7 +5,7 @@
 <!--        <invoker type="hrmis_leave:open" caption="Capture Leave" action="open" target="window" role="APPOINTMENT_ENCODER"/>  
         <invoker type="hrmis_leave:create" caption="Capture Leave" action="create" target="window" role="APPOINTMENT_ENCODER"/>     -->
         <!--<invoker type="hrmis_leave:renew:create" caption="Capture Leave Renew" action="create" tag="renew" role="APPOINTMENT_ENCODER"/>--> 
-        <!--<invoker folderid="/home/hrmis/hrmisappointment" caption="Capture Leave" action="create" index="5" target="window" role="APPOINTMENT_ENCODER"/>-->
+        <!--<invoker folderid="menucategory/hrmis/hrmisappointment" caption="Capture Leave" action="create" index="5" target="window" role="APPOINTMENT_ENCODER"/>-->
         
        
     </invokers>

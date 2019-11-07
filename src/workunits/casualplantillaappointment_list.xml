@@ -2,7 +2,7 @@
      allowOpen="true" allowCreate="true" autoSelect="true" defaultFileType="hrmis_appointmentcasual">
     <invokers>
         <invoker folderid="/explorer/txn/hrmistransaction" action="init" caption="Appointment List (Casual)"  index="2" role="APPOINTMENT_SHARED"/>
-        <invoker folderid="/home/hrmis/hrmisappointment" action="init" caption="Appointment List (Casual)"  index="2" role="APPOINTMENT_SHARED"/>
+        <invoker folderid="menucategory/hrmis/hrmisappointment" action="init" caption="Appointment List (Casual)"  index="2" role="APPOINTMENT_SHARED"/>
         <invoker type="formActions" caption="Delete" action="delete" visibleWhen="#{allowDelete==true}" role="APPOINTMENT_ENCODER"/> 
     </invokers>
      <code>

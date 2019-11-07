@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workunit extends="com/rameses/seti2/templates/CrudList.xml" schemaName="master_tbltraining">
     <invokers>
-        <invoker folderid="/home/hrmis/hrmismaster" caption="Training Programs" action="init" index="1" role="MASTER" />
+        <invoker folderid="menucategory/hrmis/hrmismaster" caption="Training Programs" action="init" index="1" role="MASTER" />
         <invoker folderid="/explorer/master/hrmismaster" action="init" caption="Training Programs" index="20" role="MASTER" />   
     </invokers>
 </workunit>

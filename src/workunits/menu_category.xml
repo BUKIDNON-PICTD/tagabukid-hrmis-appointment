@@ -1,8 +1,0 @@
-<!--<workunit extends="com/rameses/menu/templates/home.xml" context="hrmis">
-    <invokers>
-        <invoker type="home.action" 
-                 caption="HRMIS" icon="home/icons/group.png"
-                 visibleWhen="#{self.hasChildren('home/hrmis')==true}" 
-                 action="init" index="9999"/>
-    </invokers> 
-</workunit>-->

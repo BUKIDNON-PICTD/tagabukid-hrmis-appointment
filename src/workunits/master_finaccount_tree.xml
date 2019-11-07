@@ -1,6 +1,6 @@
 <workunit extends="wtemplates/ExplorerViewController.xml" >
     <invokers>
-        <invoker folderid="/home/hrmis/hrmismaster" caption="Account Management" action="init" role="MASTER"/> 
+        <invoker folderid="menucategory/hrmis/hrmismaster" caption="Account Management" action="init" role="MASTER"/> 
         <invoker folderid="/explorer/master/hrmismaster" caption="Account Management" action="init" role="MASTER"/>  
     </invokers>
     <code>

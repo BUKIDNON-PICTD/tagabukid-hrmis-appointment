@@ -1,0 +1,8 @@
+<workunit extends="com/rameses/menu/templates/MenuCategory.xml" context="hrmis">
+    <invokers>
+        <invoker type="home.action" 
+                 caption="HRMIS" icon="home/icons/hrmis.png"
+                 visibleWhen="#{self.hasChildren('menucategory/hrmis')==true}" 
+                 action="init" index="10001"/>
+    </invokers> 
+</workunit>

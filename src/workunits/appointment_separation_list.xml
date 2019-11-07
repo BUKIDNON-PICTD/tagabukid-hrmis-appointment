@@ -3,7 +3,7 @@
     cols="state,pds.person.name,separationtype.name,dateprepared"
     orderBy="pds.person.name ASC">
     <invokers>
-<!--        <invoker folderid="/home/hrmis/hrmisappointment" caption="Appointment Separation List" action="init" index="20" role="APPOINTMENT_APPROVER" />
+<!--        <invoker folderid="menucategory/hrmis/hrmisappointment" caption="Appointment Separation List" action="init" index="20" role="APPOINTMENT_APPROVER" />
         <invoker folderid="/explorer/txn/hrmistransaction" caption="Appointment Separation List"  action="init" index="20" role="APPOINTMENT_APPROVER" />   -->
     </invokers>
 </workunit>

@@ -5,6 +5,6 @@
           cols="pdsno,person.name" 
           orderBy="person.name" tag="leave">
     <invokers>
-        <invoker folderid="/home/hrmis/hrmisleave" caption="Leave Ledger" action="init" index="3" role="PDS_SHARED"/>
+        <invoker folderid="menucategory/hrmis/hrmisleave" caption="Leave Ledger" action="init" index="3" role="PDS_SHARED"/>
     </invokers>
 </workunit>

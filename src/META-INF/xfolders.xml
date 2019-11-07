@@ -12,16 +12,17 @@
         </folder>
     </folder> 
     
-    <folder id="home">
+    <folder id="menucategory">
         <folder id="hrmis" caption="HRMIS" icon="home/icons/hrmis.png">
             <folder id="hrmisappointment" caption="Appointment" index="1" icon="home/icons/appointment.png"/>
-            <folder id="hrmispds" caption="PDS" index="2" icon="home/icons/pds.png"/>
-            <folder id="hrmisleave" caption="Leave Management" index="2" icon="home/icons/leave.png"/>
-            <folder id="hrmismaster" caption="Master File" index="3" icon="home/icons/masterfiles.png"/>
+            <folder id="hrmispds" caption="Personal Data Sheet" index="2" icon="home/icons/pds.png"/>
+            <folder id="hrmisleave" caption="Leave Management" index="3" icon="home/icons/leave.png"/>
+            <folder id="hrmismaster" caption="Master File" index="4" icon="home/icons/masterfiles.png"/>
         </folder>
     </folder>
+    <!--
     
-<!--    <folder id="home">
+    <folder id="home">
         <folder id="hrmis" caption="HRMIS" icon="home/icons/group.png" >
             <folder id="hrmisappointment" caption="Appointment" index="1"/>
             <folder id="hrmispds" caption="Personal Data Sheet" index="2"/>
