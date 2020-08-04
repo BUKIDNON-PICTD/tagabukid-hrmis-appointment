@@ -816,7 +816,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{LGUADDRESS}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Provincial Capitol, City of Malaybalay"]]></textFieldExpression>
 				</textField>
 				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -865,26 +865,26 @@
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
 				</textField>
-				<staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="11"
 						width="150"
-						height="20"
-						key="staticText-37"/>
+						height="11"
+						key="textField-15"/>
 					<box></box>
 					<textElement>
 						<font size="6" isBold="false" isItalic="true"/>
 					</textElement>
-				<text><![CDATA[Revised 2018]]></text>
-				</staticText>
-				<staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Revised 2018"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="723"
-						y="1"
-						width="113"
+						x="763"
+						y="2"
+						width="129"
 						height="22"
-						key="staticText-38"/>
+						key="textField-16"/>
 					<box>					<pen lineWidth="0.5" lineStyle="Solid"/>
 					<topPen lineWidth="0.5" lineStyle="Solid"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid"/>
@@ -894,8 +894,8 @@
 					<textElement textAlignment="Center">
 						<font pdfFontName="Helvetica" size="8" isBold="false" isItalic="false"/>
 					</textElement>
-				<text><![CDATA[For Accredited/ Deregulated Local Government Unit]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA["For " + ( $P{HIDENOA}==false ? "Accredited/Deregulated " : "\n" ) + "Local Government Units"]]></textFieldExpression>
+				</textField>
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						mode="Transparent"
@@ -922,15 +922,34 @@
 					<reportElement
 						x="0"
 						y="0"
-						width="150"
-						height="25"
+						width="490"
+						height="11"
 						key="textField-14"/>
 					<box></box>
 					<textElement>
 						<font size="8" isBold="false" isItalic="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["CS FORM NO. " + $P{FORMNO}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["CS FORM NO. " + ( $P{HIDENOA}==false ? "34-D" : "34-F" )
+]]></textFieldExpression>
 				</textField>
+				<staticText>
+					<reportElement
+						x="763"
+						y="27"
+						width="129"
+						height="11"
+						key="staticText-39"/>
+					<box>					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+</box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica" size="8" isBold="false" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[(Stamp of Date of Receipt)]]></text>
+				</staticText>
 			</band>
 		</title>
 		<pageHeader>

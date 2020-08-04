@@ -1,0 +1,48 @@
+<workunit extends="rpt_wtemplates/ReportController.xml" >
+    <invokers>
+        <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Total Office Employees" 
+            target="window" index="1010" role="APPOINTMENT_REPORTS"/>
+    </invokers>
+    <code>
+
+    <![CDATA[
+
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.reports.*;
+
+    class EmployeeOfficeCountReportController extends tagabukid.common.models.AsyncReportController
+    {
+        @Service('EmployeeOfficeCountReportService') 
+        def svc 
+
+        String title = 'Total Office Employees'
+
+        String reportName = 'tagabukid/hrmis/appointment/reports/listing/employeeofficecountreport.jasper';
+
+        void buildReportData(entity, asyncHandler)
+        {
+            svc.getEmployeeCount(entity, asyncHandler)
+        }
+        
+        Map getParameters(){
+            return data.parameters;
+        }        
+        
+        def getOrgoffice(){
+            return svc.getOrgOffice();
+        }
+
+        def formControl = [
+            getFormControls: {
+                return [
+                    new FormControl( "combo", [captionWidth:110, caption:'Office', name:'entity.orgoffice', items:'orgoffice', expression:'#{item.name}', preferredSize:'0,21', emptyText:'ALL'])           
+                ]    
+            },
+        ] as FormPanelModel;
+    }
+    ]]>        
+        
+    </code>
+</workunit>

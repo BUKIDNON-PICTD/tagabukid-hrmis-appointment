@@ -13,12 +13,21 @@
     </folder> 
     
     <folder id="home">
-        <folder id="hrmis" caption="HRMIS">
+        <folder id="hrmis" caption="HRMIS" icon="home/icons/group.png">
             <folder id="hrmisappointment" caption="Appointment" index="1"/>
             <folder id="hrmispds" caption="PDS" index="2"/>
             <folder id="hrmisleave" caption="Leave Management" index="2"/>
             <folder id="hrmismaster" caption="Master File" index="3"/>
         </folder>
     </folder>
+    
+<!--    <folder id="home">
+        <folder id="hrmis" caption="HRMIS" icon="home/icons/group.png" >
+            <folder id="hrmisappointment" caption="Appointment" index="1"/>
+            <folder id="hrmispds" caption="Personal Data Sheet" index="2"/>
+            <folder id="hrmisleave" caption="Leave Management" index="2"/>
+            <folder id="hrmismaster" caption="Master File" index="3"/>
+        </folder>
+    </folder>-->
     
 </folders>

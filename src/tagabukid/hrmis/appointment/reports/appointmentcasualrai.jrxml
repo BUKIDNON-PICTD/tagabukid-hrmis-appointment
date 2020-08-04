@@ -202,7 +202,7 @@
 						mode="Transparent"
 						x="82"
 						y="9"
-						width="318"
+						width="422"
 						height="9"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
@@ -222,7 +222,7 @@
 						mode="Transparent"
 						x="82"
 						y="18"
-						width="318"
+						width="422"
 						height="9"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
@@ -242,7 +242,7 @@
 						mode="Transparent"
 						x="82"
 						y="27"
-						width="318"
+						width="422"
 						height="9"
 						forecolor="#000000"
 						backcolor="#FFFFFF"
@@ -295,7 +295,7 @@
 					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="6" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<text><![CDATA[     together with the original CSC copy of appointments and supporting documents. ]]></text>
+				<text><![CDATA[     together with the original CSC copy of appointments and supporting documents within the 30th day of the succeeding month.. ]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -439,7 +439,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="109"
+						y="90"
 						width="22"
 						height="34"
 						key="staticText-40"/>
@@ -455,26 +455,8 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						mode="Opaque"
 						x="0"
-						y="4"
-						width="896"
-						height="37"
-						key="staticText-41"/>
-					<box>					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="18" isBold="true"/>
-					</textElement>
-				<text><![CDATA[CSC/ HRMO Notation]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
-						y="75"
+						y="56"
 						width="896"
 						height="34"
 						key="staticText-42"/>
@@ -491,7 +473,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="41"
+						y="22"
 						width="383"
 						height="34"
 						key="staticText-43"/>
@@ -508,7 +490,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="41"
+						y="22"
 						width="254"
 						height="34"
 						key="staticText-44"/>
@@ -525,7 +507,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="109"
+						y="90"
 						width="254"
 						height="34"
 						key="staticText-45"/>
@@ -542,7 +524,7 @@
 				<staticText>
 					<reportElement
 						x="383"
-						y="41"
+						y="22"
 						width="259"
 						height="34"
 						key="staticText-46"/>
@@ -559,7 +541,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="109"
+						y="90"
 						width="361"
 						height="34"
 						key="staticText-47"/>
@@ -576,7 +558,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="143"
+						y="124"
 						width="22"
 						height="34"
 						key="staticText-49"/>
@@ -593,7 +575,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="143"
+						y="124"
 						width="254"
 						height="34"
 						key="staticText-50"/>
@@ -610,7 +592,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="143"
+						y="124"
 						width="361"
 						height="34"
 						key="staticText-51"/>
@@ -622,12 +604,12 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<text><![CDATA[PLANTILLA OF CASUAL APPOINTMENT (CSC Form No. 34-B or D) - Original CSC copy ]]></text>
+				<text><![CDATA[PLANTILLA OF CASUAL APPOINTMENT (CSC Form No. 34-B, D, E or F) - Original CSC copy ]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="0"
-						y="177"
+						y="158"
 						width="22"
 						height="34"
 						key="staticText-53"/>
@@ -644,7 +626,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="177"
+						y="158"
 						width="254"
 						height="34"
 						key="staticText-54"/>
@@ -661,7 +643,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="177"
+						y="158"
 						width="361"
 						height="34"
 						key="staticText-55"/>
@@ -678,7 +660,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="211"
+						y="192"
 						width="22"
 						height="54"
 						key="staticText-57"/>
@@ -695,7 +677,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="211"
+						y="192"
 						width="254"
 						height="54"
 						key="staticText-58"/>
@@ -712,7 +694,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="211"
+						y="192"
 						width="361"
 						height="54"
 						key="staticText-59"/>
@@ -729,7 +711,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="265"
+						y="246"
 						width="22"
 						height="24"
 						key="staticText-61"/>
@@ -746,7 +728,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="265"
+						y="246"
 						width="254"
 						height="24"
 						key="staticText-62"/>
@@ -763,7 +745,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="265"
+						y="246"
 						width="361"
 						height="24"
 						key="staticText-63"/>
@@ -780,7 +762,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="289"
+						y="270"
 						width="22"
 						height="24"
 						key="staticText-65"/>
@@ -797,7 +779,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="288"
+						y="269"
 						width="254"
 						height="25"
 						key="staticText-66"/>
@@ -814,7 +796,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="289"
+						y="270"
 						width="361"
 						height="24"
 						key="staticText-67"/>
@@ -831,7 +813,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="313"
+						y="294"
 						width="22"
 						height="34"
 						key="staticText-69"/>
@@ -848,7 +830,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="313"
+						y="294"
 						width="254"
 						height="34"
 						key="staticText-70"/>
@@ -865,7 +847,7 @@
 				<staticText>
 					<reportElement
 						x="22"
-						y="313"
+						y="294"
 						width="361"
 						height="34"
 						key="staticText-71"/>
@@ -882,7 +864,7 @@
 				<staticText>
 					<reportElement
 						x="383"
-						y="347"
+						y="328"
 						width="259"
 						height="91"
 						key="staticText-73"/>
@@ -899,7 +881,7 @@
 				<staticText>
 					<reportElement
 						x="642"
-						y="347"
+						y="328"
 						width="254"
 						height="91"
 						key="staticText-74"/>
@@ -916,7 +898,7 @@
 				<staticText>
 					<reportElement
 						x="415"
-						y="414"
+						y="395"
 						width="203"
 						height="21"
 						key="staticText-75"/>
@@ -930,7 +912,7 @@
 				<staticText>
 					<reportElement
 						x="681"
-						y="413"
+						y="394"
 						width="192"
 						height="21"
 						key="staticText-76"/>
@@ -944,7 +926,7 @@
 				<staticText>
 					<reportElement
 						x="415"
-						y="392"
+						y="373"
 						width="203"
 						height="21"
 						key="staticText-77"/>
@@ -965,7 +947,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="109"
+						y="90"
 						width="259"
 						height="34"
 						key="textField-10"/>
@@ -982,7 +964,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="143"
+						y="124"
 						width="259"
 						height="34"
 						key="textField-11"/>
@@ -999,7 +981,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="177"
+						y="158"
 						width="259"
 						height="34"
 						key="textField-12"/>
@@ -1016,7 +998,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="211"
+						y="192"
 						width="259"
 						height="54"
 						key="textField-13"/>
@@ -1033,7 +1015,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="265"
+						y="246"
 						width="259"
 						height="24"
 						key="textField-14"/>
@@ -1050,7 +1032,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="289"
+						y="270"
 						width="259"
 						height="24"
 						key="textField-15"/>
@@ -1067,7 +1049,7 @@
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="383"
-						y="313"
+						y="294"
 						width="259"
 						height="34"
 						key="textField-16"/>
@@ -1152,7 +1134,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
 						<font fontName="Tahoma" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{LGUADDRESS}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Provincial Capitol, City of Malaybalay"]]></textFieldExpression>
 				</textField>
 				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" isUsingCache="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1179,7 +1161,7 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Tahoma" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["REPORT ON APPOINTMENTS ISSUED (RAI)"]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -1192,7 +1174,7 @@
 					<textElement>
 						<font size="8" isBold="false" isItalic="true"/>
 					</textElement>
-				<text><![CDATA[CS FORM NO. 1]]></text>
+				<text><![CDATA[CS FORM NO. 2]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

@@ -1,0 +1,45 @@
+<workunit extends="rpt_wtemplates/ReportController.xml" >
+    <invokers>
+        <invoker folderid="/explorer/report/hrmisreports" action="init" caption="Employee Age Report" 
+            target="window" index="1009" role="APPOINTMENT_REPORTS"/>
+    </invokers>
+    <code>
+
+    <![CDATA[
+
+    import com.rameses.rcp.common.*;
+    import com.rameses.rcp.annotations.*;
+    import com.rameses.osiris2.client.*;
+    import com.rameses.osiris2.reports.*;
+
+    class EmployeeAgeReportController extends tagabukid.common.models.AsyncReportController
+    {
+        @Service('EmployeeAgeReportService') 
+        def svc 
+
+        String title = 'List of Employees by Date of Birth'
+
+        String reportName = 'tagabukid/hrmis/appointment/reports/listing/employeeagereport.jasper';
+
+        void buildReportData(entity, asyncHandler)
+        {
+            svc.getEmployeeAgeByDOB(entity, asyncHandler)
+        }
+        
+        Map getParameters(){
+            return data.parameters;
+        }
+        
+        def formControl = [
+            getFormControls: {
+                return [
+                    new FormControl( "text", [captionWidth:110, caption:'From', name:'entity.fromage', required:true]),
+                    new FormControl( "text", [captionWidth:110, caption:'To', name:'entity.toage', required:true])           
+                ]    
+            },
+        ] as FormPanelModel;
+    }
+    ]]>        
+        
+    </code>
+</workunit>
